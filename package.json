@@ -2,7 +2,8 @@
   "name": "@ichidao/ichi-sdk",
   "version": "0.0.3",
   "description": "",
-  "main": "index.ts",
+  "main": "dist/index.js",
+  "module": "index.ts",
   "scripts": {
     "prepublish": "tsc --incremental false",
     "build": "tsc && yarn lint",

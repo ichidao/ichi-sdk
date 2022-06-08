@@ -6,7 +6,7 @@
   "scripts": {
     "prepublish": "tsc --incremental false",
     "build": "tsc && yarn lint",
-    "test": "jest",
+    "test": "echo TBD!",
     "test_coverage": "jest --collectCoverage",
     "lint": "eslint . --ext .ts --fix --ignore-pattern '/dist/*/*'"
   },

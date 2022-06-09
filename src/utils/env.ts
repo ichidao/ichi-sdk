@@ -1,5 +1,5 @@
-import { PartialRecord } from '../sdk/types/commonTypes';
-import { Optional } from '../sdk/types/optional';
+import { PartialRecord } from '../types/common';
+import { Optional } from '../types/optional';
 
 export namespace EnvUtils {
   export enum EnvName {

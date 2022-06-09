@@ -1,5 +1,5 @@
 import { expect } from '@jest/globals';
-import { CoingeckoPriceResponse } from '../models/coinGecko';
+import { CoingeckoPriceResponse } from '../../models/coinGecko';
 import { getTokenPrice, lookUpTokenPrices } from './prices';
 
 describe('sdk/external/prices', () => {

@@ -1,7 +1,7 @@
 // import fetch from 'cross-fetch';
 import 'cross-fetch/polyfill';
-import { CoingeckoPrice, CoingeckoPriceResponse } from '../models/coinGecko';
-import { Optional } from '../types/optional';
+import { CoingeckoPrice, CoingeckoPriceResponse } from '../../models/coinGecko';
+import { Optional } from '../../types/optional';
 
 export const lookUpTokenPrices = async function (ids: string[]): Promise<Optional<CoingeckoPriceResponse>> {
   if (!ids || ids.length === 0) {

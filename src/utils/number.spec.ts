@@ -1,9 +1,9 @@
 // https://stackoverflow.com/questions/58999086/cypress-causing-type-errors-in-jest-assertions
 import { expect } from '@jest/globals';
-import { BNtoNumberWithoutDecimals } from './number';
+import { bnToNumberWithoutDecimals } from './number';
 
 describe('utils/number', () => {
-  describe('BNtoNumberWithoutDecimals', () => {
+  describe('bnToNumberWithoutDecimals', () => {
     type TestArgs = {
       val?: string;
       decimals: number;
@@ -55,7 +55,7 @@ describe('utils/number', () => {
 
     testParams.forEach((testParam) => {
       it(JSON.stringify(testParam), () => {
-        const actualResult = BNtoNumberWithoutDecimals(testParam.val, testParam.decimals);
+        const actualResult = bnToNumberWithoutDecimals(testParam.val, testParam.decimals);
         expect(actualResult).toEqual(testParam.expectedResult);
       });
     });

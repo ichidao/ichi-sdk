@@ -1,6 +1,6 @@
-import { Optional } from '../sdk/types/optional';
+import { Optional } from '../types/optional';
 
-export function BNtoNumberWithoutDecimals(val: Optional<string>, decimals: number): number {
+export function bnToNumberWithoutDecimals(val: Optional<string>, decimals: number): number {
   // TODO: What do we do if a negative number is given?  We should establish that and test it
   if (val != null) {
     const digits = val.length;

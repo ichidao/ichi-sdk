@@ -23,6 +23,7 @@ module.exports = {
   ignorePatterns: [
     '.eslintrc.js',
     'craco.config.js',
-    'node_modules'
+    'node_modules',
+    'jest.config.ts'
   ]
 };

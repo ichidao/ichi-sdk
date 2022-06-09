@@ -10,3 +10,4 @@ rollup.config.dev.js
 rollup.config.js
 yarn-error.log
 tsconfig.json
+jest.config.ts

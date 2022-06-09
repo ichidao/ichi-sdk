@@ -1,7 +1,7 @@
 import { JsonRpcProvider } from '@ethersproject/providers';
-import { EnvUtils } from '../utils/env';
+import { EnvUtils } from '../../utils/env';
 import { ChainId, SUPPORTED_NETWORKS } from './networks';
-import { Optional } from './types/optional';
+import { Optional } from '../../types/optional';
 
 // const BSC_ADDRESSES = {
 //   gnosis: '0xdbB0DfcB3601e15541c072B2a866C0D53D6c6627',

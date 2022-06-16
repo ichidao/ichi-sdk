@@ -1,8 +1,8 @@
 import { expect } from '@jest/globals';
-import { CoinGeckoPriceResponse, CoinGeckoTokenInfo } from '../../models/coinGecko';
+import { CoinGeckoPriceResponse, CoinGeckoTokenInfo } from '../models/coinGecko';
 import { getTokenInfo, getTokenPrice, lookUpTokenPrices } from './coinGecko';
 
-describe('sdk/external/prices', () => {
+describe('external/coinGecko', () => {
   beforeEach(() => {
     fetchMock.resetMocks();
   });

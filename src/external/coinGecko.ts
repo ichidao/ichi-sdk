@@ -4,8 +4,8 @@ import {
   CoinGeckoPriceResponse,
   CoinGeckoTokenInfo,
   CoinGeckoTokenInfoResponse
-} from '../../models/coinGecko';
-import { Optional } from '../../types/optional';
+} from '../models/coinGecko';
+import { Optional } from '../types/optional';
 
 export const lookUpTokenPrices = async function (ids: string[]): Promise<Optional<CoinGeckoPriceResponse>> {
   if (!ids || ids.length === 0) {

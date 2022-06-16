@@ -1,4 +1,4 @@
-import { EnvUtils } from '../../utils/env';
+import { EnvUtils } from '../utils/env';
 
 export enum ChainId {
   Mainnet = 1,

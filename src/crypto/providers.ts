@@ -1,7 +1,8 @@
 import { JsonRpcProvider } from '@ethersproject/providers';
-import { EnvUtils } from '../../utils/env';
+import { EnvUtils } from '../utils/env';
 import { ChainId, SUPPORTED_NETWORKS } from './networks';
-import { Optional } from '../../types/optional';
+import { Optional } from '../types/optional';
+import dns from 'dns';
 
 // const BSC_ADDRESSES = {
 //   gnosis: '0xdbB0DfcB3601e15541c072B2a866C0D53D6c6627',
@@ -25,6 +26,20 @@ let mumbaiProvider: Optional<JsonRpcProvider>;
 //   {provider: backupMainnetProvider, priority: 2, weight: 1, stallTimeout: 0},
 // ]);
 
+const resolve = async (hostname: string, rrtype: string): Promise<boolean> => {
+  return new Promise((resolve, reject) => {
+    // (err, records)
+    dns.resolve(hostname, rrtype, (err) => {
+      if (err) {
+        console.warn(`Could not resolve: ${hostname}`, err);
+        reject(err);
+        return;
+      }
+      resolve(true);
+    });
+  });
+};
+
 const connectToProvider = async (
   chainId: ChainId,
   rpcHosts?: string[],
@@ -33,9 +48,11 @@ const connectToProvider = async (
   if (rpcHosts) {
     for (let i = 0; i < rpcHosts.length; i++) {
       const url = rpcHosts[i];
-      const provider = new JsonRpcProvider({ url });
-
+      const provider = new JsonRpcProvider({ url, timeout: 5 });
       try {
+        // First attempte to resolve the url, if we don't do this attempting to JsonRpcProvider to an unreachable host will just hang
+        const { hostname } = new URL(url);
+        await resolve(hostname, 'A');
         await provider.getBlockNumber();
         return provider;
       } catch (e) {
@@ -55,6 +72,8 @@ const connectToProvider = async (
   const provider = new JsonRpcProvider({ url });
 
   try {
+    const { hostname } = new URL(url);
+    await resolve(hostname, 'A');
     await provider.getBlockNumber();
     return provider;
   } catch (e) {
@@ -67,7 +86,6 @@ export const getProvider = async (chainId: number): Promise<Optional<JsonRpcProv
     case ChainId.Mainnet:
       // If the mainnet provider has already been configured and set, return it.
       if (mainnetProvider) {
-        console.log(`Returning cached mainnetProvider`);
         return mainnetProvider;
       }
 

@@ -3,6 +3,7 @@ import { TokenName } from './tokenNames';
 
 export type Pool = {
   poolName: PoolName;
+  tableName: PoolName | `pol_${PoolName}`;
   displayName: string;
   address: string;
   oneTokenName: TokenName;

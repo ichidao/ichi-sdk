@@ -11,6 +11,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.ICHI]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.ICHI,
+      tableName: TokenName.ICHI,
       address: '0x903bEF1736CDdf2A537176cf3C64579C3867A881',
       decimals: 9,
       displayName: 'ICHI',
@@ -21,6 +22,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.ICHI_V2]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.ICHI_V2,
+      tableName: TokenName.ICHI_V2,
       address: '0x111111517e4929D3dcbdfa7CCe55d30d4B6BC4d6',
       decimals: 18,
       displayName: 'ICHI',
@@ -29,6 +31,7 @@ export const TOKENS: TokenMapping = {
     },
     [ChainId.Polygon]: {
       tokenName: TokenName.ICHI_V2,
+      tableName: `pol_${TokenName.ICHI_V2}`,
       address: '0x111111517e4929D3dcbdfa7CCe55d30d4B6BC4d6',
       decimals: 18,
       displayName: 'ICHI',
@@ -39,6 +42,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.XICHI]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.XICHI,
+      tableName: TokenName.XICHI,
       address: '0x70605a6457B0A8fBf1EEE896911895296eAB467E',
       decimals: 9,
       displayName: 'xICHI',
@@ -49,6 +53,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.RENFIL]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.RENFIL,
+      tableName: TokenName.RENFIL,
       address: '0xD5147bc8e386d91Cc5DBE72099DAC6C9b99276F5',
       decimals: 18,
       displayName: 'renFIL',
@@ -60,6 +65,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.BNT]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.BNT,
+      tableName: TokenName.BNT,
       address: '0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C',
       decimals: 18,
       displayName: 'BNT',
@@ -70,6 +76,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.CEL]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.CEL,
+      tableName: TokenName.CEL,
       address: '0xaaAEBE6Fe48E54f431b0C390CfaF0b017d09D42d',
       decimals: 4,
       displayName: 'CEL',
@@ -80,6 +87,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.GNO]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.GNO,
+      tableName: TokenName.GNO,
       address: '0x6810e776880C02933D47DB1b9fc05908e5386b96',
       decimals: 18,
       displayName: 'GNO',
@@ -90,6 +98,7 @@ export const TOKENS: TokenMapping = {
   [TokenName['1INCH']]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName['1INCH'],
+      tableName: TokenName['1INCH'],
       address: '0x111111111117dC0aa78b770fA6A738034120C302',
       decimals: 18,
       displayName: '1INCH',
@@ -101,6 +110,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.OJA]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.OJA,
+      tableName: TokenName.OJA,
       address: '0x0aA7eFE4945Db24d95cA6E117BBa65Ed326e291A',
       decimals: 18,
       displayName: 'OJA',
@@ -111,6 +121,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.PWING]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.PWING,
+      tableName: TokenName.PWING,
       address: '0xDb0f18081b505A7DE20B18ac41856BCB4Ba86A1a',
       decimals: 9,
       displayName: 'pWING',
@@ -121,6 +132,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.QRDO]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.QRDO,
+      tableName: TokenName.QRDO,
       address: '0x4123a133ae3c521FD134D7b13A2dEC35b56c2463',
       decimals: 8,
       displayName: 'QRDO',
@@ -131,6 +143,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.WBTC]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.WBTC,
+      tableName: TokenName.WBTC,
       address: '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599',
       decimals: 8,
       displayName: 'wBTC',
@@ -139,6 +152,7 @@ export const TOKENS: TokenMapping = {
     },
     [ChainId.Polygon]: {
       tokenName: TokenName.WBTC,
+      tableName: `pol_${TokenName.WBTC}`,
       address: '0x1BFD67037B42Cf73acF2047067bd4F2C47D9BfD6',
       decimals: 8,
       displayName: 'wBTC',
@@ -149,6 +163,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.WETH]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.WETH,
+      tableName: TokenName.WETH,
       address: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
       decimals: 18,
       displayName: 'wETH',
@@ -159,6 +174,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.WNXM]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.WNXM,
+      tableName: TokenName.WNXM,
       address: '0x0d438F3b5175Bebc262bF23753C1E53d03432bDE',
       decimals: 18,
       displayName: 'wNXM',
@@ -169,6 +185,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.VBTC]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.VBTC,
+      tableName: TokenName.VBTC,
       address: '0xe1406825186D63980fd6e2eC61888f7B91C4bAe4',
       decimals: 18,
       displayName: 'VBTC',
@@ -179,6 +196,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.LINK]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.LINK,
+      tableName: TokenName.LINK,
       address: '0x514910771AF9Ca656af840dff83E8264EcF986CA',
       decimals: 18,
       displayName: 'LINK',
@@ -189,6 +207,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.UNI]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.UNI,
+      tableName: TokenName.UNI,
       address: '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984',
       decimals: 18,
       displayName: 'UNI',
@@ -199,6 +218,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.USDC]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.USDC,
+      tableName: TokenName.USDC,
       address: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',
       decimals: 6,
       displayName: 'USDC',
@@ -207,6 +227,7 @@ export const TOKENS: TokenMapping = {
     },
     [ChainId.Polygon]: {
       tokenName: TokenName.USDC,
+      tableName: TokenName.USDC,
       address: '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174',
       decimals: 6,
       displayName: 'USDC',
@@ -217,6 +238,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.FUSE]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.FUSE,
+      tableName: TokenName.FUSE,
       address: '0x970B9bB2C0444F5E81e9d0eFb84C8ccdcdcAf84d',
       decimals: 18,
       displayName: 'FUSE',
@@ -228,6 +250,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.MPH]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.MPH,
+      tableName: TokenName.MPH,
       address: '0x8888801aF4d980682e47f1A9036e589479e835C5',
       decimals: 18,
       displayName: 'MPH',
@@ -239,6 +262,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.PERL]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.PERL,
+      tableName: TokenName.PERL,
       address: '0xeca82185adCE47f39c684352B0439f030f860318',
       decimals: 18,
       displayName: 'PERL',
@@ -250,6 +274,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.DODO]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.DODO,
+      tableName: TokenName.DODO,
       address: '0x43Dfc4159D86F3A37A5A4B3D4580b888ad7d4DDd',
       decimals: 18,
       displayName: 'DODO',
@@ -261,6 +286,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.FOX]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.FOX,
+      tableName: TokenName.FOX,
       address: '0xc770EEfAd204B5180dF6a14Ee197D99d808ee52d',
       decimals: 18,
       displayName: 'FOX',
@@ -272,6 +298,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.BOOT]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.BOOT,
+      tableName: TokenName.BOOT,
       address: '0x0337fe811809A0aaf9B5D07945b39E473dE4c46E',
       decimals: 18,
       displayName: 'BOOT',
@@ -283,6 +310,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.ONE_ETH]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.ONE_ETH,
+      tableName: TokenName.ONE_ETH,
       address: '0xEc0d77a58528a218cBf41Fa6E1585c8D7A085868',
       strategy: '',
       auxStrategy: [],
@@ -309,6 +337,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.ONE_VBTC]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.ONE_VBTC,
+      tableName: TokenName.ONE_VBTC,
       address: '0x7BD198b9107496fD5cC3d7655AF52f43a8eDBc4C',
       strategy: '',
       auxStrategy: [],
@@ -324,6 +353,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.ONE_LINK]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.ONE_VBTC,
+      tableName: TokenName.ONE_VBTC,
       address: '0x18Cc17a1EeD37C02A77B0B96b7890C7730E2a2CF',
       strategy: '',
       auxStrategy: [],
@@ -339,6 +369,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.ONE_FIL]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.ONE_FIL,
+      tableName: TokenName.ONE_FIL,
       address: '0x6d82017e55b1D24C53c7B33BbB770A86f2ca229D',
       strategy: '0xc9682298cd1C39145EB34614a0B4356c7F29c92e',
       auxStrategy: [],
@@ -356,6 +387,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.ONE_1INCH]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.ONE_1INCH,
+      tableName: TokenName.ONE_1INCH,
       address: '0x853bb55c1f469902f088a629db8c8803a9be3857',
       strategy: '0x97B380Ae50160E400d68c92ABeAf24402C9CaA62',
       auxStrategy: [],
@@ -372,6 +404,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.ONE_BTC]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.ONE_BTC,
+      tableName: TokenName.ONE_BTC,
       address: '0xEc4325F0518584F0774b483c215F65474EAbD27F',
       strategy: '0x435B65196f302b04bAabcc1E5f07CA1192736771',
       auxStrategy: [],
@@ -396,6 +429,7 @@ export const TOKENS: TokenMapping = {
     },
     [ChainId.Polygon]: {
       tokenName: TokenName.ONE_BTC,
+      tableName: TokenName.ONE_BTC,
       address: '0x1f194578e7510A350fb517a9ce63C40Fa1899427',
       strategy: '0x51803f621c5e90011DE58b57fD5b7A92e0e39B08',
       auxStrategy: [],
@@ -421,6 +455,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.ONE_FUSE]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.ONE_FUSE,
+      tableName: TokenName.ONE_FUSE,
       address: '0xBbcE03B2E7f53caDCA93251CA4c928aF01Db6404',
       strategy: '0x8740C9f316241F905323920F4f4FA8A4d6aB100b',
       auxStrategy: [],
@@ -446,6 +481,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.ONE_MPH]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.ONE_MPH,
+      tableName: TokenName.ONE_MPH,
       address: '0xBE3F88E18BE3944FdDa830695228ADBB82fA125F',
       strategy: '0xF1587Cb51349CDf5bb408845249De36466C35F41',
       auxStrategy: [],
@@ -463,6 +499,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.ONE_PERL]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.ONE_PERL,
+      tableName: TokenName.ONE_PERL,
       address: '0xD9A24485e71B9148e0Fd51F0162072099DF0dB67',
       strategy: '0x2Dfb5348CC20218426e566C1bD7B8b3789CBa9d5',
       auxStrategy: [],
@@ -480,6 +517,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.ONE_OJA]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.ONE_OJA,
+      tableName: TokenName.ONE_OJA,
       address: '0xbB9E5DB6F357BB4dF35E8B90B37b8A3F33031D86',
       strategy: '0x2E76A8D053f839A04235341dF1f25235437fEDd6',
       auxStrategy: [],
@@ -505,6 +543,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.ONE_UNI]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.ONE_UNI,
+      tableName: TokenName.ONE_UNI,
       address: '0x8290d7a64f25e6b5002d98367e8367c1b532b534',
       strategy: '0x6287d56e246EEE33beAd2D7DD3a99Db693f4554C',
       auxStrategy: ['0x55922Fa5084f9367B73FC0df9163B089D8Ac4CB7', '0x0b10e483aac4340256772754d23131b6e0dc31ea'],
@@ -531,6 +570,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.ONE_DODO]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.ONE_DODO,
+      tableName: TokenName.ONE_DODO,
       address: '0xcA37530E7c5968627BE470081d1C993eb1dEaf90',
       strategy: '0x1faac4842054F2dB2DdDFC8152D7C259d5102c13',
       auxStrategy: [],
@@ -548,6 +588,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.ONE_FOX]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.ONE_FOX,
+      tableName: TokenName.ONE_FOX,
       address: '0x03352D267951E96c6F7235037C5DFD2AB1466232',
       strategy: '0xeB370EE6927e4655a463F898fFF30479b34708f6',
       auxStrategy: [],
@@ -573,6 +614,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.ONE_WING]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.ONE_WING,
+      tableName: TokenName.ONE_WING,
       address: '0x5047fc5C9D7c49Ab22e390d13646a6A3a2476eff',
       strategy: '0xac20007A5CBDA40d8E16df26bAD89E8738404691',
       auxStrategy: [],
@@ -597,6 +639,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.BOOT_USD]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.BOOT_USD,
+      tableName: TokenName.BOOT_USD,
       address: '0x78a3b2f1e7eec1073088ea4a193618743f81cef8',
       strategy: '0x4ed128f3087DB2D9F6Ea0f1dca3b7FC716EC256C',
       auxStrategy: [],
@@ -613,6 +656,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.ONE_ICHI]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.ONE_ICHI,
+      tableName: TokenName.ONE_ICHI,
       address: '0x4db2c02831c9ac305FF9311Eb661f80f1dF61e07',
       strategy: '0xAC225b5Be5b2EBe53b75798366287626b9881BC8',
       auxStrategy: [],

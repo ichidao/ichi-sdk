@@ -3,6 +3,7 @@ import { VaultName } from './vaultNames';
 
 export type Vault = {
   vaultName: VaultName;
+  tableName: VaultName | `pol_${VaultName}`;
   displayName: string;
   address: string;
   farm: number;

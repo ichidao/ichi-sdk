@@ -34,6 +34,7 @@ export const VAULTS: VaultMapping = {
   [VaultName.ONEFUSE_FUSE]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.ONEFUSE_FUSE, // old: 'fuse',
+      tableName: VaultName.ONEFUSE_FUSE, // old: 'fuse',
       displayName: 'oneFUSE-FUSE',
       address: '0x3A4411a33CfeF8BC01f23ED7518208aA38cca824',
       farm: 0,
@@ -55,6 +56,7 @@ export const VAULTS: VaultMapping = {
   [VaultName.ONEUNI_ICHI]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.ONEUNI_ICHI, // old 'ichi',
+      tableName: VaultName.ONEUNI_ICHI, // old 'ichi',
       displayName: 'oneUNI-ICHI (legacy)',
       address: '0xfaeCcee632912c42a7c88c3544885A8D455408FA',
       farm: 16,
@@ -76,6 +78,7 @@ export const VAULTS: VaultMapping = {
   [VaultName.ONEWING_PWING]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.ONEWING_PWING, // old: 'wing',
+      tableName: VaultName.ONEWING_PWING, // old: 'wing',
       displayName: 'oneWING-pWING',
       address: '0x2a8E09552782563f7A076ccec0Ff39473B91Cd8F',
       farm: 0,
@@ -97,6 +100,7 @@ export const VAULTS: VaultMapping = {
   [VaultName.ONEFOX_FOX]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.ONEFOX_FOX, // old: 'fox',
+      tableName: VaultName.ONEFOX_FOX, // old: 'fox',
       displayName: 'oneFOX-FOX',
       address: '0x779F9BAd1f4B1Ef5198AD9361DBf3791F9e0D596',
       farm: 0,
@@ -118,6 +122,7 @@ export const VAULTS: VaultMapping = {
   [VaultName.ONEOJA_OJA]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.ONEOJA_OJA, // old: 'oja',
+      tableName: VaultName.ONEOJA_OJA, // old: 'oja',
       displayName: 'oneOJA-OJA',
       address: '0x98bAd5Ce592DcfE706CC95a1B9dB7008B6D418F8',
       farm: 0,
@@ -139,6 +144,7 @@ export const VAULTS: VaultMapping = {
   [VaultName.GNO_ICHI]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.GNO_ICHI, // old: 'gno',
+      tableName: VaultName.GNO_ICHI, // old: 'gno',
       displayName: 'GNO-ICHI (legacy)',
       address: '0xA380EA6BE1C084851aE7846a8F39def17eCf6ED8',
       farm: 19,
@@ -160,6 +166,7 @@ export const VAULTS: VaultMapping = {
   [VaultName.CEL_ICHI]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.CEL_ICHI, // old: 'cel',
+      tableName: VaultName.CEL_ICHI, // old: 'cel',
       displayName: 'CEL-ICHI (legacy)',
       address: '0x82FF3E2eC3bDCa84CF0637402907e26C51d1d676',
       farm: 20,
@@ -181,6 +188,7 @@ export const VAULTS: VaultMapping = {
   [VaultName.WNXM_ICHI]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.WNXM_ICHI, // old: 'wnxm',
+      tableName: VaultName.WNXM_ICHI, // old: 'wnxm',
       displayName: 'wNXM-ICHI (legacy)',
       address: '0xd3FeD75d934Ab824Ff7FEcd0f8A70f204e61769b',
       farm: 21,
@@ -202,6 +210,7 @@ export const VAULTS: VaultMapping = {
   [VaultName.WBTC_ICHI]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.WBTC_ICHI, // old: 'wbtc',
+      tableName: VaultName.WBTC_ICHI, // old: 'wbtc',
       displayName: 'wBTC-ICHI (legacy)',
       address: '0xeF88913c674a9cA1E79b3986e4b222F3E75c7d05',
       farm: 22,
@@ -221,6 +230,7 @@ export const VAULTS: VaultMapping = {
     },
     [ChainId.Polygon]: {
       vaultName: VaultName.WBTC_ICHI, // old: 'polygon_wbtc',
+      tableName: VaultName.WBTC_ICHI, // old: 'polygon_wbtc',
       displayName: 'wBTC-ICHI (polygon)',
       address: '0x4aef5144131db95c110af41c8ec09f46295a7c4b',
       farm: 1,
@@ -242,6 +252,7 @@ export const VAULTS: VaultMapping = {
   [VaultName.ONEBTC_ICHI]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.ONEBTC_ICHI, // old: 'onebtc',
+      tableName: VaultName.ONEBTC_ICHI, // old: 'onebtc',
       displayName: 'oneBTC-ICHI (legacy)',
       address: '0x5318c21c96256ce4b73c27D405147df97d28E0Be',
       farm: 23,
@@ -261,6 +272,7 @@ export const VAULTS: VaultMapping = {
     },
     [ChainId.Polygon]: {
       vaultName: VaultName.ONEBTC_ICHI, // old: 'polygon_onebtc',
+      tableName: VaultName.ONEBTC_ICHI, // old: 'polygon_onebtc',
       displayName: 'oneBTC-ICHI (polygon)',
       address: '0xE5bf5D33C617556B91558aAfb7BeadB68E9Cea81',
       farm: 0,
@@ -282,6 +294,7 @@ export const VAULTS: VaultMapping = {
   [VaultName.GNO_ICHI_V2]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.GNO_ICHI_V2, // old: 'gno_v2',
+      tableName: VaultName.GNO_ICHI_V2, // old: 'gno_v2',
       displayName: 'GNO-ICHI',
       address: '0xd9E3646f5f6F491c0011796C0f7eC45C6639c4C6',
       farm: 26,
@@ -303,6 +316,7 @@ export const VAULTS: VaultMapping = {
   [VaultName.CEL_ICHI_V2]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.CEL_ICHI_V2, // old: 'cel_v2',
+      tableName: VaultName.CEL_ICHI_V2, // old: 'cel_v2',
       displayName: 'CEL-ICHI',
       address: '0x5fEb9A87A9C7d05C9Fbf7D24e753ceEE6696f10D',
       farm: 25,
@@ -324,6 +338,7 @@ export const VAULTS: VaultMapping = {
   [VaultName.WNXM_ICHI_V2]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.WNXM_ICHI_V2, // old: 'wnxm_v2',
+      tableName: VaultName.WNXM_ICHI_V2, // old: 'wnxm_v2',
       displayName: 'wNXM-ICHI',
       address: '0x8abb986fB2C72aBc5a08f4D34BaF15279Dd5581F',
       farm: 24,
@@ -345,6 +360,7 @@ export const VAULTS: VaultMapping = {
   [VaultName.WBTC_ICHI_V2]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.WBTC_ICHI_V2, // old: 'wbtc_v2',
+      tableName: VaultName.WBTC_ICHI_V2, // old: 'wbtc_v2',
       displayName: 'wBTC-ICHI',
       address: '0x913b7D91e019402233d2f75863133925CE658CD9',
       farm: 28,
@@ -365,6 +381,7 @@ export const VAULTS: VaultMapping = {
     // NOTE: The Polygon version here is duplicated here and WBTC_ICHI, unclear which exact it should be in so putting it on both
     [ChainId.Polygon]: {
       vaultName: VaultName.WBTC_ICHI_V2, // old: 'polygon_wbtc',
+      tableName: `pol_${VaultName.WBTC_ICHI_V2}`, // old: 'polygon_wbtc',
       displayName: 'wBTC-ICHI (polygon)',
       address: '0x4aef5144131db95c110af41c8ec09f46295a7c4b',
       farm: 1,
@@ -387,6 +404,7 @@ export const VAULTS: VaultMapping = {
   [VaultName.QRDO_USDC]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.QRDO_USDC, // old: 'qrdo',
+      tableName: VaultName.QRDO_USDC, // old: 'qrdo',
       displayName: 'QRDO-USDC',
       address: '0x784Ac9aaeaB58AAf904cc69e105aa51343E4C693',
       farm: 0,
@@ -408,6 +426,7 @@ export const VAULTS: VaultMapping = {
   [VaultName.USDC_ICHI]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.USDC_ICHI, // old: 'usdc_ichi',
+      tableName: VaultName.USDC_ICHI, // old: 'usdc_ichi',
       displayName: 'USDC-ICHI',
       address: '0x683F081DBC729dbD34AbaC708Fa0B390d49F1c39',
       farm: 0,
@@ -427,6 +446,7 @@ export const VAULTS: VaultMapping = {
     },
     [ChainId.Polygon]: {
       vaultName: VaultName.USDC_ICHI, // old: 'polygon_usdc',
+      tableName: `pol_${VaultName.USDC_ICHI}`, // old: 'polygon_usdc',
       displayName: 'USDC-ICHI (polygon)',
       address: '0x711901e4b9136119Fb047ABe8c43D49339f161c3',
       farm: 2,
@@ -448,6 +468,7 @@ export const VAULTS: VaultMapping = {
   [VaultName.ONEICHI_ICHI]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.ONEICHI_ICHI, // old: 'oneichi_ichi',
+      tableName: VaultName.ONEICHI_ICHI, // old: 'oneichi_ichi',
       displayName: 'oneICHI-ICHI',
       address: '0x46f9490bcbcd0A12d3d8578B5b3AB19f8EF0617D',
       farm: 1,
@@ -469,6 +490,7 @@ export const VAULTS: VaultMapping = {
   [VaultName.BNT_ICHI]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.BNT_ICHI,
+      tableName: VaultName.BNT_ICHI,
       displayName: 'BNT-ICHI',
       address: '0x4DFa8455658f4d6D2eeb91CbeFb0Ee94056bB3dC',
       farm: 29,

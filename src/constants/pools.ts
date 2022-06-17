@@ -12,6 +12,7 @@ export const POOLS: PoolMapping = {
   [PoolName.ONEFUSE_USDC]: {
     [ChainId.Mainnet]: {
       poolName: PoolName.ONEFUSE_USDC,
+      tableName: PoolName.ONEFUSE_USDC,
       displayName: 'oneFUSE-USDC',
       address: '0x61f2ea3ddabcb9f0b7bd73adba4ec24479247a86',
       oneTokenName: TokenName.ONE_FUSE,
@@ -22,6 +23,7 @@ export const POOLS: PoolMapping = {
   [PoolName.ONEUNI_USDC]: {
     [ChainId.Mainnet]: {
       poolName: PoolName.ONEUNI_USDC,
+      tableName: PoolName.ONEUNI_USDC,
       displayName: 'oneUNI-USDC',
       address: '0x613944734e29e73d084673d1532bff8683ed9a5b',
       oneTokenName: TokenName.ONE_UNI,
@@ -32,6 +34,7 @@ export const POOLS: PoolMapping = {
   [PoolName.ONEWING_USDC]: {
     [ChainId.Mainnet]: {
       poolName: PoolName.ONEWING_USDC,
+      tableName: PoolName.ONEWING_USDC,
       displayName: 'oneWING-USDC',
       address: '0xD63005e1d0bD8029B656dd43AD8eB66f27B15E07',
       oneTokenName: TokenName.ONE_WING,
@@ -42,6 +45,7 @@ export const POOLS: PoolMapping = {
   [PoolName.ONEFOX_USDC]: {
     [ChainId.Mainnet]: {
       poolName: PoolName.ONEFOX_USDC,
+      tableName: PoolName.ONEFOX_USDC,
       displayName: 'oneFOX-USDC',
       address: '0x4c008261215087bd22d6a983399ae659d816bb50',
       oneTokenName: TokenName.ONE_FOX,
@@ -52,6 +56,7 @@ export const POOLS: PoolMapping = {
   [PoolName.ONEPERL_USDC]: {
     [ChainId.Mainnet]: {
       poolName: PoolName.ONEPERL_USDC,
+      tableName: PoolName.ONEPERL_USDC,
       displayName: 'onePERL-USDC',
       address: '0x1F52846051b4dB60ba70bA76C188e6a67699fdB0',
       oneTokenName: TokenName.ONE_PERL,
@@ -69,6 +74,7 @@ export const POOLS: PoolMapping = {
   [PoolName.ONEMPH_USDC]: {
     [ChainId.Mainnet]: {
       poolName: PoolName.ONEMPH_USDC,
+      tableName: PoolName.ONEMPH_USDC,
       displayName: 'oneMPH-USDC',
       address: '0x42F1B1a352B4e700172F316eC5f721765a71EfF4',
       oneTokenName: TokenName.ONE_MPH,
@@ -79,6 +85,7 @@ export const POOLS: PoolMapping = {
   [PoolName.ONE1INCH_USDC]: {
     [ChainId.Mainnet]: {
       poolName: PoolName.ONE1INCH_USDC,
+      tableName: PoolName.ONE1INCH_USDC,
       displayName: 'one1INCH-USDC',
       address: '0x7233A14685201F548d8a7AC5f5Ca3DEdb7bb6d42',
       oneTokenName: TokenName.ONE_1INCH,
@@ -97,6 +104,7 @@ export const POOLS: PoolMapping = {
   [PoolName.ONEOJA_USDC]: {
     [ChainId.Mainnet]: {
       poolName: PoolName.ONEOJA_USDC,
+      tableName: PoolName.ONEOJA_USDC,
       displayName: 'oneOJA-USDC',
       address: '0x6195fe3c13746862deac6139c4e8be5e80b96c6c',
       oneTokenName: TokenName.ONE_OJA,

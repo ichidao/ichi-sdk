@@ -3,6 +3,7 @@ import { TokenName } from './tokenNames';
 
 export type Token = {
   tokenName: TokenName;
+  tableName: TokenName | `pol_${TokenName}`;
   address: string;
   decimals: number;
   displayName: string;

@@ -15,7 +15,8 @@ export enum VaultName {
   WBTC_ICHI_V2 = 'wbtc_ichi_v2',
   QRDO_USDC = 'qrdo_usdc',
   USDC_ICHI = 'usdc_ichi',
-  ONEICHI_ICHI = 'oneichi_ichi'
+  ONEICHI_ICHI = 'oneichi_ichi',
+  BNT_ICHI = 'bnt_ichi'
 }
 
 export type VaultNames = keyof typeof VaultName;

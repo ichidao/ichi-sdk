@@ -3,7 +3,7 @@ export { ChainId } from './src/crypto/networks';
 export { EnvUtils } from './src/utils/env';
 
 // External APIs
-export { CoinGeckoPrice, CoinGeckoPriceResponse } from './src/models/coinGecko';
+export { CoinGeckoPrice, CoinGeckoPriceResponse, CoinGeckoTokenInfoResponse } from './src/models/coinGecko';
 export { lookUpTokenPrices, getTokenPrice, getTokenInfo } from './src/external/coinGecko';
 export { getDebankPortfolio } from './src/external/debank';
 export { get1InchPools } from './src/external/oneInch';

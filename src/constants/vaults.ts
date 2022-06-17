@@ -377,7 +377,8 @@ export const VAULTS: VaultMapping = {
       baseTokenDecimals: 8,
       enableNotifications: true,
       subgraphEndpoint: '',
-      irrStartDate: new Date('2022-05-26T02:00:00'),
+      // irrStartDate: new Date('2022-05-26T02:00:00'),
+      irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: true,
       irrStartTxAmount: 0
@@ -462,6 +463,27 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: false,
+      irrStartTxAmount: 0
+    }
+  },
+  [VaultName.BNT_ICHI]: {
+    [ChainId.Mainnet]: {
+      vaultName: VaultName.BNT_ICHI,
+      displayName: 'BNT-ICHI',
+      address: '0x4DFa8455658f4d6D2eeb91CbeFb0Ee94056bB3dC',
+      farm: 29,
+      externalFarm: '0x4B162306eE680Bf440541c3E5C70c553f632C8aA',
+      scarceToken: 'token0',
+      scarceTokenName: TokenName.ICHI_V2,
+      scarceTokenDecimals: 18,
+      scarceTokenCoingeckoId: 'ichi-farm',
+      baseTokenName: TokenName.BNT,
+      baseTokenDecimals: 18,
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: true,
+      isHodlVault: true,
       irrStartTxAmount: 0
     }
   }

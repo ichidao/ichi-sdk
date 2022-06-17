@@ -64,7 +64,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'BNT',
       isOneToken: false,
-      atCoingecko: false
+      atCoingecko: true
     }
   },
   [TokenName.CEL]: {

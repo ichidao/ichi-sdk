@@ -536,14 +536,3 @@ export function getVaults(chainId: ChainId): Vault[] {
   }
   return vaults;
 }
-
-export function getActiveVaults(chainId: ChainId): Vault[] {
-  const names = Object.keys(VAULTS);
-  const vaults: Vault[] = [];
-  for (let name of names) {
-    if (chainId in VAULTS[name] && !VAULTS[name].isLegacy) {
-      vaults.push(VAULTS[name][chainId]);
-    }
-  }
-  return vaults;
-}

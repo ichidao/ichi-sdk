@@ -28,5 +28,5 @@ export { PoolName, PoolNames } from './src/models/poolNames';
 // Constants
 export { Apis } from './src/constants/apis';
 export { TOKENS, getToken, getTokens } from './src/constants/tokens';
-export { VAULTS, getVault, getVaults, getActiveVaults } from './src/constants/vaults';
+export { VAULTS, getVault, getVaults } from './src/constants/vaults';
 export { POOLS, getPool, getPools } from './src/constants/pools';

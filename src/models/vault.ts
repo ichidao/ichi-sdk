@@ -20,4 +20,5 @@ export type Vault = {
   isInverted: boolean;
   isHodlVault: boolean;
   irrStartTxAmount: number;
+  isLegacy: boolean;
 };

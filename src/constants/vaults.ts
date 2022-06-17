@@ -50,6 +50,7 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: false,
+      isLegacy: false,
       irrStartTxAmount: 0
     }
   },
@@ -72,6 +73,7 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: false,
       isHodlVault: false,
+      isLegacy: true,
       irrStartTxAmount: 0
     }
   },
@@ -94,6 +96,7 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: false,
       isHodlVault: false,
+      isLegacy: true,
       irrStartTxAmount: 0
     }
   },
@@ -116,6 +119,7 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date('2022-03-09T02:00:00'),
       isInverted: false,
       isHodlVault: false,
+      isLegacy: true,
       irrStartTxAmount: 0
     }
   },
@@ -138,6 +142,7 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: false,
+      isLegacy: true,
       irrStartTxAmount: 0
     }
   },
@@ -160,6 +165,7 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date('2022-03-10T14:25:23'),
       isInverted: false,
       isHodlVault: true,
+      isLegacy: true,
       irrStartTxAmount: 17916
     }
   },
@@ -182,6 +188,7 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date('2022-03-23T00:13:17'),
       isInverted: true,
       isHodlVault: true,
+      isLegacy: true,
       irrStartTxAmount: 346101.2345
     }
   },
@@ -204,6 +211,7 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date('2022-03-15T19:04:48'),
       isInverted: false,
       isHodlVault: true,
+      isLegacy: true,
       irrStartTxAmount: 222193
     }
   },
@@ -226,28 +234,9 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date('2022-03-30T18:17:57'),
       isInverted: false,
       isHodlVault: true,
+      isLegacy: true,
       irrStartTxAmount: 75.482852739
     },
-    [ChainId.Polygon]: {
-      vaultName: VaultName.WBTC_ICHI, // old: 'polygon_wbtc',
-      tableName: VaultName.WBTC_ICHI, // old: 'polygon_wbtc',
-      displayName: 'wBTC-ICHI (polygon)',
-      address: '0x4aef5144131db95c110af41c8ec09f46295a7c4b',
-      farm: 1,
-      externalFarm: '',
-      scarceToken: 'token0',
-      scarceTokenName: TokenName.ICHI_V2,
-      scarceTokenDecimals: 18,
-      scarceTokenCoingeckoId: 'ichi-farm',
-      baseTokenName: TokenName.WBTC,
-      baseTokenDecimals: 8,
-      enableNotifications: true,
-      subgraphEndpoint: '',
-      irrStartDate: new Date('2022-05-26T02:00:00'),
-      isInverted: true,
-      isHodlVault: true,
-      irrStartTxAmount: 0
-    }
   },
   [VaultName.ONEBTC_ICHI]: {
     [ChainId.Mainnet]: {
@@ -268,6 +257,7 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: false,
+      isLegacy: true,
       irrStartTxAmount: 0
     },
     [ChainId.Polygon]: {
@@ -288,6 +278,7 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date('2022-05-26T02:00:00'),
       isInverted: true,
       isHodlVault: false,
+      isLegacy: false,
       irrStartTxAmount: 0
     }
   },
@@ -310,6 +301,7 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: true,
+      isLegacy: false,
       irrStartTxAmount: 0
     }
   },
@@ -332,6 +324,7 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: true,
+      isLegacy: false,
       irrStartTxAmount: 0
     }
   },
@@ -354,6 +347,7 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: false,
       isHodlVault: true,
+      isLegacy: false,
       irrStartTxAmount: 0
     }
   },
@@ -376,9 +370,9 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: true,
+      isLegacy: false,
       irrStartTxAmount: 0
     },
-    // NOTE: The Polygon version here is duplicated here and WBTC_ICHI, unclear which exact it should be in so putting it on both
     [ChainId.Polygon]: {
       vaultName: VaultName.WBTC_ICHI_V2, // old: 'polygon_wbtc',
       tableName: `pol_${VaultName.WBTC_ICHI_V2}`, // old: 'polygon_wbtc',
@@ -398,6 +392,7 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: true,
+      isLegacy: false,
       irrStartTxAmount: 0
     }
   },
@@ -420,6 +415,7 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: true,
+      isLegacy: false,
       irrStartTxAmount: 0
     }
   },
@@ -442,6 +438,7 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: false,
+      isLegacy: false,
       irrStartTxAmount: 0
     },
     [ChainId.Polygon]: {
@@ -462,6 +459,7 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: true,
+      isLegacy: false,
       irrStartTxAmount: 0
     }
   },
@@ -484,6 +482,7 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: false,
+      isLegacy: false,
       irrStartTxAmount: 0
     }
   },
@@ -506,6 +505,7 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: true,
+      isLegacy: false,
       irrStartTxAmount: 0
     }
   }
@@ -531,6 +531,17 @@ export function getVaults(chainId: ChainId): Vault[] {
   const vaults: Vault[] = [];
   for (let name of names) {
     if (chainId in VAULTS[name]) {
+      vaults.push(VAULTS[name][chainId]);
+    }
+  }
+  return vaults;
+}
+
+export function getActiveVaults(chainId: ChainId): Vault[] {
+  const names = Object.keys(VAULTS);
+  const vaults: Vault[] = [];
+  for (let name of names) {
+    if (chainId in VAULTS[name] && !VAULTS[name].isLegacy) {
       vaults.push(VAULTS[name][chainId]);
     }
   }

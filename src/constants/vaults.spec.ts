@@ -23,9 +23,9 @@ describe('constants/vaults', () => {
         expectedAddress: VAULTS[VaultName.ONEFOX_FOX][ChainId.Mainnet]?.address
       },
       {
-        name: VaultName.WBTC_ICHI,
+        name: VaultName.WBTC_ICHI_V2,
         chainId: ChainId.Polygon,
-        expectedAddress: VAULTS[VaultName.WBTC_ICHI][ChainId.Polygon]?.address
+        expectedAddress: VAULTS[VaultName.WBTC_ICHI_V2][ChainId.Polygon]?.address
       }
     ];
 

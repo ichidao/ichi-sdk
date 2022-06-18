@@ -262,7 +262,7 @@ export const VAULTS: VaultMapping = {
     },
     [ChainId.Polygon]: {
       vaultName: VaultName.ONEBTC_ICHI, // old: 'polygon_onebtc',
-      tableName: VaultName.ONEBTC_ICHI, // old: 'polygon_onebtc',
+      tableName: `pol_${VaultName.ONEBTC_ICHI}`, // old: 'polygon_onebtc',
       displayName: 'oneBTC-ICHI (polygon)',
       address: '0xE5bf5D33C617556B91558aAfb7BeadB68E9Cea81',
       farm: 0,

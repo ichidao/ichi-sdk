@@ -1,9 +1,9 @@
-import { TokenName } from './tokenNames';
-import { VaultName } from './vaultNames';
+import { TokenName } from '../enums/tokenName';
+import { VaultName, VaultTableName } from '../enums/vaultName';
 
 export type Vault = {
   vaultName: VaultName;
-  tableName: VaultName | `pol_${VaultName}`;
+  tableName: VaultTableName;
   displayName: string;
   address: string;
   farm: number;

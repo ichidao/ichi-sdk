@@ -1,10 +1,12 @@
-import { TokenName } from './tokenNames';
+import { TokenName } from '../enums/tokenName';
 
 export type IchiVault = {
   address: string;
   farm: number;
   externalFarm: string;
-  scarceToken: string; // 'token0',
+  scarceToken: 'token0' | 'token1'; // 'token0',
   scarceTokenName: TokenName;
   scarceTokenDecimals: number;
+  // Test vaults just have this
+  ichi?: 'token1';
 };

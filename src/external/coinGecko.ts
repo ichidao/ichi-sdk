@@ -15,21 +15,27 @@ export const lookUpTokenPrices = async function (ids: string[]): Promise<Optiona
 
   const idsFormatted = ids.join(encodeURIComponent(','));
   const url = `https://api.coingecko.com/api/v3/simple/token_price/ethereum?contract_addresses=${idsFormatted}&vs_currencies=usd&include_24hr_change=true`;
-  const result = await fetch(url);
-  const json: CoinGeckoPriceResponse = await result.json();
-  return json;
+
+  try {
+    const result = await fetch(url);
+    const json: CoinGeckoPriceResponse = await result.json();
+    return json;
+  } catch (e) {
+    console.error(`Error calling ${url}`);
+    throw e;
+  }
 };
 
 export const getTokenPrice = async function (
   address: string,
-  tokenPrices: CoinGeckoPriceResponse
+  tokenPrices?: CoinGeckoPriceResponse
 ): Promise<Optional<CoinGeckoPrice>> {
   if (!address) {
     console.warn(`Could not lookup token price, no address given.`);
     return;
   }
 
-  if (tokenPrices[address.toLowerCase()]) {
+  if (tokenPrices && tokenPrices[address.toLowerCase()]) {
     return tokenPrices[address.toLowerCase()];
   }
   const prices = await lookUpTokenPrices([address.toLowerCase()]);
@@ -53,13 +59,19 @@ export const getTokenInfo = async function (
 
   const idsFormatted = ids.join(encodeURIComponent(','));
   const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${idsFormatted}&sparkline=false&price_change_percentage=${priceChangePeriod}`;
-  const result = await fetch(url);
-  const tokenInfos: CoinGeckoTokenInfo[] = await result.json();
 
-  const response: CoinGeckoTokenInfoResponse = {};
-  for (const tokenInfo of tokenInfos) {
-    response[tokenInfo.id] = tokenInfo;
+  try {
+    const result = await fetch(url);
+    const tokenInfos: CoinGeckoTokenInfo[] = await result.json();
+
+    const response: CoinGeckoTokenInfoResponse = {};
+    for (const tokenInfo of tokenInfos) {
+      response[tokenInfo.id] = tokenInfo;
+    }
+
+    return response;
+  } catch (e) {
+    console.error(`Error calling ${url}`);
+    throw e;
   }
-
-  return response;
 };

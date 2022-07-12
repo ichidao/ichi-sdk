@@ -1,5 +1,5 @@
 import { expect } from '@jest/globals';
-import { OneInchPool } from 'src/models/oneInch';
+import { OneInchPool } from '../models/oneInch';
 import { get1InchPools } from './oneInch';
 
 describe('external/oneInch', () => {

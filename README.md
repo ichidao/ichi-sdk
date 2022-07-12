@@ -15,3 +15,8 @@ npm install -g np
 npm login
 np
 ```
+
+## TODO
+
+- Use Rollup or something similar to ensure treeshakability: https://dev.to/lukasbombach/how-to-write-a-tree-shakable-component-library-4ied
+- Consider changing src to lib so that importing looks more natural

@@ -1,14 +1,17 @@
 import { IchiVault } from './ichiVault';
-import { TokenName } from './tokenNames';
+import { TokenName } from '../enums/tokenName';
+import { TestVault } from './testVault';
 
 export type Token = {
   tokenName: TokenName;
-  tableName: TokenName | `pol_${TokenName}`;
+  tableName: TokenName | `pol_${TokenName}` | `mum_${TokenName}` | `kov_${TokenName}`;
   address: string;
   decimals: number;
   displayName: string;
   isOneToken: boolean;
   atCoingecko: boolean;
+  symbol: string;
+
   // Optional
   parentOneToken?: TokenName;
   strategy?: string;
@@ -16,7 +19,8 @@ export type Token = {
   allySwap?: string;
   isV2?: boolean;
   ichiVault?: IchiVault;
-  stimulusName?: string;
+  testVault?: TestVault;
+  stimulusName?: TokenName;
   stimulusDisplayName?: string;
   tradeUrl?: string;
 };

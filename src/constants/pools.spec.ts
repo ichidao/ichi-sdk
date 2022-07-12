@@ -1,7 +1,7 @@
 import { expect } from '@jest/globals';
-import { PoolName } from '../models/poolNames';
+import { PoolName } from '../enums/poolName';
 import { ChainId } from '../crypto/networks';
-import { getPool, getPools, POOLS } from './pools';
+import { getPool, getPools, PoolMapping } from './pools';
 
 describe('constants/pools', () => {
   describe('getPool - valid', () => {
@@ -15,23 +15,23 @@ describe('constants/pools', () => {
       {
         name: PoolName.ONEFOX_USDC,
         chainId: ChainId.Mainnet,
-        expectedAddress: POOLS[PoolName.ONEFOX_USDC][ChainId.Mainnet]?.address
+        expectedAddress: PoolMapping[PoolName.ONEFOX_USDC][ChainId.Mainnet]?.address
       },
       {
         name: PoolName.ONEOJA_USDC,
         chainId: ChainId.Mainnet,
-        expectedAddress: POOLS[PoolName.ONEOJA_USDC][ChainId.Mainnet]?.address
+        expectedAddress: PoolMapping[PoolName.ONEOJA_USDC][ChainId.Mainnet]?.address
       },
       {
         name: PoolName.ONE1INCH_USDC,
         chainId: ChainId.Mainnet,
-        expectedAddress: POOLS[PoolName.ONE1INCH_USDC][ChainId.Mainnet]?.address
+        expectedAddress: PoolMapping[PoolName.ONE1INCH_USDC][ChainId.Mainnet]?.address
       }
     ];
 
     testParams.forEach((testParam) => {
       it(JSON.stringify(testParam), async () => {
-        const actualResult = getPool(testParam.name, { chainId: testParam.chainId });
+        const actualResult = getPool(testParam.name, testParam.chainId);
         expect(actualResult.address).toEqual(testParam.expectedAddress);
       });
     });
@@ -55,9 +55,7 @@ describe('constants/pools', () => {
 
     testParams.forEach((testParam) => {
       it(JSON.stringify(testParam), async () => {
-        expect(() => getPool(testParam.name, { chainId: testParam.chainId, throwIfNotFound: true })).toThrow(
-          testParam.expectedErrorMessage
-        );
+        expect(() => getPool(testParam.name, testParam.chainId)).toThrow(testParam.expectedErrorMessage);
       });
     });
   });

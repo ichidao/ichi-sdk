@@ -84,6 +84,18 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.GIV]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.GIV,
+      tableName: TokenName.GIV,
+      address: '0x900dB999074d9277c5DA2A43F252D74366230DA0',
+      decimals: 18,
+      displayName: 'GIV',
+      parentOneToken: TokenName.ONE_GIV,
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.GNO]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.GNO,
@@ -476,6 +488,24 @@ export const TOKENS: TokenMapping = {
       stimulusDisplayName: 'FUSE',
       tradeUrl:
         'https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x970B9bB2C0444F5E81e9d0eFb84C8ccdcdcAf84d'
+    }
+  },
+  [TokenName.ONE_GIV]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.ONE_GIV,
+      tableName: TokenName.ONE_GIV,
+      address: '0x17e6BA2519B4d15199B6529dB340910Ae031b1B0',
+      strategy: '0x8A17A9ACF32811b0d2a10Bd97839643e8AD14B1B',
+      auxStrategy: [],
+      decimals: 18,
+      displayName: 'oneGIV',
+      atCoingecko: false,
+      isOneToken: true,
+      isV2: true,
+      stimulusName: 'giv',
+      stimulusDisplayName: 'GIV',
+      tradeUrl:
+        'https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x900dB999074d9277c5DA2A43F252D74366230DA0'
     }
   },
   [TokenName.ONE_MPH]: {

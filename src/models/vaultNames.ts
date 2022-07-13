@@ -3,6 +3,7 @@ export enum VaultName {
   ONEUNI_ICHI = 'oneuni_ichi',
   ONEWING_PWING = 'onewing_pwing',
   ONEFOX_FOX = 'onefox_fox',
+  ONEGIV_GIV = 'onegiv_giv',
   ONEOJA_OJA = 'oneoja_oja',
   GNO_ICHI = 'gno_ichi',
   CEL_ICHI = 'cel_ichi',

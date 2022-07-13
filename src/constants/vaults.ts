@@ -419,6 +419,29 @@ export const VAULTS: VaultMapping = {
       irrStartTxAmount: 0
     }
   },
+  [VaultName.ONEGIV_GIV]: {
+    [ChainId.Mainnet]: {
+      vaultName: VaultName.ONEGIV_GIV, 
+      tableName: VaultName.ONEGIV_GIV, 
+      displayName: 'oneGIV-GIV',
+      address: '0xc3151A58d519B94E915f66B044De3E55F77c2dd9',
+      farm: 0,
+      externalFarm: '0x944344CD4014305e1fFAA613396D82eAf5b67B2D',
+      scarceToken: 'token1',
+      scarceTokenName: TokenName.GIV,
+      scarceTokenDecimals: 18,
+      scarceTokenCoingeckoId: 'giveth',
+      baseTokenName: TokenName.ONE_GIV,
+      baseTokenDecimals: 18,
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: false,
+      isHodlVault: false,
+      isLegacy: false,
+      irrStartTxAmount: 0
+    }
+  },
   [VaultName.USDC_ICHI]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.USDC_ICHI, // old: 'usdc_ichi',

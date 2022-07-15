@@ -542,26 +542,24 @@ export const VAULTS: VaultMapping = {
       irrStartTxAmount: 0
     }
   },
-  // TODO: Update this once info in monitor
-  // This is not it
-  [VaultName.GIV]: {
+  [VaultName.ONEGIV_GIV]: {
     [ChainId.Mainnet]: {
-      vaultName: VaultName.GIV, // old: 'oneichi_ichi',
-      tableName: VaultTableName.ONEGIV_GIV, // old: 'oneichi_ichi',
+      vaultName: VaultName.ONEGIV_GIV,
+      tableName: VaultTableName.ONEGIV_GIV,
       displayName: 'oneGIV-GIV',
-      address: 'REPLACE ME',
-      farm: -1,
-      externalFarm: 'REPLACE ME',
-      scarceToken: 'token0',
+      address: '0xc3151A58d519B94E915f66B044De3E55F77c2dd9',
+      farm: 0,
+      externalFarm: '0x944344CD4014305e1fFAA613396D82eAf5b67B2D',
+      scarceToken: 'token1',
       scarceTokenName: TokenName.GIV,
       scarceTokenDecimals: 18,
-      scarceTokenCoingeckoId: 'ichi-farm',
+      scarceTokenCoingeckoId: 'giveth',
       baseTokenName: TokenName.ONE_GIV,
       baseTokenDecimals: 18,
       enableNotifications: true,
       subgraphEndpoint: '',
       irrStartDate: new Date(0),
-      isInverted: false, // TODO: Fix
+      isInverted: false,
       isHodlVault: false,
       isLegacy: false,
       irrStartTxAmount: 0

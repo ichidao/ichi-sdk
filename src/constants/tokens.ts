@@ -198,8 +198,9 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'GIV',
       symbol: 'GIV',
+      parentOneToken: TokenName.ONE_GIV,
       isOneToken: false,
-      atCoingecko: false
+      atCoingecko: true
     }
   },
   [TokenName['1INCH']]: {
@@ -941,13 +942,13 @@ export const TOKENS: TokenMapping = {
     [ChainId.Mainnet]: {
       tokenName: TokenName.ONE_GIV,
       tableName: TokenName.ONE_GIV,
-      atCoingecko: false,
       address: '0x17e6BA2519B4d15199B6529dB340910Ae031b1B0',
       strategy: '0x8A17A9ACF32811b0d2a10Bd97839643e8AD14B1B',
-      // aux_strategy: [],
+      auxStrategy: [],
       decimals: 18,
       displayName: 'oneGIV',
       symbol: 'oneGIV',
+      atCoingecko: false,
       isOneToken: true,
       isV2: true,
       stimulusName: TokenName.GIV,

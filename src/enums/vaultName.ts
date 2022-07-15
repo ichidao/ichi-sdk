@@ -21,8 +21,7 @@ export enum VaultName {
   QRDO = 'qrdo',
   FOX = 'fox',
   ONEICHI_ICHI = 'oneichi_ichi',
-  // ONEGIV_GIV = 'onegiv_giv'
-  GIV = 'giv'
+  ONEGIV_GIV = 'onegiv_giv'
 }
 
 export enum VaultTableName {

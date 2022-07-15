@@ -602,10 +602,10 @@ export const PoolLabels: TPoolLabels = {
       farmRewardTokenAddress: '0x900dB999074d9277c5DA2A43F252D74366230DA0',
       tradeUrl: '/mint?name=onegiv&collateral=DAI',
       subgraphEndpoint: '',
-      isInverted: true,
+      isInverted: false,
       isHodl: false,
-      // TODO: Fix this, I see no vault info yet from Vladimir, once I have that I can defind the VaultName + vaults.ts
-      vaultName: VaultName.GIV,
+      // TODO: Verify the vaultName is correct
+      vaultName: VaultName.ONEGIV_GIV,
       vaultAddress: '0xc3151A58d519B94E915f66B044De3E55F77c2dd9',
       irrStartDate: new Date(0),
       irrStartTxAmount: 0

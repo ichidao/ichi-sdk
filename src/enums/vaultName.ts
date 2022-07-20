@@ -1,5 +1,6 @@
 export enum VaultName {
   FUSE = 'fuse',
+  FUSE_V2 = 'fuse_v2',
   ICHI = 'ichi',
   USDC_ICHI = 'usdc-ichi',
   // ONE_ICHI = 'oneichi',

@@ -215,6 +215,7 @@ export const Pools: TPools = {
       MainnetPoolNumbers.GNO_VAULT,
       MainnetPoolNumbers.WBTC_VAULT,
       MainnetPoolNumbers.BNT_VAULT,
+      MainnetPoolNumbers.FUSE_VAULT,
       MainnetPoolNumbers.ONE_FUSE_VAULT,
       MainnetPoolNumbers.ONE_FUSE_LEGACY,
       MainnetPoolNumbers.ONE_WING_VAULT,
@@ -299,6 +300,7 @@ export const Pools: TPools = {
       MainnetPoolNumbers.GNO_VAULT,
       MainnetPoolNumbers.WBTC_VAULT,
       MainnetPoolNumbers.BNT_VAULT,
+      MainnetPoolNumbers.FUSE_VAULT,
       MainnetPoolNumbers.ONE_GIV
     ],
     [ChainId.Polygon]: [PolygonPoolNumbers.ONE_BTC_VAULT, PolygonPoolNumbers.WBTC_VAULT, PolygonPoolNumbers.USDC_VAULT],
@@ -450,6 +452,7 @@ export const Pools: TPools = {
       MainnetPoolNumbers.GNO_VAULT,
       MainnetPoolNumbers.WBTC_VAULT,
       MainnetPoolNumbers.BNT_VAULT,
+      MainnetPoolNumbers.FUSE_VAULT,
       MainnetPoolNumbers.ONE_GIV
     ],
     [ChainId.Polygon]: [PolygonPoolNumbers.ONE_BTC_VAULT, PolygonPoolNumbers.WBTC_VAULT, PolygonPoolNumbers.USDC_VAULT],

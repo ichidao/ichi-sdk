@@ -18,7 +18,7 @@ import {
 } from '../enums/poolNumber';
 import { ChainId } from '../crypto/networks';
 import { PartialRecord } from '../types/common';
-import { VaultName } from '../enums/vaultName';
+import { VaultName, VaultTableName } from '../enums/vaultName';
 
 // type TPoolLabels = PartialRecord<PoolNumber, PartialRecord<ChainId, PoolLabel>>;
 // TODO: IMO these should be Record not PartialRecord here, but there are values missing, which we should probably fix
@@ -401,6 +401,21 @@ export const PoolLabels: TPoolLabels = {
       isHodl: true,
       vaultName: VaultName.BNT_V2,
       vaultAddress: '0x4DFa8455658f4d6D2eeb91CbeFb0Ee94056bB3dC',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [MainnetPoolNumbers.FUSE_VAULT]: {
+      name: 'FUSE Vault',
+      poolNumber: MainnetPoolNumbers.FUSE_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl:
+        'https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x970B9bB2C0444F5E81e9d0eFb84C8ccdcdcAf84d',
+      subgraphEndpoint: '',
+      isInverted: true,
+      isHodl: true,
+      vaultName: VaultName.FUSE_V2,
+      vaultAddress: '0xF6d4cdF6A9a82Aa56d2F2E1825B9f8E6052d8C46',
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },

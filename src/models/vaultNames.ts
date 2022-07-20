@@ -17,6 +17,7 @@ export enum VaultName {
   QRDO_USDC = 'qrdo_usdc',
   USDC_ICHI = 'usdc_ichi',
   ONEICHI_ICHI = 'oneichi_ichi',
+  FUSE_ICHI = 'fuse_ichi',
   BNT_ICHI = 'bnt_ichi'
 }
 

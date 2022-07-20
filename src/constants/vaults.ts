@@ -169,6 +169,29 @@ export const VAULTS: VaultMapping = {
       irrStartTxAmount: 17916
     }
   },
+  [VaultName.FUSE_ICHI]: {
+    [ChainId.Mainnet]: {
+      vaultName: VaultName.FUSE_ICHI, 
+      tableName: VaultName.FUSE_ICHI, 
+      displayName: 'FUSE-ICHI',
+      address: '0xF6d4cdF6A9a82Aa56d2F2E1825B9f8E6052d8C46',
+      farm: 30,
+      externalFarm: '',
+      scarceToken: 'token0',
+      scarceTokenName: TokenName.ICHI_V2,
+      scarceTokenDecimals: 18,
+      scarceTokenCoingeckoId: 'ichi-farm',
+      baseTokenName: TokenName.FUSE,
+      baseTokenDecimals: 18,
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: true,
+      isHodlVault: true,
+      isLegacy: false,
+      irrStartTxAmount: 0
+    }
+  },
   [VaultName.CEL_ICHI]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.CEL_ICHI, // old: 'cel',

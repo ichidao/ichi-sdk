@@ -1,5 +1,5 @@
 import { expect } from '@jest/globals';
-import { TokenName } from '../models/tokenNames';
+import { TokenName } from '../enums/tokenName';
 import { ChainId } from '../crypto/networks';
 import { getToken, getTokens, TOKENS } from './tokens';
 
@@ -15,18 +15,18 @@ describe('constants/tokens', () => {
       {
         name: TokenName.ICHI,
         chainId: ChainId.Mainnet,
-        expectedAddress: TOKENS[TokenName.ICHI][ChainId.Mainnet]?.address
+        expectedAddress: TOKENS[TokenName.ICHI]![ChainId.Mainnet]?.address
       },
       {
         name: TokenName.ICHI_V2,
         chainId: ChainId.Polygon,
-        expectedAddress: TOKENS[TokenName.ICHI_V2][ChainId.Polygon]?.address
+        expectedAddress: TOKENS[TokenName.ICHI_V2]![ChainId.Polygon]?.address
       }
     ];
 
     testParams.forEach((testParam) => {
       it(JSON.stringify(testParam), async () => {
-        const actualResult = getToken(testParam.name, { chainId: testParam.chainId });
+        const actualResult = getToken(testParam.name, testParam.chainId);
         expect(actualResult.address).toEqual(testParam.expectedAddress);
       });
     });
@@ -50,9 +50,7 @@ describe('constants/tokens', () => {
 
     testParams.forEach((testParam) => {
       it(JSON.stringify(testParam), async () => {
-        expect(() => getToken(testParam.name, { chainId: testParam.chainId, throwIfNotFound: true })).toThrow(
-          testParam.expectedErrorMessage
-        );
+        expect(() => getToken(testParam.name, testParam.chainId)).toThrow(testParam.expectedErrorMessage);
       });
     });
   });

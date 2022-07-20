@@ -1,5 +1,5 @@
 import { expect } from '@jest/globals';
-import { VaultName } from '../models/vaultNames';
+import { VaultName } from '../enums/vaultName';
 import { ChainId } from '../crypto/networks';
 import { getVault, getVaults, VAULTS } from './vaults';
 
@@ -13,25 +13,25 @@ describe('constants/vaults', () => {
 
     const testParams: TestArgs[] = [
       {
-        name: VaultName.ONEUNI_ICHI,
+        name: VaultName.ICHI,
         chainId: ChainId.Mainnet,
-        expectedAddress: VAULTS[VaultName.ONEUNI_ICHI][ChainId.Mainnet]?.address
+        expectedAddress: VAULTS[VaultName.ICHI]![ChainId.Mainnet]?.address
       },
       {
-        name: VaultName.ONEFOX_FOX,
+        name: VaultName.FOX,
         chainId: ChainId.Mainnet,
-        expectedAddress: VAULTS[VaultName.ONEFOX_FOX][ChainId.Mainnet]?.address
+        expectedAddress: VAULTS[VaultName.FOX]![ChainId.Mainnet]?.address
       },
       {
-        name: VaultName.WBTC_ICHI_V2,
+        name: VaultName.WBTC_V2,
         chainId: ChainId.Polygon,
-        expectedAddress: VAULTS[VaultName.WBTC_ICHI_V2][ChainId.Polygon]?.address
+        expectedAddress: VAULTS[VaultName.WBTC_V2]![ChainId.Polygon]?.address
       }
     ];
 
     testParams.forEach((testParam) => {
       it(JSON.stringify(testParam), async () => {
-        const actualResult = getVault(testParam.name, { chainId: testParam.chainId });
+        const actualResult = getVault(testParam.name, testParam.chainId);
         expect(actualResult.address).toEqual(testParam.expectedAddress);
       });
     });
@@ -46,18 +46,16 @@ describe('constants/vaults', () => {
 
     const testParams: TestArgs[] = [
       {
-        name: VaultName.WBTC_ICHI,
+        name: VaultName.WBTC,
         // Look for ICHI on a unknown chainId
         chainId: 999 as ChainId,
-        expectedErrorMessage: `Could not find ${VaultName.WBTC_ICHI} on 999`
+        expectedErrorMessage: `Could not find ${VaultName.WBTC} on 999`
       }
     ];
 
     testParams.forEach((testParam) => {
       it(JSON.stringify(testParam), async () => {
-        expect(() => getVault(testParam.name, { chainId: testParam.chainId, throwIfNotFound: true })).toThrow(
-          testParam.expectedErrorMessage
-        );
+        expect(() => getVault(testParam.name, testParam.chainId)).toThrow(testParam.expectedErrorMessage);
       });
     });
   });

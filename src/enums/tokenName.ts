@@ -42,8 +42,6 @@ export enum TokenName {
   ONE_WING = 'onewing',
   BOOT_USD = 'bootusd',
   ONE_ICHI = 'oneichi',
-  ONE_GIV = 'onegiv',
-  GIV = 'giv',
   DAI = 'dai',
   // Test
   WEENUS = 'weenus',

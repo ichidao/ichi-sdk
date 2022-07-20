@@ -4,9 +4,7 @@ import { ChainId } from '../crypto/networks';
 import { TokenName } from '../enums/tokenName';
 import { Token as UniswapToken } from '@uniswap/sdk';
 
-type TokenMapping = {
-  [tokenName in TokenName]: PartialRecord<ChainId, Token>;
-};
+type TokenMapping = PartialRecord<TokenName, PartialRecord<ChainId, Token>>;
 
 export const TOKENS: TokenMapping = {
   [TokenName.ICHI]: {
@@ -1033,7 +1031,7 @@ export const TOKENS: TokenMapping = {
 };
 
 export function getToken(tokenName: TokenName, chainId: ChainId): Token {
-  const token = TOKENS[tokenName] != null ? TOKENS[tokenName][chainId] : undefined;
+  const token = TOKENS[tokenName] != null ? TOKENS[tokenName]![chainId] : undefined;
   if (!token) {
     throw new Error(`Could not find ${tokenName} on ${chainId}`);
   }
@@ -1041,7 +1039,7 @@ export function getToken(tokenName: TokenName, chainId: ChainId): Token {
 }
 
 export function getUniswapToken(tokenName: TokenName, chainId: ChainId): UniswapToken {
-  const token = TOKENS[tokenName] != null ? TOKENS[tokenName][chainId] : undefined;
+  const token = TOKENS[tokenName] != null ? TOKENS[tokenName]![chainId] : undefined;
 
   if (!token) {
     throw new Error(`Could not find ${tokenName} on ${chainId}`);

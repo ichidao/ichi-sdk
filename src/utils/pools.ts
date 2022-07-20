@@ -229,7 +229,7 @@ export const getOneTokenAttributes = function (tokenName: TokenName, chainId: Ch
     stimulus_display_name: token.stimulusDisplayName,
     stimulus_decimals: 18,
     abi_type: 'ONETOKEN',
-    base_name: tokenName.toLowerCase(),
+    base_name: tokenName,
     collateral_name: chainId === ChainId.Mumbai ? 'mum_usdc' : undefined,
     isV2: token.isV2,
     ichiVault: {
@@ -251,16 +251,16 @@ export const getOneTokenAttributes = function (tokenName: TokenName, chainId: Ch
     template.display_name = 'oneBTC';
   }
   if (tokenName == TokenName.ONE_VBTC) {
-    (template.abi_type = 'ONEETH'), (template.base_name = 'vbtc');
+    (template.abi_type = 'ONEETH'), (template.base_name = TokenName.VBTC);
   }
   if (tokenName == TokenName.ONE_WING) {
     template.stimulus_decimals = 9;
   }
   if (tokenName == TokenName.ONE_ETH) {
-    (template.abi_type = 'ONEETH'), (template.base_name = 'eth');
+    (template.abi_type = 'ONEETH'), (template.base_name = TokenName.ETH);
   }
   if (tokenName == TokenName.ONE_LINK) {
-    (template.abi_type = 'ONELINK'), (template.base_name = 'link');
+    (template.abi_type = 'ONELINK'), (template.base_name = TokenName.LINK);
   }
 
   // TODO: I assume the stimulus token is always on the same networ

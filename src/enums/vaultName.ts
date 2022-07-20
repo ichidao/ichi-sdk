@@ -1,6 +1,6 @@
 export enum VaultName {
   FUSE = 'fuse',
-  FUSE_V2 = 'fuse_v2',
+  // FUSE_V2 = 'fuse_v2',
   ICHI = 'ichi',
   USDC_ICHI = 'usdc-ichi',
   // ONE_ICHI = 'oneichi',
@@ -22,7 +22,8 @@ export enum VaultName {
   QRDO = 'qrdo',
   FOX = 'fox',
   ONEICHI_ICHI = 'oneichi_ichi',
-  ONEGIV_GIV = 'onegiv_giv'
+  ONEGIV_GIV = 'onegiv_giv',
+  FUSE_ICHI = 'fuse_ichi'
 }
 
 export enum VaultTableName {
@@ -47,7 +48,8 @@ export enum VaultTableName {
   USDC_ICHI_POLYGON = 'polygon_usdc', // old: 'polygon_usdc'
   ONEICHI_ICHI = 'oneichi_ichi',
   ONEGIV_GIV = 'onegiv_giv',
-  BNT_ICHI = 'bnt_ichi'
+  BNT_ICHI = 'bnt_ichi',
+  FUSE_ICHI = 'fuse_ichi'
 }
 
 export type VaultNames = keyof typeof VaultName;

@@ -404,9 +404,9 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
-    [MainnetPoolNumbers.FUSE_VAULT]: {
+    [MainnetPoolNumbers.FUSE_ICHI_VAULT]: {
       name: 'FUSE Vault',
-      poolNumber: MainnetPoolNumbers.FUSE_VAULT,
+      poolNumber: MainnetPoolNumbers.FUSE_ICHI_VAULT,
       lpName: 'ICHI_VAULT_LP',
       shortLpName: 'VAULT_LP',
       tradeUrl:
@@ -414,7 +414,7 @@ export const PoolLabels: TPoolLabels = {
       subgraphEndpoint: '',
       isInverted: true,
       isHodl: true,
-      vaultName: VaultName.FUSE_V2,
+      vaultName: VaultName.FUSE_ICHI,
       vaultAddress: '0xF6d4cdF6A9a82Aa56d2F2E1825B9f8E6052d8C46',
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
@@ -619,7 +619,6 @@ export const PoolLabels: TPoolLabels = {
       subgraphEndpoint: '',
       isInverted: false,
       isHodl: false,
-      // TODO: Verify the vaultName is correct
       vaultName: VaultName.ONEGIV_GIV,
       vaultAddress: '0xc3151A58d519B94E915f66B044De3E55F77c2dd9',
       irrStartDate: new Date(0),

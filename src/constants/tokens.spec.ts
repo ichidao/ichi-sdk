@@ -15,12 +15,12 @@ describe('constants/tokens', () => {
       {
         name: TokenName.ICHI,
         chainId: ChainId.Mainnet,
-        expectedAddress: TOKENS[TokenName.ICHI][ChainId.Mainnet]?.address
+        expectedAddress: TOKENS[TokenName.ICHI]![ChainId.Mainnet]?.address
       },
       {
         name: TokenName.ICHI_V2,
         chainId: ChainId.Polygon,
-        expectedAddress: TOKENS[TokenName.ICHI_V2][ChainId.Polygon]?.address
+        expectedAddress: TOKENS[TokenName.ICHI_V2]![ChainId.Polygon]?.address
       }
     ];
 

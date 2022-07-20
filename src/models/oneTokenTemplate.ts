@@ -1,3 +1,4 @@
+import { TokenName } from '../enums/tokenName';
 import { Token } from './token';
 
 export type OneTokenTemplate = {
@@ -13,8 +14,9 @@ export type OneTokenTemplate = {
   stimulus_display_name?: string;
   stimulus_decimals?: number;
   abi_type: 'ONETOKEN' | 'ONEETH' | 'ONELINK';
-  base_name: string; // TODO: Should this be TokenName?
+  base_name: TokenName;
   collateral_name?: string;
+  collateralToken?: Token;
   isV2?: boolean;
   ichiVault: {
     address: string;
@@ -26,5 +28,4 @@ export type OneTokenTemplate = {
     // unclear what this is for
     ichi?: string;
   };
-  collateralToken: Token;
 };

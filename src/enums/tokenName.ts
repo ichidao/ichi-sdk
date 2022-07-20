@@ -24,6 +24,7 @@ export enum TokenName {
   DODO = 'dodo',
   FOX = 'fox',
   BOOT = 'boot',
+  ETH = 'eth',
   ONE_ETH = 'oneeth',
   ONE_VBTC = 'onevbtc',
   ONE_LINK = 'onelink',

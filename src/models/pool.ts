@@ -26,7 +26,7 @@ export type PoolLabel = {
   subgraphEndpoint?: string; // 'https://api.thegraph.com/subgraphs/name/ichi-org/onebtc-vault',
   isInverted?: boolean; // true,
   isHodl?: boolean; // false,
-  // TODO: The vaultName type is tricky here.  The ichi-api-updater references the Token for the isOneToken based on this string
+  // NOTE: The vaultName type is tricky here.  The ichi-api-updater references the Token for the isOneToken based on this string
   // but there are names that aren't tokens, like cel_v2 and gno_v2, those are more like vault names, however the vault names don't
   // include those either.  So for now keep string until there is more clarity.
   vaultName?: VaultName; // 'onebtc',

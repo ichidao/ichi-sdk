@@ -23,9 +23,9 @@ describe('constants/vaults', () => {
         expectedAddress: VAULTS[VaultName.FOX]![ChainId.Mainnet]?.address
       },
       {
-        name: VaultName.WBTC_V2,
+        name: VaultName.POLYGON_WBTC,
         chainId: ChainId.Polygon,
-        expectedAddress: VAULTS[VaultName.WBTC_V2]![ChainId.Polygon]?.address
+        expectedAddress: VAULTS[VaultName.POLYGON_WBTC]![ChainId.Polygon]?.address
       }
     ];
 

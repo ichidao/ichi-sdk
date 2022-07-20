@@ -1,8 +1,8 @@
 import { TokenName } from '../enums/tokenName';
 import { Vault } from '../models/vault';
-import { VaultName, VaultTableName } from '../enums/vaultName';
 import { ChainId } from '../crypto/networks';
 import { PartialRecord } from '../types/common';
+import { VaultName, VaultTableName } from '../enums/vaultName';
 
 // type VaultMapping = {
 //   [vaultName in VaultName]: PartialRecord<ChainId, Vault>;

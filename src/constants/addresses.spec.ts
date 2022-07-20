@@ -19,8 +19,13 @@ describe('constants/addresses', () => {
       },
       {
         name: AddressName.ICHIBPT,
-        chainId: ChainId.Polygon,
+        chainId: ChainId.Mainnet,
         expectedAddress: ADDRESSES[AddressName.ICHIBPT][ChainId.Mainnet]
+      },
+      {
+        name: AddressName.FARMING_V2,
+        chainId: ChainId.Polygon,
+        expectedAddress: ADDRESSES[AddressName.FARMING_V2][ChainId.Polygon]
       }
     ];
 

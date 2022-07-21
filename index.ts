@@ -66,7 +66,8 @@ export {
   getRariPoolLensSecondaryContract,
   getDodoFarmContract,
   getBmiStakingContract,
-  get1InchStakingContract
+  get1InchStakingContract,
+  getCommonOracleContract
 } from './src/utils/contracts';
 export {
   isErc20,
@@ -103,6 +104,8 @@ export { Token } from './src/models/token';
 export { Vault } from './src/models/vault';
 export { Pool, PoolLabel, PoolRecord } from './src/models/pool';
 export { OneTokenTemplate } from './src/models/oneTokenTemplate';
+export { VerboseTransaction } from './src/models/verboseTransaction';
+export { DistilledTransaction } from './src/models/distilledTransaction';
 
 // Enums
 export { MainnetPoolNumbers, KovanPoolNumbers, PolygonPoolNumbers, MumbaiPoolNumbers } from './src/enums/poolNumber';

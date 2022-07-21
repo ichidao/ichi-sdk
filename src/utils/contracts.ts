@@ -7,6 +7,8 @@ import {
   Ally__factory,
   BmiStaking,
   BmiStaking__factory,
+  CommonOracle,
+  CommonOracle__factory,
   Erc20,
   Erc20__factory,
   FarmingV2,
@@ -271,6 +273,15 @@ export function get1InchStakingContract(address: string, provider: JsonRpcProvid
     return OneInchStaking__factory.connect(address, provider);
   } catch (e) {
     console.error(`Couldn't create OneInchStaking contract with address: ${address}`);
+    throw e;
+  }
+}
+
+export function getCommonOracleContract(address: string, provider: JsonRpcProvider): CommonOracle {
+  try {
+    return CommonOracle__factory.connect(address, provider);
+  } catch (e) {
+    console.error(`Couldn't create CommonOracle contract with address: ${address}`);
     throw e;
   }
 }

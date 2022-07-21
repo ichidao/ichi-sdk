@@ -6,8 +6,8 @@ import { getToken, getTokens } from '../constants/tokens';
 import { getProvider } from '../crypto/providers';
 import { TokenName } from '../enums/tokenName';
 import { OneTokenTemplate } from '../models/oneTokenTemplate';
-import { Contracts, getContractByAddress, getErc20Contract } from './contracts';
-import { asBalancerPool, asDodoLiquidityPool, asErc20, asGenericPool, asIchiBnt, asIchiVault } from './contractGuards';
+import { Contracts, getErc20Contract } from './contracts';
+import { asBalancerPool, asDodoLiquidityPool, asGenericPool, asIchiBnt, asIchiVault } from './contractGuards';
 import {
   KovanPoolNumberValues,
   MainnetPoolNumberValues,

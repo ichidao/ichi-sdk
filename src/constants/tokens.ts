@@ -530,8 +530,8 @@ export const TOKENS: TokenMapping = {
   },
   [TokenName.ONE_LINK]: {
     [ChainId.Mainnet]: {
-      tokenName: TokenName.ONE_VBTC,
-      tableName: TokenName.ONE_VBTC,
+      tokenName: TokenName.ONE_LINK,
+      tableName: TokenName.ONE_LINK,
       address: '0x18Cc17a1EeD37C02A77B0B96b7890C7730E2a2CF',
       strategy: '',
       auxStrategy: [],

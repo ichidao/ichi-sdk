@@ -198,7 +198,7 @@ export const VAULTS: VaultMapping = {
     [ChainId.Polygon]: {
       vaultName: VaultName.POLYGON_WBTC, // old: 'polygon_wbtc',
       // tableName: `pol_${VaultName.WBTC_ICHI_V2}`, // old: 'polygon_wbtc',
-      tableName: VaultTableName.WBTC_ICHI_V2_POLYGON, // old: 'polygon_wbtc',
+      tableName: VaultTableName.POLYGON_WBTC_ICHI, // old: 'polygon_wbtc',
       displayName: 'wBTC-ICHI (polygon)',
       address: '0x4aef5144131db95c110af41c8ec09f46295a7c4b',
       farm: 1,
@@ -222,7 +222,7 @@ export const VAULTS: VaultMapping = {
   [VaultName.ONEBTC]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.ONEBTC, // old: 'onebtc',
-      tableName: VaultTableName.ONEBTC_ICHI_MAINNET, // old: 'onebtc',
+      tableName: VaultTableName.ONEBTC_ICHI, // old: 'onebtc',
       displayName: 'oneBTC-ICHI (legacy)',
       address: '0x5318c21c96256ce4b73c27D405147df97d28E0Be',
       farm: 23,
@@ -246,7 +246,7 @@ export const VAULTS: VaultMapping = {
     [ChainId.Polygon]: {
       vaultName: VaultName.POLYGON_ONEBTC, // old: 'polygon_onebtc',
       // tableName: `pol_${VaultName.ONEBTC_ICHI}`, // old: 'polygon_onebtc',
-      tableName: VaultTableName.ONEBTC_ICHI_POLYGON, // old: 'polygon_onebtc',
+      tableName: VaultTableName.POLYGON_ONEBTC_ICHI, // old: 'polygon_onebtc',
       displayName: 'oneBTC-ICHI (polygon)',
       address: '0xE5bf5D33C617556B91558aAfb7BeadB68E9Cea81',
       farm: 0,
@@ -361,7 +361,7 @@ export const VAULTS: VaultMapping = {
   [VaultName.WBTC_V2]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.WBTC_V2, // old: 'wbtc_v2',
-      tableName: VaultTableName.WBTC_ICHI_V2_MAINNET, // old: 'wbtc_v2',
+      tableName: VaultTableName.WBTC_ICHI_V2, // old: 'wbtc_v2',
       displayName: 'wBTC-ICHI',
       address: '0x913b7D91e019402233d2f75863133925CE658CD9',
       farm: 28,
@@ -407,7 +407,7 @@ export const VAULTS: VaultMapping = {
   [VaultName.USDC_ICHI]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.USDC_ICHI, // old: 'usdc_ichi',
-      tableName: VaultTableName.USDC_ICHI_MAINNET, // old: 'usdc_ichi',
+      tableName: VaultTableName.USDC_ICHI, // old: 'usdc_ichi',
       displayName: 'USDC-ICHI',
       address: '0x683F081DBC729dbD34AbaC708Fa0B390d49F1c39',
       farm: 0,
@@ -429,7 +429,7 @@ export const VAULTS: VaultMapping = {
     [ChainId.Polygon]: {
       vaultName: VaultName.USDC_ICHI, // old: 'polygon_usdc',
       // tableName: `pol_${VaultName.USDC_ICHI}`, // old: 'polygon_usdc',
-      tableName: VaultTableName.USDC_ICHI_POLYGON, // old: 'polygon_usdc',
+      tableName: VaultTableName.POLYGON_USDC_ICHI, // old: 'polygon_usdc',
       displayName: 'USDC-ICHI (polygon)',
       address: '0x711901e4b9136119Fb047ABe8c43D49339f161c3',
       farm: 2,
@@ -453,7 +453,7 @@ export const VAULTS: VaultMapping = {
     [ChainId.Polygon]: {
       vaultName: VaultName.POLYGON_USDC, // old: 'polygon_usdc',
       // tableName: `pol_${VaultName.USDC_ICHI}`, // old: 'polygon_usdc',
-      tableName: VaultTableName.USDC_ICHI_POLYGON, // old: 'polygon_usdc',
+      tableName: VaultTableName.POLYGON_USDC_ICHI, // old: 'polygon_usdc',
       displayName: 'USDC-ICHI (polygon)',
       address: '0x711901e4b9136119Fb047ABe8c43D49339f161c3',
       farm: 2,
@@ -583,6 +583,29 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: true,
+      isLegacy: false,
+      irrStartTxAmount: 0
+    }
+  },
+  [VaultName.KOVAN_ONE_FIL]: {
+    [ChainId.Kovan]: {
+      vaultName: VaultName.KOVAN_ONE_FIL,
+      tableName: VaultTableName.KOVAN_ONE_FIL,
+      displayName: 'oneFIL-ICHI',
+      address: '0xA0D500fd3479CBCb64a2238082b7a1Df9f87d98D',
+      farm: 4, // id in the farm, 5000 is internal, from farm starts at 0 and goes up
+      externalFarm: '',
+      scarceToken: 'token1', // ICHi since token0 in contract is oneFIL
+      scarceTokenName: TokenName.ICHI,
+      scarceTokenDecimals: 9,
+      scarceTokenCoingeckoId: 'ichi-farm',
+      baseTokenName: TokenName.ONE_FIL,
+      baseTokenDecimals: 18,
+      enableNotifications: false,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: false, // will be inverted if token0 is ICHI, in this case token0 is oneFIL so inverted false
+      isHodlVault: false,
       isLegacy: false,
       irrStartTxAmount: 0
     }

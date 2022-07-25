@@ -170,7 +170,8 @@ export const getProvider = async (chainId: number): Promise<Optional<JsonRpcProv
       mumbaiProvider = await connectToProvider(
         ChainId.Mumbai,
         EnvUtils.EnvValues.MUMBAI_RPC_HOSTS,
-        EnvUtils.EnvValue.ALCHEMY_ID
+        // EnvUtils.EnvValue.ALCHEMY_ID
+        EnvUtils.EnvValue.INFURA_ID
       );
       if (!mumbaiProvider) {
         throw new Error(`Could not connect to a mumbai provider, please check your network`);

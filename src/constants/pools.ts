@@ -12,7 +12,8 @@ import {
   MumbaiPoolNumbers,
   MumbaiPoolNumberValues,
   PolygonPoolNumbers,
-  PolygonPoolNumberValues
+  PolygonPoolNumberValues,
+  PoolNumberValues
 } from '../enums/poolNumber';
 
 type TPoolMapping = { [vaultName in PoolName]: PartialRecord<ChainId, Pool> };

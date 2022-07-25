@@ -1,9 +1,7 @@
 export enum VaultName {
   FUSE = 'fuse',
-  // FUSE_V2 = 'fuse_v2',
   ICHI = 'ichi',
   USDC_ICHI = 'usdc-ichi',
-  // ONE_ICHI = 'oneichi',
   WING = 'wing',
   OJA = 'oja',
   GNO = 'gno',
@@ -13,20 +11,24 @@ export enum VaultName {
   WBTC = 'wbtc',
   WBTC_V2 = 'wbtc_v2',
   BNT_V2 = 'bnt_v2',
-  POLYGON_WBTC = 'polygon_wbtc',
   ONEBTC = 'onebtc',
-  POLYGON_ONEBTC = 'polygon_onebtc',
-  POLYGON_USDC = 'polygon_usdc',
   WNXM = 'wnxm',
   WNXM_V2 = 'wnxm_v2',
   QRDO = 'qrdo',
   FOX = 'fox',
   ONEICHI_ICHI = 'oneichi_ichi',
   ONEGIV_GIV = 'onegiv_giv',
-  FUSE_ICHI = 'fuse_ichi'
+  FUSE_ICHI = 'fuse_ichi',
+  // Kovan
+  KOVAN_ONE_FIL = 'kovan_one_fil',
+  // Polygon
+  POLYGON_ONEBTC = 'pol_onebtc',
+  POLYGON_USDC = 'pol_usdc',
+  POLYGON_WBTC = 'pol_wbtc'
 }
 
 export enum VaultTableName {
+  // Mainnet
   ONEFUSE_FUSE = 'onefuse_fuse',
   ONEUNI_ICHI = 'oneuni_ichi',
   ONEWING_PWING = 'onewing_pwing',
@@ -35,21 +37,24 @@ export enum VaultTableName {
   GNO_ICHI = 'gno_ichi',
   CEL_ICHI = 'cel_ichi',
   WBTC_ICHI = 'wbtc_ichi',
-  ONEBTC_ICHI_MAINNET = 'onebtc_ichi',
-  ONEBTC_ICHI_POLYGON = 'polygon_onebtc', // old: polygon_onebtc ?
+  ONEBTC_ICHI = 'onebtc_ichi',
   GNO_ICHI_V2 = 'gno_ichi_v2',
   CEL_ICHI_V2 = 'cel_ichi_v2',
   WNXM_ICHI = 'wnxm_ichi',
   WNXM_ICHI_V2 = 'wnxm_ichi_v2',
-  WBTC_ICHI_V2_MAINNET = 'wbtc_ichi_v2', // old: 'polygon_wbtc'
-  WBTC_ICHI_V2_POLYGON = 'polygon_wbtc', // old: 'polygon_wbtc'
+  WBTC_ICHI_V2 = 'wbtc_ichi_v2',
   QRDO_USDC = 'qrdo_usdc',
-  USDC_ICHI_MAINNET = 'usdc_ichi', // old: 'polygon_usdc'
-  USDC_ICHI_POLYGON = 'polygon_usdc', // old: 'polygon_usdc'
+  USDC_ICHI = 'usdc_ichi',
   ONEICHI_ICHI = 'oneichi_ichi',
   ONEGIV_GIV = 'onegiv_giv',
   BNT_ICHI = 'bnt_ichi',
-  FUSE_ICHI = 'fuse_ichi'
+  FUSE_ICHI = 'fuse_ichi',
+  // Kovan related
+  KOVAN_ONE_FIL = 'test_one_fil',
+  // Polygon
+  POLYGON_WBTC_ICHI = 'pol_wbtc_ichi',
+  POLYGON_ONEBTC_ICHI = 'pol_onebtc_ichi',
+  POLYGON_USDC_ICHI = 'pol_usdc_ichi'
 }
 
 export type VaultNames = keyof typeof VaultName;

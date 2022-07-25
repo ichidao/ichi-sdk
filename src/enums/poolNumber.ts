@@ -48,6 +48,7 @@ export enum MainnetPoolNumbers {
   WBTC_VAULT_LEGACY = 1022
 }
 
+// These are non-adjusted
 export enum KovanPoolNumbers {
   WEENUS_WETH = 5000,
   ICHI_WETH = 5001,

@@ -42,7 +42,7 @@ export const TOKENS: TokenMapping = {
     },
     [ChainId.Kovan]: {
       tokenName: TokenName.ICHI,
-      tableName: `kov_${TokenName.ICHI}`,
+      tableName: `test_${TokenName.ICHI}`,
       symbol: 'ICHI',
       atCoingecko: false,
       address: '0x883Cc74d965edB77311A3f9a93649e92E2aa14ba',
@@ -119,7 +119,7 @@ export const TOKENS: TokenMapping = {
     },
     [ChainId.Kovan]: {
       tokenName: TokenName.RENFIL,
-      tableName: `kov_${TokenName.RENFIL}`,
+      tableName: `test_${TokenName.RENFIL}`,
       symbol: 'renFIL',
       atCoingecko: true,
       address: '0x3CB15c7048e7CfAcFBc8eFe9362fAC5e60012BD1',
@@ -189,7 +189,7 @@ export const TOKENS: TokenMapping = {
     },
     [ChainId.Kovan]: {
       tokenName: TokenName.DAI,
-      tableName: `kov_${TokenName.DAI}`,
+      tableName: `test_${TokenName.DAI}`,
       address: '0x4F96Fe3b7A6Cf9725f59d353F723c1bDb64CA6Aa',
       decimals: 18,
       displayName: 'DAI',
@@ -295,7 +295,7 @@ export const TOKENS: TokenMapping = {
     },
     [ChainId.Kovan]: {
       tokenName: TokenName.WETH,
-      tableName: `kov_${TokenName.WETH}`,
+      tableName: `test_${TokenName.WETH}`,
       symbol: 'wETH',
       atCoingecko: false,
       address: '0xd0A1E359811322d97991E03f863a0C30C2cF029C',
@@ -353,7 +353,7 @@ export const TOKENS: TokenMapping = {
     },
     [ChainId.Kovan]: {
       tokenName: TokenName.UNI,
-      tableName: `kov_${TokenName.UNI}`,
+      tableName: `test_${TokenName.UNI}`,
       symbol: 'UNI',
       atCoingecko: false,
       address: '0xdF2661E2E6A35B482E3F105bDE628B5e1F68aB41',
@@ -395,7 +395,7 @@ export const TOKENS: TokenMapping = {
     },
     [ChainId.Kovan]: {
       tokenName: TokenName.USDC,
-      tableName: `kov_${TokenName.USDC}`,
+      tableName: `test_${TokenName.USDC}`,
       symbol: 'USDC',
       atCoingecko: false,
       address: '0x21632981cBf52eB788171e8dcB891C32F4834239',
@@ -978,7 +978,7 @@ export const TOKENS: TokenMapping = {
     },
     [ChainId.Kovan]: {
       tokenName: TokenName.TOKEN_6,
-      tableName: `kov_${TokenName.TOKEN_6}`,
+      tableName: `test_${TokenName.TOKEN_6}`,
       symbol: 'Token6',
       atCoingecko: false,
       address: '0xb994c68b4ed03d8f0aa9cb1b1729fa9bbbaa75e7',
@@ -990,7 +990,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.TOKEN_18]: {
     [ChainId.Kovan]: {
       tokenName: TokenName.TOKEN_18,
-      tableName: `kov_${TokenName.TOKEN_18}`,
+      tableName: `test_${TokenName.TOKEN_18}`,
       symbol: 'Token18',
       atCoingecko: false,
       address: '0x670d1C929e7d6B9F847c60A35750A440cB0f9308',
@@ -1002,7 +1002,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.OTI]: {
     [ChainId.Kovan]: {
       tokenName: TokenName.OTI,
-      tableName: `kov_${TokenName.OTI}`,
+      tableName: `test_${TokenName.OTI}`,
       symbol: 'OTI',
       atCoingecko: false,
       address: '0x5BF9b9bB304672c3d006955AbFC516e8b37693F9',
@@ -1019,7 +1019,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.WEENUS]: {
     [ChainId.Kovan]: {
       tokenName: TokenName.WEENUS,
-      tableName: `kov_${TokenName.WEENUS}`,
+      tableName: `test_${TokenName.WEENUS}`,
       symbol: 'WEENUS',
       atCoingecko: false,
       address: '0xaFF4481D10270F50f203E0763e2597776068CBc5',

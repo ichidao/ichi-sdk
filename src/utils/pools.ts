@@ -70,110 +70,128 @@ export function adjustedPidString(pid: number): string {
 }
 
 export async function getPoolTokens(poolContract: Contracts, chainId: ChainId, opts?: { poolId?: PoolNumberValues }) {
-  let isBalancerPool =
-    opts?.poolId != null &&
-    (Pools.BALANCER_POOLS[chainId].includes(opts.poolId) || Pools.BALANCER_SMART_POOLS[chainId].includes(opts.poolId));
-  let isBancorPoolV2 = opts?.poolId != null && Pools.BANCOR_POOLS_V2[chainId].includes(opts.poolId);
+  try {
+    let isBalancerPool =
+      opts?.poolId != null &&
+      (Pools.BALANCER_POOLS[chainId].includes(opts.poolId) ||
+        Pools.BALANCER_SMART_POOLS[chainId].includes(opts.poolId));
+    let isBancorPoolV2 = opts?.poolId != null && Pools.BANCOR_POOLS_V2[chainId].includes(opts.poolId);
 
-  let token0 = '';
-  let token1 = '';
+    let token0 = '';
+    let token1 = '';
 
-  if (isBancorPoolV2) {
-    // exception for Bancor pools, getting proxy (pool owner) contract
-    let tokens = await asIchiBnt(poolContract).reserveTokens();
-    token0 = tokens[0].toLowerCase();
-    token1 = tokens[1].toLowerCase();
-  } else if (isBalancerPool) {
-    // exception for Balancer pools
-    let tokens = await asBalancerPool(poolContract).getCurrentTokens();
-    token0 = tokens[0].toLowerCase();
-    token1 = tokens[1].toLowerCase();
-  } else {
-    // everything else
-    token0 = await asIchiVault(poolContract).token0();
-    token1 = await asIchiVault(poolContract).token1();
-    token0 = token0.toLowerCase();
-    token1 = token1.toLowerCase();
+    if (isBancorPoolV2) {
+      // exception for Bancor pools, getting proxy (pool owner) contract
+      let tokens = await asIchiBnt(poolContract).reserveTokens();
+      token0 = tokens[0].toLowerCase();
+      token1 = tokens[1].toLowerCase();
+    } else if (isBalancerPool) {
+      // exception for Balancer pools
+      let tokens = await asBalancerPool(poolContract).getCurrentTokens();
+      token0 = tokens[0].toLowerCase();
+      token1 = tokens[1].toLowerCase();
+    } else {
+      // everything else
+      token0 = await asIchiVault(poolContract).token0();
+      token1 = await asIchiVault(poolContract).token1();
+      token0 = token0.toLowerCase();
+      token1 = token1.toLowerCase();
+    }
+
+    return {
+      token0: token0,
+      token1: token1
+    };
+  } catch (e) {
+    console.error(`Error getting pool tokens for poolId: ${opts?.poolId} on chainId ${chainId}`);
+    throw e;
   }
-
-  return {
-    token0: token0,
-    token1: token1
-  };
 }
 
 export async function getPoolReserves(poolContract: Contracts, chainId: ChainId, opts?: { poolId?: PoolNumberValues }) {
-  let isBancorPoolV2 = opts?.poolId != null && Pools.BANCOR_POOLS_V2[chainId].includes(opts.poolId);
-  let isVault =
-    opts?.poolId != null &&
-    (Pools.ACTIVE_VAULTS[chainId].includes(opts.poolId) || Pools.UNDERLYING_VAULTS[chainId].includes(opts.poolId));
-  let isDodoPool = opts?.poolId != null && Pools.DODO_POOLS[chainId].includes(opts.poolId);
+  try {
+    let isBancorPoolV2 = opts?.poolId != null && Pools.BANCOR_POOLS_V2[chainId].includes(opts.poolId);
+    let isVault =
+      opts?.poolId != null &&
+      (Pools.ACTIVE_VAULTS[chainId].includes(opts.poolId) || Pools.UNDERLYING_VAULTS[chainId].includes(opts.poolId));
+    let isDodoPool = opts?.poolId != null && Pools.DODO_POOLS[chainId].includes(opts.poolId);
 
-  if (isBancorPoolV2) {
-    // exception for Bancor pool, getting proxy (pool owner) contract
-    let reserveBalances = await asIchiBnt(poolContract).reserveBalances();
-    return {
-      _reserve0: Number(reserveBalances[0]),
-      _reserve1: Number(reserveBalances[1])
-    };
-  } else if (isVault) {
-    // vaults
-    let reserveBalances = await asIchiVault(poolContract).getTotalAmounts();
-    return {
-      _reserve0: Number(reserveBalances.total0),
-      _reserve1: Number(reserveBalances.total1)
-    };
-  } else if (isDodoPool) {
-    // vaults
-    let reserveBalances = await asDodoLiquidityPool(poolContract).getVaultReserve();
-    return {
-      _reserve0: Number(reserveBalances.baseReserve),
-      _reserve1: Number(reserveBalances.quoteReserve)
-    };
-  } else {
-    // everything else
-    let reserveBalances = await asGenericPool(poolContract).getReserves();
-    return {
-      _reserve0: Number(reserveBalances._reserve0),
-      _reserve1: Number(reserveBalances._reserve1)
-    };
+    if (isBancorPoolV2) {
+      console.log(`isBancorPoolV2`);
+      // exception for Bancor pool, getting proxy (pool owner) contract
+      let reserveBalances = await asIchiBnt(poolContract).reserveBalances();
+      return {
+        _reserve0: Number(reserveBalances[0]),
+        _reserve1: Number(reserveBalances[1])
+      };
+    } else if (isVault) {
+      console.log(`isVault`);
+      // vaults
+      let reserveBalances = await asIchiVault(poolContract).getTotalAmounts();
+      return {
+        _reserve0: Number(reserveBalances.total0),
+        _reserve1: Number(reserveBalances.total1)
+      };
+    } else if (isDodoPool) {
+      console.log(`isDodoPool`);
+      // vaults
+      let reserveBalances = await asDodoLiquidityPool(poolContract).getVaultReserve();
+      return {
+        _reserve0: Number(reserveBalances.baseReserve),
+        _reserve1: Number(reserveBalances.quoteReserve)
+      };
+    } else {
+      console.log(`everything else`);
+      // everything else
+      let reserveBalances = await asGenericPool(poolContract).getReserves();
+      return {
+        _reserve0: Number(reserveBalances._reserve0),
+        _reserve1: Number(reserveBalances._reserve1)
+      };
+    }
+  } catch (e) {
+    console.error(`Error getting the pool reserves`, e);
+    throw e;
   }
 }
 
 export async function getTokenData(tokenAddress: string, chainId: ChainId) {
-  let tokenSymbol = '';
-  let tokenDecimals = 0;
+  try {
+    let tokenSymbol = '';
+    let tokenDecimals = 0;
 
-  if (tokenAddress === getAddress(AddressName.ETH, chainId)) {
-    // special case for ETH
-    tokenDecimals = 18;
-    tokenSymbol = 'ETH';
-  } else {
-    for (const tkn of getTokens(chainId)) {
-      if (tkn.address.toLowerCase() == tokenAddress.toLowerCase()) {
-        return {
-          symbol: tkn.tokenName,
-          decimals: tkn.decimals
-        };
+    if (tokenAddress === getAddress(AddressName.ETH, chainId)) {
+      // special case for ETH
+      tokenDecimals = 18;
+      tokenSymbol = 'ETH';
+    } else {
+      for (const tkn of getTokens(chainId)) {
+        if (tkn.address.toLowerCase() == tokenAddress.toLowerCase()) {
+          return {
+            symbol: tkn.tokenName,
+            decimals: tkn.decimals
+          };
+        }
       }
+
+      const provider = await getProvider(chainId);
+      if (!provider) {
+        throw new Error(`Could not get provider`);
+      }
+      let tokenContract = getErc20Contract(tokenAddress, provider);
+
+      tokenSymbol = await tokenContract.symbol();
+      tokenDecimals = await tokenContract.decimals();
     }
 
-    const provider = await getProvider(chainId);
-    if (!provider) {
-      throw new Error(`Could not get provider`);
-    }
-    let tokenContract = getErc20Contract(tokenAddress, provider);
-
-    console.log('======= SHOULD NOT BE HERE, make sure to add missing token to tokens table');
-
-    tokenSymbol = await tokenContract.symbol();
-    tokenDecimals = await tokenContract.decimals();
+    return {
+      symbol: tokenSymbol,
+      decimals: tokenDecimals
+    };
+  } catch (e) {
+    console.error(`Error getting token data`, e);
+    throw e;
   }
-
-  return {
-    symbol: tokenSymbol,
-    decimals: tokenDecimals
-  };
 }
 
 // Mumbai
@@ -230,7 +248,7 @@ export const getOneTokenAttributes = function (tokenName: TokenName, chainId: Ch
     stimulus_decimals: 18,
     abi_type: 'ONETOKEN',
     base_name: tokenName,
-    collateral_name: chainId === ChainId.Mumbai ? 'mum_usdc' : undefined,
+    collateral_name: TokenName.USDC,
     isV2: token.isV2,
     ichiVault: {
       address: token.ichiVault ? token.ichiVault.address : '',
@@ -271,6 +289,11 @@ export const getOneTokenAttributes = function (tokenName: TokenName, chainId: Ch
 };
 
 export async function getTotalSupply(poolContract: Contracts) {
-  let tLP = await asGenericPool(poolContract).totalSupply();
-  return tLP.toString();
+  try {
+    const tLP = await asGenericPool(poolContract).totalSupply();
+    return tLP.toString();
+  } catch (e) {
+    console.error(`Could not get total supply`, e);
+    throw e;
+  }
 }

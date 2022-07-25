@@ -4,7 +4,8 @@ import { TestVault } from './testVault';
 
 export type Token = {
   tokenName: TokenName;
-  tableName: TokenName | `pol_${TokenName}` | `mum_${TokenName}` | `kov_${TokenName}`;
+  // test_ is for kovan
+  tableName: TokenName | `pol_${TokenName}` | `mum_${TokenName}` | `test_${TokenName}`;
   address: string;
   decimals: number;
   displayName: string;

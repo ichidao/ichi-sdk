@@ -115,6 +115,7 @@ export { TokenName, TokenNames } from './src/enums/tokenName';
 export { VaultName, VaultNames } from './src/enums/vaultName';
 export { TreasuryName, TreasuryNames } from './src/enums/treasuryName';
 export { DebankProtocolName, DebankProtocolNames, DebankProtocalValues } from './src/enums/debankProtocolName';
+export { PoolGroupName } from './src/enums/poolManagementName';
 
 // Constants
 export { Apis } from './src/constants/apis';

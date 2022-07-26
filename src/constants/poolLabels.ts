@@ -375,7 +375,7 @@ export const PoolLabels: TPoolLabels = {
       irrStartTxAmount: 0
     },
     [MainnetPoolNumbers.WBTC_VAULT]: {
-      name: 'wbtc vault',
+      name: 'wBTC Vault',
       poolNumber: MainnetPoolNumbers.WBTC_VAULT,
       lpName: 'ICHI_VAULT_LP',
       shortLpName: 'VAULT_LP',

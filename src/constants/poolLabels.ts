@@ -419,6 +419,36 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+    [MainnetPoolNumbers['1INCH_VAULT']]: {
+      name: '1INCH Vault',
+      poolNumber: MainnetPoolNumbers['1INCH_VAULT'],
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl:
+        'https://app.1inch.io/#/1/swap/ETH/1INCH',
+      subgraphEndpoint: '',
+      isInverted: false,
+      isHodl: true,
+      vaultName: VaultName['1INCH'],
+      vaultAddress: '0x65953959EdA6f0085D75B6e6E1F44212AB71c55A',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [MainnetPoolNumbers.WETH_VAULT]: {
+      name: 'wETH Vault',
+      poolNumber: MainnetPoolNumbers.WETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl:
+        'https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
+      subgraphEndpoint: '',
+      isInverted: true,
+      isHodl: true,
+      vaultName: VaultName.WETH,
+      vaultAddress: '0x48fBe026392E4c86b859794ABB56625537c16dd0',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
     [MainnetPoolNumbers.ONE_FUSE_VAULT]: {
       name: 'oneFUSE Vault',
       poolNumber: MainnetPoolNumbers.ONE_FUSE_VAULT,

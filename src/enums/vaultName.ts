@@ -1,4 +1,5 @@
 export enum VaultName {
+  '1INCH' = '1inch',
   FUSE = 'fuse',
   ICHI = 'ichi',
   USDC_ICHI = 'usdc-ichi',
@@ -19,6 +20,7 @@ export enum VaultName {
   ONEICHI_ICHI = 'oneichi_ichi',
   ONEGIV_GIV = 'onegiv_giv',
   FUSE_ICHI = 'fuse_ichi',
+  WETH = 'weth',
   // Kovan
   KOVAN_ONE_FIL = 'kovan_one_fil',
   // Polygon
@@ -29,6 +31,7 @@ export enum VaultName {
 
 export enum VaultTableName {
   // Mainnet
+  '1INCH_ICHI' = '1inch_ichi',
   ONEFUSE_FUSE = 'onefuse_fuse',
   ONEUNI_ICHI = 'oneuni_ichi',
   ONEWING_PWING = 'onewing_pwing',
@@ -49,6 +52,7 @@ export enum VaultTableName {
   ONEGIV_GIV = 'onegiv_giv',
   BNT_ICHI = 'bnt_ichi',
   FUSE_ICHI = 'fuse_ichi',
+  WETH_ICHI = 'weth_ichi',
   // Kovan related
   KOVAN_ONE_FIL = 'test_one_fil',
   // Polygon

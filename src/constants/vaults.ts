@@ -10,6 +10,52 @@ import { VaultName, VaultTableName } from '../enums/vaultName';
 type VaultMapping = Record<VaultName, PartialRecord<ChainId, Vault>>;
 
 export const VAULTS: VaultMapping = {
+  [VaultName.WETH]: {
+    [ChainId.Mainnet]: {
+      vaultName: VaultName.WETH,
+      tableName: VaultTableName.WETH_ICHI,
+      displayName: 'wETH-ICHI',
+      address: '0x48fBe026392E4c86b859794ABB56625537c16dd0',
+      farm: 32,
+      externalFarm: '0x275dFE03bc036257Cd0a713EE819Dbd4529739c8',
+      scarceToken: 'token0',
+      scarceTokenName: TokenName.ICHI_V2,
+      scarceTokenDecimals: 18,
+      scarceTokenCoingeckoId: 'ichi-farm',
+      baseTokenName: TokenName.WETH,
+      baseTokenDecimals: 18,
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: true,
+      isHodlVault: true,
+      isLegacy: false,
+      irrStartTxAmount: 0
+    }
+  },
+  [VaultName['1INCH']]: {
+    [ChainId.Mainnet]: {
+      vaultName: VaultName['1INCH'],
+      tableName: VaultTableName['1INCH_ICHI'],
+      displayName: '1INCH-ICHI',
+      address: '0x65953959EdA6f0085D75B6e6E1F44212AB71c55A',
+      farm: 31,
+      externalFarm: '0x275dFE03bc036257Cd0a713EE819Dbd4529739c8',
+      scarceToken: 'token1',
+      scarceTokenName: TokenName.ICHI_V2,
+      scarceTokenDecimals: 18,
+      scarceTokenCoingeckoId: 'ichi-farm',
+      baseTokenName: TokenName['1INCH'],
+      baseTokenDecimals: 18,
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: false,
+      isHodlVault: true,
+      isLegacy: false,
+      irrStartTxAmount: 0
+    }
+  },
   [VaultName.FUSE]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.FUSE, // old: 'fuse',
@@ -525,7 +571,7 @@ export const VAULTS: VaultMapping = {
       displayName: 'BNT-ICHI',
       address: '0x4DFa8455658f4d6D2eeb91CbeFb0Ee94056bB3dC',
       farm: 29,
-      externalFarm: '0x4B162306eE680Bf440541c3E5C70c553f632C8aA',
+      externalFarm: '0x275dFE03bc036257Cd0a713EE819Dbd4529739c8',
       scarceToken: 'token0',
       scarceTokenName: TokenName.ICHI_V2,
       scarceTokenDecimals: 18,

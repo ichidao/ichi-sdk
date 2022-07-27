@@ -3,6 +3,7 @@ export enum TokenName {
   ICHI_V2 = 'ichi_v2',
   XICHI = 'xichi',
   RENFIL = 'renfil',
+  ALLY = 'ally',
   BNT = 'bnt',
   CEL = 'cel',
   GIV = 'giv',

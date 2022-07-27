@@ -10,6 +10,29 @@ import { VaultName, VaultTableName } from '../enums/vaultName';
 type VaultMapping = Record<VaultName, PartialRecord<ChainId, Vault>>;
 
 export const VAULTS: VaultMapping = {
+  [VaultName.ALLY]: {
+    [ChainId.Mainnet]: {
+      vaultName: VaultName.ALLY,
+      tableName: VaultTableName.ALLY_ICHI,
+      displayName: 'ALLY-ICHI',
+      address: '0xE0b60aC202530017E5f06561156531c3AdfC5c8f',
+      farm: 33,
+      externalFarm: '0x275dFE03bc036257Cd0a713EE819Dbd4529739c8',
+      scarceToken: 'token0',
+      scarceTokenName: TokenName.ICHI_V2,
+      scarceTokenDecimals: 18,
+      scarceTokenCoingeckoId: 'ichi-farm',
+      baseTokenName: TokenName.ALLY,
+      baseTokenDecimals: 18,
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: true,
+      isHodlVault: true,
+      isLegacy: false,
+      irrStartTxAmount: 0
+    }
+  },
   [VaultName.WETH]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.WETH,

@@ -219,9 +219,20 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: '1INCH',
       symbol: '1INCH',
-      parentOneToken: TokenName.ONE_1INCH,
       isOneToken: false,
       atCoingecko: true
+    }
+  },
+  [TokenName.ALLY]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.ALLY,
+      tableName: TokenName.ALLY,
+      address: '0x1aa1e61369874bae3444A8Ef6528d6b13D6952EF',
+      decimals: 18,
+      displayName: 'ALLY',
+      symbol: 'ALLY',
+      isOneToken: false,
+      atCoingecko: false
     }
   },
   [TokenName.OJA]: {
@@ -291,7 +302,7 @@ export const TOKENS: TokenMapping = {
       displayName: 'wETH',
       symbol: 'wETH',
       isOneToken: false,
-      atCoingecko: false
+      atCoingecko: true
     },
     [ChainId.Kovan]: {
       tokenName: TokenName.WETH,

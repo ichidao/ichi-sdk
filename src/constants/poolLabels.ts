@@ -434,6 +434,21 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+    [MainnetPoolNumbers.ALLY_VAULT]: {
+      name: 'ALLY Vault',
+      poolNumber: MainnetPoolNumbers.ALLY_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl:
+        'https://ally.ichi.org/',
+      subgraphEndpoint: '',
+      isInverted: true,
+      isHodl: true,
+      vaultName: VaultName.ALLY,
+      vaultAddress: '0xE0b60aC202530017E5f06561156531c3AdfC5c8f',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
     [MainnetPoolNumbers.WETH_VAULT]: {
       name: 'wETH Vault',
       poolNumber: MainnetPoolNumbers.WETH_VAULT,

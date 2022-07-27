@@ -25,6 +25,7 @@ export enum AddressName {
   RARI_ONEBTC = 'RARI_ONEBTC',
   RARI_USDC = 'RARI_USDC',
   RARI_WBTC = 'RARI_WBTC',
+  GSR = 'GSR',
 
   // BSC
   GNOSIS = 'GNOSIS',

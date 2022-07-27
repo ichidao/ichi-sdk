@@ -49,6 +49,7 @@ export const ADDRESSES: AddressMapping = {
   [AddressName.RARI_ONEBTC]: { [ChainId.Mainnet]: '0x43854261848F67b04a6bf9E6fC757e0F8993fc81' },
   [AddressName.RARI_USDC]: { [ChainId.Mainnet]: '0xecE2c0aA6291e3f1222B6f056596dfE0E81039b9' },
   [AddressName.RARI_WBTC]: { [ChainId.Mainnet]: '0x5933F2109652C019CEab70dabf4Bc9E0E29873F5' },
+  [AddressName.GSR]: { [ChainId.Mainnet]: '0x93ab6342d64d717Ac4B6468240BBa4915BDbB4B3' },
   // BSC primarily
   [AddressName.GNOSIS]: { [ChainId.Bsc]: '0xdbB0DfcB3601e15541c072B2a866C0D53D6c6627' },
   [AddressName.USDC]: { [ChainId.Bsc]: '0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d' },

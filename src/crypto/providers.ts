@@ -56,21 +56,27 @@ const connectToProvider = async (
           console.debug(`Resolve hostname ${hostname}...`);
           await resolve(hostname, 'A');
           console.debug(`\tDone!`);
+
+          // For now let's assume that a DNS resolution on the RPC host is sufficient, I've seen where getBlockNumber fails
+          // Here even though the RPC endpoint is accessible
+          const provider = new JsonRpcProvider({ url });
+          console.debug(`Successfully connected to: ${url}`);
+          return provider;
         } catch (subError) {
           console.warn(`Could not resolve ${hostname}.`);
           throw subError;
         }
-        try {
-          console.debug(`Fetching block number from ${url}...`);
-          const provider = new JsonRpcProvider({ url, timeout: 5 });
-          await provider.getBlockNumber();
-          console.debug(`\tDone!`);
-          console.debug(`Successfully connected to rpc host from env vars: ${url}`);
-          return provider;
-        } catch (subError) {
-          console.warn(`Could not get blockNumber from ${url}.`);
-          throw subError;
-        }
+        // try {
+        //   console.debug(`Fetching block number from ${url}...`);
+        //   const provider = new JsonRpcProvider({ url, timeout: 5 });
+        //   await provider.getBlockNumber();
+        //   console.debug(`\tDone!`);
+        //   console.debug(`Successfully connected to rpc host from env vars: ${url}`);
+        //   return provider;
+        // } catch (subError) {
+        //   console.warn(`Could not get blockNumber from ${url}.`);
+        //   throw subError;
+        // }
       } catch (e) {
         console.warn(`Could not connect to ${url}, attempting the next`);
       }

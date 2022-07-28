@@ -48,13 +48,29 @@ const connectToProvider = async (
   if (rpcHosts) {
     for (let i = 0; i < rpcHosts.length; i++) {
       const url = rpcHosts[i];
-      const provider = new JsonRpcProvider({ url, timeout: 5 });
+      console.debug(`Attempting to connect to rpc host from env vars: ${url}`);
       try {
         // First attempte to resolve the url, if we don't do this attempting to JsonRpcProvider to an unreachable host will just hang
         const { hostname } = new URL(url);
-        await resolve(hostname, 'A');
-        await provider.getBlockNumber();
-        return provider;
+        try {
+          console.debug(`Resolve hostname ${hostname}...`);
+          await resolve(hostname, 'A');
+          console.debug(`\tDone!`);
+        } catch (subError) {
+          console.warn(`Could not resolve ${hostname}.`);
+          throw subError;
+        }
+        try {
+          console.debug(`Fetching block number from ${url}...`);
+          const provider = new JsonRpcProvider({ url, timeout: 5 });
+          await provider.getBlockNumber();
+          console.debug(`\tDone!`);
+          console.debug(`Successfully connected to rpc host from env vars: ${url}`);
+          return provider;
+        } catch (subError) {
+          console.warn(`Could not get blockNumber from ${url}.`);
+          throw subError;
+        }
       } catch (e) {
         console.warn(`Could not connect to ${url}, attempting the next`);
       }
@@ -68,13 +84,14 @@ const connectToProvider = async (
 
   // If the RPC_HOSTS fail or there are none, let's try to construct the rpc url if the providerId exists
   const url = `${SUPPORTED_NETWORKS[chainId]?.rpc.rpcUrl}${providerId}`;
-  console.log(`url: ${url}`);
+  console.log(`Attempting to connect to: ${url}`);
   const provider = new JsonRpcProvider({ url });
 
   try {
     const { hostname } = new URL(url);
     await resolve(hostname, 'A');
     await provider.getBlockNumber();
+    console.debug(`Successfully connected to: ${url}`);
     return provider;
   } catch (e) {
     console.warn(`Could not connect to ${url}`);

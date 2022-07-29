@@ -24,4 +24,5 @@ export type Token = {
   stimulusName?: TokenName;
   stimulusDisplayName?: string;
   tradeUrl?: string;
+  targetVaultStrength?: number;
 };

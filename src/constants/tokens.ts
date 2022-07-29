@@ -16,7 +16,8 @@ export const TOKENS: TokenMapping = {
       displayName: 'ICHI',
       symbol: 'ICHI',
       isOneToken: false,
-      atCoingecko: false
+      atCoingecko: false,
+      targetVaultStrength: .11
     },
     // NOTE: This is the same ICHI as ICHI_V2, but since Polygon my reference TokenName.ICHI, then we need to duplicate it here for that reference
     [ChainId.Polygon]: {
@@ -27,7 +28,8 @@ export const TOKENS: TokenMapping = {
       displayName: 'ICHI',
       symbol: 'ICHI',
       atCoingecko: false,
-      isOneToken: false
+      isOneToken: false,
+      targetVaultStrength: .11
     },
     // Unclear if this should be here or below, in the ichi-api-updater it uses ichi not ichi_v2, but that's ambiguous regardless
     [ChainId.Mumbai]: {
@@ -38,7 +40,8 @@ export const TOKENS: TokenMapping = {
       address: '0x36D7A88Df8B44D966DaC25c0DB0C000AE4d2306a',
       decimals: 18,
       displayName: 'ICHI',
-      isOneToken: false
+      isOneToken: false,
+      targetVaultStrength: .11
     },
     [ChainId.Kovan]: {
       tokenName: TokenName.ICHI,
@@ -48,7 +51,8 @@ export const TOKENS: TokenMapping = {
       address: '0x883Cc74d965edB77311A3f9a93649e92E2aa14ba',
       decimals: 9,
       displayName: 'ICHI',
-      isOneToken: false
+      isOneToken: false,
+      targetVaultStrength: .11
     }
   },
   [TokenName.ICHI_V2]: {
@@ -60,7 +64,8 @@ export const TOKENS: TokenMapping = {
       displayName: 'ICHI',
       symbol: 'ICHI',
       isOneToken: false,
-      atCoingecko: true
+      atCoingecko: true,
+      targetVaultStrength: .11
     },
     [ChainId.Polygon]: {
       tokenName: TokenName.ICHI_V2,
@@ -70,7 +75,8 @@ export const TOKENS: TokenMapping = {
       displayName: 'ICHI',
       symbol: 'ICHI',
       atCoingecko: false,
-      isOneToken: false
+      isOneToken: false,
+      targetVaultStrength: .11
     }
     // [ChainId.Mumbai]: {
     //   tokenName: TokenName.ICHI_V2,
@@ -161,7 +167,8 @@ export const TOKENS: TokenMapping = {
       displayName: 'GIV',
       parentOneToken: TokenName.ONE_GIV,
       isOneToken: false,
-      atCoingecko: true
+      atCoingecko: true,
+      targetVaultStrength: .1
     }
   },
   [TokenName.GNO]: {
@@ -196,19 +203,6 @@ export const TOKENS: TokenMapping = {
       symbol: 'DAI',
       isOneToken: false,
       atCoingecko: false
-    }
-  },
-  [TokenName.GIV]: {
-    [ChainId.Mainnet]: {
-      tokenName: TokenName.GIV,
-      tableName: TokenName.GIV,
-      address: '0x900dB999074d9277c5DA2A43F252D74366230DA0',
-      decimals: 18,
-      displayName: 'GIV',
-      symbol: 'GIV',
-      parentOneToken: TokenName.ONE_GIV,
-      isOneToken: false,
-      atCoingecko: true
     }
   },
   [TokenName['1INCH']]: {
@@ -268,7 +262,8 @@ export const TOKENS: TokenMapping = {
       displayName: 'QRDO',
       symbol: 'QRDO',
       isOneToken: false,
-      atCoingecko: true
+      atCoingecko: true,
+      targetVaultStrength: .1
     }
   },
   [TokenName.WBTC]: {
@@ -425,7 +420,8 @@ export const TOKENS: TokenMapping = {
       symbol: 'FUSE',
       parentOneToken: TokenName.ONE_FUSE,
       isOneToken: false,
-      atCoingecko: true
+      atCoingecko: true,
+      targetVaultStrength: .1
     }
   },
   [TokenName.MPH]: {

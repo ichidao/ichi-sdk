@@ -722,6 +722,7 @@ export const TOKENS: TokenMapping = {
       auxStrategy: [],
       decimals: 18,
       displayName: 'oneGIV',
+      symbol: 'GIV',
       atCoingecko: false,
       isOneToken: true,
       isV2: true,

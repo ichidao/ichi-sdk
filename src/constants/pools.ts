@@ -203,6 +203,9 @@ export const Pools: TPools = {
   },
   [PoolGroupName.ACTIVE_VAULTS]: {
     [ChainId.Mainnet]: [
+      MainnetPoolNumbers.ICHI_BNT,
+      MainnetPoolNumbers.ICHI_BNT_V3,
+      MainnetPoolNumbers.ICHI_ETH_SUSHI,
       MainnetPoolNumbers.ONE_UNI_VAULT_LP,
       MainnetPoolNumbers.GNO_VAULT_LEGACY,
       MainnetPoolNumbers.CEL_VAULT_LEGACY,
@@ -443,6 +446,7 @@ export const Pools: TPools = {
       MainnetPoolNumbers.ONE_WING_VAULT,
       MainnetPoolNumbers.ONE_FOX_VAULT,
       MainnetPoolNumbers.ONE_OJA_VAULT,
+      MainnetPoolNumbers.ONE_FUSE_VAULT,
       MainnetPoolNumbers.ONE_FUSE_LEGACY
     ],
     [ChainId.Polygon]: [],

@@ -162,7 +162,6 @@ export const Pools: TPools = {
   [PoolGroupName.ACTIVE_POOLS]: {
     [ChainId.Mainnet]: [
       MainnetPoolNumbers._80_20_ICHI_ETH,
-      MainnetPoolNumbers.ICHI_ETH_SUSHI,
       MainnetPoolNumbers.ICHI_ETH_UNI_V2,
       MainnetPoolNumbers.ONE_FIL,
       MainnetPoolNumbers.ONE_1INCH,
@@ -173,10 +172,8 @@ export const Pools: TPools = {
       MainnetPoolNumbers.ONE_DODO,
       MainnetPoolNumbers.ONE_WING,
       MainnetPoolNumbers.ICHI_1INCH,
-      MainnetPoolNumbers.ICHI_BNT,
       MainnetPoolNumbers.ONE_UNI,
-      MainnetPoolNumbers.ONE_BTC_DEPOSIT,
-      MainnetPoolNumbers.ICHI_BNT_V3
+      MainnetPoolNumbers.ONE_BTC_DEPOSIT
     ],
     [ChainId.Kovan]: [
       KovanPoolNumbers.WEENUS_WETH,
@@ -418,6 +415,9 @@ export const Pools: TPools = {
   [PoolGroupName.LEGACY_POOLS]: {
     [ChainId.Mainnet]: [
       MainnetPoolNumbers._80_20_ICHI_ETH,
+      MainnetPoolNumbers.ICHI_BNT,
+      MainnetPoolNumbers.ICHI_BNT_V3,
+      MainnetPoolNumbers.ICHI_ETH_SUSHI,
       MainnetPoolNumbers.ICHI_ETH_UNI_V2,
       MainnetPoolNumbers.ONE_FIL,
       MainnetPoolNumbers.ONE_1INCH,

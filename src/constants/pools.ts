@@ -162,6 +162,9 @@ export const Pools: TPools = {
   [PoolGroupName.ACTIVE_POOLS]: {
     [ChainId.Mainnet]: [
       MainnetPoolNumbers._80_20_ICHI_ETH,
+      MainnetPoolNumbers.ICHI_BNT,
+      MainnetPoolNumbers.ICHI_BNT_V3,
+      MainnetPoolNumbers.ICHI_ETH_SUSHI,
       MainnetPoolNumbers.ICHI_ETH_UNI_V2,
       MainnetPoolNumbers.ONE_FIL,
       MainnetPoolNumbers.ONE_1INCH,
@@ -203,9 +206,6 @@ export const Pools: TPools = {
   },
   [PoolGroupName.ACTIVE_VAULTS]: {
     [ChainId.Mainnet]: [
-      MainnetPoolNumbers.ICHI_BNT,
-      MainnetPoolNumbers.ICHI_BNT_V3,
-      MainnetPoolNumbers.ICHI_ETH_SUSHI,
       MainnetPoolNumbers.ONE_UNI_VAULT_LP,
       MainnetPoolNumbers.GNO_VAULT_LEGACY,
       MainnetPoolNumbers.CEL_VAULT_LEGACY,

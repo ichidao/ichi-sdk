@@ -221,7 +221,6 @@ export const Pools: TPools = {
       MainnetPoolNumbers.ALLY_VAULT,
       // MainnetPoolNumbers.WETH_VAULT,
       MainnetPoolNumbers.ONE_FUSE_VAULT,
-      MainnetPoolNumbers.ONE_FUSE_LEGACY,
       MainnetPoolNumbers.ONE_WING_VAULT,
       MainnetPoolNumbers.ONE_FOX_VAULT,
       MainnetPoolNumbers.ONE_OJA_VAULT,
@@ -276,7 +275,6 @@ export const Pools: TPools = {
       MainnetPoolNumbers.ONE_BTC_DEPOSIT,
       MainnetPoolNumbers.ICHI_BNT_V3,
       MainnetPoolNumbers.ONE_FUSE_VAULT,
-      MainnetPoolNumbers.ONE_FUSE_LEGACY,
       MainnetPoolNumbers.ONE_WING_VAULT,
       MainnetPoolNumbers.ONE_FOX_VAULT,
       MainnetPoolNumbers.ONE_OJA_VAULT,
@@ -446,8 +444,7 @@ export const Pools: TPools = {
       MainnetPoolNumbers.ONE_WING_VAULT,
       MainnetPoolNumbers.ONE_FOX_VAULT,
       MainnetPoolNumbers.ONE_OJA_VAULT,
-      MainnetPoolNumbers.ONE_FUSE_VAULT,
-      MainnetPoolNumbers.ONE_FUSE_LEGACY
+      MainnetPoolNumbers.ONE_FUSE_VAULT
     ],
     [ChainId.Polygon]: [],
     [ChainId.Kovan]: [],

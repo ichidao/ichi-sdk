@@ -230,6 +230,30 @@ export const TOKENS: TokenMapping = {
       atCoingecko: false
     }
   },
+  [TokenName.BOBA]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.BOBA,
+      tableName: TokenName.BOBA,
+      address: '0x42bbfa2e77757c645eeaad1655e0911a7553efbc',
+      decimals: 18,
+      displayName: 'BOBA',
+      symbol: 'BOBA',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
+  [TokenName.HOME]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.HOME,
+      tableName: TokenName.HOME,
+      address: '0xb8919522331c59f5c16bdfaa6a121a6e03a91f62',
+      decimals: 6,
+      displayName: 'HOME',
+      symbol: 'HOME',
+      isOneToken: false,
+      atCoingecko: false
+    }
+  },
   [TokenName.OJA]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.OJA,

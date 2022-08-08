@@ -979,25 +979,25 @@ export const TOKENS: TokenMapping = {
         'https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x111111517e4929D3dcbdfa7CCe55d30d4B6BC4d6&chain=mainnet'
     }
   },
-  [TokenName.ONE_GIV]: {
-    [ChainId.Mainnet]: {
-      tokenName: TokenName.ONE_GIV,
-      tableName: TokenName.ONE_GIV,
-      address: '0x17e6BA2519B4d15199B6529dB340910Ae031b1B0',
-      strategy: '0x8A17A9ACF32811b0d2a10Bd97839643e8AD14B1B',
-      auxStrategy: [],
-      decimals: 18,
-      displayName: 'oneGIV',
-      symbol: 'oneGIV',
-      atCoingecko: false,
-      isOneToken: true,
-      isV2: true,
-      stimulusName: TokenName.GIV,
-      stimulusDisplayName: 'GIV',
-      tradeUrl:
-        'https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x900dB999074d9277c5DA2A43F252D74366230DA0'
-    }
-  },
+  // [TokenName.ONE_GIV]: {
+  //   [ChainId.Mainnet]: {
+  //     tokenName: TokenName.ONE_GIV,
+  //     tableName: TokenName.ONE_GIV,
+  //     address: '0x17e6BA2519B4d15199B6529dB340910Ae031b1B0',
+  //     strategy: '0x8A17A9ACF32811b0d2a10Bd97839643e8AD14B1B',
+  //     auxStrategy: [],
+  //     decimals: 18,
+  //     displayName: 'oneGIV',
+  //     symbol: 'oneGIV',
+  //     atCoingecko: false,
+  //     isOneToken: true,
+  //     isV2: true,
+  //     stimulusName: TokenName.GIV,
+  //     stimulusDisplayName: 'GIV',
+  //     tradeUrl:
+  //       'https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x900dB999074d9277c5DA2A43F252D74366230DA0'
+  //   }
+  // },
   [TokenName.TOKEN_6]: {
     [ChainId.Mumbai]: {
       tokenName: TokenName.TOKEN_6,

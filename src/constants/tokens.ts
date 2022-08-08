@@ -751,7 +751,7 @@ export const TOKENS: TokenMapping = {
       atCoingecko: false,
       isOneToken: true,
       isV2: true,
-      stimulusName: 'giv',
+      stimulusName: TokenName.GIV,
       stimulusDisplayName: 'GIV',
       tradeUrl:
         'https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x900dB999074d9277c5DA2A43F252D74366230DA0'

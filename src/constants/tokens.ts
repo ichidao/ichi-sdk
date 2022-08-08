@@ -744,7 +744,7 @@ export const TOKENS: TokenMapping = {
       tableName: TokenName.ONE_GIV,
       address: '0x17e6BA2519B4d15199B6529dB340910Ae031b1B0',
       strategy: '0x8A17A9ACF32811b0d2a10Bd97839643e8AD14B1B',
-      auxStrategy: [],
+      auxStrategy: ['0x2B0ee142dCFE7C2dD150cDbd7B6832F6e9977f51'],
       decimals: 18,
       displayName: 'oneGIV',
       symbol: 'oneGIV',

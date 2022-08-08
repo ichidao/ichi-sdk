@@ -1,6 +1,8 @@
 export enum VaultName {
   '1INCH' = '1inch',
   ALLY = 'ally',
+  BOBA = 'boba',
+  HOME = 'home',
   FUSE = 'fuse',
   ICHI = 'ichi',
   USDC_ICHI = 'usdc-ichi',
@@ -52,6 +54,8 @@ export enum VaultTableName {
   USDC_ICHI = 'usdc_ichi',
   ONEICHI_ICHI = 'oneichi_ichi',
   ONEGIV_GIV = 'onegiv_giv',
+  BOBA_ICHI = 'boba_ichi',
+  HOME_ICHI = 'home_ichi',
   BNT_ICHI = 'bnt_ichi',
   FUSE_ICHI = 'fuse_ichi',
   WETH_ICHI = 'weth_ichi',

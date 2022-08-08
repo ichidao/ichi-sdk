@@ -229,7 +229,9 @@ export const Pools: TPools = {
       MainnetPoolNumbers.ONE_ICHI_VAULT,
       MainnetPoolNumbers.ONE_UNI_VAULT,
       MainnetPoolNumbers.ONE_BTC_VAULT_RARI,
-      MainnetPoolNumbers.ONE_GIV
+      MainnetPoolNumbers.ONE_GIV,
+      MainnetPoolNumbers.HOME_VAULT,
+      MainnetPoolNumbers.BOBA_VAULT
     ],
     [ChainId.Polygon]: [PolygonPoolNumbers.ONE_BTC_VAULT, PolygonPoolNumbers.WBTC_VAULT, PolygonPoolNumbers.USDC_VAULT],
     [ChainId.Kovan]: [
@@ -306,7 +308,9 @@ export const Pools: TPools = {
       MainnetPoolNumbers['1INCH_VAULT'],
       MainnetPoolNumbers.ALLY_VAULT,
       // MainnetPoolNumbers.WETH_VAULT,
-      MainnetPoolNumbers.ONE_GIV
+      MainnetPoolNumbers.ONE_GIV,
+      MainnetPoolNumbers.HOME_VAULT,
+      MainnetPoolNumbers.BOBA_VAULT
     ],
     [ChainId.Polygon]: [PolygonPoolNumbers.ONE_BTC_VAULT, PolygonPoolNumbers.WBTC_VAULT, PolygonPoolNumbers.USDC_VAULT],
     [ChainId.Kovan]: [
@@ -464,7 +468,9 @@ export const Pools: TPools = {
       MainnetPoolNumbers['1INCH_VAULT'],
       MainnetPoolNumbers.ALLY_VAULT,
       MainnetPoolNumbers.WETH_VAULT,
-      MainnetPoolNumbers.ONE_GIV
+      MainnetPoolNumbers.ONE_GIV,
+      MainnetPoolNumbers.HOME_VAULT,
+      MainnetPoolNumbers.BOBA_VAULT
     ],
     [ChainId.Polygon]: [PolygonPoolNumbers.ONE_BTC_VAULT, PolygonPoolNumbers.WBTC_VAULT, PolygonPoolNumbers.USDC_VAULT],
     [ChainId.Kovan]: [],

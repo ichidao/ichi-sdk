@@ -3,6 +3,8 @@ import { Vault } from '../models/vault';
 import { ChainId } from '../crypto/networks';
 import { PartialRecord } from '../types/common';
 import { VaultName, VaultTableName } from '../enums/vaultName';
+import { ADDRESSES } from './addresses';
+import { AddressName } from '../enums/addressName';
 
 // type VaultMapping = {
 //   [vaultName in VaultName]: PartialRecord<ChainId, Vault>;
@@ -24,6 +26,52 @@ export const VAULTS: VaultMapping = {
       scarceTokenCoingeckoId: 'ichi-farm',
       baseTokenName: TokenName.ALLY,
       baseTokenDecimals: 18,
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: true,
+      isHodlVault: true,
+      isLegacy: false,
+      irrStartTxAmount: 0
+    }
+  },
+  [VaultName.BOBA]: {
+    [ChainId.Mainnet]: {
+      vaultName: VaultName.BOBA,
+      tableName: VaultTableName.BOBA_ICHI,
+      displayName: 'BOBA-ICHI',
+      address: '0xB1765340b4526aB67B9929546A2Aeeb440326ed0',
+      farm: 35,
+      externalFarm: ADDRESSES[AddressName.FARMING_V2][ChainId.Mainnet] || '',
+      scarceToken: 'token0',
+      scarceTokenName: TokenName.ICHI_V2,
+      scarceTokenDecimals: 18,
+      scarceTokenCoingeckoId: 'ichi-farm',
+      baseTokenName: TokenName.BOBA,
+      baseTokenDecimals: 18,
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: true,
+      isHodlVault: true,
+      isLegacy: false,
+      irrStartTxAmount: 0
+    }
+  },
+  [VaultName.HOME]: {
+    [ChainId.Mainnet]: {
+      vaultName: VaultName.HOME,
+      tableName: VaultTableName.HOME_ICHI,
+      displayName: 'HOME-ICHI',
+      address: '0x54114CC2eAFC82410C9c21Bf40519406957d6c44',
+      farm: 34,
+      externalFarm: ADDRESSES[AddressName.FARMING_V2][ChainId.Mainnet] || '',
+      scarceToken: 'token0',
+      scarceTokenName: TokenName.ICHI_V2,
+      scarceTokenDecimals: 18,
+      scarceTokenCoingeckoId: 'ichi-farm',
+      baseTokenName: TokenName.HOME,
+      baseTokenDecimals: 6,
       enableNotifications: true,
       subgraphEndpoint: '',
       irrStartDate: new Date(0),

@@ -18,7 +18,7 @@ import {
 } from '../enums/poolNumber';
 import { ChainId } from '../crypto/networks';
 import { PartialRecord } from '../types/common';
-import { VaultName, VaultTableName } from '../enums/vaultName';
+import { VaultName } from '../enums/vaultName';
 
 // type TPoolLabels = PartialRecord<PoolNumber, PartialRecord<ChainId, PoolLabel>>;
 // TODO: IMO these should be Record not PartialRecord here, but there are values missing, which we should probably fix
@@ -666,6 +666,44 @@ export const PoolLabels: TPoolLabels = {
       isHodl: false,
       vaultName: VaultName.ONEGIV_GIV,
       vaultAddress: '0xc3151A58d519B94E915f66B044De3E55F77c2dd9',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [MainnetPoolNumbers.HOME_VAULT]: {
+      name: 'HOME Vault',
+      poolNumber: MainnetPoolNumbers.HOME_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      farmAddress: ADDRESSES[AddressName.FARMING_V2][ChainId.Mainnet],
+      farmId: 34,
+      farmRewardTokenName: TokenName.ICHI_V2, 
+      farmRewardTokenDecimals: 18,
+      farmRewardTokenAddress: getToken(TokenName.ICHI_V2, ChainId.Mainnet).address,
+      tradeUrl: 'https://app.baconcoin.com/',
+      subgraphEndpoint: '',
+      isInverted: true,
+      isHodl: true,
+      vaultName: VaultName.HOME,
+      vaultAddress: '0x54114CC2eAFC82410C9c21Bf40519406957d6c44',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [MainnetPoolNumbers.BOBA_VAULT]: {
+      name: 'BOBA Vault',
+      poolNumber: MainnetPoolNumbers.BOBA_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      farmAddress: ADDRESSES[AddressName.FARMING_V2][ChainId.Mainnet],
+      farmId: 35,
+      farmRewardTokenName: TokenName.ICHI_V2,
+      farmRewardTokenDecimals: 18,
+      farmRewardTokenAddress: getToken(TokenName.ICHI_V2, ChainId.Mainnet).address,
+      tradeUrl: 'https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x42bbfa2e77757c645eeaad1655e0911a7553efbc&chain=mainnet',
+      subgraphEndpoint: '',
+      isInverted: true,
+      isHodl: true,
+      vaultName: VaultName.BOBA,
+      vaultAddress: '0xB1765340b4526aB67B9929546A2Aeeb440326ed0',
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     }

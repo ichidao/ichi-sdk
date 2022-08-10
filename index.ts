@@ -13,7 +13,7 @@ export { getBancorV3Pools } from './src/external/bancor';
 export { bnToNumberWithoutDecimals } from './src/utils/number';
 
 // Token Utils
-export { isOneToken } from './src/utils/token';
+export { isOneToken, getTokenMetrics } from './src/utils/token';
 
 // Vault utils
 export { getPrice, getBarShift, getRebalanceTicks } from './src/utils/vault';

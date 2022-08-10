@@ -7,7 +7,10 @@ import { CoinGeckoPriceResponse } from '../models/coinGecko';
 import { WETH, Fetcher, Route } from '@uniswap/sdk';
 import { CommonOracle__factory, OneTokenV1__factory, OneEth__factory, OneLink__factory } from '../generated';
 import { getProvider } from './providers';
-import { getErc20Contract } from '../utils/contracts';
+import { getErc20Contract, getIchiVaultContract, getUniswapV3PoolContract } from '../utils/contracts';
+import { VaultName } from '../enums/vaultName';
+import { getVault } from '../constants/vaults';
+import { getPrice } from '../utils/vault';
 
 export async function getXICHIPrice(
   chainId: ChainId,
@@ -130,4 +133,47 @@ export async function getStimulusOraclePrice(
   const oneTokenContract = OneLink__factory.connect(token.address, provider);
   let price = await oneTokenContract.getStimulusOracle();
   return Number(price) / 10 ** (opts?.decimals ?? token.decimals);
+}
+
+export async function getOneTokenPriceFromVault(
+  name: TokenName,
+  ichiPrice: number,
+  provider: JsonRpcProvider,
+  chainId: ChainId
+): Promise<number> {
+  try {
+    let vaultAddress = '';
+    let inverted = true;
+    let ichiDecimals = 9;
+    if (name == TokenName.ONE_BTC) {
+      vaultAddress = getToken(TokenName.ONE_BTC, chainId).ichiVault?.address || '';
+    }
+    if (name == TokenName.ALLY) {
+      vaultAddress = getVault(VaultName.ALLY, chainId).address;
+      ichiDecimals = 18;
+    }
+    if (name == TokenName.ONE_UNI) {
+      vaultAddress = getToken(TokenName.ONE_UNI, chainId).ichiVault?.address || '';
+      inverted = false;
+    }
+
+    const vaultContract = getIchiVaultContract(vaultAddress, provider);
+
+    const poolAddress: string = await vaultContract.pool();
+
+    if (vaultAddress == '') return 1;
+
+    const poolContract = getUniswapV3PoolContract(poolAddress, provider);
+    const slot0 = await poolContract.slot0();
+
+    const sqrtPrice = slot0[0];
+    const price = getPrice(inverted, sqrtPrice, 18, ichiDecimals, 5);
+    //console.log(price);
+    //console.log(ichi_price / price);
+
+    return ichiPrice / price;
+  } catch (e) {
+    console.error(`Could not get ${name} price from vault`);
+    throw e;
+  }
 }

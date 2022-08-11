@@ -177,7 +177,7 @@ export async function getTokenMetrics(
               throw new Error(`Could not lookup token prices for ${ichiV2Token.symbol}, possibly flooding CoinGecko`);
             }
 
-            price = tokenPrices[ichiV2Token.address.toLowerCase()].usd_24h_change;
+            price = tokenPrices[ichiV2Token.address.toLowerCase()].usd;
             priceChange = tokenPrices[ichiV2Token.address.toLowerCase()].usd_24h_change;
           }
 

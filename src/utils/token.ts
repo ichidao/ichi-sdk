@@ -193,7 +193,7 @@ export async function getTokenMetrics(
               throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
             }
 
-            price = tokenPrices[token.address.toLowerCase()].usd_24h_change;
+            price = tokenPrices[token.address.toLowerCase()].usd;
             priceChange = tokenPrices[token.address.toLowerCase()].usd_24h_change;
           }
       }

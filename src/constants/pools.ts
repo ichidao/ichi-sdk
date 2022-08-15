@@ -33,39 +33,39 @@ export const PoolMapping: TPoolMapping = {
       enableNotifications: false
     }
   },
-  [PoolName.ONEUNI_USDC]: {
-    [ChainId.Mainnet]: {
-      poolName: PoolName.ONEUNI_USDC,
-      tableName: PoolName.ONEUNI_USDC,
-      displayName: 'oneUNI-USDC',
-      address: '0x613944734e29e73d084673d1532bff8683ed9a5b',
-      oneTokenName: TokenName.ONE_UNI,
-      oneToken: 'token0',
-      enableNotifications: false
-    }
-  },
-  [PoolName.ONEWING_USDC]: {
-    [ChainId.Mainnet]: {
-      poolName: PoolName.ONEWING_USDC,
-      tableName: PoolName.ONEWING_USDC,
-      displayName: 'oneWING-USDC',
-      address: '0xD63005e1d0bD8029B656dd43AD8eB66f27B15E07',
-      oneTokenName: TokenName.ONE_WING,
-      oneToken: 'token0',
-      enableNotifications: false
-    }
-  },
-  [PoolName.ONEFOX_USDC]: {
-    [ChainId.Mainnet]: {
-      poolName: PoolName.ONEFOX_USDC,
-      tableName: PoolName.ONEFOX_USDC,
-      displayName: 'oneFOX-USDC',
-      address: '0x4c008261215087bd22d6a983399ae659d816bb50',
-      oneTokenName: TokenName.ONE_FOX,
-      oneToken: 'token0',
-      enableNotifications: false
-    }
-  },
+  // [PoolName.ONEUNI_USDC]: {
+  //   [ChainId.Mainnet]: {
+  //     poolName: PoolName.ONEUNI_USDC,
+  //     tableName: PoolName.ONEUNI_USDC,
+  //     displayName: 'oneUNI-USDC',
+  //     address: '0x613944734e29e73d084673d1532bff8683ed9a5b',
+  //     oneTokenName: TokenName.ONE_UNI,
+  //     oneToken: 'token0',
+  //     enableNotifications: false
+  //   }
+  // },
+  // [PoolName.ONEWING_USDC]: {
+  //   [ChainId.Mainnet]: {
+  //     poolName: PoolName.ONEWING_USDC,
+  //     tableName: PoolName.ONEWING_USDC,
+  //     displayName: 'oneWING-USDC',
+  //     address: '0xD63005e1d0bD8029B656dd43AD8eB66f27B15E07',
+  //     oneTokenName: TokenName.ONE_WING,
+  //     oneToken: 'token0',
+  //     enableNotifications: false
+  //   }
+  // },
+  // [PoolName.ONEFOX_USDC]: {
+  //   [ChainId.Mainnet]: {
+  //     poolName: PoolName.ONEFOX_USDC,
+  //     tableName: PoolName.ONEFOX_USDC,
+  //     displayName: 'oneFOX-USDC',
+  //     address: '0x4c008261215087bd22d6a983399ae659d816bb50',
+  //     oneTokenName: TokenName.ONE_FOX,
+  //     oneToken: 'token0',
+  //     enableNotifications: false
+  //   }
+  // },
   [PoolName.ONEPERL_USDC]: {
     [ChainId.Mainnet]: {
       poolName: PoolName.ONEPERL_USDC,
@@ -84,17 +84,17 @@ export const PoolMapping: TPoolMapping = {
     oneToken: 'token0',
     enableNotifications: false,
   },*/
-  [PoolName.ONEMPH_USDC]: {
-    [ChainId.Mainnet]: {
-      poolName: PoolName.ONEMPH_USDC,
-      tableName: PoolName.ONEMPH_USDC,
-      displayName: 'oneMPH-USDC',
-      address: '0x42F1B1a352B4e700172F316eC5f721765a71EfF4',
-      oneTokenName: TokenName.ONE_MPH,
-      oneToken: 'token1',
-      enableNotifications: false
-    }
-  },
+  // [PoolName.ONEMPH_USDC]: {
+  //   [ChainId.Mainnet]: {
+  //     poolName: PoolName.ONEMPH_USDC,
+  //     tableName: PoolName.ONEMPH_USDC,
+  //     displayName: 'oneMPH-USDC',
+  //     address: '0x42F1B1a352B4e700172F316eC5f721765a71EfF4',
+  //     oneTokenName: TokenName.ONE_MPH,
+  //     oneToken: 'token1',
+  //     enableNotifications: false
+  //   }
+  // },
   [PoolName.ONE1INCH_USDC]: {
     [ChainId.Mainnet]: {
       poolName: PoolName.ONE1INCH_USDC,
@@ -102,6 +102,28 @@ export const PoolMapping: TPoolMapping = {
       displayName: 'one1INCH-USDC',
       address: '0x7233A14685201F548d8a7AC5f5Ca3DEdb7bb6d42',
       oneTokenName: TokenName.ONE_1INCH,
+      oneToken: 'token0',
+      enableNotifications: false
+    }
+  },
+  [PoolName.ONEGIV_DAI]: {
+    [ChainId.Mainnet]: {
+      poolName: PoolName.ONEGIV_DAI,
+      tableName: PoolName.ONEGIV_DAI,
+      displayName: 'oneGIV-DAI',
+      address: '0xC506ca6089648D3Fc22dEb5CFAbb8F01f39D4eaF',
+      oneTokenName: TokenName.ONE_GIV,
+      oneToken: 'token0',
+      enableNotifications: false
+    }
+  },
+  [PoolName.ONEICHI_USDC]: {
+    [ChainId.Mainnet]: {
+      poolName: PoolName.ONEICHI_USDC,
+      tableName: PoolName.ONEICHI_USDC,
+      displayName: 'oneICHI-USDC',
+      address: '0xF836a9268d39C89c9C8533BF97e93C00E25dC13e',
+      oneTokenName: TokenName.ONE_ICHI,
       oneToken: 'token0',
       enableNotifications: false
     }
@@ -114,17 +136,17 @@ export const PoolMapping: TPoolMapping = {
   //   oneToken: 'token0',
   //   enableNotifications: false,
   // },
-  [PoolName.ONEOJA_USDC]: {
-    [ChainId.Mainnet]: {
-      poolName: PoolName.ONEOJA_USDC,
-      tableName: PoolName.ONEOJA_USDC,
-      displayName: 'oneOJA-USDC',
-      address: '0x6195fe3c13746862deac6139c4e8be5e80b96c6c',
-      oneTokenName: TokenName.ONE_OJA,
-      oneToken: 'token1',
-      enableNotifications: false
-    }
-  }
+  // [PoolName.ONEOJA_USDC]: {
+  //   [ChainId.Mainnet]: {
+  //     poolName: PoolName.ONEOJA_USDC,
+  //     tableName: PoolName.ONEOJA_USDC,
+  //     displayName: 'oneOJA-USDC',
+  //     address: '0x6195fe3c13746862deac6139c4e8be5e80b96c6c',
+  //     oneTokenName: TokenName.ONE_OJA,
+  //     oneToken: 'token1',
+  //     enableNotifications: false
+  //   }
+  // }
   // onebtc_usdc: {
   //   displayName: 'oneBTC-USDC',
   //   address: '0x8324be628543be4a8ee4448c1a269cad3da487f6',

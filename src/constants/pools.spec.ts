@@ -13,16 +13,6 @@ describe('constants/pools', () => {
 
     const testParams: TestArgs[] = [
       {
-        name: PoolName.ONEFOX_USDC,
-        chainId: ChainId.Mainnet,
-        expectedAddress: PoolMapping[PoolName.ONEFOX_USDC][ChainId.Mainnet]?.address
-      },
-      {
-        name: PoolName.ONEOJA_USDC,
-        chainId: ChainId.Mainnet,
-        expectedAddress: PoolMapping[PoolName.ONEOJA_USDC][ChainId.Mainnet]?.address
-      },
-      {
         name: PoolName.ONE1INCH_USDC,
         chainId: ChainId.Mainnet,
         expectedAddress: PoolMapping[PoolName.ONE1INCH_USDC][ChainId.Mainnet]?.address
@@ -46,10 +36,10 @@ describe('constants/pools', () => {
 
     const testParams: TestArgs[] = [
       {
-        name: PoolName.ONEOJA_USDC,
+        name: PoolName.ONE1INCH_USDC,
         // Look for ICHI on a unknown chainId
         chainId: 999 as ChainId,
-        expectedErrorMessage: `Could not find ${PoolName.ONEOJA_USDC} on 999`
+        expectedErrorMessage: `Could not find ${PoolName.ONE1INCH_USDC} on 999`
       }
     ];
 

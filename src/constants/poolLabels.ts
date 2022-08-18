@@ -679,7 +679,7 @@ export const PoolLabels: TPoolLabels = {
       farmRewardTokenName: TokenName.ICHI_V2, 
       farmRewardTokenDecimals: 18,
       farmRewardTokenAddress: getToken(TokenName.ICHI_V2, ChainId.Mainnet).address,
-      tradeUrl: 'https://app.baconcoin.com/',
+      tradeUrl: 'https://curve.fi/factory/123',
       subgraphEndpoint: '',
       isInverted: true,
       isHodl: true,

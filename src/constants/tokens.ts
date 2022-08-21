@@ -17,7 +17,7 @@ export const TOKENS: TokenMapping = {
       symbol: 'ICHI',
       isOneToken: false,
       atCoingecko: false,
-      targetVaultStrength: .11
+      targetVaultStrength: .1
     },
     // NOTE: This is the same ICHI as ICHI_V2, but since Polygon my reference TokenName.ICHI, then we need to duplicate it here for that reference
     [ChainId.Polygon]: {
@@ -29,7 +29,7 @@ export const TOKENS: TokenMapping = {
       symbol: 'ICHI',
       atCoingecko: false,
       isOneToken: false,
-      targetVaultStrength: .11
+      targetVaultStrength: .1
     },
     // Unclear if this should be here or below, in the ichi-api-updater it uses ichi not ichi_v2, but that's ambiguous regardless
     [ChainId.Mumbai]: {
@@ -41,7 +41,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'ICHI',
       isOneToken: false,
-      targetVaultStrength: .11
+      targetVaultStrength: .1
     },
     [ChainId.Kovan]: {
       tokenName: TokenName.ICHI,
@@ -52,7 +52,7 @@ export const TOKENS: TokenMapping = {
       decimals: 9,
       displayName: 'ICHI',
       isOneToken: false,
-      targetVaultStrength: .11
+      targetVaultStrength: .1
     }
   },
   [TokenName.ICHI_V2]: {
@@ -65,7 +65,7 @@ export const TOKENS: TokenMapping = {
       symbol: 'ICHI',
       isOneToken: false,
       atCoingecko: true,
-      targetVaultStrength: .11
+      targetVaultStrength: .1
     },
     [ChainId.Polygon]: {
       tokenName: TokenName.ICHI_V2,
@@ -76,7 +76,7 @@ export const TOKENS: TokenMapping = {
       symbol: 'ICHI',
       atCoingecko: false,
       isOneToken: false,
-      targetVaultStrength: .11
+      targetVaultStrength: .1
     }
     // [ChainId.Mumbai]: {
     //   tokenName: TokenName.ICHI_V2,

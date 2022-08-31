@@ -114,7 +114,8 @@ export const PoolMapping: TPoolMapping = {
       address: '0xC506ca6089648D3Fc22dEb5CFAbb8F01f39D4eaF',
       oneTokenName: TokenName.ONE_GIV,
       oneToken: 'token0',
-      enableNotifications: false
+      enableNotifications: false,
+      otherToken: TokenName.DAI
     }
   },
   [PoolName.ONEICHI_USDC]: {

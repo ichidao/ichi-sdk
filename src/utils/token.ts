@@ -114,8 +114,9 @@ export async function getTokenMetrics(
         ichiGSRBalance;
     }
 
-    if ([TokenName.ONE_BTC, TokenName.ONE_UNI, TokenName.ALLY].includes(tokenName)) {
+    if ([TokenName.ONE_BTC, TokenName.ONE_UNI, TokenName.ALLY].includes(tokenName) && chainId === ChainId.Mainnet) {
       // special case - get price from oneToken/ICHI vault's pool
+      // ONE_BTC is a special case on Mainnet only
       const ichiV2Token = getToken(TokenName.ICHI_V2, chainId);
 
       let ichiPrice: number;

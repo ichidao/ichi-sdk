@@ -65,7 +65,7 @@ export const TOKENS: TokenMapping = {
       symbol: 'ICHI',
       isOneToken: false,
       atCoingecko: true,
-      targetVaultStrength: .1
+      targetVaultStrength: .11
     },
     [ChainId.Polygon]: {
       tokenName: TokenName.ICHI_V2,
@@ -76,7 +76,7 @@ export const TOKENS: TokenMapping = {
       symbol: 'ICHI',
       atCoingecko: false,
       isOneToken: false,
-      targetVaultStrength: .1
+      targetVaultStrength: .11
     }
     // [ChainId.Mumbai]: {
     //   tokenName: TokenName.ICHI_V2,

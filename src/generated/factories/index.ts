@@ -16,6 +16,7 @@ export { GenericPool__factory } from "./GenericPool__factory";
 export { Ichi__factory } from "./Ichi__factory";
 export { IchiBnt__factory } from "./IchiBnt__factory";
 export { IchiBntV3__factory } from "./IchiBntV3__factory";
+export { IchiOracleAggregator__factory } from "./IchiOracleAggregator__factory";
 export { IchiStaking__factory } from "./IchiStaking__factory";
 export { IchiV2__factory } from "./IchiV2__factory";
 export { IchiV2Polygon__factory } from "./IchiV2Polygon__factory";

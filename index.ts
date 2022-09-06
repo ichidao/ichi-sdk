@@ -67,7 +67,8 @@ export {
   getDodoFarmContract,
   getBmiStakingContract,
   get1InchStakingContract,
-  getCommonOracleContract
+  getCommonOracleContract,
+  getIchiOracleAggregatorContract 
 } from './src/utils/contracts';
 export {
   isErc20,

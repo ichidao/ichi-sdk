@@ -9,6 +9,7 @@ import {
   BmiStaking__factory,
   CommonOracle,
   CommonOracle__factory,
+  IchiOracleAggregator,
   Erc20,
   Erc20__factory,
   FarmingV2,
@@ -31,7 +32,8 @@ import {
   UniswapV3Pool,
   UniswapV3Pool__factory,
   UniswapV3Positions,
-  UniswapV3Positions__factory
+  UniswapV3Positions__factory,
+  IchiOracleAggregator__factory
 } from '../generated';
 import { TokenName } from '../enums/tokenName';
 import { AddressName } from '../enums/addressName';
@@ -273,6 +275,15 @@ export function get1InchStakingContract(address: string, provider: JsonRpcProvid
     return OneInchStaking__factory.connect(address, provider);
   } catch (e) {
     console.error(`Couldn't create OneInchStaking contract with address: ${address}`);
+    throw e;
+  }
+}
+
+export function getIchiOracleAggregatorContract(address: string, provider: JsonRpcProvider): IchiOracleAggregator {
+  try {
+    return IchiOracleAggregator__factory.connect(address, provider);
+  } catch (e) {
+    console.error(`Couldn't create ICHI Oracle Aggregator contract with address: ${address}`);
     throw e;
   }
 }

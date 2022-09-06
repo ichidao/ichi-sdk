@@ -15,6 +15,9 @@ export { bnToNumberWithoutDecimals } from './src/utils/number';
 // Token Utils
 export { isOneToken, getTokenMetrics } from './src/utils/token';
 
+// Promise Utils
+export { alwaysResolve } from './src/utils/promises';
+
 // Vault utils
 export { getPrice, getBarShift, getRebalanceTicks } from './src/utils/vault';
 export {
@@ -68,7 +71,7 @@ export {
   getBmiStakingContract,
   get1InchStakingContract,
   getCommonOracleContract,
-  getIchiOracleAggregatorContract 
+  getIchiOracleAggregatorContract
 } from './src/utils/contracts';
 export {
   isErc20,

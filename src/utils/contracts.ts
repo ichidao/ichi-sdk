@@ -29,6 +29,8 @@ import {
   OneTokenV1,
   OneTokenV1__factory,
   StablecoinV2,
+  UniswapV3Factory,
+  UniswapV3Factory__factory,
   UniswapV3Pool,
   UniswapV3Pool__factory,
   UniswapV3Positions,
@@ -206,7 +208,14 @@ export function getUniswapV3PoolContract(address: string, provider: JsonRpcProvi
     throw e;
   }
 }
-
+export function getUniswapV3FactoryContract(address: string, provider: JsonRpcProvider): UniswapV3Factory {
+  try {
+    return UniswapV3Factory__factory.connect(address, provider);
+  } catch (e) {
+    console.error(`Couldn't create UniswapV3Factory contract with address: ${address}`);
+    throw e;
+  }
+}
 export function getIchiBntV3Contract(address: string, provider: JsonRpcProvider): IchiBntV3 {
   try {
     return IchiBntV3__factory.connect(address, provider);

@@ -32,7 +32,8 @@ export const VAULTS: VaultMapping = {
       isInverted: true,
       isHodlVault: true,
       isLegacy: false,
-      irrStartTxAmount: 0
+      irrStartTxAmount: 0,
+      depositStatus: true,
     }
   },
   [VaultName.BOBA]: {
@@ -55,7 +56,8 @@ export const VAULTS: VaultMapping = {
       isInverted: true,
       isHodlVault: true,
       isLegacy: false,
-      irrStartTxAmount: 0
+      irrStartTxAmount: 0,
+      depositStatus: true,
     }
   },
   [VaultName.HOME]: {
@@ -78,7 +80,8 @@ export const VAULTS: VaultMapping = {
       isInverted: true,
       isHodlVault: true,
       isLegacy: false,
-      irrStartTxAmount: 0
+      irrStartTxAmount: 0,
+      depositStatus: true,
     }
   },
   [VaultName.WETH]: {
@@ -101,7 +104,8 @@ export const VAULTS: VaultMapping = {
       isInverted: true,
       isHodlVault: true,
       isLegacy: false,
-      irrStartTxAmount: 0
+      irrStartTxAmount: 0,
+      depositStatus: true,
     }
   },
   [VaultName['1INCH']]: {
@@ -124,7 +128,8 @@ export const VAULTS: VaultMapping = {
       isInverted: false,
       isHodlVault: true,
       isLegacy: false,
-      irrStartTxAmount: 0
+      irrStartTxAmount: 0,
+      depositStatus: true,
     }
   },
   [VaultName.FUSE]: {
@@ -147,7 +152,8 @@ export const VAULTS: VaultMapping = {
       isInverted: true,
       isHodlVault: false,
       isLegacy: false,
-      irrStartTxAmount: 0
+      irrStartTxAmount: 0,
+      depositStatus: true,
     }
   },
   [VaultName.ICHI]: {
@@ -170,7 +176,8 @@ export const VAULTS: VaultMapping = {
       isInverted: false,
       isHodlVault: false,
       isLegacy: true,
-      irrStartTxAmount: 0
+      irrStartTxAmount: 0,
+      depositStatus: true,
     }
   },
   [VaultName.WING]: {
@@ -193,7 +200,8 @@ export const VAULTS: VaultMapping = {
       isInverted: false,
       isHodlVault: false,
       isLegacy: true,
-      irrStartTxAmount: 0
+      irrStartTxAmount: 0,
+      depositStatus: true,
     }
   },
   [VaultName.FOX]: {
@@ -216,7 +224,8 @@ export const VAULTS: VaultMapping = {
       isInverted: false,
       isHodlVault: false,
       isLegacy: true,
-      irrStartTxAmount: 0
+      irrStartTxAmount: 0,
+      depositStatus: true,
     }
   },
   [VaultName.OJA]: {
@@ -239,7 +248,8 @@ export const VAULTS: VaultMapping = {
       isInverted: true,
       isHodlVault: false,
       isLegacy: true,
-      irrStartTxAmount: 0
+      irrStartTxAmount: 0,
+      depositStatus: true,
     }
   },
   [VaultName.GNO]: {
@@ -262,7 +272,8 @@ export const VAULTS: VaultMapping = {
       isInverted: false,
       isHodlVault: true,
       isLegacy: true,
-      irrStartTxAmount: 17916
+      irrStartTxAmount: 17916,
+      depositStatus: true,
     }
   },
   [VaultName.CEL]: {
@@ -285,7 +296,8 @@ export const VAULTS: VaultMapping = {
       isInverted: true,
       isHodlVault: true,
       isLegacy: true,
-      irrStartTxAmount: 346101.2345
+      irrStartTxAmount: 346101.2345,
+      depositStatus: true,
     }
   },
   [VaultName.WBTC]: {
@@ -308,7 +320,8 @@ export const VAULTS: VaultMapping = {
       isInverted: false,
       isHodlVault: true,
       isLegacy: true,
-      irrStartTxAmount: 75.482852739
+      irrStartTxAmount: 75.482852739,
+      depositStatus: true,
     }
   },
   [VaultName.POLYGON_WBTC]: {
@@ -333,7 +346,8 @@ export const VAULTS: VaultMapping = {
       isInverted: true,
       isHodlVault: true,
       isLegacy: false,
-      irrStartTxAmount: 0
+      irrStartTxAmount: 0,
+      depositStatus: true,
     }
   },
   [VaultName.ONEBTC]: {
@@ -356,7 +370,8 @@ export const VAULTS: VaultMapping = {
       isInverted: true,
       isHodlVault: false,
       isLegacy: true,
-      irrStartTxAmount: 0
+      irrStartTxAmount: 0,
+      depositStatus: true,
     }
   },
   [VaultName.POLYGON_ONEBTC]: {
@@ -380,7 +395,8 @@ export const VAULTS: VaultMapping = {
       isInverted: true,
       isHodlVault: false,
       isLegacy: false,
-      irrStartTxAmount: 0
+      irrStartTxAmount: 0,
+      depositStatus: true,
     }
   },
   [VaultName.GNO_V2]: {
@@ -403,7 +419,8 @@ export const VAULTS: VaultMapping = {
       isInverted: true,
       isHodlVault: true,
       isLegacy: false,
-      irrStartTxAmount: 0
+      irrStartTxAmount: 0,
+      depositStatus: true,
     }
   },
   [VaultName.CEL_V2]: {
@@ -426,7 +443,8 @@ export const VAULTS: VaultMapping = {
       isInverted: true,
       isHodlVault: true,
       isLegacy: false,
-      irrStartTxAmount: 0
+      irrStartTxAmount: 0,
+      depositStatus: true,
     }
   },
   [VaultName.WNXM]: {
@@ -449,7 +467,8 @@ export const VAULTS: VaultMapping = {
       isInverted: false,
       isHodlVault: true,
       isLegacy: true,
-      irrStartTxAmount: 222193
+      irrStartTxAmount: 222193,
+      depositStatus: true,
     }
   },
   [VaultName.WNXM_V2]: {
@@ -472,7 +491,8 @@ export const VAULTS: VaultMapping = {
       isInverted: false,
       isHodlVault: true,
       isLegacy: false,
-      irrStartTxAmount: 0
+      irrStartTxAmount: 0,
+      depositStatus: true,
     }
   },
   [VaultName.WBTC_V2]: {
@@ -495,7 +515,8 @@ export const VAULTS: VaultMapping = {
       isInverted: true,
       isHodlVault: true,
       isLegacy: false,
-      irrStartTxAmount: 0
+      irrStartTxAmount: 0,
+      depositStatus: true,
     }
   },
   [VaultName.QRDO]: {
@@ -518,7 +539,8 @@ export const VAULTS: VaultMapping = {
       isInverted: true,
       isHodlVault: true,
       isLegacy: false,
-      irrStartTxAmount: 0
+      irrStartTxAmount: 0,
+      depositStatus: true,
     }
   },
   [VaultName.USDC_ICHI]: {
@@ -541,7 +563,8 @@ export const VAULTS: VaultMapping = {
       isInverted: true,
       isHodlVault: false,
       isLegacy: false,
-      irrStartTxAmount: 0
+      irrStartTxAmount: 0,
+      depositStatus: true,
     },
     [ChainId.Polygon]: {
       vaultName: VaultName.USDC_ICHI, // old: 'polygon_usdc',
@@ -563,7 +586,8 @@ export const VAULTS: VaultMapping = {
       isInverted: true,
       isHodlVault: true,
       isLegacy: false,
-      irrStartTxAmount: 0
+      irrStartTxAmount: 0,
+      depositStatus: true,
     }
   },
   [VaultName.POLYGON_USDC]: {
@@ -587,7 +611,8 @@ export const VAULTS: VaultMapping = {
       isInverted: true,
       isHodlVault: true,
       isLegacy: false,
-      irrStartTxAmount: 0
+      irrStartTxAmount: 0,
+      depositStatus: true,
     }
   },
   [VaultName.ONEICHI_ICHI]: {
@@ -610,7 +635,8 @@ export const VAULTS: VaultMapping = {
       isInverted: true,
       isHodlVault: false,
       isLegacy: false,
-      irrStartTxAmount: 0
+      irrStartTxAmount: 0,
+      depositStatus: true,
     }
   },
   // [VaultName.ONE_ICHI]: {
@@ -655,7 +681,8 @@ export const VAULTS: VaultMapping = {
       isInverted: true,
       isHodlVault: true,
       isLegacy: false,
-      irrStartTxAmount: 0
+      irrStartTxAmount: 0,
+      depositStatus: true,
     }
   },
   [VaultName.ONEGIV_GIV]: {
@@ -678,7 +705,8 @@ export const VAULTS: VaultMapping = {
       isInverted: false,
       isHodlVault: false,
       isLegacy: false,
-      irrStartTxAmount: 0
+      irrStartTxAmount: 0,
+      depositStatus: true,
     }
   },
   [VaultName.FUSE_ICHI]: {
@@ -701,7 +729,8 @@ export const VAULTS: VaultMapping = {
       isInverted: true,
       isHodlVault: true,
       isLegacy: false,
-      irrStartTxAmount: 0
+      irrStartTxAmount: 0,
+      depositStatus: true,
     }
   },
   [VaultName.KOVAN_ONE_FIL]: {
@@ -724,7 +753,8 @@ export const VAULTS: VaultMapping = {
       isInverted: false, // will be inverted if token0 is ICHI, in this case token0 is oneFIL so inverted false
       isHodlVault: false,
       isLegacy: false,
-      irrStartTxAmount: 0
+      irrStartTxAmount: 0,
+      depositStatus: true,
     }
   }
 };

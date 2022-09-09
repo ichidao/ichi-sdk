@@ -21,4 +21,5 @@ export type Vault = {
   isHodlVault: boolean;
   irrStartTxAmount: number;
   isLegacy: boolean;
+  depositStatus: boolean;
 };

@@ -242,7 +242,7 @@ export const Pools: TPools = {
       MainnetPoolNumbers.FUSE_ICHI_VAULT,
       MainnetPoolNumbers['1INCH_VAULT'],
       MainnetPoolNumbers.ALLY_VAULT,
-      // MainnetPoolNumbers.WETH_VAULT,
+      MainnetPoolNumbers.WETH_VAULT,
       MainnetPoolNumbers.ONE_FUSE_VAULT,
       MainnetPoolNumbers.ONE_WING_VAULT,
       MainnetPoolNumbers.ONE_FOX_VAULT,
@@ -330,7 +330,7 @@ export const Pools: TPools = {
       MainnetPoolNumbers.FUSE_ICHI_VAULT,
       MainnetPoolNumbers['1INCH_VAULT'],
       MainnetPoolNumbers.ALLY_VAULT,
-      // MainnetPoolNumbers.WETH_VAULT,
+      MainnetPoolNumbers.WETH_VAULT,
       MainnetPoolNumbers.ONE_GIV,
       MainnetPoolNumbers.HOME_VAULT,
       MainnetPoolNumbers.BOBA_VAULT

@@ -460,7 +460,7 @@ export const PoolLabels: TPoolLabels = {
       isInverted: true,
       isHodl: true,
       vaultName: VaultName.WETH,
-      vaultAddress: '0x48fBe026392E4c86b859794ABB56625537c16dd0',
+      vaultAddress: '0xF5777E4b828Fc08001222eC4A72978Ce727C8a8C',
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },

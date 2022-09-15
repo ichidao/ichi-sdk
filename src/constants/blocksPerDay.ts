@@ -3,10 +3,10 @@ import { PartialRecord } from '../types/common';
 import { Optional } from '../types/optional';
 
 export const BlocksPerDay: PartialRecord<ChainId, number> = {
-  [ChainId.Mainnet]: 6500,
+  [ChainId.Mainnet]: 7200,
   [ChainId.Polygon]: 43000,
   [ChainId.Mumbai]: 43000,
-  [ChainId.Kovan]: 6500
+  [ChainId.Kovan]: 7200
 };
 
 export function getBlocksPerDay(chainId: ChainId): Optional<number> {

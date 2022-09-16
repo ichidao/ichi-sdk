@@ -243,6 +243,16 @@ export const TOKENS: TokenMapping = {
     }
   },
   [TokenName.GOVI]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.GOVI,
+      tableName: TokenName.GOVI,
+      address: '0xeeaa40b28a2d1b0b08f6f97bb1dd4b75316c6107',
+      decimals: 18,
+      displayName: 'GOVI',
+      symbol: 'GOVI',
+      isOneToken: false,
+      atCoingecko: true
+    },
     [ChainId.Polygon]: {
       tokenName: TokenName.GOVI,
       tableName: TokenName.GOVI,
@@ -251,7 +261,7 @@ export const TOKENS: TokenMapping = {
       displayName: 'GOVI',
       symbol: 'GOVI',
       isOneToken: false,
-      atCoingecko: true
+      atCoingecko: false
     }
   },
   [TokenName.HOME]: {

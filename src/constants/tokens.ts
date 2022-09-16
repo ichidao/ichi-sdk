@@ -255,7 +255,7 @@ export const TOKENS: TokenMapping = {
     },
     [ChainId.Polygon]: {
       tokenName: TokenName.GOVI,
-      tableName: TokenName.GOVI,
+      tableName: `pol_${TokenName.GOVI}`,
       address: '0x43Df9c0a1156c96cEa98737b511ac89D0e2A1F46',
       decimals: 18,
       displayName: 'GOVI',

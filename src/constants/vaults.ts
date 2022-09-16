@@ -350,6 +350,30 @@ export const VAULTS: VaultMapping = {
       depositStatus: true,
     }
   },
+  [VaultName.POLYGON_GOVI]: {
+    [ChainId.Polygon]: {
+      vaultName: VaultName.POLYGON_GOVI, 
+      tableName: VaultTableName.POLYGON_GOVI_ICHI, 
+      displayName: 'GOVI-ICHI (polygon)',
+      address: '0x70Aa3c8e256c859e52c0B8C263f763D9051B95e1',
+      farm: 3,
+      externalFarm: '',
+      scarceToken: 'token0',
+      scarceTokenName: TokenName.ICHI_V2,
+      scarceTokenDecimals: 18,
+      scarceTokenCoingeckoId: 'ichi-farm',
+      baseTokenName: TokenName.GOVI,
+      baseTokenDecimals: 18,
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: true,
+      isHodlVault: true,
+      isLegacy: false,
+      irrStartTxAmount: 0,
+      depositStatus: true,
+    }
+  },
   [VaultName.ONEBTC]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.ONEBTC, // old: 'onebtc',

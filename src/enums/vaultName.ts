@@ -27,6 +27,7 @@ export enum VaultName {
   // Kovan
   KOVAN_ONE_FIL = 'kovan_one_fil',
   // Polygon
+  POLYGON_GOVI = 'pol_govi',
   POLYGON_ONEBTC = 'pol_onebtc',
   POLYGON_USDC = 'pol_usdc',
   POLYGON_WBTC = 'pol_wbtc'
@@ -62,6 +63,7 @@ export enum VaultTableName {
   // Kovan related
   KOVAN_ONE_FIL = 'test_one_fil',
   // Polygon
+  POLYGON_GOVI_ICHI = 'pol_govi_ichi',
   POLYGON_WBTC_ICHI = 'pol_wbtc_ichi',
   POLYGON_ONEBTC_ICHI = 'pol_onebtc_ichi',
   POLYGON_USDC_ICHI = 'pol_usdc_ichi'

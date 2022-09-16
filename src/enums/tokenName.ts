@@ -9,6 +9,7 @@ export enum TokenName {
   CEL = 'cel',
   GIV = 'giv',
   GNO = 'gno',
+  GOVI = 'govi',
   HOME = 'home',
   '1INCH' = '1inch',
   OJA = 'oja',

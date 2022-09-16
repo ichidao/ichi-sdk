@@ -805,6 +805,21 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+    [PolygonPoolNumbers.GOVI_VAULT]: {
+      name: 'GOVI Vault',
+      poolNumber: PolygonPoolNumbers.GOVI_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl:
+        'https://quickswap.exchange/#/swap?currency0=0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619&currency1=0x43Df9c0a1156c96cEa98737b511ac89D0e2A1F46',
+      subgraphEndpoint: '',
+      isInverted: true,
+      isHodl: true,
+      vaultName: VaultName.POLYGON_GOVI, 
+      vaultAddress: '0x70Aa3c8e256c859e52c0B8C263f763D9051B95e1',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
     [PolygonPoolNumbers.USDC_VAULT]: {
       name: 'USDC Vault',
       poolNumber: PolygonPoolNumbers.USDC_VAULT,

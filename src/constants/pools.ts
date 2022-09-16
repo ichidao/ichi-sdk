@@ -256,7 +256,12 @@ export const Pools: TPools = {
       MainnetPoolNumbers.HOME_VAULT,
       MainnetPoolNumbers.BOBA_VAULT
     ],
-    [ChainId.Polygon]: [PolygonPoolNumbers.ONE_BTC_VAULT, PolygonPoolNumbers.WBTC_VAULT, PolygonPoolNumbers.USDC_VAULT],
+    [ChainId.Polygon]: [
+      PolygonPoolNumbers.ONE_BTC_VAULT, 
+      PolygonPoolNumbers.WBTC_VAULT, 
+      PolygonPoolNumbers.GOVI_VAULT, 
+      PolygonPoolNumbers.USDC_VAULT
+    ],
     [ChainId.Kovan]: [
       KovanPoolNumbers.ONE_FIL_VAULT,
       KovanPoolNumbers.ONE_UNI_VAULT,
@@ -335,7 +340,11 @@ export const Pools: TPools = {
       MainnetPoolNumbers.HOME_VAULT,
       MainnetPoolNumbers.BOBA_VAULT
     ],
-    [ChainId.Polygon]: [PolygonPoolNumbers.ONE_BTC_VAULT, PolygonPoolNumbers.WBTC_VAULT, PolygonPoolNumbers.USDC_VAULT],
+    [ChainId.Polygon]: [
+      PolygonPoolNumbers.ONE_BTC_VAULT, 
+      PolygonPoolNumbers.WBTC_VAULT, 
+      PolygonPoolNumbers.GOVI_VAULT, 
+      PolygonPoolNumbers.USDC_VAULT],
     [ChainId.Kovan]: [
       KovanPoolNumbers.ONE_FIL_DEPOSIT,
       KovanPoolNumbers.ONE_FIL_VAULT,
@@ -495,7 +504,12 @@ export const Pools: TPools = {
       MainnetPoolNumbers.HOME_VAULT,
       MainnetPoolNumbers.BOBA_VAULT
     ],
-    [ChainId.Polygon]: [PolygonPoolNumbers.ONE_BTC_VAULT, PolygonPoolNumbers.WBTC_VAULT, PolygonPoolNumbers.USDC_VAULT],
+    [ChainId.Polygon]: [
+      PolygonPoolNumbers.ONE_BTC_VAULT, 
+      PolygonPoolNumbers.WBTC_VAULT, 
+      PolygonPoolNumbers.GOVI_VAULT, 
+      PolygonPoolNumbers.USDC_VAULT
+    ],
     [ChainId.Kovan]: [],
     [ChainId.Mumbai]: []
   }

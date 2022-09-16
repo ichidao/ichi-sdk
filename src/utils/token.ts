@@ -1,6 +1,6 @@
 import { ChainId } from '../crypto/networks';
 import { TokenName } from '../enums/tokenName';
-import { getToken } from '../constants/tokens';
+import { getToken, TOKENS } from '../constants/tokens';
 import {
   getMemberTokenPrice,
   getOneTokenPriceFromVault,
@@ -148,6 +148,18 @@ export async function getTokenMetrics(
           break;
         case TokenName.VBTC:
           price = await getVBTCPrice(chainId);
+          break;
+        case TokenName.GOVI:
+          const goviMainnetAddress = TOKENS[TokenName.GOVI]![ChainId.Mainnet]?.address;
+          if (goviMainnetAddress){
+            let tokenPrices = await lookUpTokenPrices([goviMainnetAddress.toLowerCase()]);
+            if (!tokenPrices || !(goviMainnetAddress.toLowerCase() in tokenPrices)) {
+              throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
+            }
+
+            price = tokenPrices[goviMainnetAddress.toLowerCase()].usd;
+            priceChange = tokenPrices[goviMainnetAddress.toLowerCase()].usd_24h_change;
+          }
           break;
         case TokenName.PWING:
           // price = await getMemberTokenPrice(TOKENS['onewing']['address'], TOKENS['pwing']['address'], 9);

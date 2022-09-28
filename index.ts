@@ -72,7 +72,8 @@ export {
   getBmiStakingContract,
   get1InchStakingContract,
   getCommonOracleContract,
-  getIchiOracleAggregatorContract
+  getIchiOracleAggregatorContract,
+  getOneTokenFactoryContract,
 } from './src/utils/contracts';
 export {
   isErc20,

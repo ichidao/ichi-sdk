@@ -25,6 +25,7 @@ export { Multicall__factory } from "./Multicall__factory";
 export { OneEth__factory } from "./OneEth__factory";
 export { OneInchStaking__factory } from "./OneInchStaking__factory";
 export { OneLink__factory } from "./OneLink__factory";
+export { OneTokenFactory__factory } from "./OneTokenFactory__factory";
 export { OneTokenV1__factory } from "./OneTokenV1__factory";
 export { RariPool__factory } from "./RariPool__factory";
 export { RariPoolLens__factory } from "./RariPoolLens__factory";

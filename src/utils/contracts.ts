@@ -35,7 +35,9 @@ import {
   UniswapV3Pool__factory,
   UniswapV3Positions,
   UniswapV3Positions__factory,
-  IchiOracleAggregator__factory
+  IchiOracleAggregator__factory,
+  OneTokenFactory,
+  OneTokenFactory__factory,
 } from '../generated';
 import { TokenName } from '../enums/tokenName';
 import { AddressName } from '../enums/addressName';
@@ -284,6 +286,15 @@ export function get1InchStakingContract(address: string, provider: JsonRpcProvid
     return OneInchStaking__factory.connect(address, provider);
   } catch (e) {
     console.error(`Couldn't create OneInchStaking contract with address: ${address}`);
+    throw e;
+  }
+}
+
+export function getOneTokenFactoryContract(address: string, provider: JsonRpcProvider): OneTokenFactory {
+  try {
+    return OneTokenFactory__factory.connect(address, provider);
+  } catch (e) {
+    console.error(`Couldn't create One Token Factory contract with address: ${address}`);
     throw e;
   }
 }

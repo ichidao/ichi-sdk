@@ -72,7 +72,8 @@ export {
   getBmiStakingContract,
   get1InchStakingContract,
   getCommonOracleContract,
-  getIchiOracleAggregatorContract
+  getIchiOracleAggregatorContract,
+  getOneTokenFactoryContract,
 } from './src/utils/contracts';
 export {
   isErc20,
@@ -124,7 +125,7 @@ export { PoolGroupName } from './src/enums/poolManagementName';
 
 // Constants
 export { Apis } from './src/constants/apis';
-export { getToken, getTokens, getUniswapToken } from './src/constants/tokens'; // TOKENS,
+export { getToken, getTokens, getOneTokens, getUniswapToken } from './src/constants/tokens'; // TOKENS,
 export { getVault, getVaults } from './src/constants/vaults'; // VAULTS,
 export { PoolMapping, getPool, getPools, Pools } from './src/constants/pools';
 export {

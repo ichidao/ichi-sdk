@@ -35,3 +35,4 @@ export { StablecoinV2__factory } from "./StablecoinV2__factory";
 export { UniswapV3Factory__factory } from "./UniswapV3Factory__factory";
 export { UniswapV3Pool__factory } from "./UniswapV3Pool__factory";
 export { UniswapV3Positions__factory } from "./UniswapV3Positions__factory";
+export { XICHI__factory } from "./XICHI__factory";

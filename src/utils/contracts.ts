@@ -38,6 +38,8 @@ import {
   IchiOracleAggregator__factory,
   OneTokenFactory,
   OneTokenFactory__factory,
+  XIchi,
+  XIchi__factory,
 } from '../generated';
 import { TokenName } from '../enums/tokenName';
 import { AddressName } from '../enums/addressName';
@@ -128,6 +130,14 @@ export function getIchiContract(address: string, provider: JsonRpcProvider): Ich
     return Ichi__factory.connect(address, provider);
   } catch (e) {
     console.error(`Couldn't create Ichi contract with address: ${address}`);
+    throw e;
+  }
+}
+export function getXIchiContract(address: string, provider: JsonRpcProvider): XIchi {
+  try {
+    return XIchi__factory.connect(address, provider);
+  } catch (e) {
+    console.error(`Couldn't create XICHI contract with address: ${address}`);
     throw e;
   }
 }

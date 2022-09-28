@@ -1,7 +1,7 @@
 import { expect } from '@jest/globals';
 import { TokenName } from '../enums/tokenName';
 import { ChainId } from '../crypto/networks';
-import { getToken, getTokens, TOKENS } from './tokens';
+import { getToken, getTokens, getOneTokens, TOKENS } from './tokens';
 
 describe('constants/tokens', () => {
   describe('getToken - valid', () => {
@@ -72,6 +72,27 @@ describe('constants/tokens', () => {
     testParams.forEach((testParam) => {
       it(JSON.stringify(testParam), async () => {
         const actualResult = getTokens(testParam.chainId);
+        expect(actualResult.length).toBeGreaterThan(0);
+      });
+    });
+  });
+  describe('getOneTokens', () => {
+    type TestArgs = {
+      chainId: ChainId;
+    };
+
+    const testParams: TestArgs[] = [
+      {
+        chainId: ChainId.Mainnet
+      },
+      {
+        chainId: ChainId.Polygon
+      }
+    ];
+
+    testParams.forEach((testParam) => {
+      it(JSON.stringify(testParam), async () => {
+        const actualResult = getOneTokens(testParam.chainId);
         expect(actualResult.length).toBeGreaterThan(0);
       });
     });

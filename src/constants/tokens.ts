@@ -1105,24 +1105,19 @@ export function getUniswapToken(tokenName: TokenName, chainId: ChainId): Uniswap
 }
 
 export function getTokens(chainId: ChainId): Token[] {
-  const names = Object.keys(TOKENS);
-  const vaults: Token[] = [];
-  for (let name of names) {
-    if (chainId in TOKENS[name]) {
-      vaults.push(TOKENS[name][chainId]);
-    }
-  }
+  const vaults: Token[] = Object.values(TOKENS)
+    .map((t) => t[chainId])
+    .filter((t) => t) as Token[];
   return vaults;
 }
 
 export function getOneTokens(chainId: ChainId): Token[] {
-  const names = Object.keys(TOKENS);
-  const vaults: Token[] = [];
-  for (let name of names) {
-    if (chainId in TOKENS[name] && TOKENS[name][chainId].isOneToken) {
-      vaults.push(TOKENS[name][chainId]);
-    }
-  }
+  const vaults: Token[] = Object.values(TOKENS)
+    .map((t) => t[chainId])
+    .filter((t) => t?.isOneToken)
+    .filter((t) => t) as Token[];
+  console.log(vaults);
   return vaults;
 }
 
+getOneTokens(ChainId.Mainnet);

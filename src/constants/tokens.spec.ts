@@ -93,7 +93,9 @@ describe('constants/tokens', () => {
     testParams.forEach((testParam) => {
       it(JSON.stringify(testParam), async () => {
         const actualResult = getOneTokens(testParam.chainId);
-        expect(actualResult.length).toBeGreaterThan(0);
+        for (const token of actualResult) {
+          expect(token.isOneToken).toBe(true);
+        }
       });
     });
   });

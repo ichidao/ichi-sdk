@@ -294,7 +294,7 @@ export function getOneTokenFactoryContract(address: string, provider: JsonRpcPro
   try {
     return OneTokenFactory__factory.connect(address, provider);
   } catch (e) {
-    console.error(`Couldn't create OneInchStaking contract with address: ${address}`);
+    console.error(`Couldn't create One Token Factory contract with address: ${address}`);
     throw e;
   }
 }

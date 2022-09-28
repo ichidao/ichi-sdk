@@ -1114,3 +1114,15 @@ export function getTokens(chainId: ChainId): Token[] {
   }
   return vaults;
 }
+
+export function getOneTokens(chainId: ChainId): Token[] {
+  const names = Object.keys(TOKENS);
+  const vaults: Token[] = [];
+  for (let name of names) {
+    if (chainId in TOKENS[name] && TOKENS[name][chainId].isOneToken) {
+      vaults.push(TOKENS[name][chainId]);
+    }
+  }
+  return vaults;
+}
+

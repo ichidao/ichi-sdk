@@ -4,7 +4,7 @@
 
 import { Contract, Signer, utils } from "ethers";
 import type { Provider } from "@ethersproject/providers";
-import type { XICHI, XICHIInterface } from "../XICHI";
+import type { XIchi, XIchiInterface } from "../XIchi";
 
 const _abi = [
   {
@@ -329,12 +329,12 @@ const _abi = [
   },
 ];
 
-export class XICHI__factory {
+export class XIchi__factory {
   static readonly abi = _abi;
-  static createInterface(): XICHIInterface {
-    return new utils.Interface(_abi) as XICHIInterface;
+  static createInterface(): XIchiInterface {
+    return new utils.Interface(_abi) as XIchiInterface;
   }
-  static connect(address: string, signerOrProvider: Signer | Provider): XICHI {
-    return new Contract(address, _abi, signerOrProvider) as XICHI;
+  static connect(address: string, signerOrProvider: Signer | Provider): XIchi {
+    return new Contract(address, _abi, signerOrProvider) as XIchi;
   }
 }

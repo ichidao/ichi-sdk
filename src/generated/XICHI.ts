@@ -27,7 +27,7 @@ import type {
   PromiseOrValue,
 } from "./common";
 
-export interface XICHIInterface extends utils.Interface {
+export interface XIchiInterface extends utils.Interface {
   functions: {
     "Ichi()": FunctionFragment;
     "allowance(address,address)": FunctionFragment;
@@ -172,12 +172,12 @@ export type TransferEvent = TypedEvent<
 
 export type TransferEventFilter = TypedEventFilter<TransferEvent>;
 
-export interface XICHI extends BaseContract {
+export interface XIchi extends BaseContract {
   connect(signerOrProvider: Signer | Provider | string): this;
   attach(addressOrName: string): this;
   deployed(): Promise<this>;
 
-  interface: XICHIInterface;
+  interface: XIchiInterface;
 
   queryFilter<TEvent extends TypedEvent>(
     event: TypedEventFilter<TEvent>,

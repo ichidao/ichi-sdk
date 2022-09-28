@@ -74,7 +74,7 @@ export {
   getCommonOracleContract,
   getIchiOracleAggregatorContract,
   getOneTokenFactoryContract,
-  getXICHIContract,
+  getXIchiContract,
 } from './src/utils/contracts';
 export {
   isErc20,

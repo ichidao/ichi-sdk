@@ -1,0 +1,46 @@
+name: Ichi SDK (Dev)
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    branches:
+      - '**'
+
+jobs:
+  dev:
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
+    name: build-deploy-dev
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v2
+
+      - name: Install Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+
+      # For testing and building we need all node modules
+      - name: npm install
+        run: |
+          npm i
+
+      - name: Lint
+        run: |
+          npm run lint
+
+      - name: Generate Contracts
+        run: |
+          npm run generate-contracts
+
+      - name: Test
+        run: |
+          npm run test
+
+      - name: Build
+        run: |
+          npm run build
+
+
+     

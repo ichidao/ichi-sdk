@@ -137,8 +137,7 @@ export async function getPoolReserves(poolContract: Contracts, chainId: ChainId,
 
       if (ichiVaultInstance.address == exceptionAddress) {
         let ichiTokenContract = getErc20Contract(TokenName.ICHI_V2, provider);
-        let reserveBalances = await ichiVaultInstance.getBasePosition();
-        let contractBalance = await ichiTokenContract.balanceOf(exceptionAddress);
+        let [reserveBalances, contractBalance] = await Promise.all([ichiVaultInstance.getBasePosition(), ichiTokenContract.balanceOf(exceptionAddress)])
         return {
           _reserve0: Number(reserveBalances.amount0) + Number(contractBalance),
           _reserve1: Number(reserveBalances.amount1)

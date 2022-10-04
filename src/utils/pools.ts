@@ -1,13 +1,13 @@
 import { Pools } from '../constants/pools';
 import { ChainId } from '../crypto/networks';
-import { getAddress } from '../constants/addresses';
+import { ADDRESSES, getAddress } from '../constants/addresses';
 import { AddressName } from '../enums/addressName';
 import { getToken, getTokens } from '../constants/tokens';
 import { getProvider } from '../crypto/providers';
 import { TokenName } from '../enums/tokenName';
 import { OneTokenTemplate } from '../models/oneTokenTemplate';
-import { Contracts, getErc20Contract } from './contracts';
-import { asBalancerPool, asDodoLiquidityPool, asGenericPool, asIchiBnt, asIchiVault } from './contractGuards';
+import { Contracts, getContract, getErc20Contract } from './contracts';
+import { asBalancerPool, asDodoLiquidityPool, asGenericPool, asIchiBnt, asIchiVault, asOneTokenV1 } from './contractGuards';
 import {
   KovanPoolNumberValues,
   MainnetPoolNumberValues,
@@ -15,6 +15,7 @@ import {
   PolygonPoolNumberValues,
   PoolNumberValues
 } from '../enums/poolNumber';
+import { VAULTS } from 'src/constants/vaults';
 
 export function isFarmV1(pid: PoolNumberValues): boolean {
   return pid >= 0 && pid < 1000;
@@ -126,12 +127,29 @@ export async function getPoolReserves(poolContract: Contracts, chainId: ChainId,
       };
     } else if (isVault) {
       console.log(`isVault`);
-      // vaults
-      let reserveBalances = await asIchiVault(poolContract).getTotalAmounts();
-      return {
-        _reserve0: Number(reserveBalances.total0),
-        _reserve1: Number(reserveBalances.total1)
-      };
+      
+      if (asIchiVault(poolContract).address == VAULTS[chainId].ICHI.address) {
+        const provider = await getProvider(chainId);
+        if (!provider) {
+          throw new Error(`Could not get provider`);
+        }
+        let ichiTokenContract = getErc20Contract(TokenName.ICHI_V2, provider);
+
+        let reserveBalances = await asIchiVault(poolContract).getBasePosition();
+        let contractBalance = await ichiTokenContract.balanceOf(VAULTS[chainId].ICHI.address);
+        
+        return {
+          _reserve0: Number(reserveBalances.amount0) + Number(contractBalance),
+          _reserve1: Number(reserveBalances.amount1)
+        };
+      } else {
+        // All other vaults
+        let reserveBalances = await asIchiVault(poolContract).getTotalAmounts();
+        return {
+          _reserve0: Number(reserveBalances.total0),
+          _reserve1: Number(reserveBalances.total1)
+        };
+      }
     } else if (isDodoPool) {
       console.log(`isDodoPool`);
       // vaults

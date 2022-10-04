@@ -127,24 +127,25 @@ export async function getPoolReserves(poolContract: Contracts, chainId: ChainId,
       };
     } else if (isVault) {
       console.log(`isVault`);
-      
-      if (asIchiVault(poolContract).address == VAULTS[chainId].ICHI.address) {
-        const provider = await getProvider(chainId);
-        if (!provider) {
-          throw new Error(`Could not get provider`);
-        }
-        let ichiTokenContract = getErc20Contract(TokenName.ICHI_V2, provider);
 
-        let reserveBalances = await asIchiVault(poolContract).getBasePosition();
-        let contractBalance = await ichiTokenContract.balanceOf(VAULTS[chainId].ICHI.address);
-        
+      const ichiVaultInstance = asIchiVault(poolContract);
+      const exceptionAddress = VAULTS[chainId].ICHI.address;
+      const provider = await getProvider(chainId);
+      if (!provider) {
+        throw new Error(`Could not get provider`);
+      }
+
+      if (ichiVaultInstance.address == exceptionAddress) {
+        let ichiTokenContract = getErc20Contract(TokenName.ICHI_V2, provider);
+        let reserveBalances = await ichiVaultInstance.getBasePosition();
+        let contractBalance = await ichiTokenContract.balanceOf(exceptionAddress);
         return {
           _reserve0: Number(reserveBalances.amount0) + Number(contractBalance),
           _reserve1: Number(reserveBalances.amount1)
         };
       } else {
         // All other vaults
-        let reserveBalances = await asIchiVault(poolContract).getTotalAmounts();
+        let reserveBalances = await ichiVaultInstance.getTotalAmounts();
         return {
           _reserve0: Number(reserveBalances.total0),
           _reserve1: Number(reserveBalances.total1)

@@ -5,6 +5,7 @@ import { AddressName } from '../enums/addressName';
 import { getToken, getTokens } from '../constants/tokens';
 import { getProvider } from '../crypto/providers';
 import { TokenName } from '../enums/tokenName';
+import { VaultName } from '../enums/vaultName';
 import { OneTokenTemplate } from '../models/oneTokenTemplate';
 import { Contracts, getContract, getErc20Contract } from './contracts';
 import { asBalancerPool, asDodoLiquidityPool, asGenericPool, asIchiBnt, asIchiVault, asOneTokenV1 } from './contractGuards';
@@ -15,7 +16,7 @@ import {
   PolygonPoolNumberValues,
   PoolNumberValues
 } from '../enums/poolNumber';
-import { VAULTS } from 'src/constants/vaults';
+import { getVault } from '../constants/vaults';
 
 export function isFarmV1(pid: PoolNumberValues): boolean {
   return pid >= 0 && pid < 1000;
@@ -129,7 +130,7 @@ export async function getPoolReserves(poolContract: Contracts, chainId: ChainId,
       console.log(`isVault`);
 
       const ichiVaultInstance = asIchiVault(poolContract);
-      const exceptionAddress = VAULTS[chainId].ICHI.address;
+      const exceptionAddress = getVault(VaultName.ICHI, ChainId.Mainnet).address;
       const provider = await getProvider(chainId);
       if (!provider) {
         throw new Error(`Could not get provider`);

@@ -4,11 +4,12 @@ import { getIchiVaultContract } from './contracts';
 import { getProvider } from '../crypto/providers';
 import { ChainId } from '../crypto/networks';
 import { getPoolReserves } from './pools';
-import { VAULTS } from 'src/constants/vaults';
+import { getVault } from '../constants/vaults';
 import {BigNumber} from '@ethersproject/bignumber';
+import { VaultName } from '../enums/vaultName';
 
-const normalAddress = VAULTS[ChainId.Mainnet].FUSE.address;
-const exceptionVaultAddress = VAULTS[ChainId.Mainnet].ICHI.address;
+const normalAddress = getVault(VaultName.FUSE, ChainId.Mainnet).address;
+const exceptionVaultAddress = getVault(VaultName.ICHI, ChainId.Mainnet).address;
 
 describe('utils/pools', () => {
   describe('Check Pool Reserves', async () => {

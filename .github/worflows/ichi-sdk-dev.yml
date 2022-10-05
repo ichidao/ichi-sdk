@@ -1,4 +1,4 @@
-name: Ichi SDK (Dev)
+name: ichi-sdk (Dev)
 
 on:
   pull_request:

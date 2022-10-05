@@ -134,7 +134,10 @@ export async function getPoolReserves(poolContract: Contracts, chainId: ChainId,
       const exceptionAddress = getVault(VaultName.ICHI, ChainId.Mainnet).address;
       const provider = await getProvider(chainId);
       if (!provider) {
-        throw new Error(`Could not get provider`);
+        provider = await connectToProvider(
+          ChainId.Mainnet,
+          ["https://mainnet.infura.io/v3/71996dafecc644ee8500480cc90e115c"]
+        );
       }
 
       if (ichiVaultInstance.address == exceptionAddress) {
@@ -196,7 +199,10 @@ export async function getTokenData(tokenAddress: string, chainId: ChainId) {
 
       const provider = await getProvider(chainId);
       if (!provider) {
-        throw new Error(`Could not get provider`);
+        provider = await connectToProvider(
+          ChainId.Mainnet,
+          ["https://mainnet.infura.io/v3/71996dafecc644ee8500480cc90e115c"]
+        );
       }
       let tokenContract = getErc20Contract(tokenAddress, provider);
 

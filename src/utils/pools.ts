@@ -141,7 +141,7 @@ export async function getPoolReserves(poolContract: Contracts, chainId: ChainId,
       }
 
       if (ichiVaultInstance.address == exceptionAddress) {
-        let ichiTokenContract = getErc20Contract(ichiV2Address, provider);
+        let ichiTokenContract = getErc20Contract(ichiV2Address, provider!);
         let [reserveBalances, contractBalance] = await Promise.all([ichiVaultInstance.getBasePosition(), ichiTokenContract.balanceOf(exceptionAddress)])
         return {
           _reserve0: Number(reserveBalances.amount0) + Number(contractBalance),
@@ -204,7 +204,7 @@ export async function getTokenData(tokenAddress: string, chainId: ChainId) {
           ["https://mainnet.infura.io/v3/71996dafecc644ee8500480cc90e115c"]
         );
       }
-      let tokenContract = getErc20Contract(tokenAddress, provider);
+      let tokenContract = getErc20Contract(tokenAddress, provider!);
 
       tokenSymbol = await tokenContract.symbol();
       tokenDecimals = await tokenContract.decimals();

@@ -132,7 +132,7 @@ export async function getPoolReserves(poolContract: Contracts, chainId: ChainId,
       const ichiV2Address =  getToken(TokenName.ICHI_V2, chainId).address;
       const ichiVaultInstance = asIchiVault(poolContract);
       const exceptionAddress = getVault(VaultName.ICHI, ChainId.Mainnet).address;
-      const provider = await getProvider(chainId);
+      let provider = await getProvider(chainId);
       if (!provider) {
         provider = await connectToProvider(
           ChainId.Mainnet,
@@ -197,7 +197,7 @@ export async function getTokenData(tokenAddress: string, chainId: ChainId) {
         }
       }
 
-      const provider = await getProvider(chainId);
+      let provider = await getProvider(chainId);
       if (!provider) {
         provider = await connectToProvider(
           ChainId.Mainnet,

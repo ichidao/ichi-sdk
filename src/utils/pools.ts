@@ -2,7 +2,7 @@ import { Pools } from '../constants/pools';
 import { ChainId } from '../crypto/networks';
 import { ADDRESSES, getAddress } from '../constants/addresses';
 import { AddressName } from '../enums/addressName';
-import { getToken, getTokens } from '../constants/tokens';
+import { getToken, getTokens, TOKENS } from '../constants/tokens';
 import { getProvider } from '../crypto/providers';
 import { TokenName } from '../enums/tokenName';
 import { VaultName } from '../enums/vaultName';
@@ -129,6 +129,7 @@ export async function getPoolReserves(poolContract: Contracts, chainId: ChainId,
     } else if (isVault) {
       console.log(`isVault`);
 
+      const ichiV2Address = TOKENS[TokenName.ICHI_V2]![chainId]!.address;
       const ichiVaultInstance = asIchiVault(poolContract);
       const exceptionAddress = getVault(VaultName.ICHI, ChainId.Mainnet).address;
       const provider = await getProvider(chainId);
@@ -137,7 +138,7 @@ export async function getPoolReserves(poolContract: Contracts, chainId: ChainId,
       }
 
       if (ichiVaultInstance.address == exceptionAddress) {
-        let ichiTokenContract = getErc20Contract(TokenName.ICHI_V2, provider);
+        let ichiTokenContract = getErc20Contract(ichiV2Address, provider);
         let [reserveBalances, contractBalance] = await Promise.all([ichiVaultInstance.getBasePosition(), ichiTokenContract.balanceOf(exceptionAddress)])
         return {
           _reserve0: Number(reserveBalances.amount0) + Number(contractBalance),

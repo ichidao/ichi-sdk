@@ -15,8 +15,6 @@ const normalPoolID: MainnetPoolNumbers = MainnetPoolNumbers.USDC_VAULT;
 const exceptionVaultAddress = getVault(VaultName.ICHI, ChainId.Mainnet).address;
 const exceptionPoolID: MainnetPoolNumbers = MainnetPoolNumbers.ONE_UNI_VAULT_LP;
 
-console.log("Infura ID was " + process.env.INFURA_ID);
-
 describe('utils/pools', () => {
   describe('Check Pool Reserves', () => {
     it('Should use totalAmounts for normal case', async () => {

@@ -1,13 +1,13 @@
 import { Pools } from '../constants/pools';
 import { ChainId } from '../crypto/networks';
-import { ADDRESSES, getAddress } from '../constants/addresses';
+import { getAddress } from '../constants/addresses';
 import { AddressName } from '../enums/addressName';
-import { getToken, getTokens } from '../constants/tokens';
+import { getToken, getTokens, TOKENS } from '../constants/tokens';
 import { getProvider } from '../crypto/providers';
 import { TokenName } from '../enums/tokenName';
 import { VaultName } from '../enums/vaultName';
 import { OneTokenTemplate } from '../models/oneTokenTemplate';
-import { Contracts, getContract, getErc20Contract } from './contracts';
+import { Contracts, getErc20Contract } from './contracts';
 import { asBalancerPool, asDodoLiquidityPool, asGenericPool, asIchiBnt, asIchiVault, asOneTokenV1 } from './contractGuards';
 import {
   KovanPoolNumberValues,
@@ -129,15 +129,16 @@ export async function getPoolReserves(poolContract: Contracts, chainId: ChainId,
     } else if (isVault) {
       console.log(`isVault`);
 
+      const ichiV2Address =  getToken(TokenName.ICHI_V2, chainId).address;
       const ichiVaultInstance = asIchiVault(poolContract);
       const exceptionAddress = getVault(VaultName.ICHI, ChainId.Mainnet).address;
-      const provider = await getProvider(chainId);
+      const provider = await getProvider(ChainId.Mainnet) 
       if (!provider) {
-        throw new Error(`Could not get provider`);
+        throw Error("Could not connect with provider");
       }
 
       if (ichiVaultInstance.address == exceptionAddress) {
-        let ichiTokenContract = getErc20Contract(TokenName.ICHI_V2, provider);
+        let ichiTokenContract = getErc20Contract(ichiV2Address, provider);
         let [reserveBalances, contractBalance] = await Promise.all([ichiVaultInstance.getBasePosition(), ichiTokenContract.balanceOf(exceptionAddress)])
         return {
           _reserve0: Number(reserveBalances.amount0) + Number(contractBalance),
@@ -192,10 +193,9 @@ export async function getTokenData(tokenAddress: string, chainId: ChainId) {
           };
         }
       }
-
-      const provider = await getProvider(chainId);
+      const provider = await getProvider(ChainId.Mainnet) 
       if (!provider) {
-        throw new Error(`Could not get provider`);
+        throw Error("Could not connect with provider");
       }
       let tokenContract = getErc20Contract(tokenAddress, provider);
 

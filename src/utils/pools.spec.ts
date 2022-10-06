@@ -5,29 +5,38 @@ import { getProvider } from '../crypto/providers';
 import { ChainId } from '../crypto/networks';
 import { getPoolReserves } from './pools';
 import { getVault } from '../constants/vaults';
-import {BigNumber} from '@ethersproject/bignumber';
 import { VaultName } from '../enums/vaultName';
+import { MainnetPoolNumbers } from '../enums/poolNumber';
 
-const normalAddress = getVault(VaultName.FUSE, ChainId.Mainnet).address;
+const testChainId = ChainId.Mainnet
+const normalAddress = getVault(VaultName.USDC_ICHI, ChainId.Mainnet).address;
+const normalPoolID: MainnetPoolNumbers = MainnetPoolNumbers.USDC_VAULT;
+
 const exceptionVaultAddress = getVault(VaultName.ICHI, ChainId.Mainnet).address;
+const exceptionPoolID: MainnetPoolNumbers = MainnetPoolNumbers.ONE_UNI_VAULT_LP;
 
 describe('utils/pools', () => {
-  describe('Check Pool Reserves', async () => {
-    const provider = await getProvider(ChainId.Mainnet);
-    if (!provider) {
-      throw new Error(`Could not get provider`);
-    }
+  describe('Check Pool Reserves', () => {
     it('Should use totalAmounts for normal case', async () => {
+      const provider = await getProvider(ChainId.Mainnet) 
+      if (!provider) {
+        throw Error("Could not connect with provider");
+      }
       let ichiVault = getIchiVaultContract(normalAddress, provider);
-      let {_reserve0, _reserve1} = await getPoolReserves(ichiVault, ChainId.Mainnet);
+      let {_reserve0, _reserve1} = await getPoolReserves(ichiVault, ChainId.Mainnet, { poolId: normalPoolID });
       let {total0, total1} = await ichiVault.getTotalAmounts();
-      return expect(BigNumber.from(_reserve1)).toEqual(total1);
+      return expect(_reserve1.toString()).toEqual(total1.toString());
     });
     it('Should use getBasePosition for exception case', async () => {
+      const provider = await getProvider(ChainId.Mainnet) 
+      if (!provider) {
+        throw Error("Could not connect with provider");
+      }
       let ichiVault = getIchiVaultContract(exceptionVaultAddress, provider);
-      let {_reserve0, _reserve1} = await getPoolReserves(ichiVault, ChainId.Mainnet);
+      let {_reserve0, _reserve1} = await getPoolReserves(ichiVault, ChainId.Mainnet, { poolId: exceptionPoolID });
       let {liquidity, amount0, amount1} = await ichiVault.getBasePosition();
-      return expect(BigNumber.from(_reserve1)).toEqual(amount1);
+      return expect(_reserve1.toString()).toEqual(amount1.toString());
     });
   });
 });
+

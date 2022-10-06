@@ -40,7 +40,7 @@ const resolve = async (hostname: string, rrtype: string): Promise<boolean> => {
   });
 };
 
-const connectToProvider = async (
+export const connectToProvider = async (
   chainId: ChainId,
   rpcHosts?: string[],
   providerId?: string

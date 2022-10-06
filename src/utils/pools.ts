@@ -134,11 +134,11 @@ export async function getPoolReserves(poolContract: Contracts, chainId: ChainId,
       const exceptionAddress = getVault(VaultName.ICHI, ChainId.Mainnet).address;
       const provider = await getProvider(ChainId.Mainnet) 
       if (!provider) {
-        console.log("Could not connect with provider");
+        throw Error("Could not connect with provider");
       }
 
       if (ichiVaultInstance.address == exceptionAddress) {
-        let ichiTokenContract = getErc20Contract(ichiV2Address, provider!);
+        let ichiTokenContract = getErc20Contract(ichiV2Address, provider);
         let [reserveBalances, contractBalance] = await Promise.all([ichiVaultInstance.getBasePosition(), ichiTokenContract.balanceOf(exceptionAddress)])
         return {
           _reserve0: Number(reserveBalances.amount0) + Number(contractBalance),
@@ -195,9 +195,9 @@ export async function getTokenData(tokenAddress: string, chainId: ChainId) {
       }
       const provider = await getProvider(ChainId.Mainnet) 
       if (!provider) {
-        console.log("Could not connect with provider");
+        throw Error("Could not connect with provider");
       }
-      let tokenContract = getErc20Contract(tokenAddress, provider!);
+      let tokenContract = getErc20Contract(tokenAddress, provider);
 
       tokenSymbol = await tokenContract.symbol();
       tokenDecimals = await tokenContract.decimals();

@@ -22,9 +22,9 @@ describe('utils/pools', () => {
     it('Should use totalAmounts for normal case', async () => {
       const provider = await getProvider(ChainId.Mainnet) 
       if (!provider) {
-        console.log("Could not connect with provider");
+        throw Error("Could not connect with provider");
       }
-      let ichiVault = getIchiVaultContract(normalAddress, provider!);
+      let ichiVault = getIchiVaultContract(normalAddress, provider);
       let {_reserve0, _reserve1} = await getPoolReserves(ichiVault, ChainId.Mainnet, { poolId: normalPoolID });
       let {total0, total1} = await ichiVault.getTotalAmounts();
       return expect(_reserve1.toString()).toEqual(total1.toString());
@@ -32,9 +32,9 @@ describe('utils/pools', () => {
     it('Should use getBasePosition for exception case', async () => {
       const provider = await getProvider(ChainId.Mainnet) 
       if (!provider) {
-        console.log("Could not connect with provider");
+        throw Error("Could not connect with provider");
       }
-      let ichiVault = getIchiVaultContract(exceptionVaultAddress, provider!);
+      let ichiVault = getIchiVaultContract(exceptionVaultAddress, provider);
       let {_reserve0, _reserve1} = await getPoolReserves(ichiVault, ChainId.Mainnet, { poolId: exceptionPoolID });
       let {liquidity, amount0, amount1} = await ichiVault.getBasePosition();
       return expect(_reserve1.toString()).toEqual(amount1.toString());

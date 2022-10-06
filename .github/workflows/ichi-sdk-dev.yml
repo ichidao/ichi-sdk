@@ -37,10 +37,14 @@ jobs:
       - name: Test
         run: |
           npm run test
+        env: 
+          INFURA_ID: ${{ secrets.INFURA_ID_DEV }}
 
       - name: Build
         run: |
           npm run build
+
+       
 
 
      

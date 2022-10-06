@@ -7,7 +7,10 @@ import { getPoolReserves } from './pools';
 import { getVault } from '../constants/vaults';
 import { VaultName } from '../enums/vaultName';
 import { MainnetPoolNumbers } from '../enums/poolNumber';
+import * as dotenv from "dotenv";
 import { connectToProvider } from '../crypto/providers';
+
+dotenv.config();
 
 const testChainId = ChainId.Mainnet
 const normalAddress = getVault(VaultName.USDC_ICHI, ChainId.Mainnet).address;
@@ -19,12 +22,13 @@ const exceptionPoolID: MainnetPoolNumbers = MainnetPoolNumbers.ONE_UNI_VAULT_LP;
 describe('utils/pools', () => {
   describe('Check Pool Reserves', () => {
     it('Should use totalAmounts for normal case', async () => {
-      let provider = await getProvider(testChainId);
-      if (!provider) {
-        provider = await connectToProvider(
-          ChainId.Mainnet,
-          ["https://mainnet.infura.io/v3/71996dafecc644ee8500480cc90e115c"]
-        );
+      let provider;
+      try { 
+        provider = await getProvider(ChainId.Mainnet) 
+      } catch(e) {
+        console.log(e);
+        console.log("Trying local environment variable ...");
+        provider = await connectToProvider(ChainId.Mainnet, [process.env.MAINNET_RPC_URL!]);
       }
       let ichiVault = getIchiVaultContract(normalAddress, provider!);
       let {_reserve0, _reserve1} = await getPoolReserves(ichiVault, ChainId.Mainnet, { poolId: normalPoolID });
@@ -32,12 +36,13 @@ describe('utils/pools', () => {
       return expect(_reserve1.toString()).toEqual(total1.toString());
     });
     it('Should use getBasePosition for exception case', async () => {
-      let provider = await getProvider(testChainId);
-      if (!provider) {
-        provider = await connectToProvider(
-          ChainId.Mainnet,
-          ["https://mainnet.infura.io/v3/71996dafecc644ee8500480cc90e115c"]
-        );
+      let provider;
+      try { 
+        provider = await getProvider(ChainId.Mainnet); 
+      } catch(e) {
+        console.log(e);
+        console.log("Trying local environment variable ...");
+        provider = await connectToProvider(ChainId.Mainnet, [process.env.MAINNET_RPC_URL!]);
       }
       let ichiVault = getIchiVaultContract(exceptionVaultAddress, provider!);
       let {_reserve0, _reserve1} = await getPoolReserves(ichiVault, ChainId.Mainnet, { poolId: exceptionPoolID });

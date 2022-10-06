@@ -7,10 +7,6 @@ import { getPoolReserves } from './pools';
 import { getVault } from '../constants/vaults';
 import { VaultName } from '../enums/vaultName';
 import { MainnetPoolNumbers } from '../enums/poolNumber';
-import * as dotenv from "dotenv";
-import { connectToProvider } from '../crypto/providers';
-
-dotenv.config();
 
 const testChainId = ChainId.Mainnet
 const normalAddress = getVault(VaultName.USDC_ICHI, ChainId.Mainnet).address;
@@ -19,16 +15,14 @@ const normalPoolID: MainnetPoolNumbers = MainnetPoolNumbers.USDC_VAULT;
 const exceptionVaultAddress = getVault(VaultName.ICHI, ChainId.Mainnet).address;
 const exceptionPoolID: MainnetPoolNumbers = MainnetPoolNumbers.ONE_UNI_VAULT_LP;
 
+console.log("Infura ID was " + process.env.INFURA_ID);
+
 describe('utils/pools', () => {
   describe('Check Pool Reserves', () => {
     it('Should use totalAmounts for normal case', async () => {
-      let provider;
-      try { 
-        provider = await getProvider(ChainId.Mainnet) 
-      } catch(e) {
-        console.log(e);
-        console.log("Trying local environment variable ...");
-        provider = await connectToProvider(ChainId.Mainnet, [process.env.MAINNET_RPC_URL!]);
+      const provider = await getProvider(ChainId.Mainnet) 
+      if (!provider) {
+        console.log("Could not connect with provider");
       }
       let ichiVault = getIchiVaultContract(normalAddress, provider!);
       let {_reserve0, _reserve1} = await getPoolReserves(ichiVault, ChainId.Mainnet, { poolId: normalPoolID });
@@ -36,13 +30,9 @@ describe('utils/pools', () => {
       return expect(_reserve1.toString()).toEqual(total1.toString());
     });
     it('Should use getBasePosition for exception case', async () => {
-      let provider;
-      try { 
-        provider = await getProvider(ChainId.Mainnet); 
-      } catch(e) {
-        console.log(e);
-        console.log("Trying local environment variable ...");
-        provider = await connectToProvider(ChainId.Mainnet, [process.env.MAINNET_RPC_URL!]);
+      const provider = await getProvider(ChainId.Mainnet) 
+      if (!provider) {
+        console.log("Could not connect with provider");
       }
       let ichiVault = getIchiVaultContract(exceptionVaultAddress, provider!);
       let {_reserve0, _reserve1} = await getPoolReserves(ichiVault, ChainId.Mainnet, { poolId: exceptionPoolID });

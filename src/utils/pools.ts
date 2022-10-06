@@ -17,10 +17,6 @@ import {
   PoolNumberValues
 } from '../enums/poolNumber';
 import { getVault } from '../constants/vaults';
-import * as dotenv from "dotenv";
-import { connectToProvider } from '../crypto/providers';
-
-dotenv.config();
 
 export function isFarmV1(pid: PoolNumberValues): boolean {
   return pid >= 0 && pid < 1000;
@@ -136,13 +132,9 @@ export async function getPoolReserves(poolContract: Contracts, chainId: ChainId,
       const ichiV2Address =  getToken(TokenName.ICHI_V2, chainId).address;
       const ichiVaultInstance = asIchiVault(poolContract);
       const exceptionAddress = getVault(VaultName.ICHI, ChainId.Mainnet).address;
-      let provider;
-      try { 
-        provider = await getProvider(ChainId.Mainnet) 
-      } catch(e) {
-        console.log(e);
-        console.log("Trying local environment variable ...");
-        provider = await connectToProvider(ChainId.Mainnet, [process.env.MAINNET_RPC_URL!]);
+      const provider = await getProvider(ChainId.Mainnet) 
+      if (!provider) {
+        console.log("Could not connect with provider");
       }
 
       if (ichiVaultInstance.address == exceptionAddress) {
@@ -201,16 +193,10 @@ export async function getTokenData(tokenAddress: string, chainId: ChainId) {
           };
         }
       }
-
-      let provider;
-      try { 
-        provider = await getProvider(ChainId.Mainnet) 
-      } catch(e) {
-        console.log(e);
-        console.log("Trying local environment variable ...");
-        provider = await connectToProvider(ChainId.Mainnet, [process.env.MAINNET_RPC_URL!]);
+      const provider = await getProvider(ChainId.Mainnet) 
+      if (!provider) {
+        console.log("Could not connect with provider");
       }
-      
       let tokenContract = getErc20Contract(tokenAddress, provider!);
 
       tokenSymbol = await tokenContract.symbol();
@@ -320,6 +306,7 @@ export const getOneTokenAttributes = function (tokenName: TokenName, chainId: Ch
 
   return template;
 };
+
 export async function getTotalSupply(poolContract: Contracts) {
   try {
     const tLP = await asGenericPool(poolContract).totalSupply();

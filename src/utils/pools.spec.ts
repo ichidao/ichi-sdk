@@ -8,7 +8,7 @@ import { getVault } from '../constants/vaults';
 import { VaultName } from '../enums/vaultName';
 import { MainnetPoolNumbers } from '../enums/poolNumber';
 import { TokenName } from '../enums/tokenName';
-import { getToken, getTokens, TOKENS } from '../constants/tokens';
+import { getToken, getTokens } from '../constants/tokens';
 import { Contracts, getErc20Contract } from './contracts';
 import { BigNumber } from "@ethersproject/bignumber";
 

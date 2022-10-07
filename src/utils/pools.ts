@@ -129,7 +129,7 @@ export async function getPoolReserves(poolContract: Contracts, chainId: ChainId,
     } else if (isVault) {
       console.log(`isVault`);
 
-      const ichiV2Address =  getToken(TokenName.ICHI_V2, chainId).address;
+      const oneUniAddress =  getToken(TokenName.ONE_UNI, chainId).address;
       const ichiVaultInstance = asIchiVault(poolContract);
       const exceptionAddress = getVault(VaultName.ICHI, ChainId.Mainnet).address;
       const provider = await getProvider(ChainId.Mainnet) 
@@ -138,11 +138,12 @@ export async function getPoolReserves(poolContract: Contracts, chainId: ChainId,
       }
 
       if (ichiVaultInstance.address == exceptionAddress) {
-        let ichiTokenContract = getErc20Contract(ichiV2Address, provider);
-        let [reserveBalances, contractBalance] = await Promise.all([ichiVaultInstance.getBasePosition(), ichiTokenContract.balanceOf(exceptionAddress)])
+        let oneUniTokenContract = getErc20Contract(oneUniAddress, provider);
+        
+        let [reserveBalances, contractBalance] = await Promise.all([ichiVaultInstance.getBasePosition(), oneUniTokenContract.balanceOf(exceptionAddress)])
         return {
           _reserve0: Number(reserveBalances.amount0) + Number(contractBalance),
-          _reserve1: Number(reserveBalances.amount1)
+          _reserve1: Number(reserveBalances.amount1) 
         };
       } else {
         // All other vaults

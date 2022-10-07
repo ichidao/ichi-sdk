@@ -10,6 +10,7 @@ import { MainnetPoolNumbers } from '../enums/poolNumber';
 import { TokenName } from '../enums/tokenName';
 import { getToken, getTokens, TOKENS } from '../constants/tokens';
 import { Contracts, getErc20Contract } from './contracts';
+import { BigNumber } from "@ethersproject/bignumber";
 
 const testChainId = ChainId.Mainnet
 const normalAddress = getVault(VaultName.USDC_ICHI, ChainId.Mainnet).address;
@@ -36,18 +37,10 @@ describe('utils/pools', () => {
         throw Error("Could not connect with provider");
       }
       let ichiVault = getIchiVaultContract(exceptionVaultAddress, provider);
-      const ichiV2Address =  getToken(TokenName.ICHI, ChainId.Mainnet).address;
-      let ichiTokenContract = getErc20Contract(ichiV2Address, provider);
 
       let {_reserve0, _reserve1} = await getPoolReserves(ichiVault, ChainId.Mainnet, { poolId: exceptionPoolID });
-      let ichiBalance = await ichiTokenContract.balanceOf(exceptionVaultAddress);
-      let totalIchiBalance = _reserve1 + ichiBalance.toNumber(); 
-
-      console.log("oneUni balance - " + _reserve0);
-      console.log("ICHI Balance - " + totalIchiBalance);
-
       let {liquidity, amount0, amount1} = await ichiVault.getBasePosition();
-      return expect(totalIchiBalance.toString()).toEqual(amount1.toString());
+      return expect(_reserve1.toString()).toEqual(amount1.toString());
     });
   });
 });

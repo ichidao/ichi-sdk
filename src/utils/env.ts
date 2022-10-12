@@ -108,7 +108,7 @@ export namespace EnvUtils {
 
     if (!EnvUtils.isDefined(EnvUtils.EnvName.CMC_API_KEY)) {
       console.warn(
-        'It may be necessary to set the environment variable "CMC_API_KEY"\n\tex. export CHAIN_SRC=https://hostname.com/chains/chain_logo_[chainid].[ext]'
+        'It may be necessary to set the environment variable "CMC_API_KEY"'
       );
       // return false;
     }

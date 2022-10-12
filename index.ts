@@ -4,7 +4,9 @@ export { EnvUtils } from './src/utils/env';
 
 // External APIs
 export { CoinGeckoPrice, CoinGeckoPriceResponse, CoinGeckoTokenInfoResponse } from './src/models/coinGecko';
+export { PlatformData, QuotePriceData, QuoteData, CoinMarketCapTokenInfo, CoinMarketCapTokenInfoResponse } from './src/models/coinMarketCap';
 export { lookUpTokenPrices, getTokenPrice, getTokenInfo } from './src/external/coinGecko';
+export { getTokenPriceFromCoinMarketCap, getTokenInfoFromCoinMarketCap } from './src/external/coinMarketCap';
 export { getDebankPortfolio } from './src/external/debank';
 export { get1InchPools } from './src/external/oneInch';
 export { getBancorV3Pools } from './src/external/bancor';

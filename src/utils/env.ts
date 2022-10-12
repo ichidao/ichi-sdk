@@ -11,7 +11,8 @@ export namespace EnvUtils {
     GOERLI_RPC_HOSTS = 'GOERLI_RPC_HOSTS',
     BSC_RPC_HOSTS = 'BSC_RPC_HOSTS',
     POLYGON_RPC_HOSTS = 'POLYGON_RPC_HOSTS',
-    MUMBAI_RPC_HOSTS = 'MUMBAI_RPC_HOSTS'
+    MUMBAI_RPC_HOSTS = 'MUMBAI_RPC_HOSTS',
+    CMC_API_KEY = 'CMC_API_KEY',
   }
 
   export enum GatsbyEnvName {
@@ -23,7 +24,8 @@ export namespace EnvUtils {
     GATSBY_GOERLI_RPC_HOSTS = 'GATSBY_GOERLI_RPC_HOSTS',
     GATSBY_BSC_RPC_HOSTS = 'GATSBY_BSC_RPC_HOSTS',
     GATSBY_POLYGON_RPC_HOSTS = 'GATSBY_POLYGON_RPC_HOSTS',
-    GATSBY_MUMBAI_RPC_HOSTS = 'GATSBY_MUMBAI_RPC_HOSTS'
+    GATSBY_MUMBAI_RPC_HOSTS = 'GATSBY_MUMBAI_RPC_HOSTS',
+    GATSBY_CMC_API_KEY = 'GATSBY_CMC_API_KEY',
   }
 
   export type EnvNameKey = keyof typeof EnvName;
@@ -57,7 +59,8 @@ export namespace EnvUtils {
   export const EnvValue: PartialRecord<EnvNameKey, string> = {
     [EnvUtils.EnvName.ALCHEMY_ID]: EnvUtils.getValue(EnvName.ALCHEMY_ID),
     [EnvUtils.EnvName.INFURA_ID]: EnvUtils.getValue(EnvName.INFURA_ID),
-    [EnvUtils.EnvName.CHAIN_SRC]: EnvUtils.getValue(EnvName.CHAIN_SRC)
+    [EnvUtils.EnvName.CHAIN_SRC]: EnvUtils.getValue(EnvName.CHAIN_SRC),
+    [EnvUtils.EnvName.CMC_API_KEY]: EnvUtils.getValue(EnvName.CMC_API_KEY),
   };
 
   export const EnvValues: PartialRecord<EnvNameKey, string[]> = {
@@ -99,6 +102,13 @@ export namespace EnvUtils {
     if (!EnvUtils.isDefined(EnvUtils.EnvName.CHAIN_SRC)) {
       console.warn(
         'It may be necessary to set the environment variable "CHAIN_SRC"\n\tex. export CHAIN_SRC=https://hostname.com/chains/chain_logo_[chainid].[ext]'
+      );
+      // return false;
+    }
+
+    if (!EnvUtils.isDefined(EnvUtils.EnvName.CMC_API_KEY)) {
+      console.warn(
+        'It may be necessary to set the environment variable "CMC_API_KEY"\n\tex. export CHAIN_SRC=https://hostname.com/chains/chain_logo_[chainid].[ext]'
       );
       // return false;
     }

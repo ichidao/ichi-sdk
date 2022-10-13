@@ -3,7 +3,7 @@ import
 {   QuotePriceData, 
     CoinMarketCapTokenInfoResponse } from '../models/coinMarketCap';
 import { EnvUtils } from '../utils/env';
-import { Optional } from 'src/types/optional';
+import { Optional } from '../types/optional';
 
 const cmcClient = new CoinMarketCap(EnvUtils.EnvValue.CMC_API_KEY);
 

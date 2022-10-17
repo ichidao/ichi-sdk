@@ -5,10 +5,14 @@ import { PartialRecord } from '../types/common';
 import { VaultName, VaultTableName } from '../enums/vaultName';
 import { ADDRESSES } from './addresses';
 import { AddressName } from '../enums/addressName';
+import { KovanPoolNumbers, MainnetPoolNumbers, PolygonPoolNumbers, PoolNumberValues } from '../enums/poolNumber';
+import { PoolGroupName } from '../enums/poolManagementName';
+import { Pools } from './pools';
 
-// type VaultMapping = {
-//   [vaultName in VaultName]: PartialRecord<ChainId, Vault>;
-// };
+const isLegacy = (poolNumber: PoolNumberValues, chainId: ChainId) => {
+  return Pools[PoolGroupName.LEGACY_POOLS][chainId].includes(poolNumber);
+}
+
 type VaultMapping = Record<VaultName, PartialRecord<ChainId, Vault>>;
 
 export const VAULTS: VaultMapping = {
@@ -31,7 +35,8 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: true,
-      isLegacy: false,
+      // isLegacy: false,
+      isLegacy: isLegacy(MainnetPoolNumbers.ALLY_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
     }
@@ -55,7 +60,8 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: true,
-      isLegacy: false,
+      // isLegacy: false,
+      isLegacy: isLegacy(MainnetPoolNumbers.BOBA_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
     }
@@ -79,7 +85,8 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: true,
-      isLegacy: false,
+      // isLegacy: false,
+      isLegacy: isLegacy(MainnetPoolNumbers.HOME_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
     }
@@ -103,7 +110,8 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: true,
-      isLegacy: false,
+      // isLegacy: false,
+      isLegacy: isLegacy(MainnetPoolNumbers.WETH_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
     }
@@ -127,7 +135,8 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: false,
       isHodlVault: true,
-      isLegacy: false,
+      // isLegacy: false,
+      isLegacy: isLegacy(MainnetPoolNumbers['1INCH_VAULT'], ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
     }
@@ -151,7 +160,8 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: false,
-      isLegacy: false,
+      // isLegacy: false,
+      isLegacy: isLegacy(MainnetPoolNumbers.ONE_FUSE_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
     }
@@ -175,7 +185,8 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: false,
       isHodlVault: false,
-      isLegacy: true,
+      // isLegacy: true,
+      isLegacy: isLegacy(MainnetPoolNumbers.ONE_ICHI_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
     }
@@ -199,7 +210,8 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: false,
       isHodlVault: false,
-      isLegacy: true,
+      // isLegacy: true,
+      isLegacy: isLegacy(MainnetPoolNumbers.ONE_WING_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
     }
@@ -223,7 +235,8 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date('2022-03-09T02:00:00'),
       isInverted: false,
       isHodlVault: false,
-      isLegacy: true,
+      // isLegacy: true,
+      isLegacy: isLegacy(MainnetPoolNumbers.ONE_FOX_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
     }
@@ -247,7 +260,8 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: false,
-      isLegacy: true,
+      // isLegacy: true,
+      isLegacy: isLegacy(MainnetPoolNumbers.ONE_OJA_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
     }
@@ -271,7 +285,8 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date('2022-03-10T14:25:23'),
       isInverted: false,
       isHodlVault: true,
-      isLegacy: true,
+      // isLegacy: true,
+      isLegacy: isLegacy(MainnetPoolNumbers.GNO_VAULT_LEGACY, ChainId.Mainnet),
       irrStartTxAmount: 17916,
       depositStatus: true,
     }
@@ -295,7 +310,8 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date('2022-03-23T00:13:17'),
       isInverted: true,
       isHodlVault: true,
-      isLegacy: true,
+      // isLegacy: true,
+      isLegacy: isLegacy(MainnetPoolNumbers.CEL_VAULT_LEGACY, ChainId.Mainnet),
       irrStartTxAmount: 346101.2345,
       depositStatus: true,
     }
@@ -319,7 +335,8 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date('2022-03-30T18:17:57'),
       isInverted: false,
       isHodlVault: true,
-      isLegacy: true,
+      // isLegacy: true,
+      isLegacy: isLegacy(MainnetPoolNumbers.WBTC_VAULT_LEGACY, ChainId.Mainnet),
       irrStartTxAmount: 75.482852739,
       depositStatus: true,
     }
@@ -345,7 +362,8 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: true,
-      isLegacy: false,
+      // isLegacy: false,
+      isLegacy: isLegacy(PolygonPoolNumbers.WBTC_VAULT, ChainId.Polygon),
       irrStartTxAmount: 0,
       depositStatus: true,
     }
@@ -369,7 +387,8 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: true,
-      isLegacy: false,
+      // isLegacy: false,
+      isLegacy: isLegacy(PolygonPoolNumbers.GOVI_VAULT, ChainId.Polygon),
       irrStartTxAmount: 0,
       depositStatus: true,
     }
@@ -393,7 +412,8 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: false,
-      isLegacy: true,
+      // isLegacy: true,
+      isLegacy: isLegacy(MainnetPoolNumbers.ONE_BTC_VAULT_LEGACY, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
     }
@@ -418,7 +438,8 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date('2022-05-26T02:00:00'),
       isInverted: true,
       isHodlVault: false,
-      isLegacy: false,
+      // isLegacy: false,
+      isLegacy: isLegacy(PolygonPoolNumbers.ONE_BTC_VAULT, ChainId.Polygon),
       irrStartTxAmount: 0,
       depositStatus: true,
     }
@@ -442,7 +463,8 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: true,
-      isLegacy: false,
+      // isLegacy: false,
+      isLegacy: isLegacy(MainnetPoolNumbers.GNO_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
     }
@@ -466,7 +488,8 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: true,
-      isLegacy: false,
+      // isLegacy: false,
+      isLegacy: isLegacy(MainnetPoolNumbers.CEL_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
     }
@@ -490,7 +513,8 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date('2022-03-15T19:04:48'),
       isInverted: false,
       isHodlVault: true,
-      isLegacy: true,
+      // isLegacy: true,
+      isLegacy: isLegacy(MainnetPoolNumbers.WNXM_VAULT_LEGACY, ChainId.Mainnet),
       irrStartTxAmount: 222193,
       depositStatus: true,
     }
@@ -514,7 +538,8 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: false,
       isHodlVault: true,
-      isLegacy: false,
+      // isLegacy: false,
+      isLegacy: isLegacy(MainnetPoolNumbers.WNXM_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
     }
@@ -538,7 +563,8 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: true,
-      isLegacy: false,
+      // isLegacy: false,
+      isLegacy: isLegacy(MainnetPoolNumbers.WBTC_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
     }
@@ -562,7 +588,8 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: true,
-      isLegacy: false,
+      // isLegacy: false,
+      isLegacy: isLegacy(MainnetPoolNumbers.QRDO_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
     }
@@ -586,7 +613,8 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: false,
-      isLegacy: false,
+      // isLegacy: false,
+      isLegacy: isLegacy(MainnetPoolNumbers.USDC_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
     },
@@ -609,7 +637,8 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: true,
-      isLegacy: false,
+      // isLegacy: false,
+      isLegacy: isLegacy(PolygonPoolNumbers.USDC_VAULT, ChainId.Polygon),
       irrStartTxAmount: 0,
       depositStatus: true,
     }
@@ -634,7 +663,8 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: true,
-      isLegacy: false,
+      // isLegacy: false,
+      isLegacy: isLegacy(PolygonPoolNumbers.USDC_VAULT, ChainId.Polygon),
       irrStartTxAmount: 0,
       depositStatus: true,
     }
@@ -658,7 +688,8 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: false,
-      isLegacy: false,
+      // isLegacy: false,
+      isLegacy: isLegacy(MainnetPoolNumbers.ONE_ICHI_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
     }
@@ -704,7 +735,8 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: true,
-      isLegacy: false,
+      // isLegacy: false,
+      isLegacy: isLegacy(MainnetPoolNumbers.BNT_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
     }
@@ -728,7 +760,8 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: false,
       isHodlVault: false,
-      isLegacy: false,
+      // isLegacy: false,
+      isLegacy: isLegacy(MainnetPoolNumbers.ONE_GIV, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
     }
@@ -752,7 +785,8 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: true,
       isHodlVault: true,
-      isLegacy: false,
+      // isLegacy: false,
+      isLegacy: isLegacy(MainnetPoolNumbers.FUSE_ICHI_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
     }
@@ -776,7 +810,8 @@ export const VAULTS: VaultMapping = {
       irrStartDate: new Date(0),
       isInverted: false, // will be inverted if token0 is ICHI, in this case token0 is oneFIL so inverted false
       isHodlVault: false,
-      isLegacy: false,
+      // isLegacy: false,
+      isLegacy: isLegacy(KovanPoolNumbers.ONE_FIL_VAULT, ChainId.Kovan),
       irrStartTxAmount: 0,
       depositStatus: true,
     }

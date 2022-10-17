@@ -5,8 +5,8 @@ import { PartialRecord } from '../types/common';
 import { VaultName, VaultTableName } from '../enums/vaultName';
 import { ADDRESSES } from './addresses';
 import { AddressName } from '../enums/addressName';
-import { KovanPoolNumbers, MainnetPoolNumbers, PolygonPoolNumbers, PoolNumberValues } from 'src/enums/poolNumber';
-import { PoolGroupName } from 'src/enums/poolManagementName';
+import { KovanPoolNumbers, MainnetPoolNumbers, PolygonPoolNumbers, PoolNumberValues } from '../enums/poolNumber';
+import { PoolGroupName } from '../enums/poolManagementName';
 import { Pools } from './pools';
 
 const isLegacy = (poolNumber: PoolNumberValues, chainId: ChainId) => {

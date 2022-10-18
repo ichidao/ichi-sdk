@@ -1,6 +1,5 @@
 import { ChainId } from '../crypto/networks';
 import { PartialRecord } from '../types/common';
-import { ADDRESSES } from './addresses';
 import { getOneTokenFactoryContract } from '../utils/contracts';
 import { getProvider } from '../crypto/providers';
 import { OracleName, OracleNames } from '../enums/oracleName';
@@ -19,21 +18,19 @@ export const ORACLES: OracleMapping = {
 };
 
 export async function getAllOneTokenOracles(chainId: ChainId): Promise<Map<string, string[]>> {
-
-  console.log('Getting all OneToken Oracles for chainId: ', chainId);
   let oneTokenToOracle = new Map<string, string[]>();
   const ichiVaultFactory = await getOneTokenFactoryInstance(chainId);
 
   let numForeignTokens = await ichiVaultFactory.foreignTokenCount();
   for (let i = 0; i < numForeignTokens.toNumber(); i++) {
     let foreignToken = await ichiVaultFactory.foreignTokenAtIndex(i);
-    oneTokenToOracle[foreignToken] = await getOneTokenOracles(foreignToken, chainId, ichiVaultFactory);
+    oneTokenToOracle.set(foreignToken, await getOneTokenOracles(foreignToken, chainId, ichiVaultFactory));
   }
 
   return oneTokenToOracle;
 }
 
-export async function getOneTokenOracles(oneTokenAddress: string, chainId: ChainId, ichiVaultFactoryContract?: OneTokenFactory): Promise<Map<string, string[]>> {
+export async function getOneTokenOracles(oneTokenAddress: string, chainId: ChainId, ichiVaultFactoryContract?: OneTokenFactory): Promise<string[]> {
   let ichiVaultFactory;
   if (!ichiVaultFactoryContract) {
     ichiVaultFactory = await getOneTokenFactoryInstance(chainId);
@@ -41,19 +38,18 @@ export async function getOneTokenOracles(oneTokenAddress: string, chainId: Chain
     ichiVaultFactory = ichiVaultFactoryContract;
   }
 
-  let oneTokenToOracle = new Map<string, string[]>();
-  oneTokenToOracle[oneTokenAddress] = [];
+  let oneTokenToOracle: string[] = [];
 
   let numOracles = await ichiVaultFactory.foreignTokenOracleCount(oneTokenAddress);
   for (let j = 0; j < numOracles.toNumber(); j++) {
     let oracle = await ichiVaultFactory.foreignTokenOracleAtIndex(oneTokenAddress, j);
-    oneTokenToOracle[oneTokenAddress].push(oracle);
+    oneTokenToOracle.push(oracle);
   }
 
   return oneTokenToOracle;
 }
 
-export async function getOneTokenFactoryInstance(chainId: ChainId): Promise<OneTokenFactory> {
+async function getOneTokenFactoryInstance(chainId: ChainId): Promise<OneTokenFactory> {
     const provider = await getProvider(chainId);
     if (!provider) {
       throw Error('Could not connect with provider');
@@ -70,3 +66,6 @@ export function getOracleAddress(oracleName: OracleName, chainId: ChainId): stri
   }
   return address;
 }
+
+getAllOneTokenOracles(ChainId.Polygon).then((result) => console.log(result));
+

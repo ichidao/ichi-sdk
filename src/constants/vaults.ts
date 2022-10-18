@@ -186,7 +186,7 @@ export const VAULTS: VaultMapping = {
       isInverted: false,
       isHodlVault: false,
       // isLegacy: true,
-      isLegacy: isLegacy(MainnetPoolNumbers.ONE_ICHI_VAULT, ChainId.Mainnet),
+      isLegacy: isLegacy(MainnetPoolNumbers.ONE_UNI_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
     }

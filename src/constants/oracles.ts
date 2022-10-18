@@ -66,6 +66,3 @@ export function getOracleAddress(oracleName: OracleName, chainId: ChainId): stri
   }
   return address;
 }
-
-getAllOneTokenOracles(ChainId.Polygon).then((result) => console.log(result));
-

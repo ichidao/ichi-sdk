@@ -1119,5 +1119,3 @@ export function getOneTokens(chainId: ChainId): Token[] {
   console.log(vaults);
   return vaults;
 }
-
-getOneTokens(ChainId.Mainnet);

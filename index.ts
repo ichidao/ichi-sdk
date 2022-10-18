@@ -129,6 +129,7 @@ export { PoolGroupName } from './src/enums/poolManagementName';
 // Constants
 export { Apis } from './src/constants/apis';
 export { getToken, getTokens, getOneTokens, getUniswapToken } from './src/constants/tokens'; // TOKENS,
+export { getAllOneTokenOracles, getOneTokenOracles, getOracleAddress } from './src/constants/oracles'; // TOKENS,
 export { getVault, getVaults } from './src/constants/vaults'; // VAULTS,
 export { PoolMapping, getPool, getPools, Pools } from './src/constants/pools';
 export {

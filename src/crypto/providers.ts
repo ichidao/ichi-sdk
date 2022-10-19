@@ -90,7 +90,7 @@ export const connectToProvider = async (
 
   // If the RPC_HOSTS fail or there are none, let's try to construct the rpc url if the providerId exists
   const url = `${SUPPORTED_NETWORKS[chainId]?.rpc.rpcUrl}${providerId}`;
-  console.log(`Attempting to connect to: ${url}`);
+  console.debug(`Attempting to connect to: ${url}`);
   const provider = new JsonRpcProvider({ url });
 
   try {

@@ -8,7 +8,14 @@ import { TokenName } from '../enums/tokenName';
 import { VaultName } from '../enums/vaultName';
 import { OneTokenTemplate } from '../models/oneTokenTemplate';
 import { Contracts, getErc20Contract } from './contracts';
-import { asBalancerPool, asDodoLiquidityPool, asGenericPool, asIchiBnt, asIchiVault, asOneTokenV1 } from './contractGuards';
+import {
+  asBalancerPool,
+  asDodoLiquidityPool,
+  asGenericPool,
+  asIchiBnt,
+  asIchiVault,
+  asOneTokenV1
+} from './contractGuards';
 import {
   KovanPoolNumberValues,
   MainnetPoolNumberValues,
@@ -119,7 +126,6 @@ export async function getPoolReserves(poolContract: Contracts, chainId: ChainId,
     let isDodoPool = opts?.poolId != null && Pools.DODO_POOLS[chainId].includes(opts.poolId);
 
     if (isBancorPoolV2) {
-      console.log(`isBancorPoolV2`);
       // exception for Bancor pool, getting proxy (pool owner) contract
       let reserveBalances = await asIchiBnt(poolContract).reserveBalances();
       return {
@@ -127,23 +133,24 @@ export async function getPoolReserves(poolContract: Contracts, chainId: ChainId,
         _reserve1: Number(reserveBalances[1])
       };
     } else if (isVault) {
-      console.log(`isVault`);
-
-      const oneUniAddress =  getToken(TokenName.ONE_UNI, chainId).address;
+      const oneUniAddress = getToken(TokenName.ONE_UNI, chainId).address;
       const ichiVaultInstance = asIchiVault(poolContract);
       const exceptionAddress = getVault(VaultName.ICHI, ChainId.Mainnet).address;
-      const provider = await getProvider(ChainId.Mainnet) 
+      const provider = await getProvider(ChainId.Mainnet);
       if (!provider) {
-        throw Error("Could not connect with provider");
+        throw Error('Could not connect with provider');
       }
 
       if (ichiVaultInstance.address == exceptionAddress) {
         let oneUniTokenContract = getErc20Contract(oneUniAddress, provider);
-        
-        let [reserveBalances, contractBalance] = await Promise.all([ichiVaultInstance.getBasePosition(), oneUniTokenContract.balanceOf(exceptionAddress)])
+
+        let [reserveBalances, contractBalance] = await Promise.all([
+          ichiVaultInstance.getBasePosition(),
+          oneUniTokenContract.balanceOf(exceptionAddress)
+        ]);
         return {
           _reserve0: Number(reserveBalances.amount0) + Number(contractBalance),
-          _reserve1: Number(reserveBalances.amount1) 
+          _reserve1: Number(reserveBalances.amount1)
         };
       } else {
         // All other vaults
@@ -154,7 +161,6 @@ export async function getPoolReserves(poolContract: Contracts, chainId: ChainId,
         };
       }
     } else if (isDodoPool) {
-      console.log(`isDodoPool`);
       // vaults
       let reserveBalances = await asDodoLiquidityPool(poolContract).getVaultReserve();
       return {
@@ -162,7 +168,6 @@ export async function getPoolReserves(poolContract: Contracts, chainId: ChainId,
         _reserve1: Number(reserveBalances.quoteReserve)
       };
     } else {
-      console.log(`everything else`);
       // everything else
       let reserveBalances = await asGenericPool(poolContract).getReserves();
       return {
@@ -194,9 +199,9 @@ export async function getTokenData(tokenAddress: string, chainId: ChainId) {
           };
         }
       }
-      const provider = await getProvider(ChainId.Mainnet) 
+      const provider = await getProvider(ChainId.Mainnet);
       if (!provider) {
-        throw Error("Could not connect with provider");
+        throw Error('Could not connect with provider');
       }
       let tokenContract = getErc20Contract(tokenAddress, provider);
 

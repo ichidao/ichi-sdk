@@ -3,9 +3,11 @@ import { PartialRecord } from '../types/common';
 import { getOneTokenFactoryContract } from '../utils/contracts';
 import { getProvider } from '../crypto/providers';
 import { OracleName, OracleNames } from '../enums/oracleName';
-import { AddressName } from '../enums/addressName';
-import { getAddress } from './addresses';
+import { TokenName } from '../enums/tokenName';
+import { getToken } from './tokens';
 import { OneTokenFactory } from '../generated';
+import { resourceUsage } from 'process';
+import { resourceLimits } from 'worker_threads';
 
 type OracleMapping = {
   [oracleValues in OracleNames]: PartialRecord<ChainId, string>;
@@ -14,26 +16,30 @@ type OracleMapping = {
 // TODO: I think we can totally remove this and merge it into the TOKENS?  So here are some overlap here, really we want
 // tokens to be in tokens.ts and other contracts are fine to be in here...
 export const ORACLES: OracleMapping = {
-  [OracleName.MAINNET_ICHI_ORACLE]: { [ChainId.Mainnet]: '0xD41EA28e17BD06136c416cA942fB997122138139' },
+  [OracleName.ICHI_ORACLE]: { [ChainId.Mainnet]: '0xD41EA28e17BD06136c416cA942fB997122138139' },
 };
 
-export async function getAllOneTokenOracles(chainId: ChainId): Promise<Map<string, string[]>> {
-  let oneTokenToOracle = new Map<string, string[]>();
-  const ichiVaultFactory = await getOneTokenFactoryInstance(chainId);
+export async function getAllOneTokenOracles(oneTokenFactoryAddress: string, chainId: ChainId): Promise<Record<string, string[]>> {
+  let oneTokenToOracle = {};
 
+  const ichiVaultFactory = await getOneTokenFactoryInstance(oneTokenFactoryAddress, chainId);
   let numForeignTokens = await ichiVaultFactory.foreignTokenCount();
+
   for (let i = 0; i < numForeignTokens.toNumber(); i++) {
     let foreignToken = await ichiVaultFactory.foreignTokenAtIndex(i);
-    oneTokenToOracle.set(foreignToken, await getOneTokenOracles(foreignToken, chainId, ichiVaultFactory));
+    oneTokenToOracle[foreignToken] = await getOneTokenOracles(foreignToken, chainId, ichiVaultFactory);
   }
 
   return oneTokenToOracle;
 }
 
-export async function getOneTokenOracles(oneTokenAddress: string, chainId: ChainId, ichiVaultFactoryContract?: OneTokenFactory): Promise<string[]> {
+export async function getOneTokenOracles(oneTokenAddress: string, chainId: ChainId, ichiVaultFactoryContract?: OneTokenFactory, oneTokenFactoryAddress?: string): Promise<string[]> {
   let ichiVaultFactory;
   if (!ichiVaultFactoryContract) {
-    ichiVaultFactory = await getOneTokenFactoryInstance(chainId);
+    if (!oneTokenFactoryAddress) {
+      throw 'Cannot make instance of OneToken Factory - Address not provided';
+    }
+    ichiVaultFactory = await getOneTokenFactoryInstance(oneTokenFactoryAddress, chainId);
   } else {
     ichiVaultFactory = ichiVaultFactoryContract;
   }
@@ -49,14 +55,17 @@ export async function getOneTokenOracles(oneTokenAddress: string, chainId: Chain
   return oneTokenToOracle;
 }
 
-async function getOneTokenFactoryInstance(chainId: ChainId): Promise<OneTokenFactory> {
-    const provider = await getProvider(chainId);
-    if (!provider) {
-      throw Error('Could not connect with provider');
-    }
-    const oneTokenFactoryAddress = getAddress(AddressName.ONE_TOKEN_FACTORY, chainId);
-    return getOneTokenFactoryContract(oneTokenFactoryAddress, provider);
+async function getOneTokenFactoryInstance(oneTokenFactoryAddress: string, chainId: ChainId): Promise<OneTokenFactory> {
+  const provider = await getProvider(chainId);
+  if (!provider) {
+    throw Error('Could not connect with provider');
+  }
 
+  let instance = getOneTokenFactoryContract(oneTokenFactoryAddress, provider);
+  if (!instance) {
+    throw 'Instance could not be created - please check the inputs';
+  }
+  return instance;
 }
 
 export function getOracleAddress(oracleName: OracleName, chainId: ChainId): string {
@@ -66,3 +75,5 @@ export function getOracleAddress(oracleName: OracleName, chainId: ChainId): stri
   }
   return address;
 }
+
+getAllOneTokenOracles('0x101eB16BdbA37979a771c86e1CAAfbaDbABfc879', ChainId.Polygon).then((result) => console.log(result));

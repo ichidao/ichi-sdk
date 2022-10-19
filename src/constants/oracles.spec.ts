@@ -1,5 +1,7 @@
 import { expect } from '@jest/globals';
 import { ChainId } from '../crypto/networks';
+import { getAddress } from '../constants/addresses';
+import { AddressName } from '../enums/addressName';
 import { ORACLES, getOracleAddress, getAllOneTokenOracles } from './oracles';
 import { OracleName } from '../enums/oracleName';
 
@@ -13,9 +15,9 @@ describe('constants/addresses', () => {
 
     const testParams: TestArgs[] = [
       {
-        name: OracleName.MAINNET_ICHI_ORACLE,
+        name: OracleName.ICHI_ORACLE,
         chainId: ChainId.Mainnet,
-        expectedAddress: ORACLES[OracleName.MAINNET_ICHI_ORACLE][ChainId.Mainnet],
+        expectedAddress: ORACLES[OracleName.ICHI_ORACLE][ChainId.Mainnet],
       },
     ];
 
@@ -29,7 +31,7 @@ describe('constants/addresses', () => {
 
   describe('getToken - invalid', () => {
     it('should return non negative list of all oracles', async () => {
-      const actualResult = await getAllOneTokenOracles(ChainId.Polygon);
+      const actualResult = await getAllOneTokenOracles(getAddress(AddressName.ONE_TOKEN_FACTORY, ChainId.Polygon), ChainId.Polygon);
       expect(actualResult.size).toBeGreaterThan(0);
     });
   });

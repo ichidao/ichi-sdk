@@ -51,9 +51,6 @@ export async function getVBTCPrice(chainId: ChainId) {
   const pair = await Fetcher.fetchPairData(uniVbtc, WETH[uniVbtc.chainId]);
   const route = new Route([pair], WETH[uniVbtc.chainId]);
 
-  //console.log(route.midPrice.toSignificant(6))
-  //console.log(route.midPrice.invert().toSignificant(6))
-
   let vBtcWEthPrice = route.midPrice.invert().toSignificant(6);
 
   const wethToken = getToken(TokenName.WETH, chainId);
@@ -168,8 +165,6 @@ export async function getOneTokenPriceFromVault(
 
     const sqrtPrice = slot0[0];
     const price = getPrice(inverted, sqrtPrice, 18, ichiDecimals, 5);
-    //console.log(price);
-    //console.log(ichi_price / price);
 
     return ichiPrice / price;
   } catch (e) {

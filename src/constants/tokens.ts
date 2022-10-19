@@ -17,7 +17,7 @@ export const TOKENS: TokenMapping = {
       symbol: 'ICHI',
       isOneToken: false,
       atCoingecko: false,
-      targetVaultStrength: .1
+      targetVaultStrength: 0.1
     },
     // NOTE: This is the same ICHI as ICHI_V2, but since Polygon my reference TokenName.ICHI, then we need to duplicate it here for that reference
     [ChainId.Polygon]: {
@@ -29,7 +29,7 @@ export const TOKENS: TokenMapping = {
       symbol: 'ICHI',
       atCoingecko: false,
       isOneToken: false,
-      targetVaultStrength: .1
+      targetVaultStrength: 0.1
     },
     // Unclear if this should be here or below, in the ichi-api-updater it uses ichi not ichi_v2, but that's ambiguous regardless
     [ChainId.Mumbai]: {
@@ -41,7 +41,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'ICHI',
       isOneToken: false,
-      targetVaultStrength: .1
+      targetVaultStrength: 0.1
     },
     [ChainId.Kovan]: {
       tokenName: TokenName.ICHI,
@@ -52,7 +52,7 @@ export const TOKENS: TokenMapping = {
       decimals: 9,
       displayName: 'ICHI',
       isOneToken: false,
-      targetVaultStrength: .1
+      targetVaultStrength: 0.1
     }
   },
   [TokenName.ICHI_V2]: {
@@ -65,7 +65,7 @@ export const TOKENS: TokenMapping = {
       symbol: 'ICHI',
       isOneToken: false,
       atCoingecko: true,
-      targetVaultStrength: .12
+      targetVaultStrength: 0.12
     },
     [ChainId.Polygon]: {
       tokenName: TokenName.ICHI_V2,
@@ -76,7 +76,7 @@ export const TOKENS: TokenMapping = {
       symbol: 'ICHI',
       atCoingecko: false,
       isOneToken: false,
-      targetVaultStrength: .12
+      targetVaultStrength: 0.12
     }
     // [ChainId.Mumbai]: {
     //   tokenName: TokenName.ICHI_V2,
@@ -169,7 +169,7 @@ export const TOKENS: TokenMapping = {
       parentOneToken: TokenName.ONE_GIV,
       isOneToken: false,
       atCoingecko: true,
-      targetVaultStrength: .1
+      targetVaultStrength: 0.1
     }
   },
   [TokenName.GNO]: {
@@ -310,7 +310,7 @@ export const TOKENS: TokenMapping = {
       symbol: 'QRDO',
       isOneToken: false,
       atCoingecko: true,
-      targetVaultStrength: .1
+      targetVaultStrength: 0.1
     }
   },
   [TokenName.WBTC]: {
@@ -468,7 +468,7 @@ export const TOKENS: TokenMapping = {
       parentOneToken: TokenName.ONE_FUSE,
       isOneToken: false,
       atCoingecko: true,
-      targetVaultStrength: .1
+      targetVaultStrength: 0.1
     }
   },
   [TokenName.MPH]: {
@@ -1116,7 +1116,6 @@ export function getOneTokens(chainId: ChainId): Token[] {
     .map((t) => t[chainId])
     .filter((t) => t?.isOneToken)
     .filter((t) => t) as Token[];
-  console.log(vaults);
   return vaults;
 }
 

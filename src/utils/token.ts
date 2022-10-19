@@ -81,8 +81,6 @@ export async function getTokenMetrics(
         ichiV2GnosisBalance -
         ichiAllyBalance -
         ichiV2GSRBalance;
-
-      // console.log(circulating);
     }
 
     if (tokenName == TokenName.ICHI_V2) {
@@ -151,7 +149,7 @@ export async function getTokenMetrics(
           break;
         case TokenName.GOVI:
           const goviMainnetAddress = TOKENS[TokenName.GOVI]![ChainId.Mainnet]?.address;
-          if (goviMainnetAddress){
+          if (goviMainnetAddress) {
             let tokenPrices = await lookUpTokenPrices([goviMainnetAddress.toLowerCase()]);
             if (!tokenPrices || !(goviMainnetAddress.toLowerCase() in tokenPrices)) {
               throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);

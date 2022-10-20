@@ -1118,5 +1118,3 @@ export function getOneTokens(chainId: ChainId): Token[] {
     .filter((t) => t) as Token[];
   return vaults;
 }
-
-getOneTokens(ChainId.Mainnet);

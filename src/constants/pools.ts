@@ -4,17 +4,16 @@ import { ChainId } from '../crypto/networks';
 import { Pool } from '../models/pool';
 import { PartialRecord } from '../types/common';
 import { PoolGroupName } from '../enums/poolManagementName';
-import {
-  KovanPoolNumbers,
-  KovanPoolNumberValues,
-  MainnetPoolNumbers,
-  MainnetPoolNumberValues,
-  MumbaiPoolNumbers,
-  MumbaiPoolNumberValues,
-  PolygonPoolNumbers,
-  PolygonPoolNumberValues,
-  PoolNumberValues
-} from '../enums/poolNumber';
+import { 
+  KovanPoolNumbers, 
+  KovanPoolNumberValues, 
+  MainnetPoolNumbers, 
+  MainnetPoolNumberValues, 
+  MumbaiPoolNumbers, 
+  MumbaiPoolNumberValues, 
+  PolygonPoolNumbers, 
+  PolygonPoolNumberValues, 
+  PoolNumberValues } from '../enums/poolNumber';
 
 type TPoolMapping = { [vaultName in PoolName]: PartialRecord<ChainId, Pool> };
 // NOTE: To some degree it's more logical to namespace with Network then PoolName, but actually
@@ -30,8 +29,8 @@ export const PoolMapping: TPoolMapping = {
       address: '0x61f2ea3ddabcb9f0b7bd73adba4ec24479247a86',
       oneTokenName: TokenName.ONE_FUSE,
       oneToken: 'token1',
-      enableNotifications: false
-    }
+      enableNotifications: false,
+    },
   },
   // [PoolName.ONEUNI_USDC]: {
   //   [ChainId.Mainnet]: {
@@ -61,7 +60,7 @@ export const PoolMapping: TPoolMapping = {
   //     tableName: PoolName.ONEFOX_USDC,
   //     displayName: 'oneFOX-USDC',
   //     address: '0x4c008261215087bd22d6a983399ae659d816bb50',
-  //     oneTokenName: TokenName.ONE_FOX,
+  //     : TokenName.ONE_FOX,
   //     oneToken: 'token0',
   //     enableNotifications: false
   //   }
@@ -74,8 +73,8 @@ export const PoolMapping: TPoolMapping = {
       address: '0x1F52846051b4dB60ba70bA76C188e6a67699fdB0',
       oneTokenName: TokenName.ONE_PERL,
       oneToken: 'token1',
-      enableNotifications: false
-    }
+      enableNotifications: false,
+    },
   },
   /*onefil_usdc: { 
     displayName: 'oneFIL-USDC',
@@ -103,8 +102,8 @@ export const PoolMapping: TPoolMapping = {
       address: '0x7233A14685201F548d8a7AC5f5Ca3DEdb7bb6d42',
       oneTokenName: TokenName.ONE_1INCH,
       oneToken: 'token0',
-      enableNotifications: false
-    }
+      enableNotifications: false,
+    },
   },
   [PoolName.ONEGIV_DAI]: {
     [ChainId.Mainnet]: {
@@ -115,8 +114,8 @@ export const PoolMapping: TPoolMapping = {
       oneTokenName: TokenName.ONE_GIV,
       oneToken: 'token0',
       enableNotifications: false,
-      otherToken: TokenName.DAI
-    }
+      otherToken: TokenName.DAI,
+    },
   },
   [PoolName.ONEICHI_USDC]: {
     [ChainId.Mainnet]: {
@@ -126,8 +125,8 @@ export const PoolMapping: TPoolMapping = {
       address: '0xF836a9268d39C89c9C8533BF97e93C00E25dC13e',
       oneTokenName: TokenName.ONE_ICHI,
       oneToken: 'token0',
-      enableNotifications: false
-    }
+      enableNotifications: false,
+    },
   },
   // onefil_oneuni: {
   //   displayName: 'oneFIL-oneUNI',
@@ -199,33 +198,23 @@ export const Pools: TPools = {
       MainnetPoolNumbers.ONE_WING,
       MainnetPoolNumbers.ICHI_1INCH,
       MainnetPoolNumbers.ONE_UNI,
-      MainnetPoolNumbers.ONE_BTC_DEPOSIT
+      MainnetPoolNumbers.ONE_BTC_DEPOSIT,
     ],
-    [ChainId.Kovan]: [
-      KovanPoolNumbers.WEENUS_WETH,
-      KovanPoolNumbers.ICHI_WETH,
-      KovanPoolNumbers.OTI_DEPOSIT,
-      KovanPoolNumbers.ONE_FIL_DEPOSIT
-    ],
+    [ChainId.Kovan]: [KovanPoolNumbers.WEENUS_WETH, KovanPoolNumbers.ICHI_WETH, KovanPoolNumbers.OTI_DEPOSIT, KovanPoolNumbers.ONE_FIL_DEPOSIT],
     [ChainId.Polygon]: [],
-    [ChainId.Mumbai]: []
+    [ChainId.Mumbai]: [],
   },
   [PoolGroupName.DEPOSIT_POOLS]: {
     [ChainId.Mainnet]: [
-      MainnetPoolNumbers.ONE_FIL,
-      MainnetPoolNumbers.ONE_1INCH,
-      MainnetPoolNumbers.ONE_MPH,
-      MainnetPoolNumbers.ONE_PERL,
-      MainnetPoolNumbers.ONE_UNI,
-      MainnetPoolNumbers.ONE_FOX,
-      MainnetPoolNumbers.ONE_DODO,
-      MainnetPoolNumbers.ONE_WING,
-      MainnetPoolNumbers.ONE_UNI,
-      MainnetPoolNumbers.ONE_BTC_DEPOSIT
+      MainnetPoolNumbers.ONE_FIL, MainnetPoolNumbers.ONE_1INCH, 
+      MainnetPoolNumbers.ONE_MPH, MainnetPoolNumbers.ONE_PERL, 
+      MainnetPoolNumbers.ONE_UNI, MainnetPoolNumbers.ONE_FOX, 
+      MainnetPoolNumbers.ONE_DODO, MainnetPoolNumbers.ONE_WING, 
+      MainnetPoolNumbers.ONE_UNI, MainnetPoolNumbers.ONE_BTC_DEPOSIT
     ],
     [ChainId.Kovan]: [KovanPoolNumbers.OTI_DEPOSIT, KovanPoolNumbers.ONE_FIL_DEPOSIT],
     [ChainId.Polygon]: [],
-    [ChainId.Mumbai]: []
+    [ChainId.Mumbai]: [],
   },
   [PoolGroupName.ACTIVE_VAULTS]: {
     [ChainId.Mainnet]: [
@@ -254,45 +243,35 @@ export const Pools: TPools = {
       MainnetPoolNumbers.ONE_BTC_VAULT_RARI,
       MainnetPoolNumbers.ONE_GIV,
       MainnetPoolNumbers.HOME_VAULT,
-      MainnetPoolNumbers.BOBA_VAULT
+      MainnetPoolNumbers.BOBA_VAULT,
     ],
-    [ChainId.Polygon]: [
-      PolygonPoolNumbers.ONE_BTC_VAULT, 
-      PolygonPoolNumbers.WBTC_VAULT, 
-      PolygonPoolNumbers.GOVI_VAULT, 
-      PolygonPoolNumbers.USDC_VAULT
-    ],
-    [ChainId.Kovan]: [
-      KovanPoolNumbers.ONE_FIL_VAULT,
-      KovanPoolNumbers.ONE_UNI_VAULT,
-      KovanPoolNumbers.ONE_UNI_UNI_VAULT,
-      KovanPoolNumbers.WEENUS_VAULT
-    ],
-    [ChainId.Mumbai]: [MumbaiPoolNumbers.ONE_BTC_ICHI_VAULT]
+    [ChainId.Polygon]: [PolygonPoolNumbers.ONE_BTC_VAULT, PolygonPoolNumbers.WBTC_VAULT, PolygonPoolNumbers.GOVI_VAULT, PolygonPoolNumbers.USDC_VAULT],
+    [ChainId.Kovan]: [KovanPoolNumbers.ONE_FIL_VAULT, KovanPoolNumbers.ONE_UNI_VAULT, KovanPoolNumbers.ONE_UNI_UNI_VAULT, KovanPoolNumbers.WEENUS_VAULT],
+    [ChainId.Mumbai]: [MumbaiPoolNumbers.ONE_BTC_ICHI_VAULT],
   },
   [PoolGroupName.UNDERLYING_VAULTS]: {
     [ChainId.Mainnet]: [MainnetPoolNumbers.ONE_BTC_VAULT_LEGACY],
     [ChainId.Polygon]: [],
     [ChainId.Kovan]: [],
-    [ChainId.Mumbai]: []
+    [ChainId.Mumbai]: [],
   },
   [PoolGroupName.UPCOMING_POOLS]: {
     [ChainId.Mainnet]: [],
     [ChainId.Polygon]: [],
     [ChainId.Kovan]: [],
-    [ChainId.Mumbai]: []
+    [ChainId.Mumbai]: [],
   },
   [PoolGroupName.MIGRATING_POOLS]: {
     [ChainId.Mainnet]: [],
     [ChainId.Polygon]: [],
     [ChainId.Kovan]: [],
-    [ChainId.Mumbai]: []
+    [ChainId.Mumbai]: [],
   },
   [PoolGroupName.RETIRED_POOLS]: {
     [ChainId.Mainnet]: [],
     [ChainId.Polygon]: [],
     [ChainId.Kovan]: [],
-    [ChainId.Mumbai]: []
+    [ChainId.Mumbai]: [],
   },
   // Pools in the UNRETIRED_POOLS will show up even if APR == 0
   [PoolGroupName.UNRETIRED_POOLS]: {
@@ -338,38 +317,31 @@ export const Pools: TPools = {
       MainnetPoolNumbers.WETH_VAULT,
       MainnetPoolNumbers.ONE_GIV,
       MainnetPoolNumbers.HOME_VAULT,
-      MainnetPoolNumbers.BOBA_VAULT
+      MainnetPoolNumbers.BOBA_VAULT,
     ],
-    [ChainId.Polygon]: [
-      PolygonPoolNumbers.ONE_BTC_VAULT, 
-      PolygonPoolNumbers.WBTC_VAULT, 
-      PolygonPoolNumbers.GOVI_VAULT, 
-      PolygonPoolNumbers.USDC_VAULT],
+    [ChainId.Polygon]: [PolygonPoolNumbers.ONE_BTC_VAULT, PolygonPoolNumbers.WBTC_VAULT, PolygonPoolNumbers.GOVI_VAULT, PolygonPoolNumbers.USDC_VAULT],
     [ChainId.Kovan]: [
-      KovanPoolNumbers.ONE_FIL_DEPOSIT,
-      KovanPoolNumbers.ONE_FIL_VAULT,
-      KovanPoolNumbers.ONE_UNI_VAULT,
-      KovanPoolNumbers.WEENUS_VAULT,
-      KovanPoolNumbers.ONE_UNI_UNI_VAULT
-    ],
-    [ChainId.Mumbai]: [MumbaiPoolNumbers.ONE_BTC_ICHI_VAULT]
+      KovanPoolNumbers.ONE_FIL_DEPOSIT, KovanPoolNumbers.ONE_FIL_VAULT, 
+      KovanPoolNumbers.ONE_UNI_VAULT, KovanPoolNumbers.WEENUS_VAULT, 
+      KovanPoolNumbers.ONE_UNI_UNI_VAULT],
+    [ChainId.Mumbai]: [MumbaiPoolNumbers.ONE_BTC_ICHI_VAULT],
   },
   [PoolGroupName.ONE_INCH_POOLS]: {
     [ChainId.Mainnet]: [
       // TODO: Unclear what 15 and 16 are.
       // 15,
       // 16,
-      MainnetPoolNumbers.ICHI_1INCH
+      MainnetPoolNumbers.ICHI_1INCH,
     ],
     [ChainId.Polygon]: [],
     [ChainId.Kovan]: [],
-    [ChainId.Mumbai]: []
+    [ChainId.Mumbai]: [],
   },
   [PoolGroupName.BALANCER_POOLS]: {
     [ChainId.Mainnet]: [
       // TODO: Unclear what 18 is here.
       // 18,
-      MainnetPoolNumbers._80_20_ICHI_ETH
+      MainnetPoolNumbers._80_20_ICHI_ETH,
       // TODO: 1002 doesn't exist
       // 1002,
       // TODO: Commented out
@@ -377,7 +349,7 @@ export const Pools: TPools = {
     ],
     [ChainId.Polygon]: [],
     [ChainId.Kovan]: [],
-    [ChainId.Mumbai]: []
+    [ChainId.Mumbai]: [],
   },
   [PoolGroupName.BALANCER_SMART_POOLS]: {
     [ChainId.Mainnet]: [
@@ -388,30 +360,30 @@ export const Pools: TPools = {
     ],
     [ChainId.Polygon]: [],
     [ChainId.Kovan]: [],
-    [ChainId.Mumbai]: []
+    [ChainId.Mumbai]: [],
   },
   [PoolGroupName.BANCOR_POOLS_V2]: {
     // bancorPoolsV2: [14, 1006, 10003],
     [ChainId.Mainnet]: [
       // TODO: Can't find 14 or 1006
       // 10003
-      MainnetPoolNumbers.ICHI_BNT
+      MainnetPoolNumbers.ICHI_BNT,
     ],
     [ChainId.Polygon]: [],
     [ChainId.Kovan]: [],
-    [ChainId.Mumbai]: []
+    [ChainId.Mumbai]: [],
   },
   [PoolGroupName.BANCOR_POOLS_V3]: {
     [ChainId.Mainnet]: [MainnetPoolNumbers.ICHI_BNT_V3],
     [ChainId.Polygon]: [],
     [ChainId.Kovan]: [],
-    [ChainId.Mumbai]: []
+    [ChainId.Mumbai]: [],
   },
   [PoolGroupName.UNI_POOLS]: {
     [ChainId.Mainnet]: [MainnetPoolNumbers.ICHI_ETH_UNI_V2],
     [ChainId.Polygon]: [],
     [ChainId.Kovan]: [],
-    [ChainId.Mumbai]: []
+    [ChainId.Mumbai]: [],
   },
   [PoolGroupName.LOOPRING_POOLS]: {
     [ChainId.Mainnet]: [
@@ -420,24 +392,19 @@ export const Pools: TPools = {
     ],
     [ChainId.Polygon]: [],
     [ChainId.Kovan]: [],
-    [ChainId.Mumbai]: []
+    [ChainId.Mumbai]: [],
   },
   [PoolGroupName.DODO_POOLS]: {
     [ChainId.Mainnet]: [MainnetPoolNumbers.ONE_DODO_USDC_MAINNET, MainnetPoolNumbers.ONE_DODO_USDC_BSC_MAINNET],
     [ChainId.Polygon]: [],
     [ChainId.Kovan]: [],
-    [ChainId.Mumbai]: []
+    [ChainId.Mumbai]: [],
   },
   [PoolGroupName.RARI_ASSETS]: {
-    [ChainId.Mainnet]: [
-      MainnetPoolNumbers.ONE_UNI,
-      MainnetPoolNumbers.ONE_UNI_VAULT,
-      MainnetPoolNumbers.ONE_BTC_VAULT_RARI,
-      MainnetPoolNumbers.ONE_BTC_DEPOSIT
-    ],
+    [ChainId.Mainnet]: [MainnetPoolNumbers.ONE_UNI, MainnetPoolNumbers.ONE_UNI_VAULT, MainnetPoolNumbers.ONE_BTC_VAULT_RARI, MainnetPoolNumbers.ONE_BTC_DEPOSIT],
     [ChainId.Polygon]: [],
     [ChainId.Kovan]: [],
-    [ChainId.Mumbai]: []
+    [ChainId.Mumbai]: [],
   },
   [PoolGroupName.SPECIAL_PRICING]: {
     [ChainId.Mainnet]: [
@@ -446,7 +413,7 @@ export const Pools: TPools = {
     ],
     [ChainId.Polygon]: [],
     [ChainId.Kovan]: [],
-    [ChainId.Mumbai]: []
+    [ChainId.Mumbai]: [],
   },
   // Pools in the LEGACY_POOLS will only show in old.ichi.org
   [PoolGroupName.LEGACY_POOLS]: {
@@ -481,38 +448,25 @@ export const Pools: TPools = {
       MainnetPoolNumbers.ONE_WING_VAULT,
       MainnetPoolNumbers.ONE_FOX_VAULT,
       MainnetPoolNumbers.ONE_OJA_VAULT,
-      MainnetPoolNumbers.ONE_FUSE_VAULT
+      MainnetPoolNumbers.ONE_FUSE_VAULT,
     ],
     [ChainId.Polygon]: [],
     [ChainId.Kovan]: [],
-    [ChainId.Mumbai]: []
+    [ChainId.Mumbai]: [],
   },
   [PoolGroupName.ACTIVE_APR]: {
     [ChainId.Mainnet]: [
-      MainnetPoolNumbers.QRDO_VAULT,
-      MainnetPoolNumbers.USDC_VAULT,
-      MainnetPoolNumbers.ONE_ICHI_VAULT,
-      MainnetPoolNumbers.WNXM_VAULT,
-      MainnetPoolNumbers.GNO_VAULT,
-      MainnetPoolNumbers.WBTC_VAULT,
-      MainnetPoolNumbers.BNT_VAULT,
-      MainnetPoolNumbers.FUSE_ICHI_VAULT,
-      MainnetPoolNumbers['1INCH_VAULT'],
-      MainnetPoolNumbers.ALLY_VAULT,
-      MainnetPoolNumbers.WETH_VAULT,
-      MainnetPoolNumbers.ONE_GIV,
-      MainnetPoolNumbers.HOME_VAULT,
-      MainnetPoolNumbers.BOBA_VAULT
-    ],
-    [ChainId.Polygon]: [
-      PolygonPoolNumbers.ONE_BTC_VAULT, 
-      PolygonPoolNumbers.WBTC_VAULT, 
-      PolygonPoolNumbers.GOVI_VAULT, 
-      PolygonPoolNumbers.USDC_VAULT
-    ],
+      MainnetPoolNumbers.QRDO_VAULT, MainnetPoolNumbers.USDC_VAULT, 
+      MainnetPoolNumbers.ONE_ICHI_VAULT, MainnetPoolNumbers.WNXM_VAULT, 
+      MainnetPoolNumbers.GNO_VAULT, MainnetPoolNumbers.WBTC_VAULT, 
+      MainnetPoolNumbers.BNT_VAULT, MainnetPoolNumbers.FUSE_ICHI_VAULT, 
+      MainnetPoolNumbers['1INCH_VAULT'], MainnetPoolNumbers.ALLY_VAULT, 
+      MainnetPoolNumbers.WETH_VAULT, MainnetPoolNumbers.ONE_GIV, 
+      MainnetPoolNumbers.HOME_VAULT, MainnetPoolNumbers.BOBA_VAULT],
+    [ChainId.Polygon]: [PolygonPoolNumbers.ONE_BTC_VAULT, PolygonPoolNumbers.WBTC_VAULT, PolygonPoolNumbers.GOVI_VAULT, PolygonPoolNumbers.USDC_VAULT],
     [ChainId.Kovan]: [],
-    [ChainId.Mumbai]: []
-  }
+    [ChainId.Mumbai]: [],
+  },
 };
 
 export function getPool(poolName: PoolName, chainId: ChainId): Pool {

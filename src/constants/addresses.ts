@@ -17,7 +17,7 @@ export const ADDRESSES: AddressMapping = {
     [ChainId.Mainnet]: '0x0000000000000000000000000000000000000000',
     [ChainId.Polygon]: '0x0000000000000000000000000000000000000000',
     [ChainId.Mumbai]: '0x0000000000000000000000000000000000000000',
-    [ChainId.Kovan]: '0x0000000000000000000000000000000000000000'
+    [ChainId.Kovan]: '0x0000000000000000000000000000000000000000',
   },
   [AddressName.ALLY]: { [ChainId.Mainnet]: '0x1aa1e61369874bae3444A8Ef6528d6b13D6952EF' },
   [AddressName.FARMING_V1]: { [ChainId.Mainnet]: '0xcC50953A743B9CE382f423E37b07Efa6F9d9B000' },
@@ -25,14 +25,14 @@ export const ADDRESSES: AddressMapping = {
     [ChainId.Mainnet]: '0x275dFE03bc036257Cd0a713EE819Dbd4529739c8',
     [ChainId.Polygon]: '0x2fb24195c965B4a0cDfc27DD5C85eC1A46d7A931',
     [ChainId.Mumbai]: '0x9c1c486d007B65D5cbaE45811a41E540d304ac9D',
-    [ChainId.Kovan]: '0xCfF363294b876F27dF7aCe9584B243177bF618af'
+    [ChainId.Kovan]: '0xCfF363294b876F27dF7aCe9584B243177bF618af',
   },
   [AddressName.FARMING_V3]: { [ChainId.Mainnet]: '0x4B162306eE680Bf440541c3E5C70c553f632C8aA' },
   [AddressName.ICHI_COMMUNITY_GNOSIS]: { [ChainId.Mainnet]: '0x8f3c97DdC88D7A75b8c3f872b525B30932D3014c' },
   [AddressName.ICHI_V2_GNOSIS]: { [ChainId.Mainnet]: '0x94A5980d5634533551dcB7108322f6C4f2a80E6B' },
   [AddressName.UNISWAP_V3_POSITIONS]: {
     [ChainId.Mainnet]: '0xC36442b4a4522E871399CD717aBDD847Ab11FE88',
-    [ChainId.Polygon]: '0xC36442b4a4522E871399CD717aBDD847Ab11FE88'
+    [ChainId.Polygon]: '0xC36442b4a4522E871399CD717aBDD847Ab11FE88',
   },
   [AddressName._1INCH_ICHI_LP]: { [ChainId.Mainnet]: '0x1dcE26F543E591c27717e25294AEbbF59AD9f3a5' },
   [AddressName._1INCH_STAKING]: { [ChainId.Mainnet]: '0x0F85A912448279111694F4Ba4F85dC641c54b594' },
@@ -54,7 +54,12 @@ export const ADDRESSES: AddressMapping = {
   [AddressName.GNOSIS]: { [ChainId.Bsc]: '0xdbB0DfcB3601e15541c072B2a866C0D53D6c6627' },
   [AddressName.USDC]: { [ChainId.Bsc]: '0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d' },
   [AddressName.ONE_DODO]: { [ChainId.Bsc]: '0x2c30b4cb4b3001afa5b8c43c5a7ca548067562a0' },
-  [AddressName.DLP]: { [ChainId.Bsc]: '0x018e41228b1ebc2f81897150877edbb682272c64' }
+  [AddressName.DLP]: { [ChainId.Bsc]: '0x018e41228b1ebc2f81897150877edbb682272c64' },
+  // OneToken Factories
+  [AddressName.ONE_TOKEN_FACTORY]: { 
+    [ChainId.Mainnet]: '0xd0092632b9ac5a7856664eec1abb6e3403a6a36a', 
+    [ChainId.Polygon]: '0x101eB16BdbA37979a771c86e1CAAfbaDbABfc879' 
+  },
 };
 
 export function getAddress(addressName: AddressName, chainId: ChainId): string {

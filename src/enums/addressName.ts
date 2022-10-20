@@ -14,6 +14,8 @@ export enum AddressName {
   _1INCH_STAKING = '_1INCH_STAKING',
   ST1INCH = 'ST1INCH',
   BMI_STAKING = 'BMI_STAKING',
+  ONE_TOKEN_FACTORY = 'ONE_TOKEN_FACTORY',
+
   // RISK_HARBOR= // RISK_HARBOR,
   RARI_POOL_LENS = 'RARI_POOL_LENS',
   RARI_POOL_LENS_SECONDARY = 'RARI_POOL_LENS_SECONDARY',
@@ -31,7 +33,7 @@ export enum AddressName {
   GNOSIS = 'GNOSIS',
   USDC = 'USDC',
   ONE_DODO = 'ONE_DODO',
-  DLP = 'DLP'
+  DLP = 'DLP',
 }
 export type AddressNames = keyof typeof AddressName;
 export type AddressValues = typeof AddressName[keyof typeof AddressName];

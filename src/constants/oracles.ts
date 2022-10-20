@@ -33,7 +33,11 @@ export async function getAllOneTokenOracles(oneTokenFactoryName: AddressName, ch
   return oneTokenToOracle;
 }
 
-export async function getOneTokenOracles(oneTokenAddress: string, chainId: ChainId, ichiVaultFactoryContract?: OneTokenFactory, oneTokenFactoryName?: AddressName): Promise<string[]> {
+export async function getOneTokenOracles(
+  oneTokenAddress: string, 
+  chainId: ChainId, 
+  ichiVaultFactoryContract?: OneTokenFactory, 
+  oneTokenFactoryName?: AddressName): Promise<string[]> {
   let ichiVaultFactory;
   if (!ichiVaultFactoryContract) {
     if (!oneTokenFactoryName) {

@@ -4,7 +4,16 @@ import { ChainId } from '../crypto/networks';
 import { Pool } from '../models/pool';
 import { PartialRecord } from '../types/common';
 import { PoolGroupName } from '../enums/poolManagementName';
-import { KovanPoolNumbers, KovanPoolNumberValues, MainnetPoolNumbers, MainnetPoolNumberValues, MumbaiPoolNumbers, MumbaiPoolNumberValues, PolygonPoolNumbers, PolygonPoolNumberValues, PoolNumberValues } from '../enums/poolNumber';
+import { 
+  KovanPoolNumbers, 
+  KovanPoolNumberValues, 
+  MainnetPoolNumbers, 
+  MainnetPoolNumberValues, 
+  MumbaiPoolNumbers, 
+  MumbaiPoolNumberValues, 
+  PolygonPoolNumbers, 
+  PolygonPoolNumberValues, 
+  PoolNumberValues } from '../enums/poolNumber';
 
 type TPoolMapping = { [vaultName in PoolName]: PartialRecord<ChainId, Pool> };
 // NOTE: To some degree it's more logical to namespace with Network then PoolName, but actually
@@ -196,7 +205,13 @@ export const Pools: TPools = {
     [ChainId.Mumbai]: [],
   },
   [PoolGroupName.DEPOSIT_POOLS]: {
-    [ChainId.Mainnet]: [MainnetPoolNumbers.ONE_FIL, MainnetPoolNumbers.ONE_1INCH, MainnetPoolNumbers.ONE_MPH, MainnetPoolNumbers.ONE_PERL, MainnetPoolNumbers.ONE_UNI, MainnetPoolNumbers.ONE_FOX, MainnetPoolNumbers.ONE_DODO, MainnetPoolNumbers.ONE_WING, MainnetPoolNumbers.ONE_UNI, MainnetPoolNumbers.ONE_BTC_DEPOSIT],
+    [ChainId.Mainnet]: [
+      MainnetPoolNumbers.ONE_FIL, MainnetPoolNumbers.ONE_1INCH, 
+      MainnetPoolNumbers.ONE_MPH, MainnetPoolNumbers.ONE_PERL, 
+      MainnetPoolNumbers.ONE_UNI, MainnetPoolNumbers.ONE_FOX, 
+      MainnetPoolNumbers.ONE_DODO, MainnetPoolNumbers.ONE_WING, 
+      MainnetPoolNumbers.ONE_UNI, MainnetPoolNumbers.ONE_BTC_DEPOSIT
+    ],
     [ChainId.Kovan]: [KovanPoolNumbers.OTI_DEPOSIT, KovanPoolNumbers.ONE_FIL_DEPOSIT],
     [ChainId.Polygon]: [],
     [ChainId.Mumbai]: [],
@@ -305,7 +320,10 @@ export const Pools: TPools = {
       MainnetPoolNumbers.BOBA_VAULT,
     ],
     [ChainId.Polygon]: [PolygonPoolNumbers.ONE_BTC_VAULT, PolygonPoolNumbers.WBTC_VAULT, PolygonPoolNumbers.GOVI_VAULT, PolygonPoolNumbers.USDC_VAULT],
-    [ChainId.Kovan]: [KovanPoolNumbers.ONE_FIL_DEPOSIT, KovanPoolNumbers.ONE_FIL_VAULT, KovanPoolNumbers.ONE_UNI_VAULT, KovanPoolNumbers.WEENUS_VAULT, KovanPoolNumbers.ONE_UNI_UNI_VAULT],
+    [ChainId.Kovan]: [
+      KovanPoolNumbers.ONE_FIL_DEPOSIT, KovanPoolNumbers.ONE_FIL_VAULT, 
+      KovanPoolNumbers.ONE_UNI_VAULT, KovanPoolNumbers.WEENUS_VAULT, 
+      KovanPoolNumbers.ONE_UNI_UNI_VAULT],
     [ChainId.Mumbai]: [MumbaiPoolNumbers.ONE_BTC_ICHI_VAULT],
   },
   [PoolGroupName.ONE_INCH_POOLS]: {
@@ -437,7 +455,14 @@ export const Pools: TPools = {
     [ChainId.Mumbai]: [],
   },
   [PoolGroupName.ACTIVE_APR]: {
-    [ChainId.Mainnet]: [MainnetPoolNumbers.QRDO_VAULT, MainnetPoolNumbers.USDC_VAULT, MainnetPoolNumbers.ONE_ICHI_VAULT, MainnetPoolNumbers.WNXM_VAULT, MainnetPoolNumbers.GNO_VAULT, MainnetPoolNumbers.WBTC_VAULT, MainnetPoolNumbers.BNT_VAULT, MainnetPoolNumbers.FUSE_ICHI_VAULT, MainnetPoolNumbers['1INCH_VAULT'], MainnetPoolNumbers.ALLY_VAULT, MainnetPoolNumbers.WETH_VAULT, MainnetPoolNumbers.ONE_GIV, MainnetPoolNumbers.HOME_VAULT, MainnetPoolNumbers.BOBA_VAULT],
+    [ChainId.Mainnet]: [
+      MainnetPoolNumbers.QRDO_VAULT, MainnetPoolNumbers.USDC_VAULT, 
+      MainnetPoolNumbers.ONE_ICHI_VAULT, MainnetPoolNumbers.WNXM_VAULT, 
+      MainnetPoolNumbers.GNO_VAULT, MainnetPoolNumbers.WBTC_VAULT, 
+      MainnetPoolNumbers.BNT_VAULT, MainnetPoolNumbers.FUSE_ICHI_VAULT, 
+      MainnetPoolNumbers['1INCH_VAULT'], MainnetPoolNumbers.ALLY_VAULT, 
+      MainnetPoolNumbers.WETH_VAULT, MainnetPoolNumbers.ONE_GIV, 
+      MainnetPoolNumbers.HOME_VAULT, MainnetPoolNumbers.BOBA_VAULT],
     [ChainId.Polygon]: [PolygonPoolNumbers.ONE_BTC_VAULT, PolygonPoolNumbers.WBTC_VAULT, PolygonPoolNumbers.GOVI_VAULT, PolygonPoolNumbers.USDC_VAULT],
     [ChainId.Kovan]: [],
     [ChainId.Mumbai]: [],

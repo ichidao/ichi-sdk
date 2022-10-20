@@ -1,4 +1,5 @@
 import 'cross-fetch/polyfill';
+import { chunk } from '../utils/array';
 import {
   CoinGeckoPrice,
   CoinGeckoPriceResponse,
@@ -7,23 +8,39 @@ import {
 } from '../models/coinGecko';
 import { Optional } from '../types/optional';
 
-export const lookUpTokenPrices = async function (ids: string[]): Promise<Optional<CoinGeckoPriceResponse>> {
+export const lookUpTokenPrices = async function (
+  ids: string[],
+  chunkSize: number = 20
+): Promise<Optional<CoinGeckoPriceResponse>> {
   if (!ids || ids.length === 0) {
     console.warn(`Could not lookup token prices, no ids given.`);
     return;
   }
 
-  const idsFormatted = ids.join(encodeURIComponent(','));
-  const url = `https://api.coingecko.com/api/v3/simple/token_price/ethereum?contract_addresses=${idsFormatted}&vs_currencies=usd&include_24hr_change=true`;
+  const chunkedIds = chunk(ids, chunkSize);
 
-  try {
-    const result = await fetch(url);
-    const json: CoinGeckoPriceResponse = await result.json();
-    return json;
-  } catch (e) {
-    console.error(`Error calling ${url}`);
-    throw e;
+  let prices: CoinGeckoPriceResponse = {};
+
+  // While we could do this in parallel we'd risk throttling, and we are already fetching multiple at one time,
+  // so let's fetch in some reasonable amountl ike 20 at a time
+  for (let ids of chunkedIds) {
+    const idsFormatted = ids.join(encodeURIComponent(','));
+    const url = `https://api.coingecko.com/api/v3/simple/token_price/ethereum?contract_addresses=${idsFormatted}&vs_currencies=usd&include_24hr_change=true`;
+
+    try {
+      const result = await fetch(url);
+      const json: CoinGeckoPriceResponse = await result.json();
+      prices = {
+        ...json,
+        ...prices
+      };
+    } catch (e) {
+      console.error(`Error calling ${url}`);
+      throw e;
+    }
   }
+
+  return prices;
 };
 
 export const getTokenPrice = async function (

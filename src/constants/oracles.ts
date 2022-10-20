@@ -44,7 +44,7 @@ export async function getOneTokenOracles(oneTokenAddress: string, chainId: Chain
     ichiVaultFactory = ichiVaultFactoryContract;
   }
 
-  let oneTokenToOracle: string[] = [];
+  const oneTokenToOracle: string[] = [];
 
   const numOracles = await ichiVaultFactory.foreignTokenOracleCount(oneTokenAddress);
   for (let j = 0; j < numOracles.toNumber(); j++) {

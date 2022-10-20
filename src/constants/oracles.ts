@@ -6,8 +6,8 @@ import { OracleName, OracleNames } from '../enums/oracleName';
 import { TokenName } from '../enums/tokenName';
 import { getToken } from './tokens';
 import { OneTokenFactory } from '../generated';
-import { resourceUsage } from 'process';
-import { resourceLimits } from 'worker_threads';
+import { getAddress } from './addresses';
+import { AddressName } from '../enums/addressName';
 
 type OracleMapping = {
   [oracleValues in OracleNames]: PartialRecord<ChainId, string>;
@@ -19,49 +19,51 @@ export const ORACLES: OracleMapping = {
   [OracleName.ICHI_ORACLE]: { [ChainId.Mainnet]: '0xD41EA28e17BD06136c416cA942fB997122138139' },
 };
 
-export async function getAllOneTokenOracles(oneTokenFactoryAddress: string, chainId: ChainId): Promise<Record<string, string[]>> {
+export async function getAllOneTokenOracles(oneTokenFactoryName: AddressName, chainId: ChainId): Promise<Record<string, string[]>> {
   let oneTokenToOracle = {};
 
-  const ichiVaultFactory = await getOneTokenFactoryInstance(oneTokenFactoryAddress, chainId);
-  let numForeignTokens = await ichiVaultFactory.foreignTokenCount();
+  const ichiVaultFactory = await getOneTokenFactoryInstance(oneTokenFactoryName, chainId);
+  const numForeignTokens = await ichiVaultFactory.foreignTokenCount();
 
   for (let i = 0; i < numForeignTokens.toNumber(); i++) {
-    let foreignToken = await ichiVaultFactory.foreignTokenAtIndex(i);
+    const foreignToken = await ichiVaultFactory.foreignTokenAtIndex(i);
     oneTokenToOracle[foreignToken] = await getOneTokenOracles(foreignToken, chainId, ichiVaultFactory);
   }
 
   return oneTokenToOracle;
 }
 
-export async function getOneTokenOracles(oneTokenAddress: string, chainId: ChainId, ichiVaultFactoryContract?: OneTokenFactory, oneTokenFactoryAddress?: string): Promise<string[]> {
+export async function getOneTokenOracles(oneTokenAddress: string, chainId: ChainId, ichiVaultFactoryContract?: OneTokenFactory, oneTokenFactoryName?: AddressName): Promise<string[]> {
   let ichiVaultFactory;
   if (!ichiVaultFactoryContract) {
-    if (!oneTokenFactoryAddress) {
-      throw 'Cannot make instance of OneToken Factory - Address not provided';
+    if (!oneTokenFactoryName) {
+      throw 'Cannot make instance of OneToken Factory - Name not provided';
     }
-    ichiVaultFactory = await getOneTokenFactoryInstance(oneTokenFactoryAddress, chainId);
+    ichiVaultFactory = await getOneTokenFactoryInstance(oneTokenFactoryName, chainId);
   } else {
     ichiVaultFactory = ichiVaultFactoryContract;
   }
 
   let oneTokenToOracle: string[] = [];
 
-  let numOracles = await ichiVaultFactory.foreignTokenOracleCount(oneTokenAddress);
+  const numOracles = await ichiVaultFactory.foreignTokenOracleCount(oneTokenAddress);
   for (let j = 0; j < numOracles.toNumber(); j++) {
-    let oracle = await ichiVaultFactory.foreignTokenOracleAtIndex(oneTokenAddress, j);
+    const oracle = await ichiVaultFactory.foreignTokenOracleAtIndex(oneTokenAddress, j);
     oneTokenToOracle.push(oracle);
   }
 
   return oneTokenToOracle;
 }
 
-async function getOneTokenFactoryInstance(oneTokenFactoryAddress: string, chainId: ChainId): Promise<OneTokenFactory> {
+async function getOneTokenFactoryInstance(oneTokenFactoryName: AddressName, chainId: ChainId): Promise<OneTokenFactory> {
   const provider = await getProvider(chainId);
   if (!provider) {
     throw Error('Could not connect with provider');
   }
 
-  let instance = getOneTokenFactoryContract(oneTokenFactoryAddress, provider);
+  const oneTokenFactoryAddress = getAddress(oneTokenFactoryName, chainId);
+
+  const instance = getOneTokenFactoryContract(oneTokenFactoryAddress, provider);
   if (!instance) {
     throw 'Instance could not be created - please check the inputs';
   }

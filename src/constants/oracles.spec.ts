@@ -31,8 +31,7 @@ describe('constants/addresses', () => {
 
   describe('getToken - invalid', () => {
     it('should return non negative list of all oracles', async () => {
-      let polygonAddress = getAddress(AddressName.ONE_TOKEN_FACTORY, ChainId.Polygon);
-      const actualResult = await getAllOneTokenOracles(polygonAddress, ChainId.Polygon);
+      const actualResult = await getAllOneTokenOracles(AddressName.ONE_TOKEN_FACTORY, ChainId.Polygon);
       expect(Object.keys(actualResult).length).toBeGreaterThan(0);
     });
   });

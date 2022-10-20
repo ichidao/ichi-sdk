@@ -122,6 +122,7 @@ export { PoolName, PoolNames } from './src/enums/poolName';
 export { AddressName, AddressNames } from './src/enums/addressName';
 export { TokenName, TokenNames } from './src/enums/tokenName';
 export { VaultName, VaultNames } from './src/enums/vaultName';
+export { OracleName, OracleNames } from './src/enums/oracleName';
 export { TreasuryName, TreasuryNames } from './src/enums/treasuryName';
 export { DebankProtocolName, DebankProtocolNames, DebankProtocalValues } from './src/enums/debankProtocolName';
 export { PoolGroupName } from './src/enums/poolManagementName';

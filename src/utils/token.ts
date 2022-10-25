@@ -63,27 +63,15 @@ export async function getTokenMetrics(
       const v3Balance = Number(await ichiV2Contract.balanceOf(getAddress(AddressName.FARMING_V3, chainId))) / 10 ** 18;
       const communityGnosisBalance_V1 =
         Number(await tokenContract.balanceOf(getAddress(AddressName.ICHI_COMMUNITY_GNOSIS, chainId))) / 10 ** 9;
-      const communityGnosisBalance_V2 =
-        Number(await ichiV2Contract.balanceOf(getAddress(AddressName.ICHI_COMMUNITY_GNOSIS, chainId))) / 10 ** 18;
-      const ichiV2GnosisBalance =
-        Number(await ichiV2Contract.balanceOf(getAddress(AddressName.ICHI_V2_GNOSIS, chainId))) / 10 ** 18;
-      const ichiAllyBalance = Number(await ichiV2Contract.balanceOf(getAddress(AddressName.ALLY, chainId))) / 10 ** 18;
       const ichiInV2Balance =
         Number(await tokenContract.balanceOf(getToken(TokenName.ICHI_V2, chainId).address)) / 10 ** 9;
-      const ichiV2GSRBalance = Number(await ichiV2Contract.balanceOf(getAddress(AddressName.GSR, chainId))) / 10 ** 18;
 
       circulating =
-        totalTokens +
-        // ichiV2TotalSupply -
+        totalTokens -
         v1Balance -
         v2Balance -
-        // v3Balance -
         ichiInV2Balance -
         communityGnosisBalance_V1;
-        // communityGnosisBalance_V2 -
-        // ichiV2GnosisBalance -
-        // ichiAllyBalance -
-        // ichiV2GSRBalance;
     }
 
     if (tokenName == TokenName.ICHI_V2) {
@@ -229,5 +217,3 @@ export async function getTokenMetrics(
     throw e;
   }
 }
-
-getTokenMetrics(TokenName.ICHI, 1).then((result) => console.log(result));

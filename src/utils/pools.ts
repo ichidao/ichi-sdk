@@ -133,31 +133,44 @@ export async function getPoolReserves(poolContract: Contracts, chainId: ChainId,
         _reserve1: Number(reserveBalances[1])
       };
     } else if (isVault) {
-      const oneUniAddress = getToken(TokenName.ONE_UNI, chainId).address;
       const ichiVaultInstance = asIchiVault(poolContract);
-      const exceptionAddress = getVault(VaultName.ICHI, ChainId.Mainnet).address;
-      const provider = await getProvider(ChainId.Mainnet);
-      if (!provider) {
-        throw Error('Could not connect with provider');
+
+      let exception = false;
+      if (chainId == ChainId.Mainnet) {
+        const exceptionAddress = getVault(VaultName.ICHI, ChainId.Mainnet).address;
+        if (ichiVaultInstance.address == exceptionAddress) {
+          const oneUniAddress = getToken(TokenName.ONE_UNI, chainId).address;
+          const provider = await getProvider(ChainId.Mainnet);
+          if (!provider) {
+            throw Error('Could not connect with provider');
+          }
+          let oneUniTokenContract = getErc20Contract(oneUniAddress, provider);
+
+          let [reserveBalances, contractBalance] = await Promise.all([
+            ichiVaultInstance.getBasePosition(),
+            oneUniTokenContract.balanceOf(exceptionAddress)
+          ]);
+
+          exception = true;
+          
+          return {
+            _reserve0: Number(reserveBalances.amount0) + Number(contractBalance),
+            _reserve1: Number(reserveBalances.amount1)
+          };
+        }
       }
-
-      if (ichiVaultInstance.address == exceptionAddress) {
-        let oneUniTokenContract = getErc20Contract(oneUniAddress, provider);
-
-        let [reserveBalances, contractBalance] = await Promise.all([
-          ichiVaultInstance.getBasePosition(),
-          oneUniTokenContract.balanceOf(exceptionAddress)
-        ]);
-        return {
-          _reserve0: Number(reserveBalances.amount0) + Number(contractBalance),
-          _reserve1: Number(reserveBalances.amount1)
-        };
-      } else {
+      if (!exception) {
         // All other vaults
         let reserveBalances = await ichiVaultInstance.getTotalAmounts();
         return {
           _reserve0: Number(reserveBalances.total0),
           _reserve1: Number(reserveBalances.total1)
+        };
+      } else {
+        // this should never get invoked
+        return {
+          _reserve0: 0,
+          _reserve1: 0
         };
       }
     } else if (isDodoPool) {

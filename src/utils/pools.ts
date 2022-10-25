@@ -166,6 +166,12 @@ export async function getPoolReserves(poolContract: Contracts, chainId: ChainId,
           _reserve0: Number(reserveBalances.total0),
           _reserve1: Number(reserveBalances.total1)
         };
+      } else {
+        // this should never get invoked
+        return {
+          _reserve0: 0,
+          _reserve1: 0
+        };
       }
     } else if (isDodoPool) {
       // vaults

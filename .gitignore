@@ -6,5 +6,6 @@ awsconfiguration.json
 .secret-*
 *.zip
 .DS_Store
+package-lock.json
 
 .idea

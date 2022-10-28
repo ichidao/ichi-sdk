@@ -96,7 +96,7 @@ export const VAULTS: VaultMapping = {
       vaultName: VaultName.CHO,
       tableName: VaultTableName.CHO_ICHI,
       displayName: 'CHO-ICHI',
-      address: '0xB1765340b4526aB67B9929546A2Aeeb440326ed0',
+      address: '0x88dde82A09d35551cE77F206bFB1D27d2fF80fbE',
       farm: 37,
       externalFarm: ADDRESSES[AddressName.FARMING_V2][ChainId.Mainnet] || '',
       scarceToken: 'token0',

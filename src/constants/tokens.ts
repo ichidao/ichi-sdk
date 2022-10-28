@@ -134,6 +134,18 @@ export const TOKENS: TokenMapping = {
       isOneToken: false
     }
   },
+  [TokenName.BIT]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.BIT,
+      tableName: TokenName.BIT,
+      address: '0x1A4b46696b2bB4794Eb3D4c26f1c55F9170fa4C5',
+      decimals: 18,
+      displayName: 'BIT',
+      symbol: 'BIT',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.BNT]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.BNT,
@@ -154,6 +166,18 @@ export const TOKENS: TokenMapping = {
       decimals: 4,
       displayName: 'CEL',
       symbol: 'CEL',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
+  [TokenName.CHO]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.CHO,
+      tableName: TokenName.CHO,
+      address: '0xBBa39Fd2935d5769116ce38d46a71bde9cf03099',
+      decimals: 18,
+      displayName: 'CHO',
+      symbol: 'CHO',
       isOneToken: false,
       atCoingecko: true
     }

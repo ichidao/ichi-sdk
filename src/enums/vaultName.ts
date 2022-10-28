@@ -1,7 +1,9 @@
 export enum VaultName {
   '1INCH' = '1inch',
   ALLY = 'ally',
+  BIT = 'bit',
   BOBA = 'boba',
+  CHO = 'cho',
   HOME = 'home',
   FUSE = 'fuse',
   ICHI = 'ichi',
@@ -37,6 +39,8 @@ export enum VaultTableName {
   // Mainnet
   '1INCH_ICHI' = '1inch_ichi',
   ALLY_ICHI = 'ally_ichi',
+  BIT_ICHI = 'bit_ichi',
+  CHO_ICHI = 'cho_ichi',
   ONEFUSE_FUSE = 'onefuse_fuse',
   ONEUNI_ICHI = 'oneuni_ichi',
   ONEWING_PWING = 'onewing_pwing',

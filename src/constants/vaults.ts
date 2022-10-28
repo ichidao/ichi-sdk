@@ -41,6 +41,31 @@ export const VAULTS: VaultMapping = {
       depositStatus: true,
     }
   },
+  [VaultName.BIT]: {
+    [ChainId.Mainnet]: {
+      vaultName: VaultName.BIT,
+      tableName: VaultTableName.BIT_ICHI,
+      displayName: 'BIT-ICHI',
+      address: '0xdc6Ee42cC2B0b0af968Fa27092b5c061CddDA8fE',
+      farm: 38,
+      externalFarm: ADDRESSES[AddressName.FARMING_V2][ChainId.Mainnet] || '',
+      scarceToken: 'token0',
+      scarceTokenName: TokenName.ICHI_V2,
+      scarceTokenDecimals: 18,
+      scarceTokenCoingeckoId: 'ichi-farm',
+      baseTokenName: TokenName.BIT,
+      baseTokenDecimals: 18,
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: true,
+      isHodlVault: true,
+      // isLegacy: false,
+      isLegacy: isLegacy(MainnetPoolNumbers.BIT_VAULT, ChainId.Mainnet),
+      irrStartTxAmount: 0,
+      depositStatus: true,
+    }
+  },
   [VaultName.BOBA]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.BOBA,
@@ -62,6 +87,31 @@ export const VAULTS: VaultMapping = {
       isHodlVault: true,
       // isLegacy: false,
       isLegacy: isLegacy(MainnetPoolNumbers.BOBA_VAULT, ChainId.Mainnet),
+      irrStartTxAmount: 0,
+      depositStatus: true,
+    }
+  },
+  [VaultName.CHO]: {
+    [ChainId.Mainnet]: {
+      vaultName: VaultName.CHO,
+      tableName: VaultTableName.CHO_ICHI,
+      displayName: 'CHO-ICHI',
+      address: '0x88dde82A09d35551cE77F206bFB1D27d2fF80fbE',
+      farm: 37,
+      externalFarm: ADDRESSES[AddressName.FARMING_V2][ChainId.Mainnet] || '',
+      scarceToken: 'token0',
+      scarceTokenName: TokenName.ICHI_V2,
+      scarceTokenDecimals: 18,
+      scarceTokenCoingeckoId: 'ichi-farm',
+      baseTokenName: TokenName.CHO,
+      baseTokenDecimals: 18,
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: true,
+      isHodlVault: true,
+      // isLegacy: false,
+      isLegacy: isLegacy(MainnetPoolNumbers.CHO_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
     }

@@ -850,7 +850,7 @@ export const PoolLabels: TPoolLabels = {
       farmRewardTokenName: TokenName.ICHI_V2,
       farmRewardTokenDecimals: 18,
       farmRewardTokenAddress: getToken(TokenName.ICHI_V2, ChainId.Mainnet).address,
-      tradeUrl: 'https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x6B3595068778DD592e39A122f4f5a5cF09C90fE2&chain=mainnet',
+      tradeUrl: 'https://app.sushi.com/swap?inputCurrency=ETH&outputCurrency=0x6B3595068778DD592e39A122f4f5a5cF09C90fE2',
       subgraphEndpoint: '',
       isInverted: true,
       isHodl: true,

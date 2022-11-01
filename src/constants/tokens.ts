@@ -134,6 +134,30 @@ export const TOKENS: TokenMapping = {
       isOneToken: false
     }
   },
+  [TokenName.AAVE]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.AAVE,
+      tableName: TokenName.AAVE,
+      address: '0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9',
+      decimals: 18,
+      displayName: 'AAVE',
+      symbol: 'AAVE',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
+  [TokenName.BAT]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.BAT,
+      tableName: TokenName.BAT,
+      address: '0x0D8775F648430679A709E98d2b0Cb6250d2887EF',
+      decimals: 18,
+      displayName: 'BAT',
+      symbol: 'BAT',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.BIT]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.BIT,
@@ -178,6 +202,78 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'CHO',
       symbol: 'CHO',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
+  [TokenName.COMP]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.COMP,
+      tableName: TokenName.COMP,
+      address: '0xc00e94Cb662C3520282E6f5717214004A7f26888',
+      decimals: 18,
+      displayName: 'COMP',
+      symbol: 'COMP',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
+  [TokenName.LINK]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.LINK,
+      tableName: TokenName.LINK,
+      address: '0x514910771AF9Ca656af840dff83E8264EcF986CA',
+      decimals: 18,
+      displayName: 'LINK',
+      symbol: 'LINK',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
+  [TokenName.MKR]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.MKR,
+      tableName: TokenName.MKR,
+      address: '0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2',
+      decimals: 18,
+      displayName: 'MKR',
+      symbol: 'MKR',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
+  [TokenName.SUSHI]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.SUSHI,
+      tableName: TokenName.SUSHI,
+      address: '0x6B3595068778DD592e39A122f4f5a5cF09C90fE2',
+      decimals: 18,
+      displayName: 'SUSHI',
+      symbol: 'SUSHI',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
+  [TokenName.YFI]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.YFI,
+      tableName: TokenName.YFI,
+      address: '0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e',
+      decimals: 18,
+      displayName: 'YFI',
+      symbol: 'YFI',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
+  [TokenName.ZRX]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.ZRX,
+      tableName: TokenName.ZRX,
+      address: '0xE41d2489571d322189246DaFA5ebDe1F4699F498',
+      decimals: 18,
+      displayName: 'ZRX',
+      symbol: 'ZRX',
       isOneToken: false,
       atCoingecko: true
     }
@@ -426,7 +522,7 @@ export const TOKENS: TokenMapping = {
       displayName: 'UNI',
       symbol: 'UNI',
       isOneToken: false,
-      atCoingecko: false
+      atCoingecko: true
     },
     [ChainId.Kovan]: {
       tokenName: TokenName.UNI,

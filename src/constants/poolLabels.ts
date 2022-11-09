@@ -926,7 +926,7 @@ export const PoolLabels: TPoolLabels = {
       farmRewardTokenName: TokenName.ICHI_V2,
       farmRewardTokenDecimals: 18,
       farmRewardTokenAddress: getToken(TokenName.ICHI_V2, ChainId.Mainnet).address,
-      tradeUrl: 'https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x6a445E9F40e0b97c92d0b8a3366cEF1d67F700BF&chain=mainnet',
+      tradeUrl: 'https://curve.fi/#/ethereum/pools/factory-crypto-23/swap',
       subgraphEndpoint: '',
       isInverted: true,
       isHodl: true,

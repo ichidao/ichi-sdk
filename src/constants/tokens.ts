@@ -218,6 +218,42 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.COW]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.COW,
+      tableName: TokenName.COW,
+      address: '0xDEf1CA1fb7FBcDC777520aa7f396b4E015F497aB',
+      decimals: 18,
+      displayName: 'COW',
+      symbol: 'COW',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
+  [TokenName.FIDU]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.FIDU,
+      tableName: TokenName.FIDU,
+      address: '0x6a445E9F40e0b97c92d0b8a3366cEF1d67F700BF',
+      decimals: 18,
+      displayName: 'FIDU',
+      symbol: 'FIDU',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
+  [TokenName.LDO]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.LDO,
+      tableName: TokenName.LDO,
+      address: '0x5A98FcBEA516Cf06857215779Fd812CA3beF1B32',
+      decimals: 18,
+      displayName: 'LDO',
+      symbol: 'LDO',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.LINK]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.LINK,
@@ -242,6 +278,30 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.OGN]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.OGN,
+      tableName: TokenName.OGN,
+      address: '0x8207c1FfC5B6804F6024322CcF34F29c3541Ae26',
+      decimals: 18,
+      displayName: 'OGN',
+      symbol: 'OGN',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
+  [TokenName.OUSD]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.OUSD,
+      tableName: TokenName.OUSD,
+      address: '0x2A8e1E676Ec238d8A992307B495b45B3fEAa5e86',
+      decimals: 18,
+      displayName: 'OUSD',
+      symbol: 'OUSD',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.SUSHI]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.SUSHI,
@@ -250,6 +310,18 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'SUSHI',
       symbol: 'SUSHI',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
+  [TokenName.SWISE]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.SWISE,
+      tableName: TokenName.SWISE,
+      address: '0x48C3399719B582dD63eB5AADf12A40B4C3f52FA2',
+      decimals: 18,
+      displayName: 'SWISE',
+      symbol: 'SWISE',
       isOneToken: false,
       atCoingecko: true
     }

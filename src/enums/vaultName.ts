@@ -18,7 +18,6 @@ export enum VaultName {
   MKR = 'mkr',
   OGN = 'ogn',
   OUSD = 'ousd',
-  PORTX = 'portx',
   SUSHI = 'sushi',
   SWISE = 'swise',
   UNI = 'uni',

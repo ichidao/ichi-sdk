@@ -203,7 +203,7 @@ export const VAULTS: VaultMapping = {
       scarceTokenName: TokenName.ICHI_V2,
       scarceTokenDecimals: 18,
       scarceTokenCoingeckoId: 'ichi-farm',
-      baseTokenName: TokenName.COMP,
+      baseTokenName: TokenName.COW,
       baseTokenDecimals: 18,
       enableNotifications: true,
       subgraphEndpoint: '',

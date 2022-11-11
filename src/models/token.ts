@@ -9,6 +9,7 @@ export type Token = {
   address: string;
   decimals: number;
   displayName: string;
+  fullName: string;
   isOneToken: boolean;
   atCoingecko: boolean;
   symbol: string;

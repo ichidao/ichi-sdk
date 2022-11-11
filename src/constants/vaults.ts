@@ -545,7 +545,7 @@ export const VAULTS: VaultMapping = {
     [ChainId.Mainnet]: {
       vaultName: VaultName.WETH,
       tableName: VaultTableName.WETH_ICHI,
-      displayName: 'wETH-ICHI',
+      displayName: 'ETH-ICHI',
       address: '0xF5777E4b828Fc08001222eC4A72978Ce727C8a8C',
       farm: 36,
       externalFarm: '0x275dFE03bc036257Cd0a713EE819Dbd4529739c8',

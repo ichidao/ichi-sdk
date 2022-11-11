@@ -15,6 +15,7 @@ export const TOKENS: TokenMapping = {
       decimals: 9,
       displayName: 'ICHI',
       symbol: 'ICHI',
+      fullName: 'ICHI',
       isOneToken: false,
       atCoingecko: false,
       targetVaultStrength: 0.1
@@ -27,6 +28,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'ICHI',
       symbol: 'ICHI',
+      fullName: 'ICHI',
       atCoingecko: false,
       isOneToken: false,
       targetVaultStrength: 0.1
@@ -40,6 +42,7 @@ export const TOKENS: TokenMapping = {
       address: '0x36D7A88Df8B44D966DaC25c0DB0C000AE4d2306a',
       decimals: 18,
       displayName: 'ICHI',
+      fullName: 'ICHI',
       isOneToken: false,
       targetVaultStrength: 0.1
     },
@@ -51,6 +54,7 @@ export const TOKENS: TokenMapping = {
       address: '0x883Cc74d965edB77311A3f9a93649e92E2aa14ba',
       decimals: 9,
       displayName: 'ICHI',
+      fullName: 'ICHI',
       isOneToken: false,
       targetVaultStrength: 0.1
     }
@@ -63,6 +67,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'ICHI',
       symbol: 'ICHI',
+      fullName: 'ICHI',
       isOneToken: false,
       atCoingecko: true,
       targetVaultStrength: 0.12
@@ -74,6 +79,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'ICHI',
       symbol: 'ICHI',
+      fullName: 'ICHI',
       atCoingecko: false,
       isOneToken: false,
       targetVaultStrength: 0.12
@@ -97,6 +103,7 @@ export const TOKENS: TokenMapping = {
       decimals: 9,
       displayName: 'xICHI',
       symbol: 'xICHI',
+      fullName: 'IchiStake',
       isOneToken: false,
       atCoingecko: false
     },
@@ -104,6 +111,7 @@ export const TOKENS: TokenMapping = {
       tokenName: TokenName.XICHI,
       tableName: TokenName.XICHI,
       symbol: 'xICHI',
+      fullName: 'IchiStake',
       atCoingecko: false,
       address: '0x4a8a50cd18ccd55078630a4b17d16c892ff7f4db',
       decimals: 9,
@@ -119,6 +127,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'renFIL',
       symbol: 'renFIL',
+      fullName: 'renFIL',
       parentOneToken: TokenName.ONE_FIL,
       isOneToken: false,
       atCoingecko: true
@@ -127,6 +136,7 @@ export const TOKENS: TokenMapping = {
       tokenName: TokenName.RENFIL,
       tableName: `test_${TokenName.RENFIL}`,
       symbol: 'renFIL',
+      fullName: 'renFIL',
       atCoingecko: true,
       address: '0x3CB15c7048e7CfAcFBc8eFe9362fAC5e60012BD1',
       decimals: 18,
@@ -142,6 +152,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'AAVE',
       symbol: 'AAVE',
+      fullName: 'Aave Token',
       isOneToken: false,
       atCoingecko: true
     }
@@ -154,6 +165,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'BAT',
       symbol: 'BAT',
+      fullName: 'Basic Attention Token',
       isOneToken: false,
       atCoingecko: true
     }
@@ -166,6 +178,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'BIT',
       symbol: 'BIT',
+      fullName: 'BitDAO',
       isOneToken: false,
       atCoingecko: true
     }
@@ -178,6 +191,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'BNT',
       symbol: 'BNT',
+      fullName: 'Bancor',
       isOneToken: false,
       atCoingecko: true
     }
@@ -190,6 +204,7 @@ export const TOKENS: TokenMapping = {
       decimals: 4,
       displayName: 'CEL',
       symbol: 'CEL',
+      fullName: 'Celsius',
       isOneToken: false,
       atCoingecko: true
     }
@@ -202,6 +217,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'CHO',
       symbol: 'CHO',
+      fullName: 'choise.com',
       isOneToken: false,
       atCoingecko: true
     }
@@ -214,6 +230,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'COMP',
       symbol: 'COMP',
+      fullName: 'Compound',
       isOneToken: false,
       atCoingecko: true
     }
@@ -226,6 +243,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'COW',
       symbol: 'COW',
+      fullName: 'CoW Protocol Token',
       isOneToken: false,
       atCoingecko: true
     }
@@ -238,6 +256,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'FIDU',
       symbol: 'FIDU',
+      fullName: 'Fidu',
       isOneToken: false,
       atCoingecko: true
     }
@@ -250,6 +269,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'LDO',
       symbol: 'LDO',
+      fullName: 'Lido DAO Token',
       isOneToken: false,
       atCoingecko: true
     }
@@ -262,6 +282,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'LINK',
       symbol: 'LINK',
+      fullName: 'ChainLink Token',
       isOneToken: false,
       atCoingecko: true
     }
@@ -274,6 +295,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'MKR',
       symbol: 'MKR',
+      fullName: 'Maker',
       isOneToken: false,
       atCoingecko: true
     }
@@ -286,6 +308,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'OGN',
       symbol: 'OGN',
+      fullName: 'Origin Token',
       isOneToken: false,
       atCoingecko: true
     }
@@ -298,6 +321,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'OUSD',
       symbol: 'OUSD',
+      fullName: 'Origin Dollar',
       isOneToken: false,
       atCoingecko: true
     }
@@ -310,6 +334,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'SUSHI',
       symbol: 'SUSHI',
+      fullName: 'SushiToken',
       isOneToken: false,
       atCoingecko: true
     }
@@ -322,6 +347,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'SWISE',
       symbol: 'SWISE',
+      fullName: 'StakeWise',
       isOneToken: false,
       atCoingecko: true
     }
@@ -334,6 +360,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'YFI',
       symbol: 'YFI',
+      fullName: 'yearn.finance',
       isOneToken: false,
       atCoingecko: true
     }
@@ -346,6 +373,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'ZRX',
       symbol: 'ZRX',
+      fullName: '0x',
       isOneToken: false,
       atCoingecko: true
     }
@@ -358,6 +386,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'GIV',
       symbol: 'GIV',
+      fullName: 'Giveth',
       parentOneToken: TokenName.ONE_GIV,
       isOneToken: false,
       atCoingecko: true,
@@ -372,6 +401,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'GNO',
       symbol: 'GNO',
+      fullName: 'Gnosis',
       isOneToken: false,
       atCoingecko: true
     }
@@ -384,6 +414,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'DAI',
       symbol: 'DAI',
+      fullName: 'Dai Stablecoin',
       isOneToken: false,
       atCoingecko: false
     },
@@ -394,6 +425,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'DAI',
       symbol: 'DAI',
+      fullName: 'Dai Stablecoin',
       isOneToken: false,
       atCoingecko: false
     }
@@ -406,6 +438,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: '1INCH',
       symbol: '1INCH',
+      fullName: '1INCH Token',
       isOneToken: false,
       atCoingecko: true
     }
@@ -418,6 +451,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'ALLY',
       symbol: 'ALLY',
+      fullName: 'ICHI Ally',
       isOneToken: false,
       atCoingecko: false
     }
@@ -430,6 +464,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'BOBA',
       symbol: 'BOBA',
+      fullName: 'Boba Token',
       isOneToken: false,
       atCoingecko: true
     }
@@ -442,6 +477,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'GOVI',
       symbol: 'GOVI',
+      fullName: 'GOVI',
       isOneToken: false,
       atCoingecko: true
     },
@@ -452,6 +488,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'GOVI',
       symbol: 'GOVI',
+      fullName: 'GOVI',
       isOneToken: false,
       atCoingecko: false
     }
@@ -464,6 +501,7 @@ export const TOKENS: TokenMapping = {
       decimals: 6,
       displayName: 'HOME',
       symbol: 'HOME',
+      fullName: 'Home',
       isOneToken: false,
       atCoingecko: false
     }
@@ -476,6 +514,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'OJA',
       symbol: 'OJA',
+      fullName: 'Ojamu Token',
       isOneToken: false,
       atCoingecko: true
     }
@@ -488,6 +527,7 @@ export const TOKENS: TokenMapping = {
       decimals: 9,
       displayName: 'pWING',
       symbol: 'pWING',
+      fullName: 'Poly Ontology Wing Token',
       isOneToken: false,
       atCoingecko: false
     }
@@ -500,6 +540,7 @@ export const TOKENS: TokenMapping = {
       decimals: 8,
       displayName: 'QRDO',
       symbol: 'QRDO',
+      fullName: 'Qredo Token',
       isOneToken: false,
       atCoingecko: true,
       targetVaultStrength: 0.1
@@ -513,6 +554,7 @@ export const TOKENS: TokenMapping = {
       decimals: 8,
       displayName: 'wBTC',
       symbol: 'wBTC',
+      fullName: 'Wrapped Bitcoin',
       isOneToken: false,
       atCoingecko: true
     },
@@ -523,6 +565,7 @@ export const TOKENS: TokenMapping = {
       decimals: 8,
       displayName: 'wBTC',
       symbol: 'wBTC',
+      fullName: 'Wrapped Bitcoin',
       atCoingecko: false,
       isOneToken: false
     }
@@ -535,6 +578,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'wETH',
       symbol: 'wETH',
+      fullName: 'Wrapped Ether',
       isOneToken: false,
       atCoingecko: true
     },
@@ -542,6 +586,7 @@ export const TOKENS: TokenMapping = {
       tokenName: TokenName.WETH,
       tableName: `test_${TokenName.WETH}`,
       symbol: 'wETH',
+      fullName: 'Wrapped Ether',
       atCoingecko: false,
       address: '0xd0A1E359811322d97991E03f863a0C30C2cF029C',
       decimals: 18,
@@ -557,6 +602,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'wNXM',
       symbol: 'wNXM',
+      fullName: 'Wrapped NXM',
       isOneToken: false,
       atCoingecko: true
     }
@@ -569,6 +615,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'VBTC',
       symbol: 'VBTC',
+      fullName: 'Strudel BTC',
       isOneToken: false,
       atCoingecko: false
     }
@@ -581,6 +628,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'LINK',
       symbol: 'LINK',
+      fullName: 'ChainLink Token',
       isOneToken: false,
       atCoingecko: false
     }
@@ -593,6 +641,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'UNI',
       symbol: 'UNI',
+      fullName: 'Uniswap',
       isOneToken: false,
       atCoingecko: true
     },
@@ -600,6 +649,7 @@ export const TOKENS: TokenMapping = {
       tokenName: TokenName.UNI,
       tableName: `test_${TokenName.UNI}`,
       symbol: 'UNI',
+      fullName: 'Uniswap',
       atCoingecko: false,
       address: '0xdF2661E2E6A35B482E3F105bDE628B5e1F68aB41',
       decimals: 18,
@@ -615,6 +665,7 @@ export const TOKENS: TokenMapping = {
       decimals: 6,
       displayName: 'USDC',
       symbol: 'USDC',
+      fullName: 'USD Coin',
       isOneToken: false,
       atCoingecko: false
     },
@@ -625,6 +676,7 @@ export const TOKENS: TokenMapping = {
       decimals: 6,
       displayName: 'USDC',
       symbol: 'USDC',
+      fullName: 'USD Coin',
       atCoingecko: false,
       isOneToken: false
     },
@@ -632,6 +684,7 @@ export const TOKENS: TokenMapping = {
       tokenName: TokenName.USDC,
       tableName: `mum_${TokenName.USDC}`,
       symbol: 'USDC',
+      fullName: 'USD Coin',
       atCoingecko: false,
       address: '0x0FA8781a83E46826621b3BC094Ea2A0212e71B23',
       decimals: 6,
@@ -642,6 +695,7 @@ export const TOKENS: TokenMapping = {
       tokenName: TokenName.USDC,
       tableName: `test_${TokenName.USDC}`,
       symbol: 'USDC',
+      fullName: 'USD Coin',
       atCoingecko: false,
       address: '0x21632981cBf52eB788171e8dcB891C32F4834239',
       decimals: 6,
@@ -657,6 +711,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'FUSE',
       symbol: 'FUSE',
+      fullName: 'Fuse Token',
       parentOneToken: TokenName.ONE_FUSE,
       isOneToken: false,
       atCoingecko: true,
@@ -671,6 +726,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'MPH',
       symbol: 'MPH',
+      fullName: '88mph.app',
       parentOneToken: TokenName.ONE_MPH,
       isOneToken: false,
       atCoingecko: true
@@ -684,6 +740,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'PERL',
       symbol: 'PERL',
+      fullName: 'Perlin',
       parentOneToken: TokenName.ONE_PERL,
       isOneToken: false,
       atCoingecko: true
@@ -697,6 +754,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'DODO',
       symbol: 'DODO',
+      fullName: 'DODO bird',
       parentOneToken: TokenName.ONE_DODO,
       isOneToken: false,
       atCoingecko: false
@@ -710,6 +768,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'FOX',
       symbol: 'FOX',
+      fullName: 'ShapeShift FOX',
       parentOneToken: TokenName.ONE_FOX,
       isOneToken: false,
       atCoingecko: true
@@ -723,6 +782,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'BOOT',
       symbol: 'BOOT',
+      fullName: 'Boot Finance',
       parentOneToken: TokenName.BOOT_USD,
       isOneToken: false,
       atCoingecko: false
@@ -738,6 +798,7 @@ export const TOKENS: TokenMapping = {
       decimals: 9,
       displayName: 'oneETH',
       symbol: 'oneETH',
+      fullName: 'oneETH',
       isOneToken: true,
       stimulusName: TokenName.WETH,
       stimulusDisplayName: 'ETH',
@@ -767,6 +828,7 @@ export const TOKENS: TokenMapping = {
       decimals: 9,
       displayName: 'oneVBTC',
       symbol: 'oneVBTC',
+      fullName: 'oneVBTC',
       isOneToken: true,
       stimulusName: TokenName.VBTC,
       stimulusDisplayName: 'VBTC',
@@ -784,6 +846,7 @@ export const TOKENS: TokenMapping = {
       decimals: 9,
       displayName: 'oneLINK',
       symbol: 'oneLINK',
+      fullName: 'oneLINK',
       isOneToken: true,
       stimulusName: TokenName.LINK,
       stimulusDisplayName: 'LINK',
@@ -801,6 +864,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'oneFIL',
       symbol: 'oneFIL',
+      fullName: 'oneFIL',
       atCoingecko: false,
       isOneToken: true,
       isV2: true,
@@ -813,6 +877,7 @@ export const TOKENS: TokenMapping = {
       tokenName: TokenName.ONE_FIL,
       tableName: TokenName.ONE_FIL,
       symbol: 'oneFIL',
+      fullName: 'oneFIL',
       atCoingecko: false,
       address: '0x50633E780803b56a0d8606a3C674993080Ea98c1',
       strategy: '0xf2c642b993e98298477f3f20ea2de8e6f29db534',
@@ -840,6 +905,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'one1INCH',
       symbol: 'one1INCH',
+      fullName: 'one1INCH',
       atCoingecko: false,
       isOneToken: true,
       isV2: true,
@@ -859,6 +925,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'oneBTC',
       symbol: 'oneBTC',
+      fullName: 'oneBTC',
       isOneToken: true,
       atCoingecko: false,
       isV2: true,
@@ -884,6 +951,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'oneBTC',
       symbol: 'oneBTC',
+      fullName: 'oneBTC',
       atCoingecko: false,
       isOneToken: true,
       isV2: true,
@@ -904,6 +972,7 @@ export const TOKENS: TokenMapping = {
       tokenName: TokenName.ONE_BTC,
       tableName: `mum_${TokenName.ONE_BTC}`,
       symbol: 'oneBTC',
+      fullName: 'oneBTC',
       atCoingecko: false,
       address: '0xeE0de02B5aFb77aD8718bA6C24A93fF3ea4e5637',
       strategy: '',
@@ -935,6 +1004,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'oneFUSE',
       symbol: 'oneFUSE',
+      fullName: 'oneFUSE',
       isOneToken: true,
       atCoingecko: false,
       isV2: true,
@@ -962,6 +1032,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'oneGIV',
       symbol: 'oneGIV',
+      fullName: 'oneGIV',
       atCoingecko: false,
       isOneToken: true,
       isV2: true,
@@ -981,6 +1052,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'oneMPH',
       symbol: 'oneMPH',
+      fullName: 'oneMPH',
       atCoingecko: false,
       isOneToken: true,
       isV2: true,
@@ -1000,6 +1072,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'onePERL',
       symbol: 'onePERL',
+      fullName: 'onePERL',
       atCoingecko: false,
       isOneToken: true,
       isV2: true,
@@ -1019,6 +1092,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'oneOJA',
       symbol: 'oneOJA',
+      fullName: 'oneOJA',
       isOneToken: true,
       atCoingecko: false,
       isV2: true,
@@ -1047,6 +1121,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'oneUNI',
       symbol: 'oneUNI',
+      fullName: 'oneUNI',
       atCoingecko: false,
       isOneToken: true,
       isV2: true,
@@ -1067,6 +1142,7 @@ export const TOKENS: TokenMapping = {
       tokenName: TokenName.ONE_UNI,
       tableName: TokenName.ONE_UNI,
       symbol: 'oneUNI',
+      fullName: 'oneUNI',
       atCoingecko: false,
       address: '0x4238C45783551be0D848BbAdA853cCa6b265322f',
       strategy: '',
@@ -1095,6 +1171,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'oneDODO',
       symbol: 'oneDODO',
+      fullName: 'oneDODO',
       isOneToken: true,
       isV2: true,
       stimulusName: TokenName.DODO,
@@ -1113,6 +1190,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'oneFOX',
       symbol: 'oneFOX',
+      fullName: 'oneFOX',
       atCoingecko: false,
       isOneToken: true,
       isV2: true,
@@ -1140,6 +1218,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'oneWING',
       symbol: 'oneWING',
+      fullName: 'oneWING',
       atCoingecko: false,
       isOneToken: true,
       isV2: true,
@@ -1166,6 +1245,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'BOOTusd',
       symbol: 'BOOTusd',
+      fullName: 'BOOTusd',
       isOneToken: true,
       atCoingecko: false,
       isV2: true,
@@ -1184,6 +1264,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'oneICHI',
       symbol: 'oneICHI',
+      fullName: 'oneICHI',
       atCoingecko: false,
       isOneToken: true,
       isV2: true,
@@ -1217,6 +1298,7 @@ export const TOKENS: TokenMapping = {
       tokenName: TokenName.TOKEN_6,
       tableName: `mum_${TokenName.TOKEN_6}`,
       symbol: 'Token6',
+      fullName: 'Token6',
       atCoingecko: false,
       address: '0x13EDD87281803AF4178E7b30631ab7Cbb6819441',
       decimals: 6,
@@ -1227,6 +1309,7 @@ export const TOKENS: TokenMapping = {
       tokenName: TokenName.TOKEN_6,
       tableName: `test_${TokenName.TOKEN_6}`,
       symbol: 'Token6',
+      fullName: 'Token6',
       atCoingecko: false,
       address: '0xb994c68b4ed03d8f0aa9cb1b1729fa9bbbaa75e7',
       decimals: 6,
@@ -1239,6 +1322,7 @@ export const TOKENS: TokenMapping = {
       tokenName: TokenName.TOKEN_18,
       tableName: `test_${TokenName.TOKEN_18}`,
       symbol: 'Token18',
+      fullName: 'Token18',
       atCoingecko: false,
       address: '0x670d1C929e7d6B9F847c60A35750A440cB0f9308',
       decimals: 18,
@@ -1251,6 +1335,7 @@ export const TOKENS: TokenMapping = {
       tokenName: TokenName.OTI,
       tableName: `test_${TokenName.OTI}`,
       symbol: 'OTI',
+      fullName: 'OTI',
       atCoingecko: false,
       address: '0x5BF9b9bB304672c3d006955AbFC516e8b37693F9',
       strategy: '',
@@ -1268,6 +1353,7 @@ export const TOKENS: TokenMapping = {
       tokenName: TokenName.WEENUS,
       tableName: `test_${TokenName.WEENUS}`,
       symbol: 'WEENUS',
+      fullName: 'WEENUS',
       atCoingecko: false,
       address: '0xaFF4481D10270F50f203E0763e2597776068CBc5',
       decimals: 18,

@@ -42,6 +42,9 @@ export enum VaultName {
   ONEGIV_GIV = 'onegiv_giv',
   FUSE_ICHI = 'fuse_ichi',
   WETH = 'weth',
+  ICHI_ETH = 'ichi_eth',
+  ICHI_WBTC = 'ichi_wbtc',
+  ICHI_USDC = 'ichi_usdc',
   // Kovan
   KOVAN_ONE_FIL = 'kovan_one_fil',
   // Polygon
@@ -97,6 +100,9 @@ export enum VaultTableName {
   BNT_ICHI = 'bnt_ichi',
   FUSE_ICHI = 'fuse_ichi',
   WETH_ICHI = 'weth_ichi',
+  ICHI_ETH = 'ichi_eth',
+  ICHI_WBTC = 'ichi_wbtc',
+  ICHI_USDC = 'ichi_usdc',
   // Kovan related
   KOVAN_ONE_FIL = 'test_one_fil',
   // Polygon

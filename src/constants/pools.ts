@@ -262,6 +262,9 @@ export const Pools: TPools = {
       MainnetPoolNumbers.UNI_VAULT, 
       MainnetPoolNumbers.YFI_VAULT,
       MainnetPoolNumbers.ZRX_VAULT,
+      MainnetPoolNumbers.ICHI_ETH_VAULT,
+      MainnetPoolNumbers.ICHI_WBTC_VAULT,
+      MainnetPoolNumbers.ICHI_USDC_VAULT,
     ],
     [ChainId.Polygon]: [PolygonPoolNumbers.ONE_BTC_VAULT, PolygonPoolNumbers.WBTC_VAULT, PolygonPoolNumbers.GOVI_VAULT, PolygonPoolNumbers.USDC_VAULT],
     [ChainId.Kovan]: [KovanPoolNumbers.ONE_FIL_VAULT, KovanPoolNumbers.ONE_UNI_VAULT, KovanPoolNumbers.ONE_UNI_UNI_VAULT, KovanPoolNumbers.WEENUS_VAULT],
@@ -292,6 +295,7 @@ export const Pools: TPools = {
     [ChainId.Mumbai]: [],
   },
   // Pools in the UNRETIRED_POOLS will show up even if APR == 0
+  // used only in retired app
   [PoolGroupName.UNRETIRED_POOLS]: {
     [ChainId.Mainnet]: [
       MainnetPoolNumbers.ICHI_1INCH,
@@ -511,8 +515,23 @@ export const Pools: TPools = {
       MainnetPoolNumbers.MKR_VAULT, MainnetPoolNumbers.SUSHI_VAULT,
       MainnetPoolNumbers.UNI_VAULT, MainnetPoolNumbers.YFI_VAULT,
       MainnetPoolNumbers.ZRX_VAULT, MainnetPoolNumbers.CEL_VAULT,
-      MainnetPoolNumbers.HOME_VAULT, MainnetPoolNumbers.BOBA_VAULT],
+      MainnetPoolNumbers.HOME_VAULT, MainnetPoolNumbers.BOBA_VAULT,
+      MainnetPoolNumbers.ICHI_ETH_VAULT,
+      MainnetPoolNumbers.ICHI_WBTC_VAULT, MainnetPoolNumbers.ICHI_USDC_VAULT
+    ],
     [ChainId.Polygon]: [PolygonPoolNumbers.ONE_BTC_VAULT, PolygonPoolNumbers.WBTC_VAULT, PolygonPoolNumbers.GOVI_VAULT, PolygonPoolNumbers.USDC_VAULT],
+    [ChainId.Kovan]: [],
+    [ChainId.Mumbai]: [],
+  },
+  // These vaults don't show in either main app or legacy app.
+  // They are available by direct link
+  [PoolGroupName.HIDDEN_VAULTS]: {
+    [ChainId.Mainnet]: [
+      MainnetPoolNumbers.ICHI_ETH_VAULT,
+      MainnetPoolNumbers.ICHI_WBTC_VAULT,
+      MainnetPoolNumbers.ICHI_USDC_VAULT
+    ], 
+    [ChainId.Polygon]: [],
     [ChainId.Kovan]: [],
     [ChainId.Mumbai]: [],
   },

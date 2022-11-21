@@ -1105,6 +1105,25 @@ export const PoolLabels: TPoolLabels = {
       vaultAddress: '0x540b0d9AF7004a78Aa58a391718344c6897AB49A',
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
+    },
+    [MainnetPoolNumbers.MIDAS_VAULT]: {
+      name: 'MIDAS Vault',
+      poolNumber: MainnetPoolNumbers.MIDAS_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      farmAddress: '0x3b5FCB1D099AE8C7F065DdE579293841c74d9114',
+      farmId: 0,
+      farmRewardTokenName: TokenName.MIDAS,
+      farmRewardTokenDecimals: 18,
+      farmRewardTokenAddress: getToken(TokenName.MIDAS, ChainId.Mainnet).address,
+      tradeUrl: 'https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x97e6e31aFb2d93d437301e006D9DA714616766A5&chain=mainnet',
+      subgraphEndpoint: '',
+      isInverted: true,
+      isHodl: true,
+      vaultName: VaultName.MIDAS,
+      vaultAddress: '0x5Edda12a9BBfa368c839D9de44047493991084Cb',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
     }
   },
   [ChainId.Kovan]: {

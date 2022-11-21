@@ -341,6 +341,31 @@ export const VAULTS: VaultMapping = {
       depositStatus: true,
     }
   },
+  [VaultName.MIDAS]: {
+    [ChainId.Mainnet]: {
+      vaultName: VaultName.MIDAS,
+      tableName: VaultTableName.MIDAS_ICHI,
+      displayName: 'MIDAS-ICHI',
+      address: '0x5Edda12a9BBfa368c839D9de44047493991084Cb',
+      farm: 0,
+      externalFarm: '0x3b5FCB1D099AE8C7F065DdE579293841c74d9114',
+      scarceToken: 'token0',
+      scarceTokenName: TokenName.ICHI_V2,
+      scarceTokenDecimals: 18,
+      scarceTokenCoingeckoId: 'ichi-farm',
+      baseTokenName: TokenName.MIDAS,
+      baseTokenDecimals: 18,
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: true,
+      isHodlVault: true,
+      // isLegacy: false,
+      isLegacy: isLegacy(MainnetPoolNumbers.MIDAS_VAULT, ChainId.Mainnet),
+      irrStartTxAmount: 0,
+      depositStatus: true,
+    }
+  },
   [VaultName.MKR]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.MKR,

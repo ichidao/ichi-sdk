@@ -287,6 +287,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.MIDAS]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.MIDAS,
+      tableName: TokenName.MIDAS,
+      address: '0x97e6e31aFb2d93d437301e006D9DA714616766A5',
+      decimals: 18,
+      displayName: 'MIDAS',
+      symbol: 'MIDAS',
+      fullName: 'Midas',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.MKR]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.MKR,

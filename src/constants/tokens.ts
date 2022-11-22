@@ -157,6 +157,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.BANK]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.BANK,
+      tableName: TokenName.BANK,
+      address: '0x2d94AA3e47d9D5024503Ca8491fcE9A2fB4DA198',
+      decimals: 18,
+      displayName: 'BANK',
+      symbol: 'BANK',
+      fullName: 'Bankless Token',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.BAT]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.BAT,
@@ -261,6 +274,32 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.FRAX]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.FRAX,
+      tableName: TokenName.FRAX,
+      address: '0x853d955acef822db058eb8505911ed77f175b99e',
+      decimals: 18,
+      displayName: 'FRAX',
+      symbol: 'FRAX',
+      fullName: 'Frax',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
+  [TokenName.FXS]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.FXS,
+      tableName: TokenName.FXS,
+      address: '0x3432B6A60D23Ca0dFCa7761B7ab56459D9C964D0',
+      decimals: 18,
+      displayName: 'FXS',
+      symbol: 'FXS',
+      fullName: 'Frax Share',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.LDO]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.LDO,
@@ -283,6 +322,19 @@ export const TOKENS: TokenMapping = {
       displayName: 'LINK',
       symbol: 'LINK',
       fullName: 'ChainLink Token',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
+  [TokenName.METIS]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.METIS,
+      tableName: TokenName.METIS,
+      address: '0x9E32b13ce7f2E80A01932B42553652E053D6ed8e',
+      decimals: 18,
+      displayName: 'METIS',
+      symbol: 'METIS',
+      fullName: 'Metis Token',
       isOneToken: false,
       atCoingecko: true
     }
@@ -339,6 +391,32 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.SFRXETH]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.SFRXETH,
+      tableName: TokenName.SFRXETH,
+      address: '0x0D8775F648430679A709E98d2b0Cb6250d2887EF',
+      decimals: 18,
+      displayName: 'sfrxETH',
+      symbol: 'SFXRETH',
+      fullName: 'Staked Frax Ether',
+      isOneToken: false,
+      atCoingecko: false
+    }
+  },
+  [TokenName.SHIB]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.SHIB,
+      tableName: TokenName.SHIB,
+      address: '0x0D8775F648430679A709E98d2b0Cb6250d2887EF',
+      decimals: 18,
+      displayName: 'SHIB',
+      symbol: 'SHIB',
+      fullName: 'Shiba Inu',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.SUSHI]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.SUSHI,
@@ -361,6 +439,19 @@ export const TOKENS: TokenMapping = {
       displayName: 'SWISE',
       symbol: 'SWISE',
       fullName: 'StakeWise',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
+  [TokenName.UMA]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.UMA,
+      tableName: TokenName.UMA,
+      address: '0x04Fa0d235C4abf4BcF4787aF4CF447DE572eF828',
+      decimals: 18,
+      displayName: 'UMA',
+      symbol: 'UMA',
+      fullName: 'UMA Voting Token v1',
       isOneToken: false,
       atCoingecko: true
     }

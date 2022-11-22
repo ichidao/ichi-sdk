@@ -395,7 +395,7 @@ export const TOKENS: TokenMapping = {
     [ChainId.Mainnet]: {
       tokenName: TokenName.SFRXETH,
       tableName: TokenName.SFRXETH,
-      address: '0x0D8775F648430679A709E98d2b0Cb6250d2887EF',
+      address: '0xac3E018457B222d93114458476f3E3416Abbe38F',
       decimals: 18,
       displayName: 'sfrxETH',
       symbol: 'SFXRETH',
@@ -408,7 +408,7 @@ export const TOKENS: TokenMapping = {
     [ChainId.Mainnet]: {
       tokenName: TokenName.SHIB,
       tableName: TokenName.SHIB,
-      address: '0x0D8775F648430679A709E98d2b0Cb6250d2887EF',
+      address: '0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE',
       decimals: 18,
       displayName: 'SHIB',
       symbol: 'SHIB',

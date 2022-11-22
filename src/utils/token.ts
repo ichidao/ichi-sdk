@@ -160,6 +160,7 @@ export async function getTokenMetrics(
         case TokenName.BOOT:
           price = await getMemberTokenPrice(TokenName.BOOT_USD, TokenName.BOOT, { chainId, provider, decimals: 9 });
           break;
+        case TokenName.SFRXETH:
         case TokenName.WETH:
           price = await getStimulusUSDPrice(TokenName.ONE_ETH, { chainId, provider, decimals: 9 });
           break;

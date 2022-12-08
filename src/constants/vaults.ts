@@ -1319,6 +1319,31 @@ export const VAULTS: VaultMapping = {
       depositStatus: true,
     }
   },
+  [VaultName.QRDO_ICHI]: {
+    [ChainId.Mainnet]: {
+      vaultName: VaultName.QRDO_ICHI,
+      tableName: VaultTableName.QRDO_ICHI, 
+      displayName: 'QRDO-ICHI',
+      address: '0x322971423daf131Ddb3d4C1AC55623C1062cb53b',
+      farm: 0,
+      externalFarm: '',
+      scarceToken: 'token0',
+      scarceTokenName: TokenName.ICHI_V2,
+      scarceTokenDecimals: 18,
+      scarceTokenCoingeckoId: 'ichi-farm',
+      baseTokenName: TokenName.QRDO,
+      baseTokenDecimals: 8,
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: true,
+      isHodlVault: true,
+      // isLegacy: false,
+      isLegacy: isLegacy(MainnetPoolNumbers.QRDO_ICHI_VAULT, ChainId.Mainnet),
+      irrStartTxAmount: 0,
+      depositStatus: true,
+    }
+  },
   [VaultName.USDC_ICHI]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.USDC_ICHI, // old: 'usdc_ichi',

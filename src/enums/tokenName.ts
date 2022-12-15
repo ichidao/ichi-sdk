@@ -5,6 +5,7 @@ export enum TokenName {
   RENFIL = 'renfil',
   AAVE = 'aave',
   ALLY = 'ally',
+  ASTO = 'asto',
   BANK = 'bank',
   BAT = 'bat',
   BIT = 'bit',

@@ -157,6 +157,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.ASTO]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.ASTO,
+      tableName: TokenName.ASTO,
+      address: '0x823556202e86763853b40e9cde725f412e294689',
+      decimals: 18,
+      displayName: 'ASTO',
+      symbol: 'ASTO',
+      fullName: 'Altered State Machine Utility Token',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.BANK]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.BANK,

@@ -1276,6 +1276,25 @@ export const PoolLabels: TPoolLabels = {
       vaultAddress: '0x322971423daf131Ddb3d4C1AC55623C1062cb53b',
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
+    },
+    [MainnetPoolNumbers.ASTO_VAULT]: {
+      name: 'ASTO Vault',
+      poolNumber: MainnetPoolNumbers.ASTO_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      farmAddress: ADDRESSES[AddressName.FARMING_V2][ChainId.Mainnet],
+      farmId: 66,
+      farmRewardTokenName: TokenName.ICHI_V2,
+      farmRewardTokenDecimals: 18,
+      farmRewardTokenAddress: getToken(TokenName.ICHI_V2, ChainId.Mainnet).address,
+      tradeUrl: 'https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x823556202e86763853b40e9cDE725f412e294689&chain=mainnet',
+      subgraphEndpoint: '',
+      isInverted: true,
+      isHodl: true,
+      vaultName: VaultName.ASTO,
+      vaultAddress: '0x8B99Fb11Aae84435fD22043a4912090E13Ca0753',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
     }
   },
   [ChainId.Kovan]: {

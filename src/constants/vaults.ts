@@ -66,6 +66,30 @@ export const VAULTS: VaultMapping = {
       depositStatus: true,
     }
   },
+  [VaultName.ASTO]: {
+    [ChainId.Mainnet]: {
+      vaultName: VaultName.ASTO,
+      tableName: VaultTableName.ASTO_ICHI,
+      displayName: 'ASTO-ICHI',
+      address: '0x8B99Fb11Aae84435fD22043a4912090E13Ca0753',
+      farm: 66,
+      externalFarm: ADDRESSES[AddressName.FARMING_V2][ChainId.Mainnet] || '',
+      scarceToken: 'token0',
+      scarceTokenName: TokenName.ICHI_V2,
+      scarceTokenDecimals: 18,
+      scarceTokenCoingeckoId: 'ichi-farm',
+      baseTokenName: TokenName.ASTO,
+      baseTokenDecimals: 18,
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: true,
+      isHodlVault: true,
+      isLegacy: isLegacy(MainnetPoolNumbers.ASTO_VAULT, ChainId.Mainnet),
+      irrStartTxAmount: 0,
+      depositStatus: true,
+    }
+  },
   [VaultName.BANK]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.BANK,

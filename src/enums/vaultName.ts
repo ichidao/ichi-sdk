@@ -7,6 +7,7 @@ export enum VaultName {
   BAT = 'bat',
   BIT = 'bit',
   BOBA = 'boba',
+  BOBA_ETH = 'boba_eth',
   CHO = 'cho',
   COMP = 'comp',
   COW = 'cow',
@@ -15,6 +16,7 @@ export enum VaultName {
   FUSE = 'fuse',
   FXS = 'fxs',
   GIV = 'giv', // GIV-ICHI
+  GIV_ETH = 'giv_eth', 
   HOME = 'home',
   ICHI = 'ichi',
   LDO = 'ldo',
@@ -61,6 +63,7 @@ export enum VaultName {
   POLYGON_GOVI = 'pol_govi',
   POLYGON_ONEBTC = 'pol_onebtc',
   POLYGON_USDC = 'pol_usdc',
+  POLYGON_USDC_WETH = 'pol_usdc_weth',
   POLYGON_WBTC = 'pol_wbtc'
 }
 
@@ -73,6 +76,7 @@ export enum VaultTableName {
   BANK_ICHI = 'bank_ichi',
   BAT_ICHI = 'bat_ichi',
   BIT_ICHI = 'bit_ichi',
+  BOBA_ETH = 'boba_eth',
   CHO_ICHI = 'cho_ichi',
   COMP_ICHI = 'comp_ichi',
   COW_ICHI = 'cow_ichi',
@@ -80,6 +84,7 @@ export enum VaultTableName {
   FRAX_ICHI = 'frax_ichi',
   FXS_ICHI = 'fxs_ichi',
   GIV_ICHI = 'giv_ichi',
+  GIV_ETH = 'giv_eth', 
   LDO_ICHI = 'ldo_ichi',
   LINK_ICHI = 'link_ichi',
   METIS_ICHI = 'metis_ichi',
@@ -129,7 +134,8 @@ export enum VaultTableName {
   POLYGON_GOVI_ICHI = 'pol_govi_ichi',
   POLYGON_WBTC_ICHI = 'pol_wbtc_ichi',
   POLYGON_ONEBTC_ICHI = 'pol_onebtc_ichi',
-  POLYGON_USDC_ICHI = 'pol_usdc_ichi'
+  POLYGON_USDC_ICHI = 'pol_usdc_ichi',
+  POLYGON_USDC_WETH = 'pol_usdc_weth'
 }
 
 export type VaultNames = keyof typeof VaultName;

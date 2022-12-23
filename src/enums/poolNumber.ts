@@ -68,6 +68,8 @@ export enum MainnetPoolNumbers {
   SFRXETH_VAULT = 1064,
   QRDO_ICHI_VAULT = 1065,
   ASTO_VAULT = 1066,
+  BOBA_ETH_VAULT = 1067,
+  GIV_ETH_VAULT = 1068,
   ONE_FUSE_VAULT = 20001,
   ONE_WING_VAULT = 20002,
   ONE_FOX_VAULT = 20003,
@@ -103,7 +105,8 @@ export enum PolygonPoolNumbers {
   WBTC_VAULT = 4001,
   // USDC_VAULT_POLYGON = 4002,
   USDC_VAULT = 4002,
-  GOVI_VAULT = 4003
+  GOVI_VAULT = 4003,
+  USDC_WETH_VAULT = 4004
 }
 
 export enum MumbaiPoolNumbers {

@@ -1295,6 +1295,44 @@ export const PoolLabels: TPoolLabels = {
       vaultAddress: '0x8B99Fb11Aae84435fD22043a4912090E13Ca0753',
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
+    },
+    [MainnetPoolNumbers.BOBA_ETH_VAULT]: {
+      name: 'BOBA-ETH Vault',
+      poolNumber: MainnetPoolNumbers.BOBA_ETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      farmAddress: ADDRESSES[AddressName.FARMING_V2][ChainId.Mainnet],
+      farmId: 67,
+      farmRewardTokenName: TokenName.WETH,
+      farmRewardTokenDecimals: 18,
+      farmRewardTokenAddress: getToken(TokenName.WETH, ChainId.Mainnet).address,
+      tradeUrl: 'https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x42bbfa2e77757c645eeaad1655e0911a7553efbc&chain=mainnet',
+      subgraphEndpoint: '',
+      isInverted: false,
+      isHodl: true,
+      vaultName: VaultName.BOBA_ETH,
+      vaultAddress: '0x12a819EC5085A82A72D9BB3Cdf78408271121677',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [MainnetPoolNumbers.GIV_ETH_VAULT]: {
+      name: 'GIV-ETH Vault',
+      poolNumber: MainnetPoolNumbers.GIV_ETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      farmAddress: ADDRESSES[AddressName.FARMING_V2][ChainId.Mainnet],
+      farmId: 68,
+      farmRewardTokenName: TokenName.WETH,
+      farmRewardTokenDecimals: 18,
+      farmRewardTokenAddress: getToken(TokenName.WETH, ChainId.Mainnet).address,
+      tradeUrl: 'https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x900dB999074d9277c5DA2A43F252D74366230DA0&chain=mainnet',
+      subgraphEndpoint: '',
+      isInverted: false,
+      isHodl: true,
+      vaultName: VaultName.GIV_ETH,
+      vaultAddress: '0xd46904b107b249E64D28F66a4B6BAC2E6AC1b953',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
     }
   },
   [ChainId.Kovan]: {
@@ -1421,6 +1459,21 @@ export const PoolLabels: TPoolLabels = {
       isHodl: false,
       vaultName: VaultName.USDC_ICHI, // old polygon_usdc
       vaultAddress: '0x711901e4b9136119Fb047ABe8c43D49339f161c3',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [PolygonPoolNumbers.USDC_WETH_VAULT]: {
+      name: 'USDC-wETH Vault',
+      poolNumber: PolygonPoolNumbers.USDC_WETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl:
+        'https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174&chain=polygon',
+      subgraphEndpoint: '',
+      isInverted: false,
+      isHodl: false,
+      vaultName: VaultName.POLYGON_USDC_WETH, 
+      vaultAddress: '0x3ac9b3db3350A515c702ba19a001d099d4a5F132',
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     }

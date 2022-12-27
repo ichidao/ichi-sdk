@@ -555,11 +555,7 @@ export const Pools: TPools = {
   // These vaults don't show in either main app or legacy app.
   // They are available by direct link
   [PoolGroupName.HIDDEN_VAULTS]: {
-    [ChainId.Mainnet]: [
-      MainnetPoolNumbers.ICHI_ETH_VAULT,
-      MainnetPoolNumbers.ICHI_WBTC_VAULT,
-      MainnetPoolNumbers.ICHI_USDC_VAULT
-    ], 
+    [ChainId.Mainnet]: [], 
     [ChainId.Polygon]: [],
     [ChainId.Kovan]: [],
     [ChainId.Mumbai]: [],

@@ -3,7 +3,7 @@ import { EnvUtils } from '../utils/env';
 import { ChainId, SUPPORTED_NETWORKS } from './networks';
 import { Optional } from '../types/optional';
 import dns from 'dns';
-import { ProviderCache } from 'src/models/providerCache';
+import { ProviderCache } from '../models/providerCache';
 
 // const BSC_ADDRESSES = {
 //   gnosis: '0xdbB0DfcB3601e15541c072B2a866C0D53D6c6627',

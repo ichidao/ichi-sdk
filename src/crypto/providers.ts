@@ -194,7 +194,6 @@ export const getProvider = async (chainId: ChainId): Promise<Optional<JsonRpcPro
     const lastUpdated = providerCache[chainId]?.lastUdated;
     // If it has been, clear the cache for this chain the re-establish the provider
     if (lastUpdated && Date.now() - lastUpdated > RPC_CACHE_UPDATE_INTERVAL) {
-      console.log(`[REMOVE] CACHE UPDATED!!!`);
       setCachedProvider(chainId, undefined);
       return getProvider(chainId);
     }

@@ -11,7 +11,7 @@ describe('providers', () => {
     beforeEach(() => {
       jest.resetModules(); // this is important - it clears the cache
       process.env = { ...env };
-      setRpcCacheUpdateInterval(1 * 1000);
+      setRpcCacheUpdateInterval(0.5 * 1000);
     });
 
     afterEach(() => {

@@ -12,7 +12,7 @@ export namespace EnvUtils {
     BSC_RPC_HOSTS = 'BSC_RPC_HOSTS',
     POLYGON_RPC_HOSTS = 'POLYGON_RPC_HOSTS',
     MUMBAI_RPC_HOSTS = 'MUMBAI_RPC_HOSTS',
-    CMC_API_KEY = 'CMC_API_KEY',
+    CMC_API_KEY = 'CMC_API_KEY'
   }
 
   export enum GatsbyEnvName {
@@ -25,7 +25,7 @@ export namespace EnvUtils {
     GATSBY_BSC_RPC_HOSTS = 'GATSBY_BSC_RPC_HOSTS',
     GATSBY_POLYGON_RPC_HOSTS = 'GATSBY_POLYGON_RPC_HOSTS',
     GATSBY_MUMBAI_RPC_HOSTS = 'GATSBY_MUMBAI_RPC_HOSTS',
-    GATSBY_CMC_API_KEY = 'GATSBY_CMC_API_KEY',
+    GATSBY_CMC_API_KEY = 'GATSBY_CMC_API_KEY'
   }
 
   export type EnvNameKey = keyof typeof EnvName;
@@ -56,28 +56,28 @@ export namespace EnvUtils {
 
   // Note that in testing ultimately we should getValue to dynamically resolve the process.env and not
   // rely on these EnvValue, these are more quick accesssors for the main app
-  export const EnvValue: PartialRecord<EnvNameKey, string> = {
-    [EnvUtils.EnvName.ALCHEMY_ID]: EnvUtils.getValue(EnvName.ALCHEMY_ID),
-    [EnvUtils.EnvName.INFURA_ID]: EnvUtils.getValue(EnvName.INFURA_ID),
-    [EnvUtils.EnvName.CHAIN_SRC]: EnvUtils.getValue(EnvName.CHAIN_SRC),
-    [EnvUtils.EnvName.CMC_API_KEY]: EnvUtils.getValue(EnvName.CMC_API_KEY),
-  };
+  // export const EnvValue: PartialRecord<EnvNameKey, string> = {
+  //   [EnvUtils.EnvName.ALCHEMY_ID]: EnvUtils.getValue(EnvName.ALCHEMY_ID),
+  //   [EnvUtils.EnvName.INFURA_ID]: EnvUtils.getValue(EnvName.INFURA_ID),
+  //   [EnvUtils.EnvName.CHAIN_SRC]: EnvUtils.getValue(EnvName.CHAIN_SRC),
+  //   [EnvUtils.EnvName.CMC_API_KEY]: EnvUtils.getValue(EnvName.CMC_API_KEY)
+  // };
 
-  export const EnvValues: PartialRecord<EnvNameKey, string[]> = {
-    [EnvUtils.EnvName.MAINNET_RPC_HOSTS]: EnvUtils.getValues(EnvName.MAINNET_RPC_HOSTS),
-    [EnvUtils.EnvName.KOVAN_RPC_HOSTS]: EnvUtils.getValues(EnvName.KOVAN_RPC_HOSTS),
-    [EnvUtils.EnvName.GOERLI_RPC_HOSTS]: EnvUtils.getValues(EnvName.GOERLI_RPC_HOSTS),
-    [EnvUtils.EnvName.BSC_RPC_HOSTS]: EnvUtils.getValues(EnvName.BSC_RPC_HOSTS),
-    [EnvUtils.EnvName.POLYGON_RPC_HOSTS]: EnvUtils.getValues(EnvName.POLYGON_RPC_HOSTS),
-    [EnvUtils.EnvName.MUMBAI_RPC_HOSTS]: EnvUtils.getValues(EnvName.MUMBAI_RPC_HOSTS)
-  };
+  // export const EnvValues: PartialRecord<EnvNameKey, string[]> = {
+  //   [EnvUtils.EnvName.MAINNET_RPC_HOSTS]: EnvUtils.getValues(EnvName.MAINNET_RPC_HOSTS),
+  //   [EnvUtils.EnvName.KOVAN_RPC_HOSTS]: EnvUtils.getValues(EnvName.KOVAN_RPC_HOSTS),
+  //   [EnvUtils.EnvName.GOERLI_RPC_HOSTS]: EnvUtils.getValues(EnvName.GOERLI_RPC_HOSTS),
+  //   [EnvUtils.EnvName.BSC_RPC_HOSTS]: EnvUtils.getValues(EnvName.BSC_RPC_HOSTS),
+  //   [EnvUtils.EnvName.POLYGON_RPC_HOSTS]: EnvUtils.getValues(EnvName.POLYGON_RPC_HOSTS),
+  //   [EnvUtils.EnvName.MUMBAI_RPC_HOSTS]: EnvUtils.getValues(EnvName.MUMBAI_RPC_HOSTS)
+  // };
 
   export function printEnvironment() {
-    for (let envName in EnvValue) {
-      console.log(`env:${envName}:${EnvValue[envName]} `);
+    for (let envName in EnvName) {
+      console.log(`env:${envName}:${getValue(envName as EnvName)} `);
     }
-    for (let envName in EnvValues) {
-      console.log(`env:${envName}:${EnvValues[envName]} `);
+    for (let envName in EnvName) {
+      console.log(`env:${envName}:${getValues(envName as EnvName)} `);
     }
   }
 
@@ -107,9 +107,7 @@ export namespace EnvUtils {
     }
 
     if (!EnvUtils.isDefined(EnvUtils.EnvName.CMC_API_KEY)) {
-      console.warn(
-        'It may be necessary to set the environment variable "CMC_API_KEY"'
-      );
+      console.warn('It may be necessary to set the environment variable "CMC_API_KEY"');
       // return false;
     }
 

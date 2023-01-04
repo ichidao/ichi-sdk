@@ -53,7 +53,7 @@ export type SupportedNetworkList = {
 };
 
 export const generateIconUrl = (chainId: ChainId, ext: 'png' | 'svg') => {
-  return EnvUtils.EnvValue.CHAIN_SRC?.replace('[chainid]', chainId.toString()).replace('[ext]', ext);
+  return EnvUtils.getValue(EnvUtils.EnvName.CHAIN_SRC)?.replace('[chainid]', chainId.toString()).replace('[ext]', ext);
 };
 
 export const SUPPORTED_NETWORKS: SupportedNetworkList = {

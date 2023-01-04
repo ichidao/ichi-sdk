@@ -3,8 +3,6 @@ import { PartialRecord } from '../types/common';
 import { getOneTokenFactoryContract } from '../utils/contracts';
 import { getProvider } from '../crypto/providers';
 import { OracleName, OracleNames } from '../enums/oracleName';
-import { TokenName } from '../enums/tokenName';
-import { getToken } from './tokens';
 import { OneTokenFactory } from '../generated';
 import { getAddress } from './addresses';
 import { AddressName } from '../enums/addressName';
@@ -16,10 +14,13 @@ type OracleMapping = {
 // TODO: I think we can totally remove this and merge it into the TOKENS?  So here are some overlap here, really we want
 // tokens to be in tokens.ts and other contracts are fine to be in here...
 export const ORACLES: OracleMapping = {
-  [OracleName.ICHI_ORACLE]: { [ChainId.Mainnet]: '0xD41EA28e17BD06136c416cA942fB997122138139' },
+  [OracleName.ICHI_ORACLE]: { [ChainId.Mainnet]: '0xD41EA28e17BD06136c416cA942fB997122138139' }
 };
 
-export async function getAllOneTokenOracles(oneTokenFactoryName: AddressName, chainId: ChainId): Promise<Record<string, string[]>> {
+export async function getAllOneTokenOracles(
+  oneTokenFactoryName: AddressName,
+  chainId: ChainId
+): Promise<Record<string, string[]>> {
   let oneTokenToOracle = {};
 
   const ichiVaultFactory = await getOneTokenFactoryInstance(oneTokenFactoryName, chainId);
@@ -34,11 +35,12 @@ export async function getAllOneTokenOracles(oneTokenFactoryName: AddressName, ch
 }
 
 export async function getOneTokenOracles(
-  oneTokenAddress: string, 
-  chainId: ChainId, 
-  ichiVaultFactoryContract?: OneTokenFactory, 
-  oneTokenFactoryName?: AddressName): Promise<string[]> {
-  let ichiVaultFactory;
+  oneTokenAddress: string,
+  chainId: ChainId,
+  ichiVaultFactoryContract?: OneTokenFactory,
+  oneTokenFactoryName?: AddressName
+): Promise<string[]> {
+  let ichiVaultFactory: OneTokenFactory;
   if (!ichiVaultFactoryContract) {
     if (!oneTokenFactoryName) {
       throw 'Cannot make instance of OneToken Factory - Name not provided';
@@ -59,7 +61,10 @@ export async function getOneTokenOracles(
   return oneTokenToOracle;
 }
 
-async function getOneTokenFactoryInstance(oneTokenFactoryName: AddressName, chainId: ChainId): Promise<OneTokenFactory> {
+async function getOneTokenFactoryInstance(
+  oneTokenFactoryName: AddressName,
+  chainId: ChainId
+): Promise<OneTokenFactory> {
   const provider = await getProvider(chainId);
   if (!provider) {
     throw Error('Could not connect with provider');

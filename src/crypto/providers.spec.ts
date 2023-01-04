@@ -29,12 +29,12 @@ describe('providers', () => {
     const testParams: TestArgs[] = [
       {
         chainId: ChainId.Mainnet,
-        rpcUrls: `https://internal.does.not.exit,http://foo.internal:8545,https://cloudflare-eth.com`,
+        rpcUrls: `https://internal.does.not.exit,http://foo.internal:99999,https://cloudflare-eth.com`,
         expectedRpcUrl: 'https://cloudflare-eth.com'
       },
       {
         chainId: ChainId.Mainnet,
-        rpcUrls: `https://cloudflare-eth.com,http://foo.internal:8545`,
+        rpcUrls: `https://cloudflare-eth.com,http://foo.internal:99999`,
         expectedRpcUrl: 'https://cloudflare-eth.com'
       }
     ];

@@ -457,6 +457,17 @@ export const TOKENS: TokenMapping = {
     }
   },
   [TokenName.TRADE]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.TRADE,
+      tableName: TokenName.TRADE,
+      address: '0x6e5970DBd6fc7eb1f29C6D2eDF2bC4c36124C0C1',
+      decimals: 18,
+      displayName: 'TRADE',
+      symbol: 'TRADE',
+      fullName: 'Polytrade',
+      isOneToken: false,
+      atCoingecko: true
+    },
     [ChainId.Polygon]: {
       tokenName: TokenName.TRADE,
       tableName: TokenName.TRADE,
@@ -466,7 +477,7 @@ export const TOKENS: TokenMapping = {
       symbol: 'TRADE',
       fullName: 'Polytrade',
       isOneToken: false,
-      atCoingecko: true
+      atCoingecko: false
     }
   },
   [TokenName.UMA]: {

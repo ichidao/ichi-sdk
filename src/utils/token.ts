@@ -130,6 +130,7 @@ export async function getTokenMetrics(
       price = 1;
     } else {
       switch (tokenName) {
+        case TokenName.USDT:
         case TokenName.USDC:
         case TokenName.DAI:
         case TokenName.HOME:
@@ -151,6 +152,18 @@ export async function getTokenMetrics(
 
             price = tokenPrices[goviMainnetAddress.toLowerCase()].usd;
             priceChange = tokenPrices[goviMainnetAddress.toLowerCase()].usd_24h_change;
+          }
+          break;
+        case TokenName.TRADE:
+          const tradeMainnetAddress = TOKENS[TokenName.TRADE]![ChainId.Mainnet]?.address;
+          if (tradeMainnetAddress) {
+            let tokenPrices = await lookUpTokenPrices([tradeMainnetAddress.toLowerCase()]);
+            if (!tokenPrices || !(tradeMainnetAddress.toLowerCase() in tokenPrices)) {
+              throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
+            }
+
+            price = tokenPrices[tradeMainnetAddress.toLowerCase()].usd;
+            priceChange = tokenPrices[tradeMainnetAddress.toLowerCase()].usd_24h_change;
           }
           break;
         case TokenName.PWING:

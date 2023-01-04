@@ -106,7 +106,8 @@ export enum PolygonPoolNumbers {
   // USDC_VAULT_POLYGON = 4002,
   USDC_VAULT = 4002,
   GOVI_VAULT = 4003,
-  USDC_WETH_VAULT = 4004
+  USDC_WETH_VAULT = 4004,
+  TRADE_USDT_VAULT = 4005
 }
 
 export enum MumbaiPoolNumbers {

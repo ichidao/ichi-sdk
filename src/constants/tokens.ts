@@ -456,6 +456,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.TRADE]: {
+    [ChainId.Polygon]: {
+      tokenName: TokenName.TRADE,
+      tableName: TokenName.TRADE,
+      address: '0x692AC1e363ae34b6B489148152b12e2785a3d8d6',
+      decimals: 18,
+      displayName: 'TRADE',
+      symbol: 'TRADE',
+      fullName: 'Polytrade',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.UMA]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.UMA,
@@ -465,6 +478,19 @@ export const TOKENS: TokenMapping = {
       displayName: 'UMA',
       symbol: 'UMA',
       fullName: 'UMA Voting Token v1',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
+  [TokenName.USDT]: {
+    [ChainId.Polygon]: {
+      tokenName: TokenName.USDT,
+      tableName: TokenName.USDT,
+      address: '0xc2132D05D31c914a87C6611C10748AEb04B58e8F',
+      decimals: 6,
+      displayName: 'USDT',
+      symbol: 'USDT',
+      fullName: 'Tether USD',
       isOneToken: false,
       atCoingecko: true
     }

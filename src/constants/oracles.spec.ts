@@ -1,6 +1,5 @@
 import { expect } from '@jest/globals';
 import { ChainId } from '../crypto/networks';
-import { getAddress } from '../constants/addresses';
 import { AddressName } from '../enums/addressName';
 import { ORACLES, getOracleAddress, getAllOneTokenOracles } from './oracles';
 import { OracleName } from '../enums/oracleName';
@@ -17,8 +16,8 @@ describe('constants/addresses', () => {
       {
         name: OracleName.ICHI_ORACLE,
         chainId: ChainId.Mainnet,
-        expectedAddress: ORACLES[OracleName.ICHI_ORACLE][ChainId.Mainnet],
-      },
+        expectedAddress: ORACLES[OracleName.ICHI_ORACLE][ChainId.Mainnet]
+      }
     ];
 
     testParams.forEach((testParam) => {

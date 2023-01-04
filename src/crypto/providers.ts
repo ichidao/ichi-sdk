@@ -3,6 +3,7 @@ import { EnvUtils } from '../utils/env';
 import { ChainId, SUPPORTED_NETWORKS } from './networks';
 import { Optional } from '../types/optional';
 import dns from 'dns';
+import { ProviderCache } from 'src/models/providerCache';
 
 // const BSC_ADDRESSES = {
 //   gnosis: '0xdbB0DfcB3601e15541c072B2a866C0D53D6c6627',
@@ -11,20 +12,83 @@ import dns from 'dns';
 //   dlp: '0x018e41228b1ebc2f81897150877edbb682272c64'
 // };
 
-let mainnetProvider: Optional<JsonRpcProvider>;
-let kovanProvider: Optional<JsonRpcProvider>;
-let goerliProvider: Optional<JsonRpcProvider>;
+let RPC_CACHE_UPDATE_INTERVAL = 30 * 1000; // 30s
 
-let bscProvider: Optional<JsonRpcProvider>;
-let polygonProvider: Optional<JsonRpcProvider>;
-let mumbaiProvider: Optional<JsonRpcProvider>;
+export const setRpcCacheUpdateInterval = (ms: number) => {
+  RPC_CACHE_UPDATE_INTERVAL = ms;
+};
 
-// This uses Quorum and not applicable to our current scenario but it may make sense in the future to target multiple
-// backup provides like infura and another provider as 2 backups in Quorum.
-// export let mainnetProvider = new ethers.providers.FallbackProvider([
-//   {provider: primaryMainnetProvider, priority: 1, weight: 1, stallTimeout: 0},
-//   {provider: backupMainnetProvider, priority: 2, weight: 1, stallTimeout: 0},
-// ]);
+export const providerCacheReference: Record<ChainId, ProviderCache> = {
+  [ChainId.Mainnet]: {
+    lastUdated: 0,
+    cacheHit: 0,
+    cacheMiss: 0
+  },
+  [ChainId.Ropsten]: {
+    lastUdated: 0,
+    cacheHit: 0,
+    cacheMiss: 0
+  },
+  [ChainId.Rinkeby]: {
+    lastUdated: 0,
+    cacheHit: 0,
+    cacheMiss: 0
+  },
+  [ChainId.Kovan]: {
+    lastUdated: 0,
+    cacheHit: 0,
+    cacheMiss: 0
+  },
+  [ChainId.Goerli]: {
+    lastUdated: 0,
+    cacheHit: 0,
+    cacheMiss: 0
+  },
+  [ChainId.Bsc]: {
+    lastUdated: 0,
+    cacheHit: 0,
+    cacheMiss: 0
+  },
+  [ChainId.Polygon]: {
+    lastUdated: 0,
+    cacheHit: 0,
+    cacheMiss: 0
+  },
+  [ChainId.Mumbai]: {
+    lastUdated: 0,
+    cacheHit: 0,
+    cacheMiss: 0
+  }
+};
+
+export let providerCache = {
+  ...providerCacheReference
+};
+
+export const resetProviderCache = () => {
+  providerCache = {
+    ...providerCacheReference
+  };
+};
+
+const setCachedProvider = (chainId: ChainId, provider?: JsonRpcProvider) => {
+  providerCache[chainId] = {
+    provider,
+    lastUdated: Date.now(),
+    cacheHit: providerCache[chainId].cacheHit,
+    cacheMiss: providerCache[chainId].cacheMiss
+  };
+};
+
+const getCachedProvider = (chainId: ChainId): Optional<JsonRpcProvider> => {
+  if (providerCache[chainId]?.provider) {
+    providerCache[chainId].cacheHit++;
+  } else {
+    console.log(`Cache miss for chainId: ${chainId}`);
+    providerCache[chainId].cacheMiss++;
+  }
+  return providerCache[chainId]?.provider;
+};
 
 const resolve = async (hostname: string, rrtype: string): Promise<boolean> => {
   return new Promise((resolve, reject) => {
@@ -50,7 +114,7 @@ export const connectToProvider = async (
       const url = rpcHosts[i];
       console.debug(`Attempting to connect to rpc host from env vars: ${url}`);
       try {
-        // First attempte to resolve the url, if we don't do this attempting to JsonRpcProvider to an unreachable host will just hang
+        // First attempt to resolve the url, if we don't do this attempting to JsonRpcProvider to an unreachable host will just hang
         const { hostname } = new URL(url);
         try {
           console.debug(`Resolve hostname ${hostname}...`);
@@ -104,104 +168,50 @@ export const connectToProvider = async (
   }
 };
 
-export const getProvider = async (chainId: number): Promise<Optional<JsonRpcProvider>> => {
+const getRpcEnvName = (chainId: ChainId): EnvUtils.EnvName => {
   switch (chainId) {
     case ChainId.Mainnet:
-      // If the mainnet provider has already been configured and set, return it.
-      if (mainnetProvider) {
-        return mainnetProvider;
-      }
-
-      // Establish the first RPC provider we can
-      mainnetProvider = await connectToProvider(
-        ChainId.Mainnet,
-        EnvUtils.EnvValues.MAINNET_RPC_HOSTS,
-        EnvUtils.EnvValue.INFURA_ID
-      );
-      if (!mainnetProvider) {
-        throw new Error(`Could not connect to any given mainnet providers, please check network`);
-      }
-
-      return mainnetProvider;
+      return EnvUtils.EnvName.MAINNET_RPC_HOSTS;
     case ChainId.Kovan:
-      // If the mainnet provider has already been configured and set, return it.
-      if (kovanProvider) {
-        return kovanProvider;
-      }
-
-      // Establish the first RPC provider we can
-      kovanProvider = await connectToProvider(
-        ChainId.Kovan,
-        EnvUtils.EnvValues.KOVAN_RPC_HOSTS,
-        EnvUtils.EnvValue.INFURA_ID
-      );
-      if (!kovanProvider) {
-        throw new Error(`Could not connect to a kovan provider, please check network`);
-      }
-
-      return kovanProvider;
+      return EnvUtils.EnvName.KOVAN_RPC_HOSTS;
     case ChainId.Goerli:
-      if (goerliProvider) {
-        return goerliProvider;
-      }
-
-      // Establish the first RPC provider we can
-      goerliProvider = await connectToProvider(
-        ChainId.Goerli,
-        EnvUtils.EnvValues.GOERLI_RPC_HOSTS,
-        EnvUtils.EnvValue.INFURA_ID
-      );
-      if (!goerliProvider) {
-        throw new Error(`Could not connect to a goerli provider, please check your network`);
-      }
-
-      return goerliProvider;
+      return EnvUtils.EnvName.GOERLI_RPC_HOSTS;
     case ChainId.Bsc:
-      if (bscProvider) {
-        return bscProvider;
-      }
-
-      // Establish the first RPC provider we can
-      bscProvider = await connectToProvider(ChainId.Bsc, EnvUtils.EnvValues.BSC_RPC_HOSTS, EnvUtils.EnvValue.INFURA_ID);
-      if (!bscProvider) {
-        throw new Error(`Could not connect to a BSC provider, please check your network`);
-      }
-
-      return bscProvider;
+      return EnvUtils.EnvName.BSC_RPC_HOSTS;
     case ChainId.Polygon:
-      if (polygonProvider) {
-        return polygonProvider;
-      }
-
-      // Establish the first RPC provider we can
-      polygonProvider = await connectToProvider(
-        ChainId.Polygon,
-        EnvUtils.EnvValues.POLYGON_RPC_HOSTS,
-        EnvUtils.EnvValue.INFURA_ID
-      );
-      if (!polygonProvider) {
-        throw new Error(`Could not connect to a polygon provider, please check your network`);
-      }
-
-      return polygonProvider;
+      return EnvUtils.EnvName.POLYGON_RPC_HOSTS;
     case ChainId.Mumbai:
-      if (mumbaiProvider) {
-        return mumbaiProvider;
-      }
-
-      // Establish the first RPC provider we can
-      mumbaiProvider = await connectToProvider(
-        ChainId.Mumbai,
-        EnvUtils.EnvValues.MUMBAI_RPC_HOSTS,
-        // EnvUtils.EnvValue.ALCHEMY_ID
-        EnvUtils.EnvValue.INFURA_ID
-      );
-      if (!mumbaiProvider) {
-        throw new Error(`Could not connect to a mumbai provider, please check your network`);
-      }
-
-      return mumbaiProvider;
+      return EnvUtils.EnvName.MUMBAI_RPC_HOSTS;
     default:
       throw new Error(`Could not connect to primary or backup providers, please check network`);
   }
+};
+
+export const getProvider = async (chainId: ChainId): Promise<Optional<JsonRpcProvider>> => {
+  const cachedProvider = getCachedProvider(chainId);
+  if (cachedProvider) {
+    // If the provider is cached, let's check if it's been more than the cache interval minutes since the last update
+    const lastUpdated = providerCache[chainId]?.lastUdated;
+    // If it has been, clear the cache for this chain the re-establish the provider
+    if (lastUpdated && Date.now() - lastUpdated > RPC_CACHE_UPDATE_INTERVAL) {
+      console.log(`[REMOVE] CACHE UPDATED!!!`);
+      setCachedProvider(chainId, undefined);
+      return getProvider(chainId);
+    }
+
+    return cachedProvider;
+  }
+
+  // Establish the first RPC provider we can
+  const provider = await connectToProvider(
+    chainId,
+    EnvUtils.getValues(getRpcEnvName(chainId)),
+    EnvUtils.getValue(EnvUtils.EnvName.INFURA_ID)
+  );
+
+  if (provider) {
+    setCachedProvider(chainId, provider);
+    return provider;
+  }
+  throw new Error(`Could not connect to any given mainnet providers, please check network`);
 };

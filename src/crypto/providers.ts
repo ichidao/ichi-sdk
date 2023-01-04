@@ -84,7 +84,6 @@ const getCachedProvider = (chainId: ChainId): Optional<JsonRpcProvider> => {
   if (providerCache[chainId]?.provider) {
     providerCache[chainId].cacheHit++;
   } else {
-    console.log(`Cache miss for chainId: ${chainId}`);
     providerCache[chainId].cacheMiss++;
   }
   return providerCache[chainId]?.provider;
@@ -187,7 +186,11 @@ const getRpcEnvName = (chainId: ChainId): EnvUtils.EnvName => {
   }
 };
 
-export const getProvider = async (chainId: ChainId): Promise<Optional<JsonRpcProvider>> => {
+export const getProvider = async (chainId: ChainId, depth: number = 0): Promise<Optional<JsonRpcProvider>> => {
+  if (depth > 2) {
+    throw new Error(`Could not connect to primary or backup providers, please check network`);
+  }
+
   const cachedProvider = getCachedProvider(chainId);
   if (cachedProvider) {
     // If the provider is cached, let's check if it's been more than the cache interval minutes since the last update
@@ -195,7 +198,7 @@ export const getProvider = async (chainId: ChainId): Promise<Optional<JsonRpcPro
     // If it has been, clear the cache for this chain the re-establish the provider
     if (lastUpdated && Date.now() - lastUpdated > RPC_CACHE_UPDATE_INTERVAL) {
       setCachedProvider(chainId, undefined);
-      return getProvider(chainId);
+      return getProvider(chainId, depth + 1);
     }
 
     return cachedProvider;

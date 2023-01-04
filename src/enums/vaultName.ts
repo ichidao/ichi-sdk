@@ -62,6 +62,7 @@ export enum VaultName {
   // Polygon
   POLYGON_GOVI = 'pol_govi',
   POLYGON_ONEBTC = 'pol_onebtc',
+  POLYGON_TRADE_USDT = 'pol_trade_usdt',
   POLYGON_USDC = 'pol_usdc',
   POLYGON_USDC_WETH = 'pol_usdc_weth',
   POLYGON_WBTC = 'pol_wbtc'
@@ -134,6 +135,7 @@ export enum VaultTableName {
   POLYGON_GOVI_ICHI = 'pol_govi_ichi',
   POLYGON_WBTC_ICHI = 'pol_wbtc_ichi',
   POLYGON_ONEBTC_ICHI = 'pol_onebtc_ichi',
+  POLYGON_TRADE_USDT = 'pol_trade_usdt',
   POLYGON_USDC_ICHI = 'pol_usdc_ichi',
   POLYGON_USDC_WETH = 'pol_usdc_weth'
 }

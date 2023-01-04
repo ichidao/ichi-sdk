@@ -1476,6 +1476,21 @@ export const PoolLabels: TPoolLabels = {
       vaultAddress: '0x3ac9b3db3350A515c702ba19a001d099d4a5F132',
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
+    },
+    [PolygonPoolNumbers.TRADE_USDT_VAULT]: {
+      name: 'TRADE-USDT Vault',
+      poolNumber: PolygonPoolNumbers.TRADE_USDT_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl:
+        'https://quickswap.exchange/#/swap?inputCurrency=ETH&swapIndex=0&currency1=0x692AC1e363ae34b6B489148152b12e2785a3d8d6',
+      subgraphEndpoint: '',
+      isInverted: false,
+      isHodl: true,
+      vaultName: VaultName.POLYGON_TRADE_USDT, 
+      vaultAddress: '0x21e6910A769d10ef4236107493406a9788C758a3',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
     }
   },
   [ChainId.Mumbai]: {

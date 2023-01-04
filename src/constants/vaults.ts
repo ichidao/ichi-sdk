@@ -1467,6 +1467,31 @@ export const VAULTS: VaultMapping = {
       depositStatus: true,
     }
   },
+  [VaultName.POLYGON_TRADE_USDT]: {
+    [ChainId.Polygon]: {
+      vaultName: VaultName.POLYGON_TRADE_USDT, 
+      tableName: VaultTableName.POLYGON_TRADE_USDT, 
+      displayName: 'TRADE-USDT (polygon)',
+      address: '0x21e6910A769d10ef4236107493406a9788C758a3',
+      farm: 5,
+      externalFarm: '',
+      scarceToken: 'token1',
+      scarceTokenName: TokenName.USDT,
+      scarceTokenDecimals: 6,
+      scarceTokenCoingeckoId: 'tether',
+      baseTokenName: TokenName.TRADE,
+      baseTokenDecimals: 18,
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: false,
+      isHodlVault: true,
+      // isLegacy: false,
+      isLegacy: isLegacy(PolygonPoolNumbers.TRADE_USDT_VAULT, ChainId.Polygon),
+      irrStartTxAmount: 0,
+      depositStatus: true,
+    }
+  },
   [VaultName.POLYGON_USDC]: {
     [ChainId.Polygon]: {
       vaultName: VaultName.POLYGON_USDC, // old: 'polygon_usdc',

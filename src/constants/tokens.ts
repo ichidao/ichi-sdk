@@ -470,7 +470,7 @@ export const TOKENS: TokenMapping = {
     },
     [ChainId.Polygon]: {
       tokenName: TokenName.TRADE,
-      tableName: TokenName.TRADE,
+      tableName: `pol_${TokenName.TRADE}`,
       address: '0x692AC1e363ae34b6B489148152b12e2785a3d8d6',
       decimals: 18,
       displayName: 'TRADE',
@@ -496,7 +496,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.USDT]: {
     [ChainId.Polygon]: {
       tokenName: TokenName.USDT,
-      tableName: TokenName.USDT,
+      tableName: `pol_${TokenName.USDT}`,
       address: '0xc2132D05D31c914a87C6611C10748AEb04B58e8F',
       decimals: 6,
       displayName: 'USDT',
@@ -738,7 +738,7 @@ export const TOKENS: TokenMapping = {
     },
     [ChainId.Polygon]: {
       tokenName: TokenName.WETH,
-      tableName: TokenName.WETH,
+      tableName: `pol_${TokenName.WETH}`,
       address: '0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619',
       decimals: 18,
       displayName: 'wETH',

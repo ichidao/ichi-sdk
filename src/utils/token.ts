@@ -16,7 +16,7 @@ import { AddressName } from '../enums/addressName';
 import { getAddress } from '../constants/addresses';
 import { CoinGeckoPriceResponse } from '../models/coinGecko';
 import { Optional } from '../types/optional';
-import { TokenMetrics } from '../models/tokenMetrics';
+import { TokenMetrics, TokenSupply } from '../models/tokenMetrics';
 
 export function isOneToken(tokenName: TokenName | string, chainId: ChainId): boolean {
   try {
@@ -32,6 +32,100 @@ export function isOneToken(tokenName: TokenName | string, chainId: ChainId): boo
   }
 }
 
+async function getIchiSupply(): Promise<TokenSupply>{
+  try {
+    const provider = await getProvider(ChainId.Mainnet);
+    if (!provider) {
+      throw new Error('Could not establish provider');
+    }
+
+    const token = getToken(TokenName.ICHI, ChainId.Mainnet);
+
+    const tokenContract = getErc20Contract(token.address, provider);
+    const totalSupply = await tokenContract.totalSupply();
+    const totalTokens = Number(totalSupply) / 10 ** token.decimals;
+
+    const v1Balance = Number(await tokenContract.balanceOf(getAddress(AddressName.FARMING_V1, ChainId.Mainnet))) / 10 ** 9;
+    const v2Balance = Number(await tokenContract.balanceOf(getAddress(AddressName.FARMING_V2, ChainId.Mainnet))) / 10 ** 9;
+    const communityGnosisBalance_V1 =
+      Number(await tokenContract.balanceOf(getAddress(AddressName.ICHI_COMMUNITY_GNOSIS, ChainId.Mainnet))) / 10 ** 9;
+    const ichiInV2Balance =
+      Number(await tokenContract.balanceOf(getToken(TokenName.ICHI_V2, ChainId.Mainnet).address)) / 10 ** 9;
+
+    const circulating =
+      totalTokens -
+      v1Balance -
+      v2Balance -
+      ichiInV2Balance -
+      communityGnosisBalance_V1;
+
+    const tokenSupply: TokenSupply = {
+      circulating,
+      totalTokens
+    };
+
+    return tokenSupply;
+  } catch (e) {
+    console.error(`Could not get token supply for ICHI`, e);
+    throw e;
+  }
+}
+
+async function getIchiV2Supply(): Promise<TokenSupply>{
+  try {
+    const provider = await getProvider(ChainId.Mainnet);
+    if (!provider) {
+      throw new Error('Could not establish provider');
+    }
+
+    const token = getToken(TokenName.ICHI_V2, ChainId.Mainnet);
+
+    const tokenContract = getErc20Contract(token.address, provider);
+    const totalSupply = await tokenContract.totalSupply();
+    const totalTokens = Number(totalSupply) / 10 ** token.decimals;
+
+    const ichiContract = getErc20Contract(getToken(TokenName.ICHI, ChainId.Mainnet).address, provider);
+    const ichiTotalSupply = Number(await ichiContract.totalSupply()) / 10 ** 9;
+
+    const v1Balance = Number(await ichiContract.balanceOf(getAddress(AddressName.FARMING_V1, ChainId.Mainnet))) / 10 ** 9;
+    const v2Balance = Number(await ichiContract.balanceOf(getAddress(AddressName.FARMING_V2, ChainId.Mainnet))) / 10 ** 9;
+    const v3Balance = Number(await tokenContract.balanceOf(getAddress(AddressName.FARMING_V3, ChainId.Mainnet))) / 10 ** 18;
+    const communityGnosisBalance_V1 =
+      Number(await ichiContract.balanceOf(getAddress(AddressName.ICHI_COMMUNITY_GNOSIS, ChainId.Mainnet))) / 10 ** 9;
+    const communityGnosisBalance_V2 =
+      Number(await tokenContract.balanceOf(getAddress(AddressName.ICHI_COMMUNITY_GNOSIS, ChainId.Mainnet))) / 10 ** 18;
+    const ichiV2GnosisBalance =
+      Number(await tokenContract.balanceOf(getAddress(AddressName.ICHI_V2_GNOSIS, ChainId.Mainnet))) / 10 ** 18;
+    const ichiAllyBalance = Number(await tokenContract.balanceOf(getAddress(AddressName.ALLY, ChainId.Mainnet))) / 10 ** 18;
+    const ichiInV2Balance =
+      Number(await ichiContract.balanceOf(getToken(TokenName.ICHI_V2, ChainId.Mainnet).address)) / 10 ** 9;
+    const ichiGSRBalance = Number(await tokenContract.balanceOf(getAddress(AddressName.GSR, ChainId.Mainnet))) / 10 ** 18;
+
+    const circulating =
+      totalTokens +
+      ichiTotalSupply -
+      v1Balance -
+      v2Balance -
+      v3Balance -
+      ichiInV2Balance -
+      communityGnosisBalance_V1 -
+      communityGnosisBalance_V2 -
+      ichiV2GnosisBalance -
+      ichiAllyBalance -
+      ichiGSRBalance;
+
+    const tokenSupply: TokenSupply = {
+      circulating,
+      totalTokens
+    };
+
+    return tokenSupply;
+  } catch (e) {
+    console.error(`Could not get token supply for ICHI V2`, e);
+    throw e;
+  }
+}
+
 export async function getTokenMetrics(
   tokenName: TokenName,
   chainId: ChainId,
@@ -39,7 +133,6 @@ export async function getTokenMetrics(
 ): Promise<TokenMetrics> {
   try {
     const provider = await getProvider(chainId);
-
     if (!provider) {
       throw new Error('Could not establish provider');
     }
@@ -47,63 +140,20 @@ export async function getTokenMetrics(
     const token = getToken(tokenName, chainId);
     let price = 0;
     let priceChange = 0;
+    let totalTokens = 0;
+    let circulating = 0;
+    let tokenSupply: TokenSupply;
 
-    const tokenContract = getErc20Contract(token.address, provider);
-    let totalSupply = await tokenContract.totalSupply();
-    let totalTokens = Number(totalSupply) / 10 ** token.decimals;
-    let circulating = totalTokens;
-
-    if (tokenName == TokenName.ICHI) {
-      // const ichiV2Contract = new ethers.Contract(TOKENS.ichi_v2.address, ERC20_ABI as ContractInterface, provider);
-      const ichiV2Contract = getErc20Contract(getToken(TokenName.ICHI_V2, chainId).address, provider);
-      let ichiV2TotalSupply = Number(await ichiV2Contract.totalSupply()) / 10 ** 18;
-
-      const v1Balance = Number(await tokenContract.balanceOf(getAddress(AddressName.FARMING_V1, chainId))) / 10 ** 9;
-      const v2Balance = Number(await tokenContract.balanceOf(getAddress(AddressName.FARMING_V2, chainId))) / 10 ** 9;
-      const v3Balance = Number(await ichiV2Contract.balanceOf(getAddress(AddressName.FARMING_V3, chainId))) / 10 ** 18;
-      const communityGnosisBalance_V1 =
-        Number(await tokenContract.balanceOf(getAddress(AddressName.ICHI_COMMUNITY_GNOSIS, chainId))) / 10 ** 9;
-      const ichiInV2Balance =
-        Number(await tokenContract.balanceOf(getToken(TokenName.ICHI_V2, chainId).address)) / 10 ** 9;
-
-      circulating =
-        totalTokens -
-        v1Balance -
-        v2Balance -
-        ichiInV2Balance -
-        communityGnosisBalance_V1;
+    if (tokenName === TokenName.ICHI){
+      tokenSupply = await getIchiSupply();
+      totalTokens = tokenSupply.totalTokens;
+      circulating = tokenSupply.circulating;
     }
 
-    if (tokenName == TokenName.ICHI_V2) {
-      const ichiContract = getErc20Contract(getToken(TokenName.ICHI, chainId).address, provider);
-      let ichiTotalSupply = Number(await ichiContract.totalSupply()) / 10 ** 9;
-
-      const v1Balance = Number(await ichiContract.balanceOf(getAddress(AddressName.FARMING_V1, chainId))) / 10 ** 9;
-      const v2Balance = Number(await ichiContract.balanceOf(getAddress(AddressName.FARMING_V2, chainId))) / 10 ** 9;
-      const v3Balance = Number(await tokenContract.balanceOf(getAddress(AddressName.FARMING_V3, chainId))) / 10 ** 18;
-      const communityGnosisBalance_V1 =
-        Number(await ichiContract.balanceOf(getAddress(AddressName.ICHI_COMMUNITY_GNOSIS, chainId))) / 10 ** 9;
-      const communityGnosisBalance_V2 =
-        Number(await tokenContract.balanceOf(getAddress(AddressName.ICHI_COMMUNITY_GNOSIS, chainId))) / 10 ** 18;
-      const ichiV2GnosisBalance =
-        Number(await tokenContract.balanceOf(getAddress(AddressName.ICHI_V2_GNOSIS, chainId))) / 10 ** 18;
-      const ichiAllyBalance = Number(await tokenContract.balanceOf(getAddress(AddressName.ALLY, chainId))) / 10 ** 18;
-      const ichiInV2Balance =
-        Number(await ichiContract.balanceOf(getToken(TokenName.ICHI_V2, chainId).address)) / 10 ** 9;
-      const ichiGSRBalance = Number(await tokenContract.balanceOf(getAddress(AddressName.GSR, chainId))) / 10 ** 18;
-
-      circulating =
-        totalTokens +
-        ichiTotalSupply -
-        v1Balance -
-        v2Balance -
-        v3Balance -
-        ichiInV2Balance -
-        communityGnosisBalance_V1 -
-        communityGnosisBalance_V2 -
-        ichiV2GnosisBalance -
-        ichiAllyBalance -
-        ichiGSRBalance;
+    if (tokenName === TokenName.ICHI_V2){
+      tokenSupply = await getIchiV2Supply();
+      totalTokens = tokenSupply.totalTokens;
+      circulating = tokenSupply.circulating;
     }
 
     if ([TokenName.ONE_BTC, TokenName.ONE_UNI, TokenName.ALLY].includes(tokenName) && chainId === ChainId.Mainnet) {

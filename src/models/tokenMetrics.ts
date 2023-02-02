@@ -4,3 +4,8 @@ export type TokenMetrics = {
   priceChange: number;
   totalTokens: number;
 };
+
+export type TokenSupply = {
+  circulating: number;
+  totalTokens: number;
+};

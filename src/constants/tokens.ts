@@ -411,7 +411,7 @@ export const TOKENS: TokenMapping = {
       address: '0xac3E018457B222d93114458476f3E3416Abbe38F',
       decimals: 18,
       displayName: 'sfrxETH',
-      symbol: 'SFXRETH',
+      symbol: 'SFRXETH',
       fullName: 'Staked Frax Ether',
       isOneToken: false,
       atCoingecko: false

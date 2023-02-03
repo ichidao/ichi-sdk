@@ -22,6 +22,7 @@ export enum TokenName {
   GNO = 'gno',
   GOVI = 'govi',
   HOME = 'home',
+  IMX = 'imx',
   LDO = 'ldo',
   METIS = 'metis',
   MIDAS = 'midas',

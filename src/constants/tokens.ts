@@ -313,6 +313,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.IMX]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.IMX,
+      tableName: TokenName.IMX,
+      address: '0xf57e7e7c23978c3caec3c3548e3d615c346e79ff',
+      decimals: 18,
+      displayName: 'IMX',
+      symbol: 'IMX',
+      fullName: 'ImmutableX',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.LDO]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.LDO,

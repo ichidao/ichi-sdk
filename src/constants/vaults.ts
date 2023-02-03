@@ -440,6 +440,31 @@ export const VAULTS: VaultMapping = {
       depositStatus: true,
     }
   },
+  [VaultName.IMX]: {
+    [ChainId.Mainnet]: {
+      vaultName: VaultName.IMX,
+      tableName: VaultTableName.IMX_ICHI,
+      displayName: 'IMX-ICHI',
+      address: '0x742F29C97e2610e1D142C0906C4eC7b38F194DAa',
+      farm: 0,
+      externalFarm: '',
+      scarceToken: 'token0',
+      scarceTokenName: TokenName.ICHI_V2,
+      scarceTokenDecimals: 18,
+      scarceTokenCoingeckoId: 'ichi-farm',
+      baseTokenName: TokenName.IMX,
+      baseTokenDecimals: 18,
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: true,
+      isHodlVault: true,
+      // isLegacy: false,
+      isLegacy: isLegacy(MainnetPoolNumbers.IMX_VAULT, ChainId.Mainnet),
+      irrStartTxAmount: 0,
+      depositStatus: true,
+    }
+  },
   [VaultName.LDO]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.LDO,

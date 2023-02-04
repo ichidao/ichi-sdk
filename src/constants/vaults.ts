@@ -465,6 +465,31 @@ export const VAULTS: VaultMapping = {
       depositStatus: true,
     }
   },
+  [VaultName.IMX_ETH]: {
+    [ChainId.Mainnet]: {
+      vaultName: VaultName.IMX_ETH,
+      tableName: VaultTableName.IMX_ETH,
+      displayName: 'IMX-ETH',
+      address: '0x65C6AbAa85Dd7E374502B0101b6C1F54a5aD725f',
+      farm: 0,
+      externalFarm: '',
+      scarceToken: 'token0',
+      scarceTokenName: TokenName.WETH,
+      scarceTokenDecimals: 18,
+      scarceTokenCoingeckoId: 'weth',
+      baseTokenName: TokenName.IMX,
+      baseTokenDecimals: 18,
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: true,
+      isHodlVault: true,
+      // isLegacy: false,
+      isLegacy: isLegacy(MainnetPoolNumbers.IMX_ETH_VAULT, ChainId.Mainnet),
+      irrStartTxAmount: 0,
+      depositStatus: true,
+    }
+  },
   [VaultName.LDO]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.LDO,

@@ -1352,6 +1352,25 @@ export const PoolLabels: TPoolLabels = {
       vaultAddress: '0x742F29C97e2610e1D142C0906C4eC7b38F194DAa',
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
+    },
+    [MainnetPoolNumbers.IMX_ETH_VAULT]: {
+      name: 'IMX-ETH Vault',
+      poolNumber: MainnetPoolNumbers.IMX_ETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      farmAddress: '',
+      farmId: 0,
+      farmRewardTokenName: TokenName.WETH,
+      farmRewardTokenDecimals: 18,
+      farmRewardTokenAddress: getToken(TokenName.WETH, ChainId.Mainnet).address,
+      tradeUrl: 'https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0xF57e7e7C23978C3cAEC3C3548E3D615c346e79fF&chain=mainnet',
+      subgraphEndpoint: '',
+      isInverted: true,
+      isHodl: true,
+      vaultName: VaultName.IMX_ETH,
+      vaultAddress: '0x65C6AbAa85Dd7E374502B0101b6C1F54a5aD725f',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
     }
   },
   [ChainId.Kovan]: {

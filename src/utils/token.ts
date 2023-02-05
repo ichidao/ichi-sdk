@@ -32,6 +32,32 @@ export function isOneToken(tokenName: TokenName | string, chainId: ChainId): boo
   }
 }
 
+async function getStandardTokenSupply(tokenName: TokenName, chainId: ChainId): Promise<TokenSupply>{
+  try {
+    const provider = await getProvider(chainId);
+    if (!provider) {
+      throw new Error('Could not establish provider');
+    }
+
+    const token = getToken(tokenName, chainId);
+
+    const tokenContract = getErc20Contract(token.address, provider);
+    const totalSupply = await tokenContract.totalSupply();
+    const totalTokens = Number(totalSupply) / 10 ** token.decimals;
+    const circulating = totalTokens;
+
+    const tokenSupply: TokenSupply = {
+      circulating,
+      totalTokens
+    };
+
+    return tokenSupply;
+  } catch (e) {
+    console.error(`Could not get token supply for ${tokenName}`, e);
+    throw e;
+  }
+}
+
 async function getIchiSupply(): Promise<TokenSupply>{
   try {
     const provider = await getProvider(ChainId.Mainnet);
@@ -143,6 +169,12 @@ export async function getTokenMetrics(
     let totalTokens = 0;
     let circulating = 0;
     let tokenSupply: TokenSupply;
+
+    if (tokenName === TokenName.XICHI){
+      tokenSupply = await getStandardTokenSupply(TokenName.XICHI, chainId);
+      totalTokens = tokenSupply.totalTokens;
+      circulating = tokenSupply.circulating;
+    }
 
     if (tokenName === TokenName.ICHI){
       tokenSupply = await getIchiSupply();

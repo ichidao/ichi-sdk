@@ -13,6 +13,7 @@ export enum TokenName {
   BOBA = 'boba',
   CEL = 'cel',
   CHO = 'cho',
+  COC = 'coc',
   COMP = 'comp',
   COW = 'cow',
   FIDU = 'fidu',

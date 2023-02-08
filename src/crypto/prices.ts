@@ -9,7 +9,7 @@ import { CommonOracle__factory, OneTokenV1__factory, OneEth__factory, OneLink__f
 import { getProvider } from './providers';
 import { getErc20Contract, getIchiVaultContract, getUniswapV3PoolContract } from '../utils/contracts';
 import { VaultName } from '../enums/vaultName';
-import { getVault } from '../constants/vaults';
+import { getVault, VAULTS } from '../constants/vaults';
 import { getPrice } from '../utils/vault';
 
 export async function getXICHIPrice(
@@ -170,5 +170,41 @@ export async function getOneTokenPriceFromVault(
   } catch (e) {
     console.error(`Could not get ${name} price from vault`);
     throw e;
+  }
+}
+
+export async function getPriceFromUSDCVault(
+  vault: VaultName,
+  provider: JsonRpcProvider,
+  chainId: ChainId
+): Promise<number> {
+  let vaultObj = VAULTS[vault][chainId];
+  if (vaultObj){
+    try {
+
+      const vaultContract = getIchiVaultContract(vaultObj.address, provider);
+      const poolAddress: string = await vaultContract.pool();
+
+      const poolContract = getUniswapV3PoolContract(poolAddress, provider);
+      const slot0 = await poolContract.slot0();
+
+      const sqrtPrice = slot0[0];
+      let price = 1;
+      if (vaultObj.baseTokenName === TokenName.USDC) {
+        price = getPrice(
+          vaultObj.isInverted, sqrtPrice, vaultObj.baseTokenDecimals, vaultObj.scarceTokenDecimals, 5);
+      } else {
+        price = getPrice(
+          !vaultObj.isInverted, sqrtPrice, vaultObj.scarceTokenDecimals, vaultObj.baseTokenDecimals, 5);
+      }
+
+      return price;
+    } catch (e) {
+      console.error(`Could not get price from ${vaultObj.displayName} vault`);
+      throw e;
+    }
+  } else {
+    console.error(`Could not find ${vault} vault`);
+    return 0;
   }
 }

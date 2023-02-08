@@ -248,6 +248,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.COC]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.COC,
+      tableName: TokenName.COC,
+      address: '0xc00e94Cb662C3520282E6f5717214004A7f26888',
+      decimals: 18,
+      displayName: 'COC',
+      symbol: 'COC',
+      fullName: 'CryptoOracle Collective',
+      isOneToken: false,
+      atCoingecko: false
+    }
+  },
   [TokenName.COMP]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.COMP,

@@ -252,7 +252,7 @@ export const TOKENS: TokenMapping = {
     [ChainId.Mainnet]: {
       tokenName: TokenName.COC,
       tableName: TokenName.COC,
-      address: '0xc00e94Cb662C3520282E6f5717214004A7f26888',
+      address: '0xC8D9871a79551Ab4439C9E08f12962E3785f0437',
       decimals: 18,
       displayName: 'COC',
       symbol: 'COC',

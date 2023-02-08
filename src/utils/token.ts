@@ -18,7 +18,7 @@ import { getAddress } from '../constants/addresses';
 import { CoinGeckoPriceResponse } from '../models/coinGecko';
 import { Optional } from '../types/optional';
 import { TokenMetrics, TokenSupply } from '../models/tokenMetrics';
-import { VaultName } from 'src/enums/vaultName';
+import { VaultName } from '../enums/vaultName';
 
 export function isOneToken(tokenName: TokenName | string, chainId: ChainId): boolean {
   try {

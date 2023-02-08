@@ -4,6 +4,7 @@ import { getToken, TOKENS } from '../constants/tokens';
 import {
   getMemberTokenPrice,
   getOneTokenPriceFromVault,
+  getPriceFromUSDCVault,
   getStimulusOraclePrice,
   getStimulusUSDPrice,
   getVBTCPrice,
@@ -17,6 +18,7 @@ import { getAddress } from '../constants/addresses';
 import { CoinGeckoPriceResponse } from '../models/coinGecko';
 import { Optional } from '../types/optional';
 import { TokenMetrics, TokenSupply } from '../models/tokenMetrics';
+import { VaultName } from 'src/enums/vaultName';
 
 export function isOneToken(tokenName: TokenName | string, chainId: ChainId): boolean {
   try {
@@ -220,6 +222,12 @@ export async function getTokenMetrics(
           break;
         case TokenName.XICHI:
           price = await getXICHIPrice(chainId);
+          break;
+        case TokenName.COC:
+          price = await getPriceFromUSDCVault( 
+            VaultName.COC_USDC,
+            provider,
+            ChainId.Mainnet)
           break;
         case TokenName.VBTC:
           price = await getVBTCPrice(chainId);

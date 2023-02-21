@@ -1586,6 +1586,66 @@ export const PoolLabels: TPoolLabels = {
       vaultAddress: '0x21e6910A769d10ef4236107493406a9788C758a3',
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
+    },
+    [PolygonPoolNumbers.ICHI_USDC_VAULT]: {
+      name: 'ICHI-USDC Vault',
+      poolNumber: PolygonPoolNumbers.ICHI_USDC_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl:
+        'https://app.uniswap.org/#/swap?inputCurrency=0x7ceb23fd6bc0add59e62ac25578270cff1b9f619&outputCurrency=0x111111517e4929D3dcbdfa7CCe55d30d4B6BC4d6&chain=polygon',
+      subgraphEndpoint: '',
+      isInverted: false,
+      isHodl: true,
+      vaultName: VaultName.POLYGON_ICHI_USDC, 
+      vaultAddress: '0xc9C785d61455A44E9281C60D19e97A5Fdd858510',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [PolygonPoolNumbers.ICHI_WBTC_VAULT]: {
+      name: 'ICHI-WBTC Vault',
+      poolNumber: PolygonPoolNumbers.ICHI_WBTC_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl:
+        'https://app.uniswap.org/#/swap?inputCurrency=0x7ceb23fd6bc0add59e62ac25578270cff1b9f619&outputCurrency=0x111111517e4929D3dcbdfa7CCe55d30d4B6BC4d6&chain=polygon',
+      subgraphEndpoint: '',
+      isInverted: false,
+      isHodl: true,
+      vaultName: VaultName.POLYGON_ICHI_WBTC, 
+      vaultAddress: '0x5394eb43700Ce8fBbF4CB83E8b52ea73b71426B6',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [PolygonPoolNumbers.ICHI_WETH_VAULT]: {
+      name: 'ICHI-WETH Vault',
+      poolNumber: PolygonPoolNumbers.ICHI_WETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl:
+        'https://app.uniswap.org/#/swap?inputCurrency=0x7ceb23fd6bc0add59e62ac25578270cff1b9f619&outputCurrency=0x111111517e4929D3dcbdfa7CCe55d30d4B6BC4d6&chain=polygon',
+      subgraphEndpoint: '',
+      isInverted: false,
+      isHodl: true,
+      vaultName: VaultName.POLYGON_ICHI_WETH, 
+      vaultAddress: '0x5a0834EBaFdF97DB54f45a43290b6B09D4226ec6',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [PolygonPoolNumbers.ICHI_WMATIC_VAULT]: {
+      name: 'ICHI_WMATIC Vault',
+      poolNumber: PolygonPoolNumbers.ICHI_WMATIC_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl:
+        'https://app.uniswap.org/#/swap?inputCurrency=0x7ceb23fd6bc0add59e62ac25578270cff1b9f619&outputCurrency=0x111111517e4929D3dcbdfa7CCe55d30d4B6BC4d6&chain=polygon',
+      subgraphEndpoint: '',
+      isInverted: true,
+      isHodl: true,
+      vaultName: VaultName.POLYGON_ICHI_WMATIC, 
+      vaultAddress: '0xac6c0264511EeEC305Da9Afc2e1ABa08409F99f6',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
     }
   },
   [ChainId.Mumbai]: {

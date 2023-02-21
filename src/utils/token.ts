@@ -4,6 +4,7 @@ import { getToken, TOKENS } from '../constants/tokens';
 import {
   getMemberTokenPrice,
   getOneTokenPriceFromVault,
+  getPriceFromUSDCVault,
   getStimulusOraclePrice,
   getStimulusUSDPrice,
   getVBTCPrice,
@@ -17,6 +18,7 @@ import { getAddress } from '../constants/addresses';
 import { CoinGeckoPriceResponse } from '../models/coinGecko';
 import { Optional } from '../types/optional';
 import { TokenMetrics, TokenSupply } from '../models/tokenMetrics';
+import { VaultName } from '../enums/vaultName';
 
 export function isOneToken(tokenName: TokenName | string, chainId: ChainId): boolean {
   try {
@@ -29,6 +31,32 @@ export function isOneToken(tokenName: TokenName | string, chainId: ChainId): boo
     } catch {
       return false;
     }
+  }
+}
+
+async function getStandardTokenSupply(tokenName: TokenName, chainId: ChainId): Promise<TokenSupply>{
+  try {
+    const provider = await getProvider(chainId);
+    if (!provider) {
+      throw new Error('Could not establish provider');
+    }
+
+    const token = getToken(tokenName, chainId);
+
+    const tokenContract = getErc20Contract(token.address, provider);
+    const totalSupply = await tokenContract.totalSupply();
+    const totalTokens = Number(totalSupply) / 10 ** token.decimals;
+    const circulating = totalTokens;
+
+    const tokenSupply: TokenSupply = {
+      circulating,
+      totalTokens
+    };
+
+    return tokenSupply;
+  } catch (e) {
+    console.error(`Could not get token supply for ${tokenName}`, e);
+    throw e;
   }
 }
 
@@ -144,6 +172,12 @@ export async function getTokenMetrics(
     let circulating = 0;
     let tokenSupply: TokenSupply;
 
+    if (tokenName === TokenName.XICHI){
+      tokenSupply = await getStandardTokenSupply(TokenName.XICHI, chainId);
+      totalTokens = tokenSupply.totalTokens;
+      circulating = tokenSupply.circulating;
+    }
+
     if (tokenName === TokenName.ICHI){
       tokenSupply = await getIchiSupply();
       totalTokens = tokenSupply.totalTokens;
@@ -188,6 +222,12 @@ export async function getTokenMetrics(
           break;
         case TokenName.XICHI:
           price = await getXICHIPrice(chainId);
+          break;
+        case TokenName.COC:
+          price = await getPriceFromUSDCVault( 
+            VaultName.COC_USDC,
+            provider,
+            ChainId.Mainnet)
           break;
         case TokenName.VBTC:
           price = await getVBTCPrice(chainId);

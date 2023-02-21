@@ -248,6 +248,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.COC]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.COC,
+      tableName: TokenName.COC,
+      address: '0xC8D9871a79551Ab4439C9E08f12962E3785f0437',
+      decimals: 18,
+      displayName: 'COC',
+      symbol: 'COC',
+      fullName: 'CryptoOracle Collective',
+      isOneToken: false,
+      atCoingecko: false
+    }
+  },
   [TokenName.COMP]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.COMP,
@@ -309,6 +322,19 @@ export const TOKENS: TokenMapping = {
       displayName: 'FXS',
       symbol: 'FXS',
       fullName: 'Frax Share',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
+  [TokenName.IMX]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.IMX,
+      tableName: TokenName.IMX,
+      address: '0xf57e7e7c23978c3caec3c3548e3d615c346e79ff',
+      decimals: 18,
+      displayName: 'IMX',
+      symbol: 'IMX',
+      fullName: 'ImmutableX',
       isOneToken: false,
       atCoingecko: true
     }
@@ -757,6 +783,19 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'WETH',
       isOneToken: false
+    }
+  },
+  [TokenName.WMATIC]: {
+    [ChainId.Polygon]: {
+      tokenName: TokenName.WMATIC,
+      tableName: `pol_${TokenName.WMATIC}`,
+      address: '0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270',
+      decimals: 18,
+      displayName: 'WMATIC',
+      symbol: 'WMATIC',
+      fullName: 'Wrapped Matic',
+      isOneToken: false,
+      atCoingecko: true
     }
   },
   [TokenName.WNXM]: {

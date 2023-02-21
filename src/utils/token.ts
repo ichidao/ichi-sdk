@@ -232,6 +232,18 @@ export async function getTokenMetrics(
         case TokenName.VBTC:
           price = await getVBTCPrice(chainId);
           break;
+        case TokenName.WMATIC:
+          const wmaticMainnetAddress = TOKENS[TokenName.WMATIC]![ChainId.Mainnet]?.address;
+          if (wmaticMainnetAddress) {
+            let tokenPrices = await lookUpTokenPrices([wmaticMainnetAddress.toLowerCase()]);
+            if (!tokenPrices || !(wmaticMainnetAddress.toLowerCase() in tokenPrices)) {
+              throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
+            }
+
+            price = tokenPrices[wmaticMainnetAddress.toLowerCase()].usd;
+            priceChange = tokenPrices[wmaticMainnetAddress.toLowerCase()].usd_24h_change;
+          }
+          break;
         case TokenName.GOVI:
           const goviMainnetAddress = TOKENS[TokenName.GOVI]![ChainId.Mainnet]?.address;
           if (goviMainnetAddress) {

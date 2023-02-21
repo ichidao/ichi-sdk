@@ -788,7 +788,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.WMATIC]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.WMATIC,
-      tableName: `${TokenName.WMATIC}`,
+      tableName: TokenName.WMATIC,
       address: '0x7c9f4C87d911613Fe9ca58b579f737911AAD2D43',
       decimals: 18,
       displayName: 'WMATIC',
@@ -796,9 +796,7 @@ export const TOKENS: TokenMapping = {
       fullName: 'Wrapped Matic',
       isOneToken: false,
       atCoingecko: true
-    }
-  },
-  [TokenName.WMATIC]: {
+    },
     [ChainId.Polygon]: {
       tokenName: TokenName.WMATIC,
       tableName: `pol_${TokenName.WMATIC}`,

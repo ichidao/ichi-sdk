@@ -36,6 +36,7 @@ export enum TokenName {
   SWISE = 'swise',
   TRADE = 'trade',
   UMA = 'uma',
+  WMATIC = 'wmatic',
   YFI = 'yfi',
   ZRX = 'zrx',
   '1INCH' = '1inch',

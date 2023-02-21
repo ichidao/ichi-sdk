@@ -287,6 +287,10 @@ export const Pools: TPools = {
       PolygonPoolNumbers.ONE_BTC_VAULT, 
       PolygonPoolNumbers.WBTC_VAULT, 
       PolygonPoolNumbers.GOVI_VAULT, 
+      PolygonPoolNumbers.ICHI_USDC_VAULT, 
+      PolygonPoolNumbers.ICHI_WBTC_VAULT, 
+      PolygonPoolNumbers.ICHI_WETH_VAULT, 
+      PolygonPoolNumbers.ICHI_WMATIC_VAULT, 
       PolygonPoolNumbers.TRADE_USDT_VAULT, 
       PolygonPoolNumbers.USDC_VAULT, 
       PolygonPoolNumbers.USDC_WETH_VAULT
@@ -565,6 +569,10 @@ export const Pools: TPools = {
       PolygonPoolNumbers.ONE_BTC_VAULT, 
       PolygonPoolNumbers.WBTC_VAULT, 
       PolygonPoolNumbers.GOVI_VAULT, 
+      PolygonPoolNumbers.ICHI_USDC_VAULT, 
+      PolygonPoolNumbers.ICHI_WBTC_VAULT, 
+      PolygonPoolNumbers.ICHI_WETH_VAULT, 
+      PolygonPoolNumbers.ICHI_WMATIC_VAULT, 
       PolygonPoolNumbers.TRADE_USDT_VAULT, 
       PolygonPoolNumbers.USDC_VAULT, 
       PolygonPoolNumbers.USDC_WETH_VAULT

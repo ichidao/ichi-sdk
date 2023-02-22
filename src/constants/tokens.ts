@@ -929,19 +929,6 @@ export const TOKENS: TokenMapping = {
       atCoingecko: false
     }
   },
-  [TokenName.LINK]: {
-    [ChainId.Mainnet]: {
-      tokenName: TokenName.LINK,
-      tableName: TokenName.LINK,
-      address: '0x514910771AF9Ca656af840dff83E8264EcF986CA',
-      decimals: 18,
-      displayName: 'LINK',
-      symbol: 'LINK',
-      fullName: 'ChainLink Token',
-      isOneToken: false,
-      atCoingecko: false
-    }
-  },
   [TokenName.UNI]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.UNI,

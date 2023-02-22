@@ -34,6 +34,37 @@ export function isOneToken(tokenName: TokenName | string, chainId: ChainId): boo
   }
 }
 
+async function getMainnetPrice(
+  tokenName: TokenName,
+  opts: { tokenPrices: Optional<CoinGeckoPriceResponse> } = { tokenPrices: undefined }
+): Promise<TokenMetrics> {
+  try{
+    const mainnetAddress = TOKENS[tokenName]![ChainId.Mainnet]?.address;
+    let price = 0;
+    let priceChange = 0;
+    if (mainnetAddress && opts.tokenPrices && mainnetAddress.toLowerCase() in opts.tokenPrices) {
+      price = opts.tokenPrices[mainnetAddress.toLowerCase()].usd;
+      priceChange = opts.tokenPrices[mainnetAddress.toLowerCase()].usd_24h_change;
+    } else {
+      if (mainnetAddress) {
+        let tokenPrices = await lookUpTokenPrices([mainnetAddress.toLowerCase()]);
+        if (!tokenPrices || !(mainnetAddress.toLowerCase() in tokenPrices)) {
+          throw new Error(`Could not lookup token prices for ${tokenName}, possibly flooding CoinGecko`);
+        }
+
+        price = tokenPrices[mainnetAddress.toLowerCase()].usd;
+        priceChange = tokenPrices[mainnetAddress.toLowerCase()].usd_24h_change;
+      }
+    }
+    const tokenMetrics: TokenMetrics =  { price: price, circulating: 0, priceChange: priceChange, totalTokens: 0 };
+    return tokenMetrics;
+} catch(e){
+    console.error(`Could not lookup Mainnet token price for ${tokenName}`, e);
+    throw e;
+  }
+
+}
+
 async function getStandardTokenSupply(tokenName: TokenName, chainId: ChainId): Promise<TokenSupply>{
   try {
     const provider = await getProvider(chainId);
@@ -232,40 +263,28 @@ export async function getTokenMetrics(
         case TokenName.VBTC:
           price = await getVBTCPrice(chainId);
           break;
-        case TokenName.WMATIC:
-          const wmaticMainnetAddress = TOKENS[TokenName.WMATIC]![ChainId.Mainnet]?.address;
-          if (wmaticMainnetAddress) {
-            let tokenPrices = await lookUpTokenPrices([wmaticMainnetAddress.toLowerCase()]);
-            if (!tokenPrices || !(wmaticMainnetAddress.toLowerCase() in tokenPrices)) {
-              throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
-            }
-
-            price = tokenPrices[wmaticMainnetAddress.toLowerCase()].usd;
-            priceChange = tokenPrices[wmaticMainnetAddress.toLowerCase()].usd_24h_change;
-          }
-          break;
+        case TokenName.BAL:
+        case TokenName.DPI:
+        case TokenName.GHST:
+        case TokenName.LINK:
+        case TokenName.SUSHI:
         case TokenName.GOVI:
-          const goviMainnetAddress = TOKENS[TokenName.GOVI]![ChainId.Mainnet]?.address;
-          if (goviMainnetAddress) {
-            let tokenPrices = await lookUpTokenPrices([goviMainnetAddress.toLowerCase()]);
-            if (!tokenPrices || !(goviMainnetAddress.toLowerCase() in tokenPrices)) {
-              throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
-            }
-
-            price = tokenPrices[goviMainnetAddress.toLowerCase()].usd;
-            priceChange = tokenPrices[goviMainnetAddress.toLowerCase()].usd_24h_change;
-          }
-          break;
         case TokenName.TRADE:
-          const tradeMainnetAddress = TOKENS[TokenName.TRADE]![ChainId.Mainnet]?.address;
-          if (tradeMainnetAddress) {
-            let tokenPrices = await lookUpTokenPrices([tradeMainnetAddress.toLowerCase()]);
-            if (!tokenPrices || !(tradeMainnetAddress.toLowerCase() in tokenPrices)) {
-              throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
-            }
+        case TokenName.WMATIC:
+          const mainnetAddress = TOKENS[tokenName]![ChainId.Mainnet]?.address;
+          if (mainnetAddress && opts.tokenPrices && mainnetAddress.toLowerCase() in opts.tokenPrices) {
+            price = opts.tokenPrices[mainnetAddress.toLowerCase()].usd;
+            priceChange = opts.tokenPrices[mainnetAddress.toLowerCase()].usd_24h_change;
+          } else {
+            if (mainnetAddress) {
+              let tokenPrices = await lookUpTokenPrices([mainnetAddress.toLowerCase()]);
+              if (!tokenPrices || !(mainnetAddress.toLowerCase() in tokenPrices)) {
+                throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
+              }
 
-            price = tokenPrices[tradeMainnetAddress.toLowerCase()].usd;
-            priceChange = tokenPrices[tradeMainnetAddress.toLowerCase()].usd_24h_change;
+              price = tokenPrices[mainnetAddress.toLowerCase()].usd;
+              priceChange = tokenPrices[mainnetAddress.toLowerCase()].usd_24h_change;
+            }
           }
           break;
         case TokenName.PWING:
@@ -281,9 +300,6 @@ export async function getTokenMetrics(
           break;
         case TokenName.WBTC:
           price = await getMemberTokenPrice(TokenName.ONE_BTC, TokenName.WBTC, { chainId, provider, decimals: 8 });
-          break;
-        case TokenName.LINK:
-          price = await getStimulusOraclePrice(TokenName.ONE_LINK, { chainId, provider, decimals: 9 });
           break;
         case TokenName.ICHI:
           const ichiV2Token = getToken(TokenName.ICHI_V2, chainId);

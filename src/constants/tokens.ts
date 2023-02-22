@@ -170,6 +170,30 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.BAL]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.BAL,
+      tableName: TokenName.BAL,
+      address: '0xba100000625a3754423978a60c9317c58a424e3D',
+      decimals: 18,
+      displayName: 'BAL',
+      symbol: 'BAL',
+      fullName: 'Balancer',
+      isOneToken: false,
+      atCoingecko: true
+    },
+    [ChainId.Polygon]: {
+      tokenName: TokenName.BAL,
+      tableName: TokenName.BAL,
+      address: '0x9a71012B13CA4d3D0Cdc72A177DF3ef03b0E76A3',
+      decimals: 18,
+      displayName: 'BAL',
+      symbol: 'BAL',
+      fullName: 'Balancer',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.BANK]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.BANK,
@@ -287,6 +311,30 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.DPI]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.DPI,
+      tableName: TokenName.DPI,
+      address: '0x1494CA1F11D487c2bBe4543E90080AeBa4BA3C2b',
+      decimals: 18,
+      displayName: 'DPI',
+      symbol: 'DPI',
+      fullName: 'DefiPulse Index',
+      isOneToken: false,
+      atCoingecko: true
+    },
+    [ChainId.Polygon]: {
+      tokenName: TokenName.DPI,
+      tableName: TokenName.DPI,
+      address: '0x85955046DF4668e1DD369D2DE9f3AEB98DD2A369',
+      decimals: 18,
+      displayName: 'DPI',
+      symbol: 'DPI',
+      fullName: 'DefiPulse Index',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.FIDU]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.FIDU,
@@ -326,6 +374,30 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.GHST]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.GHST,
+      tableName: TokenName.GHST,
+      address: '0x3f382dbd960e3a9bbceae22651e88158d2791550',
+      decimals: 18,
+      displayName: 'GHST',
+      symbol: 'GHST',
+      fullName: 'Aavegotchi GHST Token',
+      isOneToken: false,
+      atCoingecko: true
+    },
+    [ChainId.Polygon]: {
+      tokenName: TokenName.GHST,
+      tableName: TokenName.GHST,
+      address: '0x385Eeac5cB85A38A9a07A70c73e0a3271CfB54A7',
+      decimals: 18,
+      displayName: 'GHST',
+      symbol: 'GHST',
+      fullName: 'Aavegotchi GHST Token',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.IMX]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.IMX,
@@ -357,6 +429,17 @@ export const TOKENS: TokenMapping = {
       tokenName: TokenName.LINK,
       tableName: TokenName.LINK,
       address: '0x514910771AF9Ca656af840dff83E8264EcF986CA',
+      decimals: 18,
+      displayName: 'LINK',
+      symbol: 'LINK',
+      fullName: 'ChainLink Token',
+      isOneToken: false,
+      atCoingecko: true
+    },
+    [ChainId.Polygon]: {
+      tokenName: TokenName.LINK,
+      tableName: TokenName.LINK,
+      address: '0x53E0bca35eC356BD5ddDFebbD1Fc0fD03FaBad39',
       decimals: 18,
       displayName: 'LINK',
       symbol: 'LINK',
@@ -461,6 +544,17 @@ export const TOKENS: TokenMapping = {
       tokenName: TokenName.SUSHI,
       tableName: TokenName.SUSHI,
       address: '0x6B3595068778DD592e39A122f4f5a5cF09C90fE2',
+      decimals: 18,
+      displayName: 'SUSHI',
+      symbol: 'SUSHI',
+      fullName: 'SushiToken',
+      isOneToken: false,
+      atCoingecko: true
+    },
+    [ChainId.Polygon]: {
+      tokenName: TokenName.SUSHI,
+      tableName: TokenName.SUSHI,
+      address: '0x0b3F868E0BE5597D5DB7fEB59E1CADBb0fdDa50a',
       decimals: 18,
       displayName: 'SUSHI',
       symbol: 'SUSHI',

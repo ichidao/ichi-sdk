@@ -1633,7 +1633,7 @@ export const PoolLabels: TPoolLabels = {
       irrStartTxAmount: 0
     },
     [PolygonPoolNumbers.ICHI_WMATIC_VAULT]: {
-      name: 'ICHI_WMATIC Vault',
+      name: 'ICHI-WMATIC Vault',
       poolNumber: PolygonPoolNumbers.ICHI_WMATIC_VAULT,
       lpName: 'ICHI_VAULT_LP',
       shortLpName: 'VAULT_LP',
@@ -1644,6 +1644,96 @@ export const PoolLabels: TPoolLabels = {
       isHodl: true,
       vaultName: VaultName.POLYGON_ICHI_WMATIC, 
       vaultAddress: '0xac6c0264511EeEC305Da9Afc2e1ABa08409F99f6',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [PolygonPoolNumbers.BAL_WETH_VAULT]: {
+      name: 'BAL-WETH Vault',
+      poolNumber: PolygonPoolNumbers.BAL_WETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl:
+        'https://app.uniswap.org/#/swap?inputCurrency=0x7ceb23fd6bc0add59e62ac25578270cff1b9f619&outputCurrency=0x9a71012B13CA4d3D0Cdc72A177DF3ef03b0E76A3&chain=polygon',
+      subgraphEndpoint: '',
+      isInverted: true,
+      isHodl: true,
+      vaultName: VaultName.POLYGON_BAL_WETH, 
+      vaultAddress: '0xf461063819fFBC6e22704aDe1861B0dF3BaC9585',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [PolygonPoolNumbers.DPI_WETH_VAULT]: {
+      name: 'DPI-WETH Vault',
+      poolNumber: PolygonPoolNumbers.DPI_WETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl:
+        'https://app.uniswap.org/#/swap?inputCurrency=0x7ceb23fd6bc0add59e62ac25578270cff1b9f619&outputCurrency=0x85955046DF4668e1DD369D2DE9f3AEB98DD2A369&chain=polygon',
+      subgraphEndpoint: '',
+      isInverted: true,
+      isHodl: true,
+      vaultName: VaultName.POLYGON_DPI_WETH, 
+      vaultAddress: '0x8AC3D7cd56816Da9fB45e7640aA70A24884e02f7',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [PolygonPoolNumbers.GHST_WETH_VAULT]: {
+      name: 'GHST-WETH Vault',
+      poolNumber: PolygonPoolNumbers.GHST_WETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl:
+        'https://app.uniswap.org/#/swap?inputCurrency=0x7ceb23fd6bc0add59e62ac25578270cff1b9f619&outputCurrency=0x385Eeac5cB85A38A9a07A70c73e0a3271CfB54A7&chain=polygon',
+      subgraphEndpoint: '',
+      isInverted: false,
+      isHodl: true,
+      vaultName: VaultName.POLYGON_GHST_WETH, 
+      vaultAddress: '0xf3De925524cE6bBa606107CFCB2A7A6259CD01EA',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [PolygonPoolNumbers.LINK_WETH_VAULT]: {
+      name: 'LINK-WETH Vault',
+      poolNumber: PolygonPoolNumbers.LINK_WETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl:
+        'https://app.uniswap.org/#/swap?inputCurrency=0x7ceb23fd6bc0add59e62ac25578270cff1b9f619&outputCurrency=0x53E0bca35eC356BD5ddDFebbD1Fc0fD03FaBad39&chain=polygon',
+      subgraphEndpoint: '',
+      isInverted: false,
+      isHodl: true,
+      vaultName: VaultName.POLYGON_LINK_WETH, 
+      vaultAddress: '0x692437de2cAe5addd26CCF6650CaD722d914d974',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [PolygonPoolNumbers.SUSHI_WETH_VAULT]: {
+      name: 'SUSHI-WETH Vault',
+      poolNumber: PolygonPoolNumbers.SUSHI_WETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl:
+        'https://app.uniswap.org/#/swap?inputCurrency=0x7ceb23fd6bc0add59e62ac25578270cff1b9f619&outputCurrency=0x0b3F868E0BE5597D5DB7fEB59E1CADBb0fdDa50a&chain=polygon',
+      subgraphEndpoint: '',
+      isInverted: false,
+      isHodl: true,
+      vaultName: VaultName.POLYGON_SUSHI_WETH, 
+      vaultAddress: '0x74F9d8861D42Ac09759aDE7809A67cF053dc7bA5',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [PolygonPoolNumbers.WMATIC_WETH_VAULT]: {
+      name: 'WMATIC-WETH Vault',
+      poolNumber: PolygonPoolNumbers.WMATIC_WETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl:
+        'https://app.uniswap.org/#/swap?inputCurrency=0x7ceb23fd6bc0add59e62ac25578270cff1b9f619&outputCurrency=0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270&chain=polygon',
+      subgraphEndpoint: '',
+      isInverted: false,
+      isHodl: true,
+      vaultName: VaultName.POLYGON_WMATIC_WETH, 
+      vaultAddress: '0x9ff3C1390300918B40714fD464A39699dDd9Fe00',
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     }

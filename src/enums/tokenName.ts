@@ -17,6 +17,7 @@ export enum TokenName {
   COC = 'coc',
   COMP = 'comp',
   COW = 'cow',
+  CRV = 'crv',
   DPI = 'dpi',
   FIDU = 'fidu',
   FRAX = 'frax',

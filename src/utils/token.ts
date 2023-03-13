@@ -264,6 +264,7 @@ export async function getTokenMetrics(
           price = await getVBTCPrice(chainId);
           break;
         case TokenName.BAL:
+        case TokenName.CRV:
         case TokenName.DPI:
         case TokenName.GHST:
         case TokenName.LINK:

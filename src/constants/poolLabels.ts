@@ -1736,6 +1736,21 @@ export const PoolLabels: TPoolLabels = {
       vaultAddress: '0x9ff3C1390300918B40714fD464A39699dDd9Fe00',
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
+    },
+    [PolygonPoolNumbers.CRV_WETH_VAULT]: {
+      name: 'CRV-WETH Vault',
+      poolNumber: PolygonPoolNumbers.CRV_WETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl:
+        'https://app.uniswap.org/#/swap?inputCurrency=0x7ceb23fd6bc0add59e62ac25578270cff1b9f619&outputCurrency=0x172370d5Cd63279eFa6d502DAB29171933a610AF&chain=polygon',
+      subgraphEndpoint: '',
+      isInverted: false,
+      isHodl: true,
+      vaultName: VaultName.POLYGON_CRV_WETH, 
+      vaultAddress: '0xf7B1ab2545451b60345FA3aB8C5210d53c703c98',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
     }
   },
   [ChainId.Mumbai]: {

@@ -1316,6 +1316,30 @@ export const VAULTS: VaultMapping = {
       depositStatus: true,
     }
   },
+  [VaultName.POLYGON_CRV_WETH]: {
+    [ChainId.Polygon]: {
+      vaultName: VaultName.POLYGON_CRV_WETH,
+      tableName: VaultTableName.POLYGON_CRV_WETH,
+      displayName: 'CRV-WETH (polygon)',
+      address: '0xf7B1ab2545451b60345FA3aB8C5210d53c703c98',
+      farm: 0,
+      externalFarm: '',
+      scarceToken: 'token1',
+      scarceTokenName: TokenName.WETH,
+      scarceTokenDecimals: 18,
+      scarceTokenCoingeckoId: 'weth',
+      baseTokenName: TokenName.CRV,
+      baseTokenDecimals: 18,
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: false,
+      isHodlVault: true,
+      isLegacy: isLegacy(PolygonPoolNumbers.CRV_WETH_VAULT, ChainId.Polygon),
+      irrStartTxAmount: 0,
+      depositStatus: true,
+    }
+  },
   [VaultName.POLYGON_DPI_WETH]: {
     [ChainId.Polygon]: {
       vaultName: VaultName.POLYGON_DPI_WETH,

@@ -311,6 +311,30 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.CRV]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.CRV,
+      tableName: TokenName.CRV,
+      address: '0xD533a949740bb3306d119CC777fa900bA034cd52',
+      decimals: 18,
+      displayName: 'CRV',
+      symbol: 'CRV',
+      fullName: 'Curve DAO',
+      isOneToken: false,
+      atCoingecko: true
+    },
+    [ChainId.Polygon]: {
+      tokenName: TokenName.CRV,
+      tableName: TokenName.CRV,
+      address: '0x172370d5Cd63279eFa6d502DAB29171933a610AF',
+      decimals: 18,
+      displayName: 'CRV',
+      symbol: 'CRV',
+      fullName: 'Curve DAO',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.DPI]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.DPI,

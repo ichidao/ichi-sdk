@@ -66,6 +66,7 @@ export enum VaultName {
   KOVAN_ONE_FIL = 'kovan_one_fil',
   // Polygon
   POLYGON_BAL_WETH = 'pol_bal_weth',
+  POLYGON_CRV_WETH = 'pol_crv_weth',
   POLYGON_DPI_WETH = 'pol_dpi_weth',
   POLYGON_GHST_WETH = 'pol_ghst_weth',
   POLYGON_GOVI = 'pol_govi',
@@ -153,6 +154,7 @@ export enum VaultTableName {
   KOVAN_ONE_FIL = 'test_one_fil',
   // Polygon
   POLYGON_BAL_WETH = 'pol_bal_weth',
+  POLYGON_CRV_WETH = 'pol_crv_weth',
   POLYGON_DPI_WETH = 'pol_dpi_weth',
   POLYGON_GHST_WETH = 'pol_ghst_weth',
   POLYGON_GOVI_ICHI = 'pol_govi_ichi',

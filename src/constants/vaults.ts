@@ -1594,7 +1594,7 @@ export const VAULTS: VaultMapping = {
       scarceTokenDecimals: 18,
       scarceTokenCoingeckoId: 'weth',
       baseTokenName: TokenName.WBTC,
-      baseTokenDecimals: 18,
+      baseTokenDecimals: 8,
       enableNotifications: true,
       subgraphEndpoint: '',
       irrStartDate: new Date(0),

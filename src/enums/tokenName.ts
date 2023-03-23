@@ -38,6 +38,7 @@ export enum TokenName {
   SHIB = 'shib',
   SUSHI = 'sushi',
   SWISE = 'swise',
+  TBTC = 'tbtc',
   TRADE = 'trade',
   UMA = 'uma',
   WMATIC = 'wmatic',

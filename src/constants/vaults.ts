@@ -840,6 +840,31 @@ export const VAULTS: VaultMapping = {
       depositStatus: true,
     }
   },
+  [VaultName.TBTC_WETH]: {
+    [ChainId.Mainnet]: {
+      vaultName: VaultName.TBTC_WETH,
+      tableName: VaultTableName.TBTC_WETH,
+      displayName: 'TBTC-WETH',
+      address: '0x303384D10e4B7409bD0B1D657fe533EC484D745d',
+      farm: 0,
+      externalFarm: ADDRESSES[AddressName.FARMING_V2][ChainId.Mainnet] || '',
+      scarceToken: 'token1',
+      scarceTokenName: TokenName.WETH,
+      scarceTokenDecimals: 18,
+      scarceTokenCoingeckoId: 'weth',
+      baseTokenName: TokenName.TBTC,
+      baseTokenDecimals: 18,
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: false,
+      isHodlVault: true,
+      // isLegacy: false,
+      isLegacy: isLegacy(MainnetPoolNumbers.TBTC_WETH_VAULT, ChainId.Mainnet),
+      irrStartTxAmount: 0,
+      depositStatus: true,
+    }
+  },
   [VaultName.UMA]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.UMA,

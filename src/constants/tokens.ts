@@ -600,6 +600,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.TBTC]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.TBTC,
+      tableName: TokenName.TBTC,
+      address: '0x18084fbA666a33d37592fA2633fD49a74DD93a88',
+      decimals: 18,
+      displayName: 'tBTC',
+      symbol: 'tBTC',
+      fullName: 'tBTC v2',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.TRADE]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.TRADE,

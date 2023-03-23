@@ -1428,6 +1428,25 @@ export const PoolLabels: TPoolLabels = {
       vaultAddress: '0xfeee972ffe5F0BDa462130F88076158c1F9e561D',
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
+    },
+    [MainnetPoolNumbers.TBTC_WETH_VAULT]: {
+      name: 'TBTC-WETH Vault',
+      poolNumber: MainnetPoolNumbers.TBTC_WETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      farmAddress: '',
+      farmId: 0,
+      farmRewardTokenName: TokenName.WETH,
+      farmRewardTokenDecimals: 18,
+      farmRewardTokenAddress: getToken(TokenName.WETH, ChainId.Mainnet).address,
+      tradeUrl: 'https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x18084fbA666a33d37592fA2633fD49a74DD93a88&chain=mainnet',
+      subgraphEndpoint: '',
+      isInverted: false,
+      isHodl: true,
+      vaultName: VaultName.TBTC_WETH,
+      vaultAddress: '0x303384D10e4B7409bD0B1D657fe533EC484D745d',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
     }
   },
   [ChainId.Kovan]: {

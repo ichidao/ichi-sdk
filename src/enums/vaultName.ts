@@ -35,6 +35,7 @@ export enum VaultName {
   SHIB = 'shib',
   SUSHI = 'sushi',
   SWISE = 'swise',
+  TBTC_WETH = 'tbtc_weth',
   UMA = 'uma',
   UNI = 'uni',
   YFI = 'yfi',
@@ -66,6 +67,7 @@ export enum VaultName {
   KOVAN_ONE_FIL = 'kovan_one_fil',
   // Polygon
   POLYGON_BAL_WETH = 'pol_bal_weth',
+  POLYGON_CRV_WETH = 'pol_crv_weth',
   POLYGON_DPI_WETH = 'pol_dpi_weth',
   POLYGON_GHST_WETH = 'pol_ghst_weth',
   POLYGON_GOVI = 'pol_govi',
@@ -80,6 +82,8 @@ export enum VaultName {
   POLYGON_USDC = 'pol_usdc',
   POLYGON_USDC_WETH = 'pol_usdc_weth',
   POLYGON_WBTC = 'pol_wbtc',
+  POLYGON_WBTC_WETH = 'pol_wbtc_weth',
+  POLYGON_WETH_USDC = 'pol_weth_usdc',
   POLYGON_WMATIC_WETH = 'pol_wmatic_weth'
 }
 
@@ -118,6 +122,7 @@ export enum VaultTableName {
   SHIB_ICHI = 'shib_ichi',
   SUSHI_ICHI = 'sushi_ichi',
   SWISE_ICHI = 'swise_ichi',
+  TBTC_WETH = 'tbtc_weth',
   UMA_ICHI = 'uma_ichi',
   UNI_ICHI = 'uni_ichi',
   YFI_ICHI = 'yfi_ichi',
@@ -153,6 +158,7 @@ export enum VaultTableName {
   KOVAN_ONE_FIL = 'test_one_fil',
   // Polygon
   POLYGON_BAL_WETH = 'pol_bal_weth',
+  POLYGON_CRV_WETH = 'pol_crv_weth',
   POLYGON_DPI_WETH = 'pol_dpi_weth',
   POLYGON_GHST_WETH = 'pol_ghst_weth',
   POLYGON_GOVI_ICHI = 'pol_govi_ichi',
@@ -167,6 +173,8 @@ export enum VaultTableName {
   POLYGON_USDC_ICHI = 'pol_usdc_ichi',
   POLYGON_USDC_WETH = 'pol_usdc_weth',
   POLYGON_WBTC_ICHI = 'pol_wbtc_ichi',
+  POLYGON_WBTC_WETH = 'pol_wbtc_weth',
+  POLYGON_WETH_USDC = 'pol_weth_usdc',
   POLYGON_WMATIC_WETH = 'pol_wmatic_weth'
 }
 

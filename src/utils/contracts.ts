@@ -40,6 +40,12 @@ import {
   OneTokenFactory__factory,
   XIchi,
   XIchi__factory,
+  Rebalancing_regular_v1__factory,
+  Rebalancing_regular_v1,
+  Rebalancing_index_v2,
+  Rebalancing_index_v2__factory,
+  Rebalancing_index_v3__factory,
+  Rebalancing_index_v3,
 } from '../generated';
 import { TokenName } from '../enums/tokenName';
 import { AddressName } from '../enums/addressName';
@@ -323,6 +329,33 @@ export function getCommonOracleContract(address: string, provider: JsonRpcProvid
     return CommonOracle__factory.connect(address, provider);
   } catch (e) {
     console.error(`Couldn't create CommonOracle contract with address: ${address}`);
+    throw e;
+  }
+}
+
+export function getRebalancingStrategyRegularV1Contract(address: string, provider: JsonRpcProvider): Rebalancing_regular_v1 {
+  try {
+    return Rebalancing_regular_v1__factory.connect(address, provider);
+  } catch (e) {
+    console.error(`Couldn't create Rebalancing_regular_v1 contract with address: ${address}`);
+    throw e;
+  }
+}
+
+export function getRebalancingStrategyIndexV2Contract(address: string, provider: JsonRpcProvider): Rebalancing_index_v2 {
+  try {
+    return Rebalancing_index_v2__factory.connect(address, provider);
+  } catch (e) {
+    console.error(`Couldn't create Rebalancing_index_v2 contract with address: ${address}`);
+    throw e;
+  }
+}
+
+export function getRebalancingStrategyIndexV3Contract(address: string, provider: JsonRpcProvider): Rebalancing_index_v3 {
+  try {
+    return Rebalancing_index_v3__factory.connect(address, provider);
+  } catch (e) {
+    console.error(`Couldn't create Rebalancing_index_v3 contract with address: ${address}`);
     throw e;
   }
 }

@@ -6,6 +6,7 @@ export type Vault = {
   tableName: VaultTableName;
   displayName: string;
   address: string;
+  deployer: string;
   farm: number;
   externalFarm: string;
   scarceToken: string;

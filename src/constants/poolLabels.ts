@@ -145,19 +145,6 @@ export const PoolLabels: TPoolLabels = {
       externalText: 'Earn $ICHI and $oneBTC',
       externalButton: 'RARI'
     },
-    // Hmmm, is this Mainnet or Mumbai?
-    // [PoolNumbersMainnet.ONE_BTC_ICHI_VAULT]: {
-    //   poolNumber: PoolNumbersMainnet.ONE_BTC_ICHI_VAULT,
-    //   name: 'oneBTC-ICHI Vault',
-    //   lpName: 'ICHI_VAULT_LP',
-    //   shortLpName: 'VAULT_LP',
-    //   tradeUrl:
-    //     'https://app.uniswap.org/#/swap?inputCurrency=0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48&outputCurrency=0x8290d7a64f25e6b5002d98367e8367c1b532b534',
-    //   //subgraphEndpoint: 'https://api.thegraph.com/subgraphs/name/ichi-org/ichi-vault',
-    //   isInverted: false,
-    //   vaultName: 'onebtc',
-    //   vaultAddress: '0xA3a17a728534Dc72A9865469C292C0b7D055D97d'
-    // },
     [MainnetPoolNumbers.ICHI_BNT_V3]: {
       name: 'ICHI-BNT',
       poolNumber: MainnetPoolNumbers.ICHI_BNT_V3,
@@ -1810,9 +1797,9 @@ export const PoolLabels: TPoolLabels = {
       shortLpName: 'VAULT_LP',
       tradeUrl:
         'https://app.uniswap.org/#/swap?inputCurrency=0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48&outputCurrency=0x8290d7a64f25e6b5002d98367e8367c1b532b534',
-      //subgraphEndpoint: 'https://api.thegraph.com/subgraphs/name/ichi-org/ichi-vault',
-      isInverted: false,
-      vaultName: VaultName.ONEBTC,
+      subgraphEndpoint: '',
+      isInverted: true,
+      vaultName: VaultName.MUMBAI_ONEBTC_ICHI,
       vaultAddress: '0xA3a17a728534Dc72A9865469C292C0b7D055D97d'
     }
   }

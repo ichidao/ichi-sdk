@@ -5,7 +5,7 @@ import { PartialRecord } from '../types/common';
 import { VaultName, VaultTableName } from '../enums/vaultName';
 import { ADDRESSES } from './addresses';
 import { AddressName } from '../enums/addressName';
-import { KovanPoolNumbers, MainnetPoolNumbers, PolygonPoolNumbers, PoolNumberValues } from '../enums/poolNumber';
+import { KovanPoolNumbers, MainnetPoolNumbers, MumbaiPoolNumbers, PolygonPoolNumbers, PoolNumberValues } from '../enums/poolNumber';
 import { PoolGroupName } from '../enums/poolManagementName';
 import { Pools } from './pools';
 
@@ -2185,6 +2185,32 @@ export const VAULTS: VaultMapping = {
       isHodlVault: true,
       // isLegacy: false,
       isLegacy: isLegacy(MainnetPoolNumbers.FUSE_ICHI_VAULT, ChainId.Mainnet),
+      irrStartTxAmount: 0,
+      depositStatus: true,
+    }
+  },
+  [VaultName.MUMBAI_ONEBTC_ICHI]: {
+    [ChainId.Mumbai]: {
+      vaultName: VaultName.MUMBAI_ONEBTC_ICHI,
+      tableName: VaultTableName.MUMBAI_ONEBTC_ICHI,
+      displayName: 'oneBTC-ICHI (mumbai)',
+      address: '0xA3a17a728534Dc72A9865469C292C0b7D055D97d',
+      deployer: '0x451Efff92a3a1471b7af9DDc1369D9D157E6475A',
+      farm: 0,
+      externalFarm: '',
+      scarceToken: 'token0',
+      scarceTokenName: TokenName.ICHI_V2,
+      scarceTokenDecimals: 18,
+      scarceTokenCoingeckoId: 'ichi-farm',
+      baseTokenName: TokenName.ONE_BTC,
+      baseTokenDecimals: 18,
+      enableNotifications: false,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: true,
+      isHodlVault: false,
+      // isLegacy: false,
+      isLegacy: isLegacy(MumbaiPoolNumbers.ONE_BTC_ICHI_VAULT, ChainId.Mumbai),
       irrStartTxAmount: 0,
       depositStatus: true,
     }

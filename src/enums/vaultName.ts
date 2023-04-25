@@ -65,6 +65,8 @@ export enum VaultName {
   ICHI_USDC = 'ichi_usdc',
   // Kovan
   KOVAN_ONE_FIL = 'kovan_one_fil',
+  // Mumbai
+  MUMBAI_ONEBTC_ICHI = 'mumbai_onebtc_ichi',
   // Polygon
   POLYGON_BAL_WETH = 'pol_bal_weth',
   POLYGON_CRV_WETH = 'pol_crv_weth',
@@ -154,8 +156,10 @@ export enum VaultTableName {
   ICHI_ETH = 'ichi_eth',
   ICHI_WBTC = 'ichi_wbtc',
   ICHI_USDC = 'ichi_usdc',
-  // Kovan related
+  // Kovan
   KOVAN_ONE_FIL = 'test_one_fil',
+  // Mumbai
+  MUMBAI_ONEBTC_ICHI = 'mumbai_onebtc_ichi',
   // Polygon
   POLYGON_BAL_WETH = 'pol_bal_weth',
   POLYGON_CRV_WETH = 'pol_crv_weth',

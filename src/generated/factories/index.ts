@@ -21,6 +21,7 @@ export { IchiStaking__factory } from "./IchiStaking__factory";
 export { IchiV2__factory } from "./IchiV2__factory";
 export { IchiV2Polygon__factory } from "./IchiV2Polygon__factory";
 export { IchiVault__factory } from "./IchiVault__factory";
+export { KeeperRegistry__factory } from "./KeeperRegistry__factory";
 export { Multicall__factory } from "./Multicall__factory";
 export { OneEth__factory } from "./OneEth__factory";
 export { OneInchStaking__factory } from "./OneInchStaking__factory";

@@ -34,6 +34,9 @@ export enum AddressName {
   USDC = 'USDC',
   ONE_DODO = 'ONE_DODO',
   DLP = 'DLP',
+
+  //KEEPER_REGISTRY
+  KEEPER_REGISTRY = 'KEEPER_REGISTRY',
 }
 export type AddressNames = keyof typeof AddressName;
 export type AddressValues = typeof AddressName[keyof typeof AddressName];

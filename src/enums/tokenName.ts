@@ -34,6 +34,7 @@ export enum TokenName {
   MKR = 'mkr',
   OGN = 'ogn',
   OUSD = 'ousd',
+  POP = 'pop',
   SFRXETH = 'sfrxeth',
   SHIB = 'shib',
   SUSHI = 'sushi',

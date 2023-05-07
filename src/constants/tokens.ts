@@ -537,6 +537,30 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.POP]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.POP,
+      tableName: TokenName.POP,
+      address: '0xD0Cd466b34A24fcB2f87676278AF2005Ca8A78c4',
+      decimals: 18,
+      displayName: 'POP',
+      symbol: 'POP',
+      fullName: 'Popcorn',
+      isOneToken: false,
+      atCoingecko: true
+    },
+    [ChainId.Polygon]: {
+      tokenName: TokenName.POP,
+      tableName: TokenName.POP,
+      address: '0xC5B57e9a1E7914FDA753A88f24E5703e617Ee50c',
+      decimals: 18,
+      displayName: 'POP',
+      symbol: 'POP',
+      fullName: 'Popcorn',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.SFRXETH]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.SFRXETH,

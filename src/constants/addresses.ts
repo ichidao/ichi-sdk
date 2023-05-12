@@ -60,6 +60,12 @@ export const ADDRESSES: AddressMapping = {
     [ChainId.Mainnet]: '0xd0092632b9ac5a7856664eec1abb6e3403a6a36a', 
     [ChainId.Polygon]: '0x101eB16BdbA37979a771c86e1CAAfbaDbABfc879' 
   },
+  // Keeper Registry
+  [AddressName.KEEPER_REGISTRY]: {
+    [ChainId.Mainnet]: '0x02777053d6764996e594c3E88AF1D58D5363a2e6',
+    [ChainId.Polygon]: '0x02777053d6764996e594c3E88AF1D58D5363a2e6',
+  },
+
 };
 
 export function getAddress(addressName: AddressName, chainId: ChainId): string {

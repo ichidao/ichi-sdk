@@ -537,6 +537,30 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.POP]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.POP,
+      tableName: TokenName.POP,
+      address: '0xD0Cd466b34A24fcB2f87676278AF2005Ca8A78c4',
+      decimals: 18,
+      displayName: 'POP',
+      symbol: 'POP',
+      fullName: 'Popcorn',
+      isOneToken: false,
+      atCoingecko: true
+    },
+    [ChainId.Polygon]: {
+      tokenName: TokenName.POP,
+      tableName: TokenName.POP,
+      address: '0xC5B57e9a1E7914FDA753A88f24E5703e617Ee50c',
+      decimals: 18,
+      displayName: 'POP',
+      symbol: 'POP',
+      fullName: 'Popcorn',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.SFRXETH]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.SFRXETH,
@@ -661,6 +685,30 @@ export const TOKENS: TokenMapping = {
       fullName: 'Tether USD',
       isOneToken: false,
       atCoingecko: true
+    }
+  },
+  [TokenName.WEN]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.WEN,
+      tableName: TokenName.WEN,
+      address: '0x830a8512db4F6fCA51968593E2667156C2c483A8',
+      decimals: 18,
+      displayName: 'WEN',
+      symbol: 'WEN',
+      fullName: 'WEN',
+      isOneToken: false,
+      atCoingecko: false
+    },
+    [ChainId.Polygon]: {
+      tokenName: TokenName.WEN,
+      tableName: `pol_${TokenName.WEN}`,
+      address: '0x11A88F949C0592238959142653bB6847c6523D81',
+      decimals: 18,
+      displayName: 'WEN',
+      symbol: 'WEN',
+      fullName: 'WEN',
+      isOneToken: false,
+      atCoingecko: false
     }
   },
   [TokenName.YFI]: {

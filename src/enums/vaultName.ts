@@ -79,12 +79,14 @@ export enum VaultName {
   POLYGON_ICHI_WMATIC = 'pol_ichi_wmatic',
   POLYGON_LINK_WETH = 'pol_link_weth',
   POLYGON_ONEBTC = 'pol_onebtc',
+  POLYGON_POP_WETH = 'pol_pop_weth',
   POLYGON_SUSHI_WETH = 'pol_sushi_weth',
   POLYGON_TRADE_USDT = 'pol_trade_usdt',
   POLYGON_USDC = 'pol_usdc',
   POLYGON_USDC_WETH = 'pol_usdc_weth',
   POLYGON_WBTC = 'pol_wbtc',
   POLYGON_WBTC_WETH = 'pol_wbtc_weth',
+  POLYGON_WEN_WETH = 'pol_wen_weth',
   POLYGON_WETH_USDC = 'pol_weth_usdc',
   POLYGON_WMATIC_WETH = 'pol_wmatic_weth'
 }
@@ -172,12 +174,14 @@ export enum VaultTableName {
   POLYGON_ICHI_WMATIC = 'pol_ichi_wmatic',
   POLYGON_LINK_WETH = 'pol_link_weth',
   POLYGON_ONEBTC_ICHI = 'pol_onebtc_ichi',
+  POLYGON_POP_WETH = 'pol_pop_weth',
   POLYGON_SUSHI_WETH = 'pol_sushi_weth',
   POLYGON_TRADE_USDT = 'pol_trade_usdt',
   POLYGON_USDC_ICHI = 'pol_usdc_ichi',
   POLYGON_USDC_WETH = 'pol_usdc_weth',
   POLYGON_WBTC_ICHI = 'pol_wbtc_ichi',
   POLYGON_WBTC_WETH = 'pol_wbtc_weth',
+  POLYGON_WEN_WETH = 'pol_wen_weth',
   POLYGON_WETH_USDC = 'pol_weth_usdc',
   POLYGON_WMATIC_WETH = 'pol_wmatic_weth'
 }

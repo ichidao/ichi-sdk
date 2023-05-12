@@ -46,6 +46,8 @@ import {
   Rebalancing_index_v2__factory,
   Rebalancing_index_v3__factory,
   Rebalancing_index_v3,
+  KeeperRegistry,
+  KeeperRegistry__factory,
 } from '../generated';
 import { TokenName } from '../enums/tokenName';
 import { AddressName } from '../enums/addressName';
@@ -356,6 +358,15 @@ export function getRebalancingStrategyIndexV3Contract(address: string, provider:
     return Rebalancing_index_v3__factory.connect(address, provider);
   } catch (e) {
     console.error(`Couldn't create Rebalancing_index_v3 contract with address: ${address}`);
+    throw e;
+  }
+}
+
+export function getKeeperRegistryContract(address: string, provider: JsonRpcProvider): KeeperRegistry {
+  try {
+    return KeeperRegistry__factory.connect(address, provider);
+  } catch (e) {
+    console.error(`Couldn't create KeeperRegistry contract with address: ${address}`);
     throw e;
   }
 }

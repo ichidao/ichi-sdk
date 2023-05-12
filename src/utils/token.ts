@@ -264,6 +264,10 @@ export async function getTokenMetrics(
         case TokenName.WEN:
           let wethPrice: number;
           const polygonProvider = await getProvider(ChainId.Polygon);
+          if (!polygonProvider) {
+            throw new Error('Could not establish Polygon provider');
+          }
+
           const wethAddress = TOKENS[TokenName.WETH]![ChainId.Mainnet]?.address?.toLowerCase();
           if (opts.tokenPrices && wethAddress && wethAddress in opts.tokenPrices) {
             wethPrice = opts.tokenPrices[wethAddress].usd;

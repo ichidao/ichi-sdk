@@ -50,6 +50,7 @@ export enum TokenName {
   PWING = 'pwing',
   QRDO = 'qrdo',
   WBTC = 'wbtc',
+  WEN = 'wen',
   WETH = 'weth',
   WNXM = 'wnxm',
   VBTC = 'vbtc',

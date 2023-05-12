@@ -1720,6 +1720,31 @@ export const VAULTS: VaultMapping = {
       depositStatus: true,
     }
   },
+  [VaultName.POLYGON_WEN_WETH]: {
+    [ChainId.Polygon]: {
+      vaultName: VaultName.POLYGON_WEN_WETH,
+      tableName: VaultTableName.POLYGON_WEN_WETH,
+      displayName: 'WEN-WETH (polygon)',
+      address: '0xa777B0F7F746E93AD30292e9A07b4E336f9511A1',
+      deployer: '0x0768A75F616B98ee0937673bD83B7aBF142236Ea',
+      farm: 0,
+      externalFarm: '',
+      scarceToken: 'token1',
+      scarceTokenName: TokenName.WETH,
+      scarceTokenDecimals: 18,
+      scarceTokenCoingeckoId: 'weth',
+      baseTokenName: TokenName.WEN,
+      baseTokenDecimals: 18,
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: false,
+      isHodlVault: true,
+      isLegacy: isLegacy(PolygonPoolNumbers.WEN_WETH_VAULT, ChainId.Polygon),
+      irrStartTxAmount: 0,
+      depositStatus: true,
+    }
+  },
   [VaultName.POLYGON_WETH_USDC]: {
     [ChainId.Polygon]: {
       vaultName: VaultName.POLYGON_WETH_USDC,

@@ -208,3 +208,42 @@ export async function getPriceFromUSDCVault(
     return 0;
   }
 }
+
+export async function getPriceFromWethVault(
+  vault: VaultName,
+  provider: JsonRpcProvider,
+  chainId: ChainId,
+  wethPrice: number
+): Promise<number> {
+  let vaultObj = VAULTS[vault][chainId];
+  if (vaultObj){
+    try {
+
+      const vaultContract = getIchiVaultContract(vaultObj.address, provider);
+      const poolAddress: string = await vaultContract.pool();
+
+      const poolContract = getUniswapV3PoolContract(poolAddress, provider);
+      const slot0 = await poolContract.slot0();
+
+      const sqrtPrice = slot0[0];
+      let price = 1;
+      if (vaultObj.baseTokenName === TokenName.WETH) {
+        price = getPrice(
+          vaultObj.isInverted, sqrtPrice, vaultObj.baseTokenDecimals, vaultObj.scarceTokenDecimals, 15);
+      } else {
+        price = getPrice(
+          !vaultObj.isInverted, sqrtPrice, vaultObj.scarceTokenDecimals, vaultObj.baseTokenDecimals, 15);
+      }
+
+      price = price * wethPrice;
+
+      return price;
+    } catch (e) {
+      console.error(`Could not get price from ${vaultObj.displayName} vault`);
+      throw e;
+    }
+  } else {
+    console.error(`Could not find ${vault} vault`);
+    return 0;
+  }
+}

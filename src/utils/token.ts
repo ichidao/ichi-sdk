@@ -263,12 +263,13 @@ export async function getTokenMetrics(
           break;
         case TokenName.WEN:
           let wethPrice: number;
+          const polygonProvider = await getProvider(ChainId.Polygon);
           const wethAddress = TOKENS[TokenName.WETH]![ChainId.Mainnet]?.address?.toLowerCase();
           if (opts.tokenPrices && wethAddress && wethAddress in opts.tokenPrices) {
             wethPrice = opts.tokenPrices[wethAddress].usd;
             price = await getPriceFromWethVault( 
               VaultName.POLYGON_WEN_WETH,
-              provider,
+              polygonProvider,
               ChainId.Polygon,
               wethPrice
               )

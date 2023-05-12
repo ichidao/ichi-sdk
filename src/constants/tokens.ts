@@ -687,6 +687,30 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.WEN]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.WEN,
+      tableName: TokenName.WEN,
+      address: '0x830a8512db4F6fCA51968593E2667156C2c483A8',
+      decimals: 18,
+      displayName: 'WEN',
+      symbol: 'WEN',
+      fullName: 'WEN',
+      isOneToken: false,
+      atCoingecko: false
+    },
+    [ChainId.Polygon]: {
+      tokenName: TokenName.WEN,
+      tableName: `pol_${TokenName.WEN}`,
+      address: '0x11A88F949C0592238959142653bB6847c6523D81',
+      decimals: 18,
+      displayName: 'WEN',
+      symbol: 'WEN',
+      fullName: 'WEN',
+      isOneToken: false,
+      atCoingecko: false
+    }
+  },
   [TokenName.YFI]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.YFI,

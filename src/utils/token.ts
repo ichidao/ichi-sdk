@@ -5,6 +5,7 @@ import {
   getMemberTokenPrice,
   getOneTokenPriceFromVault,
   getPriceFromUSDCVault,
+  getPriceFromWethVault,
   getStimulusOraclePrice,
   getStimulusUSDPrice,
   getVBTCPrice,
@@ -259,6 +260,21 @@ export async function getTokenMetrics(
             VaultName.COC_USDC,
             provider,
             ChainId.Mainnet)
+          break;
+        case TokenName.WEN:
+          let wethPrice: number;
+          const wethAddress = TOKENS[TokenName.WETH]![ChainId.Mainnet]?.address?.toLowerCase();
+          if (opts.tokenPrices && wethAddress && wethAddress in opts.tokenPrices) {
+            wethPrice = opts.tokenPrices[wethAddress].usd;
+            price = await getPriceFromWethVault( 
+              VaultName.POLYGON_WEN_WETH,
+              provider,
+              ChainId.Polygon,
+              wethPrice
+              )
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}`);
+          }
           break;
         case TokenName.VBTC:
           price = await getVBTCPrice(chainId);

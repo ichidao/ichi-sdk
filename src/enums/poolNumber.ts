@@ -127,7 +127,8 @@ export enum PolygonPoolNumbers {
   CRV_WETH_VAULT = 7510,
   WBTC_WETH_VAULT = 7511,
   WETH_USDC_VAULT = 7512,
-  POP_WETH_VAULT = 7513
+  POP_WETH_VAULT = 7513,
+  WEN_WETH_VAULT = 7514
 }
 
 export enum MumbaiPoolNumbers {

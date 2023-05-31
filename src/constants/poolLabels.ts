@@ -1817,6 +1817,34 @@ export const PoolLabels: TPoolLabels = {
       vaultAddress: '0xa777B0F7F746E93AD30292e9A07b4E336f9511A1',
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
+    },
+    [PolygonPoolNumbers.WETH_FBX_VAULT]: {
+      name: 'WETH-FBX Vault',
+      poolNumber: PolygonPoolNumbers.WETH_FBX_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: false,
+      isHodl: true,
+      vaultName: VaultName.POLYGON_WETH_FBX, 
+      vaultAddress: '0x764C3A611ba0F55Be1C7109CDD500e301E0044ba',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [PolygonPoolNumbers.WSTETH_WETH_VAULT]: {
+      name: 'WEN-WETH Vault',
+      poolNumber: PolygonPoolNumbers.WSTETH_WETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: false,
+      isHodl: true,
+      vaultName: VaultName.POLYGON_WSTETH_WETH, 
+      vaultAddress: '0xDD2521755a8eb05c41C819488D1890e32FeB8753',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
     }
   },
   [ChainId.Mumbai]: {

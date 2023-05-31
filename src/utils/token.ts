@@ -263,16 +263,35 @@ export async function getTokenMetrics(
           break;
         case TokenName.WEN:
           let wethPrice: number;
-          const polygonProvider = await getProvider(ChainId.Polygon);
+          let polygonProvider = await getProvider(ChainId.Polygon);
           if (!polygonProvider) {
             throw new Error('Could not establish Polygon provider');
           }
 
-          const wethAddress = TOKENS[TokenName.WETH]![ChainId.Mainnet]?.address?.toLowerCase();
+          let wethAddress = TOKENS[TokenName.WETH]![ChainId.Mainnet]?.address?.toLowerCase();
           if (opts.tokenPrices && wethAddress && wethAddress in opts.tokenPrices) {
             wethPrice = opts.tokenPrices[wethAddress].usd;
             price = await getPriceFromWethVault( 
               VaultName.POLYGON_WEN_WETH,
+              polygonProvider,
+              ChainId.Polygon,
+              wethPrice
+              )
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}`);
+          }
+          break;
+        case TokenName.FBX:
+          polygonProvider = await getProvider(ChainId.Polygon);
+          if (!polygonProvider) {
+            throw new Error('Could not establish Polygon provider');
+          }
+
+          wethAddress = TOKENS[TokenName.WETH]![ChainId.Mainnet]?.address?.toLowerCase();
+          if (opts.tokenPrices && wethAddress && wethAddress in opts.tokenPrices) {
+            wethPrice = opts.tokenPrices[wethAddress].usd;
+            price = await getPriceFromWethVault( 
+              VaultName.POLYGON_WETH_FBX,
               polygonProvider,
               ChainId.Polygon,
               wethPrice

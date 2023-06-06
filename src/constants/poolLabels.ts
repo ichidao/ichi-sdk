@@ -1833,7 +1833,7 @@ export const PoolLabels: TPoolLabels = {
       irrStartTxAmount: 0
     },
     [PolygonPoolNumbers.WSTETH_WETH_VAULT]: {
-      name: 'WEN-WETH Vault',
+      name: 'wstETH-WETH Vault',
       poolNumber: PolygonPoolNumbers.WSTETH_WETH_VAULT,
       lpName: 'ICHI_VAULT_LP',
       shortLpName: 'VAULT_LP',
@@ -1843,6 +1843,20 @@ export const PoolLabels: TPoolLabels = {
       isHodl: true,
       vaultName: VaultName.POLYGON_WSTETH_WETH, 
       vaultAddress: '0xDD2521755a8eb05c41C819488D1890e32FeB8753',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [PolygonPoolNumbers.WSTETH_FBX_VAULT]: {
+      name: 'wstETH-FBX Vault',
+      poolNumber: PolygonPoolNumbers.WSTETH_FBX_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: false,
+      isHodl: true,
+      vaultName: VaultName.POLYGON_WSTETH_FBX, 
+      vaultAddress: '0x9C90975B13d04D7d535359887C236ac51f2298cE',
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     }

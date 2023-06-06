@@ -90,6 +90,7 @@ export enum VaultName {
   POLYGON_WETH_FBX = 'pol_weth_fbx',
   POLYGON_WETH_USDC = 'pol_weth_usdc',
   POLYGON_WMATIC_WETH = 'pol_wmatic_weth',
+  POLYGON_WSTETH_FBX = 'pol_wsteth_fbx',
   POLYGON_WSTETH_WETH = 'pol_wsteth_weth'
 }
 
@@ -187,6 +188,7 @@ export enum VaultTableName {
   POLYGON_WETH_FBX = 'pol_weth_fbx',
   POLYGON_WETH_USDC = 'pol_weth_usdc',
   POLYGON_WMATIC_WETH = 'pol_wmatic_weth',
+  POLYGON_WSTETH_FBX = 'pol_wsteth_fbx',
   POLYGON_WSTETH_WETH = 'pol_wsteth_weth'
 }
 

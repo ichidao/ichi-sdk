@@ -304,7 +304,6 @@ export const Pools: TPools = {
       PolygonPoolNumbers.WBTC_VAULT, 
       PolygonPoolNumbers.WBTC_WETH_VAULT, 
       PolygonPoolNumbers.WEN_WETH_VAULT, 
-      PolygonPoolNumbers.WETH_FBX_VAULT, 
       PolygonPoolNumbers.WETH_USDC_VAULT, 
       PolygonPoolNumbers.WMATIC_WETH_VAULT, 
       PolygonPoolNumbers.WSTETH_FBX_VAULT, 
@@ -565,6 +564,7 @@ export const Pools: TPools = {
     ],
     [ChainId.Polygon]: [
       PolygonPoolNumbers.TRADE_USDT_VAULT,
+      PolygonPoolNumbers.WETH_FBX_VAULT, 
     ],
     [ChainId.Kovan]: [],
     [ChainId.Mumbai]: [],

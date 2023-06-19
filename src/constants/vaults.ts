@@ -40,6 +40,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.AAVE_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.ALLY]: {
@@ -66,6 +67,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.ALLY_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.ASTO]: {
@@ -91,6 +93,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.ASTO_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.BANK]: {
@@ -117,6 +120,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.BANK_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.BAT]: {
@@ -143,6 +147,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.BAT_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.BIT]: {
@@ -169,6 +174,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.BIT_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.BOBA]: {
@@ -195,6 +201,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.BOBA_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.BOBA_ETH]: {
@@ -221,6 +228,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.BOBA_ETH_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.CHO]: {
@@ -247,6 +255,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.CHO_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.COC]: {
@@ -273,6 +282,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.COC_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.COC_USDC]: {
@@ -299,6 +309,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.COC_USDC_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.COC_ETH]: {
@@ -325,6 +336,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.COC_ETH_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.COMP]: {
@@ -351,6 +363,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.COMP_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.COW]: {
@@ -377,6 +390,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.COW_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.FIDU]: {
@@ -403,6 +417,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.FIDU_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.FRAX]: {
@@ -429,6 +444,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.FRAX_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.FXS]: {
@@ -454,6 +470,7 @@ export const VAULTS: VaultMapping = {
       // isLegacy: false,
       isLegacy: isLegacy(MainnetPoolNumbers.FXS_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
+      strategyBy: '',
       depositStatus: true,
     }
   },
@@ -481,6 +498,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.GIV_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.GIV_ETH]: {
@@ -506,6 +524,7 @@ export const VAULTS: VaultMapping = {
       // isLegacy: false,
       isLegacy: isLegacy(MainnetPoolNumbers.GIV_ETH_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
+      strategyBy: '',
       depositStatus: true,
     }
   },
@@ -533,6 +552,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.HOME_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.IMX]: {
@@ -559,6 +579,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.IMX_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.IMX_ETH]: {
@@ -585,6 +606,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.IMX_ETH_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: 'Bril Finance',
     }
   },
   [VaultName.LDO]: {
@@ -611,6 +633,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.LDO_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.LINK]: {
@@ -637,6 +660,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.LINK_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.METIS]: {
@@ -663,6 +687,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.METIS_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.MIDAS]: {
@@ -689,6 +714,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.MIDAS_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.MKR]: {
@@ -715,6 +741,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.MKR_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.OGN]: {
@@ -741,6 +768,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.OGN_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.OUSD]: {
@@ -767,6 +795,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.OUSD_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.SFRXETH]: {
@@ -793,6 +822,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.SFRXETH_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.SHIB]: {
@@ -819,6 +849,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.SHIB_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.SUSHI]: {
@@ -845,6 +876,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.SUSHI_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.SWISE]: {
@@ -871,6 +903,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.SWISE_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.TBTC_WETH]: {
@@ -897,6 +930,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.TBTC_WETH_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.UMA]: {
@@ -923,6 +957,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.UMA_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.UNI]: {
@@ -949,6 +984,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.UNI_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.YFI]: {
@@ -975,6 +1011,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.YFI_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.ZRX]: {
@@ -1001,6 +1038,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.ZRX_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.ICHI_ETH]: {
@@ -1027,6 +1065,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.ICHI_ETH_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.ICHI_WBTC]: {
@@ -1053,6 +1092,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.ICHI_WBTC_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.ICHI_USDC]: {
@@ -1079,6 +1119,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.ICHI_USDC_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.WETH]: {
@@ -1105,6 +1146,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.WETH_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName['1INCH']]: {
@@ -1131,6 +1173,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers['1INCH_VAULT'], ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.FUSE]: {
@@ -1157,6 +1200,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.ONE_FUSE_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.ICHI]: {
@@ -1183,6 +1227,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.ONE_UNI_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.WING]: {
@@ -1209,6 +1254,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.ONE_WING_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.FOX]: {
@@ -1235,6 +1281,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.ONE_FOX_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.OJA]: {
@@ -1261,6 +1308,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.ONE_OJA_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.GNO]: {
@@ -1287,6 +1335,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.GNO_VAULT_LEGACY, ChainId.Mainnet),
       irrStartTxAmount: 17916,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.CEL]: {
@@ -1313,6 +1362,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.CEL_VAULT_LEGACY, ChainId.Mainnet),
       irrStartTxAmount: 346101.2345,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.WBTC]: {
@@ -1339,6 +1389,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.WBTC_VAULT_LEGACY, ChainId.Mainnet),
       irrStartTxAmount: 75.482852739,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.POLYGON_WBTC]: {
@@ -1367,6 +1418,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(PolygonPoolNumbers.WBTC_VAULT, ChainId.Polygon),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: 'Bril Finance',
     }
   },
   [VaultName.POLYGON_BAL_WETH]: {
@@ -1392,6 +1444,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(PolygonPoolNumbers.BAL_WETH_VAULT, ChainId.Polygon),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: 'Bril Finance',
     }
   },
   [VaultName.POLYGON_CRV_WETH]: {
@@ -1417,6 +1470,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(PolygonPoolNumbers.CRV_WETH_VAULT, ChainId.Polygon),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: 'Bril Finance',
     }
   },
   [VaultName.POLYGON_DPI_WETH]: {
@@ -1442,6 +1496,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(PolygonPoolNumbers.DPI_WETH_VAULT, ChainId.Polygon),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: 'Bril Finance',
     }
   },
   [VaultName.POLYGON_GHST_WETH]: {
@@ -1467,6 +1522,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(PolygonPoolNumbers.GHST_WETH_VAULT, ChainId.Polygon),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: 'Bril Finance',
     }
   },
   [VaultName.POLYGON_GOVI]: {
@@ -1493,6 +1549,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(PolygonPoolNumbers.GOVI_VAULT, ChainId.Polygon),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: 'Bril Finance',
     }
   },
   [VaultName.POLYGON_ICHI_USDC]: {
@@ -1518,6 +1575,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(PolygonPoolNumbers.ICHI_USDC_VAULT, ChainId.Polygon),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: 'Bril Finance',
     }
   },
   [VaultName.POLYGON_ICHI_WBTC]: {
@@ -1543,6 +1601,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(PolygonPoolNumbers.ICHI_WBTC_VAULT, ChainId.Polygon),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: 'Bril Finance',
     }
   },
   [VaultName.POLYGON_ICHI_WETH]: {
@@ -1568,6 +1627,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(PolygonPoolNumbers.ICHI_WETH_VAULT, ChainId.Polygon),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: 'Bril Finance',
     }
   },
   [VaultName.POLYGON_ICHI_WMATIC]: {
@@ -1593,6 +1653,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(PolygonPoolNumbers.ICHI_WMATIC_VAULT, ChainId.Polygon),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: 'Bril Finance',
     }
   },
   [VaultName.POLYGON_LINK_WETH]: {
@@ -1618,6 +1679,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(PolygonPoolNumbers.LINK_WETH_VAULT, ChainId.Polygon),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: 'Bril Finance',
     }
   },
   [VaultName.POLYGON_POP_WETH]: {
@@ -1643,6 +1705,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(PolygonPoolNumbers.POP_WETH_VAULT, ChainId.Polygon),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: 'Bril Finance',
     }
   },
   [VaultName.POLYGON_SUSHI_WETH]: {
@@ -1668,6 +1731,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(PolygonPoolNumbers.SUSHI_WETH_VAULT, ChainId.Polygon),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: 'Bril Finance',
     }
   },
   [VaultName.POLYGON_WMATIC_WETH]: {
@@ -1693,6 +1757,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(PolygonPoolNumbers.ICHI_WMATIC_VAULT, ChainId.Polygon),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: 'Bril Finance',
     }
   },
   [VaultName.POLYGON_WBTC_WETH]: {
@@ -1718,6 +1783,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(PolygonPoolNumbers.WBTC_WETH_VAULT, ChainId.Polygon),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: 'Bril Finance',
     }
   },
   [VaultName.POLYGON_WEN_WETH]: {
@@ -1743,6 +1809,33 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(PolygonPoolNumbers.WEN_WETH_VAULT, ChainId.Polygon),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: 'Bril Finance',
+    }
+  },
+  [VaultName.POLYGON_WETH_FBX]: {
+    [ChainId.Polygon]: {
+      vaultName: VaultName.POLYGON_WETH_FBX,
+      tableName: VaultTableName.POLYGON_WETH_FBX,
+      displayName: 'WETH-FBX (polygon)',
+      address: '0x764C3A611ba0F55Be1C7109CDD500e301E0044ba',
+      deployer: '0x0768A75F616B98ee0937673bD83B7aBF142236Ea',
+      farm: 0,
+      externalFarm: '',
+      scarceToken: 'token1',
+      scarceTokenName: TokenName.FBX,
+      scarceTokenDecimals: 18,
+      scarceTokenCoingeckoId: 'firebot',
+      baseTokenName: TokenName.WETH,
+      baseTokenDecimals: 18,
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: false,
+      isHodlVault: true,
+      isLegacy: isLegacy(PolygonPoolNumbers.WETH_FBX_VAULT, ChainId.Polygon),
+      irrStartTxAmount: 0,
+      depositStatus: true,
+      strategyBy: 'Bril Finance',
     }
   },
   [VaultName.POLYGON_WETH_USDC]: {
@@ -1768,6 +1861,59 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(PolygonPoolNumbers.WETH_USDC_VAULT, ChainId.Polygon),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: 'Bril Finance',
+    }
+  },
+  [VaultName.POLYGON_WSTETH_FBX]: {
+    [ChainId.Polygon]: {
+      vaultName: VaultName.POLYGON_WSTETH_FBX,
+      tableName: VaultTableName.POLYGON_WSTETH_FBX,
+      displayName: 'wstETH-FBX (polygon)',
+      address: '0x9C90975B13d04D7d535359887C236ac51f2298cE',
+      deployer: '0x0768A75F616B98ee0937673bD83B7aBF142236Ea',
+      farm: 0,
+      externalFarm: '',
+      scarceToken: 'token1',
+      scarceTokenName: TokenName.FBX,
+      scarceTokenDecimals: 18,
+      scarceTokenCoingeckoId: 'firebot',
+      baseTokenName: TokenName.WSTETH,
+      baseTokenDecimals: 18,
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: false,
+      isHodlVault: true,
+      isLegacy: isLegacy(PolygonPoolNumbers.WSTETH_FBX_VAULT, ChainId.Polygon),
+      irrStartTxAmount: 0,
+      depositStatus: true,
+      strategyBy: 'Bril Finance',
+    }
+  },
+  [VaultName.POLYGON_WSTETH_WETH]: {
+    [ChainId.Polygon]: {
+      vaultName: VaultName.POLYGON_WSTETH_WETH,
+      tableName: VaultTableName.POLYGON_WSTETH_WETH,
+      displayName: 'wstETH-WETH (polygon)',
+      address: '0xDD2521755a8eb05c41C819488D1890e32FeB8753',
+      deployer: '0x0768A75F616B98ee0937673bD83B7aBF142236Ea',
+      farm: 0,
+      externalFarm: '',
+      scarceToken: 'token1',
+      scarceTokenName: TokenName.WETH,
+      scarceTokenDecimals: 18,
+      scarceTokenCoingeckoId: 'weth',
+      baseTokenName: TokenName.WSTETH,
+      baseTokenDecimals: 18,
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: false,
+      isHodlVault: true,
+      isLegacy: isLegacy(PolygonPoolNumbers.WSTETH_WETH_VAULT, ChainId.Polygon),
+      irrStartTxAmount: 0,
+      depositStatus: true,
+      strategyBy: 'Bril Finance',
     }
   },
   [VaultName.ONEBTC]: {
@@ -1794,6 +1940,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.ONE_BTC_VAULT_LEGACY, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.POLYGON_ONEBTC]: {
@@ -1821,6 +1968,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(PolygonPoolNumbers.ONE_BTC_VAULT, ChainId.Polygon),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: 'Bril Finance',
     }
   },
   [VaultName.GNO_V2]: {
@@ -1847,6 +1995,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.GNO_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.CEL_V2]: {
@@ -1873,6 +2022,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.CEL_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.WNXM]: {
@@ -1899,6 +2049,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.WNXM_VAULT_LEGACY, ChainId.Mainnet),
       irrStartTxAmount: 222193,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.WNXM_V2]: {
@@ -1925,6 +2076,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.WNXM_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.WBTC_V2]: {
@@ -1951,6 +2103,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.WBTC_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.QRDO]: {
@@ -1977,6 +2130,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.QRDO_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.QRDO_ICHI]: {
@@ -2003,6 +2157,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.QRDO_ICHI_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.USDC_ICHI]: {
@@ -2029,6 +2184,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.USDC_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     },
     [ChainId.Polygon]: {
       vaultName: VaultName.USDC_ICHI, // old: 'polygon_usdc',
@@ -2054,6 +2210,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(PolygonPoolNumbers.USDC_VAULT, ChainId.Polygon),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: 'Bril Finance',
     }
   },
   [VaultName.POLYGON_TRADE_USDT]: {
@@ -2080,6 +2237,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(PolygonPoolNumbers.TRADE_USDT_VAULT, ChainId.Polygon),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.POLYGON_USDC]: {
@@ -2107,6 +2265,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(PolygonPoolNumbers.USDC_VAULT, ChainId.Polygon),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: 'Bril Finance',
     }
   },
   [VaultName.POLYGON_USDC_WETH]: {
@@ -2133,6 +2292,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(PolygonPoolNumbers.USDC_WETH_VAULT, ChainId.Polygon),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: 'Bril Finance',
     }
   },
   [VaultName.ONEICHI_ICHI]: {
@@ -2159,6 +2319,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.ONE_ICHI_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.BNT_V2]: {
@@ -2185,6 +2346,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.BNT_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.ONEGIV_GIV]: {
@@ -2211,6 +2373,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.ONE_GIV, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.FUSE_ICHI]: {
@@ -2237,6 +2400,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MainnetPoolNumbers.FUSE_ICHI_VAULT, ChainId.Mainnet),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.MUMBAI_ONEBTC_ICHI]: {
@@ -2263,6 +2427,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(MumbaiPoolNumbers.ONE_BTC_ICHI_VAULT, ChainId.Mumbai),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   },
   [VaultName.KOVAN_ONE_FIL]: {
@@ -2289,6 +2454,7 @@ export const VAULTS: VaultMapping = {
       isLegacy: isLegacy(KovanPoolNumbers.ONE_FIL_VAULT, ChainId.Kovan),
       irrStartTxAmount: 0,
       depositStatus: true,
+      strategyBy: '',
     }
   }
 };

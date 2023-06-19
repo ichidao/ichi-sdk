@@ -87,8 +87,11 @@ export enum VaultName {
   POLYGON_WBTC = 'pol_wbtc',
   POLYGON_WBTC_WETH = 'pol_wbtc_weth',
   POLYGON_WEN_WETH = 'pol_wen_weth',
+  POLYGON_WETH_FBX = 'pol_weth_fbx',
   POLYGON_WETH_USDC = 'pol_weth_usdc',
-  POLYGON_WMATIC_WETH = 'pol_wmatic_weth'
+  POLYGON_WMATIC_WETH = 'pol_wmatic_weth',
+  POLYGON_WSTETH_FBX = 'pol_wsteth_fbx',
+  POLYGON_WSTETH_WETH = 'pol_wsteth_weth'
 }
 
 export enum VaultTableName {
@@ -182,8 +185,11 @@ export enum VaultTableName {
   POLYGON_WBTC_ICHI = 'pol_wbtc_ichi',
   POLYGON_WBTC_WETH = 'pol_wbtc_weth',
   POLYGON_WEN_WETH = 'pol_wen_weth',
+  POLYGON_WETH_FBX = 'pol_weth_fbx',
   POLYGON_WETH_USDC = 'pol_weth_usdc',
-  POLYGON_WMATIC_WETH = 'pol_wmatic_weth'
+  POLYGON_WMATIC_WETH = 'pol_wmatic_weth',
+  POLYGON_WSTETH_FBX = 'pol_wsteth_fbx',
+  POLYGON_WSTETH_WETH = 'pol_wsteth_weth'
 }
 
 export type VaultNames = keyof typeof VaultName;

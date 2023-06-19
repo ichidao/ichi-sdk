@@ -245,6 +245,12 @@ export async function getTokenMetrics(
     } else if (token.isOneToken) {
       price = 1;
     } else {
+
+      // used for WEN and FBX token prices:
+      let wethPrice: number;
+      let polygonProvider;
+      const wethAddress = TOKENS[TokenName.WETH]![ChainId.Mainnet]?.address?.toLowerCase();
+
       switch (tokenName) {
         case TokenName.USDT:
         case TokenName.USDC:
@@ -262,17 +268,33 @@ export async function getTokenMetrics(
             ChainId.Mainnet)
           break;
         case TokenName.WEN:
-          let wethPrice: number;
-          const polygonProvider = await getProvider(ChainId.Polygon);
+          polygonProvider = await getProvider(ChainId.Polygon);
           if (!polygonProvider) {
             throw new Error('Could not establish Polygon provider');
           }
 
-          const wethAddress = TOKENS[TokenName.WETH]![ChainId.Mainnet]?.address?.toLowerCase();
           if (opts.tokenPrices && wethAddress && wethAddress in opts.tokenPrices) {
             wethPrice = opts.tokenPrices[wethAddress].usd;
             price = await getPriceFromWethVault( 
               VaultName.POLYGON_WEN_WETH,
+              polygonProvider,
+              ChainId.Polygon,
+              wethPrice
+              )
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}`);
+          }
+          break;
+        case TokenName.FBX:
+          polygonProvider = await getProvider(ChainId.Polygon);
+          if (!polygonProvider) {
+            throw new Error('Could not establish Polygon provider');
+          }
+
+          if (opts.tokenPrices && wethAddress && wethAddress in opts.tokenPrices) {
+            wethPrice = opts.tokenPrices[wethAddress].usd;
+            price = await getPriceFromWethVault( 
+              VaultName.POLYGON_WETH_FBX,
               polygonProvider,
               ChainId.Polygon,
               wethPrice

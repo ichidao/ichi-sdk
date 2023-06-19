@@ -306,6 +306,8 @@ export const Pools: TPools = {
       PolygonPoolNumbers.WEN_WETH_VAULT, 
       PolygonPoolNumbers.WETH_USDC_VAULT, 
       PolygonPoolNumbers.WMATIC_WETH_VAULT, 
+      PolygonPoolNumbers.WSTETH_FBX_VAULT, 
+      PolygonPoolNumbers.WSTETH_WETH_VAULT, 
     ],
     [ChainId.Kovan]: [KovanPoolNumbers.ONE_FIL_VAULT, KovanPoolNumbers.ONE_UNI_VAULT, KovanPoolNumbers.ONE_UNI_UNI_VAULT, KovanPoolNumbers.WEENUS_VAULT],
     [ChainId.Mumbai]: [MumbaiPoolNumbers.ONE_BTC_ICHI_VAULT],
@@ -562,6 +564,7 @@ export const Pools: TPools = {
     ],
     [ChainId.Polygon]: [
       PolygonPoolNumbers.TRADE_USDT_VAULT,
+      PolygonPoolNumbers.WETH_FBX_VAULT, 
     ],
     [ChainId.Kovan]: [],
     [ChainId.Mumbai]: [],

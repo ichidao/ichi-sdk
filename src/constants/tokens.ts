@@ -359,6 +359,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.FBX]: {
+    [ChainId.Polygon]: {
+      tokenName: TokenName.FBX,
+      tableName: TokenName.FBX,
+      address: '0xD125443F38A69d776177c2B9c041f462936F8218',
+      decimals: 18,
+      displayName: 'FBX',
+      symbol: 'FBX',
+      fullName: 'FireBotToken',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.FIDU]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.FIDU,
@@ -709,6 +722,30 @@ export const TOKENS: TokenMapping = {
       fullName: 'WEN',
       isOneToken: false,
       atCoingecko: false
+    }
+  },
+  [TokenName.WSTETH]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.WSTETH,
+      tableName: TokenName.WSTETH,
+      address: '0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0',
+      decimals: 18,
+      displayName: 'WSTETH',
+      symbol: 'WSTETH',
+      fullName: 'Wrapped liquid staked Ether',
+      isOneToken: false,
+      atCoingecko: true
+    },
+    [ChainId.Polygon]: {
+      tokenName: TokenName.WSTETH,
+      tableName: `pol_${TokenName.WSTETH}`,
+      address: '0x03b54A6e9a984069379fae1a4fC4dBAE93B3bCCD',
+      decimals: 18,
+      displayName: 'WSTETH',
+      symbol: 'WSTETH',
+      fullName: 'Wrapped liquid staked Ether',
+      isOneToken: false,
+      atCoingecko: true
     }
   },
   [TokenName.YFI]: {

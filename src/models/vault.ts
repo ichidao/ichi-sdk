@@ -23,4 +23,5 @@ export type Vault = {
   irrStartTxAmount: number;
   isLegacy: boolean;
   depositStatus: boolean;
+  strategyBy: string;
 };

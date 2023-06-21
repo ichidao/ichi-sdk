@@ -216,6 +216,8 @@ export const Pools: TPools = {
     [ChainId.Polygon]: [],
     [ChainId.Mumbai]: [],
   },
+  // these vaults are processed by api-updater. 
+  // All vaults for new and legacy apps are added here.
   [PoolGroupName.ACTIVE_VAULTS]: {
     [ChainId.Mainnet]: [
       MainnetPoolNumbers.ONE_UNI_VAULT_LP,
@@ -304,6 +306,7 @@ export const Pools: TPools = {
       PolygonPoolNumbers.WBTC_VAULT, 
       PolygonPoolNumbers.WBTC_WETH_VAULT, 
       PolygonPoolNumbers.WEN_WETH_VAULT, 
+      PolygonPoolNumbers.WETH_FBX_VAULT, 
       PolygonPoolNumbers.WETH_USDC_VAULT, 
       PolygonPoolNumbers.WMATIC_WETH_VAULT, 
       PolygonPoolNumbers.WSTETH_FBX_VAULT, 

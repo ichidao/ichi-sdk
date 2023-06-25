@@ -28,10 +28,10 @@ export {
   adjustedPid,
   isUnretired,
   isFarmGeneric,
-  isFarmV2Kovan,
   isFarmExternal,
   isFarmV2Mumbai,
   isFarmV2Polygon,
+  isOnChain,
   adjustedPidString,
   getPoolTokens,
   getPoolReserves,
@@ -117,7 +117,7 @@ export { VerboseTransaction } from './src/models/verboseTransaction';
 export { DistilledTransaction } from './src/models/distilledTransaction';
 
 // Enums
-export { MainnetPoolNumbers, KovanPoolNumbers, PolygonPoolNumbers, MumbaiPoolNumbers } from './src/enums/poolNumber';
+export { MainnetPoolNumbers, PolygonPoolNumbers, MumbaiPoolNumbers, ArbitrumPoolNumbers, AvalanchePoolNumbers } from './src/enums/poolNumber';
 export { PoolName, PoolNames } from './src/enums/poolName';
 export { AddressName, AddressNames } from './src/enums/addressName';
 export { TokenName, TokenNames } from './src/enums/tokenName';
@@ -137,7 +137,8 @@ export {
   PoolLabels,
   getPoolLabel,
   getMainnetPoolLabel,
-  getKovanPoolLabel,
+  getArbitrumPoolLabel,
+  getAvalanchePoolLabel,
   getPolygonPoolLabel,
   getMumbaiPoolLabel
 } from './src/constants/poolLabels';

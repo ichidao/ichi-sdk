@@ -5,8 +5,9 @@ export enum ChainId {
   Ropsten = 3,
   Rinkeby = 4,
   Goerli = 5,
-  Kovan = 42,
   Polygon = 137,
+  Arbitrum = 42161,
+  Avalanche = 43114,
   Mumbai = 80001,
   Bsc = 56
 }
@@ -14,12 +15,7 @@ export enum ChainId {
 export interface IAssetData {
   symbol: string;
   name: string;
-  decimals: number;
-  contractAddress?: string;
-  balance?: string;
 }
-
-export type BridgeAction = 'deposit' | 'withdraw';
 
 export type NetworkEnv = 'testnet' | 'mainnet';
 
@@ -31,20 +27,12 @@ export type SupportedNetwork = {
   env: NetworkEnv;
   scanLink: string;
   scanName: string;
+  coingecko: string;
   rpc: IChainData;
-  infuraProviderName: string;
-  bridge?: ChainId[];
-  bridgeAction?: BridgeAction;
 };
 
 export interface IChainData {
-  name: string;
-  shortName: string;
-  chain: string;
-  network: string;
-  wsRpcUrl?: string;
   rpcUrl: string;
-  publicRpcUrl: string;
   nativeCurrency: IAssetData;
 }
 
@@ -65,43 +53,12 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
     env: 'mainnet',
     scanLink: 'etherscan.io',
     scanName: 'Etherscan',
-    infuraProviderName: 'homestead', // https://docs.ethers.io/v5/api/providers/api-providers/#InfuraProvider
-    bridge: [ChainId.Polygon, ChainId.Mainnet],
-    bridgeAction: 'deposit',
+    coingecko: 'ethereum',
     rpc: {
-      name: 'Ethereum Mainnet',
-      shortName: 'eth',
-      chain: 'ETH',
-      network: 'mainnet',
       rpcUrl: `https://mainnet.infura.io/v3/`,
-      publicRpcUrl: `https://mainnet.infura.io/v3/`,
       nativeCurrency: {
         symbol: 'ETH',
-        name: 'Ethereum',
-        decimals: 18
-      }
-    }
-  },
-  [ChainId.Kovan]: {
-    chainId: ChainId.Kovan,
-    name: 'Kovan',
-    color: 'linear-gradient(90deg, rgba(0,226,216,1) 0%, rgba(0,181,173,1) 100%)',
-    icon: generateIconUrl(ChainId.Kovan, 'png'),
-    env: 'testnet',
-    scanLink: 'kovan.etherscan.io',
-    scanName: 'Etherscan',
-    infuraProviderName: 'kovan', // https://docs.ethers.io/v5/api/providers/api-providers/#InfuraProvider
-    rpc: {
-      name: 'Ethereum Kovan',
-      shortName: 'kov',
-      chain: 'ETH',
-      network: 'kovan',
-      rpcUrl: `https://kovan.infura.io/v3/`,
-      publicRpcUrl: `https://kovan.infura.io/v3/`,
-      nativeCurrency: {
-        symbol: 'ETH',
-        name: 'Ethereum',
-        decimals: 18
+        name: 'Ethereum'
       }
     }
   },
@@ -113,20 +70,12 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
     env: 'testnet',
     scanLink: 'goerli.etherscan.io',
     scanName: 'Etherscan',
-    infuraProviderName: 'goerli', // https://docs.ethers.io/v5/api/providers/api-providers/#InfuraProvider
-    bridge: [ChainId.Mumbai, ChainId.Goerli],
-    bridgeAction: 'deposit',
+    coingecko: '',
     rpc: {
-      name: 'Ethereum Goerli',
-      shortName: 'kov',
-      chain: 'ETH',
-      network: 'goerli',
       rpcUrl: `https://goerli.infura.io/v3/`,
-      publicRpcUrl: `https://goerli.infura.io/v3/`,
       nativeCurrency: {
         symbol: 'ETH',
-        name: 'Ethereum',
-        decimals: 18
+        name: 'Ethereum'
       }
     }
   },
@@ -138,22 +87,46 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
     env: 'mainnet',
     scanLink: 'polygonscan.com',
     scanName: 'Polygonscan',
-    infuraProviderName: 'matic', // https://docs.ethers.io/v5/api/providers/api-providers/#InfuraProvider
-    bridge: [ChainId.Mainnet],
-    bridgeAction: 'withdraw',
+    coingecko: 'polygon-pos',
     rpc: {
-      name: 'Polygon Mainnet',
-      shortName: 'pol',
-      chain: 'MATIC',
-      network: 'polygon',
       rpcUrl: `https://polygon-mainnet.infura.io/v3/`,
-      publicRpcUrl: 'https://polygon-rpc.com',
       nativeCurrency: {
         symbol: 'MATIC',
-        name: 'Matic',
-        decimals: 18,
-        contractAddress: '',
-        balance: ''
+        name: 'Matic'
+      }
+    }
+  },
+  [ChainId.Arbitrum]: {
+    chainId: ChainId.Arbitrum,
+    name: 'Arbitrum',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Polygon, 'svg'),
+    env: 'mainnet',
+    scanLink: 'arbiscan.io',
+    scanName: 'Arbiscan',
+    coingecko: 'arbitrum-one',
+    rpc: {
+      rpcUrl: `https://arbitrum-mainnet.infura.io/v3/`,
+      nativeCurrency: {
+        symbol: 'ETH',
+        name: 'Ethereum'
+      }
+    }
+  },
+  [ChainId.Avalanche]: {
+    chainId: ChainId.Avalanche,
+    name: 'Avalanche',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Polygon, 'svg'),
+    env: 'mainnet',
+    scanLink: 'snowtrace.io',
+    scanName: 'Snowtrace',
+    coingecko: 'avalanche',
+    rpc: {
+      rpcUrl: `https://avalanche-mainnet.infura.io/v3/`,
+      nativeCurrency: {
+        symbol: 'AVAX',
+        name: 'Avalanche'
       }
     }
   },
@@ -165,20 +138,12 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
     env: 'testnet',
     scanLink: 'mumbai.polygonscan.com',
     scanName: 'Polygonscan',
-    infuraProviderName: 'maticmum', // https://docs.ethers.io/v5/api/providers/api-providers/#InfuraProvider
-    bridge: [ChainId.Goerli],
-    bridgeAction: 'withdraw',
+    coingecko: '',
     rpc: {
-      name: 'Matic Mumbai',
-      shortName: 'mum',
-      chain: 'MATIC',
-      network: 'mumbai',
       rpcUrl: `https://polygon-mumbai.infura.io/v3/`,
-      publicRpcUrl: 'https://rpc-mumbai.maticvigil.com',
       nativeCurrency: {
         symbol: 'MATIC',
-        name: 'Matic',
-        decimals: 18
+        name: 'Matic'
       }
     }
   },
@@ -188,20 +153,14 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
     color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
     icon: generateIconUrl(ChainId.Bsc, 'svg'),
     env: 'testnet',
-    scanLink: '',
-    scanName: '',
-    infuraProviderName: '', // https://docs.ethers.io/v5/api/providers/api-providers/#InfuraProvider
+    scanLink: 'bscscan.com',
+    scanName: 'BscScan',
+    coingecko: 'binance-smart-chain',
     rpc: {
-      name: '',
-      shortName: 'bsc',
-      chain: '',
-      network: '',
       rpcUrl: 'https://bsc-dataseed1.binance.org:443',
-      publicRpcUrl: 'https://bsc-dataseed1.binance.org:443',
       nativeCurrency: {
         symbol: 'BNB',
-        name: 'BNB',
-        decimals: 18
+        name: 'BNB'
       }
     }
   }

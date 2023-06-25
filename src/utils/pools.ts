@@ -13,13 +13,18 @@ import {
   asDodoLiquidityPool,
   asGenericPool,
   asIchiBnt,
-  asIchiVault,
-  asOneTokenV1
+  asIchiVault
 } from './contractGuards';
 import {
-  KovanPoolNumberValues,
+  ArbitrumPoolNumbers,
+  ArbitrumPoolNumberValues,
+  AvalanchePoolNumbers,
+  AvalanchePoolNumberValues,
+  MainnetPoolNumbers,
   MainnetPoolNumberValues,
+  MumbaiPoolNumbers,
   MumbaiPoolNumberValues,
+  PolygonPoolNumbers,
   PolygonPoolNumberValues,
   PoolNumberValues
 } from '../enums/poolNumber';
@@ -33,12 +38,30 @@ export function isFarmV2(pid: PoolNumberValues): boolean {
   return pid >= 1000 && pid < 4000;
 }
 
-export function isFarmV2Polygon(pid: PoolNumberValues): boolean {
-  return pid >= 4000 && pid < 5000;
+export function isOnChain(pid: PoolNumberValues, chainId: ChainId): boolean {
+  let nums;
+  switch (chainId) {
+    case ChainId.Arbitrum:
+      nums = ArbitrumPoolNumbers;
+      break;
+    case ChainId.Avalanche:
+      nums = AvalanchePoolNumbers;
+      break;
+    case ChainId.Polygon:
+      nums = PolygonPoolNumbers;
+      break;
+    case ChainId.Mumbai:
+      nums = MumbaiPoolNumbers;
+      break;
+    default:
+      nums = MainnetPoolNumbers;
+      break;
+  }
+  return Object.values(nums).includes(pid);
 }
 
-export function isFarmV2Kovan(pid: PoolNumberValues): boolean {
-  return (pid >= 5000 && pid < 6000) || (pid as number) === 20000;
+export function isFarmV2Polygon(pid: PoolNumberValues): boolean {
+  return pid >= 4000 && pid < 5000;
 }
 
 export function isFarmV2Mumbai(pid: PoolNumberValues): boolean {
@@ -56,7 +79,8 @@ export function isFarmExternal(pid: PoolNumberValues): boolean {
 export function isUnretired(pid: PoolNumberValues): boolean {
   return (
     Pools.UNRETIRED_POOLS[ChainId.Mainnet].includes(pid as MainnetPoolNumberValues) ||
-    Pools.UNRETIRED_POOLS[ChainId.Kovan].includes(pid as KovanPoolNumberValues) ||
+    Pools.UNRETIRED_POOLS[ChainId.Arbitrum].includes(pid as ArbitrumPoolNumberValues) ||
+    Pools.UNRETIRED_POOLS[ChainId.Avalanche].includes(pid as AvalanchePoolNumberValues) ||
     Pools.UNRETIRED_POOLS[ChainId.Polygon].includes(pid as PolygonPoolNumberValues) ||
     Pools.UNRETIRED_POOLS[ChainId.Mumbai].includes(pid as MumbaiPoolNumberValues)
   );
@@ -82,8 +106,7 @@ export async function getPoolTokens(poolContract: Contracts, chainId: ChainId, o
   try {
     let isBalancerPool =
       opts?.poolId != null &&
-      (Pools.BALANCER_POOLS[chainId].includes(opts.poolId) ||
-        Pools.BALANCER_SMART_POOLS[chainId].includes(opts.poolId));
+      (Pools.BALANCER_POOLS[chainId].includes(opts.poolId));
     let isBancorPoolV2 = opts?.poolId != null && Pools.BANCOR_POOLS_V2[chainId].includes(opts.poolId);
 
     let token0 = '';
@@ -231,39 +254,6 @@ export async function getTokenData(tokenAddress: string, chainId: ChainId) {
     throw e;
   }
 }
-
-// Mumbai
-// const getOneTokenAttributes = async function (tokenName: TokenName, chainId: ChainId) {
-//   const token = getToken(tokenName, { chainId });
-//   let template = {
-//     address: TOKENS[tokenName]['address'],
-//     decimals: TOKENS[tokenName]['decimals'],
-//     strategy: TOKENS[tokenName]['strategy'],
-//     tradeUrl: TOKENS[tokenName]['tradeUrl'],
-//     stimulus_address: '',
-//     stimulus_name: TOKENS[tokenName]['stimulusName'],
-//     stimulus_display_name: TOKENS[tokenName]['stimulusDisplayName'],
-//     stimulus_decimals: 18,
-//     abi_type: 'ONETOKEN',
-//     collateral_name: 'mum_usdc',
-//     base_name: tokenName.toLowerCase(),
-//     display_name: tokenName,
-//     isV2: TOKENS[tokenName]['isV2'],
-//     ichiVault: {
-//       address: TOKENS[tokenName]['ichiVault'] ? TOKENS[tokenName]['ichiVault']['address'] : '',
-//       farm: TOKENS[tokenName]['ichiVault'] ? TOKENS[tokenName]['ichiVault']['farm'] : 0,
-//       ichi: TOKENS[tokenName]['ichiVault'] ? TOKENS[tokenName]['ichiVault']['ichi'] : ''
-//     }
-//   };
-
-//   if (tokenName == 'mum_onebtc') {
-//     template.display_name = 'oneBTC';
-//   }
-
-//   template.stimulus_address = TOKENS[template.stimulus_name]['address'];
-
-//   return template;
-// };
 
 // Mainnet
 export const getOneTokenAttributes = function (tokenName: TokenName, chainId: ChainId): OneTokenTemplate {

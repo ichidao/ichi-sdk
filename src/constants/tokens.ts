@@ -45,18 +45,6 @@ export const TOKENS: TokenMapping = {
       fullName: 'ICHI',
       isOneToken: false,
       targetVaultStrength: 0.1
-    },
-    [ChainId.Kovan]: {
-      tokenName: TokenName.ICHI,
-      tableName: `test_${TokenName.ICHI}`,
-      symbol: 'ICHI',
-      atCoingecko: false,
-      address: '0x883Cc74d965edB77311A3f9a93649e92E2aa14ba',
-      decimals: 9,
-      displayName: 'ICHI',
-      fullName: 'ICHI',
-      isOneToken: false,
-      targetVaultStrength: 0.1
     }
   },
   [TokenName.ICHI_V2]: {
@@ -106,42 +94,19 @@ export const TOKENS: TokenMapping = {
       fullName: 'IchiStake',
       isOneToken: false,
       atCoingecko: false
-    },
-    [ChainId.Kovan]: {
-      tokenName: TokenName.XICHI,
-      tableName: TokenName.XICHI,
-      symbol: 'xICHI',
-      fullName: 'IchiStake',
-      atCoingecko: false,
-      address: '0x4a8a50cd18ccd55078630a4b17d16c892ff7f4db',
-      decimals: 9,
-      displayName: 'xICHI',
-      isOneToken: false
     }
   },
-  [TokenName.RENFIL]: {
+  [TokenName['1INCH']]: {
     [ChainId.Mainnet]: {
-      tokenName: TokenName.RENFIL,
-      tableName: TokenName.RENFIL,
-      address: '0xD5147bc8e386d91Cc5DBE72099DAC6C9b99276F5',
+      tokenName: TokenName['1INCH'],
+      tableName: TokenName['1INCH'],
+      address: '0x111111111117dC0aa78b770fA6A738034120C302',
       decimals: 18,
-      displayName: 'renFIL',
-      symbol: 'renFIL',
-      fullName: 'renFIL',
-      parentOneToken: TokenName.ONE_FIL,
+      displayName: '1INCH',
+      symbol: '1INCH',
+      fullName: '1INCH Token',
       isOneToken: false,
       atCoingecko: true
-    },
-    [ChainId.Kovan]: {
-      tokenName: TokenName.RENFIL,
-      tableName: `test_${TokenName.RENFIL}`,
-      symbol: 'renFIL',
-      fullName: 'renFIL',
-      atCoingecko: true,
-      address: '0x3CB15c7048e7CfAcFBc8eFe9362fAC5e60012BD1',
-      decimals: 18,
-      displayName: 'renFIL',
-      isOneToken: false
     }
   },
   [TokenName.AAVE]: {
@@ -153,6 +118,32 @@ export const TOKENS: TokenMapping = {
       displayName: 'AAVE',
       symbol: 'AAVE',
       fullName: 'Aave Token',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
+  [TokenName.ALLY]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.ALLY,
+      tableName: TokenName.ALLY,
+      address: '0x1aa1e61369874bae3444A8Ef6528d6b13D6952EF',
+      decimals: 18,
+      displayName: 'ALLY',
+      symbol: 'ALLY',
+      fullName: 'ICHI Ally',
+      isOneToken: false,
+      atCoingecko: false
+    }
+  },
+  [TokenName.ARB]: {
+    [ChainId.Arbitrum]: {
+      tokenName: TokenName.ARB,
+      tableName: `arbitrum_${TokenName.ARB}`,
+      address: '0x912CE59144191C1204E64559FE8253a0e49E6548',
+      decimals: 18,
+      displayName: 'ARB',
+      symbol: 'ARB',
+      fullName: 'ARB Token',
       isOneToken: false,
       atCoingecko: true
     }
@@ -184,7 +175,7 @@ export const TOKENS: TokenMapping = {
     },
     [ChainId.Polygon]: {
       tokenName: TokenName.BAL,
-      tableName: TokenName.BAL,
+      tableName: `pol_${TokenName.BAL}`,
       address: '0x9a71012B13CA4d3D0Cdc72A177DF3ef03b0E76A3',
       decimals: 18,
       displayName: 'BAL',
@@ -244,6 +235,33 @@ export const TOKENS: TokenMapping = {
       fullName: 'Bancor',
       isOneToken: false,
       atCoingecko: true
+    }
+  },
+  [TokenName.BOBA]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.BOBA,
+      tableName: TokenName.BOBA,
+      address: '0x42bbfa2e77757c645eeaad1655e0911a7553efbc',
+      decimals: 18,
+      displayName: 'BOBA',
+      symbol: 'BOBA',
+      fullName: 'Boba Token',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
+  [TokenName.BOOT]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.BOOT,
+      tableName: TokenName.BOOT,
+      address: '0x0337fe811809A0aaf9B5D07945b39E473dE4c46E',
+      decimals: 18,
+      displayName: 'BOOT',
+      symbol: 'BOOT',
+      fullName: 'Boot Finance',
+      parentOneToken: TokenName.BOOT_USD,
+      isOneToken: false,
+      atCoingecko: false
     }
   },
   [TokenName.CEL]: {
@@ -325,7 +343,7 @@ export const TOKENS: TokenMapping = {
     },
     [ChainId.Polygon]: {
       tokenName: TokenName.CRV,
-      tableName: TokenName.CRV,
+      tableName: `pol_${TokenName.CRV}`,
       address: '0x172370d5Cd63279eFa6d502DAB29171933a610AF',
       decimals: 18,
       displayName: 'CRV',
@@ -333,6 +351,33 @@ export const TOKENS: TokenMapping = {
       fullName: 'Curve DAO',
       isOneToken: false,
       atCoingecko: true
+    }
+  },
+  [TokenName.DAI]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.DAI,
+      tableName: TokenName.DAI,
+      address: '0x6b175474e89094c44da98b954eedeac495271d0f',
+      decimals: 18,
+      displayName: 'DAI',
+      symbol: 'DAI',
+      fullName: 'Dai Stablecoin',
+      isOneToken: false,
+      atCoingecko: false
+    }
+  },
+  [TokenName.DODO]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.DODO,
+      tableName: TokenName.DODO,
+      address: '0x43Dfc4159D86F3A37A5A4B3D4580b888ad7d4DDd',
+      decimals: 18,
+      displayName: 'DODO',
+      symbol: 'DODO',
+      fullName: 'DODO bird',
+      parentOneToken: TokenName.ONE_DODO,
+      isOneToken: false,
+      atCoingecko: false
     }
   },
   [TokenName.DPI]: {
@@ -349,7 +394,7 @@ export const TOKENS: TokenMapping = {
     },
     [ChainId.Polygon]: {
       tokenName: TokenName.DPI,
-      tableName: TokenName.DPI,
+      tableName: `pol_${TokenName.DPI}`,
       address: '0x85955046DF4668e1DD369D2DE9f3AEB98DD2A369',
       decimals: 18,
       displayName: 'DPI',
@@ -362,7 +407,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.FBX]: {
     [ChainId.Polygon]: {
       tokenName: TokenName.FBX,
-      tableName: TokenName.FBX,
+      tableName: `pol_${TokenName.FBX}`,
       address: '0xD125443F38A69d776177c2B9c041f462936F8218',
       decimals: 18,
       displayName: 'FBX',
@@ -385,6 +430,20 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.FOX]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.FOX,
+      tableName: TokenName.FOX,
+      address: '0xc770EEfAd204B5180dF6a14Ee197D99d808ee52d',
+      decimals: 18,
+      displayName: 'FOX',
+      symbol: 'FOX',
+      fullName: 'ShapeShift FOX',
+      parentOneToken: TokenName.ONE_FOX,
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.FRAX]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.FRAX,
@@ -396,6 +455,21 @@ export const TOKENS: TokenMapping = {
       fullName: 'Frax',
       isOneToken: false,
       atCoingecko: true
+    }
+  },
+  [TokenName.FUSE]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.FUSE,
+      tableName: TokenName.FUSE,
+      address: '0x970B9bB2C0444F5E81e9d0eFb84C8ccdcdcAf84d',
+      decimals: 18,
+      displayName: 'FUSE',
+      symbol: 'FUSE',
+      fullName: 'Fuse Token',
+      parentOneToken: TokenName.ONE_FUSE,
+      isOneToken: false,
+      atCoingecko: true,
+      targetVaultStrength: 0.1
     }
   },
   [TokenName.FXS]: {
@@ -425,7 +499,7 @@ export const TOKENS: TokenMapping = {
     },
     [ChainId.Polygon]: {
       tokenName: TokenName.GHST,
-      tableName: TokenName.GHST,
+      tableName: `pol_${TokenName.GHST}`,
       address: '0x385Eeac5cB85A38A9a07A70c73e0a3271CfB54A7',
       decimals: 18,
       displayName: 'GHST',
@@ -433,6 +507,71 @@ export const TOKENS: TokenMapping = {
       fullName: 'Aavegotchi GHST Token',
       isOneToken: false,
       atCoingecko: true
+    }
+  },
+  [TokenName.GIV]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.GIV,
+      tableName: TokenName.GIV,
+      address: '0x900dB999074d9277c5DA2A43F252D74366230DA0',
+      decimals: 18,
+      displayName: 'GIV',
+      symbol: 'GIV',
+      fullName: 'Giveth',
+      parentOneToken: TokenName.ONE_GIV,
+      isOneToken: false,
+      atCoingecko: true,
+      targetVaultStrength: 0.1
+    }
+  },
+  [TokenName.GNO]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.GNO,
+      tableName: TokenName.GNO,
+      address: '0x6810e776880C02933D47DB1b9fc05908e5386b96',
+      decimals: 18,
+      displayName: 'GNO',
+      symbol: 'GNO',
+      fullName: 'Gnosis',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
+  [TokenName.GOVI]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.GOVI,
+      tableName: TokenName.GOVI,
+      address: '0xeeaa40b28a2d1b0b08f6f97bb1dd4b75316c6107',
+      decimals: 18,
+      displayName: 'GOVI',
+      symbol: 'GOVI',
+      fullName: 'GOVI',
+      isOneToken: false,
+      atCoingecko: true
+    },
+    [ChainId.Polygon]: {
+      tokenName: TokenName.GOVI,
+      tableName: `pol_${TokenName.GOVI}`,
+      address: '0x43Df9c0a1156c96cEa98737b511ac89D0e2A1F46',
+      decimals: 18,
+      displayName: 'GOVI',
+      symbol: 'GOVI',
+      fullName: 'GOVI',
+      isOneToken: false,
+      atCoingecko: false
+    }
+  },
+  [TokenName.HOME]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.HOME,
+      tableName: TokenName.HOME,
+      address: '0xb8919522331c59f5c16bdfaa6a121a6e03a91f62',
+      decimals: 6,
+      displayName: 'HOME',
+      symbol: 'HOME',
+      fullName: 'Home',
+      isOneToken: false,
+      atCoingecko: false
     }
   },
   [TokenName.IMX]: {
@@ -475,7 +614,7 @@ export const TOKENS: TokenMapping = {
     },
     [ChainId.Polygon]: {
       tokenName: TokenName.LINK,
-      tableName: TokenName.LINK,
+      tableName: `pol_${TokenName.LINK}`,
       address: '0x53E0bca35eC356BD5ddDFebbD1Fc0fD03FaBad39',
       decimals: 18,
       displayName: 'LINK',
@@ -524,6 +663,20 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.MPH]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.MPH,
+      tableName: TokenName.MPH,
+      address: '0x8888801aF4d980682e47f1A9036e589479e835C5',
+      decimals: 18,
+      displayName: 'MPH',
+      symbol: 'MPH',
+      fullName: '88mph.app',
+      parentOneToken: TokenName.ONE_MPH,
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.OGN]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.OGN,
@@ -537,6 +690,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.OJA]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.OJA,
+      tableName: TokenName.OJA,
+      address: '0x0aA7eFE4945Db24d95cA6E117BBa65Ed326e291A',
+      decimals: 18,
+      displayName: 'OJA',
+      symbol: 'OJA',
+      fullName: 'Ojamu Token',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.OUSD]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.OUSD,
@@ -546,6 +712,20 @@ export const TOKENS: TokenMapping = {
       displayName: 'OUSD',
       symbol: 'OUSD',
       fullName: 'Origin Dollar',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
+  [TokenName.PERL]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.PERL,
+      tableName: TokenName.PERL,
+      address: '0xeca82185adCE47f39c684352B0439f030f860318',
+      decimals: 18,
+      displayName: 'PERL',
+      symbol: 'PERL',
+      fullName: 'Perlin',
+      parentOneToken: TokenName.ONE_PERL,
       isOneToken: false,
       atCoingecko: true
     }
@@ -564,12 +744,53 @@ export const TOKENS: TokenMapping = {
     },
     [ChainId.Polygon]: {
       tokenName: TokenName.POP,
-      tableName: TokenName.POP,
+      tableName: `pol_${TokenName.POP}`,
       address: '0xC5B57e9a1E7914FDA753A88f24E5703e617Ee50c',
       decimals: 18,
       displayName: 'POP',
       symbol: 'POP',
       fullName: 'Popcorn',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
+  [TokenName.PWING]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.PWING,
+      tableName: TokenName.PWING,
+      address: '0xDb0f18081b505A7DE20B18ac41856BCB4Ba86A1a',
+      decimals: 9,
+      displayName: 'pWING',
+      symbol: 'pWING',
+      fullName: 'Poly Ontology Wing Token',
+      isOneToken: false,
+      atCoingecko: false
+    }
+  },
+  [TokenName.QRDO]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.QRDO,
+      tableName: TokenName.QRDO,
+      address: '0x4123a133ae3c521FD134D7b13A2dEC35b56c2463',
+      decimals: 8,
+      displayName: 'QRDO',
+      symbol: 'QRDO',
+      fullName: 'Qredo Token',
+      isOneToken: false,
+      atCoingecko: true,
+      targetVaultStrength: 0.1
+    }
+  },
+  [TokenName.RENFIL]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.RENFIL,
+      tableName: TokenName.RENFIL,
+      address: '0xD5147bc8e386d91Cc5DBE72099DAC6C9b99276F5',
+      decimals: 18,
+      displayName: 'renFIL',
+      symbol: 'renFIL',
+      fullName: 'renFIL',
+      parentOneToken: TokenName.ONE_FIL,
       isOneToken: false,
       atCoingecko: true
     }
@@ -614,7 +835,7 @@ export const TOKENS: TokenMapping = {
     },
     [ChainId.Polygon]: {
       tokenName: TokenName.SUSHI,
-      tableName: TokenName.SUSHI,
+      tableName: `pol_${TokenName.SUSHI}`,
       address: '0x0b3F868E0BE5597D5DB7fEB59E1CADBb0fdDa50a',
       decimals: 18,
       displayName: 'SUSHI',
@@ -687,6 +908,54 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.UNI]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.UNI,
+      tableName: TokenName.UNI,
+      address: '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984',
+      decimals: 18,
+      displayName: 'UNI',
+      symbol: 'UNI',
+      fullName: 'Uniswap',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
+  [TokenName.USDC]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.USDC,
+      tableName: TokenName.USDC,
+      address: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',
+      decimals: 6,
+      displayName: 'USDC',
+      symbol: 'USDC',
+      fullName: 'USD Coin',
+      isOneToken: false,
+      atCoingecko: false
+    },
+    [ChainId.Polygon]: {
+      tokenName: TokenName.USDC,
+      tableName: `pol_${TokenName.USDC}`,
+      address: '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174',
+      decimals: 6,
+      displayName: 'USDC',
+      symbol: 'USDC',
+      fullName: 'USD Coin',
+      atCoingecko: false,
+      isOneToken: false
+    },
+    [ChainId.Mumbai]: {
+      tokenName: TokenName.USDC,
+      tableName: `mum_${TokenName.USDC}`,
+      symbol: 'USDC',
+      fullName: 'USD Coin',
+      atCoingecko: false,
+      address: '0x0FA8781a83E46826621b3BC094Ea2A0212e71B23',
+      decimals: 6,
+      displayName: 'USDC',
+      isOneToken: false
+    }
+  },
   [TokenName.USDT]: {
     [ChainId.Polygon]: {
       tokenName: TokenName.USDT,
@@ -698,6 +967,43 @@ export const TOKENS: TokenMapping = {
       fullName: 'Tether USD',
       isOneToken: false,
       atCoingecko: true
+    }
+  },
+  [TokenName.VBTC]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.VBTC,
+      tableName: TokenName.VBTC,
+      address: '0xe1406825186D63980fd6e2eC61888f7B91C4bAe4',
+      decimals: 18,
+      displayName: 'VBTC',
+      symbol: 'VBTC',
+      fullName: 'Strudel BTC',
+      isOneToken: false,
+      atCoingecko: false
+    }
+  },
+  [TokenName.WBTC]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.WBTC,
+      tableName: TokenName.WBTC,
+      address: '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599',
+      decimals: 8,
+      displayName: 'wBTC',
+      symbol: 'wBTC',
+      fullName: 'Wrapped Bitcoin',
+      isOneToken: false,
+      atCoingecko: true
+    },
+    [ChainId.Polygon]: {
+      tokenName: TokenName.WBTC,
+      tableName: `pol_${TokenName.WBTC}`,
+      address: '0x1BFD67037B42Cf73acF2047067bd4F2C47D9BfD6',
+      decimals: 8,
+      displayName: 'wBTC',
+      symbol: 'wBTC',
+      fullName: 'Wrapped Bitcoin',
+      atCoingecko: false,
+      isOneToken: false
     }
   },
   [TokenName.WEN]: {
@@ -722,6 +1028,78 @@ export const TOKENS: TokenMapping = {
       fullName: 'WEN',
       isOneToken: false,
       atCoingecko: false
+    }
+  },
+  [TokenName.WETH]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.WETH,
+      tableName: TokenName.WETH,
+      address: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
+      decimals: 18,
+      displayName: 'wETH',
+      symbol: 'wETH',
+      fullName: 'Wrapped Ether',
+      isOneToken: false,
+      atCoingecko: true
+    },
+    [ChainId.Arbitrum]: {
+      tokenName: TokenName.WETH,
+      tableName: `arbitrum_${TokenName.WETH}`,
+      address: '0x82aF49447D8a07e3bd95BD0d56f35241523fBab1',
+      decimals: 18,
+      displayName: 'wETH',
+      symbol: 'wETH',
+      fullName: 'Wrapped Ether',
+      isOneToken: false,
+      atCoingecko: false
+    },
+    [ChainId.Polygon]: {
+      tokenName: TokenName.WETH,
+      tableName: `pol_${TokenName.WETH}`,
+      address: '0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619',
+      decimals: 18,
+      displayName: 'wETH',
+      symbol: 'wETH',
+      fullName: 'Wrapped Ether',
+      isOneToken: false,
+      atCoingecko: false
+    }
+  },
+  [TokenName.WMATIC]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.WMATIC,
+      tableName: TokenName.WMATIC,
+      address: '0x7c9f4C87d911613Fe9ca58b579f737911AAD2D43',
+      decimals: 18,
+      displayName: 'WMATIC',
+      symbol: 'WMATIC',
+      fullName: 'Wrapped Matic',
+      isOneToken: false,
+      atCoingecko: true
+    },
+    [ChainId.Polygon]: {
+      tokenName: TokenName.WMATIC,
+      tableName: `pol_${TokenName.WMATIC}`,
+      address: '0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270',
+      decimals: 18,
+      displayName: 'WMATIC',
+      symbol: 'WMATIC',
+      fullName: 'Wrapped Matic',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
+  [TokenName.WNXM]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.WNXM,
+      tableName: TokenName.WNXM,
+      address: '0x0d438F3b5175Bebc262bF23753C1E53d03432bDE',
+      decimals: 18,
+      displayName: 'wNXM',
+      symbol: 'wNXM',
+      fullName: 'Wrapped NXM',
+      isOneToken: false,
+      atCoingecko: true
     }
   },
   [TokenName.WSTETH]: {
@@ -774,438 +1152,6 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
-  [TokenName.GIV]: {
-    [ChainId.Mainnet]: {
-      tokenName: TokenName.GIV,
-      tableName: TokenName.GIV,
-      address: '0x900dB999074d9277c5DA2A43F252D74366230DA0',
-      decimals: 18,
-      displayName: 'GIV',
-      symbol: 'GIV',
-      fullName: 'Giveth',
-      parentOneToken: TokenName.ONE_GIV,
-      isOneToken: false,
-      atCoingecko: true,
-      targetVaultStrength: 0.1
-    }
-  },
-  [TokenName.GNO]: {
-    [ChainId.Mainnet]: {
-      tokenName: TokenName.GNO,
-      tableName: TokenName.GNO,
-      address: '0x6810e776880C02933D47DB1b9fc05908e5386b96',
-      decimals: 18,
-      displayName: 'GNO',
-      symbol: 'GNO',
-      fullName: 'Gnosis',
-      isOneToken: false,
-      atCoingecko: true
-    }
-  },
-  [TokenName.DAI]: {
-    [ChainId.Mainnet]: {
-      tokenName: TokenName.DAI,
-      tableName: TokenName.DAI,
-      address: '0x6b175474e89094c44da98b954eedeac495271d0f',
-      decimals: 18,
-      displayName: 'DAI',
-      symbol: 'DAI',
-      fullName: 'Dai Stablecoin',
-      isOneToken: false,
-      atCoingecko: false
-    },
-    [ChainId.Kovan]: {
-      tokenName: TokenName.DAI,
-      tableName: `test_${TokenName.DAI}`,
-      address: '0x4F96Fe3b7A6Cf9725f59d353F723c1bDb64CA6Aa',
-      decimals: 18,
-      displayName: 'DAI',
-      symbol: 'DAI',
-      fullName: 'Dai Stablecoin',
-      isOneToken: false,
-      atCoingecko: false
-    }
-  },
-  [TokenName['1INCH']]: {
-    [ChainId.Mainnet]: {
-      tokenName: TokenName['1INCH'],
-      tableName: TokenName['1INCH'],
-      address: '0x111111111117dC0aa78b770fA6A738034120C302',
-      decimals: 18,
-      displayName: '1INCH',
-      symbol: '1INCH',
-      fullName: '1INCH Token',
-      isOneToken: false,
-      atCoingecko: true
-    }
-  },
-  [TokenName.ALLY]: {
-    [ChainId.Mainnet]: {
-      tokenName: TokenName.ALLY,
-      tableName: TokenName.ALLY,
-      address: '0x1aa1e61369874bae3444A8Ef6528d6b13D6952EF',
-      decimals: 18,
-      displayName: 'ALLY',
-      symbol: 'ALLY',
-      fullName: 'ICHI Ally',
-      isOneToken: false,
-      atCoingecko: false
-    }
-  },
-  [TokenName.BOBA]: {
-    [ChainId.Mainnet]: {
-      tokenName: TokenName.BOBA,
-      tableName: TokenName.BOBA,
-      address: '0x42bbfa2e77757c645eeaad1655e0911a7553efbc',
-      decimals: 18,
-      displayName: 'BOBA',
-      symbol: 'BOBA',
-      fullName: 'Boba Token',
-      isOneToken: false,
-      atCoingecko: true
-    }
-  },
-  [TokenName.GOVI]: {
-    [ChainId.Mainnet]: {
-      tokenName: TokenName.GOVI,
-      tableName: TokenName.GOVI,
-      address: '0xeeaa40b28a2d1b0b08f6f97bb1dd4b75316c6107',
-      decimals: 18,
-      displayName: 'GOVI',
-      symbol: 'GOVI',
-      fullName: 'GOVI',
-      isOneToken: false,
-      atCoingecko: true
-    },
-    [ChainId.Polygon]: {
-      tokenName: TokenName.GOVI,
-      tableName: `pol_${TokenName.GOVI}`,
-      address: '0x43Df9c0a1156c96cEa98737b511ac89D0e2A1F46',
-      decimals: 18,
-      displayName: 'GOVI',
-      symbol: 'GOVI',
-      fullName: 'GOVI',
-      isOneToken: false,
-      atCoingecko: false
-    }
-  },
-  [TokenName.HOME]: {
-    [ChainId.Mainnet]: {
-      tokenName: TokenName.HOME,
-      tableName: TokenName.HOME,
-      address: '0xb8919522331c59f5c16bdfaa6a121a6e03a91f62',
-      decimals: 6,
-      displayName: 'HOME',
-      symbol: 'HOME',
-      fullName: 'Home',
-      isOneToken: false,
-      atCoingecko: false
-    }
-  },
-  [TokenName.OJA]: {
-    [ChainId.Mainnet]: {
-      tokenName: TokenName.OJA,
-      tableName: TokenName.OJA,
-      address: '0x0aA7eFE4945Db24d95cA6E117BBa65Ed326e291A',
-      decimals: 18,
-      displayName: 'OJA',
-      symbol: 'OJA',
-      fullName: 'Ojamu Token',
-      isOneToken: false,
-      atCoingecko: true
-    }
-  },
-  [TokenName.PWING]: {
-    [ChainId.Mainnet]: {
-      tokenName: TokenName.PWING,
-      tableName: TokenName.PWING,
-      address: '0xDb0f18081b505A7DE20B18ac41856BCB4Ba86A1a',
-      decimals: 9,
-      displayName: 'pWING',
-      symbol: 'pWING',
-      fullName: 'Poly Ontology Wing Token',
-      isOneToken: false,
-      atCoingecko: false
-    }
-  },
-  [TokenName.QRDO]: {
-    [ChainId.Mainnet]: {
-      tokenName: TokenName.QRDO,
-      tableName: TokenName.QRDO,
-      address: '0x4123a133ae3c521FD134D7b13A2dEC35b56c2463',
-      decimals: 8,
-      displayName: 'QRDO',
-      symbol: 'QRDO',
-      fullName: 'Qredo Token',
-      isOneToken: false,
-      atCoingecko: true,
-      targetVaultStrength: 0.1
-    }
-  },
-  [TokenName.WBTC]: {
-    [ChainId.Mainnet]: {
-      tokenName: TokenName.WBTC,
-      tableName: TokenName.WBTC,
-      address: '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599',
-      decimals: 8,
-      displayName: 'wBTC',
-      symbol: 'wBTC',
-      fullName: 'Wrapped Bitcoin',
-      isOneToken: false,
-      atCoingecko: true
-    },
-    [ChainId.Polygon]: {
-      tokenName: TokenName.WBTC,
-      tableName: `pol_${TokenName.WBTC}`,
-      address: '0x1BFD67037B42Cf73acF2047067bd4F2C47D9BfD6',
-      decimals: 8,
-      displayName: 'wBTC',
-      symbol: 'wBTC',
-      fullName: 'Wrapped Bitcoin',
-      atCoingecko: false,
-      isOneToken: false
-    }
-  },
-  [TokenName.WETH]: {
-    [ChainId.Mainnet]: {
-      tokenName: TokenName.WETH,
-      tableName: TokenName.WETH,
-      address: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
-      decimals: 18,
-      displayName: 'wETH',
-      symbol: 'wETH',
-      fullName: 'Wrapped Ether',
-      isOneToken: false,
-      atCoingecko: true
-    },
-    [ChainId.Polygon]: {
-      tokenName: TokenName.WETH,
-      tableName: `pol_${TokenName.WETH}`,
-      address: '0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619',
-      decimals: 18,
-      displayName: 'wETH',
-      symbol: 'wETH',
-      fullName: 'Wrapped Ether',
-      isOneToken: false,
-      atCoingecko: false
-    },
-    [ChainId.Kovan]: {
-      tokenName: TokenName.WETH,
-      tableName: `test_${TokenName.WETH}`,
-      symbol: 'wETH',
-      fullName: 'Wrapped Ether',
-      atCoingecko: false,
-      address: '0xd0A1E359811322d97991E03f863a0C30C2cF029C',
-      decimals: 18,
-      displayName: 'WETH',
-      isOneToken: false
-    }
-  },
-  [TokenName.WMATIC]: {
-    [ChainId.Mainnet]: {
-      tokenName: TokenName.WMATIC,
-      tableName: TokenName.WMATIC,
-      address: '0x7c9f4C87d911613Fe9ca58b579f737911AAD2D43',
-      decimals: 18,
-      displayName: 'WMATIC',
-      symbol: 'WMATIC',
-      fullName: 'Wrapped Matic',
-      isOneToken: false,
-      atCoingecko: true
-    },
-    [ChainId.Polygon]: {
-      tokenName: TokenName.WMATIC,
-      tableName: `pol_${TokenName.WMATIC}`,
-      address: '0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270',
-      decimals: 18,
-      displayName: 'WMATIC',
-      symbol: 'WMATIC',
-      fullName: 'Wrapped Matic',
-      isOneToken: false,
-      atCoingecko: true
-    }
-  },
-  [TokenName.WNXM]: {
-    [ChainId.Mainnet]: {
-      tokenName: TokenName.WNXM,
-      tableName: TokenName.WNXM,
-      address: '0x0d438F3b5175Bebc262bF23753C1E53d03432bDE',
-      decimals: 18,
-      displayName: 'wNXM',
-      symbol: 'wNXM',
-      fullName: 'Wrapped NXM',
-      isOneToken: false,
-      atCoingecko: true
-    }
-  },
-  [TokenName.VBTC]: {
-    [ChainId.Mainnet]: {
-      tokenName: TokenName.VBTC,
-      tableName: TokenName.VBTC,
-      address: '0xe1406825186D63980fd6e2eC61888f7B91C4bAe4',
-      decimals: 18,
-      displayName: 'VBTC',
-      symbol: 'VBTC',
-      fullName: 'Strudel BTC',
-      isOneToken: false,
-      atCoingecko: false
-    }
-  },
-  [TokenName.UNI]: {
-    [ChainId.Mainnet]: {
-      tokenName: TokenName.UNI,
-      tableName: TokenName.UNI,
-      address: '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984',
-      decimals: 18,
-      displayName: 'UNI',
-      symbol: 'UNI',
-      fullName: 'Uniswap',
-      isOneToken: false,
-      atCoingecko: true
-    },
-    [ChainId.Kovan]: {
-      tokenName: TokenName.UNI,
-      tableName: `test_${TokenName.UNI}`,
-      symbol: 'UNI',
-      fullName: 'Uniswap',
-      atCoingecko: false,
-      address: '0xdF2661E2E6A35B482E3F105bDE628B5e1F68aB41',
-      decimals: 18,
-      displayName: 'UNI',
-      isOneToken: false
-    }
-  },
-  [TokenName.USDC]: {
-    [ChainId.Mainnet]: {
-      tokenName: TokenName.USDC,
-      tableName: TokenName.USDC,
-      address: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',
-      decimals: 6,
-      displayName: 'USDC',
-      symbol: 'USDC',
-      fullName: 'USD Coin',
-      isOneToken: false,
-      atCoingecko: false
-    },
-    [ChainId.Polygon]: {
-      tokenName: TokenName.USDC,
-      tableName: `pol_${TokenName.USDC}`,
-      address: '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174',
-      decimals: 6,
-      displayName: 'USDC',
-      symbol: 'USDC',
-      fullName: 'USD Coin',
-      atCoingecko: false,
-      isOneToken: false
-    },
-    [ChainId.Mumbai]: {
-      tokenName: TokenName.USDC,
-      tableName: `mum_${TokenName.USDC}`,
-      symbol: 'USDC',
-      fullName: 'USD Coin',
-      atCoingecko: false,
-      address: '0x0FA8781a83E46826621b3BC094Ea2A0212e71B23',
-      decimals: 6,
-      displayName: 'USDC',
-      isOneToken: false
-    },
-    [ChainId.Kovan]: {
-      tokenName: TokenName.USDC,
-      tableName: `test_${TokenName.USDC}`,
-      symbol: 'USDC',
-      fullName: 'USD Coin',
-      atCoingecko: false,
-      address: '0x21632981cBf52eB788171e8dcB891C32F4834239',
-      decimals: 6,
-      displayName: 'USDC',
-      isOneToken: false
-    }
-  },
-  [TokenName.FUSE]: {
-    [ChainId.Mainnet]: {
-      tokenName: TokenName.FUSE,
-      tableName: TokenName.FUSE,
-      address: '0x970B9bB2C0444F5E81e9d0eFb84C8ccdcdcAf84d',
-      decimals: 18,
-      displayName: 'FUSE',
-      symbol: 'FUSE',
-      fullName: 'Fuse Token',
-      parentOneToken: TokenName.ONE_FUSE,
-      isOneToken: false,
-      atCoingecko: true,
-      targetVaultStrength: 0.1
-    }
-  },
-  [TokenName.MPH]: {
-    [ChainId.Mainnet]: {
-      tokenName: TokenName.MPH,
-      tableName: TokenName.MPH,
-      address: '0x8888801aF4d980682e47f1A9036e589479e835C5',
-      decimals: 18,
-      displayName: 'MPH',
-      symbol: 'MPH',
-      fullName: '88mph.app',
-      parentOneToken: TokenName.ONE_MPH,
-      isOneToken: false,
-      atCoingecko: true
-    }
-  },
-  [TokenName.PERL]: {
-    [ChainId.Mainnet]: {
-      tokenName: TokenName.PERL,
-      tableName: TokenName.PERL,
-      address: '0xeca82185adCE47f39c684352B0439f030f860318',
-      decimals: 18,
-      displayName: 'PERL',
-      symbol: 'PERL',
-      fullName: 'Perlin',
-      parentOneToken: TokenName.ONE_PERL,
-      isOneToken: false,
-      atCoingecko: true
-    }
-  },
-  [TokenName.DODO]: {
-    [ChainId.Mainnet]: {
-      tokenName: TokenName.DODO,
-      tableName: TokenName.DODO,
-      address: '0x43Dfc4159D86F3A37A5A4B3D4580b888ad7d4DDd',
-      decimals: 18,
-      displayName: 'DODO',
-      symbol: 'DODO',
-      fullName: 'DODO bird',
-      parentOneToken: TokenName.ONE_DODO,
-      isOneToken: false,
-      atCoingecko: false
-    }
-  },
-  [TokenName.FOX]: {
-    [ChainId.Mainnet]: {
-      tokenName: TokenName.FOX,
-      tableName: TokenName.FOX,
-      address: '0xc770EEfAd204B5180dF6a14Ee197D99d808ee52d',
-      decimals: 18,
-      displayName: 'FOX',
-      symbol: 'FOX',
-      fullName: 'ShapeShift FOX',
-      parentOneToken: TokenName.ONE_FOX,
-      isOneToken: false,
-      atCoingecko: true
-    }
-  },
-  [TokenName.BOOT]: {
-    [ChainId.Mainnet]: {
-      tokenName: TokenName.BOOT,
-      tableName: TokenName.BOOT,
-      address: '0x0337fe811809A0aaf9B5D07945b39E473dE4c46E',
-      decimals: 18,
-      displayName: 'BOOT',
-      symbol: 'BOOT',
-      fullName: 'Boot Finance',
-      parentOneToken: TokenName.BOOT_USD,
-      isOneToken: false,
-      atCoingecko: false
-    }
-  },
   [TokenName.ONE_ETH]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.ONE_ETH,
@@ -1224,18 +1170,6 @@ export const TOKENS: TokenMapping = {
       atCoingecko: false
     }
   },
-  /*  old_onebtc: { 
-    address: "0xC88F47067dB2E25851317A2FDaE73a22c0777c37",
-    strategy: "",
-    aux_strategy: [],
-    decimals: 9,
-    displayName: "oneBTC",
-    symbol: "oneBTC",
-    isOneToken: true,
-    stimulusName: 'wbtc',
-    stimulusDisplayName: 'BTC',
-    isV2: false
-  },*/
   [TokenName.ONE_VBTC]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.ONE_VBTC,
@@ -1290,27 +1224,6 @@ export const TOKENS: TokenMapping = {
       stimulusDisplayName: 'renFIL',
       tradeUrl:
         'https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0xd5147bc8e386d91cc5dbe72099dac6c9b99276f5'
-    },
-    [ChainId.Kovan]: {
-      tokenName: TokenName.ONE_FIL,
-      tableName: TokenName.ONE_FIL,
-      symbol: 'oneFIL',
-      fullName: 'oneFIL',
-      atCoingecko: false,
-      address: '0x50633E780803b56a0d8606a3C674993080Ea98c1',
-      strategy: '0xf2c642b993e98298477f3f20ea2de8e6f29db534',
-      decimals: 18,
-      displayName: 'oneFIL',
-      isOneToken: true,
-      isV2: true,
-      testVault: {
-        address: '0xA0D500fd3479CBCb64a2238082b7a1Df9f87d98D',
-        farm: 4,
-        ichi: 'token1'
-      },
-      stimulusName: TokenName.RENFIL,
-      stimulusDisplayName: 'renFIL',
-      tradeUrl: ''
     }
   },
   [TokenName.ONE_1INCH]: {
@@ -1555,27 +1468,6 @@ export const TOKENS: TokenMapping = {
       stimulusDisplayName: 'UNI',
       tradeUrl:
         'https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984'
-    },
-    [ChainId.Kovan]: {
-      tokenName: TokenName.ONE_UNI,
-      tableName: TokenName.ONE_UNI,
-      symbol: 'oneUNI',
-      fullName: 'oneUNI',
-      atCoingecko: false,
-      address: '0x4238C45783551be0D848BbAdA853cCa6b265322f',
-      strategy: '',
-      decimals: 18,
-      displayName: 'oneUNI',
-      isOneToken: true,
-      isV2: true,
-      // ichiVault: {
-      //   address: '',
-      //   farm: 0,
-      //   ichi: ''
-      // },
-      stimulusName: TokenName.UNI,
-      stimulusDisplayName: 'UNI',
-      tradeUrl: ''
     }
   },
   [TokenName.ONE_DODO]: {
@@ -1692,25 +1584,6 @@ export const TOKENS: TokenMapping = {
         'https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x111111517e4929D3dcbdfa7CCe55d30d4B6BC4d6&chain=mainnet'
     }
   },
-  // [TokenName.ONE_GIV]: {
-  //   [ChainId.Mainnet]: {
-  //     tokenName: TokenName.ONE_GIV,
-  //     tableName: TokenName.ONE_GIV,
-  //     address: '0x17e6BA2519B4d15199B6529dB340910Ae031b1B0',
-  //     strategy: '0x8A17A9ACF32811b0d2a10Bd97839643e8AD14B1B',
-  //     auxStrategy: [],
-  //     decimals: 18,
-  //     displayName: 'oneGIV',
-  //     symbol: 'oneGIV',
-  //     atCoingecko: false,
-  //     isOneToken: true,
-  //     isV2: true,
-  //     stimulusName: TokenName.GIV,
-  //     stimulusDisplayName: 'GIV',
-  //     tradeUrl:
-  //       'https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x900dB999074d9277c5DA2A43F252D74366230DA0'
-  //   }
-  // },
   [TokenName.TOKEN_6]: {
     [ChainId.Mumbai]: {
       tokenName: TokenName.TOKEN_6,
@@ -1721,61 +1594,6 @@ export const TOKENS: TokenMapping = {
       address: '0x13EDD87281803AF4178E7b30631ab7Cbb6819441',
       decimals: 6,
       displayName: 'Token6',
-      isOneToken: false
-    },
-    [ChainId.Kovan]: {
-      tokenName: TokenName.TOKEN_6,
-      tableName: `test_${TokenName.TOKEN_6}`,
-      symbol: 'Token6',
-      fullName: 'Token6',
-      atCoingecko: false,
-      address: '0xb994c68b4ed03d8f0aa9cb1b1729fa9bbbaa75e7',
-      decimals: 6,
-      displayName: 'Token6',
-      isOneToken: false
-    }
-  },
-  [TokenName.TOKEN_18]: {
-    [ChainId.Kovan]: {
-      tokenName: TokenName.TOKEN_18,
-      tableName: `test_${TokenName.TOKEN_18}`,
-      symbol: 'Token18',
-      fullName: 'Token18',
-      atCoingecko: false,
-      address: '0x670d1C929e7d6B9F847c60A35750A440cB0f9308',
-      decimals: 18,
-      displayName: 'Token18',
-      isOneToken: false
-    }
-  },
-  [TokenName.OTI]: {
-    [ChainId.Kovan]: {
-      tokenName: TokenName.OTI,
-      tableName: `test_${TokenName.OTI}`,
-      symbol: 'OTI',
-      fullName: 'OTI',
-      atCoingecko: false,
-      address: '0x5BF9b9bB304672c3d006955AbFC516e8b37693F9',
-      strategy: '',
-      decimals: 18,
-      displayName: 'OTI',
-      isOneToken: true,
-      isV2: true,
-      stimulusName: TokenName.TOKEN_18,
-      stimulusDisplayName: 'Token18',
-      tradeUrl: 'https://app.1inch.io/#/1/dao/farming'
-    }
-  },
-  [TokenName.WEENUS]: {
-    [ChainId.Kovan]: {
-      tokenName: TokenName.WEENUS,
-      tableName: `test_${TokenName.WEENUS}`,
-      symbol: 'WEENUS',
-      fullName: 'WEENUS',
-      atCoingecko: false,
-      address: '0xaFF4481D10270F50f203E0763e2597776068CBc5',
-      decimals: 18,
-      displayName: 'WEENUS',
       isOneToken: false
     }
   }

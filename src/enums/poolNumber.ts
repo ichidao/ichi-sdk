@@ -92,24 +92,9 @@ export enum MainnetPoolNumbers {
   WBTC_VAULT_LEGACY = 1022
 }
 
-// These are non-adjusted
-export enum KovanPoolNumbers {
-  WEENUS_WETH = 5000,
-  ICHI_WETH = 5001,
-  OTI_DEPOSIT = 5002,
-  ONE_FIL_DEPOSIT = 5003,
-  ONE_FIL_VAULT = 5004,
-  // ONE_UNI_VAULT_KOVAN = 5005,
-  ONE_UNI_VAULT = 5005,
-  WEENUS_VAULT = 5006,
-  ONE_UNI_UNI_VAULT = 20000
-}
-
 export enum PolygonPoolNumbers {
   ONE_BTC_VAULT = 4000,
-  // WBTC_VAULT_POLYGON = 4001,
   WBTC_VAULT = 4001,
-  // USDC_VAULT_POLYGON = 4002,
   USDC_VAULT = 4002,
   GOVI_VAULT = 4003,
   USDC_WETH_VAULT = 4004,
@@ -138,13 +123,23 @@ export enum MumbaiPoolNumbers {
   ONE_BTC_ICHI_VAULT = 6000
 }
 
+export enum ArbitrumPoolNumbers {
+  ARB_WETH_VAULT = 7700
+}
+
+export enum AvalanchePoolNumbers {
+  TEMP_VAULT = 1 // should be removed when the first vault is created here
+}
+
 export type MainnetPoolNumberValues = typeof MainnetPoolNumbers[keyof typeof MainnetPoolNumbers];
-export type KovanPoolNumberValues = typeof KovanPoolNumbers[keyof typeof KovanPoolNumbers];
 export type PolygonPoolNumberValues = typeof PolygonPoolNumbers[keyof typeof PolygonPoolNumbers];
 export type MumbaiPoolNumberValues = typeof MumbaiPoolNumbers[keyof typeof MumbaiPoolNumbers];
+export type ArbitrumPoolNumberValues = typeof ArbitrumPoolNumbers[keyof typeof ArbitrumPoolNumbers];
+export type AvalanchePoolNumberValues = typeof AvalanchePoolNumbers[keyof typeof AvalanchePoolNumbers];
 
 export type PoolNumberValues =
   | MainnetPoolNumberValues
-  | KovanPoolNumberValues
   | PolygonPoolNumberValues
+  | ArbitrumPoolNumberValues
+  | AvalanchePoolNumberValues
   | MumbaiPoolNumberValues;

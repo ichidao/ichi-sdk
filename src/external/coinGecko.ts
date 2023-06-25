@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import 'cross-fetch/polyfill';
 import { chunk } from '../utils/array';
 import {
@@ -7,13 +8,20 @@ import {
   CoinGeckoTokenInfoResponse
 } from '../models/coinGecko';
 import { Optional } from '../types/optional';
+import { ChainId, SUPPORTED_NETWORKS } from '../crypto/networks';
 
 export const lookUpTokenPrices = async function (
+  chainId: ChainId,
   ids: string[],
+  cg_key: string,
   chunkSize: number = 20
 ): Promise<Optional<CoinGeckoPriceResponse>> {
   if (!ids || ids.length === 0) {
     console.warn(`Could not lookup token prices, no ids given.`);
+    return;
+  }
+  if (SUPPORTED_NETWORKS[chainId]?.coingecko === '') {
+    console.warn(`Could not lookup token prices, chain not supported by Coingecko.`);
     return;
   }
 
@@ -25,7 +33,12 @@ export const lookUpTokenPrices = async function (
   // so let's fetch in some reasonable amountl ike 20 at a time
   for (let ids of chunkedIds) {
     const idsFormatted = ids.join(encodeURIComponent(','));
-    const url = `https://api.coingecko.com/api/v3/simple/token_price/ethereum?contract_addresses=${idsFormatted}&vs_currencies=usd&include_24hr_change=true`;
+    let url = '';
+    if (cg_key !== '') {
+      url = `https://pro-api.coingecko.com/api/v3/simple/token_price/${SUPPORTED_NETWORKS[chainId]?.coingecko}?contract_addresses=${idsFormatted}&vs_currencies=usd&include_24hr_change=true&x_cg_pro_api_key=${cg_key}`;
+    } else {
+      url = `https://api.coingecko.com/api/v3/simple/token_price/${SUPPORTED_NETWORKS[chainId]?.coingecko}?contract_addresses=${idsFormatted}&vs_currencies=usd&include_24hr_change=true`;
+    }
 
     try {
       const result = await fetch(url);
@@ -44,7 +57,9 @@ export const lookUpTokenPrices = async function (
 };
 
 export const getTokenPrice = async function (
+  chainId: ChainId,
   address: string,
+  cg_key: string,
   tokenPrices?: CoinGeckoPriceResponse
 ): Promise<Optional<CoinGeckoPrice>> {
   if (!address) {
@@ -55,7 +70,7 @@ export const getTokenPrice = async function (
   if (tokenPrices && tokenPrices[address.toLowerCase()]) {
     return tokenPrices[address.toLowerCase()];
   }
-  const prices = await lookUpTokenPrices([address.toLowerCase()]);
+  const prices = await lookUpTokenPrices(chainId, [address.toLowerCase()], cg_key);
 
   if (!prices) {
     console.warn(`Could not fetch price given address: ${address}`);

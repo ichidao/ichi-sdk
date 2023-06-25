@@ -13,11 +13,13 @@ export const ADDRESSES: AddressMapping = {
   [AddressName.ICHI_BNT]: { [ChainId.Mainnet]: '0x4a2F0Ca5E03B2cF81AebD936328CF2085037b63B' },
   [AddressName.ICHI_BNT_V3]: { [ChainId.Mainnet]: '0x36FAbE4cAeF8c190550b6f93c306A5644E7dCef6' },
   [AddressName.ICHIBPT]: { [ChainId.Mainnet]: '0x96855eDEfC3Ad2d9eFD0421F301d1324e1e93a52' },
+  // TODO: do we still need these ETH addresses?
   [AddressName.ETH]: {
     [ChainId.Mainnet]: '0x0000000000000000000000000000000000000000',
     [ChainId.Polygon]: '0x0000000000000000000000000000000000000000',
+    [ChainId.Arbitrum]: '0x0000000000000000000000000000000000000000',
+    [ChainId.Avalanche]: '0x0000000000000000000000000000000000000000',
     [ChainId.Mumbai]: '0x0000000000000000000000000000000000000000',
-    [ChainId.Kovan]: '0x0000000000000000000000000000000000000000',
   },
   [AddressName.ALLY]: { [ChainId.Mainnet]: '0x1aa1e61369874bae3444A8Ef6528d6b13D6952EF' },
   [AddressName.FARMING_V1]: { [ChainId.Mainnet]: '0xcC50953A743B9CE382f423E37b07Efa6F9d9B000' },
@@ -25,7 +27,6 @@ export const ADDRESSES: AddressMapping = {
     [ChainId.Mainnet]: '0x275dFE03bc036257Cd0a713EE819Dbd4529739c8',
     [ChainId.Polygon]: '0x2fb24195c965B4a0cDfc27DD5C85eC1A46d7A931',
     [ChainId.Mumbai]: '0x9c1c486d007B65D5cbaE45811a41E540d304ac9D',
-    [ChainId.Kovan]: '0xCfF363294b876F27dF7aCe9584B243177bF618af',
   },
   [AddressName.FARMING_V3]: { [ChainId.Mainnet]: '0x4B162306eE680Bf440541c3E5C70c553f632C8aA' },
   [AddressName.ICHI_COMMUNITY_GNOSIS]: { [ChainId.Mainnet]: '0x8f3c97DdC88D7A75b8c3f872b525B30932D3014c' },
@@ -64,6 +65,8 @@ export const ADDRESSES: AddressMapping = {
   [AddressName.KEEPER_REGISTRY]: {
     [ChainId.Mainnet]: '0x02777053d6764996e594c3E88AF1D58D5363a2e6',
     [ChainId.Polygon]: '0x02777053d6764996e594c3E88AF1D58D5363a2e6',
+    [ChainId.Arbitrum]: '0x75c0530885F385721fddA23C539AF3701d6183D4',
+    [ChainId.Avalanche]: '0x02777053d6764996e594c3E88AF1D58D5363a2e6',
   },
 
 };

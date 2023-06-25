@@ -6,15 +6,16 @@ import { AddressName } from '../enums/addressName';
 import { getToken } from './tokens';
 import { Optional } from '../types/optional';
 import {
-  KovanPoolNumbers,
   MainnetPoolNumbers,
   MumbaiPoolNumbers,
   PoolNumberValues,
-  KovanPoolNumberValues,
   MainnetPoolNumberValues,
   MumbaiPoolNumberValues,
   PolygonPoolNumberValues,
-  PolygonPoolNumbers
+  PolygonPoolNumbers,
+  ArbitrumPoolNumberValues,
+  AvalanchePoolNumberValues,
+  ArbitrumPoolNumbers
 } from '../enums/poolNumber';
 import { ChainId } from '../crypto/networks';
 import { PartialRecord } from '../types/common';
@@ -24,8 +25,9 @@ import { VaultName } from '../enums/vaultName';
 // TODO: IMO these should be Record not PartialRecord here, but there are values missing, which we should probably fix
 type TPoolLabels = {
   [ChainId.Mainnet]: PartialRecord<MainnetPoolNumberValues, PoolLabel>;
-  [ChainId.Kovan]: PartialRecord<KovanPoolNumberValues, PoolLabel>;
   [ChainId.Polygon]: PartialRecord<PolygonPoolNumberValues, PoolLabel>;
+  [ChainId.Arbitrum]: PartialRecord<ArbitrumPoolNumberValues, PoolLabel>;
+  [ChainId.Avalanche]: PartialRecord<AvalanchePoolNumberValues, PoolLabel>;
   [ChainId.Mumbai]: PartialRecord<MumbaiPoolNumberValues, PoolLabel>;
 };
 
@@ -1436,69 +1438,6 @@ export const PoolLabels: TPoolLabels = {
       irrStartTxAmount: 0
     }
   },
-  [ChainId.Kovan]: {
-    [KovanPoolNumbers.WEENUS_WETH]: {
-      name: 'WEENUS-WETH',
-      poolNumber: KovanPoolNumbers.WEENUS_WETH,
-      lpName: 'UNI-V2',
-      shortLpName: 'UNI-V2'
-    },
-    [KovanPoolNumbers.ICHI_WETH]: {
-      name: 'ICHI-WETH',
-      poolNumber: KovanPoolNumbers.ICHI_WETH,
-      lpName: 'UNI-V2',
-      shortLpName: 'UNI-V2'
-    },
-    [KovanPoolNumbers.OTI_DEPOSIT]: {
-      name: 'OTI Deposit',
-      poolNumber: KovanPoolNumbers.OTI_DEPOSIT,
-      lpName: 'OTI',
-      shortLpName: 'OTI'
-    },
-    [KovanPoolNumbers.ONE_FIL_DEPOSIT]: {
-      name: 'oneFIL Deposit',
-      poolNumber: KovanPoolNumbers.ONE_FIL_DEPOSIT,
-      lpName: 'oneFIL',
-      shortLpName: 'oneFIL'
-    },
-    [KovanPoolNumbers.ONE_FIL_VAULT]: {
-      name: 'oneFIL Vault',
-      poolNumber: KovanPoolNumbers.ONE_FIL_VAULT,
-      lpName: 'ICHI_VAULT_LP',
-      shortLpName: 'VAULT_LP',
-      tradeUrl:
-        'https://app.uniswap.org/#/swap?inputCurrency=0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48&outputCurrency=0x6d82017e55b1d24c53c7b33bbb770a86f2ca229d'
-    },
-    [KovanPoolNumbers.ONE_UNI_VAULT]: {
-      name: 'oneUNI Vault',
-      poolNumber: KovanPoolNumbers.ONE_UNI_VAULT,
-      lpName: 'ICHI_VAULT_LP',
-      shortLpName: 'VAULT_LP',
-      tradeUrl:
-        'https://app.uniswap.org/#/swap?inputCurrency=0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48&outputCurrency=0x8290d7a64f25e6b5002d98367e8367c1b532b534'
-    },
-    [KovanPoolNumbers.WEENUS_VAULT]: {
-      name: 'Weenus Vault',
-      poolNumber: KovanPoolNumbers.WEENUS_VAULT,
-      lpName: 'ICHI_VAULT_LP',
-      shortLpName: 'VAULT_LP',
-      tradeUrl:
-        'https://app.uniswap.org/#/swap?inputCurrency=0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48&outputCurrency=0x8290d7a64f25e6b5002d98367e8367c1b532b534'
-    },
-    [KovanPoolNumbers.ONE_UNI_UNI_VAULT]: {
-      name: 'oneUNI-UNI Vault',
-      poolNumber: KovanPoolNumbers.ONE_UNI_UNI_VAULT,
-      lpName: 'ICHI_VAULT_LP',
-      shortLpName: 'VAULT_LP',
-      farmAddress: '0x393A4c7F8D8aE114728C03C26bd08468C8b7f6c7',
-      farmId: 0,
-      farmRewardTokenName: TokenName.UNI, // 'UNI',
-      farmRewardTokenDecimals: 18,
-      farmRewardTokenAddress: '0xdF2661E2E6A35B482E3F105bDE628B5e1F68aB41',
-      tradeUrl:
-        'https://app.uniswap.org/#/swap?inputCurrency=0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48&outputCurrency=0x8290d7a64f25e6b5002d98367e8367c1b532b534'
-    }
-  },
   [ChainId.Polygon]: {
     [PolygonPoolNumbers.ONE_BTC_VAULT]: {
       name: 'oneBTC Vault',
@@ -1874,84 +1813,26 @@ export const PoolLabels: TPoolLabels = {
       vaultName: VaultName.MUMBAI_ONEBTC_ICHI,
       vaultAddress: '0xA3a17a728534Dc72A9865469C292C0b7D055D97d'
     }
+  },
+  [ChainId.Arbitrum]: {
+    [ArbitrumPoolNumbers.ARB_WETH_VAULT]: {
+      name: 'ARB-WETH Vault',
+      poolNumber: ArbitrumPoolNumbers.ARB_WETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: true,
+      isHodl: true,
+      vaultName: VaultName.ARBITRUM_ARB_WETH, 
+      vaultAddress: '0x1A64166dc78830aeFF560Fb0f4C521830D7fd76F',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    }
+  },
+  [ChainId.Avalanche]: {
   }
-  /* LABELS[1003] = {
-  name: 'Smart ICHI-ETH',
-  lpName: 'ICHI_ETH_SBPT',
-  shortLpName: 'ICHI_ETH_SBPT',
-  tradeUrl: 'https://pools.balancer.exchange/#/pool/0x6dB2d9841b3Fe166F258221c5502dc6Eb465b38D'
-} */
-  /* LABELS[1006] = {
-  name: 'ICHI-BNT',
-  lpName: 'ICHIBNT',
-  shortLpName: 'ICHIBNT',
-  tradeUrl: 'https://app.bancor.network/eth/pool/add/0x563f6e19197A8567778180F66474E30122FD702A'
-} */
-  /* LABELS[1007] = {
-  name: 'ICHI oneToken Pool (ICHIBPT)',
-  lpName: 'ICHIBNT',
-  shortLpName: 'ICHIBNT',
-  tradeUrl: 'https://app.uniswap.org/#/swap?inputCurrency=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&outputCurrency=0x96855edefc3ad2d9efd0421f301d1324e1e93a52'
-} */
-  /* LABELS[1008] = {
-  name: '67/33 ICHI-LINK',
-  lpName: 'BPT (Balancer Pool Token) ICHI-LINK',
-  shortLpName: 'BPT ICHI-LINK',
-  tradeUrl: 'https://pools.balancer.exchange/#/pool/0x960c437E2A9A9a25e0FEDC0C8A5899827B10F63c'
-} */
-  /*LABELS[1011] = {
-  name: 'oneFUSE Deposit',
-  lpName: 'oneFUSE',
-  shortLpName: 'oneFUSE',
-  tradeUrl: 'https://app.uniswap.org/#/swap?inputCurrency=0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48&outputCurrency=0xbbce03b2e7f53cadca93251ca4c928af01db6404'
-}*/
-  // Kovan
 };
-// These are commented out for now
-/* LABELS[8] = {
-  name: 'oneBTC-wBTC',
-  lpName: 'SLP (Sushiswap Liquidity Pool) OneBTC-WBTC',
-  shortLpName: 'SLP OneBTC-WBTC',
-  tradeUrl: 'https://app.sushi.com/add/0xC88F47067dB2E25851317A2FDaE73a22c0777c37/0x2260fac5e5542a773aa44fbcfedf7c193bc2c599'
-} */
-/* LABELS[9] = {
-  name: 'oneLINK-LINK',
-  lpName: 'SLP (Sushiswap Liquidity Pool) OneLINK-LINK',
-  shortLpName: 'OneLINK-LINK',
-  tradeUrl: 'https://app.sushi.com/add/0x18Cc17a1EeD37C02A77B0B96b7890C7730E2a2CF/0x514910771af9ca656af840dff83e8264ecf986ca'
-} */
-/* LABELS[10] = {
-  name: 'ICHI-ETH',
-  lpName: 'SLP (Sushiswap Liquidity Pool) ICHI-ETH',
-  shortLpName: 'SLP ICHI-ETH',
-  tradeUrl: 'https://app.sushi.com/add/0x903bEF1736CDdf2A537176cf3C64579C3867A881/ETH'
-} */
-/* LABELS[12] = {
-  name: 'oneETH-USDC',
-  lpName: 'SLP (Sushiswap Liquidity Pool) OneETH-USDC',
-  shortLpName: 'SLP OneETH-USDC',
-  tradeUrl: 'https://app.sushi.com/add/0xec0d77a58528a218cbf41fa6e1585c8d7a085868/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48'
-} */
-/* LABELS[13] = {
-  name: 'oneWING-USDC',
-  lpName: 'SLP (Sushiswap Liquidity Pool) OneWING-USDC',
-  shortLpName: 'SLP OneWING-USDC',
-  tradeUrl: 'https://app.sushi.com/add/0x8F041A3940a5e6FB580075C3774E15FcFA0E1618/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48'
-} */
-/* LABELS[19] = {
-  name: 'oneVBTC-vBTC',
-  lpName: 'SLP (Sushiswap Liquidity Pool) OneVBTC-vBTC',
-  shortLpName: 'OneVBTC-vBTC',
-  tradeUrl: 'https://app.sushi.com/add/0x7BD198b9107496fD5cC3d7655AF52f43a8eDBc4C/0xe1406825186D63980fd6e2eC61888f7B91C4bAe4'
-} */
-/* LABELS[10002] = {
-  name: 'ICHI-ETH',
-  lpName: '1LP-1INCH-ICHI',
-  shortLpName: '1LP-1INCH-ICHI',
-  externalUrl: 'https://exchange.loopring.io/pool',
-  externalText: 'Earn $ICHI',
-  externalButton: 'Loopring'
-} */
 
 export function getPoolLabel(poolNumber: PoolNumberValues, chainId: ChainId): Optional<PoolLabel> {
   const poolLabel = PoolLabels[chainId] != null ? PoolLabels[chainId][poolNumber] : undefined;
@@ -1966,12 +1847,16 @@ export function getMainnetPoolLabel(poolNumber: MainnetPoolNumberValues): Option
   return getPoolLabel(poolNumber, ChainId.Mainnet);
 }
 
-export function getKovanPoolLabel(poolNumber: MainnetPoolNumberValues): Optional<PoolLabel> {
-  return getPoolLabel(poolNumber, ChainId.Kovan);
-}
-
 export function getPolygonPoolLabel(poolNumber: MainnetPoolNumberValues): Optional<PoolLabel> {
   return getPoolLabel(poolNumber, ChainId.Polygon);
+}
+
+export function getArbitrumPoolLabel(poolNumber: MainnetPoolNumberValues): Optional<PoolLabel> {
+  return getPoolLabel(poolNumber, ChainId.Arbitrum);
+}
+
+export function getAvalanchePoolLabel(poolNumber: MainnetPoolNumberValues): Optional<PoolLabel> {
+  return getPoolLabel(poolNumber, ChainId.Avalanche);
 }
 
 export function getMumbaiPoolLabel(poolNumber: MainnetPoolNumberValues): Optional<PoolLabel> {

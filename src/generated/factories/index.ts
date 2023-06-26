@@ -34,6 +34,7 @@ export { RariPoolLensSecondary__factory } from "./RariPoolLensSecondary__factory
 export { Rebalancing_index_v2__factory } from "./Rebalancing_index_v2__factory";
 export { Rebalancing_index_v3__factory } from "./Rebalancing_index_v3__factory";
 export { Rebalancing_regular_v1__factory } from "./Rebalancing_regular_v1__factory";
+export { Rebalancing_stable_500_v1__factory } from "./Rebalancing_stable_500_v1__factory";
 export { RootChainManager__factory } from "./RootChainManager__factory";
 export { StablecoinV2__factory } from "./StablecoinV2__factory";
 export { UniswapV3Factory__factory } from "./UniswapV3Factory__factory";

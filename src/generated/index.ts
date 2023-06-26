@@ -34,6 +34,7 @@ export type { RariPoolLensSecondary } from "./RariPoolLensSecondary";
 export type { Rebalancing_index_v2 } from "./Rebalancing_index_v2";
 export type { Rebalancing_index_v3 } from "./Rebalancing_index_v3";
 export type { Rebalancing_regular_v1 } from "./Rebalancing_regular_v1";
+export type { Rebalancing_stable_500_v1 } from "./Rebalancing_stable_500_v1";
 export type { RootChainManager } from "./RootChainManager";
 export type { StablecoinV2 } from "./StablecoinV2";
 export type { UniswapV3Factory } from "./UniswapV3Factory";
@@ -74,6 +75,7 @@ export { RariPoolLensSecondary__factory } from "./factories/RariPoolLensSecondar
 export { Rebalancing_index_v2__factory } from "./factories/Rebalancing_index_v2__factory";
 export { Rebalancing_index_v3__factory } from "./factories/Rebalancing_index_v3__factory";
 export { Rebalancing_regular_v1__factory } from "./factories/Rebalancing_regular_v1__factory";
+export { Rebalancing_stable_500_v1__factory } from "./factories/Rebalancing_stable_500_v1__factory";
 export { RootChainManager__factory } from "./factories/RootChainManager__factory";
 export { StablecoinV2__factory } from "./factories/StablecoinV2__factory";
 export { UniswapV3Factory__factory } from "./factories/UniswapV3Factory__factory";

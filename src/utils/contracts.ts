@@ -377,38 +377,12 @@ export function getContract(
   opts: { forceErc20?: boolean } = { forceErc20: false }
 ): Optional<Contracts> {
   const chainId: ChainId = provider.network.chainId;
-
   if (opts?.forceErc20 === true) {
     const token = getToken(tokenName, chainId);
     return getErc20Contract(token.address, provider);
   }
 
-  let token: Token;
-  switch (tokenName) {
-    case TokenName.OJA:
-      token = getToken(TokenName.OJA, chainId);
-      return getErc20Contract(token.address, provider);
-    case TokenName.USDC:
-      token = getToken(TokenName.USDC, chainId);
-      return getErc20Contract(token.address, provider);
-    case TokenName.WBTC:
-      token = getToken(TokenName.WBTC, chainId);
-      return getErc20Contract(token.address, provider);
-    case TokenName.ICHI:
-      token = getToken(TokenName.ICHI, chainId);
-      return Ichi__factory.connect(token.address, provider);
-    case TokenName.ICHI_V2:
-      token = getToken(TokenName.ICHI_V2, chainId);
-      return IchiV2__factory.connect(token.address, provider);
-    case TokenName.XICHI:
-      token = getToken(TokenName.XICHI, chainId);
-      return getErc20Contract(token.address, provider);
-    case TokenName.ONE_OJA:
-      token = getToken(TokenName.ONE_OJA, chainId);
-      return getOneTokenV1Contract(token.address, provider);
-    default:
-      throw new Error(`Could not resolve contract via token name '${tokenName}' on network: ${chainId}`);
-  }
+  throw new Error(`Could not resolve contract via token name '${tokenName}' on network: ${chainId}`);
 }
 
 export function getContractByAddress(

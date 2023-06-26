@@ -5,13 +5,6 @@ import { Optional } from '../types/optional';
 import dns from 'dns';
 import { ProviderCache } from '../models/providerCache';
 
-// const BSC_ADDRESSES = {
-//   gnosis: '0xdbB0DfcB3601e15541c072B2a866C0D53D6c6627',
-//   usdc: '0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d',
-//   oneDodo: '0x2c30b4cb4b3001afa5b8c43c5a7ca548067562a0',
-//   dlp: '0x018e41228b1ebc2f81897150877edbb682272c64'
-// };
-
 let RPC_CACHE_UPDATE_INTERVAL = 30 * 1000; // 30s
 
 export const setRpcCacheUpdateInterval = (ms: number) => {
@@ -34,11 +27,6 @@ export const providerCacheReference: Record<ChainId, ProviderCache> = {
     cacheHit: 0,
     cacheMiss: 0
   },
-  [ChainId.Kovan]: {
-    lastUdated: 0,
-    cacheHit: 0,
-    cacheMiss: 0
-  },
   [ChainId.Goerli]: {
     lastUdated: 0,
     cacheHit: 0,
@@ -50,6 +38,16 @@ export const providerCacheReference: Record<ChainId, ProviderCache> = {
     cacheMiss: 0
   },
   [ChainId.Polygon]: {
+    lastUdated: 0,
+    cacheHit: 0,
+    cacheMiss: 0
+  },
+  [ChainId.Arbitrum]: {
+    lastUdated: 0,
+    cacheHit: 0,
+    cacheMiss: 0
+  },
+  [ChainId.Avalanche]: {
     lastUdated: 0,
     cacheHit: 0,
     cacheMiss: 0
@@ -129,17 +127,6 @@ export const connectToProvider = async (
           console.warn(`Could not resolve ${hostname}.`);
           throw subError;
         }
-        // try {
-        //   console.debug(`Fetching block number from ${url}...`);
-        //   const provider = new JsonRpcProvider({ url, timeout: 5 });
-        //   await provider.getBlockNumber();
-        //   console.debug(`\tDone!`);
-        //   console.debug(`Successfully connected to rpc host from env vars: ${url}`);
-        //   return provider;
-        // } catch (subError) {
-        //   console.warn(`Could not get blockNumber from ${url}.`);
-        //   throw subError;
-        // }
       } catch (e) {
         console.warn(`Could not connect to ${url}, attempting the next`);
       }
@@ -171,14 +158,16 @@ const getRpcEnvName = (chainId: ChainId): EnvUtils.EnvName => {
   switch (chainId) {
     case ChainId.Mainnet:
       return EnvUtils.EnvName.MAINNET_RPC_HOSTS;
-    case ChainId.Kovan:
-      return EnvUtils.EnvName.KOVAN_RPC_HOSTS;
     case ChainId.Goerli:
       return EnvUtils.EnvName.GOERLI_RPC_HOSTS;
     case ChainId.Bsc:
       return EnvUtils.EnvName.BSC_RPC_HOSTS;
     case ChainId.Polygon:
       return EnvUtils.EnvName.POLYGON_RPC_HOSTS;
+    case ChainId.Arbitrum:
+      return EnvUtils.EnvName.ARBITRUM_RPC_HOSTS;
+    case ChainId.Avalanche:
+      return EnvUtils.EnvName.AVALANCHE_RPC_HOSTS;
     case ChainId.Mumbai:
       return EnvUtils.EnvName.MUMBAI_RPC_HOSTS;
     default:
@@ -215,5 +204,5 @@ export const getProvider = async (chainId: ChainId, depth: number = 0): Promise<
     setCachedProvider(chainId, provider);
     return provider;
   }
-  throw new Error(`Could not connect to any given mainnet providers, please check network`);
+  throw new Error(`Could not connect to any given providers, please check network`);
 };

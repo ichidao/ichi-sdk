@@ -1,4 +1,3 @@
-import { PartialRecord } from '../types/common';
 import { Optional } from '../types/optional';
 
 export namespace EnvUtils {
@@ -7,11 +6,12 @@ export namespace EnvUtils {
     ALCHEMY_ID = 'ALCHEMY_ID',
     CHAIN_SRC = 'CHAIN_SRC',
     MAINNET_RPC_HOSTS = 'MAINNET_RPC_HOSTS',
-    KOVAN_RPC_HOSTS = 'KOVAN_RPC_HOSTS',
     GOERLI_RPC_HOSTS = 'GOERLI_RPC_HOSTS',
     BSC_RPC_HOSTS = 'BSC_RPC_HOSTS',
     POLYGON_RPC_HOSTS = 'POLYGON_RPC_HOSTS',
     MUMBAI_RPC_HOSTS = 'MUMBAI_RPC_HOSTS',
+    ARBITRUM_RPC_HOSTS = 'ARBITRUM_RPC_HOSTS',
+    AVALANCHE_RPC_HOSTS = 'AVALANCHE_RPC_HOSTS',
     CMC_API_KEY = 'CMC_API_KEY'
   }
 
@@ -20,11 +20,12 @@ export namespace EnvUtils {
     GATSBY_ALCHEMY_ID = 'GATSBY_ALCHEMY_ID',
     GATSBY_CHAIN_SRC = 'GATSBY_CHAIN_SRC',
     GATSBY_MAINNET_RPC_HOSTS = 'GATSBY_MAINNET_RPC_HOSTS',
-    GATSBY_KOVAN_RPC_HOSTS = 'GATSBY_KOVAN_RPC_HOSTS',
     GATSBY_GOERLI_RPC_HOSTS = 'GATSBY_GOERLI_RPC_HOSTS',
     GATSBY_BSC_RPC_HOSTS = 'GATSBY_BSC_RPC_HOSTS',
     GATSBY_POLYGON_RPC_HOSTS = 'GATSBY_POLYGON_RPC_HOSTS',
     GATSBY_MUMBAI_RPC_HOSTS = 'GATSBY_MUMBAI_RPC_HOSTS',
+    GATSBY_ARBITRUM_RPC_HOSTS = 'GATSBY_ARBITRUM_RPC_HOSTS',
+    GATSBY_AVALANCHE_RPC_HOSTS = 'GATSBY_AVALANCHE_RPC_HOSTS',
     GATSBY_CMC_API_KEY = 'GATSBY_CMC_API_KEY'
   }
 
@@ -54,24 +55,6 @@ export namespace EnvUtils {
     return values;
   }
 
-  // Note that in testing ultimately we should getValue to dynamically resolve the process.env and not
-  // rely on these EnvValue, these are more quick accesssors for the main app
-  // export const EnvValue: PartialRecord<EnvNameKey, string> = {
-  //   [EnvUtils.EnvName.ALCHEMY_ID]: EnvUtils.getValue(EnvName.ALCHEMY_ID),
-  //   [EnvUtils.EnvName.INFURA_ID]: EnvUtils.getValue(EnvName.INFURA_ID),
-  //   [EnvUtils.EnvName.CHAIN_SRC]: EnvUtils.getValue(EnvName.CHAIN_SRC),
-  //   [EnvUtils.EnvName.CMC_API_KEY]: EnvUtils.getValue(EnvName.CMC_API_KEY)
-  // };
-
-  // export const EnvValues: PartialRecord<EnvNameKey, string[]> = {
-  //   [EnvUtils.EnvName.MAINNET_RPC_HOSTS]: EnvUtils.getValues(EnvName.MAINNET_RPC_HOSTS),
-  //   [EnvUtils.EnvName.KOVAN_RPC_HOSTS]: EnvUtils.getValues(EnvName.KOVAN_RPC_HOSTS),
-  //   [EnvUtils.EnvName.GOERLI_RPC_HOSTS]: EnvUtils.getValues(EnvName.GOERLI_RPC_HOSTS),
-  //   [EnvUtils.EnvName.BSC_RPC_HOSTS]: EnvUtils.getValues(EnvName.BSC_RPC_HOSTS),
-  //   [EnvUtils.EnvName.POLYGON_RPC_HOSTS]: EnvUtils.getValues(EnvName.POLYGON_RPC_HOSTS),
-  //   [EnvUtils.EnvName.MUMBAI_RPC_HOSTS]: EnvUtils.getValues(EnvName.MUMBAI_RPC_HOSTS)
-  // };
-
   export function printEnvironment() {
     for (let envName in EnvName) {
       console.log(`env:${envName}:${getValue(envName as EnvName)} `);
@@ -91,13 +74,6 @@ export namespace EnvUtils {
       );
       return false;
     }
-
-    // if (!EnvUtils.isDefined(EnvUtils.EnvName.INFURA_ID)) {
-    //   console.error(
-    //     'Please export INFURA_ID=*** which is used for https://mainnet.infura.io/v3/***, and https://polygon-mainnet.infura.io/v3/***, and https://kovan.infura.io/v3/***'
-    //   );
-    //   return false;
-    // }
 
     if (!EnvUtils.isDefined(EnvUtils.EnvName.CHAIN_SRC)) {
       console.warn(

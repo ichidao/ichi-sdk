@@ -5,8 +5,9 @@ import { Optional } from '../types/optional';
 export const BlocksPerDay: PartialRecord<ChainId, number> = {
   [ChainId.Mainnet]: 7200,
   [ChainId.Polygon]: 43000,
-  [ChainId.Mumbai]: 43000,
-  [ChainId.Kovan]: 7200
+  [ChainId.Arbitrum]: 340000,
+  [ChainId.Avalanche]: 43000,
+  [ChainId.Mumbai]: 43000
 };
 
 export function getBlocksPerDay(chainId: ChainId): Optional<number> {

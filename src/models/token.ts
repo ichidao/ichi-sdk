@@ -1,11 +1,13 @@
 import { IchiVault } from './ichiVault';
 import { TokenName } from '../enums/tokenName';
-import { TestVault } from './testVault';
 
 export type Token = {
   tokenName: TokenName;
-  // test_ is for kovan
-  tableName: TokenName | `pol_${TokenName}` | `mum_${TokenName}` | `test_${TokenName}`;
+  tableName: TokenName |
+    `pol_${TokenName}` |
+    `mum_${TokenName}` |
+    `arbitrum_${TokenName}` |
+    `avalanche_${TokenName}`;
   address: string;
   decimals: number;
   displayName: string;
@@ -21,7 +23,6 @@ export type Token = {
   allySwap?: string;
   isV2?: boolean;
   ichiVault?: IchiVault;
-  testVault?: TestVault;
   stimulusName?: TokenName;
   stimulusDisplayName?: string;
   tradeUrl?: string;

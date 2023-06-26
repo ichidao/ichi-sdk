@@ -3,7 +3,7 @@ import { getToken, getUniswapToken } from '../constants/tokens';
 import { ChainId } from './networks';
 import { getTokenPrice, lookUpTokenPrices } from '../external/coinGecko';
 import { JsonRpcProvider } from '@ethersproject/providers';
-import { CoinGeckoPriceResponse } from '../models/coinGecko';
+import { CoinGeckoPrice, CoinGeckoPriceResponse } from '../models/coinGecko';
 import { WETH, Fetcher, Route } from '@uniswap/sdk';
 import { CommonOracle__factory, OneTokenV1__factory, OneEth__factory, OneLink__factory } from '../generated';
 import { getProvider } from './providers';
@@ -14,6 +14,7 @@ import { getPrice } from '../utils/vault';
 
 export async function getXICHIPrice(
   chainId: ChainId,
+  cg_key: string,
   opts?: { tokenPrices?: CoinGeckoPriceResponse; provider?: JsonRpcProvider }
 ) {
   const provider = opts?.provider ?? (await getProvider(chainId));
@@ -34,7 +35,7 @@ export async function getXICHIPrice(
 
   const xichiRatio = Number(xichiBalance) / Number(xichiSupply);
 
-  const lookupPrice = await getTokenPrice(ichiV2Token.address, opts?.tokenPrices);
+  const lookupPrice = await getTokenPrice(chainId, ichiV2Token.address, cg_key, opts?.tokenPrices);
 
   if (lookupPrice == null) {
     console.warn(`Could not lookup xICHI price, could not resolve lookup`);
@@ -45,7 +46,10 @@ export async function getXICHIPrice(
   return Number(ichiPrice) * xichiRatio;
 }
 
-export async function getVBTCPrice(chainId: ChainId) {
+export async function getVBTCPrice(
+  chainId: ChainId,
+  wethPrices: CoinGeckoPrice
+) {
   const uniVbtc = getUniswapToken(TokenName.VBTC, chainId);
 
   const pair = await Fetcher.fetchPairData(uniVbtc, WETH[uniVbtc.chainId]);
@@ -53,15 +57,7 @@ export async function getVBTCPrice(chainId: ChainId) {
 
   let vBtcWEthPrice = route.midPrice.invert().toSignificant(6);
 
-  const wethToken = getToken(TokenName.WETH, chainId);
-  let prices = await lookUpTokenPrices([wethToken.address.toLowerCase()]);
-
-  if (prices == null) {
-    console.warn(`Could not get VBTC price, weth lookup price is undefined`);
-    return -1;
-  }
-
-  let wethPriceUsd = prices[wethToken.address.toLowerCase()].usd;
+  let wethPriceUsd = Number(wethPrices.usd);
   let vBtcPriceUsd = wethPriceUsd * Number(vBtcWEthPrice);
 
   return vBtcPriceUsd;

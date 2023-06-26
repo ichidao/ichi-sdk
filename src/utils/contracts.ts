@@ -48,6 +48,8 @@ import {
   Rebalancing_index_v3,
   KeeperRegistry,
   KeeperRegistry__factory,
+  Rebalancing_stable_500_v1__factory,
+  Rebalancing_stable_500_v1,
 } from '../generated';
 import { TokenName } from '../enums/tokenName';
 import { AddressName } from '../enums/addressName';
@@ -340,6 +342,15 @@ export function getRebalancingStrategyRegularV1Contract(address: string, provide
     return Rebalancing_regular_v1__factory.connect(address, provider);
   } catch (e) {
     console.error(`Couldn't create Rebalancing_regular_v1 contract with address: ${address}`);
+    throw e;
+  }
+}
+
+export function getRebalancingStrategyStable500V1Contract(address: string, provider: JsonRpcProvider): Rebalancing_stable_500_v1 {
+  try {
+    return Rebalancing_stable_500_v1__factory.connect(address, provider);
+  } catch (e) {
+    console.error(`Couldn't create Rebalancing_stable_500_v1 contract with address: ${address}`);
     throw e;
   }
 }

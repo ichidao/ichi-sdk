@@ -15,7 +15,9 @@ import {
   PolygonPoolNumbers,
   ArbitrumPoolNumberValues,
   AvalanchePoolNumberValues,
-  ArbitrumPoolNumbers
+  ArbitrumPoolNumbers,
+  BscPoolNumbers,
+  BscPoolNumberValues
 } from '../enums/poolNumber';
 import { ChainId } from '../crypto/networks';
 import { PartialRecord } from '../types/common';
@@ -28,6 +30,7 @@ type TPoolLabels = {
   [ChainId.Polygon]: PartialRecord<PolygonPoolNumberValues, PoolLabel>;
   [ChainId.Arbitrum]: PartialRecord<ArbitrumPoolNumberValues, PoolLabel>;
   [ChainId.Avalanche]: PartialRecord<AvalanchePoolNumberValues, PoolLabel>;
+  [ChainId.Bsc]: PartialRecord<BscPoolNumberValues, PoolLabel>;
   [ChainId.Mumbai]: PartialRecord<MumbaiPoolNumberValues, PoolLabel>;
 };
 
@@ -1830,6 +1833,78 @@ export const PoolLabels: TPoolLabels = {
       irrStartTxAmount: 0
     }
   },
+  [ChainId.Bsc]: {
+    [BscPoolNumbers.CAKE_USDT_VAULT]: {
+      name: 'CAKE-USDT Vault',
+      poolNumber: BscPoolNumbers.CAKE_USDT_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: false,
+      isHodl: true,
+      vaultName: VaultName.BSC_CAKE_USDT, 
+      vaultAddress: '0x3Ea949545F5b14460A7b7C1144370a6703267C0F',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [BscPoolNumbers.CAKE_WBNB_VAULT]: {
+      name: 'CAKE-WBNB Vault',
+      poolNumber: BscPoolNumbers.CAKE_WBNB_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: false,
+      isHodl: true,
+      vaultName: VaultName.BSC_CAKE_WBNB, 
+      vaultAddress: '0x2b1E2aaBc2dD09ec9E2e667e09705bEC5bd9C40D',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [BscPoolNumbers.USDT_CAKE_VAULT]: {
+      name: 'USDT-CAKE Vault',
+      poolNumber: BscPoolNumbers.USDT_CAKE_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: true,
+      isHodl: true,
+      vaultName: VaultName.BSC_USDT_CAKE, 
+      vaultAddress: '0x92bF6F07ed41Af195F8B11E7be2E35632f095931',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [BscPoolNumbers.WBNB_CAKE_VAULT]: {
+      name: 'WBNB-CAKE Vault',
+      poolNumber: BscPoolNumbers.WBNB_CAKE_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: true,
+      isHodl: true,
+      vaultName: VaultName.BSC_WBNB_CAKE, 
+      vaultAddress: '0x2Ed073c0F789511131C00d9D193c7f867318c839',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [BscPoolNumbers.USDT_WBNB_VAULT]: {
+      name: 'USDT-WBNB Vault',
+      poolNumber: BscPoolNumbers.USDT_WBNB_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: false,
+      isHodl: true,
+      vaultName: VaultName.BSC_USDT_WBNB, 
+      vaultAddress: '0xAD3366ed4773cD8f962cB965204413BeEba27C92',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    }
+  },
   [ChainId.Avalanche]: {
   }
 };
@@ -1853,6 +1928,10 @@ export function getPolygonPoolLabel(poolNumber: MainnetPoolNumberValues): Option
 
 export function getArbitrumPoolLabel(poolNumber: MainnetPoolNumberValues): Optional<PoolLabel> {
   return getPoolLabel(poolNumber, ChainId.Arbitrum);
+}
+
+export function getBscPoolLabel(poolNumber: MainnetPoolNumberValues): Optional<PoolLabel> {
+  return getPoolLabel(poolNumber, ChainId.Bsc);
 }
 
 export function getAvalanchePoolLabel(poolNumber: MainnetPoolNumberValues): Optional<PoolLabel> {

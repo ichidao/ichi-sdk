@@ -193,11 +193,16 @@ export const getProvider = async (chainId: ChainId, depth: number = 0): Promise<
     return cachedProvider;
   }
 
+  let providerId = EnvUtils.EnvName.INFURA_ID;
+  if (chainId === ChainId.Bsc) {
+    providerId = EnvUtils.EnvName.QUICKNODE_ID;
+  }
+
   // Establish the first RPC provider we can
   const provider = await connectToProvider(
     chainId,
     EnvUtils.getValues(getRpcEnvName(chainId)),
-    EnvUtils.getValue(EnvUtils.EnvName.INFURA_ID)
+    EnvUtils.getValue(providerId)
   );
 
   if (provider) {

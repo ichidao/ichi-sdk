@@ -4,6 +4,7 @@ export namespace EnvUtils {
   export enum EnvName {
     INFURA_ID = 'INFURA_ID',
     ALCHEMY_ID = 'ALCHEMY_ID',
+    QUICKNODE_ID = 'QUICKNODE_ID',
     CHAIN_SRC = 'CHAIN_SRC',
     MAINNET_RPC_HOSTS = 'MAINNET_RPC_HOSTS',
     GOERLI_RPC_HOSTS = 'GOERLI_RPC_HOSTS',
@@ -18,6 +19,7 @@ export namespace EnvUtils {
   export enum GatsbyEnvName {
     GATSBY_INFURA_ID = 'GATSBY_INFURA_ID',
     GATSBY_ALCHEMY_ID = 'GATSBY_ALCHEMY_ID',
+    GATSBY_QUICKNODE_ID = 'GATSBY_QUICKNODE_ID',
     GATSBY_CHAIN_SRC = 'GATSBY_CHAIN_SRC',
     GATSBY_MAINNET_RPC_HOSTS = 'GATSBY_MAINNET_RPC_HOSTS',
     GATSBY_GOERLI_RPC_HOSTS = 'GATSBY_GOERLI_RPC_HOSTS',
@@ -65,12 +67,17 @@ export namespace EnvUtils {
   }
 
   export function validateEnvironment(): boolean {
-    if (!EnvUtils.isDefined(EnvUtils.EnvName.MAINNET_RPC_HOSTS) && !EnvUtils.isDefined(EnvUtils.EnvName.INFURA_ID)) {
+    if (!EnvUtils.isDefined(EnvUtils.EnvName.MAINNET_RPC_HOSTS) && 
+        !EnvUtils.isDefined(EnvUtils.EnvName.INFURA_ID) &&
+        !EnvUtils.isDefined(EnvUtils.EnvName.QUICKNODE_ID)) {
       console.error(
         `Please either set the environment variable "MAINNET_RPC_HOSTS"\n\tex. export MAINNET_RPC_HOSTS=http://127.0.0.1:8545,http://127.0.0.2:8545`
       );
       console.error(
         `or INFURA_ID=*** which is used for https://*.infura.io/v3/***, without either of these a provider can't be established`
+      );
+      console.error(
+        `or QUICKNODE_ID=***`
       );
       return false;
     }

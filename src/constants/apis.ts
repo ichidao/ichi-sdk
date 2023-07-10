@@ -10,6 +10,7 @@ export const Apis = {
   SUBGRAPH_V1_ARBITRUM: 'https://api.thegraph.com/subgraphs/name/ichi-org/arbitrum-v1',
   SUBGRAPH_V1_AVALANCHE_PANGOLIN: 'https://api.thegraph.com/subgraphs/name/ichi-org/avalanche-v1-pangolin',
   SUBGRAPH_V1_POLYGON_RETRO: 'https://api.thegraph.com/subgraphs/name/ichi-org/polygon-v1-retro',
+  SUBGRAPH_V1_BSC_PANCAKESWAP: 'https://api.thegraph.com/subgraphs/name/ichi-org/bnb-v1-pancakeswap',
   BANCOR_V3_API: 'https://api-v3.bancor.network/pools',
   BSC_RPC_HOST: 'https://bsc-dataseed1.binance.org:443'
 };

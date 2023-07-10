@@ -20,6 +20,8 @@ import {
   ArbitrumPoolNumberValues,
   AvalanchePoolNumbers,
   AvalanchePoolNumberValues,
+  BscPoolNumbers,
+  BscPoolNumberValues,
   MainnetPoolNumbers,
   MainnetPoolNumberValues,
   MumbaiPoolNumbers,
@@ -46,6 +48,9 @@ export function isOnChain(pid: PoolNumberValues, chainId: ChainId): boolean {
       break;
     case ChainId.Avalanche:
       nums = AvalanchePoolNumbers;
+      break;
+    case ChainId.Bsc:
+      nums = BscPoolNumbers;
       break;
     case ChainId.Polygon:
       nums = PolygonPoolNumbers;
@@ -81,6 +86,7 @@ export function isUnretired(pid: PoolNumberValues): boolean {
     Pools.UNRETIRED_POOLS[ChainId.Mainnet].includes(pid as MainnetPoolNumberValues) ||
     Pools.UNRETIRED_POOLS[ChainId.Arbitrum].includes(pid as ArbitrumPoolNumberValues) ||
     Pools.UNRETIRED_POOLS[ChainId.Avalanche].includes(pid as AvalanchePoolNumberValues) ||
+    Pools.UNRETIRED_POOLS[ChainId.Bsc].includes(pid as BscPoolNumberValues) ||
     Pools.UNRETIRED_POOLS[ChainId.Polygon].includes(pid as PolygonPoolNumberValues) ||
     Pools.UNRETIRED_POOLS[ChainId.Mumbai].includes(pid as MumbaiPoolNumberValues)
   );

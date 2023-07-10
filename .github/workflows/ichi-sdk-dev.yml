@@ -39,6 +39,7 @@ jobs:
           npm run test
         env: 
           INFURA_ID: ${{ secrets.INFURA_ID }}
+          QUICKNODE_ID: ${{ secrets.QUICKNODE_ID }}
 
       - name: Build
         run: |

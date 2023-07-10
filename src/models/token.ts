@@ -6,6 +6,7 @@ export type Token = {
   tableName: TokenName |
     `pol_${TokenName}` |
     `mum_${TokenName}` |
+    `bsc_${TokenName}` |
     `arbitrum_${TokenName}` |
     `avalanche_${TokenName}`;
   address: string;

@@ -68,6 +68,12 @@ export enum VaultName {
   // Arbitrum
   ARBITRUM_ARB_WETH = 'arbitrum_arb_weth',
   // Avalanche
+  // Bsc
+  BSC_CAKE_USDT = 'bsc_cake_usdt',
+  BSC_CAKE_WBNB = 'bsc_cake_wbnb',
+  BSC_USDT_CAKE = 'bsc_usdt_cake',
+  BSC_WBNB_CAKE = 'bsc_wbnb_cake',
+  BSC_USDT_WBNB = 'bsc_usdt_wbnb',
   // Polygon
   POLYGON_BAL_WETH = 'pol_bal_weth',
   POLYGON_CRV_WETH = 'pol_crv_weth',
@@ -167,6 +173,12 @@ export enum VaultTableName {
   // Arbitrum
   ARBITRUM_ARB_WETH = 'arbitrum_arb_weth',
   // Avalanche
+  // Bsc
+  BSC_CAKE_USDT = 'bsc_cake_usdt',
+  BSC_CAKE_WBNB = 'bsc_cake_wbnb',
+  BSC_USDT_CAKE = 'bsc_usdt_cake',
+  BSC_WBNB_CAKE = 'bsc_wbnb_cake',
+  BSC_USDT_WBNB = 'bsc_usdt_wbnb',
   // Polygon
   POLYGON_BAL_WETH = 'pol_bal_weth',
   POLYGON_CRV_WETH = 'pol_crv_weth',

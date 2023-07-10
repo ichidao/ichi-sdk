@@ -264,6 +264,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: false
     }
   },
+  [TokenName.CAKE]: {
+    [ChainId.Bsc]: {
+      tokenName: TokenName.CAKE,
+      tableName: `bsc_${TokenName.CAKE}`,
+      address: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82',
+      decimals: 18,
+      displayName: 'CAKE',
+      symbol: 'CAKE',
+      fullName: 'CAKE Token',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.CEL]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.CEL,
@@ -967,6 +980,17 @@ export const TOKENS: TokenMapping = {
       fullName: 'Tether USD',
       isOneToken: false,
       atCoingecko: true
+    },
+    [ChainId.Bsc]: {
+      tokenName: TokenName.USDT,
+      tableName: `bsc_${TokenName.USDT}`,
+      address: '0x55d398326f99059fF775485246999027B3197955',
+      decimals: 18,
+      displayName: 'USDT',
+      symbol: 'USDT',
+      fullName: 'USDT Token',
+      isOneToken: false,
+      atCoingecko: true
     }
   },
   [TokenName.VBTC]: {
@@ -980,6 +1004,19 @@ export const TOKENS: TokenMapping = {
       fullName: 'Strudel BTC',
       isOneToken: false,
       atCoingecko: false
+    }
+  },
+  [TokenName.WBNB]: {
+    [ChainId.Bsc]: {
+      tokenName: TokenName.WBNB,
+      tableName: `bsc_${TokenName.WBNB}`,
+      address: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
+      decimals: 18,
+      displayName: 'WBNB',
+      symbol: 'WBNB',
+      fullName: 'WBNB Token',
+      isOneToken: false,
+      atCoingecko: true
     }
   },
   [TokenName.WBTC]: {

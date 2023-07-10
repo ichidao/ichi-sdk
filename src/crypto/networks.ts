@@ -152,12 +152,13 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
     name: 'BSC',
     color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
     icon: generateIconUrl(ChainId.Bsc, 'svg'),
-    env: 'testnet',
+    env: 'mainnet',
     scanLink: 'bscscan.com',
     scanName: 'BscScan',
     coingecko: 'binance-smart-chain',
     rpc: {
-      rpcUrl: 'https://bsc-dataseed1.binance.org:443',
+      //rpcUrl: 'https://bsc-dataseed1.binance.org:443',
+      rpcUrl: 'https://cosmopolitan-multi-meadow.bsc.discover.quiknode.pro/',
       nativeCurrency: {
         symbol: 'BNB',
         name: 'BNB'

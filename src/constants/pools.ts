@@ -8,6 +8,8 @@ import {
   ArbitrumPoolNumbers,
   ArbitrumPoolNumberValues,
   AvalanchePoolNumberValues,
+  BscPoolNumbers,
+  BscPoolNumberValues,
   MainnetPoolNumbers, 
   MainnetPoolNumberValues, 
   MumbaiPoolNumbers, 
@@ -150,6 +152,7 @@ type TPools = {
     [ChainId.Mainnet]: MainnetPoolNumberValues[];
     [ChainId.Arbitrum]: ArbitrumPoolNumberValues[];
     [ChainId.Avalanche]: AvalanchePoolNumberValues[];
+    [ChainId.Bsc]: BscPoolNumberValues[];
     [ChainId.Polygon]: PolygonPoolNumberValues[];
     [ChainId.Mumbai]: MumbaiPoolNumberValues[];
   };
@@ -177,6 +180,7 @@ export const Pools: TPools = {
     [ChainId.Polygon]: [],
     [ChainId.Arbitrum]: [],
     [ChainId.Avalanche]: [],
+    [ChainId.Bsc]: [],
     [ChainId.Mumbai]: [],
   },
   [PoolGroupName.DEPOSIT_POOLS]: {
@@ -194,6 +198,7 @@ export const Pools: TPools = {
     [ChainId.Polygon]: [],
     [ChainId.Arbitrum]: [],
     [ChainId.Avalanche]: [],
+    [ChainId.Bsc]: [],
     [ChainId.Mumbai]: [],
   },
   // these vaults are processed by api-updater. 
@@ -296,6 +301,13 @@ export const Pools: TPools = {
       ArbitrumPoolNumbers.ARB_WETH_VAULT
     ],
     [ChainId.Avalanche]: [],
+    [ChainId.Bsc]: [
+      BscPoolNumbers.CAKE_USDT_VAULT,
+      BscPoolNumbers.CAKE_WBNB_VAULT,
+      BscPoolNumbers.USDT_CAKE_VAULT,
+      BscPoolNumbers.USDT_WBNB_VAULT,
+      BscPoolNumbers.WBNB_CAKE_VAULT
+    ],
     [ChainId.Mumbai]: [
       MumbaiPoolNumbers.ONE_BTC_ICHI_VAULT
     ],
@@ -307,6 +319,7 @@ export const Pools: TPools = {
     [ChainId.Polygon]: [],
     [ChainId.Arbitrum]: [],
     [ChainId.Avalanche]: [],
+    [ChainId.Bsc]: [],
     [ChainId.Mumbai]: [],
   },
   [PoolGroupName.UPCOMING_POOLS]: {
@@ -314,6 +327,7 @@ export const Pools: TPools = {
     [ChainId.Polygon]: [],
     [ChainId.Arbitrum]: [],
     [ChainId.Avalanche]: [],
+    [ChainId.Bsc]: [],
     [ChainId.Mumbai]: [],
   },
   [PoolGroupName.MIGRATING_POOLS]: {
@@ -321,6 +335,7 @@ export const Pools: TPools = {
     [ChainId.Polygon]: [],
     [ChainId.Arbitrum]: [],
     [ChainId.Avalanche]: [],
+    [ChainId.Bsc]: [],
     [ChainId.Mumbai]: [],
   },
   [PoolGroupName.RETIRED_POOLS]: {
@@ -328,6 +343,7 @@ export const Pools: TPools = {
     [ChainId.Polygon]: [],
     [ChainId.Arbitrum]: [],
     [ChainId.Avalanche]: [],
+    [ChainId.Bsc]: [],
     [ChainId.Mumbai]: [],
   },
 
@@ -412,6 +428,7 @@ export const Pools: TPools = {
     ],
     [ChainId.Arbitrum]: [],
     [ChainId.Avalanche]: [],
+    [ChainId.Bsc]: [],
     [ChainId.Mumbai]: [
       MumbaiPoolNumbers.ONE_BTC_ICHI_VAULT
     ],
@@ -423,6 +440,7 @@ export const Pools: TPools = {
     [ChainId.Polygon]: [],
     [ChainId.Arbitrum]: [],
     [ChainId.Avalanche]: [],
+    [ChainId.Bsc]: [],
     [ChainId.Mumbai]: [],
   },
   [PoolGroupName.BALANCER_POOLS]: {
@@ -432,6 +450,7 @@ export const Pools: TPools = {
     [ChainId.Polygon]: [],
     [ChainId.Arbitrum]: [],
     [ChainId.Avalanche]: [],
+    [ChainId.Bsc]: [],
     [ChainId.Mumbai]: [],
   },
   [PoolGroupName.BANCOR_POOLS_V2]: {
@@ -442,6 +461,7 @@ export const Pools: TPools = {
     [ChainId.Polygon]: [],
     [ChainId.Arbitrum]: [],
     [ChainId.Avalanche]: [],
+    [ChainId.Bsc]: [],
     [ChainId.Mumbai]: [],
   },
   [PoolGroupName.BANCOR_POOLS_V3]: {
@@ -451,6 +471,7 @@ export const Pools: TPools = {
     [ChainId.Polygon]: [],
     [ChainId.Arbitrum]: [],
     [ChainId.Avalanche]: [],
+    [ChainId.Bsc]: [],
     [ChainId.Mumbai]: [],
   },
   [PoolGroupName.UNI_POOLS]: {
@@ -460,6 +481,7 @@ export const Pools: TPools = {
     [ChainId.Polygon]: [],
     [ChainId.Arbitrum]: [],
     [ChainId.Avalanche]: [],
+    [ChainId.Bsc]: [],
     [ChainId.Mumbai]: [],
   },
   [PoolGroupName.DODO_POOLS]: {
@@ -470,6 +492,7 @@ export const Pools: TPools = {
     [ChainId.Polygon]: [],
     [ChainId.Arbitrum]: [],
     [ChainId.Avalanche]: [],
+    [ChainId.Bsc]: [],
     [ChainId.Mumbai]: [],
   },
   [PoolGroupName.RARI_ASSETS]: {
@@ -482,6 +505,7 @@ export const Pools: TPools = {
     [ChainId.Polygon]: [],
     [ChainId.Arbitrum]: [],
     [ChainId.Avalanche]: [],
+    [ChainId.Bsc]: [],
     [ChainId.Mumbai]: [],
   },
   // Pools in the LEGACY_POOLS will only show in old.ichi.org
@@ -540,6 +564,7 @@ export const Pools: TPools = {
     ],
     [ChainId.Arbitrum]: [],
     [ChainId.Avalanche]: [],
+    [ChainId.Bsc]: [],
     [ChainId.Mumbai]: [],
   },
   // Vaults that are not processed in api-updater using standard multicall flow
@@ -562,6 +587,7 @@ export const Pools: TPools = {
     [ChainId.Polygon]: [],
     [ChainId.Arbitrum]: [],
     [ChainId.Avalanche]: [],
+    [ChainId.Bsc]: [],
     [ChainId.Mumbai]: [],
   },
   // These vaults don't show in either main app or legacy app.
@@ -571,6 +597,7 @@ export const Pools: TPools = {
     [ChainId.Polygon]: [],
     [ChainId.Arbitrum]: [],
     [ChainId.Avalanche]: [],
+    [ChainId.Bsc]: [],
     [ChainId.Mumbai]: [],
   },
 };

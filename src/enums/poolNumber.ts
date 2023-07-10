@@ -131,15 +131,25 @@ export enum AvalanchePoolNumbers {
   TEMP_VAULT = 1 // should be removed when the first vault is created here
 }
 
+export enum BscPoolNumbers {
+  CAKE_WBNB_VAULT = 7900,
+  CAKE_USDT_VAULT = 7901,
+  USDT_CAKE_VAULT = 7902,
+  USDT_WBNB_VAULT = 7903,
+  WBNB_CAKE_VAULT = 7904
+}
+
 export type MainnetPoolNumberValues = typeof MainnetPoolNumbers[keyof typeof MainnetPoolNumbers];
 export type PolygonPoolNumberValues = typeof PolygonPoolNumbers[keyof typeof PolygonPoolNumbers];
 export type MumbaiPoolNumberValues = typeof MumbaiPoolNumbers[keyof typeof MumbaiPoolNumbers];
 export type ArbitrumPoolNumberValues = typeof ArbitrumPoolNumbers[keyof typeof ArbitrumPoolNumbers];
 export type AvalanchePoolNumberValues = typeof AvalanchePoolNumbers[keyof typeof AvalanchePoolNumbers];
+export type BscPoolNumberValues = typeof BscPoolNumbers[keyof typeof BscPoolNumbers];
 
 export type PoolNumberValues =
   | MainnetPoolNumberValues
   | PolygonPoolNumberValues
   | ArbitrumPoolNumberValues
   | AvalanchePoolNumberValues
+  | BscPoolNumberValues
   | MumbaiPoolNumberValues;

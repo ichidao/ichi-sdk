@@ -6,6 +6,7 @@ export const BlocksPerDay: PartialRecord<ChainId, number> = {
   [ChainId.Mainnet]: 7200,
   [ChainId.Polygon]: 43000,
   [ChainId.Arbitrum]: 340000,
+  [ChainId.Bsc]: 29000,
   [ChainId.Avalanche]: 43000,
   [ChainId.Mumbai]: 43000
 };

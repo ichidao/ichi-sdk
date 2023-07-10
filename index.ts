@@ -15,7 +15,7 @@ export { getBancorV3Pools } from './src/external/bancor';
 export { bnToNumberWithoutDecimals } from './src/utils/number';
 
 // Token Utils
-export { isOneToken, getTokenMetrics } from './src/utils/token';
+export { isOneToken, getTokenMetrics, tokenNameWithChainPrefix } from './src/utils/token';
 
 // Promise Utils
 export { alwaysResolve } from './src/utils/promises';
@@ -139,6 +139,7 @@ export {
   getMainnetPoolLabel,
   getArbitrumPoolLabel,
   getAvalanchePoolLabel,
+  getBscPoolLabel,
   getPolygonPoolLabel,
   getMumbaiPoolLabel
 } from './src/constants/poolLabels';

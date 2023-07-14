@@ -1818,6 +1818,20 @@ export const PoolLabels: TPoolLabels = {
     }
   },
   [ChainId.Arbitrum]: {
+    [ArbitrumPoolNumbers.ARB_ICHI_VAULT]: {
+      name: 'ARB-ICHI Vault',
+      poolNumber: ArbitrumPoolNumbers.ARB_ICHI_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: false,
+      isHodl: true,
+      vaultName: VaultName.ARBITRUM_ARB_ICHI, 
+      vaultAddress: '0x0eF3865CF3Ebbdef3Bd844D561B70356DE515556',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
     [ArbitrumPoolNumbers.ARB_WETH_VAULT]: {
       name: 'ARB-WETH Vault',
       poolNumber: ArbitrumPoolNumbers.ARB_WETH_VAULT,
@@ -1829,6 +1843,34 @@ export const PoolLabels: TPoolLabels = {
       isHodl: true,
       vaultName: VaultName.ARBITRUM_ARB_WETH, 
       vaultAddress: '0x1A64166dc78830aeFF560Fb0f4C521830D7fd76F',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [ArbitrumPoolNumbers.USDC_ICHI_VAULT]: {
+      name: 'USDC-ICHI Vault',
+      poolNumber: ArbitrumPoolNumbers.USDC_ICHI_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: true,
+      isHodl: true,
+      vaultName: VaultName.ARBITRUM_USDC_ICHI, 
+      vaultAddress: '0x332556aCF424b9A59ce3333FA57bbC95D24Ed642',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [ArbitrumPoolNumbers.WETH_ICHI_VAULT]: {
+      name: 'WETH-ICHI Vault',
+      poolNumber: ArbitrumPoolNumbers.WETH_ICHI_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: false,
+      isHodl: true,
+      vaultName: VaultName.ARBITRUM_WETH_ICHI, 
+      vaultAddress: '0x30719F11439DaC84c1e5f05fa7387EBbBFf43eC9',
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     }

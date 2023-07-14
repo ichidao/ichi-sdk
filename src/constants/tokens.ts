@@ -33,6 +33,18 @@ export const TOKENS: TokenMapping = {
       isOneToken: false,
       targetVaultStrength: 0.1
     },
+    [ChainId.Arbitrum]: {
+      tokenName: TokenName.ICHI,
+      tableName: `arbitrum_${TokenName.ICHI}`,
+      address: '0xadf5DD3E51bF28aB4F07e684eCF5d00691818790',
+      decimals: 18,
+      displayName: 'ICHI',
+      symbol: 'ICHI',
+      fullName: 'ICHI',
+      atCoingecko: false,
+      isOneToken: false,
+      targetVaultStrength: 0.1
+    },
     // Unclear if this should be here or below, in the ichi-api-updater it uses ichi not ichi_v2, but that's ambiguous regardless
     [ChainId.Mumbai]: {
       tokenName: TokenName.ICHI,
@@ -71,7 +83,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: false,
       isOneToken: false,
       targetVaultStrength: 0.12
-    }
+    },
+    [ChainId.Arbitrum]: {
+      tokenName: TokenName.ICHI,
+      tableName: `arbitrum_${TokenName.ICHI}`,
+      address: '0xadf5DD3E51bF28aB4F07e684eCF5d00691818790',
+      decimals: 18,
+      displayName: 'ICHI',
+      symbol: 'ICHI',
+      fullName: 'ICHI',
+      atCoingecko: false,
+      isOneToken: false,
+      targetVaultStrength: 0.1
+    },
     // [ChainId.Mumbai]: {
     //   tokenName: TokenName.ICHI_V2,
     //   tableName: `mum_${TokenName.ICHI_V2}`,
@@ -950,6 +974,17 @@ export const TOKENS: TokenMapping = {
       tokenName: TokenName.USDC,
       tableName: `pol_${TokenName.USDC}`,
       address: '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174',
+      decimals: 6,
+      displayName: 'USDC',
+      symbol: 'USDC',
+      fullName: 'USD Coin',
+      atCoingecko: false,
+      isOneToken: false
+    },
+    [ChainId.Arbitrum]: {
+      tokenName: TokenName.USDC,
+      tableName: `arbitrum_${TokenName.USDC}`,
+      address: '0xaf88d065e77c8cC2239327C5EDb3A432268e5831',
       decimals: 6,
       displayName: 'USDC',
       symbol: 'USDC',

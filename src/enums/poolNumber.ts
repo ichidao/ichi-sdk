@@ -124,7 +124,10 @@ export enum MumbaiPoolNumbers {
 }
 
 export enum ArbitrumPoolNumbers {
-  ARB_WETH_VAULT = 7700
+  ARB_WETH_VAULT = 7700,
+  ARB_ICHI_VAULT = 7701,
+  WETH_ICHI_VAULT = 7702,
+  USDC_ICHI_VAULT = 7703,
 }
 
 export enum AvalanchePoolNumbers {

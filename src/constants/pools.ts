@@ -298,7 +298,10 @@ export const Pools: TPools = {
       PolygonPoolNumbers.WSTETH_WETH_VAULT, 
     ],
     [ChainId.Arbitrum]: [
-      ArbitrumPoolNumbers.ARB_WETH_VAULT
+      ArbitrumPoolNumbers.ARB_ICHI_VAULT,
+      ArbitrumPoolNumbers.ARB_WETH_VAULT,
+      ArbitrumPoolNumbers.USDC_ICHI_VAULT,
+      ArbitrumPoolNumbers.WETH_ICHI_VAULT,
     ],
     [ChainId.Avalanche]: [],
     [ChainId.Bsc]: [

@@ -301,13 +301,17 @@ export async function getTokenMetrics(
             price = opts.tokenPrices[ichiV2Token.address.toLowerCase()].usd;
             priceChange = opts.tokenPrices[ichiV2Token.address.toLowerCase()].usd_24h_change;
           } else {
-            let tokenPrices = await lookUpTokenPrices(ChainId.Mainnet, [ichiV2Token.address.toLowerCase()], cg_key);
-            if (!tokenPrices || !(ichiV2Token.address.toLowerCase() in tokenPrices)) {
+            const ichiAddress = TOKENS[TokenName.ICHI_V2]![ChainId.Mainnet]?.address?.toLowerCase();
+            if (!ichiAddress) {
+              throw new Error(`Could not lookup token prices for ${ichiV2Token.symbol}, no address`);
+            }
+            let tokenPrices = await lookUpTokenPrices(ChainId.Mainnet, [ichiAddress.toLowerCase()], cg_key);
+            if (!tokenPrices || !(ichiAddress.toLowerCase() in tokenPrices)) {
               throw new Error(`Could not lookup token prices for ${ichiV2Token.symbol}, possibly flooding CoinGecko`);
             }
 
-            price = tokenPrices[ichiV2Token.address.toLowerCase()].usd;
-            priceChange = tokenPrices[ichiV2Token.address.toLowerCase()].usd_24h_change;
+            price = tokenPrices[ichiAddress.toLowerCase()].usd;
+            priceChange = tokenPrices[ichiAddress.toLowerCase()].usd_24h_change;
           }
 
           break;

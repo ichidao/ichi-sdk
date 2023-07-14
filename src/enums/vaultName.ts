@@ -66,7 +66,10 @@ export enum VaultName {
   // Mumbai
   MUMBAI_ONEBTC_ICHI = 'mumbai_onebtc_ichi',
   // Arbitrum
+  ARBITRUM_ARB_ICHI = 'arbitrum_arb_ichi',
   ARBITRUM_ARB_WETH = 'arbitrum_arb_weth',
+  ARBITRUM_USDC_ICHI = 'arbitrum_usdc_ichi',
+  ARBITRUM_WETH_ICHI = 'arbitrum_weth_ichi',
   // Avalanche
   // Bsc
   BSC_CAKE_USDT = 'bsc_cake_usdt',
@@ -171,7 +174,10 @@ export enum VaultTableName {
   // Mumbai
   MUMBAI_ONEBTC_ICHI = 'mumbai_onebtc_ichi',
   // Arbitrum
+  ARBITRUM_ARB_ICHI = 'arbitrum_arb_ichi',
   ARBITRUM_ARB_WETH = 'arbitrum_arb_weth',
+  ARBITRUM_USDC_ICHI = 'arbitrum_usdc_ichi',
+  ARBITRUM_WETH_ICHI = 'arbitrum_weth_ichi',
   // Avalanche
   // Bsc
   BSC_CAKE_USDT = 'bsc_cake_usdt',

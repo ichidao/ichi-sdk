@@ -2476,11 +2476,11 @@ export const VAULTS: VaultMapping = {
       baseTokenDecimals: 18,
       enableNotifications: true,
       subgraphEndpoint: '',
-      irrStartDate: new Date(0),
+      irrStartDate: new Date('2023-07-14T00:00:00'),
       isInverted: false,
       isHodlVault: true,
       isLegacy: isLegacy(PolygonPoolNumbers.ICHI_WMATIC_VAULT, ChainId.Polygon),
-      irrStartTxAmount: 0,
+      irrStartTxAmount: 92621.82385062586,
       depositStatus: true,
       strategyBy: 'Bril Finance',
     }

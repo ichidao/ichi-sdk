@@ -1886,7 +1886,7 @@ export const PoolLabels: TPoolLabels = {
       isInverted: false,
       isHodl: true,
       vaultName: VaultName.BSC_CAKE_USDT, 
-      vaultAddress: '0xafdC0eA6d2995B37B055712ce9875Ae9ED4fec27',
+      vaultAddress: '0x63652e66Abd23d02537759f03314c333921915E1',
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
@@ -1914,7 +1914,7 @@ export const PoolLabels: TPoolLabels = {
       isInverted: true,
       isHodl: true,
       vaultName: VaultName.BSC_USDT_CAKE, 
-      vaultAddress: '0xccD9Af42f84B05aBE3DB79D0Ea33BF67643b1926',
+      vaultAddress: '0x0Def612e7a7b51ca7Ee38f7905dA809BD3491268',
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
@@ -1928,7 +1928,7 @@ export const PoolLabels: TPoolLabels = {
       isInverted: true,
       isHodl: true,
       vaultName: VaultName.BSC_WBNB_CAKE, 
-      vaultAddress: '0xBcB0DAf89999C135E6B0570c9B99ddf8De0b77c0',
+      vaultAddress: '0x8f22d7B80446F1dc4C5eb47F2038e17CA0306e0D',
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
@@ -1942,7 +1942,7 @@ export const PoolLabels: TPoolLabels = {
       isInverted: false,
       isHodl: true,
       vaultName: VaultName.BSC_USDT_WBNB, 
-      vaultAddress: '0xB7fc5C8D8318ABAd47D2F4d74895ae52f5765e7f',
+      vaultAddress: '0x553A31Bb23218a10FF1fFE6492f0D3C71fb88D24',
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     }

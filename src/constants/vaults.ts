@@ -1884,7 +1884,7 @@ export const VAULTS: VaultMapping = {
       vaultName: VaultName.BSC_CAKE_USDT,
       tableName: VaultTableName.BSC_CAKE_USDT,
       displayName: 'CAKE-USDT (bsc)',
-      address: '0x63652e66Abd23d02537759f03314c333921915E1',
+      address: '0xafdC0eA6d2995B37B055712ce9875Ae9ED4fec27',
       deployer: '0x05cC3CA6E768a68A7f86b09e3ceE754437bd5f12',
       farm: 0,
       externalFarm: '',

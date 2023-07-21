@@ -1076,6 +1076,17 @@ export const TOKENS: TokenMapping = {
       fullName: 'Wrapped Bitcoin',
       atCoingecko: false,
       isOneToken: false
+    },
+    [ChainId.Arbitrum]: {
+      tokenName: TokenName.WBTC,
+      tableName: `arbitrum_${TokenName.WBTC}`,
+      address: '0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f',
+      decimals: 8,
+      displayName: 'wBTC',
+      symbol: 'wBTC',
+      fullName: 'Wrapped Bitcoin',
+      atCoingecko: false,
+      isOneToken: false
     }
   },
   [TokenName.WEN]: {

@@ -299,8 +299,10 @@ export const Pools: TPools = {
     ],
     [ChainId.Arbitrum]: [
       ArbitrumPoolNumbers.ARB_ICHI_VAULT,
+      ArbitrumPoolNumbers.ARB_WBTC_VAULT,
       ArbitrumPoolNumbers.ARB_WETH_VAULT,
       ArbitrumPoolNumbers.USDC_ICHI_VAULT,
+      ArbitrumPoolNumbers.WBTC_ICHI_VAULT,
       ArbitrumPoolNumbers.WETH_ICHI_VAULT,
     ],
     [ChainId.Avalanche]: [],

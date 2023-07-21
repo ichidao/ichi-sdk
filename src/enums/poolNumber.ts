@@ -128,6 +128,8 @@ export enum ArbitrumPoolNumbers {
   ARB_ICHI_VAULT = 7701,
   WETH_ICHI_VAULT = 7702,
   USDC_ICHI_VAULT = 7703,
+  ARB_WBTC_VAULT = 7704,
+  WBTC_ICHI_VAULT = 7705
 }
 
 export enum AvalanchePoolNumbers {

@@ -103,7 +103,19 @@ export enum VaultName {
   POLYGON_WETH_USDC = 'pol_weth_usdc',
   POLYGON_WMATIC_WETH = 'pol_wmatic_weth',
   POLYGON_WSTETH_FBX = 'pol_wsteth_fbx',
-  POLYGON_WSTETH_WETH = 'pol_wsteth_weth'
+  POLYGON_WSTETH_WETH = 'pol_wsteth_weth',
+  // Polygon-Retro
+  RETRO_WMATIC_USDC = 'pol_retro_wmatic_usdc',
+  RETRO_WMATIC_WETH = 'pol_retro_wnatic_weth',
+  RETRO_WETH_WMATIC = 'pol_retro_weth_wmatic',
+  RETRO_USDC_WMATIC = 'pol_retro_usdc_wmatic',
+  RETRO_USDC_WETH = 'pol_retro_usdc_weth',
+  RETRO_WBTC_WETH = 'pol_retro_wbtc_weth',
+  RETRO_WETH_WBTC = 'pol_retro_weth_wbtc',
+  RETRO_USDT_WMATIC = 'pol_retro_usdt_wmatic',
+  RETRO_CASH_WMATIC = 'pol_retro_cash_wmatic',
+  RETRO_CASH_WETH = 'pol_retro_cash_weth',
+  RETRO_MATICX_CASH = 'pol_retro_maticx_cash'
 }
 
 export enum VaultTableName {
@@ -213,7 +225,19 @@ export enum VaultTableName {
   POLYGON_WETH_USDC = 'pol_weth_usdc',
   POLYGON_WMATIC_WETH = 'pol_wmatic_weth',
   POLYGON_WSTETH_FBX = 'pol_wsteth_fbx',
-  POLYGON_WSTETH_WETH = 'pol_wsteth_weth'
+  POLYGON_WSTETH_WETH = 'pol_wsteth_weth',
+  // Polygon-Retro
+  RETRO_WMATIC_USDC = 'pol_retro_wmatic_usdc',
+  RETRO_WMATIC_WETH = 'pol_retro_wnatic_weth',
+  RETRO_WETH_WMATIC = 'pol_retro_weth_wmatic',
+  RETRO_USDC_WMATIC = 'pol_retro_usdc_wmatic',
+  RETRO_USDC_WETH = 'pol_retro_usdc_weth',
+  RETRO_WBTC_WETH = 'pol_retro_wbtc_weth',
+  RETRO_WETH_WBTC = 'pol_retro_weth_wbtc',
+  RETRO_USDT_WMATIC = 'pol_retro_usdt_wmatic',
+  RETRO_CASH_WMATIC = 'pol_retro_cash_wmatic',
+  RETRO_CASH_WETH = 'pol_retro_cash_weth',
+  RETRO_MATICX_CASH = 'pol_retro_maticx_cash'
 }
 
 export type VaultNames = keyof typeof VaultName;

@@ -301,6 +301,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.CASH]: {
+    [ChainId.Polygon]: {
+      tokenName: TokenName.CASH,
+      tableName: `pol_${TokenName.CASH}`,
+      address: '0x5D066D022EDE10eFa2717eD3D79f22F949F8C175',
+      decimals: 18,
+      displayName: 'CASH',
+      symbol: 'CASH',
+      fullName: 'CASH',
+      isOneToken: false,
+      atCoingecko: false
+    }
+  },
   [TokenName.CEL]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.CEL,
@@ -657,6 +670,19 @@ export const TOKENS: TokenMapping = {
       displayName: 'LINK',
       symbol: 'LINK',
       fullName: 'ChainLink Token',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
+  [TokenName.MATICX]: {
+    [ChainId.Polygon]: {
+      tokenName: TokenName.MATICX,
+      tableName: `pol_${TokenName.MATICX}`,
+      address: '0xfa68FB4628DFF1028CFEc22b4162FCcd0d45efb6',
+      decimals: 18,
+      displayName: 'MATICX',
+      symbol: 'MATICX',
+      fullName: 'Liquid Staking Matic',
       isOneToken: false,
       atCoingecko: true
     }

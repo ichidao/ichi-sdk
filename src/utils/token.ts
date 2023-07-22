@@ -242,6 +242,7 @@ export async function getTokenMetrics(
         case TokenName.USDT:
         case TokenName.USDC:
         case TokenName.DAI:
+        case TokenName.CASH:
         case TokenName.HOME:
           price = 1;
           break;

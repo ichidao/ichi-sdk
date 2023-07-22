@@ -2805,7 +2805,7 @@ export const VAULTS: VaultMapping = {
       vaultName: VaultName.RETRO_USDC_WETH,
       tableName: VaultTableName.RETRO_USDC_WETH,
       displayName: 'USDC-WETH (retro)',
-      address: '0x881F069CDE4F12590859b95D91ACF4F3E27b1535',
+      address: '0x7c96bE1026A5461418C557f2CDECfD0F50244371',
       deployer: '0x0768A75F616B98ee0937673bD83B7aBF142236Ea',
       farm: 0,
       externalFarm: '',

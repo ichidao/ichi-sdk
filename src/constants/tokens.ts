@@ -637,6 +637,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.L2DAO]: {
+    [ChainId.Arbitrum]: {
+      tokenName: TokenName.L2DAO,
+      tableName: TokenName.L2DAO,
+      address: '0x2CaB3abfC1670D1a452dF502e216a66883cDf079',
+      decimals: 18,
+      displayName: 'L2DAO',
+      symbol: 'L2DAO',
+      fullName: 'Layer2DAO',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.LDO]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.LDO,

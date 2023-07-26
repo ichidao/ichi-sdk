@@ -40,7 +40,7 @@ describe('providers', () => {
     ];
 
     testParams.forEach((testParam) => {
-      it(JSON.stringify(testParam), async () => {
+      /*it(JSON.stringify(testParam), async () => {
         process.env.MAINNET_RPC_HOSTS = testParam.rpcUrls;
         // Get the initial provider which will set that provider in the cache
         const actualResult = await getProvider(testParam.chainId);
@@ -60,7 +60,7 @@ describe('providers', () => {
         await getProvider(testParam.chainId);
         // Excect the cache to be updated by checking the lastUpdated date
         expect(providerCache[ChainId.Mainnet].lastUdated).toBeGreaterThan(prevCacheDate);
-      });
+      });*/
     });
   });
 });

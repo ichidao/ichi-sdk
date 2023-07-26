@@ -313,6 +313,7 @@ export const Pools: TPools = {
       ArbitrumPoolNumbers.ARB_ICHI_VAULT,
       ArbitrumPoolNumbers.ARB_WBTC_VAULT,
       ArbitrumPoolNumbers.ARB_WETH_VAULT,
+      ArbitrumPoolNumbers.L2DAO_WETH_VAULT,
       ArbitrumPoolNumbers.USDC_ICHI_VAULT,
       ArbitrumPoolNumbers.WBTC_ICHI_VAULT,
       ArbitrumPoolNumbers.WETH_ICHI_VAULT,

@@ -1853,6 +1853,32 @@ export const VAULTS: VaultMapping = {
       strategyBy: 'Bril Finance',
     }
   },
+  [VaultName.ARBITRUM_L2DAO_WETH]: {
+    [ChainId.Arbitrum]: {
+      vaultName: VaultName.ARBITRUM_L2DAO_WETH,
+      tableName: VaultTableName.ARBITRUM_L2DAO_WETH,
+      displayName: 'L2DAO-WETH (arbitrum)',
+      address: '0x6eE1621Aa1b3eb17826253933B2819327C1690E7',
+      deployer: '0x508C3daa571854247726ba26949f182086Ff89B0',
+      farm: 0,
+      externalFarm: '',
+      scarceToken: 'token1',
+      scarceTokenName: TokenName.WETH,
+      scarceTokenDecimals: 18,
+      scarceTokenCoingeckoId: 'weth',
+      baseTokenName: TokenName.L2DAO,
+      baseTokenDecimals: 18,
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: false,
+      isHodlVault: true,
+      isLegacy: isLegacy(ArbitrumPoolNumbers.L2DAO_WETH_VAULT, ChainId.Arbitrum),
+      irrStartTxAmount: 0,
+      depositStatus: true,
+      strategyBy: 'Bril Finance',
+    }
+  },
   [VaultName.ARBITRUM_USDC_ICHI]: {
     [ChainId.Arbitrum]: {
       vaultName: VaultName.ARBITRUM_USDC_ICHI,

@@ -2014,6 +2014,20 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+    [ArbitrumPoolNumbers.L2DAO_WETH_VAULT]: {
+      name: 'L2DAO-WETH Vault',
+      poolNumber: ArbitrumPoolNumbers.L2DAO_WETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: false,
+      isHodl: true,
+      vaultName: VaultName.ARBITRUM_L2DAO_WETH, 
+      vaultAddress: '0x6eE1621Aa1b3eb17826253933B2819327C1690E7',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
     [ArbitrumPoolNumbers.USDC_ICHI_VAULT]: {
       name: 'USDC-ICHI Vault',
       poolNumber: ArbitrumPoolNumbers.USDC_ICHI_VAULT,

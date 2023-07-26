@@ -40,6 +40,7 @@ export enum TokenName {
   GOVI = 'govi',
   HOME = 'home',
   IMX = 'imx',
+  L2DAO = 'l2dao',
   LDO = 'ldo',
   LINK = 'link',
   MATICX = 'maticx',

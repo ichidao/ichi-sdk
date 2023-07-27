@@ -818,7 +818,7 @@ export const PoolLabels: TPoolLabels = {
       poolNumber: MainnetPoolNumbers.LMR_WETH_VAULT,
       lpName: 'ICHI_VAULT_LP',
       shortLpName: 'VAULT_LP',
-      farmAddress: ADDRESSES[AddressName.FARMING_V2][ChainId.Mainnet],
+      farmAddress: '',
       farmId: 0,
       farmRewardTokenName: TokenName.WETH,
       farmRewardTokenDecimals: 18,
@@ -828,7 +828,7 @@ export const PoolLabels: TPoolLabels = {
       isInverted: false,
       isHodl: true,
       vaultName: VaultName.LMR_WETH,
-      vaultAddress: '0x1c647cB82c4aCeafF363598f45a7aD82BCAFe021',
+      vaultAddress: '0xfA20D29a6124F084EFecd0C2C75C0D4214E671AB',
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },

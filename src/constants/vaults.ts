@@ -1020,6 +1020,33 @@ export const VAULTS: VaultMapping = {
       strategyBy: '',
     }
   },
+  [VaultName.LMR_WETH]: {
+    [ChainId.Mainnet]: {
+      vaultName: VaultName.LMR_WETH,
+      tableName: VaultTableName.LMR_WETH,
+      displayName: 'LMR-WETH',
+      address: '0xfA20D29a6124F084EFecd0C2C75C0D4214E671AB',
+      deployer: '0xfF7B5E167c9877f2b9f65D19d9c8c9aa651Fe19F',
+      farm: 0,
+      externalFarm: '',
+      scarceToken: 'token1',
+      scarceTokenName: TokenName.WETH,
+      scarceTokenDecimals: 18,
+      scarceTokenCoingeckoId: 'weth',
+      baseTokenName: TokenName.LMR,
+      baseTokenDecimals: 8,
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: false,
+      isHodlVault: true,
+      // isLegacy: false,
+      isLegacy: isLegacy(MainnetPoolNumbers.LMR_WETH_VAULT, ChainId.Mainnet),
+      irrStartTxAmount: 0,
+      depositStatus: true,
+      strategyBy: '',
+    }
+  },
   [VaultName.METIS]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.METIS,

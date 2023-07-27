@@ -1025,7 +1025,7 @@ export const VAULTS: VaultMapping = {
       vaultName: VaultName.LMR_WETH,
       tableName: VaultTableName.LMR_WETH,
       displayName: 'LMR-WETH',
-      address: '0x1c647cB82c4aCeafF363598f45a7aD82BCAFe021',
+      address: '0xfA20D29a6124F084EFecd0C2C75C0D4214E671AB',
       deployer: '0xfF7B5E167c9877f2b9f65D19d9c8c9aa651Fe19F',
       farm: 0,
       externalFarm: '',

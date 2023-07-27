@@ -1028,7 +1028,7 @@ export const VAULTS: VaultMapping = {
       address: '0x1c647cB82c4aCeafF363598f45a7aD82BCAFe021',
       deployer: '0xfF7B5E167c9877f2b9f65D19d9c8c9aa651Fe19F',
       farm: 0,
-      externalFarm: ADDRESSES[AddressName.FARMING_V2][ChainId.Mainnet] || '',
+      externalFarm: '',
       scarceToken: 'token1',
       scarceTokenName: TokenName.WETH,
       scarceTokenDecimals: 18,

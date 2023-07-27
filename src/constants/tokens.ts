@@ -693,7 +693,7 @@ export const TOKENS: TokenMapping = {
       tableName: TokenName.LMR,
       address: '0x4b1D0b9F081468D780Ca1d5d79132b64301085d1',
       decimals: 18,
-      displayName: 'Lumerin',
+      displayName: 'LMR',
       symbol: 'LMR',
       fullName: 'Lumerin',
       isOneToken: false,

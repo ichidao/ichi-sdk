@@ -239,6 +239,7 @@ export const Pools: TPools = {
       MainnetPoolNumbers.IMX_ETH_VAULT,
       MainnetPoolNumbers.LDO_VAULT,
       MainnetPoolNumbers.LINK_VAULT,
+      MainnetPoolNumbers.LMR_WETH_VAULT,
       MainnetPoolNumbers.METIS_VAULT,
       MainnetPoolNumbers.MIDAS_VAULT,
       MainnetPoolNumbers.MKR_VAULT,

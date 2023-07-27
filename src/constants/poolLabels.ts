@@ -813,6 +813,25 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+    [MainnetPoolNumbers.LMR_WETH_VAULT]: {
+      name: 'LMR-WETH Vault',
+      poolNumber: MainnetPoolNumbers.LMR_WETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      farmAddress: ADDRESSES[AddressName.FARMING_V2][ChainId.Mainnet],
+      farmId: 0,
+      farmRewardTokenName: TokenName.WETH,
+      farmRewardTokenDecimals: 18,
+      farmRewardTokenAddress: getToken(TokenName.WETH, ChainId.Mainnet).address,
+      tradeUrl: 'https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x4b1D0b9F081468D780Ca1d5d79132b64301085d1&chain=mainnet',
+      subgraphEndpoint: '',
+      isInverted: false,
+      isHodl: true,
+      vaultName: VaultName.LMR_WETH,
+      vaultAddress: '0x1c647cB82c4aCeafF363598f45a7aD82BCAFe021',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
     [MainnetPoolNumbers.MKR_VAULT]: {
       name: 'MKR Vault',
       poolNumber: MainnetPoolNumbers.MKR_VAULT,

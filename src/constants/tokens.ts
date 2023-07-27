@@ -687,6 +687,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.LMR]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.LMR,
+      tableName: TokenName.LMR,
+      address: '0x4b1D0b9F081468D780Ca1d5d79132b64301085d1',
+      decimals: 18,
+      displayName: 'Lumerin',
+      symbol: 'LMR',
+      fullName: 'Lumerin',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.MATICX]: {
     [ChainId.Polygon]: {
       tokenName: TokenName.MATICX,

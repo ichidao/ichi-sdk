@@ -642,7 +642,13 @@ export const Pools: TPools = {
     ],
     [ChainId.Arbitrum]: [],
     [ChainId.Avalanche]: [],
-    [ChainId.Bsc]: [],
+    [ChainId.Bsc]: [
+      BscPoolNumbers.CAKE_USDT_VAULT, 
+      BscPoolNumbers.CAKE_WBNB_VAULT, 
+      BscPoolNumbers.USDT_CAKE_VAULT, 
+      BscPoolNumbers.USDT_WBNB_VAULT, 
+      BscPoolNumbers.WBNB_CAKE_VAULT, 
+    ],
     [ChainId.Mumbai]: [],
   },
 };

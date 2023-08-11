@@ -4,6 +4,7 @@ import { getToken, TOKENS } from '../constants/tokens';
 import {
   getMemberTokenPrice,
   getOneTokenPriceFromVault,
+  getPriceFromRetroVault,
   getPriceFromUSDCVault,
   getPriceFromWethVault,
   getStimulusOraclePrice,
@@ -238,6 +239,10 @@ export async function getTokenMetrics(
       let polygonProvider;
       const wethAddress = TOKENS[TokenName.WETH]![ChainId.Mainnet]?.address?.toLowerCase();
 
+      // used for oRETRO token price:
+      let retroPrice: number;
+      const retroAddress = TOKENS[TokenName.RETRO]![ChainId.Polygon]?.address?.toLowerCase();
+
       switch (tokenName) {
         case TokenName.USDT:
         case TokenName.USDC:
@@ -268,6 +273,24 @@ export async function getTokenMetrics(
               polygonProvider,
               ChainId.Polygon,
               wethPrice
+              )
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}`);
+          }
+          break;
+        case TokenName.ORETRO:
+          polygonProvider = await getProvider(ChainId.Polygon);
+          if (!polygonProvider) {
+            throw new Error('Could not establish Polygon provider');
+          }
+
+          if (opts.tokenPrices && retroAddress && retroAddress in opts.tokenPrices) {
+            retroPrice = opts.tokenPrices[retroAddress].usd;
+            price = await getPriceFromRetroVault( 
+              VaultName.RETRO_ORETRO_RETRO,
+              polygonProvider,
+              ChainId.Polygon,
+              retroPrice
               )
           } else {
             throw new Error(`Could not lookup token prices for ${token.symbol}`);

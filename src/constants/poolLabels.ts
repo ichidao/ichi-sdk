@@ -2306,6 +2306,48 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+    [PolygonPoolNumbers.RETRO_STMATIC_WMATIC_VAULT]: {
+      name: 'STMATIC-WMATIC Vault',
+      poolNumber: PolygonPoolNumbers.RETRO_STMATIC_WMATIC_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.RETRO_STMATIC_WMATIC, ChainId.Polygon),
+      isHodl: true,
+      vaultName: VaultName.RETRO_STMATIC_WMATIC, 
+      vaultAddress: getVaultAddress(VaultName.RETRO_STMATIC_WMATIC, ChainId.Polygon),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [PolygonPoolNumbers.RETRO_WMATIC_STMATIC_VAULT]: {
+      name: 'WMATIC-STMATIC Vault',
+      poolNumber: PolygonPoolNumbers.RETRO_WMATIC_STMATIC_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.RETRO_WMATIC_STMATIC, ChainId.Polygon),
+      isHodl: true,
+      vaultName: VaultName.RETRO_WMATIC_STMATIC, 
+      vaultAddress: getVaultAddress(VaultName.RETRO_WMATIC_STMATIC, ChainId.Polygon),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [PolygonPoolNumbers.RETRO_WMATIC_USDC_05_VAULT]: {
+      name: 'WMATIC-USDC 0.05% Vault',
+      poolNumber: PolygonPoolNumbers.RETRO_WMATIC_USDC_05_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.RETRO_WMATIC_USDC_05, ChainId.Polygon),
+      isHodl: true,
+      vaultName: VaultName.RETRO_WMATIC_USDC_05, 
+      vaultAddress: getVaultAddress(VaultName.RETRO_WMATIC_USDC_05, ChainId.Polygon),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
   },
   [ChainId.Mumbai]: {
     [MumbaiPoolNumbers.ONE_BTC_ICHI_VAULT]: {

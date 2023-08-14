@@ -133,6 +133,7 @@ export enum VaultName {
   RETRO_MIMATIC_RETRO = 'pol_retro_mimatic_retro',
   RETRO_ORETRO_RETRO = 'pol_retro_oretro_retro',
   RETRO_STMATIC_RETRO = 'pol_retro_stmatic_retro',
+  RETRO_STMATIC_WMATIC = 'pol_retro_stmatic_wmatic',
   RETRO_USDC_AGEUR = 'pol_retro_usdc_ageur',
   RETRO_USDC_RETRO = 'pol_retro_usdc_retro',
   RETRO_USDT_RETRO = 'pol_retro_usdt_retro',
@@ -142,6 +143,8 @@ export enum VaultName {
   RETRO_WMATIC_MATICX_01 = 'pol_retro_wmatic_maticx_01',
   RETRO_WMATIC_MATICX_05 = 'pol_retro_wmatic_maticx_05',
   RETRO_WMATIC_RETRO = 'pol_retro_wmatic_retro',
+  RETRO_WMATIC_STMATIC = 'pol_retro_wmatic_stmatic',
+  RETRO_WMATIC_USDC_05 = 'pol_retro_wmatic_usdc_05',
 }
 
 export enum VaultTableName {
@@ -281,6 +284,7 @@ export enum VaultTableName {
   RETRO_MIMATIC_RETRO = 'pol_retro_mimatic_retro',
   RETRO_ORETRO_RETRO = 'pol_retro_oretro_retro',
   RETRO_STMATIC_RETRO = 'pol_retro_stmatic_retro',
+  RETRO_STMATIC_WMATIC = 'pol_retro_stmatic_wmatic',
   RETRO_USDC_AGEUR = 'pol_retro_usdc_ageur',
   RETRO_USDC_RETRO = 'pol_retro_usdc_retro',
   RETRO_USDT_RETRO = 'pol_retro_usdt_retro',
@@ -290,6 +294,8 @@ export enum VaultTableName {
   RETRO_WMATIC_MATICX_01 = 'pol_retro_wmatic_maticx_01',
   RETRO_WMATIC_MATICX_05 = 'pol_retro_wmatic_maticx_05',
   RETRO_WMATIC_RETRO = 'pol_retro_wmatic_retro',
+  RETRO_WMATIC_STMATIC = 'pol_retro_wmatic_stmatic',
+  RETRO_WMATIC_USDC_05 = 'pol_retro_wmatic_usdc_05',
 }
 
 export type VaultNames = keyof typeof VaultName;

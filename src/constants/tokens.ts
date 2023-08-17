@@ -146,6 +146,30 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.AGEUR]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.AGEUR,
+      tableName: TokenName.AGEUR,
+      address: '0x1a7e4e63778b4f12a199c062f3efdd288afcbce8',
+      decimals: 18,
+      displayName: 'agEUR',
+      symbol: 'agEUR',
+      fullName: 'agEUR',
+      isOneToken: false,
+      atCoingecko: true
+    },
+    [ChainId.Polygon]: {
+      tokenName: TokenName.AGEUR,
+      tableName: `pol_${TokenName.AGEUR}`,
+      address: '0xE0B52e49357Fd4DAf2c15e02058DCE6BC0057db4',
+      decimals: 18,
+      displayName: 'agEUR',
+      symbol: 'agEUR',
+      fullName: 'agEUR',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.ALLY]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.ALLY,
@@ -505,6 +529,41 @@ export const TOKENS: TokenMapping = {
       fullName: 'Frax',
       isOneToken: false,
       atCoingecko: true
+    },
+    [ChainId.Polygon]: {
+      tokenName: TokenName.FRAX,
+      tableName: `pol_${TokenName.FRAX}`,
+      address: '0x45c32fA6DF82ead1e2EF74d17b76547EDdFaFF89',
+      decimals: 18,
+      displayName: 'FRAX',
+      symbol: 'FRAX',
+      fullName: 'Frax',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
+  [TokenName.FRXETH]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.FRXETH,
+      tableName: TokenName.FRXETH,
+      address: '0x5e8422345238f34275888049021821e8e08caa1f',
+      decimals: 18,
+      displayName: 'frxETH',
+      symbol: 'frxETH',
+      fullName: 'Frax Ether',
+      isOneToken: false,
+      atCoingecko: true
+    },
+    [ChainId.Polygon]: {
+      tokenName: TokenName.FRXETH,
+      tableName: `pol_${TokenName.FRXETH}`,
+      address: '0xEe327F889d5947c1dc1934Bb208a1E792F953E96',
+      decimals: 18,
+      displayName: 'frxETH',
+      symbol: 'frxETH',
+      fullName: 'Frax Ether',
+      isOneToken: false,
+      atCoingecko: true
     }
   },
   [TokenName.FUSE]: {
@@ -640,7 +699,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.L2DAO]: {
     [ChainId.Arbitrum]: {
       tokenName: TokenName.L2DAO,
-      tableName: TokenName.L2DAO,
+      tableName: `arbitrum_${TokenName.L2DAO}`,
       address: '0x2CaB3abfC1670D1a452dF502e216a66883cDf079',
       decimals: 18,
       displayName: 'L2DAO',
@@ -739,6 +798,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.MIMATIC]: {
+    [ChainId.Polygon]: {
+      tokenName: TokenName.MIMATIC,
+      tableName: `pol_${TokenName.MIMATIC}`,
+      address: '0xa3Fa99A148fA48D14Ed51d610c367C61876997F1',
+      decimals: 18,
+      displayName: 'miMATIC',
+      symbol: 'miMATIC',
+      fullName: 'miMATIC',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.MKR]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.MKR,
@@ -790,6 +862,19 @@ export const TOKENS: TokenMapping = {
       fullName: 'Ojamu Token',
       isOneToken: false,
       atCoingecko: true
+    }
+  },
+  [TokenName.ORETRO]: {
+    [ChainId.Polygon]: {
+      tokenName: TokenName.ORETRO,
+      tableName: `pol_${TokenName.ORETRO}`,
+      address: '0x3A29CAb2E124919d14a6F735b6033a3AaD2B260F',
+      decimals: 18,
+      displayName: 'oRETRO',
+      symbol: 'oRETRO',
+      fullName: 'Option to buy RETRO',
+      isOneToken: false,
+      atCoingecko: false
     }
   },
   [TokenName.OUSD]: {
@@ -884,6 +969,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.RETRO]: {
+    [ChainId.Polygon]: {
+      tokenName: TokenName.RETRO,
+      tableName: `pol_${TokenName.RETRO}`,
+      address: '0xbfa35599c7aebb0dace9b5aa3ca5f2a79624d8eb',
+      decimals: 18,
+      displayName: 'RETRO',
+      symbol: 'RETRO',
+      fullName: 'RETRO',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.SFRXETH]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.SFRXETH,
@@ -906,6 +1004,30 @@ export const TOKENS: TokenMapping = {
       displayName: 'SHIB',
       symbol: 'SHIB',
       fullName: 'Shiba Inu',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
+  [TokenName.STMATIC]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.STMATIC,
+      tableName: TokenName.STMATIC,
+      address: '0x9ee91f9f426fa633d227f7a9b000e28b9dfd8599',
+      decimals: 18,
+      displayName: 'stMATIC',
+      symbol: 'stMATIC',
+      fullName: 'Staked MATIC',
+      isOneToken: false,
+      atCoingecko: true
+    },
+    [ChainId.Polygon]: {
+      tokenName: TokenName.STMATIC,
+      tableName: `pol_${TokenName.STMATIC}`,
+      address: '0x3A58a54C066FdC0f2D55FC9C89F0415C92eBf3C4',
+      decimals: 18,
+      displayName: 'stMATIC',
+      symbol: 'stMATIC',
+      fullName: 'Staked MATIC',
       isOneToken: false,
       atCoingecko: true
     }

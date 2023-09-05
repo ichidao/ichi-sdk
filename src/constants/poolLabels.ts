@@ -2348,6 +2348,48 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+    [PolygonPoolNumbers.RETRO_CASH_AXLLQDR_VAULT]: {
+      name: 'CASH-axlLQDR Vault',
+      poolNumber: PolygonPoolNumbers.RETRO_CASH_AXLLQDR_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.RETRO_CASH_AXLLQDR, ChainId.Polygon),
+      isHodl: true,
+      vaultName: VaultName.RETRO_CASH_AXLLQDR, 
+      vaultAddress: getVaultAddress(VaultName.RETRO_CASH_AXLLQDR, ChainId.Polygon),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [PolygonPoolNumbers.RETRO_JRT_WETH_VAULT]: {
+      name: 'JRT-WETH Vault',
+      poolNumber: PolygonPoolNumbers.RETRO_JRT_WETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.RETRO_JRT_WETH, ChainId.Polygon),
+      isHodl: true,
+      vaultName: VaultName.RETRO_JRT_WETH, 
+      vaultAddress: getVaultAddress(VaultName.RETRO_JRT_WETH, ChainId.Polygon),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [PolygonPoolNumbers.OXT_WETH_VAULT]: {
+      name: 'OXT-WETH Vault',
+      poolNumber: PolygonPoolNumbers.OXT_WETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.POLYGON_OXT_WETH, ChainId.Polygon),
+      isHodl: true,
+      vaultName: VaultName.POLYGON_OXT_WETH, 
+      vaultAddress: getVaultAddress(VaultName.POLYGON_OXT_WETH, ChainId.Polygon),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
   },
   [ChainId.Mumbai]: {
     [MumbaiPoolNumbers.ONE_BTC_ICHI_VAULT]: {
@@ -2417,6 +2459,20 @@ export const PoolLabels: TPoolLabels = {
       isHodl: true,
       vaultName: VaultName.ARBITRUM_L2DAO_WETH, 
       vaultAddress: '0x6eE1621Aa1b3eb17826253933B2819327C1690E7',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [ArbitrumPoolNumbers.LMR_WETH_VAULT]: {
+      name: 'LMR-WETH Vault',
+      poolNumber: ArbitrumPoolNumbers.LMR_WETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.ARBITRUM_LMR_WETH, ChainId.Arbitrum),
+      isHodl: true,
+      vaultName: VaultName.ARBITRUM_LMR_WETH, 
+      vaultAddress: getVaultAddress(VaultName.ARBITRUM_LMR_WETH, ChainId.Arbitrum),
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },

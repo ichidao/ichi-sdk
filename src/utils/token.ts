@@ -9,6 +9,7 @@ import {
   getPriceFromWethVault,
   getStimulusOraclePrice,
   getStimulusUSDPrice,
+  getTokenPriceFromVault,
   getVBTCPrice,
   getXICHIPrice
 } from '../crypto/prices';
@@ -277,6 +278,20 @@ export async function getTokenMetrics(
           } else {
             throw new Error(`Could not lookup token prices for ${token.symbol}`);
           }
+          break;
+        case TokenName.AXLLQDR:
+          polygonProvider = await getProvider(ChainId.Polygon);
+          if (!polygonProvider) {
+            throw new Error('Could not establish Polygon provider');
+          }
+
+          price = await getTokenPriceFromVault( 
+            VaultName.RETRO_CASH_AXLLQDR,
+            polygonProvider,
+            ChainId.Polygon,
+            TokenName.AXLLQDR,
+            1 // CASH price = 1
+            )
           break;
         case TokenName.ORETRO:
           polygonProvider = await getProvider(ChainId.Polygon);

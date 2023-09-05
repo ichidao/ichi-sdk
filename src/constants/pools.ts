@@ -284,6 +284,7 @@ export const Pools: TPools = {
       PolygonPoolNumbers.ICHI_WMATIC_VAULT, 
       PolygonPoolNumbers.LINK_WETH_VAULT, 
       PolygonPoolNumbers.ONE_BTC_VAULT, 
+      PolygonPoolNumbers.OXT_WETH_VAULT, 
       PolygonPoolNumbers.POP_WETH_VAULT, 
       PolygonPoolNumbers.SUSHI_WETH_VAULT, 
       PolygonPoolNumbers.TRADE_USDT_VAULT, 
@@ -298,6 +299,7 @@ export const Pools: TPools = {
       PolygonPoolNumbers.WSTETH_FBX_VAULT, 
       PolygonPoolNumbers.WSTETH_WETH_VAULT,
       // Retro 
+      PolygonPoolNumbers.RETRO_CASH_AXLLQDR_VAULT, 
       PolygonPoolNumbers.RETRO_CASH_WETH_VAULT, 
       PolygonPoolNumbers.RETRO_CASH_WMATIC_VAULT, 
       PolygonPoolNumbers.RETRO_USDC_WETH_VAULT, 
@@ -317,6 +319,7 @@ export const Pools: TPools = {
       PolygonPoolNumbers.RETRO_FRXETH_WMATIC_VAULT,
       PolygonPoolNumbers.RETRO_ICHI_CASH_VAULT,
       PolygonPoolNumbers.RETRO_ICHI_RETRO_VAULT,
+      PolygonPoolNumbers.RETRO_JRT_WETH_VAULT,
       PolygonPoolNumbers.RETRO_LINK_RETRO_VAULT,
       PolygonPoolNumbers.RETRO_MATICX_WMATIC_01_VAULT,
       PolygonPoolNumbers.RETRO_MATICX_WMATIC_05_VAULT,
@@ -341,6 +344,7 @@ export const Pools: TPools = {
       ArbitrumPoolNumbers.ARB_WBTC_VAULT,
       ArbitrumPoolNumbers.ARB_WETH_VAULT,
       ArbitrumPoolNumbers.L2DAO_WETH_VAULT,
+      ArbitrumPoolNumbers.LMR_WETH_VAULT,
       ArbitrumPoolNumbers.USDC_ICHI_VAULT,
       ArbitrumPoolNumbers.WBTC_ICHI_VAULT,
       ArbitrumPoolNumbers.WETH_ICHI_VAULT,
@@ -654,6 +658,7 @@ export const Pools: TPools = {
   [PoolGroupName.HIDDEN_VAULTS]: {
     [ChainId.Mainnet]: [], 
     [ChainId.Polygon]: [
+      PolygonPoolNumbers.RETRO_CASH_AXLLQDR_VAULT, 
       PolygonPoolNumbers.RETRO_CASH_WETH_VAULT, 
       PolygonPoolNumbers.RETRO_CASH_WMATIC_VAULT, 
       PolygonPoolNumbers.RETRO_USDC_WETH_VAULT, 
@@ -673,6 +678,7 @@ export const Pools: TPools = {
       PolygonPoolNumbers.RETRO_FRXETH_WMATIC_VAULT,
       PolygonPoolNumbers.RETRO_ICHI_CASH_VAULT,
       PolygonPoolNumbers.RETRO_ICHI_RETRO_VAULT,
+      PolygonPoolNumbers.RETRO_JRT_WETH_VAULT, 
       PolygonPoolNumbers.RETRO_LINK_RETRO_VAULT,
       PolygonPoolNumbers.RETRO_MATICX_WMATIC_01_VAULT,
       PolygonPoolNumbers.RETRO_MATICX_WMATIC_05_VAULT,

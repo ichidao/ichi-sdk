@@ -155,6 +155,9 @@ export enum PolygonPoolNumbers {
   RETRO_STMATIC_WMATIC_VAULT = 7552,
   RETRO_WMATIC_STMATIC_VAULT = 7553,
   RETRO_WMATIC_USDC_05_VAULT = 7554,
+  RETRO_CASH_AXLLQDR_VAULT = 7555,
+  RETRO_JRT_WETH_VAULT = 7556,
+  OXT_WETH_VAULT = 7557,
 }
 
 export enum MumbaiPoolNumbers {
@@ -168,7 +171,8 @@ export enum ArbitrumPoolNumbers {
   USDC_ICHI_VAULT = 7703,
   ARB_WBTC_VAULT = 7704,
   WBTC_ICHI_VAULT = 7705,
-  L2DAO_WETH_VAULT = 7706
+  L2DAO_WETH_VAULT = 7706,
+  LMR_WETH_VAULT = 7707,
 }
 
 export enum AvalanchePoolNumbers {

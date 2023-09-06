@@ -9,6 +9,7 @@ import {
   getPriceFromWethVault,
   getStimulusOraclePrice,
   getStimulusUSDPrice,
+  getTokenPriceFromVault,
   getVBTCPrice,
   getXICHIPrice
 } from '../crypto/prices';
@@ -260,6 +261,28 @@ export async function getTokenMetrics(
             provider,
             ChainId.Mainnet)
           break;
+        case TokenName.LMR:
+          const lmrAddress = chainId === ChainId.Mainnet 
+            ? token.address.toLowerCase()
+            : TOKENS[TokenName.LMR]![ChainId.Mainnet]?.address?.toLowerCase();
+          if (opts.tokenPrices && lmrAddress && lmrAddress in opts.tokenPrices) {
+            price = opts.tokenPrices[lmrAddress].usd;
+            priceChange = opts.tokenPrices[lmrAddress].usd_24h_change;
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
+          }
+          break;
+        case TokenName.OXT:
+          const oxtAddress = chainId === ChainId.Mainnet 
+            ? token.address.toLowerCase()
+            : TOKENS[TokenName.LMR]![ChainId.Mainnet]?.address?.toLowerCase();
+          if (opts.tokenPrices && oxtAddress && oxtAddress in opts.tokenPrices) {
+            price = opts.tokenPrices[oxtAddress].usd;
+            priceChange = opts.tokenPrices[oxtAddress].usd_24h_change;
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
+          }
+          break;
         case TokenName.WEN:
           polygonProvider = await getProvider(ChainId.Polygon);
           if (!polygonProvider) {
@@ -277,6 +300,20 @@ export async function getTokenMetrics(
           } else {
             throw new Error(`Could not lookup token prices for ${token.symbol}`);
           }
+          break;
+        case TokenName.AXLLQDR:
+          polygonProvider = await getProvider(ChainId.Polygon);
+          if (!polygonProvider) {
+            throw new Error('Could not establish Polygon provider');
+          }
+
+          price = await getTokenPriceFromVault( 
+            VaultName.RETRO_CASH_AXLLQDR,
+            polygonProvider,
+            ChainId.Polygon,
+            TokenName.AXLLQDR,
+            1 // CASH price = 1
+            )
           break;
         case TokenName.ORETRO:
           polygonProvider = await getProvider(ChainId.Polygon);

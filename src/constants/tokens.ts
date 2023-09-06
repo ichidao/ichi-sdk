@@ -209,6 +209,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.AXLLQDR]: {
+    [ChainId.Polygon]: {
+      tokenName: TokenName.AXLLQDR,
+      tableName: TokenName.AXLLQDR,
+      address: '0x0294D8eB7857D43FEb1210Db72456d41481f9Ede',
+      decimals: 18,
+      displayName: 'axlLQDR',
+      symbol: 'axlLQDR',
+      fullName: 'Axelar Wrapped Lqdr',
+      isOneToken: false,
+      atCoingecko: false
+    }
+  },
   [TokenName.BAL]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.BAL,
@@ -696,6 +709,30 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.JRT]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.JRT,
+      tableName: TokenName.JRT,
+      address: '0x8a9c67fee641579deba04928c4bc45f66e26343a',
+      decimals: 18,
+      displayName: 'JRT',
+      symbol: 'JRT',
+      fullName: 'Jarvis Reward Token',
+      isOneToken: false,
+      atCoingecko: true
+    },
+    [ChainId.Polygon]: {
+      tokenName: TokenName.JRT,
+      tableName: TokenName.JRT,
+      address: '0x596eBE76e2DB4470966ea395B0d063aC6197A8C5',
+      decimals: 18,
+      displayName: 'JRT',
+      symbol: 'JRT',
+      fullName: 'Jarvis Reward Token',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.L2DAO]: {
     [ChainId.Arbitrum]: {
       tokenName: TokenName.L2DAO,
@@ -751,6 +788,17 @@ export const TOKENS: TokenMapping = {
       tokenName: TokenName.LMR,
       tableName: TokenName.LMR,
       address: '0x4b1D0b9F081468D780Ca1d5d79132b64301085d1',
+      decimals: 8,
+      displayName: 'LMR',
+      symbol: 'LMR',
+      fullName: 'Lumerin',
+      isOneToken: false,
+      atCoingecko: true
+    },
+    [ChainId.Arbitrum]: {
+      tokenName: TokenName.LMR,
+      tableName: TokenName.LMR,
+      address: '0x0FC0c323Cf76E188654D63D62e668caBeC7a525b',
       decimals: 8,
       displayName: 'LMR',
       symbol: 'LMR',
@@ -886,6 +934,30 @@ export const TOKENS: TokenMapping = {
       displayName: 'OUSD',
       symbol: 'OUSD',
       fullName: 'Origin Dollar',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
+  [TokenName.OXT]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.OXT,
+      tableName: TokenName.OXT,
+      address: '0x4575f41308ec1483f3d399aa9a2826d74da13deb',
+      decimals: 18,
+      displayName: 'OXT',
+      symbol: 'OXT',
+      fullName: 'Orchid Protocol',
+      isOneToken: false,
+      atCoingecko: true
+    },
+    [ChainId.Polygon]: {
+      tokenName: TokenName.OXT,
+      tableName: TokenName.OXT,
+      address: '0x9880e3dDA13c8e7D4804691A45160102d31F6060',
+      decimals: 18,
+      displayName: 'OXT',
+      symbol: 'OXT',
+      fullName: 'Orchid Protocol',
       isOneToken: false,
       atCoingecko: true
     }

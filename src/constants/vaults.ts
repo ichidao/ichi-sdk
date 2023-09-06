@@ -1915,7 +1915,7 @@ export const VAULTS: VaultMapping = {
       vaultName: VaultName.ARBITRUM_LMR_WETH,
       tableName: VaultTableName.ARBITRUM_LMR_WETH,
       displayName: 'LMR-WETH (arbitrum)',
-      address: '0x40878cF46609a65A30f2a8232B751EbD575D183b',
+      address: '0x37D7014dbE0F12E292b8cd31B26413c1e603DAc8',
       deployer: '0x508C3daa571854247726ba26949f182086Ff89B0',
       farm: 0,
       externalFarm: '',

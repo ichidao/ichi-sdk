@@ -11,6 +11,7 @@ export { DodoLiquidityPool__factory } from "./DodoLiquidityPool__factory";
 export { Erc20__factory } from "./Erc20__factory";
 export { FarmingV1__factory } from "./FarmingV1__factory";
 export { FarmingV2__factory } from "./FarmingV2__factory";
+export { Follow_price_v1__factory } from "./Follow_price_v1__factory";
 export { GenericFarmingV2__factory } from "./GenericFarmingV2__factory";
 export { GenericPool__factory } from "./GenericPool__factory";
 export { Ichi__factory } from "./Ichi__factory";

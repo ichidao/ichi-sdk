@@ -77,8 +77,8 @@ import { RariPoolLensSecondary } from '../generated/RariPoolLensSecondary';
 import { RariPoolLensSecondary__factory } from '../generated/factories/RariPoolLensSecondary__factory';
 import { DodoFarm } from '../generated/DodoFarm';
 import { DodoFarm__factory } from '../generated/factories/DodoFarm__factory';
-import { Follow_price_v1 } from 'src/generated/Follow_price_v1';
-import { Follow_price_v1__factory } from 'src/generated/factories/Follow_price_v1__factory';
+import { Follow_price_v1 } from '../generated/Follow_price_v1';
+import { Follow_price_v1__factory } from '../generated/factories/Follow_price_v1__factory';
 
 export type Contracts =
   | Ichi

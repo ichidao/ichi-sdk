@@ -783,6 +783,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.LIVERETRO]: {
+    [ChainId.Polygon]: {
+      tokenName: TokenName.LIVERETRO,
+      tableName: `pol_${TokenName.LIVERETRO}`,
+      address: '0xCaAF554900E33ae5DBc66ae9f8ADc3049B7D31dB',
+      decimals: 18,
+      displayName: 'liveRETRO',
+      symbol: 'liveRETRO',
+      fullName: 'liveRETRO',
+      isOneToken: false,
+      atCoingecko: false
+    }
+  },
   [TokenName.LMR]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.LMR,

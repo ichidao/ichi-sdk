@@ -240,7 +240,7 @@ export async function getTokenMetrics(
       let polygonProvider;
       const wethAddress = TOKENS[TokenName.WETH]![ChainId.Mainnet]?.address?.toLowerCase();
 
-      // used for oRETRO token price:
+      // used for oRETRO & liveRETRO token price:
       let retroPrice: number;
       const retroAddress = TOKENS[TokenName.RETRO]![ChainId.Polygon]?.address?.toLowerCase();
 
@@ -325,6 +325,24 @@ export async function getTokenMetrics(
             retroPrice = opts.tokenPrices[retroAddress].usd;
             price = await getPriceFromRetroVault( 
               VaultName.RETRO_ORETRO_RETRO,
+              polygonProvider,
+              ChainId.Polygon,
+              retroPrice
+              )
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}`);
+          }
+          break;
+        case TokenName.LIVERETRO:
+          polygonProvider = await getProvider(ChainId.Polygon);
+          if (!polygonProvider) {
+            throw new Error('Could not establish Polygon provider');
+          }
+
+          if (opts.tokenPrices && retroAddress && retroAddress in opts.tokenPrices) {
+            retroPrice = opts.tokenPrices[retroAddress].usd;
+            price = await getPriceFromRetroVault( 
+              VaultName.RETRO_RETRO_LIVERETRO,
               polygonProvider,
               ChainId.Polygon,
               retroPrice

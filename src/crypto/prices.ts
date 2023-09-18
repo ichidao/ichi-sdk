@@ -262,9 +262,14 @@ export async function getPriceFromRetroVault(
 
       const sqrtPrice = slot0[0];
       let price = 1;
-      price = getPrice(
-        !vaultObj.isInverted, sqrtPrice, vaultObj.scarceTokenDecimals, vaultObj.baseTokenDecimals, 15);
-
+      if (vaultObj.baseTokenName === TokenName.RETRO) {
+        price = getPrice(
+          vaultObj.isInverted, sqrtPrice, vaultObj.baseTokenDecimals, vaultObj.scarceTokenDecimals, 15);
+      } else {
+        price = getPrice(
+          !vaultObj.isInverted, sqrtPrice, vaultObj.scarceTokenDecimals, vaultObj.baseTokenDecimals, 15);
+      }
+      
       price = price * retroPrice;
 
       return price;

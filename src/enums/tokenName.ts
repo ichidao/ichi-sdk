@@ -47,6 +47,7 @@ export enum TokenName {
   L2DAO = 'l2dao',
   LDO = 'ldo',
   LINK = 'link',
+  LIVERETRO = 'liveretro',
   LMR = 'lmr',
   MATICX = 'maticx',
   METIS = 'metis',

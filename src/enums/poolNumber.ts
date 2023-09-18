@@ -158,6 +158,8 @@ export enum PolygonPoolNumbers {
   RETRO_CASH_AXLLQDR_VAULT = 7555,
   RETRO_JRT_WETH_VAULT = 7556,
   OXT_WETH_VAULT = 7557,
+  RETRO_RETRO_LIVERETRO_VAULT = 7558,
+  RETRO_WETH_USDC_VAULT = 7559,
 }
 
 export enum MumbaiPoolNumbers {

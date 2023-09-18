@@ -11,6 +11,7 @@ export type { DodoLiquidityPool } from "./DodoLiquidityPool";
 export type { Erc20 } from "./Erc20";
 export type { FarmingV1 } from "./FarmingV1";
 export type { FarmingV2 } from "./FarmingV2";
+export type { Follow_price_v1 } from "./Follow_price_v1";
 export type { GenericFarmingV2 } from "./GenericFarmingV2";
 export type { GenericPool } from "./GenericPool";
 export type { Ichi } from "./Ichi";
@@ -52,6 +53,7 @@ export { DodoLiquidityPool__factory } from "./factories/DodoLiquidityPool__facto
 export { Erc20__factory } from "./factories/Erc20__factory";
 export { FarmingV1__factory } from "./factories/FarmingV1__factory";
 export { FarmingV2__factory } from "./factories/FarmingV2__factory";
+export { Follow_price_v1__factory } from "./factories/Follow_price_v1__factory";
 export { GenericFarmingV2__factory } from "./factories/GenericFarmingV2__factory";
 export { GenericPool__factory } from "./factories/GenericPool__factory";
 export { Ichi__factory } from "./factories/Ichi__factory";

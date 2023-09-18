@@ -2390,6 +2390,34 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+    [PolygonPoolNumbers.RETRO_WETH_USDC_VAULT]: {
+      name: 'WETH-USDC Vault',
+      poolNumber: PolygonPoolNumbers.RETRO_WETH_USDC_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.RETRO_WETH_USDC, ChainId.Polygon),
+      isHodl: true,
+      vaultName: VaultName.RETRO_WETH_USDC, 
+      vaultAddress: getVaultAddress(VaultName.RETRO_WETH_USDC, ChainId.Polygon),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [PolygonPoolNumbers.RETRO_RETRO_LIVERETRO_VAULT]: {
+      name: 'RETRO-liveRETRO Vault',
+      poolNumber: PolygonPoolNumbers.RETRO_RETRO_LIVERETRO_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.RETRO_RETRO_LIVERETRO, ChainId.Polygon),
+      isHodl: true,
+      vaultName: VaultName.RETRO_RETRO_LIVERETRO, 
+      vaultAddress: getVaultAddress(VaultName.RETRO_RETRO_LIVERETRO, ChainId.Polygon),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
   },
   [ChainId.Mumbai]: {
     [MumbaiPoolNumbers.ONE_BTC_ICHI_VAULT]: {

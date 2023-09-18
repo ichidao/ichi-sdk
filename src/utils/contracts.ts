@@ -77,6 +77,8 @@ import { RariPoolLensSecondary } from '../generated/RariPoolLensSecondary';
 import { RariPoolLensSecondary__factory } from '../generated/factories/RariPoolLensSecondary__factory';
 import { DodoFarm } from '../generated/DodoFarm';
 import { DodoFarm__factory } from '../generated/factories/DodoFarm__factory';
+import { Follow_price_v1 } from '../generated/Follow_price_v1';
+import { Follow_price_v1__factory } from '../generated/factories/Follow_price_v1__factory';
 
 export type Contracts =
   | Ichi
@@ -369,6 +371,15 @@ export function getRebalancingStrategyIndexV3Contract(address: string, provider:
     return Rebalancing_index_v3__factory.connect(address, provider);
   } catch (e) {
     console.error(`Couldn't create Rebalancing_index_v3 contract with address: ${address}`);
+    throw e;
+  }
+}
+
+export function getRebalancingStrategyFollowPriceV1Contract(address: string, provider: JsonRpcProvider): Follow_price_v1 {
+  try {
+    return Follow_price_v1__factory.connect(address, provider);
+  } catch (e) {
+    console.error(`Couldn't create Follow_price_v1 contract with address: ${address}`);
     throw e;
   }
 }

@@ -325,6 +325,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: false
     }
   },
+  [TokenName.BTCB]: {
+    [ChainId.Bsc]: {
+      tokenName: TokenName.BTCB,
+      tableName: `bsc_${TokenName.BTCB}`,
+      address: '0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c',
+      decimals: 18,
+      displayName: 'BTCB',
+      symbol: 'BTCB',
+      fullName: 'Binance-Peg BTCB Token',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.CAKE]: {
     [ChainId.Bsc]: {
       tokenName: TokenName.CAKE,
@@ -489,6 +502,19 @@ export const TOKENS: TokenMapping = {
       fullName: 'DefiPulse Index',
       isOneToken: false,
       atCoingecko: true
+    }
+  },
+  [TokenName.ETH]: {
+    [ChainId.Bsc]: {
+      tokenName: TokenName.ETH,
+      tableName: `bsc_${TokenName.ETH}`,
+      address: '0x2170Ed0880ac9A755fd29B2688956BD959F933F8',
+      decimals: 18,
+      displayName: 'ETH',
+      symbol: 'ETH',
+      fullName: 'Binance-Peg Ethereum Token',
+      isOneToken: false,
+      atCoingecko: false
     }
   },
   [TokenName.FBX]: {

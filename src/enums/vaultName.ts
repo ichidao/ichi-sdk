@@ -77,8 +77,11 @@ export enum VaultName {
   ARBITRUM_WETH_ICHI = 'arbitrum_weth_ichi',
   // Avalanche
   // Bsc
+  BSC_BTCB_CAKE = 'bsc_btcb_cake',
+  BSC_BTCB_USDT = 'bsc_btcb_usdt',
   BSC_CAKE_USDT = 'bsc_cake_usdt',
   BSC_CAKE_WBNB = 'bsc_cake_wbnb',
+  BSC_ETH_CAKE = 'bsc_eth_cake',
   BSC_USDT_CAKE = 'bsc_usdt_cake',
   BSC_WBNB_CAKE = 'bsc_wbnb_cake',
   BSC_USDT_WBNB = 'bsc_usdt_wbnb',
@@ -233,8 +236,11 @@ export enum VaultTableName {
   ARBITRUM_WETH_ICHI = 'arbitrum_weth_ichi',
   // Avalanche
   // Bsc
+  BSC_BTCB_CAKE = 'bsc_btcb_cake',
+  BSC_BTCB_USDT = 'bsc_btcb_usdt',
   BSC_CAKE_USDT = 'bsc_cake_usdt',
   BSC_CAKE_WBNB = 'bsc_cake_wbnb',
+  BSC_ETH_CAKE = 'bsc_eth_cake',
   BSC_USDT_CAKE = 'bsc_usdt_cake',
   BSC_WBNB_CAKE = 'bsc_wbnb_cake',
   BSC_USDT_WBNB = 'bsc_usdt_wbnb',

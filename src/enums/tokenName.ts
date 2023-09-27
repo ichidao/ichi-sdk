@@ -18,6 +18,7 @@ export enum TokenName {
   BNT = 'bnt',
   BOBA = 'boba',
   BOOT = 'boot',
+  BTCB = 'btcb',
   CAKE = 'cake',
   CASH = 'cash',
   CEL = 'cel',

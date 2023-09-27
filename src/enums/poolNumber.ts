@@ -186,7 +186,10 @@ export enum BscPoolNumbers {
   CAKE_USDT_VAULT = 7901,
   USDT_CAKE_VAULT = 7902,
   USDT_WBNB_VAULT = 7903,
-  WBNB_CAKE_VAULT = 7904
+  WBNB_CAKE_VAULT = 7904, 
+  BTCB_CAKE_VAULT = 7905,
+  BTCB_USDT_VAULT = 7906,
+  ETH_CAKE_VAULT = 7907,
 }
 
 export type MainnetPoolNumberValues = typeof MainnetPoolNumbers[keyof typeof MainnetPoolNumbers];

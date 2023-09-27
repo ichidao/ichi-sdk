@@ -2548,6 +2548,34 @@ export const PoolLabels: TPoolLabels = {
     }
   },
   [ChainId.Bsc]: {
+    [BscPoolNumbers.BTCB_CAKE_VAULT]: {
+      name: 'BTCB-CAKE Vault',
+      poolNumber: BscPoolNumbers.BTCB_CAKE_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.BSC_BTCB_CAKE, ChainId.Bsc),
+      isHodl: true,
+      vaultName: VaultName.BSC_BTCB_CAKE, 
+      vaultAddress: getVaultAddress(VaultName.BSC_BTCB_CAKE, ChainId.Bsc),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [BscPoolNumbers.BTCB_USDT_VAULT]: {
+      name: 'BTCB-USDT Vault',
+      poolNumber: BscPoolNumbers.BTCB_USDT_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.BSC_BTCB_USDT, ChainId.Bsc),
+      isHodl: true,
+      vaultName: VaultName.BSC_BTCB_USDT, 
+      vaultAddress: getVaultAddress(VaultName.BSC_BTCB_USDT, ChainId.Bsc),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
     [BscPoolNumbers.CAKE_USDT_VAULT]: {
       name: 'CAKE-USDT Vault',
       poolNumber: BscPoolNumbers.CAKE_USDT_VAULT,
@@ -2576,6 +2604,20 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+    [BscPoolNumbers.ETH_CAKE_VAULT]: {
+      name: 'ETH-CAKE Vault',
+      poolNumber: BscPoolNumbers.ETH_CAKE_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.BSC_ETH_CAKE, ChainId.Bsc),
+      isHodl: true,
+      vaultName: VaultName.BSC_ETH_CAKE, 
+      vaultAddress: getVaultAddress(VaultName.BSC_ETH_CAKE, ChainId.Bsc),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
     [BscPoolNumbers.USDT_CAKE_VAULT]: {
       name: 'USDT-CAKE Vault',
       poolNumber: BscPoolNumbers.USDT_CAKE_VAULT,
@@ -2587,6 +2629,20 @@ export const PoolLabels: TPoolLabels = {
       isHodl: true,
       vaultName: VaultName.BSC_USDT_CAKE, 
       vaultAddress: '0x0Def612e7a7b51ca7Ee38f7905dA809BD3491268',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [BscPoolNumbers.USDT_WBNB_VAULT]: {
+      name: 'USDT-WBNB Vault',
+      poolNumber: BscPoolNumbers.USDT_WBNB_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: false,
+      isHodl: true,
+      vaultName: VaultName.BSC_USDT_WBNB, 
+      vaultAddress: '0x553A31Bb23218a10FF1fFE6492f0D3C71fb88D24',
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
@@ -2604,20 +2660,6 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
-    [BscPoolNumbers.USDT_WBNB_VAULT]: {
-      name: 'USDT-WBNB Vault',
-      poolNumber: BscPoolNumbers.USDT_WBNB_VAULT,
-      lpName: 'ICHI_VAULT_LP',
-      shortLpName: 'VAULT_LP',
-      tradeUrl: '',
-      subgraphEndpoint: '',
-      isInverted: false,
-      isHodl: true,
-      vaultName: VaultName.BSC_USDT_WBNB, 
-      vaultAddress: '0x553A31Bb23218a10FF1fFE6492f0D3C71fb88D24',
-      irrStartDate: new Date(0),
-      irrStartTxAmount: 0
-    }
   },
   [ChainId.Avalanche]: {
   }

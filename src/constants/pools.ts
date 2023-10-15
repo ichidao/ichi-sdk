@@ -350,6 +350,12 @@ export const Pools: TPools = {
       ArbitrumPoolNumbers.USDC_ICHI_VAULT,
       ArbitrumPoolNumbers.WBTC_ICHI_VAULT,
       ArbitrumPoolNumbers.WETH_ICHI_VAULT,
+      // Ramses
+      ArbitrumPoolNumbers.RAMSES_ARB_RAM_VAULT,
+      ArbitrumPoolNumbers.RAMSES_ICHI_RAM_VAULT,
+      ArbitrumPoolNumbers.RAMSES_USDT_RAM_VAULT,
+      ArbitrumPoolNumbers.RAMSES_WBTC_RAM_VAULT,
+      ArbitrumPoolNumbers.RAMSES_WETH_RAM_VAULT,
     ],
     [ChainId.Avalanche]: [],
     [ChainId.Bsc]: [
@@ -360,7 +366,12 @@ export const Pools: TPools = {
       BscPoolNumbers.ETH_CAKE_VAULT,
       BscPoolNumbers.USDT_CAKE_VAULT,
       BscPoolNumbers.USDT_WBNB_VAULT,
-      BscPoolNumbers.WBNB_CAKE_VAULT
+      BscPoolNumbers.WBNB_CAKE_VAULT,
+      // Thena
+      BscPoolNumbers.THENA_ETH_THE_VAULT,
+      BscPoolNumbers.THENA_USDC_THE_VAULT,
+      BscPoolNumbers.THENA_USDT_THE_VAULT,
+      BscPoolNumbers.THENA_WBNB_THE_VAULT,
     ],
     [ChainId.Mumbai]: [
       MumbaiPoolNumbers.ONE_BTC_ICHI_VAULT
@@ -711,7 +722,14 @@ export const Pools: TPools = {
       PolygonPoolNumbers.RETRO_WMATIC_USDC_05_VAULT,
       PolygonPoolNumbers.RETRO_WMATIC_WETH_VAULT, 
     ],
-    [ChainId.Arbitrum]: [],
+    [ChainId.Arbitrum]: [
+      // Ramses
+      ArbitrumPoolNumbers.RAMSES_ARB_RAM_VAULT,
+      ArbitrumPoolNumbers.RAMSES_ICHI_RAM_VAULT,
+      ArbitrumPoolNumbers.RAMSES_USDT_RAM_VAULT,
+      ArbitrumPoolNumbers.RAMSES_WBTC_RAM_VAULT,
+      ArbitrumPoolNumbers.RAMSES_WETH_RAM_VAULT,
+    ],
     [ChainId.Avalanche]: [],
     [ChainId.Bsc]: [
       BscPoolNumbers.CAKE_USDT_VAULT, 
@@ -719,6 +737,11 @@ export const Pools: TPools = {
       BscPoolNumbers.USDT_CAKE_VAULT, 
       BscPoolNumbers.USDT_WBNB_VAULT, 
       BscPoolNumbers.WBNB_CAKE_VAULT, 
+      // Thena
+      BscPoolNumbers.THENA_ETH_THE_VAULT,
+      BscPoolNumbers.THENA_USDC_THE_VAULT,
+      BscPoolNumbers.THENA_USDT_THE_VAULT,
+      BscPoolNumbers.THENA_WBNB_THE_VAULT,
     ],
     [ChainId.Mumbai]: [],
   },

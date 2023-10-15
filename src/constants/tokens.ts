@@ -1066,6 +1066,20 @@ export const TOKENS: TokenMapping = {
       targetVaultStrength: 0.1
     }
   },
+  [TokenName.RAM]: {
+    [ChainId.Arbitrum]: {
+      tokenName: TokenName.RAM,
+      tableName: TokenName.RAM,
+      address: '0xAAA6C1E32C55A7Bfa8066A6FAE9b42650F262418',
+      decimals: 18,
+      displayName: 'RAM',
+      symbol: 'RAM',
+      fullName: 'Ramses',
+      parentOneToken: TokenName.RAM,
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.RENFIL]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.RENFIL,
@@ -1189,6 +1203,19 @@ export const TOKENS: TokenMapping = {
       displayName: 'tBTC',
       symbol: 'tBTC',
       fullName: 'tBTC v2',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
+  [TokenName.THE]: {
+    [ChainId.Bsc]: {
+      tokenName: TokenName.THE,
+      tableName: TokenName.THE,
+      address: '0xF4C8E32EaDEC4BFe97E0F595AdD0f4450a863a11',
+      decimals: 18,
+      displayName: 'THE',
+      symbol: 'THE',
+      fullName: 'Thena',
       isOneToken: false,
       atCoingecko: true
     }

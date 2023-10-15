@@ -75,6 +75,12 @@ export enum VaultName {
   ARBITRUM_USDC_ICHI = 'arbitrum_usdc_ichi',
   ARBITRUM_WBTC_ICHI = 'arbitrum_wbtc_ichi',
   ARBITRUM_WETH_ICHI = 'arbitrum_weth_ichi',
+  // Arbitrum-Ramses
+  ARBITRUM_RAMSES_ARB_RAM = 'arbitrum_ramses_arb_ram',
+  ARBITRUM_RAMSES_ICHI_RAM = 'arbitrum_ramses_ichi_ram',
+  ARBITRUM_RAMSES_USDT_RAM = 'arbitrum_ramses_usdt_ram',
+  ARBITRUM_RAMSES_WBTC_RAM = 'arbitrum_ramses_wbtc_ram',
+  ARBITRUM_RAMSES_WETH_RAM = 'arbitrum_ramses_weth_ram',
   // Avalanche
   // Bsc
   BSC_BTCB_CAKE = 'bsc_btcb_cake',
@@ -85,6 +91,11 @@ export enum VaultName {
   BSC_USDT_CAKE = 'bsc_usdt_cake',
   BSC_WBNB_CAKE = 'bsc_wbnb_cake',
   BSC_USDT_WBNB = 'bsc_usdt_wbnb',
+  // Bsc-Thena
+  BSC_THENA_ETH_THE = 'bsc_thena_eth_the',
+  BSC_THENA_USDC_THE = 'bsc_thena_usdc_the',
+  BSC_THENA_USDT_THE = 'bsc_thena_usdt_the',
+  BSC_THENA_WBNB_THE = 'bsc_thena_wbnb_the',
   // Polygon
   POLYGON_BAL_WETH = 'pol_bal_weth',
   POLYGON_CRV_WETH = 'pol_crv_weth',
@@ -234,6 +245,12 @@ export enum VaultTableName {
   ARBITRUM_USDC_ICHI = 'arbitrum_usdc_ichi',
   ARBITRUM_WBTC_ICHI = 'arbitrum_wbtc_ichi',
   ARBITRUM_WETH_ICHI = 'arbitrum_weth_ichi',
+  // Arbitrum-Ramses
+  ARBITRUM_RAMSES_ARB_RAM = 'arbitrum_ramses_arb_ram',
+  ARBITRUM_RAMSES_ICHI_RAM = 'arbitrum_ramses_ichi_ram',
+  ARBITRUM_RAMSES_USDT_RAM = 'arbitrum_ramses_usdt_ram',
+  ARBITRUM_RAMSES_WBTC_RAM = 'arbitrum_ramses_wbtc_ram',
+  ARBITRUM_RAMSES_WETH_RAM = 'arbitrum_ramses_weth_ram',
   // Avalanche
   // Bsc
   BSC_BTCB_CAKE = 'bsc_btcb_cake',
@@ -244,6 +261,11 @@ export enum VaultTableName {
   BSC_USDT_CAKE = 'bsc_usdt_cake',
   BSC_WBNB_CAKE = 'bsc_wbnb_cake',
   BSC_USDT_WBNB = 'bsc_usdt_wbnb',
+  // Bsc-Thena
+  BSC_THENA_ETH_THE = 'bsc_thena_eth_the',
+  BSC_THENA_USDC_THE = 'bsc_thena_usdc_the',
+  BSC_THENA_USDT_THE = 'bsc_thena_usdt_the',
+  BSC_THENA_WBNB_THE = 'bsc_thena_wbnb_the',
   // Polygon
   POLYGON_BAL_WETH = 'pol_bal_weth',
   POLYGON_CRV_WETH = 'pol_crv_weth',

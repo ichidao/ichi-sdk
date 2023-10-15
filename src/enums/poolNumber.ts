@@ -175,6 +175,11 @@ export enum ArbitrumPoolNumbers {
   WBTC_ICHI_VAULT = 7705,
   L2DAO_WETH_VAULT = 7706,
   LMR_WETH_VAULT = 7707,
+  RAMSES_ARB_RAM_VAULT = 7708,
+  RAMSES_ICHI_RAM_VAULT = 7709,
+  RAMSES_USDT_RAM_VAULT = 7710,
+  RAMSES_WBTC_RAM_VAULT = 7711,
+  RAMSES_WETH_RAM_VAULT = 7712,
 }
 
 export enum AvalanchePoolNumbers {
@@ -190,6 +195,10 @@ export enum BscPoolNumbers {
   BTCB_CAKE_VAULT = 7905,
   BTCB_USDT_VAULT = 7906,
   ETH_CAKE_VAULT = 7907,
+  THENA_ETH_THE_VAULT = 7908,
+  THENA_USDC_THE_VAULT = 7909,
+  THENA_USDT_THE_VAULT = 7910,
+  THENA_WBNB_THE_VAULT = 7911,
 }
 
 export type MainnetPoolNumberValues = typeof MainnetPoolNumbers[keyof typeof MainnetPoolNumbers];

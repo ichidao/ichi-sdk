@@ -1069,7 +1069,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.RAM]: {
     [ChainId.Arbitrum]: {
       tokenName: TokenName.RAM,
-      tableName: TokenName.RAM,
+      tableName: `arbitrum_${TokenName.RAM}`,
       address: '0xAAA6C1E32C55A7Bfa8066A6FAE9b42650F262418',
       decimals: 18,
       displayName: 'RAM',
@@ -1210,7 +1210,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.THE]: {
     [ChainId.Bsc]: {
       tokenName: TokenName.THE,
-      tableName: TokenName.THE,
+      tableName: `bsc_${TokenName.THE}`,
       address: '0xF4C8E32EaDEC4BFe97E0F595AdD0f4450a863a11',
       decimals: 18,
       displayName: 'THE',
@@ -1304,6 +1304,17 @@ export const TOKENS: TokenMapping = {
       atCoingecko: false,
       isOneToken: false
     },
+    [ChainId.Bsc]: {
+      tokenName: TokenName.USDC,
+      tableName: `bsc_${TokenName.USDC}`,
+      address: '0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d',
+      decimals: 18,
+      displayName: 'USDC',
+      symbol: 'USDC',
+      fullName: 'USD Coin',
+      atCoingecko: false,
+      isOneToken: false
+    },
     [ChainId.Mumbai]: {
       tokenName: TokenName.USDC,
       tableName: `mum_${TokenName.USDC}`,
@@ -1328,6 +1339,17 @@ export const TOKENS: TokenMapping = {
       isOneToken: false,
       atCoingecko: true
     },
+    [ChainId.Arbitrum]: {
+      tokenName: TokenName.USDT,
+      tableName: `arbitrum_${TokenName.USDT}`,
+      address: '0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9',
+      decimals: 6,
+      displayName: 'USDT',
+      symbol: 'USDT',
+      fullName: 'Tether USD',
+      isOneToken: false,
+      atCoingecko: true
+    },
     [ChainId.Bsc]: {
       tokenName: TokenName.USDT,
       tableName: `bsc_${TokenName.USDT}`,
@@ -1335,7 +1357,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'USDT',
       symbol: 'USDT',
-      fullName: 'USDT Token',
+      fullName: 'Tether USD',
       isOneToken: false,
       atCoingecko: true
     }

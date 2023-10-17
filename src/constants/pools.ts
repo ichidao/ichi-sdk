@@ -745,6 +745,20 @@ export const Pools: TPools = {
     ],
     [ChainId.Mumbai]: [],
   },
+  // Vaults that are not processed in api-updater using standard multicall flow
+  [PoolGroupName.ALGEBRA_VAULTS]: {
+    [ChainId.Mainnet]: [],
+    [ChainId.Polygon]: [],
+    [ChainId.Arbitrum]: [],
+    [ChainId.Avalanche]: [],
+    [ChainId.Bsc]: [
+      BscPoolNumbers.THENA_ETH_THE_VAULT,
+      BscPoolNumbers.THENA_USDC_THE_VAULT,
+      BscPoolNumbers.THENA_USDT_THE_VAULT,
+      BscPoolNumbers.THENA_WBNB_THE_VAULT,
+    ],
+    [ChainId.Mumbai]: [],
+  },
 };
 
 export function getPool(poolName: PoolName, chainId: ChainId): Pool {

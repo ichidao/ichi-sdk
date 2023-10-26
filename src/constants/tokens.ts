@@ -346,7 +346,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'CAKE',
       symbol: 'CAKE',
-      fullName: 'CAKE Token',
+      fullName: 'PancakeSwap Token',
       isOneToken: false,
       atCoingecko: true
     }

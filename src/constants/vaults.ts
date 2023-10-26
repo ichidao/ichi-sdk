@@ -3871,6 +3871,32 @@ export const VAULTS: VaultMapping = {
       strategyBy: 'Bril Finance',
     }
   },
+  [VaultName.RETRO_WBTC_USDC]: {
+    [ChainId.Polygon]: {
+      vaultName: VaultName.RETRO_WBTC_USDC,
+      tableName: VaultTableName.RETRO_WBTC_USDC,
+      displayName: 'WBTC-USDC (retro)',
+      address: '0xceBaF9Bf1de089D0Ce0243E9f19682E9445191df',
+      deployer: '0x0768A75F616B98ee0937673bD83B7aBF142236Ea',
+      farm: 0,
+      externalFarm: '',
+      scarceToken: 'token1',
+      scarceTokenName: TokenName.USDC,
+      scarceTokenDecimals: tokenDecimals(TokenName.USDC, ChainId.Polygon),
+      scarceTokenCoingeckoId: 'usdc',
+      baseTokenName: TokenName.WBTC,
+      baseTokenDecimals: tokenDecimals(TokenName.WBTC, ChainId.Polygon),
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: false,
+      isHodlVault: true,
+      isLegacy: isLegacy(PolygonPoolNumbers.RETRO_WBTC_USDC_VAULT, ChainId.Polygon),
+      irrStartTxAmount: 0,
+      depositStatus: true,
+      strategyBy: 'Bril Finance',
+    }
+  },
   [VaultName.RETRO_WBTC_WETH]: {
     [ChainId.Polygon]: {
       vaultName: VaultName.RETRO_WBTC_WETH,

@@ -2418,6 +2418,20 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+    [PolygonPoolNumbers.RETRO_WBTC_USDC_VAULT]: {
+      name: 'WBTC-USDC Vault',
+      poolNumber: PolygonPoolNumbers.RETRO_WBTC_USDC_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.RETRO_WBTC_USDC, ChainId.Polygon),
+      isHodl: true,
+      vaultName: VaultName.RETRO_WBTC_USDC, 
+      vaultAddress: getVaultAddress(VaultName.RETRO_WBTC_USDC, ChainId.Polygon),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
   },
   [ChainId.Mumbai]: {
     [MumbaiPoolNumbers.ONE_BTC_ICHI_VAULT]: {

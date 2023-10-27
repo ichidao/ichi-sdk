@@ -160,6 +160,7 @@ export enum PolygonPoolNumbers {
   OXT_WETH_VAULT = 7557,
   RETRO_RETRO_LIVERETRO_VAULT = 7558,
   RETRO_WETH_USDC_VAULT = 7559,
+  RETRO_WBTC_USDC_VAULT = 7560,
 }
 
 export enum MumbaiPoolNumbers {
@@ -175,6 +176,11 @@ export enum ArbitrumPoolNumbers {
   WBTC_ICHI_VAULT = 7705,
   L2DAO_WETH_VAULT = 7706,
   LMR_WETH_VAULT = 7707,
+  RAMSES_ARB_RAM_VAULT = 7708,
+  RAMSES_ICHI_RAM_VAULT = 7709,
+  RAMSES_USDT_RAM_VAULT = 7710,
+  RAMSES_WBTC_RAM_VAULT = 7711,
+  RAMSES_WETH_RAM_VAULT = 7712,
 }
 
 export enum AvalanchePoolNumbers {
@@ -186,7 +192,14 @@ export enum BscPoolNumbers {
   CAKE_USDT_VAULT = 7901,
   USDT_CAKE_VAULT = 7902,
   USDT_WBNB_VAULT = 7903,
-  WBNB_CAKE_VAULT = 7904
+  WBNB_CAKE_VAULT = 7904, 
+  BTCB_CAKE_VAULT = 7905,
+  BTCB_USDT_VAULT = 7906,
+  ETH_CAKE_VAULT = 7907,
+  THENA_ETH_THE_VAULT = 7908,
+  THENA_USDC_THE_VAULT = 7909,
+  THENA_USDT_THE_VAULT = 7910,
+  THENA_WBNB_THE_VAULT = 7911,
 }
 
 export type MainnetPoolNumberValues = typeof MainnetPoolNumbers[keyof typeof MainnetPoolNumbers];

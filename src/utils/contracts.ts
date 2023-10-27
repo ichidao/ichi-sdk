@@ -50,6 +50,8 @@ import {
   KeeperRegistry__factory,
   Rebalancing_stable_500_v1__factory,
   Rebalancing_stable_500_v1,
+  AlgebraPool,
+  AlgebraPool__factory,
 } from '../generated';
 import { TokenName } from '../enums/tokenName';
 import { AddressName } from '../enums/addressName';
@@ -229,6 +231,14 @@ export function getUniswapV3PoolContract(address: string, provider: JsonRpcProvi
     return UniswapV3Pool__factory.connect(address, provider);
   } catch (e) {
     console.error(`Couldn't create UniswapV3Pool contract with address: ${address}`);
+    throw e;
+  }
+}
+export function getAlgebraPoolContract(address: string, provider: JsonRpcProvider): AlgebraPool {
+  try {
+    return AlgebraPool__factory.connect(address, provider);
+  } catch (e) {
+    console.error(`Couldn't create AlgebraPool contract with address: ${address}`);
     throw e;
   }
 }

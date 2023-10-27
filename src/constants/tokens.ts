@@ -325,6 +325,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: false
     }
   },
+  [TokenName.BTCB]: {
+    [ChainId.Bsc]: {
+      tokenName: TokenName.BTCB,
+      tableName: `bsc_${TokenName.BTCB}`,
+      address: '0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c',
+      decimals: 18,
+      displayName: 'BTCB',
+      symbol: 'BTCB',
+      fullName: 'Binance-Peg BTCB Token',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.CAKE]: {
     [ChainId.Bsc]: {
       tokenName: TokenName.CAKE,
@@ -333,7 +346,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'CAKE',
       symbol: 'CAKE',
-      fullName: 'CAKE Token',
+      fullName: 'PancakeSwap Token',
       isOneToken: false,
       atCoingecko: true
     }
@@ -489,6 +502,19 @@ export const TOKENS: TokenMapping = {
       fullName: 'DefiPulse Index',
       isOneToken: false,
       atCoingecko: true
+    }
+  },
+  [TokenName.ETH]: {
+    [ChainId.Bsc]: {
+      tokenName: TokenName.ETH,
+      tableName: `bsc_${TokenName.ETH}`,
+      address: '0x2170Ed0880ac9A755fd29B2688956BD959F933F8',
+      decimals: 18,
+      displayName: 'ETH',
+      symbol: 'ETH',
+      fullName: 'Binance-Peg Ethereum Token',
+      isOneToken: false,
+      atCoingecko: false
     }
   },
   [TokenName.FBX]: {
@@ -1040,6 +1066,20 @@ export const TOKENS: TokenMapping = {
       targetVaultStrength: 0.1
     }
   },
+  [TokenName.RAM]: {
+    [ChainId.Arbitrum]: {
+      tokenName: TokenName.RAM,
+      tableName: `arbitrum_${TokenName.RAM}`,
+      address: '0xAAA6C1E32C55A7Bfa8066A6FAE9b42650F262418',
+      decimals: 18,
+      displayName: 'RAM',
+      symbol: 'RAM',
+      fullName: 'Ramses',
+      parentOneToken: TokenName.RAM,
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.RENFIL]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.RENFIL,
@@ -1167,6 +1207,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.THE]: {
+    [ChainId.Bsc]: {
+      tokenName: TokenName.THE,
+      tableName: `bsc_${TokenName.THE}`,
+      address: '0xF4C8E32EaDEC4BFe97E0F595AdD0f4450a863a11',
+      decimals: 18,
+      displayName: 'THE',
+      symbol: 'THE',
+      fullName: 'Thena',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.TRADE]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.TRADE,
@@ -1251,6 +1304,17 @@ export const TOKENS: TokenMapping = {
       atCoingecko: false,
       isOneToken: false
     },
+    [ChainId.Bsc]: {
+      tokenName: TokenName.USDC,
+      tableName: `bsc_${TokenName.USDC}`,
+      address: '0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d',
+      decimals: 18,
+      displayName: 'USDC',
+      symbol: 'USDC',
+      fullName: 'USD Coin',
+      atCoingecko: false,
+      isOneToken: false
+    },
     [ChainId.Mumbai]: {
       tokenName: TokenName.USDC,
       tableName: `mum_${TokenName.USDC}`,
@@ -1275,6 +1339,17 @@ export const TOKENS: TokenMapping = {
       isOneToken: false,
       atCoingecko: true
     },
+    [ChainId.Arbitrum]: {
+      tokenName: TokenName.USDT,
+      tableName: `arbitrum_${TokenName.USDT}`,
+      address: '0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9',
+      decimals: 6,
+      displayName: 'USDT',
+      symbol: 'USDT',
+      fullName: 'Tether USD',
+      isOneToken: false,
+      atCoingecko: true
+    },
     [ChainId.Bsc]: {
       tokenName: TokenName.USDT,
       tableName: `bsc_${TokenName.USDT}`,
@@ -1282,7 +1357,7 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'USDT',
       symbol: 'USDT',
-      fullName: 'USDT Token',
+      fullName: 'Tether USD',
       isOneToken: false,
       atCoingecko: true
     }

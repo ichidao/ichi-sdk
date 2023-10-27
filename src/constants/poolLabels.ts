@@ -2418,6 +2418,20 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+    [PolygonPoolNumbers.RETRO_WBTC_USDC_VAULT]: {
+      name: 'WBTC-USDC Vault',
+      poolNumber: PolygonPoolNumbers.RETRO_WBTC_USDC_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.RETRO_WBTC_USDC, ChainId.Polygon),
+      isHodl: true,
+      vaultName: VaultName.RETRO_WBTC_USDC, 
+      vaultAddress: getVaultAddress(VaultName.RETRO_WBTC_USDC, ChainId.Polygon),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
   },
   [ChainId.Mumbai]: {
     [MumbaiPoolNumbers.ONE_BTC_ICHI_VAULT]: {
@@ -2545,9 +2559,107 @@ export const PoolLabels: TPoolLabels = {
       vaultAddress: '0x30719F11439DaC84c1e5f05fa7387EBbBFf43eC9',
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
-    }
+    },
+    [ArbitrumPoolNumbers.RAMSES_ARB_RAM_VAULT]: {
+      name: 'ARB-RAM Vault',
+      poolNumber: ArbitrumPoolNumbers.RAMSES_ARB_RAM_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.ARBITRUM_RAMSES_ARB_RAM, ChainId.Arbitrum),
+      isHodl: true,
+      vaultName: VaultName.ARBITRUM_RAMSES_ARB_RAM, 
+      vaultAddress: getVaultAddress(VaultName.ARBITRUM_RAMSES_ARB_RAM, ChainId.Arbitrum),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [ArbitrumPoolNumbers.RAMSES_ICHI_RAM_VAULT]: {
+      name: 'ICHI-RAM Vault',
+      poolNumber: ArbitrumPoolNumbers.RAMSES_ICHI_RAM_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.ARBITRUM_RAMSES_ICHI_RAM, ChainId.Arbitrum),
+      isHodl: true,
+      vaultName: VaultName.ARBITRUM_RAMSES_ICHI_RAM, 
+      vaultAddress: getVaultAddress(VaultName.ARBITRUM_RAMSES_ICHI_RAM, ChainId.Arbitrum),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [ArbitrumPoolNumbers.RAMSES_USDT_RAM_VAULT]: {
+      name: 'USDT-RAM Vault',
+      poolNumber: ArbitrumPoolNumbers.RAMSES_USDT_RAM_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.ARBITRUM_RAMSES_USDT_RAM, ChainId.Arbitrum),
+      isHodl: true,
+      vaultName: VaultName.ARBITRUM_RAMSES_USDT_RAM, 
+      vaultAddress: getVaultAddress(VaultName.ARBITRUM_RAMSES_USDT_RAM, ChainId.Arbitrum),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [ArbitrumPoolNumbers.RAMSES_WBTC_RAM_VAULT]: {
+      name: 'WBTC-RAM Vault',
+      poolNumber: ArbitrumPoolNumbers.RAMSES_WBTC_RAM_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.ARBITRUM_RAMSES_WBTC_RAM, ChainId.Arbitrum),
+      isHodl: true,
+      vaultName: VaultName.ARBITRUM_RAMSES_WBTC_RAM, 
+      vaultAddress: getVaultAddress(VaultName.ARBITRUM_RAMSES_WBTC_RAM, ChainId.Arbitrum),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [ArbitrumPoolNumbers.RAMSES_WETH_RAM_VAULT]: {
+      name: 'WETH-RAM Vault',
+      poolNumber: ArbitrumPoolNumbers.RAMSES_WETH_RAM_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.ARBITRUM_RAMSES_WETH_RAM, ChainId.Arbitrum),
+      isHodl: true,
+      vaultName: VaultName.ARBITRUM_RAMSES_WETH_RAM, 
+      vaultAddress: getVaultAddress(VaultName.ARBITRUM_RAMSES_WETH_RAM, ChainId.Arbitrum),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
   },
   [ChainId.Bsc]: {
+    [BscPoolNumbers.BTCB_CAKE_VAULT]: {
+      name: 'BTCB-CAKE Vault',
+      poolNumber: BscPoolNumbers.BTCB_CAKE_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.BSC_BTCB_CAKE, ChainId.Bsc),
+      isHodl: true,
+      vaultName: VaultName.BSC_BTCB_CAKE, 
+      vaultAddress: getVaultAddress(VaultName.BSC_BTCB_CAKE, ChainId.Bsc),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [BscPoolNumbers.BTCB_USDT_VAULT]: {
+      name: 'BTCB-USDT Vault',
+      poolNumber: BscPoolNumbers.BTCB_USDT_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.BSC_BTCB_USDT, ChainId.Bsc),
+      isHodl: true,
+      vaultName: VaultName.BSC_BTCB_USDT, 
+      vaultAddress: getVaultAddress(VaultName.BSC_BTCB_USDT, ChainId.Bsc),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
     [BscPoolNumbers.CAKE_USDT_VAULT]: {
       name: 'CAKE-USDT Vault',
       poolNumber: BscPoolNumbers.CAKE_USDT_VAULT,
@@ -2576,6 +2688,20 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+    [BscPoolNumbers.ETH_CAKE_VAULT]: {
+      name: 'ETH-CAKE Vault',
+      poolNumber: BscPoolNumbers.ETH_CAKE_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.BSC_ETH_CAKE, ChainId.Bsc),
+      isHodl: true,
+      vaultName: VaultName.BSC_ETH_CAKE, 
+      vaultAddress: getVaultAddress(VaultName.BSC_ETH_CAKE, ChainId.Bsc),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
     [BscPoolNumbers.USDT_CAKE_VAULT]: {
       name: 'USDT-CAKE Vault',
       poolNumber: BscPoolNumbers.USDT_CAKE_VAULT,
@@ -2587,6 +2713,20 @@ export const PoolLabels: TPoolLabels = {
       isHodl: true,
       vaultName: VaultName.BSC_USDT_CAKE, 
       vaultAddress: '0x0Def612e7a7b51ca7Ee38f7905dA809BD3491268',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [BscPoolNumbers.USDT_WBNB_VAULT]: {
+      name: 'USDT-WBNB Vault',
+      poolNumber: BscPoolNumbers.USDT_WBNB_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: false,
+      isHodl: true,
+      vaultName: VaultName.BSC_USDT_WBNB, 
+      vaultAddress: '0x553A31Bb23218a10FF1fFE6492f0D3C71fb88D24',
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
@@ -2604,20 +2744,62 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
-    [BscPoolNumbers.USDT_WBNB_VAULT]: {
-      name: 'USDT-WBNB Vault',
-      poolNumber: BscPoolNumbers.USDT_WBNB_VAULT,
+    [BscPoolNumbers.THENA_ETH_THE_VAULT]: {
+      name: 'ETH-THE Vault',
+      poolNumber: BscPoolNumbers.THENA_ETH_THE_VAULT,
       lpName: 'ICHI_VAULT_LP',
       shortLpName: 'VAULT_LP',
       tradeUrl: '',
       subgraphEndpoint: '',
-      isInverted: false,
+      isInverted: isVaultInverted(VaultName.BSC_THENA_ETH_THE, ChainId.Bsc),
       isHodl: true,
-      vaultName: VaultName.BSC_USDT_WBNB, 
-      vaultAddress: '0x553A31Bb23218a10FF1fFE6492f0D3C71fb88D24',
+      vaultName: VaultName.BSC_THENA_ETH_THE, 
+      vaultAddress: getVaultAddress(VaultName.BSC_THENA_ETH_THE, ChainId.Bsc),
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
-    }
+    },
+    [BscPoolNumbers.THENA_USDC_THE_VAULT]: {
+      name: 'USDC-THE Vault',
+      poolNumber: BscPoolNumbers.THENA_USDC_THE_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.BSC_THENA_USDC_THE, ChainId.Bsc),
+      isHodl: true,
+      vaultName: VaultName.BSC_THENA_USDC_THE, 
+      vaultAddress: getVaultAddress(VaultName.BSC_THENA_USDC_THE, ChainId.Bsc),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [BscPoolNumbers.THENA_USDT_THE_VAULT]: {
+      name: 'USDT-THE Vault',
+      poolNumber: BscPoolNumbers.THENA_USDT_THE_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.BSC_THENA_USDT_THE, ChainId.Bsc),
+      isHodl: true,
+      vaultName: VaultName.BSC_THENA_USDT_THE, 
+      vaultAddress: getVaultAddress(VaultName.BSC_THENA_USDT_THE, ChainId.Bsc),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [BscPoolNumbers.THENA_WBNB_THE_VAULT]: {
+      name: 'WBNB-THE Vault',
+      poolNumber: BscPoolNumbers.THENA_WBNB_THE_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.BSC_THENA_WBNB_THE, ChainId.Bsc),
+      isHodl: true,
+      vaultName: VaultName.BSC_THENA_WBNB_THE, 
+      vaultAddress: getVaultAddress(VaultName.BSC_THENA_WBNB_THE, ChainId.Bsc),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
   },
   [ChainId.Avalanche]: {
   }

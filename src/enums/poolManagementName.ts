@@ -16,7 +16,8 @@ export enum PoolGroupName {
   DODO_POOLS = 'DODO_POOLS',
   RARI_ASSETS = 'RARI_ASSETS',
   LEGACY_POOLS = 'LEGACY_POOLS',
-  HIDDEN_VAULTS = 'HIDDEN_VAULTS'
+  HIDDEN_VAULTS = 'HIDDEN_VAULTS',
+  ALGEBRA_VAULTS = 'ALGEBRA_VAULTS',
 }
 
 export type PoolGroupNames = keyof typeof PoolGroupName;

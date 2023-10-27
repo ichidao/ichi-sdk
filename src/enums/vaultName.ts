@@ -75,13 +75,27 @@ export enum VaultName {
   ARBITRUM_USDC_ICHI = 'arbitrum_usdc_ichi',
   ARBITRUM_WBTC_ICHI = 'arbitrum_wbtc_ichi',
   ARBITRUM_WETH_ICHI = 'arbitrum_weth_ichi',
+  // Arbitrum-Ramses
+  ARBITRUM_RAMSES_ARB_RAM = 'arbitrum_ramses_arb_ram',
+  ARBITRUM_RAMSES_ICHI_RAM = 'arbitrum_ramses_ichi_ram',
+  ARBITRUM_RAMSES_USDT_RAM = 'arbitrum_ramses_usdt_ram',
+  ARBITRUM_RAMSES_WBTC_RAM = 'arbitrum_ramses_wbtc_ram',
+  ARBITRUM_RAMSES_WETH_RAM = 'arbitrum_ramses_weth_ram',
   // Avalanche
   // Bsc
+  BSC_BTCB_CAKE = 'bsc_btcb_cake',
+  BSC_BTCB_USDT = 'bsc_btcb_usdt',
   BSC_CAKE_USDT = 'bsc_cake_usdt',
   BSC_CAKE_WBNB = 'bsc_cake_wbnb',
+  BSC_ETH_CAKE = 'bsc_eth_cake',
   BSC_USDT_CAKE = 'bsc_usdt_cake',
   BSC_WBNB_CAKE = 'bsc_wbnb_cake',
   BSC_USDT_WBNB = 'bsc_usdt_wbnb',
+  // Bsc-Thena
+  BSC_THENA_ETH_THE = 'bsc_thena_eth_the',
+  BSC_THENA_USDC_THE = 'bsc_thena_usdc_the',
+  BSC_THENA_USDT_THE = 'bsc_thena_usdt_the',
+  BSC_THENA_WBNB_THE = 'bsc_thena_wbnb_the',
   // Polygon
   POLYGON_BAL_WETH = 'pol_bal_weth',
   POLYGON_CRV_WETH = 'pol_crv_weth',
@@ -137,6 +151,7 @@ export enum VaultName {
   RETRO_USDT_RETRO = 'pol_retro_usdt_retro',
   RETRO_USDT_WMATIC = 'pol_retro_usdt_wmatic',
   RETRO_WBTC_RETRO = 'pol_retro_wbtc_retro',
+  RETRO_WBTC_USDC = 'pol_retro_wbtc_usdc',
   RETRO_WBTC_WETH = 'pol_retro_wbtc_weth',
   RETRO_WETH_RETRO = 'pol_retro_weth_retro',
   RETRO_WETH_USDC = 'pol_retro_weth_usdc',
@@ -231,13 +246,27 @@ export enum VaultTableName {
   ARBITRUM_USDC_ICHI = 'arbitrum_usdc_ichi',
   ARBITRUM_WBTC_ICHI = 'arbitrum_wbtc_ichi',
   ARBITRUM_WETH_ICHI = 'arbitrum_weth_ichi',
+  // Arbitrum-Ramses
+  ARBITRUM_RAMSES_ARB_RAM = 'arbitrum_ramses_arb_ram',
+  ARBITRUM_RAMSES_ICHI_RAM = 'arbitrum_ramses_ichi_ram',
+  ARBITRUM_RAMSES_USDT_RAM = 'arbitrum_ramses_usdt_ram',
+  ARBITRUM_RAMSES_WBTC_RAM = 'arbitrum_ramses_wbtc_ram',
+  ARBITRUM_RAMSES_WETH_RAM = 'arbitrum_ramses_weth_ram',
   // Avalanche
   // Bsc
+  BSC_BTCB_CAKE = 'bsc_btcb_cake',
+  BSC_BTCB_USDT = 'bsc_btcb_usdt',
   BSC_CAKE_USDT = 'bsc_cake_usdt',
   BSC_CAKE_WBNB = 'bsc_cake_wbnb',
+  BSC_ETH_CAKE = 'bsc_eth_cake',
   BSC_USDT_CAKE = 'bsc_usdt_cake',
   BSC_WBNB_CAKE = 'bsc_wbnb_cake',
   BSC_USDT_WBNB = 'bsc_usdt_wbnb',
+  // Bsc-Thena
+  BSC_THENA_ETH_THE = 'bsc_thena_eth_the',
+  BSC_THENA_USDC_THE = 'bsc_thena_usdc_the',
+  BSC_THENA_USDT_THE = 'bsc_thena_usdt_the',
+  BSC_THENA_WBNB_THE = 'bsc_thena_wbnb_the',
   // Polygon
   POLYGON_BAL_WETH = 'pol_bal_weth',
   POLYGON_CRV_WETH = 'pol_crv_weth',
@@ -293,6 +322,7 @@ export enum VaultTableName {
   RETRO_USDT_RETRO = 'pol_retro_usdt_retro',
   RETRO_USDT_WMATIC = 'pol_retro_usdt_wmatic',
   RETRO_WBTC_RETRO = 'pol_retro_wbtc_retro',
+  RETRO_WBTC_USDC = 'pol_retro_wbtc_usdc',
   RETRO_WBTC_WETH = 'pol_retro_wbtc_weth',
   RETRO_WETH_RETRO = 'pol_retro_weth_retro',
   RETRO_WETH_USDC = 'pol_retro_weth_usdc',

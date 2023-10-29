@@ -181,6 +181,7 @@ export enum ArbitrumPoolNumbers {
   RAMSES_USDT_RAM_VAULT = 7710,
   RAMSES_WBTC_RAM_VAULT = 7711,
   RAMSES_WETH_RAM_VAULT = 7712,
+  LMR_WBTC_VAULT = 7713,
 }
 
 export enum AvalanchePoolNumbers {

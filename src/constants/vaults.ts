@@ -1910,6 +1910,32 @@ export const VAULTS: VaultMapping = {
       strategyBy: 'Bril Finance',
     }
   },
+  [VaultName.ARBITRUM_LMR_WBTC]: {
+    [ChainId.Arbitrum]: {
+      vaultName: VaultName.ARBITRUM_LMR_WBTC,
+      tableName: VaultTableName.ARBITRUM_LMR_WBTC,
+      displayName: 'LMR-WBTC (arbitrum)',
+      address: '0x0F4740fEabE315C2afc4aC7B90435257C231082C',
+      deployer: '0x508C3daa571854247726ba26949f182086Ff89B0',
+      farm: 0,
+      externalFarm: '',
+      scarceToken: 'token1',
+      scarceTokenName: TokenName.WBTC,
+      scarceTokenDecimals: tokenDecimals(TokenName.WBTC, ChainId.Arbitrum),
+      scarceTokenCoingeckoId: 'wrapped-bitcoin',
+      baseTokenName: TokenName.LMR,
+      baseTokenDecimals: tokenDecimals(TokenName.LMR, ChainId.Arbitrum),
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: false,
+      isHodlVault: true,
+      isLegacy: isLegacy(ArbitrumPoolNumbers.LMR_WBTC_VAULT, ChainId.Arbitrum),
+      irrStartTxAmount: 0,
+      depositStatus: true,
+      strategyBy: 'Bril Finance',
+    }
+  },
   [VaultName.ARBITRUM_LMR_WETH]: {
     [ChainId.Arbitrum]: {
       vaultName: VaultName.ARBITRUM_LMR_WETH,

@@ -2630,6 +2630,20 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+    [ArbitrumPoolNumbers.LMR_WBTC_VAULT]: {
+      name: 'LMR-WBTC Vault',
+      poolNumber: ArbitrumPoolNumbers.LMR_WBTC_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.ARBITRUM_LMR_WBTC, ChainId.Arbitrum),
+      isHodl: true,
+      vaultName: VaultName.ARBITRUM_LMR_WBTC, 
+      vaultAddress: getVaultAddress(VaultName.ARBITRUM_LMR_WBTC, ChainId.Arbitrum),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
   },
   [ChainId.Bsc]: {
     [BscPoolNumbers.BTCB_CAKE_VAULT]: {

@@ -735,8 +735,8 @@ export const Pools: TPools = {
     ],
     [ChainId.Avalanche]: [],
     [ChainId.Bsc]: [
-      // BscPoolNumbers.CAKE_USDT_VAULT, 
-      // BscPoolNumbers.CAKE_WBNB_VAULT, 
+      BscPoolNumbers.CAKE_USDT_VAULT, 
+      BscPoolNumbers.CAKE_WBNB_VAULT, 
       // BscPoolNumbers.USDT_CAKE_VAULT, 
       // BscPoolNumbers.USDT_WBNB_VAULT, 
       // BscPoolNumbers.WBNB_CAKE_VAULT, 

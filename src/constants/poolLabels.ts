@@ -2432,6 +2432,20 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+    [PolygonPoolNumbers.FBX_WSTETH_VAULT]: {
+      name: 'FBX-wstETH Vault',
+      poolNumber: PolygonPoolNumbers.FBX_WSTETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.POLYGON_FBX_WSTETH, ChainId.Polygon),
+      isHodl: true,
+      vaultName: VaultName.POLYGON_FBX_WSTETH, 
+      vaultAddress: getVaultAddress(VaultName.POLYGON_FBX_WSTETH, ChainId.Polygon),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
   },
   [ChainId.Mumbai]: {
     [MumbaiPoolNumbers.ONE_BTC_ICHI_VAULT]: {

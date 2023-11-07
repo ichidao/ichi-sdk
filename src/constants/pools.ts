@@ -276,6 +276,7 @@ export const Pools: TPools = {
       PolygonPoolNumbers.BAL_WETH_VAULT, 
       PolygonPoolNumbers.CRV_WETH_VAULT, 
       PolygonPoolNumbers.DPI_WETH_VAULT, 
+      PolygonPoolNumbers.FBX_WSTETH_VAULT, 
       PolygonPoolNumbers.GHST_WETH_VAULT, 
       PolygonPoolNumbers.GOVI_VAULT, 
       PolygonPoolNumbers.ICHI_USDC_VAULT, 

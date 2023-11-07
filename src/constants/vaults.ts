@@ -2560,6 +2560,32 @@ export const VAULTS: VaultMapping = {
       strategyBy: 'Bril Finance',
     }
   },
+  [VaultName.POLYGON_FBX_WSTETH]: {
+    [ChainId.Polygon]: {
+      vaultName: VaultName.POLYGON_FBX_WSTETH,
+      tableName: VaultTableName.POLYGON_FBX_WSTETH,
+      displayName: 'FBX-wstETH (polygon)',
+      address: '0xb4D8874602bE84A5e96BD54E220dE59F8F42950B',
+      deployer: '0x0768A75F616B98ee0937673bD83B7aBF142236Ea',
+      farm: 0,
+      externalFarm: '',
+      scarceToken: 'token0',
+      scarceTokenName: TokenName.WSTETH,
+      scarceTokenDecimals: tokenDecimals(TokenName.WSTETH, ChainId.Polygon),
+      scarceTokenCoingeckoId: 'wrapped-steth',
+      baseTokenName: TokenName.FBX,
+      baseTokenDecimals: tokenDecimals(TokenName.FBX, ChainId.Polygon),
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: true,
+      isHodlVault: true,
+      isLegacy: isLegacy(PolygonPoolNumbers.FBX_WSTETH_VAULT, ChainId.Polygon),
+      irrStartTxAmount: 0,
+      depositStatus: true,
+      strategyBy: 'Bril Finance',
+    }
+  },
   [VaultName.POLYGON_GHST_WETH]: {
     [ChainId.Polygon]: {
       vaultName: VaultName.POLYGON_GHST_WETH,

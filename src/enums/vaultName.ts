@@ -76,6 +76,7 @@ export enum VaultName {
   ARBITRUM_USDC_ICHI = 'arbitrum_usdc_ichi',
   ARBITRUM_WBTC_ICHI = 'arbitrum_wbtc_ichi',
   ARBITRUM_WETH_ICHI = 'arbitrum_weth_ichi',
+  ARBITRUM_WETH_LMR = 'arbitrum_weth_lmr',
   // Arbitrum-Ramses
   ARBITRUM_RAMSES_ARB_RAM = 'arbitrum_ramses_arb_ram',
   ARBITRUM_RAMSES_ICHI_RAM = 'arbitrum_ramses_ichi_ram',
@@ -251,6 +252,7 @@ export enum VaultTableName {
   ARBITRUM_USDC_ICHI = 'arbitrum_usdc_ichi',
   ARBITRUM_WBTC_ICHI = 'arbitrum_wbtc_ichi',
   ARBITRUM_WETH_ICHI = 'arbitrum_weth_ichi',
+  ARBITRUM_WETH_LMR = 'arbitrum_weth_lmr',
   // Arbitrum-Ramses
   ARBITRUM_RAMSES_ARB_RAM = 'arbitrum_ramses_arb_ram',
   ARBITRUM_RAMSES_ICHI_RAM = 'arbitrum_ramses_ichi_ram',

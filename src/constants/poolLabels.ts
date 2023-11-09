@@ -2602,6 +2602,21 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+    [ArbitrumPoolNumbers.WETH_LMR_VAULT]: {
+      name: 'WETH-LMR Vault',
+      poolNumber: ArbitrumPoolNumbers.WETH_LMR_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.ARBITRUM_WETH_LMR, ChainId.Arbitrum),
+      isHodl: true,
+      vaultName: VaultName.ARBITRUM_WETH_LMR, 
+      vaultAddress: getVaultAddress(VaultName.ARBITRUM_WETH_LMR, ChainId.Arbitrum),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    // Ramses
     [ArbitrumPoolNumbers.RAMSES_ARB_RAM_VAULT]: {
       name: 'ARB-RAM Vault',
       poolNumber: ArbitrumPoolNumbers.RAMSES_ARB_RAM_VAULT,

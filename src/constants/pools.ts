@@ -355,6 +355,7 @@ export const Pools: TPools = {
       ArbitrumPoolNumbers.USDC_ICHI_VAULT,
       ArbitrumPoolNumbers.WBTC_ICHI_VAULT,
       ArbitrumPoolNumbers.WETH_ICHI_VAULT,
+      ArbitrumPoolNumbers.WETH_LMR_VAULT,
       // Ramses
       ArbitrumPoolNumbers.RAMSES_ARB_RAM_VAULT,
       ArbitrumPoolNumbers.RAMSES_ICHI_RAM_VAULT,

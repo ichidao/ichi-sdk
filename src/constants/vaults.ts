@@ -2040,6 +2040,33 @@ export const VAULTS: VaultMapping = {
       strategyBy: 'Bril Finance',
     }
   },
+  [VaultName.ARBITRUM_WETH_LMR]: {
+    [ChainId.Arbitrum]: {
+      vaultName: VaultName.ARBITRUM_WETH_LMR,
+      tableName: VaultTableName.ARBITRUM_WETH_LMR,
+      displayName: 'WETH-LMR (arbitrum)',
+      address: '0xf11784E44ddf406b052e7a37b0d758Ba84965A96',
+      deployer: '0x508C3daa571854247726ba26949f182086Ff89B0',
+      farm: 0,
+      externalFarm: '',
+      scarceToken: 'token0',
+      scarceTokenName: TokenName.LMR,
+      scarceTokenDecimals: tokenDecimals(TokenName.LMR, ChainId.Arbitrum),
+      scarceTokenCoingeckoId: 'ichi',
+      baseTokenName: TokenName.WETH,
+      baseTokenDecimals: tokenDecimals(TokenName.WETH, ChainId.Arbitrum),
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: true,
+      isHodlVault: true,
+      isLegacy: isLegacy(ArbitrumPoolNumbers.WETH_LMR_VAULT, ChainId.Arbitrum),
+      irrStartTxAmount: 0,
+      depositStatus: true,
+      strategyBy: 'Bril Finance',
+    }
+  },
+  // Ramses
   [VaultName.ARBITRUM_RAMSES_ARB_RAM]: {
     [ChainId.Arbitrum]: {
       vaultName: VaultName.ARBITRUM_RAMSES_ARB_RAM,

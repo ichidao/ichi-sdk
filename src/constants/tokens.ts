@@ -133,6 +133,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.A3A]: {
+    [ChainId.Polygon]: {
+      tokenName: TokenName.A3A,
+      tableName: TokenName.A3A,
+      address: '0x58c7B2828e7F2B2CaA0cC7fEef242fA3196d03df',
+      decimals: 18,
+      displayName: 'A3A',
+      symbol: 'A3A',
+      fullName: '3A Utility Token (FXERC20) (fxA3A)',
+      isOneToken: false,
+      atCoingecko: false
+    }
+  },
   [TokenName.AAVE]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.AAVE,
@@ -513,6 +526,19 @@ export const TOKENS: TokenMapping = {
       displayName: 'ETH',
       symbol: 'ETH',
       fullName: 'Binance-Peg Ethereum Token',
+      isOneToken: false,
+      atCoingecko: false
+    }
+  },
+  [TokenName.EURO3]: {
+    [ChainId.Polygon]: {
+      tokenName: TokenName.EURO3,
+      tableName: TokenName.EURO3,
+      address: '0xA0e4c84693266a9d3BBef2f394B33712c76599Ab',
+      decimals: 18,
+      displayName: 'EURO3',
+      symbol: 'EURO3',
+      fullName: 'EURO3',
       isOneToken: false,
       atCoingecko: false
     }

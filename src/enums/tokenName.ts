@@ -5,6 +5,7 @@ export enum TokenName {
   XICHI = 'xichi',
   // regular tokens
   '1INCH' = '1inch',
+  A3A = 'a3a',
   AAVE = 'aave',
   AGEUR = 'ageur',
   ALLY = 'ally',
@@ -31,6 +32,7 @@ export enum TokenName {
   DODO = 'dodo',
   DPI = 'dpi',
   ETH = 'eth',
+  EURO3 = 'euro3',
   FBX = 'fbx',
   FIDU = 'fidu',
   FOX = 'fox',

@@ -162,6 +162,8 @@ export enum PolygonPoolNumbers {
   RETRO_WETH_USDC_VAULT = 7559,
   RETRO_WBTC_USDC_VAULT = 7560,
   FBX_WSTETH_VAULT = 7561,
+  EURO3_A3A_VAULT = 7562,
+  USDC_EURO3_VAULT = 7563,
 }
 
 export enum MumbaiPoolNumbers {

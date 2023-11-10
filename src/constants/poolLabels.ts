@@ -2432,6 +2432,48 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+    [PolygonPoolNumbers.FBX_WSTETH_VAULT]: {
+      name: 'FBX-wstETH Vault',
+      poolNumber: PolygonPoolNumbers.FBX_WSTETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.POLYGON_FBX_WSTETH, ChainId.Polygon),
+      isHodl: true,
+      vaultName: VaultName.POLYGON_FBX_WSTETH, 
+      vaultAddress: getVaultAddress(VaultName.POLYGON_FBX_WSTETH, ChainId.Polygon),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [PolygonPoolNumbers.EURO3_A3A_VAULT]: {
+      name: 'EURO3-A3A Vault',
+      poolNumber: PolygonPoolNumbers.EURO3_A3A_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.POLYGON_EURO3_A3A, ChainId.Polygon),
+      isHodl: true,
+      vaultName: VaultName.POLYGON_EURO3_A3A, 
+      vaultAddress: getVaultAddress(VaultName.POLYGON_EURO3_A3A, ChainId.Polygon),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [PolygonPoolNumbers.USDC_EURO3_VAULT]: {
+      name: 'USDC-EURO3 Vault',
+      poolNumber: PolygonPoolNumbers.USDC_EURO3_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.POLYGON_USDC_EURO3, ChainId.Polygon),
+      isHodl: true,
+      vaultName: VaultName.POLYGON_USDC_EURO3, 
+      vaultAddress: getVaultAddress(VaultName.POLYGON_USDC_EURO3, ChainId.Polygon),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
   },
   [ChainId.Mumbai]: {
     [MumbaiPoolNumbers.ONE_BTC_ICHI_VAULT]: {
@@ -2560,6 +2602,21 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+    [ArbitrumPoolNumbers.WETH_LMR_VAULT]: {
+      name: 'WETH-LMR Vault',
+      poolNumber: ArbitrumPoolNumbers.WETH_LMR_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.ARBITRUM_WETH_LMR, ChainId.Arbitrum),
+      isHodl: true,
+      vaultName: VaultName.ARBITRUM_WETH_LMR, 
+      vaultAddress: getVaultAddress(VaultName.ARBITRUM_WETH_LMR, ChainId.Arbitrum),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    // Ramses
     [ArbitrumPoolNumbers.RAMSES_ARB_RAM_VAULT]: {
       name: 'ARB-RAM Vault',
       poolNumber: ArbitrumPoolNumbers.RAMSES_ARB_RAM_VAULT,
@@ -2627,6 +2684,20 @@ export const PoolLabels: TPoolLabels = {
       isHodl: true,
       vaultName: VaultName.ARBITRUM_RAMSES_WETH_RAM, 
       vaultAddress: getVaultAddress(VaultName.ARBITRUM_RAMSES_WETH_RAM, ChainId.Arbitrum),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [ArbitrumPoolNumbers.LMR_WBTC_VAULT]: {
+      name: 'LMR-WBTC Vault',
+      poolNumber: ArbitrumPoolNumbers.LMR_WBTC_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.ARBITRUM_LMR_WBTC, ChainId.Arbitrum),
+      isHodl: true,
+      vaultName: VaultName.ARBITRUM_LMR_WBTC, 
+      vaultAddress: getVaultAddress(VaultName.ARBITRUM_LMR_WBTC, ChainId.Arbitrum),
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },

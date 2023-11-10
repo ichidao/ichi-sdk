@@ -161,6 +161,9 @@ export enum PolygonPoolNumbers {
   RETRO_RETRO_LIVERETRO_VAULT = 7558,
   RETRO_WETH_USDC_VAULT = 7559,
   RETRO_WBTC_USDC_VAULT = 7560,
+  FBX_WSTETH_VAULT = 7561,
+  EURO3_A3A_VAULT = 7562,
+  USDC_EURO3_VAULT = 7563,
 }
 
 export enum MumbaiPoolNumbers {
@@ -181,6 +184,8 @@ export enum ArbitrumPoolNumbers {
   RAMSES_USDT_RAM_VAULT = 7710,
   RAMSES_WBTC_RAM_VAULT = 7711,
   RAMSES_WETH_RAM_VAULT = 7712,
+  LMR_WBTC_VAULT = 7713,
+  WETH_LMR_VAULT = 7714,
 }
 
 export enum AvalanchePoolNumbers {

@@ -261,6 +261,24 @@ export async function getTokenMetrics(
             provider,
             ChainId.Mainnet)
           break;
+        case TokenName.EURO3:
+          price = await getPriceFromUSDCVault( 
+            VaultName.POLYGON_USDC_EURO3,
+            provider,
+            ChainId.Polygon)
+          break;
+        case TokenName.A3A:
+          const priceEuro3 = await getPriceFromUSDCVault( 
+            VaultName.POLYGON_USDC_EURO3,
+            provider,
+            ChainId.Polygon)
+          price = await getTokenPriceFromVault( 
+            VaultName.POLYGON_EURO3_A3A,
+            provider,
+            ChainId.Polygon, 
+            TokenName.A3A, 
+            priceEuro3)
+          break;
         case TokenName.LMR:
           const lmrAddress = chainId === ChainId.Mainnet 
             ? token.address.toLowerCase()

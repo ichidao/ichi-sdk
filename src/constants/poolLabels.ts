@@ -2815,6 +2815,20 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+    [BscPoolNumbers.THENA_BTCB_THE_VAULT]: {
+      name: 'BTCB-THE Vault',
+      poolNumber: BscPoolNumbers.THENA_BTCB_THE_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.BSC_THENA_BTCB_THE, ChainId.Bsc),
+      isHodl: true,
+      vaultName: VaultName.BSC_THENA_BTCB_THE, 
+      vaultAddress: getVaultAddress(VaultName.BSC_THENA_BTCB_THE, ChainId.Bsc),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
     [BscPoolNumbers.THENA_ETH_THE_VAULT]: {
       name: 'ETH-THE Vault',
       poolNumber: BscPoolNumbers.THENA_ETH_THE_VAULT,

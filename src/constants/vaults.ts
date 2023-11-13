@@ -2405,6 +2405,33 @@ export const VAULTS: VaultMapping = {
       strategyBy: 'Bril Finance',
     }
   },
+  // Thena
+  [VaultName.BSC_THENA_BTCB_THE]: {
+    [ChainId.Bsc]: {
+      vaultName: VaultName.BSC_THENA_BTCB_THE,
+      tableName: VaultTableName.BSC_THENA_BTCB_THE,
+      displayName: 'BTCB-THE (thena)',
+      address: '0x953D0f8Cf816368dee0aF1237C90716420c681C7',
+      deployer: '0x05cC3CA6E768a68A7f86b09e3ceE754437bd5f12',
+      farm: 0,
+      externalFarm: '',
+      scarceToken: 'token1',
+      scarceTokenName: TokenName.THE,
+      scarceTokenDecimals: tokenDecimals(TokenName.THE, ChainId.Bsc),
+      scarceTokenCoingeckoId: 'thena',
+      baseTokenName: TokenName.BTCB,
+      baseTokenDecimals: tokenDecimals(TokenName.BTCB, ChainId.Bsc),
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: false,
+      isHodlVault: true,
+      isLegacy: isLegacy(BscPoolNumbers.THENA_BTCB_THE_VAULT, ChainId.Bsc),
+      irrStartTxAmount: 0,
+      depositStatus: true,
+      strategyBy: 'Bril Finance',
+    }
+  },
   [VaultName.BSC_THENA_ETH_THE]: {
     [ChainId.Bsc]: {
       vaultName: VaultName.BSC_THENA_ETH_THE,

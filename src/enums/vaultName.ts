@@ -94,6 +94,7 @@ export enum VaultName {
   BSC_WBNB_CAKE = 'bsc_wbnb_cake',
   BSC_USDT_WBNB = 'bsc_usdt_wbnb',
   // Bsc-Thena
+  BSC_THENA_BTCB_THE = 'bsc_thena_btcb_the',
   BSC_THENA_ETH_THE = 'bsc_thena_eth_the',
   BSC_THENA_USDC_THE = 'bsc_thena_usdc_the',
   BSC_THENA_USDT_THE = 'bsc_thena_usdt_the',
@@ -270,6 +271,7 @@ export enum VaultTableName {
   BSC_WBNB_CAKE = 'bsc_wbnb_cake',
   BSC_USDT_WBNB = 'bsc_usdt_wbnb',
   // Bsc-Thena
+  BSC_THENA_BTCB_THE = 'bsc_thena_btcb_the',
   BSC_THENA_ETH_THE = 'bsc_thena_eth_the',
   BSC_THENA_USDC_THE = 'bsc_thena_usdc_the',
   BSC_THENA_USDT_THE = 'bsc_thena_usdt_the',

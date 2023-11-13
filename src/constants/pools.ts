@@ -374,6 +374,7 @@ export const Pools: TPools = {
       BscPoolNumbers.USDT_WBNB_VAULT,
       BscPoolNumbers.WBNB_CAKE_VAULT,
       // Thena
+      BscPoolNumbers.THENA_BTCB_THE_VAULT,
       BscPoolNumbers.THENA_ETH_THE_VAULT,
       BscPoolNumbers.THENA_USDC_THE_VAULT,
       BscPoolNumbers.THENA_USDT_THE_VAULT,
@@ -759,6 +760,7 @@ export const Pools: TPools = {
     [ChainId.Arbitrum]: [],
     [ChainId.Avalanche]: [],
     [ChainId.Bsc]: [
+      BscPoolNumbers.THENA_BTCB_THE_VAULT,
       BscPoolNumbers.THENA_ETH_THE_VAULT,
       BscPoolNumbers.THENA_USDC_THE_VAULT,
       BscPoolNumbers.THENA_USDT_THE_VAULT,

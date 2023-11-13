@@ -273,6 +273,7 @@ export const Pools: TPools = {
       MainnetPoolNumbers.ZRX_VAULT,
     ],
     [ChainId.Polygon]: [
+      PolygonPoolNumbers.A3A_EURO3_VAULT, 
       PolygonPoolNumbers.BAL_WETH_VAULT, 
       PolygonPoolNumbers.CRV_WETH_VAULT, 
       PolygonPoolNumbers.DPI_WETH_VAULT, 
@@ -746,6 +747,7 @@ export const Pools: TPools = {
       // BscPoolNumbers.USDT_WBNB_VAULT, 
       // BscPoolNumbers.WBNB_CAKE_VAULT, 
       // Thena
+      BscPoolNumbers.THENA_BTCB_THE_VAULT,
       BscPoolNumbers.THENA_ETH_THE_VAULT,
       BscPoolNumbers.THENA_USDC_THE_VAULT,
       BscPoolNumbers.THENA_USDT_THE_VAULT,

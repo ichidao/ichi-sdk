@@ -2474,6 +2474,20 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+    [PolygonPoolNumbers.A3A_EURO3_VAULT]: {
+      name: 'A3A-EURO3 Vault',
+      poolNumber: PolygonPoolNumbers.A3A_EURO3_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.POLYGON_A3A_EURO3, ChainId.Polygon),
+      isHodl: true,
+      vaultName: VaultName.POLYGON_A3A_EURO3, 
+      vaultAddress: getVaultAddress(VaultName.POLYGON_A3A_EURO3, ChainId.Polygon),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
   },
   [ChainId.Mumbai]: {
     [MumbaiPoolNumbers.ONE_BTC_ICHI_VAULT]: {

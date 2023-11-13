@@ -100,6 +100,7 @@ export enum VaultName {
   BSC_THENA_USDT_THE = 'bsc_thena_usdt_the',
   BSC_THENA_WBNB_THE = 'bsc_thena_wbnb_the',
   // Polygon
+  POLYGON_A3A_EURO3 = 'pol_a3a_euro3',
   POLYGON_BAL_WETH = 'pol_bal_weth',
   POLYGON_CRV_WETH = 'pol_crv_weth',
   POLYGON_DPI_WETH = 'pol_dpi_weth',
@@ -277,6 +278,7 @@ export enum VaultTableName {
   BSC_THENA_USDT_THE = 'bsc_thena_usdt_the',
   BSC_THENA_WBNB_THE = 'bsc_thena_wbnb_the',
   // Polygon
+  POLYGON_A3A_EURO3 = 'pol_a3a_euro3',
   POLYGON_BAL_WETH = 'pol_bal_weth',
   POLYGON_CRV_WETH = 'pol_crv_weth',
   POLYGON_DPI_WETH = 'pol_dpi_weth',

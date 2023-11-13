@@ -2536,6 +2536,33 @@ export const VAULTS: VaultMapping = {
       strategyBy: 'Bril Finance',
     }
   },
+  // Polygon
+  [VaultName.POLYGON_A3A_EURO3]: {
+    [ChainId.Polygon]: {
+      vaultName: VaultName.POLYGON_A3A_EURO3,
+      tableName: VaultTableName.POLYGON_A3A_EURO3,
+      displayName: 'A3A-EURO3 (polygon)',
+      address: '0x107DE09Be3D5B5f3D8d6FF3CA1c9eA71ea93610a',
+      deployer: '0x0768A75F616B98ee0937673bD83B7aBF142236Ea',
+      farm: 0,
+      externalFarm: '',
+      scarceToken: 'token1',
+      scarceTokenName: TokenName.EURO3,
+      scarceTokenDecimals: tokenDecimals(TokenName.EURO3, ChainId.Polygon),
+      scarceTokenCoingeckoId: '',
+      baseTokenName: TokenName.A3A,
+      baseTokenDecimals: tokenDecimals(TokenName.A3A, ChainId.Polygon),
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: false,
+      isHodlVault: true,
+      isLegacy: isLegacy(PolygonPoolNumbers.A3A_EURO3_VAULT, ChainId.Polygon),
+      irrStartTxAmount: 0,
+      depositStatus: true,
+      strategyBy: 'Bril Finance',
+    }
+  },
   [VaultName.POLYGON_BAL_WETH]: {
     [ChainId.Polygon]: {
       vaultName: VaultName.POLYGON_BAL_WETH,

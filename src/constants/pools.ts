@@ -302,6 +302,18 @@ export const Pools: TPools = {
       PolygonPoolNumbers.WMATIC_WETH_VAULT, 
       PolygonPoolNumbers.WSTETH_FBX_VAULT, 
       PolygonPoolNumbers.WSTETH_WETH_VAULT,
+      // QuickSwap
+      PolygonPoolNumbers.QUICKSWAP_AAVE_WETH_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_LINK_WETH_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_USDC_QUICK_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_WBTC_USDC_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_WBTC_WETH_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_WETH_ICHI_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_WETH_QUICK_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_WETH_USDT_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_WMATIC_QUICK_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_WMATIC_USDT_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_WMATIC_WETH_VAULT,
       // Retro 
       PolygonPoolNumbers.RETRO_AGEUR_RETRO_VAULT,
       PolygonPoolNumbers.RETRO_AGEUR_USDC_VAULT,
@@ -357,6 +369,9 @@ export const Pools: TPools = {
       ArbitrumPoolNumbers.WBTC_ICHI_VAULT,
       ArbitrumPoolNumbers.WETH_ICHI_VAULT,
       ArbitrumPoolNumbers.WETH_LMR_VAULT,
+      // Horiza
+      ArbitrumPoolNumbers.HORIZA_USDC_ICHI_VAULT,
+      ArbitrumPoolNumbers.HORIZA_WETH_ICHI_VAULT,
       // Ramses
       ArbitrumPoolNumbers.RAMSES_ARB_RAM_VAULT,
       ArbitrumPoolNumbers.RAMSES_ICHI_RAM_VAULT,
@@ -688,6 +703,19 @@ export const Pools: TPools = {
   [PoolGroupName.HIDDEN_VAULTS]: {
     [ChainId.Mainnet]: [], 
     [ChainId.Polygon]: [
+      // QuickSwap
+      PolygonPoolNumbers.QUICKSWAP_AAVE_WETH_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_LINK_WETH_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_USDC_QUICK_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_WBTC_USDC_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_WBTC_WETH_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_WETH_ICHI_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_WETH_QUICK_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_WETH_USDT_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_WMATIC_QUICK_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_WMATIC_USDT_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_WMATIC_WETH_VAULT,
+      // Retro
       PolygonPoolNumbers.RETRO_AGEUR_RETRO_VAULT,
       PolygonPoolNumbers.RETRO_AGEUR_USDC_VAULT,
       PolygonPoolNumbers.RETRO_CASH_AXLLQDR_VAULT, 
@@ -732,6 +760,9 @@ export const Pools: TPools = {
       PolygonPoolNumbers.RETRO_WMATIC_WETH_VAULT, 
     ],
     [ChainId.Arbitrum]: [
+      // Horiza
+      ArbitrumPoolNumbers.HORIZA_USDC_ICHI_VAULT,
+      ArbitrumPoolNumbers.HORIZA_WETH_ICHI_VAULT,
       // Ramses
       ArbitrumPoolNumbers.RAMSES_ARB_RAM_VAULT,
       ArbitrumPoolNumbers.RAMSES_ICHI_RAM_VAULT,
@@ -758,7 +789,20 @@ export const Pools: TPools = {
   // Vaults that are not processed in api-updater using standard multicall flow
   [PoolGroupName.ALGEBRA_VAULTS]: {
     [ChainId.Mainnet]: [],
-    [ChainId.Polygon]: [],
+    [ChainId.Polygon]: [
+      // QuickSwap
+      PolygonPoolNumbers.QUICKSWAP_AAVE_WETH_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_LINK_WETH_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_USDC_QUICK_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_WBTC_USDC_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_WBTC_WETH_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_WETH_ICHI_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_WETH_QUICK_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_WETH_USDT_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_WMATIC_QUICK_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_WMATIC_USDT_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_WMATIC_WETH_VAULT,
+    ],
     [ChainId.Arbitrum]: [],
     [ChainId.Avalanche]: [],
     [ChainId.Bsc]: [

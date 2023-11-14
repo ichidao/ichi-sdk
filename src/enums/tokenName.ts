@@ -67,6 +67,7 @@ export enum TokenName {
   POP = 'pop',
   PWING = 'pwing',
   QRDO = 'qrdo',
+  QUICK = 'quick',
   RAM = 'ram',
   RENFIL = 'renfil',
   RETRO = 'retro',

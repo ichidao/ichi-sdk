@@ -77,6 +77,9 @@ export enum VaultName {
   ARBITRUM_WBTC_ICHI = 'arbitrum_wbtc_ichi',
   ARBITRUM_WETH_ICHI = 'arbitrum_weth_ichi',
   ARBITRUM_WETH_LMR = 'arbitrum_weth_lmr',
+  // Horiza
+  ARBITRUM_HORIZA_USDC_ICHI = 'arbitrum_horiza_usdc_ichi',
+  ARBITRUM_HORIZA_WETH_ICHI = 'arbitrum_horiza_weth_ichi',
   // Arbitrum-Ramses
   ARBITRUM_RAMSES_ARB_RAM = 'arbitrum_ramses_arb_ram',
   ARBITRUM_RAMSES_ICHI_RAM = 'arbitrum_ramses_ichi_ram',
@@ -129,6 +132,18 @@ export enum VaultName {
   POLYGON_WMATIC_WETH = 'pol_wmatic_weth',
   POLYGON_WSTETH_FBX = 'pol_wsteth_fbx',
   POLYGON_WSTETH_WETH = 'pol_wsteth_weth',
+  // Polygon-QuickSwap
+  POLYGON_QUICKSWAP_AAVE_WETH = 'pol_quickswap_aave_weth',
+  POLYGON_QUICKSWAP_LINK_WETH = 'pol_quickswap_link_weth',
+  POLYGON_QUICKSWAP_USDC_QUICK = 'pol_quickswap_usdc_quick',
+  POLYGON_QUICKSWAP_WBTC_USDC = 'pol_quickswap_wbtc_usdc',
+  POLYGON_QUICKSWAP_WBTC_WETH = 'pol_quickswap_wbtc_weth',
+  POLYGON_QUICKSWAP_WETH_ICHI = 'pol_quickswap_weth_ichi',
+  POLYGON_QUICKSWAP_WETH_QUICK = 'pol_quickswap_weth_quick',
+  POLYGON_QUICKSWAP_WETH_USDT = 'pol_quickswap_weth_usdt',
+  POLYGON_QUICKSWAP_WMATIC_QUICK = 'pol_quickswap_wmatic_quick',
+  POLYGON_QUICKSWAP_WMATIC_USDT = 'pol_quickswap_wmatic_usdt',
+  POLYGON_QUICKSWAP_WMATIC_WETH = 'pol_quickswap_wmatic_weth',
   // Polygon-Retro
   RETRO_AGEUR_RETRO = 'pol_retro_ageur_retro',
   RETRO_AGEUR_USDC = 'pol_retro_ageur_usdc',
@@ -255,6 +270,9 @@ export enum VaultTableName {
   ARBITRUM_WBTC_ICHI = 'arbitrum_wbtc_ichi',
   ARBITRUM_WETH_ICHI = 'arbitrum_weth_ichi',
   ARBITRUM_WETH_LMR = 'arbitrum_weth_lmr',
+  // Horiza
+  ARBITRUM_HORIZA_USDC_ICHI = 'arbitrum_horiza_usdc_ichi',
+  ARBITRUM_HORIZA_WETH_ICHI = 'arbitrum_horiza_weth_ichi',
   // Arbitrum-Ramses
   ARBITRUM_RAMSES_ARB_RAM = 'arbitrum_ramses_arb_ram',
   ARBITRUM_RAMSES_ICHI_RAM = 'arbitrum_ramses_ichi_ram',
@@ -307,6 +325,18 @@ export enum VaultTableName {
   POLYGON_WMATIC_WETH = 'pol_wmatic_weth',
   POLYGON_WSTETH_FBX = 'pol_wsteth_fbx',
   POLYGON_WSTETH_WETH = 'pol_wsteth_weth',
+  // Polygon-QuickSwap
+  POLYGON_QUICKSWAP_AAVE_WETH = 'pol_quickswap_aave_weth',
+  POLYGON_QUICKSWAP_LINK_WETH = 'pol_quickswap_link_weth',
+  POLYGON_QUICKSWAP_USDC_QUICK = 'pol_quickswap_usdc_quick',
+  POLYGON_QUICKSWAP_WBTC_USDC = 'pol_quickswap_wbtc_usdc',
+  POLYGON_QUICKSWAP_WBTC_WETH = 'pol_quickswap_wbtc_weth',
+  POLYGON_QUICKSWAP_WETH_ICHI = 'pol_quickswap_weth_ichi',
+  POLYGON_QUICKSWAP_WETH_QUICK = 'pol_quickswap_weth_quick',
+  POLYGON_QUICKSWAP_WETH_USDT = 'pol_quickswap_weth_usdt',
+  POLYGON_QUICKSWAP_WMATIC_QUICK = 'pol_quickswap_wmatic_quick',
+  POLYGON_QUICKSWAP_WMATIC_USDT = 'pol_quickswap_wmatic_usdt',
+  POLYGON_QUICKSWAP_WMATIC_WETH = 'pol_quickswap_wmatic_weth',
   // Polygon-Retro
   RETRO_AGEUR_RETRO = 'pol_retro_ageur_retro',
   RETRO_AGEUR_USDC = 'pol_retro_ageur_usdc',

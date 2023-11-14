@@ -157,6 +157,17 @@ export const TOKENS: TokenMapping = {
       fullName: 'Aave Token',
       isOneToken: false,
       atCoingecko: true
+    },
+    [ChainId.Polygon]: {
+      tokenName: TokenName.AAVE,
+      tableName: TokenName.AAVE,
+      address: '0xD6DF932A45C0f255f85145f286eA0b292B21C90B',
+      decimals: 18,
+      displayName: 'AAVE',
+      symbol: 'AAVE',
+      fullName: 'Aave Token',
+      isOneToken: false,
+      atCoingecko: true
     }
   },
   [TokenName.AGEUR]: {
@@ -1090,6 +1101,30 @@ export const TOKENS: TokenMapping = {
       isOneToken: false,
       atCoingecko: true,
       targetVaultStrength: 0.1
+    }
+  },
+  [TokenName.QUICK]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.QUICK,
+      tableName: TokenName.QUICK,
+      address: '0xd2bA23dE8a19316A638dc1e7a9ADdA1d74233368',
+      decimals: 18,
+      displayName: 'QUICK',
+      symbol: 'QUICK',
+      fullName: 'QuickSwap',
+      isOneToken: false,
+      atCoingecko: true,
+    },
+    [ChainId.Polygon]: {
+      tokenName: TokenName.QUICK,
+      tableName: TokenName.QUICK,
+      address: '0xB5C064F955D8e7F38fE0460C556a72987494eE17',
+      decimals: 18,
+      displayName: 'QUICK',
+      symbol: 'QUICK',
+      fullName: 'QuickSwap',
+      isOneToken: false,
+      atCoingecko: true,
     }
   },
   [TokenName.RAM]: {

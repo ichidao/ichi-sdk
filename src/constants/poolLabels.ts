@@ -1467,7 +1467,23 @@ export const PoolLabels: TPoolLabels = {
       vaultAddress: '0x303384D10e4B7409bD0B1D657fe533EC484D745d',
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
-    }
+    },
+    [MainnetPoolNumbers.MET_WETH_VAULT]: {
+      name: 'MET-WETH Vault',
+      poolNumber: MainnetPoolNumbers.MET_WETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      farmAddress: '',
+      farmId: 0,
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.MET_WETH, ChainId.Mainnet),
+      isHodl: true,
+      vaultName: VaultName.MET_WETH,
+      vaultAddress: getVaultAddress(VaultName.MET_WETH, ChainId.Mainnet),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
   },
   [ChainId.Polygon]: {
     [PolygonPoolNumbers.ONE_BTC_VAULT]: {

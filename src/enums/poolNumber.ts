@@ -90,7 +90,8 @@ export enum MainnetPoolNumbers {
   GNO_VAULT_LEGACY = 1019,
   CEL_VAULT_LEGACY = 1020,
   WNXM_VAULT_LEGACY = 1021,
-  WBTC_VAULT_LEGACY = 1022
+  WBTC_VAULT_LEGACY = 1022,
+  MET_WETH_VAULT = 7007,
 }
 
 export enum PolygonPoolNumbers {

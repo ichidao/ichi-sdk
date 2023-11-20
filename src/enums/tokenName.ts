@@ -53,6 +53,7 @@ export enum TokenName {
   LIVERETRO = 'liveretro',
   LMR = 'lmr',
   MATICX = 'maticx',
+  MET = 'met',
   METIS = 'metis',
   MIDAS = 'midas',
   MIMATIC = 'mimatic',

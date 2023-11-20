@@ -896,6 +896,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.MET]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.MET,
+      tableName: TokenName.MET,
+      address: '0x2Ebd53d035150f328bd754D6DC66B99B0eDB89aa',
+      decimals: 18,
+      displayName: 'MET',
+      symbol: 'MET',
+      fullName: 'Metronome2',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.METIS]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.METIS,

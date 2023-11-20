@@ -1051,6 +1051,32 @@ export const VAULTS: VaultMapping = {
       strategyBy: '',
     }
   },
+  [VaultName.MET_WETH]: {
+    [ChainId.Mainnet]: {
+      vaultName: VaultName.MET_WETH,
+      tableName: VaultTableName.MET_WETH,
+      displayName: 'MET-WETH',
+      address: '0x77f121590CA10bC3b781cD63e253c5ff6ff1C563',
+      deployer: '0xfF7B5E167c9877f2b9f65D19d9c8c9aa651Fe19F',
+      farm: 0,
+      externalFarm: '',
+      scarceToken: 'token1',
+      scarceTokenName: TokenName.WETH,
+      scarceTokenDecimals: tokenDecimals(TokenName.WETH, ChainId.Mainnet),
+      scarceTokenCoingeckoId: 'weth',
+      baseTokenName: TokenName.MET,
+      baseTokenDecimals: tokenDecimals(TokenName.MET, ChainId.Mainnet),
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: false,
+      isHodlVault: true,
+      isLegacy: isLegacy(MainnetPoolNumbers.MET_WETH_VAULT, ChainId.Mainnet),
+      irrStartTxAmount: 0,
+      depositStatus: true,
+      strategyBy: '',
+    }
+  },
   [VaultName.METIS]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.METIS,

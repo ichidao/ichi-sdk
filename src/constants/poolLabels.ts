@@ -2914,6 +2914,7 @@ export const PoolLabels: TPoolLabels = {
       irrStartTxAmount: 0
     },
   },
+  // Bsc
   [ChainId.Bsc]: {
     [BscPoolNumbers.BTCB_CAKE_VAULT]: {
       name: 'BTCB-CAKE Vault',
@@ -3027,6 +3028,21 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+    [BscPoolNumbers.USDC_ETH_VAULT]: {
+      name: 'USDC-ETH Vault',
+      poolNumber: BscPoolNumbers.USDC_ETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.BSC_USDC_ETH, ChainId.Bsc),
+      isHodl: true,
+      vaultName: VaultName.BSC_USDC_ETH, 
+      vaultAddress: getVaultAddress(VaultName.BSC_USDC_ETH, ChainId.Bsc),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    // Thena
     [BscPoolNumbers.THENA_BTCB_THE_VAULT]: {
       name: 'BTCB-THE Vault',
       poolNumber: BscPoolNumbers.THENA_BTCB_THE_VAULT,

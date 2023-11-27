@@ -2276,6 +2276,7 @@ export const VAULTS: VaultMapping = {
       strategyBy: 'Bril Finance',
     }
   },
+  // Bsc
   [VaultName.BSC_BTCB_CAKE]: {
     [ChainId.Bsc]: {
       vaultName: VaultName.BSC_BTCB_CAKE,
@@ -2401,6 +2402,32 @@ export const VAULTS: VaultMapping = {
       isInverted: true,
       isHodlVault: true,
       isLegacy: isLegacy(BscPoolNumbers.ETH_CAKE_VAULT, ChainId.Bsc),
+      irrStartTxAmount: 0,
+      depositStatus: true,
+      strategyBy: 'Bril Finance',
+    }
+  },
+  [VaultName.BSC_USDC_ETH]: {
+    [ChainId.Bsc]: {
+      vaultName: VaultName.BSC_USDC_ETH,
+      tableName: VaultTableName.BSC_USDC_ETH,
+      displayName: 'USDC-ETH (bsc)',
+      address: '0x57424fF60D0a23cB13CAf995c39E41FDB7c4fc1f',
+      deployer: '0x05cC3CA6E768a68A7f86b09e3ceE754437bd5f12',
+      farm: 0,
+      externalFarm: '',
+      scarceToken: 'token0',
+      scarceTokenName: TokenName.ETH,
+      scarceTokenDecimals: tokenDecimals(TokenName.ETH, ChainId.Bsc),
+      scarceTokenCoingeckoId: '',
+      baseTokenName: TokenName.USDC,
+      baseTokenDecimals: tokenDecimals(TokenName.USDC, ChainId.Bsc),
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: true,
+      isHodlVault: true,
+      isLegacy: isLegacy(BscPoolNumbers.USDC_ETH_VAULT, ChainId.Bsc),
       irrStartTxAmount: 0,
       depositStatus: true,
       strategyBy: 'Bril Finance',

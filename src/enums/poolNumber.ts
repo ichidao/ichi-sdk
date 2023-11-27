@@ -221,6 +221,7 @@ export enum BscPoolNumbers {
   THENA_USDT_THE_VAULT = 7910,
   THENA_WBNB_THE_VAULT = 7911,
   THENA_BTCB_THE_VAULT = 7912,
+  USDC_ETH_VAULT = 7913,
 }
 
 export type MainnetPoolNumberValues = typeof MainnetPoolNumbers[keyof typeof MainnetPoolNumbers];

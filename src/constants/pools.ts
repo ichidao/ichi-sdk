@@ -387,6 +387,7 @@ export const Pools: TPools = {
       BscPoolNumbers.CAKE_USDT_VAULT,
       BscPoolNumbers.CAKE_WBNB_VAULT,
       BscPoolNumbers.ETH_CAKE_VAULT,
+      BscPoolNumbers.USDC_ETH_VAULT,
       BscPoolNumbers.USDT_CAKE_VAULT,
       BscPoolNumbers.USDT_WBNB_VAULT,
       BscPoolNumbers.WBNB_CAKE_VAULT,

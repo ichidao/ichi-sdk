@@ -136,7 +136,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.A3A]: {
     [ChainId.Polygon]: {
       tokenName: TokenName.A3A,
-      tableName: TokenName.A3A,
+      tableName: `pol_${TokenName.A3A}`,
       address: '0x58c7B2828e7F2B2CaA0cC7fEef242fA3196d03df',
       decimals: 18,
       displayName: 'A3A',
@@ -160,7 +160,7 @@ export const TOKENS: TokenMapping = {
     },
     [ChainId.Polygon]: {
       tokenName: TokenName.AAVE,
-      tableName: TokenName.AAVE,
+      tableName: `pol_${TokenName.AAVE}`,
       address: '0xD6DF932A45C0f255f85145f286eA0b292B21C90B',
       decimals: 18,
       displayName: 'AAVE',
@@ -544,7 +544,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.EURO3]: {
     [ChainId.Polygon]: {
       tokenName: TokenName.EURO3,
-      tableName: TokenName.EURO3,
+      tableName: `pol_${TokenName.EURO3}`,
       address: '0xA0e4c84693266a9d3BBef2f394B33712c76599Ab',
       decimals: 18,
       displayName: 'EURO3',
@@ -786,7 +786,7 @@ export const TOKENS: TokenMapping = {
     },
     [ChainId.Polygon]: {
       tokenName: TokenName.JRT,
-      tableName: TokenName.JRT,
+      tableName: `pol_${TokenName.JRT}`,
       address: '0x596eBE76e2DB4470966ea395B0d063aC6197A8C5',
       decimals: 18,
       displayName: 'JRT',
@@ -873,7 +873,7 @@ export const TOKENS: TokenMapping = {
     },
     [ChainId.Arbitrum]: {
       tokenName: TokenName.LMR,
-      tableName: TokenName.LMR,
+      tableName: `arbitrum_${TokenName.LMR}`,
       address: '0x0FC0c323Cf76E188654D63D62e668caBeC7a525b',
       decimals: 8,
       displayName: 'LMR',
@@ -1041,7 +1041,7 @@ export const TOKENS: TokenMapping = {
     },
     [ChainId.Polygon]: {
       tokenName: TokenName.OXT,
-      tableName: TokenName.OXT,
+      tableName: `pol_${TokenName.OXT}`,
       address: '0x9880e3dDA13c8e7D4804691A45160102d31F6060',
       decimals: 18,
       displayName: 'OXT',
@@ -1130,7 +1130,7 @@ export const TOKENS: TokenMapping = {
     },
     [ChainId.Polygon]: {
       tokenName: TokenName.QUICK,
-      tableName: TokenName.QUICK,
+      tableName: `pol_${TokenName.QUICK}`,
       address: '0xB5C064F955D8e7F38fE0460C556a72987494eE17',
       decimals: 18,
       displayName: 'QUICK',

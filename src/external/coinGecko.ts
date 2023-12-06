@@ -56,6 +56,37 @@ export const lookUpTokenPrices = async function (
   return prices;
 };
 
+export const getTokenPriceById = async function(coingeckoId: string, cg_key: string): Promise<Optional<CoinGeckoPriceResponse>> {
+  if (!coingeckoId) {
+    console.warn(`Could not lookup token price, no coingecko Id given.`);
+    return;
+  }
+  let prices: CoinGeckoPriceResponse = {};
+
+  // While we could do this in parallel we'd risk throttling, and we are already fetching multiple at one time,
+  // so let's fetch in some reasonable amountl ike 20 at a time
+  let url = '';
+  if (cg_key !== '') {
+    url = `https://pro-api.coingecko.com/api/v3/simple/price?ids=${coingeckoId}&vs_currencies=usd&include_24hr_change=true&x_cg_pro_api_key=${cg_key}`;
+  } else {
+    url = `https://api.coingecko.com/api/v3/simple/price?ids=${coingeckoId}&vs_currencies=usd&include_24hr_change=true`;
+  }
+
+  try {
+    const result = await fetch(url);
+    const json: CoinGeckoPriceResponse = await result.json();
+    prices = {
+      ...json,
+      ...prices
+    };
+  } catch (e) {
+    console.error(`Error calling ${url}`);
+    throw e;
+  }
+
+  return prices;
+}
+
 export const getTokenPrice = async function (
   chainId: ChainId,
   address: string,

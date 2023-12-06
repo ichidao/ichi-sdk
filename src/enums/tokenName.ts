@@ -85,6 +85,7 @@ export enum TokenName {
   USDC = 'usdc',
   USDT = 'usdt',
   VBTC = 'vbtc',
+  WAVAX = 'wavax',
   WBNB = 'wbnb',
   WBTC = 'wbtc',
   WEN = 'wen',
@@ -92,6 +93,8 @@ export enum TokenName {
   WMATIC = 'wmatic',
   WNXM = 'wnxm',
   WSTETH = 'wsteth',
+  WZEN = 'wzen',
+  XCAD = 'xcad',
   YFI = 'yfi',
   ZRX = 'zrx',
   // one tokens

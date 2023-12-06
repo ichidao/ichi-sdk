@@ -17,7 +17,9 @@ import {
   AvalanchePoolNumberValues,
   ArbitrumPoolNumbers,
   BscPoolNumbers,
-  BscPoolNumberValues
+  BscPoolNumberValues,
+  EonPoolNumbers,
+  EonPoolNumberValues
 } from '../enums/poolNumber';
 import { ChainId } from '../crypto/networks';
 import { PartialRecord } from '../types/common';
@@ -40,6 +42,7 @@ type TPoolLabels = {
   [ChainId.Arbitrum]: PartialRecord<ArbitrumPoolNumberValues, PoolLabel>;
   [ChainId.Avalanche]: PartialRecord<AvalanchePoolNumberValues, PoolLabel>;
   [ChainId.Bsc]: PartialRecord<BscPoolNumberValues, PoolLabel>;
+  [ChainId.Eon]: PartialRecord<EonPoolNumberValues, PoolLabel>;
   [ChainId.Mumbai]: PartialRecord<MumbaiPoolNumberValues, PoolLabel>;
 };
 
@@ -3099,6 +3102,20 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+    [BscPoolNumbers.THENA_USDT_XCAD_VAULT]: {
+      name: 'USDT-XCAD Vault',
+      poolNumber: BscPoolNumbers.THENA_USDT_XCAD_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.BSC_THENA_USDT_XCAD, ChainId.Bsc),
+      isHodl: true,
+      vaultName: VaultName.BSC_THENA_USDT_XCAD, 
+      vaultAddress: getVaultAddress(VaultName.BSC_THENA_USDT_XCAD, ChainId.Bsc),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
     [BscPoolNumbers.THENA_WBNB_THE_VAULT]: {
       name: 'WBNB-THE Vault',
       poolNumber: BscPoolNumbers.THENA_WBNB_THE_VAULT,
@@ -3110,6 +3127,106 @@ export const PoolLabels: TPoolLabels = {
       isHodl: true,
       vaultName: VaultName.BSC_THENA_WBNB_THE, 
       vaultAddress: getVaultAddress(VaultName.BSC_THENA_WBNB_THE, ChainId.Bsc),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+  },
+  [ChainId.Eon]: {
+    [EonPoolNumbers.ASCENT_USDC_WZEN_VAULT]: {
+      name: 'USDC-WZEN Vault',
+      poolNumber: EonPoolNumbers.ASCENT_USDC_WZEN_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.EON_ASCENT_USDC_WZEN, ChainId.Eon),
+      isHodl: true,
+      vaultName: VaultName.EON_ASCENT_USDC_WZEN, 
+      vaultAddress: getVaultAddress(VaultName.EON_ASCENT_USDC_WZEN, ChainId.Eon),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [EonPoolNumbers.ASCENT_USDT_WZEN_VAULT]: {
+      name: 'USDT-WZEN Vault',
+      poolNumber: EonPoolNumbers.ASCENT_USDT_WZEN_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.EON_ASCENT_USDT_WZEN, ChainId.Eon),
+      isHodl: true,
+      vaultName: VaultName.EON_ASCENT_USDT_WZEN, 
+      vaultAddress: getVaultAddress(VaultName.EON_ASCENT_USDT_WZEN, ChainId.Eon),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [EonPoolNumbers.ASCENT_WAVAX_WZEN_VAULT]: {
+      name: 'WAVAX-WZEN Vault',
+      poolNumber: EonPoolNumbers.ASCENT_WAVAX_WZEN_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.EON_ASCENT_WAVAX_WZEN, ChainId.Eon),
+      isHodl: true,
+      vaultName: VaultName.EON_ASCENT_WAVAX_WZEN, 
+      vaultAddress: getVaultAddress(VaultName.EON_ASCENT_WAVAX_WZEN, ChainId.Eon),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [EonPoolNumbers.ASCENT_WBTC_WZEN_VAULT]: {
+      name: 'WBTC-WZEN Vault',
+      poolNumber: EonPoolNumbers.ASCENT_WBTC_WZEN_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.EON_ASCENT_WBTC_WZEN, ChainId.Eon),
+      isHodl: true,
+      vaultName: VaultName.EON_ASCENT_WBTC_WZEN, 
+      vaultAddress: getVaultAddress(VaultName.EON_ASCENT_WBTC_WZEN, ChainId.Eon),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [EonPoolNumbers.ASCENT_WETH_USDC_VAULT]: {
+      name: 'WETH-USDC Vault',
+      poolNumber: EonPoolNumbers.ASCENT_WETH_USDC_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.EON_ASCENT_WETH_USDC, ChainId.Eon),
+      isHodl: true,
+      vaultName: VaultName.EON_ASCENT_WETH_USDC, 
+      vaultAddress: getVaultAddress(VaultName.EON_ASCENT_WETH_USDC, ChainId.Eon),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [EonPoolNumbers.ASCENT_WETH_WBTC_VAULT]: {
+      name: 'WETH-WBTC Vault',
+      poolNumber: EonPoolNumbers.ASCENT_WETH_WBTC_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.EON_ASCENT_WETH_WBTC, ChainId.Eon),
+      isHodl: true,
+      vaultName: VaultName.EON_ASCENT_WETH_WBTC, 
+      vaultAddress: getVaultAddress(VaultName.EON_ASCENT_WETH_WBTC, ChainId.Eon),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [EonPoolNumbers.ASCENT_WETH_WZEN_VAULT]: {
+      name: 'WETH-WZEN Vault',
+      poolNumber: EonPoolNumbers.ASCENT_WETH_WZEN_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.EON_ASCENT_WETH_WZEN, ChainId.Eon),
+      isHodl: true,
+      vaultName: VaultName.EON_ASCENT_WETH_WZEN, 
+      vaultAddress: getVaultAddress(VaultName.EON_ASCENT_WETH_WZEN, ChainId.Eon),
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },

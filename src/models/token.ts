@@ -8,7 +8,8 @@ export type Token = {
     `mum_${TokenName}` |
     `bsc_${TokenName}` |
     `arbitrum_${TokenName}` |
-    `avalanche_${TokenName}`;
+    `avalanche_${TokenName}`|
+    `eon_${TokenName}`;
   address: string;
   decimals: number;
   displayName: string;

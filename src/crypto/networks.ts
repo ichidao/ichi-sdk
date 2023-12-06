@@ -9,7 +9,8 @@ export enum ChainId {
   Arbitrum = 42161,
   Avalanche = 43114,
   Mumbai = 80001,
-  Bsc = 56
+  Bsc = 56,
+  Eon = 7332,
 }
 
 export interface IAssetData {
@@ -164,5 +165,22 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
         name: 'BNB'
       }
     }
-  }
+  },
+  [ChainId.Eon]: {
+    chainId: ChainId.Eon,
+    name: 'EON',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Eon, 'svg'),
+    env: 'mainnet',
+    scanLink: 'eon-explorer.horizenlabs.io',
+    scanName: 'ZenSystem',
+    coingecko: '',
+    rpc: {
+      rpcUrl: 'https://rpc.ankr.com/horizen_eon/',
+      nativeCurrency: {
+        symbol: 'ZEN',
+        name: 'ZEN'
+      }
+    }
+  },
 };

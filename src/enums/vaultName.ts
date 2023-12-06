@@ -103,7 +103,16 @@ export enum VaultName {
   BSC_THENA_ETH_THE = 'bsc_thena_eth_the',
   BSC_THENA_USDC_THE = 'bsc_thena_usdc_the',
   BSC_THENA_USDT_THE = 'bsc_thena_usdt_the',
+  BSC_THENA_USDT_XCAD = 'bsc_thena_usdt_xcad',
   BSC_THENA_WBNB_THE = 'bsc_thena_wbnb_the',
+  // Eon
+  EON_ASCENT_USDC_WZEN = 'eon_ascent_usdc_wzen',
+  EON_ASCENT_USDT_WZEN = 'eon_ascent_usdt_wzen',
+  EON_ASCENT_WAVAX_WZEN = 'eon_ascent_wavax_wzen',
+  EON_ASCENT_WBTC_WZEN = 'eon_ascent_wbtc_wzen',
+  EON_ASCENT_WETH_USDC = 'eon_ascent_weth_usdc',
+  EON_ASCENT_WETH_WBTC = 'eon_ascent_weth_wbtc',
+  EON_ASCENT_WETH_WZEN = 'eon_ascent_weth_wzen',
   // Polygon
   POLYGON_A3A_EURO3 = 'pol_a3a_euro3',
   POLYGON_BAL_WETH = 'pol_bal_weth',
@@ -298,7 +307,16 @@ export enum VaultTableName {
   BSC_THENA_ETH_THE = 'bsc_thena_eth_the',
   BSC_THENA_USDC_THE = 'bsc_thena_usdc_the',
   BSC_THENA_USDT_THE = 'bsc_thena_usdt_the',
+  BSC_THENA_USDT_XCAD = 'bsc_thena_usdt_xcad',
   BSC_THENA_WBNB_THE = 'bsc_thena_wbnb_the',
+  // Eon
+  EON_ASCENT_USDC_WZEN = 'eon_ascent_usdc_wzen',
+  EON_ASCENT_USDT_WZEN = 'eon_ascent_usdt_wzen',
+  EON_ASCENT_WAVAX_WZEN = 'eon_ascent_wavax_wzen',
+  EON_ASCENT_WBTC_WZEN = 'eon_ascent_wbtc_wzen',
+  EON_ASCENT_WETH_USDC = 'eon_ascent_weth_usdc',
+  EON_ASCENT_WETH_WBTC = 'eon_ascent_weth_wbtc',
+  EON_ASCENT_WETH_WZEN = 'eon_ascent_weth_wzen',
   // Polygon
   POLYGON_A3A_EURO3 = 'pol_a3a_euro3',
   POLYGON_BAL_WETH = 'pol_bal_weth',

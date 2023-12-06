@@ -13,7 +13,7 @@ import {
   getVBTCPrice,
   getXICHIPrice
 } from '../crypto/prices';
-import { lookUpTokenPrices } from '../external/coinGecko';
+import { getTokenPriceById, lookUpTokenPrices } from '../external/coinGecko';
 import { getErc20Contract } from './contracts';
 import { getProvider } from '../crypto/providers';
 import { AddressName } from '../enums/addressName';
@@ -49,6 +49,8 @@ export function tokenNameWithChainPrefix(tokenName: TokenName | string, chainId:
       return `mum_${tokenName}`
     case ChainId.Bsc:
       return `bsc_${tokenName}`
+    case ChainId.Eon:
+      return `eon_${tokenName}`
     default:
       return tokenName
     }
@@ -286,6 +288,49 @@ export async function getTokenMetrics(
           if (opts.tokenPrices && lmrAddress && lmrAddress in opts.tokenPrices) {
             price = opts.tokenPrices[lmrAddress].usd;
             priceChange = opts.tokenPrices[lmrAddress].usd_24h_change;
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
+          }
+          break;
+        case TokenName.WBTC:
+          const wbtcAddress = chainId !== ChainId.Eon 
+            ? token.address.toLowerCase()
+            : TOKENS[TokenName.WBTC]![ChainId.Mainnet]?.address?.toLowerCase();
+          if (opts.tokenPrices && wbtcAddress && wbtcAddress in opts.tokenPrices) {
+            price = opts.tokenPrices[wbtcAddress].usd;
+            priceChange = opts.tokenPrices[wbtcAddress].usd_24h_change;
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
+          }
+          break;
+        case TokenName.WAVAX:
+          const wavaxAddress = chainId !== ChainId.Eon 
+            ? token.address.toLowerCase()
+            : TOKENS[TokenName.WAVAX]![ChainId.Avalanche]?.address?.toLowerCase();
+          if (opts.tokenPrices && wavaxAddress && wavaxAddress in opts.tokenPrices) {
+            price = opts.tokenPrices[wavaxAddress].usd;
+            priceChange = opts.tokenPrices[wavaxAddress].usd_24h_change;
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
+          }
+          break;
+        case TokenName.WETH:
+          const tAddress = chainId !== ChainId.Eon 
+            ? token.address.toLowerCase()
+            : wethAddress;
+          if (opts.tokenPrices && tAddress && tAddress in opts.tokenPrices) {
+            price = opts.tokenPrices[tAddress].usd;
+            priceChange = opts.tokenPrices[tAddress].usd_24h_change;
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
+          }
+          break;
+        case TokenName.WZEN:
+          const zenCoingeckoId = 'zencash';
+          const zenPrice = await getTokenPriceById(zenCoingeckoId, cg_key);
+          if (zenPrice) {
+            price = zenPrice[zenCoingeckoId].usd;
+            priceChange = zenPrice[zenCoingeckoId].usd_24h_change;
           } else {
             throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
           }

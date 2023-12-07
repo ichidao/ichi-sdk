@@ -5,7 +5,7 @@ export const Apis = {
   ONE_INCH_POOL: 'https://governance.1inch.exchange/v1.1/farming/pools', // OLD: '1INCH_POOL'
   SUBGRAPH_FARMING_V2: 'https://api.thegraph.com/subgraphs/name/ichi-org/farmv2',
   SUBGRAPH_RISK_HARBOR: 'https://api.thegraph.com/subgraphs/name/risk-harbor/v2-mainnet',
-  SUBGRAPH_V1_MAINNET: 'https://api.thegraph.com/subgraphs/name/ichi-org/v1',
+  SUBGRAPH_V1_MAINNET: 'https://api.thegraph.com/subgraphs/name/ichi-org/mainnet-v1',
   SUBGRAPH_V1_POLYGON: 'https://api.thegraph.com/subgraphs/name/ichi-org/polygon-v1',
   SUBGRAPH_V1_ARBITRUM: 'https://api.thegraph.com/subgraphs/name/ichi-org/arbitrum-v1',
   SUBGRAPH_V1_ARBITRUM_RAMSES: 'https://api.thegraph.com/subgraphs/name/ichi-org/arbitrum-v1-ramses',

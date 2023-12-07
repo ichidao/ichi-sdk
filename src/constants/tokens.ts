@@ -136,7 +136,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.A3A]: {
     [ChainId.Polygon]: {
       tokenName: TokenName.A3A,
-      tableName: TokenName.A3A,
+      tableName: `pol_${TokenName.A3A}`,
       address: '0x58c7B2828e7F2B2CaA0cC7fEef242fA3196d03df',
       decimals: 18,
       displayName: 'A3A',
@@ -151,6 +151,17 @@ export const TOKENS: TokenMapping = {
       tokenName: TokenName.AAVE,
       tableName: TokenName.AAVE,
       address: '0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9',
+      decimals: 18,
+      displayName: 'AAVE',
+      symbol: 'AAVE',
+      fullName: 'Aave Token',
+      isOneToken: false,
+      atCoingecko: true
+    },
+    [ChainId.Polygon]: {
+      tokenName: TokenName.AAVE,
+      tableName: `pol_${TokenName.AAVE}`,
+      address: '0xD6DF932A45C0f255f85145f286eA0b292B21C90B',
       decimals: 18,
       displayName: 'AAVE',
       symbol: 'AAVE',
@@ -533,7 +544,7 @@ export const TOKENS: TokenMapping = {
   [TokenName.EURO3]: {
     [ChainId.Polygon]: {
       tokenName: TokenName.EURO3,
-      tableName: TokenName.EURO3,
+      tableName: `pol_${TokenName.EURO3}`,
       address: '0xA0e4c84693266a9d3BBef2f394B33712c76599Ab',
       decimals: 18,
       displayName: 'EURO3',
@@ -775,7 +786,7 @@ export const TOKENS: TokenMapping = {
     },
     [ChainId.Polygon]: {
       tokenName: TokenName.JRT,
-      tableName: TokenName.JRT,
+      tableName: `pol_${TokenName.JRT}`,
       address: '0x596eBE76e2DB4470966ea395B0d063aC6197A8C5',
       decimals: 18,
       displayName: 'JRT',
@@ -862,7 +873,7 @@ export const TOKENS: TokenMapping = {
     },
     [ChainId.Arbitrum]: {
       tokenName: TokenName.LMR,
-      tableName: TokenName.LMR,
+      tableName: `arbitrum_${TokenName.LMR}`,
       address: '0x0FC0c323Cf76E188654D63D62e668caBeC7a525b',
       decimals: 8,
       displayName: 'LMR',
@@ -881,6 +892,19 @@ export const TOKENS: TokenMapping = {
       displayName: 'MATICX',
       symbol: 'MATICX',
       fullName: 'Liquid Staking Matic',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
+  [TokenName.MET]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.MET,
+      tableName: TokenName.MET,
+      address: '0x2Ebd53d035150f328bd754D6DC66B99B0eDB89aa',
+      decimals: 18,
+      displayName: 'MET',
+      symbol: 'MET',
+      fullName: 'Metronome2',
       isOneToken: false,
       atCoingecko: true
     }
@@ -1017,7 +1041,7 @@ export const TOKENS: TokenMapping = {
     },
     [ChainId.Polygon]: {
       tokenName: TokenName.OXT,
-      tableName: TokenName.OXT,
+      tableName: `pol_${TokenName.OXT}`,
       address: '0x9880e3dDA13c8e7D4804691A45160102d31F6060',
       decimals: 18,
       displayName: 'OXT',
@@ -1090,6 +1114,30 @@ export const TOKENS: TokenMapping = {
       isOneToken: false,
       atCoingecko: true,
       targetVaultStrength: 0.1
+    }
+  },
+  [TokenName.QUICK]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.QUICK,
+      tableName: TokenName.QUICK,
+      address: '0xd2bA23dE8a19316A638dc1e7a9ADdA1d74233368',
+      decimals: 18,
+      displayName: 'QUICK',
+      symbol: 'QUICK',
+      fullName: 'QuickSwap',
+      isOneToken: false,
+      atCoingecko: true,
+    },
+    [ChainId.Polygon]: {
+      tokenName: TokenName.QUICK,
+      tableName: `pol_${TokenName.QUICK}`,
+      address: '0xB5C064F955D8e7F38fE0460C556a72987494eE17',
+      decimals: 18,
+      displayName: 'QUICK',
+      symbol: 'QUICK',
+      fullName: 'QuickSwap',
+      isOneToken: false,
+      atCoingecko: true,
     }
   },
   [TokenName.RAM]: {
@@ -1306,7 +1354,7 @@ export const TOKENS: TokenMapping = {
       symbol: 'USDC',
       fullName: 'USD Coin',
       isOneToken: false,
-      atCoingecko: false
+      atCoingecko: true
     },
     [ChainId.Polygon]: {
       tokenName: TokenName.USDC,
@@ -1316,7 +1364,7 @@ export const TOKENS: TokenMapping = {
       displayName: 'USDC',
       symbol: 'USDC',
       fullName: 'USD Coin',
-      atCoingecko: false,
+      atCoingecko: true,
       isOneToken: false
     },
     [ChainId.Arbitrum]: {
@@ -1327,7 +1375,7 @@ export const TOKENS: TokenMapping = {
       displayName: 'USDC',
       symbol: 'USDC',
       fullName: 'USD Coin',
-      atCoingecko: false,
+      atCoingecko: true,
       isOneToken: false
     },
     [ChainId.Bsc]: {
@@ -1335,6 +1383,17 @@ export const TOKENS: TokenMapping = {
       tableName: `bsc_${TokenName.USDC}`,
       address: '0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d',
       decimals: 18,
+      displayName: 'USDC',
+      symbol: 'USDC',
+      fullName: 'USD Coin',
+      atCoingecko: true,
+      isOneToken: false
+    },
+    [ChainId.Eon]: {
+      tokenName: TokenName.USDC,
+      tableName: `eon_${TokenName.USDC}`,
+      address: '0xCc44eB064CD32AAfEEb2ebb2a47bE0B882383b53',
+      decimals: 6,
       displayName: 'USDC',
       symbol: 'USDC',
       fullName: 'USD Coin',
@@ -1386,7 +1445,18 @@ export const TOKENS: TokenMapping = {
       fullName: 'Tether USD',
       isOneToken: false,
       atCoingecko: true
-    }
+    },
+    [ChainId.Eon]: {
+      tokenName: TokenName.USDT,
+      tableName: `eon_${TokenName.USDT}`,
+      address: '0xA167bcAb6791304EDa9B636C8beEC75b3D2829E6',
+      decimals: 6,
+      displayName: 'USDT',
+      symbol: 'USDT',
+      fullName: 'Tether USD',
+      isOneToken: false,
+      atCoingecko: true
+    },
   },
   [TokenName.VBTC]: {
     [ChainId.Mainnet]: {
@@ -1400,6 +1470,30 @@ export const TOKENS: TokenMapping = {
       isOneToken: false,
       atCoingecko: false
     }
+  },
+  [TokenName.WAVAX]: {
+    [ChainId.Avalanche]: {
+      tokenName: TokenName.WAVAX,
+      tableName: `avalanche_${TokenName.WAVAX}`,
+      address: '0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7',
+      decimals: 18,
+      displayName: 'WAVAX',
+      symbol: 'WAVAX',
+      fullName: 'Wrapped AVAX',
+      isOneToken: false,
+      atCoingecko: true
+    },
+    [ChainId.Eon]: {
+      tokenName: TokenName.WAVAX,
+      tableName: `eon_${TokenName.WAVAX}`,
+      address: '0x6318374DFb468113E06d3463ec5Ed0B6Ae0F0982',
+      decimals: 18,
+      displayName: 'WAVAX',
+      symbol: 'WAVAX',
+      fullName: 'Wrapped AVAX',
+      isOneToken: false,
+      atCoingecko: false
+    },
   },
   [TokenName.WBNB]: {
     [ChainId.Bsc]: {
@@ -1434,7 +1528,7 @@ export const TOKENS: TokenMapping = {
       displayName: 'wBTC',
       symbol: 'wBTC',
       fullName: 'Wrapped Bitcoin',
-      atCoingecko: false,
+      atCoingecko: true,
       isOneToken: false
     },
     [ChainId.Arbitrum]: {
@@ -1445,9 +1539,20 @@ export const TOKENS: TokenMapping = {
       displayName: 'wBTC',
       symbol: 'wBTC',
       fullName: 'Wrapped Bitcoin',
+      atCoingecko: true,
+      isOneToken: false
+    },
+    [ChainId.Eon]: {
+      tokenName: TokenName.WBTC,
+      tableName: `eon_${TokenName.WBTC}`,
+      address: '0x1d7fb99AED3C365B4DEf061B7978CE5055Dfc1e7',
+      decimals: 8,
+      displayName: 'wBTC',
+      symbol: 'wBTC',
+      fullName: 'Wrapped Bitcoin',
       atCoingecko: false,
       isOneToken: false
-    }
+    },
   },
   [TokenName.WEN]: {
     [ChainId.Mainnet]: {
@@ -1494,7 +1599,18 @@ export const TOKENS: TokenMapping = {
       symbol: 'wETH',
       fullName: 'Wrapped Ether',
       isOneToken: false,
-      atCoingecko: false
+      atCoingecko: true
+    },
+    [ChainId.Eon]: {
+      tokenName: TokenName.WETH,
+      tableName: `eon_${TokenName.WETH}`,
+      address: '0x2c2E0B0c643aB9ad03adBe9140627A645E99E054',
+      decimals: 18,
+      displayName: 'wETH',
+      symbol: 'wETH',
+      fullName: 'Wrapped Ether',
+      isOneToken: false,
+      atCoingecko: true
     },
     [ChainId.Polygon]: {
       tokenName: TokenName.WETH,
@@ -1505,7 +1621,7 @@ export const TOKENS: TokenMapping = {
       symbol: 'wETH',
       fullName: 'Wrapped Ether',
       isOneToken: false,
-      atCoingecko: false
+      atCoingecko: true
     }
   },
   [TokenName.WMATIC]: {
@@ -1568,6 +1684,43 @@ export const TOKENS: TokenMapping = {
       isOneToken: false,
       atCoingecko: true
     }
+  },
+  [TokenName.WZEN]: {
+    [ChainId.Eon]: {
+      tokenName: TokenName.WZEN,
+      tableName: `eon_${TokenName.WZEN}`,
+      address: '0xF5cB8652a84329A2016A386206761f455bCEDab6',
+      decimals: 18,
+      displayName: 'WZEN',
+      symbol: 'WZEN',
+      fullName: 'Wrapped ZEN',
+      isOneToken: false,
+      atCoingecko: false
+    },
+  },
+  [TokenName.XCAD]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.XCAD,
+      tableName: TokenName.XCAD,
+      address: '0x7659ce147d0e714454073a5dd7003544234b6aa0',
+      decimals: 18,
+      displayName: 'XCAD',
+      symbol: 'XCAD',
+      fullName: 'XCAD Token',
+      isOneToken: false,
+      atCoingecko: true
+    },
+    [ChainId.Bsc]: {
+      tokenName: TokenName.XCAD,
+      tableName: `bsc_${TokenName.XCAD}`,
+      address: '0xa026Ad2ceDa16Ca5FC28fd3C72f99e2C332c8a26',
+      decimals: 18,
+      displayName: 'XCAD',
+      symbol: 'XCAD',
+      fullName: 'XCAD Token',
+      isOneToken: false,
+      atCoingecko: true
+    },
   },
   [TokenName.YFI]: {
     [ChainId.Mainnet]: {

@@ -51,6 +51,10 @@ export function tokenNameWithChainPrefix(tokenName: TokenName | string, chainId:
       return `bsc_${tokenName}`
     case ChainId.Eon:
       return `eon_${tokenName}`
+    case ChainId.Hedera:
+      return `hedera_${tokenName}`
+    case ChainId.zkSync:
+      return `zksync_${tokenName}`
     default:
       return tokenName
     }
@@ -249,6 +253,7 @@ export async function getTokenMetrics(
       switch (tokenName) {
         case TokenName.USDT:
         case TokenName.USDC:
+        case TokenName.USDC2:
         case TokenName.DAI:
         case TokenName.CASH:
         case TokenName.HOME:
@@ -358,6 +363,24 @@ export async function getTokenMetrics(
               VaultName.POLYGON_WEN_WETH,
               polygonProvider,
               ChainId.Polygon,
+              wethPrice
+              )
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}`);
+          }
+          break;
+        case TokenName.ABOND:
+          const mainnetProvider = await getProvider(ChainId.Mainnet);
+          if (!mainnetProvider) {
+            throw new Error('Could not establish Mainnet provider');
+          }
+
+          if (opts.tokenPrices && wethAddress && wethAddress in opts.tokenPrices) {
+            wethPrice = opts.tokenPrices[wethAddress].usd;
+            price = await getPriceFromWethVault( 
+              VaultName.WETH_ABOND,
+              mainnetProvider,
+              ChainId.Mainnet,
               wethPrice
               )
           } else {

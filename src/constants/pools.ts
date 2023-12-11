@@ -18,7 +18,7 @@ import {
   MumbaiPoolNumberValues, 
   PolygonPoolNumbers, 
   PolygonPoolNumberValues, 
-  PoolNumberValues } from '../enums/poolNumber';
+} from '../enums/poolNumber';
 
 type TPoolMapping = { [vaultName in PoolName]: PartialRecord<ChainId, Pool> };
 // NOTE: To some degree it's more logical to namespace with Network then PoolName, but actually
@@ -272,6 +272,7 @@ export const Pools: TPools = {
       MainnetPoolNumbers.USDC_VAULT,
       MainnetPoolNumbers.WBTC_VAULT,
       MainnetPoolNumbers.WBTC_VAULT_LEGACY,
+      MainnetPoolNumbers.WETH_ABOND_VAULT,
       MainnetPoolNumbers.WETH_VAULT,
       MainnetPoolNumbers.WNXM_VAULT,
       MainnetPoolNumbers.WNXM_VAULT_LEGACY,
@@ -311,12 +312,14 @@ export const Pools: TPools = {
       // QuickSwap
       PolygonPoolNumbers.QUICKSWAP_AAVE_WETH_VAULT,
       PolygonPoolNumbers.QUICKSWAP_LINK_WETH_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_USDC_ABOND_VAULT,
       PolygonPoolNumbers.QUICKSWAP_USDC_QUICK_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WBTC_USDC_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WBTC_WETH_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WETH_ICHI_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WETH_QUICK_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WETH_USDT_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_WMATIC_ABOND_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WMATIC_QUICK_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WMATIC_USDT_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WMATIC_WETH_VAULT,
@@ -737,12 +740,14 @@ export const Pools: TPools = {
       // QuickSwap
       PolygonPoolNumbers.QUICKSWAP_AAVE_WETH_VAULT,
       PolygonPoolNumbers.QUICKSWAP_LINK_WETH_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_USDC_ABOND_VAULT,
       PolygonPoolNumbers.QUICKSWAP_USDC_QUICK_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WBTC_USDC_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WBTC_WETH_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WETH_ICHI_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WETH_QUICK_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WETH_USDT_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_WMATIC_ABOND_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WMATIC_QUICK_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WMATIC_USDT_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WMATIC_WETH_VAULT,
@@ -834,12 +839,14 @@ export const Pools: TPools = {
       // QuickSwap
       PolygonPoolNumbers.QUICKSWAP_AAVE_WETH_VAULT,
       PolygonPoolNumbers.QUICKSWAP_LINK_WETH_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_USDC_ABOND_VAULT,
       PolygonPoolNumbers.QUICKSWAP_USDC_QUICK_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WBTC_USDC_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WBTC_WETH_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WETH_ICHI_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WETH_QUICK_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WETH_USDT_VAULT,
+      PolygonPoolNumbers.QUICKSWAP_WMATIC_ABOND_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WMATIC_QUICK_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WMATIC_USDT_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WMATIC_WETH_VAULT,

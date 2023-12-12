@@ -182,6 +182,17 @@ export const TOKENS: TokenMapping = {
       isOneToken: false,
       atCoingecko: false
     },
+    [ChainId.Bsc]: {
+      tokenName: TokenName.ABOND,
+      tableName: `bsc_${TokenName.ABOND}`,
+      address: '0x34294AfABCbaFfc616ac6614F6d2e17260b78BEd',
+      decimals: 18,
+      displayName: 'ABOND',
+      symbol: 'ABOND',
+      fullName: 'ApeBond',
+      isOneToken: false,
+      atCoingecko: false
+    },
     [ChainId.Polygon]: {
       tokenName: TokenName.ABOND,
       tableName: `pol_${TokenName.ABOND}`,
@@ -192,7 +203,7 @@ export const TOKENS: TokenMapping = {
       fullName: 'ApeBond',
       isOneToken: false,
       atCoingecko: false
-    }
+    },
   },
   [TokenName.AGEUR]: {
     [ChainId.Mainnet]: {
@@ -1424,6 +1435,17 @@ export const TOKENS: TokenMapping = {
       atCoingecko: false,
       isOneToken: false
     },
+    [ChainId.zkSync]: {
+      tokenName: TokenName.USDC,
+      tableName: `zksync_${TokenName.USDC}`,
+      address: '0x3355df6D4c9C3035724Fd0e3914dE96A5a83aaf4',
+      decimals: 6,
+      displayName: 'USDC',
+      symbol: 'USDC',
+      fullName: 'USD Coin',
+      atCoingecko: false,
+      isOneToken: false
+    },
     [ChainId.Mumbai]: {
       tokenName: TokenName.USDC,
       tableName: `mum_${TokenName.USDC}`,
@@ -1493,6 +1515,17 @@ export const TOKENS: TokenMapping = {
       fullName: 'Tether USD',
       isOneToken: false,
       atCoingecko: true
+    },
+    [ChainId.zkSync]: {
+      tokenName: TokenName.USDT,
+      tableName: `zksync_${TokenName.USDT}`,
+      address: '0x493257fD37EDB34451f62EDf8D2a0C418852bA4C',
+      decimals: 6,
+      displayName: 'USDT',
+      symbol: 'USDT',
+      fullName: 'Tether USD',
+      isOneToken: false,
+      atCoingecko: false
     },
   },
   [TokenName.VBTC]: {
@@ -1659,7 +1692,18 @@ export const TOKENS: TokenMapping = {
       fullName: 'Wrapped Ether',
       isOneToken: false,
       atCoingecko: true
-    }
+    },
+    [ChainId.zkSync]: {
+      tokenName: TokenName.WETH,
+      tableName: `zksync_${TokenName.WETH}`,
+      address: '0x5AEa5775959fBC2557Cc8789bC1bf90A239D9a91',
+      decimals: 18,
+      displayName: 'wETH',
+      symbol: 'wETH',
+      fullName: 'Wrapped Ether',
+      isOneToken: false,
+      atCoingecko: false
+    },
   },
   [TokenName.WMATIC]: {
     [ChainId.Mainnet]: {

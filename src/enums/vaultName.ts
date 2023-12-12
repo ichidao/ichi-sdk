@@ -1,4 +1,5 @@
 export enum VaultName {
+  // Mainnet
   '1INCH' = '1inch',
   AAVE = 'aave',
   ALLY = 'ally',
@@ -66,6 +67,8 @@ export enum VaultName {
   ICHI_ETH = 'ichi_eth',
   ICHI_WBTC = 'ichi_wbtc',
   ICHI_USDC = 'ichi_usdc',
+  // Mainnet PancakeSwap
+  PANCAKESWAP_WETH_USDT = 'pancakeswap_weth_usdt',
   // Mumbai
   MUMBAI_ONEBTC_ICHI = 'mumbai_onebtc_ichi',
   // Arbitrum
@@ -103,8 +106,10 @@ export enum VaultName {
   BSC_THENA_BTCB_THE = 'bsc_thena_btcb_the',
   BSC_THENA_ETH_THE = 'bsc_thena_eth_the',
   BSC_THENA_USDC_THE = 'bsc_thena_usdc_the',
+  BSC_THENA_USDT_ABOND = 'bsc_thena_usdt_abond',
   BSC_THENA_USDT_THE = 'bsc_thena_usdt_the',
   BSC_THENA_USDT_XCAD = 'bsc_thena_usdt_xcad',
+  BSC_THENA_WBNB_ABOND = 'bsc_thena_wbnb_abond',
   BSC_THENA_WBNB_THE = 'bsc_thena_wbnb_the',
   // Eon
   EON_ASCENT_USDC_WZEN = 'eon_ascent_usdc_wzen',
@@ -201,6 +206,9 @@ export enum VaultName {
   RETRO_WMATIC_USDC = 'pol_retro_wmatic_usdc',
   RETRO_WMATIC_USDC_05 = 'pol_retro_wmatic_usdc_05',
   RETRO_WMATIC_WETH = 'pol_retro_wmatic_weth',
+  // zkSync PancakeSwap
+  ZKSYNC_PANCAKESWAP_USDT_WETH = 'zksync_pancakeswap_usdt_weth',
+  ZKSYNC_PANCAKESWAP_WETH_USDC = 'zksync_pancakeswap_weth_usdc',
 }
 
 export enum VaultTableName {
@@ -273,6 +281,8 @@ export enum VaultTableName {
   ICHI_ETH = 'ichi_eth',
   ICHI_WBTC = 'ichi_wbtc',
   ICHI_USDC = 'ichi_usdc',
+  // Mainnet PancakeSwap
+  PANCAKESWAP_WETH_USDT = 'pancakeswap_weth_usdt',
   // Mumbai
   MUMBAI_ONEBTC_ICHI = 'mumbai_onebtc_ichi',
   // Arbitrum
@@ -310,8 +320,10 @@ export enum VaultTableName {
   BSC_THENA_BTCB_THE = 'bsc_thena_btcb_the',
   BSC_THENA_ETH_THE = 'bsc_thena_eth_the',
   BSC_THENA_USDC_THE = 'bsc_thena_usdc_the',
+  BSC_THENA_USDT_ABOND = 'bsc_thena_usdt_abond',
   BSC_THENA_USDT_THE = 'bsc_thena_usdt_the',
   BSC_THENA_USDT_XCAD = 'bsc_thena_usdt_xcad',
+  BSC_THENA_WBNB_ABOND = 'bsc_thena_wbnb_abond',
   BSC_THENA_WBNB_THE = 'bsc_thena_wbnb_the',
   // Eon
   EON_ASCENT_USDC_WZEN = 'eon_ascent_usdc_wzen',
@@ -408,6 +420,9 @@ export enum VaultTableName {
   RETRO_WMATIC_USDC = 'pol_retro_wmatic_usdc',
   RETRO_WMATIC_USDC_05 = 'pol_retro_wmatic_usdc_05',
   RETRO_WMATIC_WETH = 'pol_retro_wmatic_weth',
+  // zkSync PancakeSwap
+  ZKSYNC_PANCAKESWAP_USDT_WETH = 'zksync_pancakeswap_usdt_weth',
+  ZKSYNC_PANCAKESWAP_WETH_USDC = 'zksync_pancakeswap_weth_usdc',
 }
 
 export type VaultNames = keyof typeof VaultName;

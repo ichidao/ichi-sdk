@@ -92,6 +92,7 @@ export enum MainnetPoolNumbers {
   WNXM_VAULT_LEGACY = 1021,
   WBTC_VAULT_LEGACY = 1022,
   MET_WETH_VAULT = 7007,
+  WETH_ABOND_VAULT = 7008,
 }
 
 export enum PolygonPoolNumbers {
@@ -177,6 +178,8 @@ export enum PolygonPoolNumbers {
   QUICKSWAP_WMATIC_QUICK_VAULT = 7573,
   QUICKSWAP_WMATIC_USDT_VAULT = 7574,
   QUICKSWAP_WMATIC_WETH_VAULT = 7575,
+  QUICKSWAP_USDC_ABOND_VAULT = 7576,
+  QUICKSWAP_WMATIC_ABOND_VAULT = 7577,
 }
 
 export enum MumbaiPoolNumbers {

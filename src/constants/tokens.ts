@@ -170,6 +170,30 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.ABOND]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.ABOND,
+      tableName: TokenName.ABOND,
+      address: '0xe6828D65bf5023AE1851D90D8783Cc821ba7eeE1',
+      decimals: 18,
+      displayName: 'ABOND',
+      symbol: 'ABOND',
+      fullName: 'ApeBond',
+      isOneToken: false,
+      atCoingecko: false
+    },
+    [ChainId.Polygon]: {
+      tokenName: TokenName.ABOND,
+      tableName: `pol_${TokenName.ABOND}`,
+      address: '0xe6828D65bf5023AE1851D90D8783Cc821ba7eeE1',
+      decimals: 18,
+      displayName: 'ABOND',
+      symbol: 'ABOND',
+      fullName: 'ApeBond',
+      isOneToken: false,
+      atCoingecko: false
+    }
+  },
   [TokenName.AGEUR]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.AGEUR,
@@ -1363,7 +1387,7 @@ export const TOKENS: TokenMapping = {
       decimals: 6,
       displayName: 'USDC',
       symbol: 'USDC',
-      fullName: 'USD Coin',
+      fullName: 'USD Coin (PoS)',
       atCoingecko: true,
       isOneToken: false
     },
@@ -1411,6 +1435,19 @@ export const TOKENS: TokenMapping = {
       displayName: 'USDC',
       isOneToken: false
     }
+  },
+  [TokenName.USDC2]: {
+    [ChainId.Polygon]: {
+      tokenName: TokenName.USDC2,
+      tableName: `pol_${TokenName.USDC2}`,
+      address: '0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359',
+      decimals: 6,
+      displayName: 'USDC',
+      symbol: 'USDC',
+      fullName: 'USD Coin',
+      atCoingecko: false,
+      isOneToken: false
+    },
   },
   [TokenName.USDT]: {
     [ChainId.Polygon]: {

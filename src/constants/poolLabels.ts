@@ -453,6 +453,20 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+    [MainnetPoolNumbers.WETH_ABOND_VAULT]: {
+      name: 'WETH-ABOND Vault',
+      poolNumber: MainnetPoolNumbers.WETH_ABOND_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.WETH_ABOND, ChainId.Mainnet),
+      isHodl: true,
+      vaultName: VaultName.WETH_ABOND,
+      vaultAddress: getVaultAddress(VaultName.WETH_ABOND, ChainId.Mainnet),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
     [MainnetPoolNumbers.WETH_VAULT]: {
       name: 'wETH Vault',
       poolNumber: MainnetPoolNumbers.WETH_VAULT,
@@ -2535,6 +2549,20 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+    [PolygonPoolNumbers.QUICKSWAP_USDC_ABOND_VAULT]: {
+      name: 'USDC-ABOND Vault',
+      poolNumber: PolygonPoolNumbers.QUICKSWAP_USDC_ABOND_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.POLYGON_QUICKSWAP_USDC_ABOND, ChainId.Polygon),
+      isHodl: true,
+      vaultName: VaultName.POLYGON_QUICKSWAP_USDC_ABOND, 
+      vaultAddress: getVaultAddress(VaultName.POLYGON_QUICKSWAP_USDC_ABOND, ChainId.Polygon),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
     [PolygonPoolNumbers.QUICKSWAP_USDC_QUICK_VAULT]: {
       name: 'USDC-QUICK Vault',
       poolNumber: PolygonPoolNumbers.QUICKSWAP_USDC_QUICK_VAULT,
@@ -2616,6 +2644,20 @@ export const PoolLabels: TPoolLabels = {
       isHodl: true,
       vaultName: VaultName.POLYGON_QUICKSWAP_WETH_USDT, 
       vaultAddress: getVaultAddress(VaultName.POLYGON_QUICKSWAP_WETH_USDT, ChainId.Polygon),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [PolygonPoolNumbers.QUICKSWAP_WMATIC_ABOND_VAULT]: {
+      name: 'WMATIC-ABOND Vault',
+      poolNumber: PolygonPoolNumbers.QUICKSWAP_WMATIC_ABOND_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.POLYGON_QUICKSWAP_WMATIC_ABOND, ChainId.Polygon),
+      isHodl: true,
+      vaultName: VaultName.POLYGON_QUICKSWAP_WMATIC_ABOND, 
+      vaultAddress: getVaultAddress(VaultName.POLYGON_QUICKSWAP_WMATIC_ABOND, ChainId.Polygon),
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },

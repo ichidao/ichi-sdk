@@ -183,7 +183,7 @@ const getRpcEnvName = (chainId: ChainId): EnvUtils.EnvName => {
       return EnvUtils.EnvName.HEDERA_RPC_HOSTS;
     case ChainId.Polygon:
       return EnvUtils.EnvName.POLYGON_RPC_HOSTS;
-    case ChainId.Eon:
+    case ChainId.zkSync:
       return EnvUtils.EnvName.ZKSYNC_RPC_HOSTS;
     case ChainId.Arbitrum:
       return EnvUtils.EnvName.ARBITRUM_RPC_HOSTS;

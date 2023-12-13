@@ -13,6 +13,7 @@ export const Apis = {
   SUBGRAPH_V1_POLYGON_RETRO: 'https://api.thegraph.com/subgraphs/name/ichi-org/polygon-v1-retro',
   SUBGRAPH_V1_BSC_PANCAKESWAP: 'https://api.thegraph.com/subgraphs/name/ichi-org/bnb-v1-pancakeswap',
   SUBGRAPH_V1_BSC_THENA: 'https://api.thegraph.com/subgraphs/name/ichi-org/bnb-v1-thena',
+  SUBGRAPH_V1_ZKSYNC: 'https://api.studio.thegraph.com/query/61136/zksync-v1-pancakeswap/version/latest',
   BANCOR_V3_API: 'https://api-v3.bancor.network/pools',
   BSC_RPC_HOST: 'https://bsc-dataseed1.binance.org:443'
 };

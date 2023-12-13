@@ -7,6 +7,8 @@ export type Token = {
     `pol_${TokenName}` |
     `mum_${TokenName}` |
     `bsc_${TokenName}` |
+    `hedera_${TokenName}` |
+    `zksync_${TokenName}` |
     `arbitrum_${TokenName}` |
     `avalanche_${TokenName}`|
     `eon_${TokenName}`;

@@ -17,7 +17,9 @@ import {
   MumbaiPoolNumbers, 
   MumbaiPoolNumberValues, 
   PolygonPoolNumbers, 
-  PolygonPoolNumberValues, 
+  PolygonPoolNumberValues,
+  ZkSyncPoolNumbers,
+  ZkSyncPoolNumberValues, 
 } from '../enums/poolNumber';
 
 type TPoolMapping = { [vaultName in PoolName]: PartialRecord<ChainId, Pool> };
@@ -157,6 +159,7 @@ type TPools = {
     [ChainId.Bsc]: BscPoolNumberValues[];
     [ChainId.Eon]: EonPoolNumberValues[];
     [ChainId.Polygon]: PolygonPoolNumberValues[];
+    [ChainId.zkSync]: ZkSyncPoolNumberValues[];
     [ChainId.Mumbai]: MumbaiPoolNumberValues[];
   };
 };
@@ -185,6 +188,7 @@ export const Pools: TPools = {
     [ChainId.Avalanche]: [],
     [ChainId.Bsc]: [],
     [ChainId.Eon]: [],
+    [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [],
   },
   [PoolGroupName.DEPOSIT_POOLS]: {
@@ -204,6 +208,7 @@ export const Pools: TPools = {
     [ChainId.Avalanche]: [],
     [ChainId.Bsc]: [],
     [ChainId.Eon]: [],
+    [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [],
   },
   // these vaults are processed by api-updater. 
@@ -278,6 +283,8 @@ export const Pools: TPools = {
       MainnetPoolNumbers.WNXM_VAULT_LEGACY,
       MainnetPoolNumbers.YFI_VAULT,
       MainnetPoolNumbers.ZRX_VAULT,
+      // PancakeSwap
+      MainnetPoolNumbers.PANCAKESWAP_WETH_USDT_VAULT,
     ],
     [ChainId.Polygon]: [
       PolygonPoolNumbers.A3A_EURO3_VAULT, 
@@ -403,8 +410,10 @@ export const Pools: TPools = {
       BscPoolNumbers.THENA_BTCB_THE_VAULT,
       BscPoolNumbers.THENA_ETH_THE_VAULT,
       BscPoolNumbers.THENA_USDC_THE_VAULT,
+      BscPoolNumbers.THENA_USDT_ABOND_VAULT,
       BscPoolNumbers.THENA_USDT_THE_VAULT,
       BscPoolNumbers.THENA_USDT_XCAD_VAULT,
+      BscPoolNumbers.THENA_WBNB_ABOND_VAULT,
       BscPoolNumbers.THENA_WBNB_THE_VAULT,
     ],
     [ChainId.Eon]: [
@@ -415,6 +424,10 @@ export const Pools: TPools = {
       EonPoolNumbers.ASCENT_WETH_USDC_VAULT,
       EonPoolNumbers.ASCENT_WETH_WBTC_VAULT,
       EonPoolNumbers.ASCENT_WETH_WZEN_VAULT,
+    ],
+    [ChainId.zkSync]: [
+      ZkSyncPoolNumbers.PANCAKESWAP_USDT_WETH_VAULT,
+      ZkSyncPoolNumbers.PANCAKESWAP_WETH_USDC_VAULT,
     ],
     [ChainId.Mumbai]: [
       MumbaiPoolNumbers.ONE_BTC_ICHI_VAULT
@@ -429,6 +442,7 @@ export const Pools: TPools = {
     [ChainId.Avalanche]: [],
     [ChainId.Bsc]: [],
     [ChainId.Eon]: [],
+    [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [],
   },
   [PoolGroupName.UPCOMING_POOLS]: {
@@ -438,6 +452,7 @@ export const Pools: TPools = {
     [ChainId.Avalanche]: [],
     [ChainId.Bsc]: [],
     [ChainId.Eon]: [],
+    [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [],
   },
   [PoolGroupName.MIGRATING_POOLS]: {
@@ -447,6 +462,7 @@ export const Pools: TPools = {
     [ChainId.Avalanche]: [],
     [ChainId.Bsc]: [],
     [ChainId.Eon]: [],
+    [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [],
   },
   [PoolGroupName.RETIRED_POOLS]: {
@@ -456,6 +472,7 @@ export const Pools: TPools = {
     [ChainId.Avalanche]: [],
     [ChainId.Bsc]: [],
     [ChainId.Eon]: [],
+    [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [],
   },
 
@@ -548,6 +565,7 @@ export const Pools: TPools = {
     [ChainId.Avalanche]: [],
     [ChainId.Bsc]: [],
     [ChainId.Eon]: [],
+    [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [
       MumbaiPoolNumbers.ONE_BTC_ICHI_VAULT
     ],
@@ -561,6 +579,7 @@ export const Pools: TPools = {
     [ChainId.Avalanche]: [],
     [ChainId.Bsc]: [],
     [ChainId.Eon]: [],
+    [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [],
   },
   [PoolGroupName.BALANCER_POOLS]: {
@@ -572,6 +591,7 @@ export const Pools: TPools = {
     [ChainId.Avalanche]: [],
     [ChainId.Bsc]: [],
     [ChainId.Eon]: [],
+    [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [],
   },
   [PoolGroupName.BANCOR_POOLS_V2]: {
@@ -584,6 +604,7 @@ export const Pools: TPools = {
     [ChainId.Avalanche]: [],
     [ChainId.Bsc]: [],
     [ChainId.Eon]: [],
+    [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [],
   },
   [PoolGroupName.BANCOR_POOLS_V3]: {
@@ -595,6 +616,7 @@ export const Pools: TPools = {
     [ChainId.Avalanche]: [],
     [ChainId.Bsc]: [],
     [ChainId.Eon]: [],
+    [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [],
   },
   [PoolGroupName.UNI_POOLS]: {
@@ -606,6 +628,7 @@ export const Pools: TPools = {
     [ChainId.Avalanche]: [],
     [ChainId.Bsc]: [],
     [ChainId.Eon]: [],
+    [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [],
   },
   [PoolGroupName.DODO_POOLS]: {
@@ -618,6 +641,7 @@ export const Pools: TPools = {
     [ChainId.Avalanche]: [],
     [ChainId.Bsc]: [],
     [ChainId.Eon]: [],
+    [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [],
   },
   [PoolGroupName.RARI_ASSETS]: {
@@ -632,6 +656,7 @@ export const Pools: TPools = {
     [ChainId.Avalanche]: [],
     [ChainId.Bsc]: [],
     [ChainId.Eon]: [],
+    [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [],
   },
   // Pools in the LEGACY_POOLS will only show in old.ichi.org
@@ -706,6 +731,7 @@ export const Pools: TPools = {
     [ChainId.Avalanche]: [],
     [ChainId.Bsc]: [],
     [ChainId.Eon]: [],
+    [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [],
   },
   // Vaults that are not processed in api-updater using standard multicall flow
@@ -730,12 +756,15 @@ export const Pools: TPools = {
     [ChainId.Avalanche]: [],
     [ChainId.Bsc]: [],
     [ChainId.Eon]: [],
+    [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [],
   },
   // These vaults don't show in either main app or legacy app.
   // They are available by direct link
   [PoolGroupName.HIDDEN_VAULTS]: {
-    [ChainId.Mainnet]: [], 
+    [ChainId.Mainnet]: [
+      MainnetPoolNumbers.PANCAKESWAP_WETH_USDT_VAULT,
+    ], 
     [ChainId.Polygon]: [
       // QuickSwap
       PolygonPoolNumbers.QUICKSWAP_AAVE_WETH_VAULT,
@@ -817,8 +846,10 @@ export const Pools: TPools = {
       BscPoolNumbers.THENA_BTCB_THE_VAULT,
       BscPoolNumbers.THENA_ETH_THE_VAULT,
       BscPoolNumbers.THENA_USDC_THE_VAULT,
+      BscPoolNumbers.THENA_USDT_ABOND_VAULT,
       BscPoolNumbers.THENA_USDT_THE_VAULT,
       BscPoolNumbers.THENA_USDT_XCAD_VAULT,
+      BscPoolNumbers.THENA_WBNB_ABOND_VAULT,
       BscPoolNumbers.THENA_WBNB_THE_VAULT,
     ],
     [ChainId.Eon]: [
@@ -829,6 +860,10 @@ export const Pools: TPools = {
       EonPoolNumbers.ASCENT_WETH_USDC_VAULT,
       EonPoolNumbers.ASCENT_WETH_WBTC_VAULT,
       EonPoolNumbers.ASCENT_WETH_WZEN_VAULT,
+    ],
+    [ChainId.zkSync]: [
+      ZkSyncPoolNumbers.PANCAKESWAP_USDT_WETH_VAULT,
+      ZkSyncPoolNumbers.PANCAKESWAP_WETH_USDC_VAULT,
     ],
     [ChainId.Mumbai]: [],
   },
@@ -862,6 +897,7 @@ export const Pools: TPools = {
       BscPoolNumbers.THENA_WBNB_THE_VAULT,
     ],
     [ChainId.Eon]: [],
+    [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [],
   },
 };

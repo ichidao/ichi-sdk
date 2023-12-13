@@ -320,7 +320,7 @@ export async function getTokenMetrics(
           }
           break;
         case TokenName.WETH:
-          const tAddress = chainId !== ChainId.Eon 
+          const tAddress = (chainId !== ChainId.Eon && chainId !== ChainId.zkSync) 
             ? token.address.toLowerCase()
             : wethAddress;
           if (opts.tokenPrices && tAddress && tAddress in opts.tokenPrices) {

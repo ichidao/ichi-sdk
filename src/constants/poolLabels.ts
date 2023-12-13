@@ -19,7 +19,9 @@ import {
   BscPoolNumbers,
   BscPoolNumberValues,
   EonPoolNumbers,
-  EonPoolNumberValues
+  EonPoolNumberValues,
+  ZkSyncPoolNumbers,
+  ZkSyncPoolNumberValues,
 } from '../enums/poolNumber';
 import { ChainId } from '../crypto/networks';
 import { PartialRecord } from '../types/common';
@@ -43,6 +45,7 @@ type TPoolLabels = {
   [ChainId.Avalanche]: PartialRecord<AvalanchePoolNumberValues, PoolLabel>;
   [ChainId.Bsc]: PartialRecord<BscPoolNumberValues, PoolLabel>;
   [ChainId.Eon]: PartialRecord<EonPoolNumberValues, PoolLabel>;
+  [ChainId.zkSync]: PartialRecord<ZkSyncPoolNumberValues, PoolLabel>;
   [ChainId.Mumbai]: PartialRecord<MumbaiPoolNumberValues, PoolLabel>;
 };
 
@@ -1498,6 +1501,23 @@ export const PoolLabels: TPoolLabels = {
       isHodl: true,
       vaultName: VaultName.MET_WETH,
       vaultAddress: getVaultAddress(VaultName.MET_WETH, ChainId.Mainnet),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    // PancakeSwap
+    [MainnetPoolNumbers.PANCAKESWAP_WETH_USDT_VAULT]: {
+      name: 'WETH-USDT Vault',
+      poolNumber: MainnetPoolNumbers.PANCAKESWAP_WETH_USDT_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      farmAddress: '',
+      farmId: 0,
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.PANCAKESWAP_WETH_USDT, ChainId.Mainnet),
+      isHodl: true,
+      vaultName: VaultName.PANCAKESWAP_WETH_USDT,
+      vaultAddress: getVaultAddress(VaultName.PANCAKESWAP_WETH_USDT, ChainId.Mainnet),
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
@@ -3130,6 +3150,20 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+    [BscPoolNumbers.THENA_USDT_ABOND_VAULT]: {
+      name: 'USDT-ABOND Vault',
+      poolNumber: BscPoolNumbers.THENA_USDT_ABOND_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.BSC_THENA_USDT_ABOND, ChainId.Bsc),
+      isHodl: true,
+      vaultName: VaultName.BSC_THENA_USDT_ABOND, 
+      vaultAddress: getVaultAddress(VaultName.BSC_THENA_USDT_ABOND, ChainId.Bsc),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
     [BscPoolNumbers.THENA_USDT_THE_VAULT]: {
       name: 'USDT-THE Vault',
       poolNumber: BscPoolNumbers.THENA_USDT_THE_VAULT,
@@ -3155,6 +3189,20 @@ export const PoolLabels: TPoolLabels = {
       isHodl: true,
       vaultName: VaultName.BSC_THENA_USDT_XCAD, 
       vaultAddress: getVaultAddress(VaultName.BSC_THENA_USDT_XCAD, ChainId.Bsc),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [BscPoolNumbers.THENA_WBNB_ABOND_VAULT]: {
+      name: 'WBNB-ABOND Vault',
+      poolNumber: BscPoolNumbers.THENA_WBNB_ABOND_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.BSC_THENA_WBNB_ABOND, ChainId.Bsc),
+      isHodl: true,
+      vaultName: VaultName.BSC_THENA_WBNB_ABOND, 
+      vaultAddress: getVaultAddress(VaultName.BSC_THENA_WBNB_ABOND, ChainId.Bsc),
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
@@ -3273,8 +3321,38 @@ export const PoolLabels: TPoolLabels = {
       irrStartTxAmount: 0
     },
   },
+  [ChainId.zkSync]: {
+    [ZkSyncPoolNumbers.PANCAKESWAP_USDT_WETH_VAULT]: {
+      name: 'USDT-WETH Vault',
+      poolNumber: ZkSyncPoolNumbers.PANCAKESWAP_USDT_WETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.ZKSYNC_PANCAKESWAP_USDT_WETH, ChainId.zkSync),
+      isHodl: true,
+      vaultName: VaultName.ZKSYNC_PANCAKESWAP_USDT_WETH, 
+      vaultAddress: getVaultAddress(VaultName.ZKSYNC_PANCAKESWAP_USDT_WETH, ChainId.zkSync),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [ZkSyncPoolNumbers.PANCAKESWAP_WETH_USDC_VAULT]: {
+      name: 'WETH-USDC Vault',
+      poolNumber: ZkSyncPoolNumbers.PANCAKESWAP_WETH_USDC_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.ZKSYNC_PANCAKESWAP_WETH_USDC, ChainId.zkSync),
+      isHodl: true,
+      vaultName: VaultName.ZKSYNC_PANCAKESWAP_WETH_USDC, 
+      vaultAddress: getVaultAddress(VaultName.ZKSYNC_PANCAKESWAP_WETH_USDC, ChainId.zkSync),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+  },
   [ChainId.Avalanche]: {
-  }
+  },
 };
 
 export function getPoolLabel(poolNumber: PoolNumberValues, chainId: ChainId): Optional<PoolLabel> {

@@ -204,12 +204,12 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
   },
   [ChainId.zkSync]: {
     chainId: ChainId.zkSync,
-    name: 'zkSync',
+    name: 'Era',
     color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
     icon: generateIconUrl(ChainId.zkSync, 'svg'),
     env: 'mainnet',
     scanLink: 'https://explorer.zksync.io/',
-    scanName: 'ZenSystem',
+    scanName: 'ZkSynk',
     coingecko: '',
     rpc: {
       rpcUrl: 'https://1rpc.io/zksync2-era',

@@ -1472,6 +1472,17 @@ export const TOKENS: TokenMapping = {
     },
   },
   [TokenName.USDT]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.USDT,
+      tableName: TokenName.USDT,
+      address: '0xdAC17F958D2ee523a2206206994597C13D831ec7',
+      decimals: 6,
+      displayName: 'USDT',
+      symbol: 'USDT',
+      fullName: 'Tether USD',
+      isOneToken: false,
+      atCoingecko: true
+    },
     [ChainId.Polygon]: {
       tokenName: TokenName.USDT,
       tableName: `pol_${TokenName.USDT}`,

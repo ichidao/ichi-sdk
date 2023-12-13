@@ -1443,7 +1443,7 @@ export const TOKENS: TokenMapping = {
       displayName: 'USDC',
       symbol: 'USDC',
       fullName: 'USD Coin',
-      atCoingecko: false,
+      atCoingecko: true,
       isOneToken: false
     },
     [ChainId.Mumbai]: {
@@ -1536,7 +1536,7 @@ export const TOKENS: TokenMapping = {
       symbol: 'USDT',
       fullName: 'Tether USD',
       isOneToken: false,
-      atCoingecko: false
+      atCoingecko: true
     },
   },
   [TokenName.VBTC]: {
@@ -1713,7 +1713,7 @@ export const TOKENS: TokenMapping = {
       symbol: 'wETH',
       fullName: 'Wrapped Ether',
       isOneToken: false,
-      atCoingecko: false
+      atCoingecko: true
     },
   },
   [TokenName.WMATIC]: {

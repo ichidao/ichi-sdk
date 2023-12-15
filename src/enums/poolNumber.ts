@@ -94,6 +94,7 @@ export enum MainnetPoolNumbers {
   MET_WETH_VAULT = 7007,
   WETH_ABOND_VAULT = 7008,
   PANCAKESWAP_WETH_USDT_VAULT = 7009,
+  IMX_ICHI_1_VAULT = 7010,
 }
 
 export enum PolygonPoolNumbers {

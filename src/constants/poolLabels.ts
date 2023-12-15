@@ -1412,6 +1412,20 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+    [MainnetPoolNumbers.IMX_ICHI_1_VAULT]: {
+      name: 'IMX-ETH Vault',
+      poolNumber: MainnetPoolNumbers.IMX_ICHI_1_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: 'https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0xF57e7e7C23978C3cAEC3C3548E3D615c346e79fF&chain=mainnet',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.IMX_ICHI_1, ChainId.Mainnet),
+      isHodl: true,
+      vaultName: VaultName.IMX_ICHI_1,
+      vaultAddress: getVaultAddress(VaultName.IMX_ICHI_1, ChainId.Mainnet),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
     [MainnetPoolNumbers.COC_VAULT]: {
       name: 'COC-ICHI Vault',
       poolNumber: MainnetPoolNumbers.COC_VAULT,

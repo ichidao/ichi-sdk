@@ -972,6 +972,32 @@ export const VAULTS: VaultMapping = {
       strategyBy: 'Bril Finance',
     }
   },
+  [VaultName.IMX_ICHI_1]: {
+    [ChainId.Mainnet]: {
+      vaultName: VaultName.IMX_ICHI_1,
+      tableName: VaultTableName.IMX_ICHI_1,
+      displayName: 'IMX-ICHI',
+      address: '0x7dc83Fef948C65e8df47c81FAf523C607fA81fcA',
+      deployer: '0xfF7B5E167c9877f2b9f65D19d9c8c9aa651Fe19F',
+      farm: 0,
+      externalFarm: '',
+      scarceToken: 'token0',
+      scarceTokenName: TokenName.ICHI_V2,
+      scarceTokenDecimals: tokenDecimals(TokenName.ICHI_V2, ChainId.Mainnet),
+      scarceTokenCoingeckoId: 'ichi-farm',
+      baseTokenName: TokenName.IMX,
+      baseTokenDecimals: tokenDecimals(TokenName.IMX, ChainId.Mainnet),
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: true,
+      isHodlVault: true,
+      isLegacy: isLegacy(MainnetPoolNumbers.IMX_ICHI_1_VAULT, ChainId.Mainnet),
+      irrStartTxAmount: 0,
+      depositStatus: true,
+      strategyBy: 'Bril Finance',
+    }
+  },
   [VaultName.LDO]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.LDO,

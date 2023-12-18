@@ -3,7 +3,7 @@ import { Token } from '../models/token';
 import { ChainId } from '../crypto/networks';
 import { TokenName } from '../enums/tokenName';
 import { Token as UniswapToken } from '@uniswap/sdk';
-import { tokenNameWithChainPrefix } from 'src/utils/token';
+import { tokenNameWithChainPrefix } from '../utils/token';
 
 type TokenMapping = PartialRecord<TokenName, PartialRecord<ChainId, Token>>;
 

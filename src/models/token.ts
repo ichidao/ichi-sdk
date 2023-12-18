@@ -1,7 +1,7 @@
 import { IchiVault } from './ichiVault';
 import { TokenName } from '../enums/tokenName';
 
-export type TokenTableName = TokenName |
+export type TokenTableName = `${TokenName}` |
   `pol_${TokenName}` |
   `mum_${TokenName}` |
   `bsc_${TokenName}` |

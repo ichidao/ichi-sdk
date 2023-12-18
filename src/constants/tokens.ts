@@ -1,11 +1,33 @@
 import { PartialRecord } from '../types/common';
-import { Token } from '../models/token';
+import { Token, TokenTableName } from '../models/token';
 import { ChainId } from '../crypto/networks';
 import { TokenName } from '../enums/tokenName';
 import { Token as UniswapToken } from '@uniswap/sdk';
-import { tokenNameWithChainPrefix } from '../utils/token';
 
 type TokenMapping = PartialRecord<TokenName, PartialRecord<ChainId, Token>>;
+
+const tokenNameWithChainPrefix = (tokenName: TokenName | string, chainId: ChainId) => {
+  switch (chainId) {
+    case ChainId.Arbitrum:
+      return `arbitrum_${tokenName}` as TokenTableName
+    case ChainId.Avalanche:
+      return `avalanche_${tokenName}` as TokenTableName
+    case ChainId.Polygon:
+      return `pol_${tokenName}` as TokenTableName
+    case ChainId.Mumbai:
+      return `mum_${tokenName}` as TokenTableName
+    case ChainId.Bsc:
+      return `bsc_${tokenName}` as TokenTableName
+    case ChainId.Eon:
+      return `eon_${tokenName}` as TokenTableName
+    case ChainId.Hedera:
+      return `hedera_${tokenName}` as TokenTableName
+    case ChainId.zkSync:
+      return `zksync_${tokenName}` as TokenTableName
+    default:
+      return tokenName as TokenTableName
+    }
+}
 
 export const TOKENS: TokenMapping = {
   [TokenName.ICHI]: {

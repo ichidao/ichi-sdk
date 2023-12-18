@@ -6,7 +6,7 @@ import { Token as UniswapToken } from '@uniswap/sdk';
 
 type TokenMapping = PartialRecord<TokenName, PartialRecord<ChainId, Token>>;
 
-const tokenNameWithChainPrefix = (tokenName: TokenName | string, chainId: ChainId) => {
+export const tokenNameWithChainPrefix = (tokenName: TokenName | string, chainId: ChainId) => {
   switch (chainId) {
     case ChainId.Arbitrum:
       return `arbitrum_${tokenName}` as TokenTableName

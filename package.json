@@ -1,6 +1,6 @@
 {
   "name": "@ichidao/ichi-sdk",
-  "version": "0.0.172",
+  "version": "0.0.173",
   "description": "",
   "main": "dist/index.js",
   "module": "index.ts",

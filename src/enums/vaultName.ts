@@ -65,13 +65,17 @@ export enum VaultName {
   FUSE_ICHI = 'fuse_ichi',
   WETH = 'weth',
   WETH_ABOND = 'weth_abond',
+  WETH_GARBAGE = 'weth_garbage',
   ICHI_ETH = 'ichi_eth',
   ICHI_WBTC = 'ichi_wbtc',
   ICHI_USDC = 'ichi_usdc',
+
   // Mainnet PancakeSwap
   PANCAKESWAP_WETH_USDT = 'pancakeswap_weth_usdt',
+
   // Mumbai
   MUMBAI_ONEBTC_ICHI = 'mumbai_onebtc_ichi',
+
   // Arbitrum
   ARBITRUM_ARB_ICHI = 'arbitrum_arb_ichi',
   ARBITRUM_ARB_WETH = 'arbitrum_arb_weth',
@@ -88,10 +92,20 @@ export enum VaultName {
   ARBITRUM_HORIZA_WETH_ICHI = 'arbitrum_horiza_weth_ichi',
   // Arbitrum-Ramses
   ARBITRUM_RAMSES_ARB_RAM = 'arbitrum_ramses_arb_ram',
+  ARBITRUM_RAMSES_ARB_USDC = 'arbitrum_ramses_arb_usdc',
+  ARBITRUM_RAMSES_ARB_WETH = 'arbitrum_ramses_arb_weth',
+  ARBITRUM_RAMSES_GRAI_RAM = 'arbitrum_ramses_grai_ram',
+  ARBITRUM_RAMSES_GRAI_WETH = 'arbitrum_ramses_grai_weth',
   ARBITRUM_RAMSES_ICHI_RAM = 'arbitrum_ramses_ichi_ram',
+  ARBITRUM_RAMSES_OATH_WETH = 'arbitrum_ramses_oath_weth',
+  ARBITRUM_RAMSES_USDC_ARB = 'arbitrum_ramses_usdc_arb',
+  ARBITRUM_RAMSES_USDC_WETH = 'arbitrum_ramses_usdc_weth',
   ARBITRUM_RAMSES_USDT_RAM = 'arbitrum_ramses_usdt_ram',
   ARBITRUM_RAMSES_WBTC_RAM = 'arbitrum_ramses_wbtc_ram',
+  ARBITRUM_RAMSES_WETH_ARB = 'arbitrum_ramses_weth_arb',
+  ARBITRUM_RAMSES_WETH_ICHI = 'arbitrum_ramses_weth_ichi',
   ARBITRUM_RAMSES_WETH_RAM = 'arbitrum_ramses_weth_ram',
+  ARBITRUM_RAMSES_WETH_USDC = 'arbitrum_ramses_weth_usdc',
   // Avalanche
   // Bsc
   BSC_BTCB_CAKE = 'bsc_btcb_cake',
@@ -106,6 +120,7 @@ export enum VaultName {
   // Bsc-Thena
   BSC_THENA_BTCB_THE = 'bsc_thena_btcb_the',
   BSC_THENA_ETH_THE = 'bsc_thena_eth_the',
+  BSC_THENA_OATH_WBNB = 'bsc_thena_oath_wbnb',
   BSC_THENA_USDC_THE = 'bsc_thena_usdc_the',
   BSC_THENA_USDT_ABOND = 'bsc_thena_usdt_abond',
   BSC_THENA_USDT_THE = 'bsc_thena_usdt_the',
@@ -182,6 +197,7 @@ export enum VaultName {
   RETRO_MATICX_WMATIC_01 = 'pol_retro_maticx_wmatic_01',
   RETRO_MATICX_WMATIC_05 = 'pol_retro_maticx_wmatic_05',
   RETRO_MIMATIC_RETRO = 'pol_retro_mimatic_retro',
+  RETRO_OATH_WETH = 'pol_retro_oath_weth',
   RETRO_ORETRO_RETRO = 'pol_retro_oretro_retro',
   RETRO_RETRO_LIVERETRO = 'pol_retro_retro_liveretro',
   RETRO_STMATIC_RETRO = 'pol_retro_stmatic_retro',
@@ -280,6 +296,7 @@ export enum VaultTableName {
   FUSE_ICHI = 'fuse_ichi',
   WETH_ICHI = 'weth_ichi',
   WETH_ABOND = 'weth_abond',
+  WETH_GARBAGE = 'weth_garbage',
   ICHI_ETH = 'ichi_eth',
   ICHI_WBTC = 'ichi_wbtc',
   ICHI_USDC = 'ichi_usdc',
@@ -303,10 +320,20 @@ export enum VaultTableName {
   ARBITRUM_HORIZA_WETH_ICHI = 'arbitrum_horiza_weth_ichi',
   // Arbitrum-Ramses
   ARBITRUM_RAMSES_ARB_RAM = 'arbitrum_ramses_arb_ram',
+  ARBITRUM_RAMSES_ARB_USDC = 'arbitrum_ramses_arb_usdc',
+  ARBITRUM_RAMSES_ARB_WETH = 'arbitrum_ramses_arb_weth',
+  ARBITRUM_RAMSES_GRAI_RAM = 'arbitrum_ramses_grai_ram',
+  ARBITRUM_RAMSES_GRAI_WETH = 'arbitrum_ramses_grai_weth',
   ARBITRUM_RAMSES_ICHI_RAM = 'arbitrum_ramses_ichi_ram',
+  ARBITRUM_RAMSES_OATH_WETH = 'arbitrum_ramses_oath_weth',
+  ARBITRUM_RAMSES_USDC_ARB = 'arbitrum_ramses_usdc_arb',
+  ARBITRUM_RAMSES_USDC_WETH = 'arbitrum_ramses_usdc_weth',
   ARBITRUM_RAMSES_USDT_RAM = 'arbitrum_ramses_usdt_ram',
   ARBITRUM_RAMSES_WBTC_RAM = 'arbitrum_ramses_wbtc_ram',
+  ARBITRUM_RAMSES_WETH_ARB = 'arbitrum_ramses_weth_arb',
+  ARBITRUM_RAMSES_WETH_ICHI = 'arbitrum_ramses_weth_ichi',
   ARBITRUM_RAMSES_WETH_RAM = 'arbitrum_ramses_weth_ram',
+  ARBITRUM_RAMSES_WETH_USDC = 'arbitrum_ramses_weth_usdc',
   // Avalanche
   // Bsc
   BSC_BTCB_CAKE = 'bsc_btcb_cake',
@@ -321,6 +348,7 @@ export enum VaultTableName {
   // Bsc-Thena
   BSC_THENA_BTCB_THE = 'bsc_thena_btcb_the',
   BSC_THENA_ETH_THE = 'bsc_thena_eth_the',
+  BSC_THENA_OATH_WBNB = 'bsc_thena_oath_wbnb',
   BSC_THENA_USDC_THE = 'bsc_thena_usdc_the',
   BSC_THENA_USDT_ABOND = 'bsc_thena_usdt_abond',
   BSC_THENA_USDT_THE = 'bsc_thena_usdt_the',
@@ -397,6 +425,7 @@ export enum VaultTableName {
   RETRO_MATICX_WMATIC_01 = 'pol_retro_maticx_wmatic_01',
   RETRO_MATICX_WMATIC_05 = 'pol_retro_maticx_wmatic_05',
   RETRO_MIMATIC_RETRO = 'pol_retro_mimatic_retro',
+  RETRO_OATH_WETH = 'pol_retro_oath_weth',
   RETRO_ORETRO_RETRO = 'pol_retro_oretro_retro',
   RETRO_RETRO_LIVERETRO = 'pol_retro_retro_liveretro',
   RETRO_STMATIC_RETRO = 'pol_retro_stmatic_retro',

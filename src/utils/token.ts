@@ -22,6 +22,7 @@ import { CoinGeckoPriceResponse } from '../models/coinGecko';
 import { Optional } from '../types/optional';
 import { TokenMetrics, TokenSupply } from '../models/tokenMetrics';
 import { VaultName } from '../enums/vaultName';
+import { TokenTableName } from 'src/models/token';
 
 export function isOneToken(tokenName: TokenName | string, chainId: ChainId): boolean {
   try {
@@ -37,26 +38,26 @@ export function isOneToken(tokenName: TokenName | string, chainId: ChainId): boo
   }
 }
 
-export function tokenNameWithChainPrefix(tokenName: TokenName | string, chainId: ChainId): string {
+export function tokenNameWithChainPrefix(tokenName: TokenName | string, chainId: ChainId): TokenTableName {
   switch (chainId) {
     case ChainId.Arbitrum:
-      return `arbitrum_${tokenName}`
+      return `arbitrum_${tokenName}` as TokenTableName
     case ChainId.Avalanche:
-      return `avalanche_${tokenName}`
+      return `avalanche_${tokenName}` as TokenTableName
     case ChainId.Polygon:
-      return `pol_${tokenName}`
+      return `pol_${tokenName}` as TokenTableName
     case ChainId.Mumbai:
-      return `mum_${tokenName}`
+      return `mum_${tokenName}` as TokenTableName
     case ChainId.Bsc:
-      return `bsc_${tokenName}`
+      return `bsc_${tokenName}` as TokenTableName
     case ChainId.Eon:
-      return `eon_${tokenName}`
+      return `eon_${tokenName}` as TokenTableName
     case ChainId.Hedera:
-      return `hedera_${tokenName}`
+      return `hedera_${tokenName}` as TokenTableName
     case ChainId.zkSync:
-      return `zksync_${tokenName}`
+      return `zksync_${tokenName}` as TokenTableName
     default:
-      return tokenName
+      return tokenName as TokenTableName
     }
 }
 

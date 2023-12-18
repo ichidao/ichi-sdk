@@ -3,6 +3,7 @@ import { Token } from '../models/token';
 import { ChainId } from '../crypto/networks';
 import { TokenName } from '../enums/tokenName';
 import { Token as UniswapToken } from '@uniswap/sdk';
+import { tokenNameWithChainPrefix } from 'src/utils/token';
 
 type TokenMapping = PartialRecord<TokenName, PartialRecord<ChainId, Token>>;
 
@@ -705,6 +706,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.GARBAGE]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.GARBAGE,
+      tableName: TokenName.GARBAGE,
+      address: '0x619e398858a3110dF4d89056a15A40338a01e65F',
+      decimals: 18,
+      displayName: '$GARBAGE',
+      symbol: '$GARBAGE',
+      fullName: '$GARBAGE',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.GHST]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.GHST,
@@ -793,6 +807,19 @@ export const TOKENS: TokenMapping = {
       isOneToken: false,
       atCoingecko: false
     }
+  },
+  [TokenName.GRAI]: {
+    [ChainId.Arbitrum]: {
+      tokenName: TokenName.GRAI,
+      tableName: tokenNameWithChainPrefix(TokenName.GRAI, ChainId.Arbitrum),
+      address: '0x894134a25a5faC1c2C26F1d8fBf05111a3CB9487',
+      decimals: 18,
+      displayName: 'GRAI',
+      symbol: 'GRAI',
+      fullName: 'Gravita Debt Token',
+      isOneToken: false,
+      atCoingecko: true
+    },
   },
   [TokenName.IMX]: {
     [ChainId.Mainnet]: {
@@ -1009,6 +1036,30 @@ export const TOKENS: TokenMapping = {
       isOneToken: false,
       atCoingecko: true
     }
+  },
+  [TokenName.OATH]: {
+    [ChainId.Polygon]: {
+      tokenName: TokenName.OATH,
+      tableName: tokenNameWithChainPrefix(TokenName.OATH, ChainId.Polygon),
+      address: '0x7c603C3C0C97a565cf202c94AB5298bF8510f7dc',
+      decimals: 18,
+      displayName: 'OATH',
+      symbol: 'OATH',
+      fullName: 'Oath Token',
+      isOneToken: false,
+      atCoingecko: true
+    },
+    [ChainId.Bsc]: {
+      tokenName: TokenName.OATH,
+      tableName: tokenNameWithChainPrefix(TokenName.OATH, ChainId.Bsc),
+      address: '0x7c603C3C0C97a565cf202c94AB5298bF8510f7dc',
+      decimals: 18,
+      displayName: 'OATH',
+      symbol: 'OATH',
+      fullName: 'Oath Token',
+      isOneToken: false,
+      atCoingecko: true
+    },
   },
   [TokenName.OGN]: {
     [ChainId.Mainnet]: {

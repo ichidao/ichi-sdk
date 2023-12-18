@@ -37,29 +37,6 @@ export function isOneToken(tokenName: TokenName | string, chainId: ChainId): boo
   }
 }
 
-export function tokenNameWithChainPrefix(tokenName: TokenName | string, chainId: ChainId): string {
-  switch (chainId) {
-    case ChainId.Arbitrum:
-      return `arbitrum_${tokenName}`
-    case ChainId.Avalanche:
-      return `avalanche_${tokenName}`
-    case ChainId.Polygon:
-      return `pol_${tokenName}`
-    case ChainId.Mumbai:
-      return `mum_${tokenName}`
-    case ChainId.Bsc:
-      return `bsc_${tokenName}`
-    case ChainId.Eon:
-      return `eon_${tokenName}`
-    case ChainId.Hedera:
-      return `hedera_${tokenName}`
-    case ChainId.zkSync:
-      return `zksync_${tokenName}`
-    default:
-      return tokenName
-    }
-}
-
 async function getStandardTokenSupply(tokenName: TokenName, chainId: ChainId): Promise<TokenSupply>{
   try {
     const provider = await getProvider(chainId);

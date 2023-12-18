@@ -1,17 +1,19 @@
 import { IchiVault } from './ichiVault';
 import { TokenName } from '../enums/tokenName';
 
+export type TokenTableName = `${TokenName}` |
+  `pol_${TokenName}` |
+  `mum_${TokenName}` |
+  `bsc_${TokenName}` |
+  `hedera_${TokenName}` |
+  `zksync_${TokenName}` |
+  `arbitrum_${TokenName}` |
+  `avalanche_${TokenName}`|
+  `eon_${TokenName}`;
+
 export type Token = {
   tokenName: TokenName;
-  tableName: TokenName |
-    `pol_${TokenName}` |
-    `mum_${TokenName}` |
-    `bsc_${TokenName}` |
-    `hedera_${TokenName}` |
-    `zksync_${TokenName}` |
-    `arbitrum_${TokenName}` |
-    `avalanche_${TokenName}`|
-    `eon_${TokenName}`;
+  tableName: TokenTableName;
   address: string;
   decimals: number;
   displayName: string;

@@ -1756,7 +1756,7 @@ export const VAULTS: VaultMapping = {
     [ChainId.Mainnet]: {
       vaultName: VaultName.WETH_GARBAGE,
       tableName: VaultTableName.WETH_GARBAGE,
-      displayName: 'WETH-GARBAGE',
+      displayName: 'WETH-$GARBAGE',
       address: '0xF83ed56EF39e384061DCf88D2D70dafa0C225874',
       deployer: '0xfF7B5E167c9877f2b9f65D19d9c8c9aa651Fe19F',
       farm: 0,

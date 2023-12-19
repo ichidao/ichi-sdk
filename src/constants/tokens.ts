@@ -1071,10 +1071,21 @@ export const TOKENS: TokenMapping = {
       isOneToken: false,
       atCoingecko: true
     },
+    [ChainId.Arbitrum]: {
+      tokenName: TokenName.OATH,
+      tableName: tokenNameWithChainPrefix(TokenName.OATH, ChainId.Arbitrum),
+      address: '0x00e1724885473B63bCE08a9f0a52F35b0979e35A',
+      decimals: 18,
+      displayName: 'OATH',
+      symbol: 'OATH',
+      fullName: 'Oath Token',
+      isOneToken: false,
+      atCoingecko: true
+    },
     [ChainId.Bsc]: {
       tokenName: TokenName.OATH,
       tableName: tokenNameWithChainPrefix(TokenName.OATH, ChainId.Bsc),
-      address: '0x7c603C3C0C97a565cf202c94AB5298bF8510f7dc',
+      address: '0x73f4C95AF5C2892253c068850B8C9a753636f58d',
       decimals: 18,
       displayName: 'OATH',
       symbol: 'OATH',

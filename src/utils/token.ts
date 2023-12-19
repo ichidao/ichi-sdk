@@ -221,6 +221,7 @@ export async function getTokenMetrics(
       // used for WEN and FBX token prices:
       let wethPrice: number;
       let polygonProvider;
+      let mainnetProvider;
       const wethAddress = TOKENS[TokenName.WETH]![ChainId.Mainnet]?.address?.toLowerCase();
 
       // used for oRETRO & liveRETRO token price:
@@ -347,7 +348,7 @@ export async function getTokenMetrics(
           }
           break;
         case TokenName.ABOND:
-          const mainnetProvider = await getProvider(ChainId.Mainnet);
+          mainnetProvider = await getProvider(ChainId.Mainnet);
           if (!mainnetProvider) {
             throw new Error('Could not establish Mainnet provider');
           }
@@ -356,6 +357,24 @@ export async function getTokenMetrics(
             wethPrice = opts.tokenPrices[wethAddress].usd;
             price = await getPriceFromWethVault( 
               VaultName.WETH_ABOND,
+              mainnetProvider,
+              ChainId.Mainnet,
+              wethPrice
+              )
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}`);
+          }
+          break;
+        case TokenName.GARBAGE:
+          mainnetProvider = await getProvider(ChainId.Mainnet);
+          if (!mainnetProvider) {
+            throw new Error('Could not establish Mainnet provider');
+          }
+
+          if (opts.tokenPrices && wethAddress && wethAddress in opts.tokenPrices) {
+            wethPrice = opts.tokenPrices[wethAddress].usd;
+            price = await getPriceFromWethVault( 
+              VaultName.WETH_GARBAGE,
               mainnetProvider,
               ChainId.Mainnet,
               wethPrice

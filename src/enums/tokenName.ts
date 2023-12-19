@@ -41,7 +41,7 @@ export enum TokenName {
   FRXETH = 'frxeth',
   FUSE = 'fuse',
   FXS = 'fxs',
-  GARBAGE = 'garbage',
+  GARBAGE = '$garbage',
   GHST = 'ghst',
   GIV = 'giv',
   GNO = 'gno',

@@ -1956,6 +1956,20 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+    [PolygonPoolNumbers.RETRO_USDC_MIMATIC_VAULT]: {
+      name: 'USDC-miMATIC Vault',
+      poolNumber: PolygonPoolNumbers.RETRO_USDC_MIMATIC_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.RETRO_USDC_MIMATIC, ChainId.Polygon),
+      isHodl: true,
+      vaultName: VaultName.RETRO_USDC_MIMATIC, 
+      vaultAddress: getVaultAddress(VaultName.RETRO_USDC_MIMATIC, ChainId.Polygon),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
     [PolygonPoolNumbers.RETRO_USDC_WETH_VAULT]: {
       name: 'USDC-WETH Vault',
       poolNumber: PolygonPoolNumbers.RETRO_USDC_WETH_VAULT,
@@ -3402,6 +3416,20 @@ export const PoolLabels: TPoolLabels = {
       isHodl: true,
       vaultName: VaultName.BSC_THENA_WBNB_ABOND, 
       vaultAddress: getVaultAddress(VaultName.BSC_THENA_WBNB_ABOND, ChainId.Bsc),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [BscPoolNumbers.THENA_WBNB_ICHI_VAULT]: {
+      name: 'WBNB-ICHI Vault',
+      poolNumber: BscPoolNumbers.THENA_WBNB_ICHI_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.BSC_THENA_WBNB_ICHI, ChainId.Bsc),
+      isHodl: true,
+      vaultName: VaultName.BSC_THENA_WBNB_ICHI, 
+      vaultAddress: getVaultAddress(VaultName.BSC_THENA_WBNB_ICHI, ChainId.Bsc),
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },

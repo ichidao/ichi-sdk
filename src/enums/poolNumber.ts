@@ -184,6 +184,7 @@ export enum PolygonPoolNumbers {
   QUICKSWAP_USDC_ABOND_VAULT = 7576,
   QUICKSWAP_WMATIC_ABOND_VAULT = 7577,
   RETRO_OATH_WETH_VAULT = 7578,
+  RETRO_USDC_MIMATIC_VAULT = 7579,
 }
 
 export enum MumbaiPoolNumbers {
@@ -243,6 +244,7 @@ export enum BscPoolNumbers {
   THENA_USDT_ABOND_VAULT = 7915,
   THENA_WBNB_ABOND_VAULT = 7916,
   THENA_OATH_WBNB_VAULT = 7917,
+  THENA_WBNB_ICHI_VAULT = 7918,
 }
 
 export enum EonPoolNumbers {

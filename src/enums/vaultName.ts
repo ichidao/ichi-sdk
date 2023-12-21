@@ -126,6 +126,7 @@ export enum VaultName {
   BSC_THENA_USDT_THE = 'bsc_thena_usdt_the',
   BSC_THENA_USDT_XCAD = 'bsc_thena_usdt_xcad',
   BSC_THENA_WBNB_ABOND = 'bsc_thena_wbnb_abond',
+  BSC_THENA_WBNB_ICHI = 'bsc_thena_wbnb_ichi',
   BSC_THENA_WBNB_THE = 'bsc_thena_wbnb_the',
   // Eon
   EON_ASCENT_USDC_WZEN = 'eon_ascent_usdc_wzen',
@@ -203,6 +204,7 @@ export enum VaultName {
   RETRO_STMATIC_RETRO = 'pol_retro_stmatic_retro',
   RETRO_STMATIC_WMATIC = 'pol_retro_stmatic_wmatic',
   RETRO_USDC_AGEUR = 'pol_retro_usdc_ageur',
+  RETRO_USDC_MIMATIC = 'pol_retro_usdc_mimatic',
   RETRO_USDC_RETRO = 'pol_retro_usdc_retro',
   RETRO_USDC_WETH = 'pol_retro_usdc_weth',
   RETRO_USDC_WMATIC = 'pol_retro_usdc_wmatic',
@@ -354,6 +356,7 @@ export enum VaultTableName {
   BSC_THENA_USDT_THE = 'bsc_thena_usdt_the',
   BSC_THENA_USDT_XCAD = 'bsc_thena_usdt_xcad',
   BSC_THENA_WBNB_ABOND = 'bsc_thena_wbnb_abond',
+  BSC_THENA_WBNB_ICHI = 'bsc_thena_wbnb_ichi',
   BSC_THENA_WBNB_THE = 'bsc_thena_wbnb_the',
   // Eon
   EON_ASCENT_USDC_WZEN = 'eon_ascent_usdc_wzen',
@@ -431,6 +434,7 @@ export enum VaultTableName {
   RETRO_STMATIC_RETRO = 'pol_retro_stmatic_retro',
   RETRO_STMATIC_WMATIC = 'pol_retro_stmatic_wmatic',
   RETRO_USDC_AGEUR = 'pol_retro_usdc_ageur',
+  RETRO_USDC_MIMATIC = 'pol_retro_usdc_mimatic',
   RETRO_USDC_RETRO = 'pol_retro_usdc_retro',
   RETRO_USDC_WETH = 'pol_retro_usdc_weth',
   RETRO_USDC_WMATIC = 'pol_retro_usdc_wmatic',

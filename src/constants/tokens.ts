@@ -68,6 +68,18 @@ export const TOKENS: TokenMapping = {
       isOneToken: false,
       targetVaultStrength: 0.1
     },
+    [ChainId.Bsc]: {
+      tokenName: TokenName.ICHI,
+      tableName: tokenNameWithChainPrefix(TokenName.ICHI, ChainId.Bsc),
+      address: '0x0EF4A107b48163ab4b57FCa36e1352151a587Be4',
+      decimals: 18,
+      displayName: 'ICHI',
+      symbol: 'ICHI',
+      fullName: 'ICHI',
+      atCoingecko: false,
+      isOneToken: false,
+      targetVaultStrength: 0.1
+    },
     // Unclear if this should be here or below, in the ichi-api-updater it uses ichi not ichi_v2, but that's ambiguous regardless
     [ChainId.Mumbai]: {
       tokenName: TokenName.ICHI,

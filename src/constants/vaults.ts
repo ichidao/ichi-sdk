@@ -2313,7 +2313,7 @@ export const VAULTS: VaultMapping = {
       vaultName: VaultName.ARBITRUM_RAMSES_ARB_WETH,
       tableName: VaultTableName.ARBITRUM_RAMSES_ARB_WETH,
       displayName: 'ARB-WETH (ramses)',
-      address: '0xe67050A30F5D0af146f678F80f31477F53f89B24',
+      address: '0xd74CA5e48c90201efe8f2cb5B1e12C2C6F811984',
       deployer: '0x508C3daa571854247726ba26949f182086Ff89B0',
       farm: 0,
       externalFarm: '',

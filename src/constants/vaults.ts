@@ -1999,7 +1999,7 @@ export const VAULTS: VaultMapping = {
       vaultName: VaultName.ARBITRUM_ARB_WETH,
       tableName: VaultTableName.ARBITRUM_ARB_WETH,
       displayName: 'ARB-WETH (arbitrum)',
-      address: '0xd74CA5e48c90201efe8f2cb5B1e12C2C6F811984',
+      address: '0x1A64166dc78830aeFF560Fb0f4C521830D7fd76F',
       deployer: '0x508C3daa571854247726ba26949f182086Ff89B0',
       farm: 0,
       externalFarm: '',

@@ -3447,6 +3447,21 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+    // Bsc-Uni v3
+    [BscPoolNumbers.UNIV3_ICHI_WBNB_VAULT]: {
+      name: 'ICHI-WBNB Vault',
+      poolNumber: BscPoolNumbers.UNIV3_ICHI_WBNB_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.BSC_UNIV3_ICHI_WBNB, ChainId.Bsc),
+      isHodl: true,
+      vaultName: VaultName.BSC_UNIV3_ICHI_WBNB, 
+      vaultAddress: getVaultAddress(VaultName.BSC_UNIV3_ICHI_WBNB, ChainId.Bsc),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
   },
   [ChainId.Eon]: {
     [EonPoolNumbers.ASCENT_USDC_WZEN_VAULT]: {

@@ -245,6 +245,7 @@ export enum BscPoolNumbers {
   THENA_WBNB_ABOND_VAULT = 7916,
   THENA_OATH_WBNB_VAULT = 7917,
   THENA_WBNB_ICHI_VAULT = 7918,
+  UNIV3_ICHI_WBNB_VAULT = 7919,
 }
 
 export enum EonPoolNumbers {

@@ -431,6 +431,8 @@ export const Pools: TPools = {
       BscPoolNumbers.THENA_WBNB_ABOND_VAULT,
       BscPoolNumbers.THENA_WBNB_ICHI_VAULT,
       BscPoolNumbers.THENA_WBNB_THE_VAULT,
+      // Bsc-uni v3
+      BscPoolNumbers.UNIV3_ICHI_WBNB_VAULT,
     ],
     [ChainId.Eon]: [
       EonPoolNumbers.ASCENT_USDC_WZEN_VAULT,

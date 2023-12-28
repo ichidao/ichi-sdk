@@ -3142,6 +3142,33 @@ export const VAULTS: VaultMapping = {
       strategyBy: 'Bril Finance',
     }
   },
+  // Bsc - Uni V3
+  [VaultName.BSC_UNIV3_ICHI_WBNB]: {
+    [ChainId.Bsc]: {
+      vaultName: VaultName.BSC_UNIV3_ICHI_WBNB,
+      tableName: VaultTableName.BSC_UNIV3_ICHI_WBNB,
+      displayName: 'ICHI-WBNB (bsc-uni v3)',
+      address: '0x6fD323Bdf290Eba58EaaA8E02e70a2a6f1DE0CfC',
+      deployer: '0x05cC3CA6E768a68A7f86b09e3ceE754437bd5f12',
+      farm: 0,
+      externalFarm: '',
+      scarceToken: 'token1',
+      scarceTokenName: TokenName.WBNB,
+      scarceTokenDecimals: tokenDecimals(TokenName.WBNB, ChainId.Bsc),
+      scarceTokenCoingeckoId: '',
+      baseTokenName: TokenName.ICHI,
+      baseTokenDecimals: tokenDecimals(TokenName.ICHI, ChainId.Bsc),
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: false,
+      isHodlVault: true,
+      isLegacy: isLegacy(BscPoolNumbers.UNIV3_ICHI_WBNB_VAULT, ChainId.Bsc),
+      irrStartTxAmount: 0,
+      depositStatus: true,
+      strategyBy: 'Bril Finance',
+    }
+  },
   // EON
   [VaultName.EON_ASCENT_USDC_WZEN]: {
     [ChainId.Eon]: {

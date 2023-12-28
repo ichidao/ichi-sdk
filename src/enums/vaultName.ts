@@ -129,7 +129,7 @@ export enum VaultName {
   BSC_THENA_WBNB_ICHI = 'bsc_thena_wbnb_ichi',
   BSC_THENA_WBNB_THE = 'bsc_thena_wbnb_the',
   // Bsc-Uni V3
-  BSC_UNIV3_ICHI_WBNB = 'bsc_ichi_wbnb',
+  BSC_UNIV3_ICHI_WBNB = 'bsc_univ3_ichi_wbnb',
   // Eon
   EON_ASCENT_USDC_WZEN = 'eon_ascent_usdc_wzen',
   EON_ASCENT_USDT_WZEN = 'eon_ascent_usdt_wzen',
@@ -361,7 +361,7 @@ export enum VaultTableName {
   BSC_THENA_WBNB_ICHI = 'bsc_thena_wbnb_ichi',
   BSC_THENA_WBNB_THE = 'bsc_thena_wbnb_the',
   // Bsc-Uni V3
-  BSC_UNIV3_ICHI_WBNB = 'bsc_ichi_wbnb',
+  BSC_UNIV3_ICHI_WBNB = 'bsc_univ3_ichi_wbnb',
   // Eon
   EON_ASCENT_USDC_WZEN = 'eon_ascent_usdc_wzen',
   EON_ASCENT_USDT_WZEN = 'eon_ascent_usdt_wzen',

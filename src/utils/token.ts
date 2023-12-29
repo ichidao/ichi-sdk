@@ -37,25 +37,6 @@ export function isOneToken(tokenName: TokenName | string, chainId: ChainId): boo
   }
 }
 
-export function tokenNameWithChainPrefix(tokenName: TokenName | string, chainId: ChainId): string {
-  switch (chainId) {
-    case ChainId.Arbitrum:
-      return `arbitrum_${tokenName}`
-    case ChainId.Avalanche:
-      return `avalanche_${tokenName}`
-    case ChainId.Polygon:
-      return `pol_${tokenName}`
-    case ChainId.Mumbai:
-      return `mum_${tokenName}`
-    case ChainId.Bsc:
-      return `bsc_${tokenName}`
-    case ChainId.Eon:
-      return `eon_${tokenName}`
-    default:
-      return tokenName
-    }
-}
-
 async function getStandardTokenSupply(tokenName: TokenName, chainId: ChainId): Promise<TokenSupply>{
   try {
     const provider = await getProvider(chainId);
@@ -240,6 +221,7 @@ export async function getTokenMetrics(
       // used for WEN and FBX token prices:
       let wethPrice: number;
       let polygonProvider;
+      let mainnetProvider;
       const wethAddress = TOKENS[TokenName.WETH]![ChainId.Mainnet]?.address?.toLowerCase();
 
       // used for oRETRO & liveRETRO token price:
@@ -249,6 +231,7 @@ export async function getTokenMetrics(
       switch (tokenName) {
         case TokenName.USDT:
         case TokenName.USDC:
+        case TokenName.USDC2:
         case TokenName.DAI:
         case TokenName.CASH:
         case TokenName.HOME:
@@ -315,7 +298,7 @@ export async function getTokenMetrics(
           }
           break;
         case TokenName.WETH:
-          const tAddress = chainId !== ChainId.Eon 
+          const tAddress = (chainId !== ChainId.Eon && chainId !== ChainId.zkSync) 
             ? token.address.toLowerCase()
             : wethAddress;
           if (opts.tokenPrices && tAddress && tAddress in opts.tokenPrices) {
@@ -358,6 +341,42 @@ export async function getTokenMetrics(
               VaultName.POLYGON_WEN_WETH,
               polygonProvider,
               ChainId.Polygon,
+              wethPrice
+              )
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}`);
+          }
+          break;
+        case TokenName.ABOND:
+          mainnetProvider = await getProvider(ChainId.Mainnet);
+          if (!mainnetProvider) {
+            throw new Error('Could not establish Mainnet provider');
+          }
+
+          if (opts.tokenPrices && wethAddress && wethAddress in opts.tokenPrices) {
+            wethPrice = opts.tokenPrices[wethAddress].usd;
+            price = await getPriceFromWethVault( 
+              VaultName.WETH_ABOND,
+              mainnetProvider,
+              ChainId.Mainnet,
+              wethPrice
+              )
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}`);
+          }
+          break;
+        case TokenName.GARBAGE:
+          mainnetProvider = await getProvider(ChainId.Mainnet);
+          if (!mainnetProvider) {
+            throw new Error('Could not establish Mainnet provider');
+          }
+
+          if (opts.tokenPrices && wethAddress && wethAddress in opts.tokenPrices) {
+            wethPrice = opts.tokenPrices[wethAddress].usd;
+            price = await getPriceFromWethVault( 
+              VaultName.WETH_GARBAGE,
+              mainnetProvider,
+              ChainId.Mainnet,
               wethPrice
               )
           } else {

@@ -92,6 +92,10 @@ export enum MainnetPoolNumbers {
   WNXM_VAULT_LEGACY = 1021,
   WBTC_VAULT_LEGACY = 1022,
   MET_WETH_VAULT = 7007,
+  WETH_ABOND_VAULT = 7008,
+  PANCAKESWAP_WETH_USDT_VAULT = 7009,
+  IMX_ICHI_1_VAULT = 7010,
+  WETH_GARBAGE_VAULT = 7011,
 }
 
 export enum PolygonPoolNumbers {
@@ -177,6 +181,10 @@ export enum PolygonPoolNumbers {
   QUICKSWAP_WMATIC_QUICK_VAULT = 7573,
   QUICKSWAP_WMATIC_USDT_VAULT = 7574,
   QUICKSWAP_WMATIC_WETH_VAULT = 7575,
+  QUICKSWAP_USDC_ABOND_VAULT = 7576,
+  QUICKSWAP_WMATIC_ABOND_VAULT = 7577,
+  RETRO_OATH_WETH_VAULT = 7578,
+  RETRO_USDC_MIMATIC_VAULT = 7579,
 }
 
 export enum MumbaiPoolNumbers {
@@ -201,6 +209,16 @@ export enum ArbitrumPoolNumbers {
   WETH_LMR_VAULT = 7714,
   HORIZA_USDC_ICHI_VAULT = 7715,
   HORIZA_WETH_ICHI_VAULT = 7716,
+  RAMSES_ARB_USDC_VAULT = 7717,
+  RAMSES_ARB_WETH_VAULT = 7718,
+  RAMSES_GRAI_RAM_VAULT = 7719,
+  RAMSES_GRAI_WETH_VAULT = 7720,
+  RAMSES_OATH_WETH_VAULT = 7721,
+  RAMSES_USDC_ARB_VAULT = 7722,
+  RAMSES_USDC_WETH_VAULT = 7723,
+  RAMSES_WETH_ARB_VAULT = 7724,
+  RAMSES_WETH_ICHI_VAULT = 7725,
+  RAMSES_WETH_USDC_VAULT = 7726,
 }
 
 export enum AvalanchePoolNumbers {
@@ -223,6 +241,11 @@ export enum BscPoolNumbers {
   THENA_BTCB_THE_VAULT = 7912,
   USDC_ETH_VAULT = 7913,
   THENA_USDT_XCAD_VAULT = 7914,
+  THENA_USDT_ABOND_VAULT = 7915,
+  THENA_WBNB_ABOND_VAULT = 7916,
+  THENA_OATH_WBNB_VAULT = 7917,
+  THENA_WBNB_ICHI_VAULT = 7918,
+  UNIV3_ICHI_WBNB_VAULT = 7919,
 }
 
 export enum EonPoolNumbers {
@@ -235,6 +258,11 @@ export enum EonPoolNumbers {
   ASCENT_WETH_WZEN_VAULT = 8106,
 }
 
+export enum ZkSyncPoolNumbers {
+  PANCAKESWAP_USDT_WETH_VAULT = 8300,
+  PANCAKESWAP_WETH_USDC_VAULT = 8301,
+}
+
 export type MainnetPoolNumberValues = typeof MainnetPoolNumbers[keyof typeof MainnetPoolNumbers];
 export type PolygonPoolNumberValues = typeof PolygonPoolNumbers[keyof typeof PolygonPoolNumbers];
 export type MumbaiPoolNumberValues = typeof MumbaiPoolNumbers[keyof typeof MumbaiPoolNumbers];
@@ -242,6 +270,7 @@ export type ArbitrumPoolNumberValues = typeof ArbitrumPoolNumbers[keyof typeof A
 export type AvalanchePoolNumberValues = typeof AvalanchePoolNumbers[keyof typeof AvalanchePoolNumbers];
 export type BscPoolNumberValues = typeof BscPoolNumbers[keyof typeof BscPoolNumbers];
 export type EonPoolNumberValues = typeof EonPoolNumbers[keyof typeof EonPoolNumbers];
+export type ZkSyncPoolNumberValues = typeof ZkSyncPoolNumbers[keyof typeof ZkSyncPoolNumbers];
 
 export type PoolNumberValues =
   | MainnetPoolNumberValues
@@ -250,4 +279,5 @@ export type PoolNumberValues =
   | AvalanchePoolNumberValues
   | BscPoolNumberValues
   | EonPoolNumberValues
+  | ZkSyncPoolNumberValues
   | MumbaiPoolNumberValues;

@@ -1,10 +1,33 @@
 import { PartialRecord } from '../types/common';
-import { Token } from '../models/token';
+import { Token, TokenTableName } from '../models/token';
 import { ChainId } from '../crypto/networks';
 import { TokenName } from '../enums/tokenName';
 import { Token as UniswapToken } from '@uniswap/sdk';
 
 type TokenMapping = PartialRecord<TokenName, PartialRecord<ChainId, Token>>;
+
+export const tokenNameWithChainPrefix = (tokenName: TokenName | string, chainId: ChainId) => {
+  switch (chainId) {
+    case ChainId.Arbitrum:
+      return `arbitrum_${tokenName}` as TokenTableName
+    case ChainId.Avalanche:
+      return `avalanche_${tokenName}` as TokenTableName
+    case ChainId.Polygon:
+      return `pol_${tokenName}` as TokenTableName
+    case ChainId.Mumbai:
+      return `mum_${tokenName}` as TokenTableName
+    case ChainId.Bsc:
+      return `bsc_${tokenName}` as TokenTableName
+    case ChainId.Eon:
+      return `eon_${tokenName}` as TokenTableName
+    case ChainId.Hedera:
+      return `hedera_${tokenName}` as TokenTableName
+    case ChainId.zkSync:
+      return `zksync_${tokenName}` as TokenTableName
+    default:
+      return tokenName as TokenTableName
+    }
+}
 
 export const TOKENS: TokenMapping = {
   [TokenName.ICHI]: {
@@ -37,6 +60,18 @@ export const TOKENS: TokenMapping = {
       tokenName: TokenName.ICHI,
       tableName: `arbitrum_${TokenName.ICHI}`,
       address: '0xadf5DD3E51bF28aB4F07e684eCF5d00691818790',
+      decimals: 18,
+      displayName: 'ICHI',
+      symbol: 'ICHI',
+      fullName: 'ICHI',
+      atCoingecko: false,
+      isOneToken: false,
+      targetVaultStrength: 0.1
+    },
+    [ChainId.Bsc]: {
+      tokenName: TokenName.ICHI,
+      tableName: tokenNameWithChainPrefix(TokenName.ICHI, ChainId.Bsc),
+      address: '0x0EF4A107b48163ab4b57FCa36e1352151a587Be4',
       decimals: 18,
       displayName: 'ICHI',
       symbol: 'ICHI',
@@ -88,6 +123,18 @@ export const TOKENS: TokenMapping = {
       tokenName: TokenName.ICHI,
       tableName: `arbitrum_${TokenName.ICHI}`,
       address: '0xadf5DD3E51bF28aB4F07e684eCF5d00691818790',
+      decimals: 18,
+      displayName: 'ICHI',
+      symbol: 'ICHI',
+      fullName: 'ICHI',
+      atCoingecko: false,
+      isOneToken: false,
+      targetVaultStrength: 0.1
+    },
+    [ChainId.Bsc]: {
+      tokenName: TokenName.ICHI,
+      tableName: tokenNameWithChainPrefix(TokenName.ICHI, ChainId.Bsc),
+      address: '0x0EF4A107b48163ab4b57FCa36e1352151a587Be4',
       decimals: 18,
       displayName: 'ICHI',
       symbol: 'ICHI',
@@ -169,6 +216,41 @@ export const TOKENS: TokenMapping = {
       isOneToken: false,
       atCoingecko: true
     }
+  },
+  [TokenName.ABOND]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.ABOND,
+      tableName: TokenName.ABOND,
+      address: '0xe6828D65bf5023AE1851D90D8783Cc821ba7eeE1',
+      decimals: 18,
+      displayName: 'ABOND',
+      symbol: 'ABOND',
+      fullName: 'ApeBond',
+      isOneToken: false,
+      atCoingecko: false
+    },
+    [ChainId.Bsc]: {
+      tokenName: TokenName.ABOND,
+      tableName: `bsc_${TokenName.ABOND}`,
+      address: '0x34294AfABCbaFfc616ac6614F6d2e17260b78BEd',
+      decimals: 18,
+      displayName: 'ABOND',
+      symbol: 'ABOND',
+      fullName: 'ApeBond',
+      isOneToken: false,
+      atCoingecko: false
+    },
+    [ChainId.Polygon]: {
+      tokenName: TokenName.ABOND,
+      tableName: `pol_${TokenName.ABOND}`,
+      address: '0xe6828D65bf5023AE1851D90D8783Cc821ba7eeE1',
+      decimals: 18,
+      displayName: 'ABOND',
+      symbol: 'ABOND',
+      fullName: 'ApeBond',
+      isOneToken: false,
+      atCoingecko: false
+    },
   },
   [TokenName.AGEUR]: {
     [ChainId.Mainnet]: {
@@ -670,6 +752,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.GARBAGE]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.GARBAGE,
+      tableName: TokenName.GARBAGE,
+      address: '0x619e398858a3110dF4d89056a15A40338a01e65F',
+      decimals: 18,
+      displayName: '$GARBAGE',
+      symbol: '$GARBAGE',
+      fullName: '$GARBAGE',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.GHST]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.GHST,
@@ -758,6 +853,19 @@ export const TOKENS: TokenMapping = {
       isOneToken: false,
       atCoingecko: false
     }
+  },
+  [TokenName.GRAI]: {
+    [ChainId.Arbitrum]: {
+      tokenName: TokenName.GRAI,
+      tableName: tokenNameWithChainPrefix(TokenName.GRAI, ChainId.Arbitrum),
+      address: '0x894134a25a5faC1c2C26F1d8fBf05111a3CB9487',
+      decimals: 18,
+      displayName: 'GRAI',
+      symbol: 'GRAI',
+      fullName: 'Gravita Debt Token',
+      isOneToken: false,
+      atCoingecko: true
+    },
   },
   [TokenName.IMX]: {
     [ChainId.Mainnet]: {
@@ -974,6 +1082,41 @@ export const TOKENS: TokenMapping = {
       isOneToken: false,
       atCoingecko: true
     }
+  },
+  [TokenName.OATH]: {
+    [ChainId.Polygon]: {
+      tokenName: TokenName.OATH,
+      tableName: tokenNameWithChainPrefix(TokenName.OATH, ChainId.Polygon),
+      address: '0x7c603C3C0C97a565cf202c94AB5298bF8510f7dc',
+      decimals: 18,
+      displayName: 'OATH',
+      symbol: 'OATH',
+      fullName: 'Oath Token',
+      isOneToken: false,
+      atCoingecko: true
+    },
+    [ChainId.Arbitrum]: {
+      tokenName: TokenName.OATH,
+      tableName: tokenNameWithChainPrefix(TokenName.OATH, ChainId.Arbitrum),
+      address: '0x00e1724885473B63bCE08a9f0a52F35b0979e35A',
+      decimals: 18,
+      displayName: 'OATH',
+      symbol: 'OATH',
+      fullName: 'Oath Token',
+      isOneToken: false,
+      atCoingecko: true
+    },
+    [ChainId.Bsc]: {
+      tokenName: TokenName.OATH,
+      tableName: tokenNameWithChainPrefix(TokenName.OATH, ChainId.Bsc),
+      address: '0x73f4C95AF5C2892253c068850B8C9a753636f58d',
+      decimals: 18,
+      displayName: 'OATH',
+      symbol: 'OATH',
+      fullName: 'Oath Token',
+      isOneToken: false,
+      atCoingecko: true
+    },
   },
   [TokenName.OGN]: {
     [ChainId.Mainnet]: {
@@ -1363,7 +1506,7 @@ export const TOKENS: TokenMapping = {
       decimals: 6,
       displayName: 'USDC',
       symbol: 'USDC',
-      fullName: 'USD Coin',
+      fullName: 'USD Coin (PoS)',
       atCoingecko: true,
       isOneToken: false
     },
@@ -1400,6 +1543,17 @@ export const TOKENS: TokenMapping = {
       atCoingecko: false,
       isOneToken: false
     },
+    [ChainId.zkSync]: {
+      tokenName: TokenName.USDC,
+      tableName: `zksync_${TokenName.USDC}`,
+      address: '0x3355df6D4c9C3035724Fd0e3914dE96A5a83aaf4',
+      decimals: 6,
+      displayName: 'USDC',
+      symbol: 'USDC',
+      fullName: 'USD Coin',
+      atCoingecko: true,
+      isOneToken: false
+    },
     [ChainId.Mumbai]: {
       tokenName: TokenName.USDC,
       tableName: `mum_${TokenName.USDC}`,
@@ -1412,7 +1566,31 @@ export const TOKENS: TokenMapping = {
       isOneToken: false
     }
   },
+  [TokenName.USDC2]: {
+    [ChainId.Polygon]: {
+      tokenName: TokenName.USDC2,
+      tableName: `pol_${TokenName.USDC2}`,
+      address: '0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359',
+      decimals: 6,
+      displayName: 'USDC',
+      symbol: 'USDC',
+      fullName: 'USD Coin',
+      atCoingecko: false,
+      isOneToken: false
+    },
+  },
   [TokenName.USDT]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.USDT,
+      tableName: TokenName.USDT,
+      address: '0xdAC17F958D2ee523a2206206994597C13D831ec7',
+      decimals: 6,
+      displayName: 'USDT',
+      symbol: 'USDT',
+      fullName: 'Tether USD',
+      isOneToken: false,
+      atCoingecko: true
+    },
     [ChainId.Polygon]: {
       tokenName: TokenName.USDT,
       tableName: `pol_${TokenName.USDT}`,
@@ -1450,6 +1628,17 @@ export const TOKENS: TokenMapping = {
       tokenName: TokenName.USDT,
       tableName: `eon_${TokenName.USDT}`,
       address: '0xA167bcAb6791304EDa9B636C8beEC75b3D2829E6',
+      decimals: 6,
+      displayName: 'USDT',
+      symbol: 'USDT',
+      fullName: 'Tether USD',
+      isOneToken: false,
+      atCoingecko: true
+    },
+    [ChainId.zkSync]: {
+      tokenName: TokenName.USDT,
+      tableName: `zksync_${TokenName.USDT}`,
+      address: '0x493257fD37EDB34451f62EDf8D2a0C418852bA4C',
       decimals: 6,
       displayName: 'USDT',
       symbol: 'USDT',
@@ -1622,7 +1811,18 @@ export const TOKENS: TokenMapping = {
       fullName: 'Wrapped Ether',
       isOneToken: false,
       atCoingecko: true
-    }
+    },
+    [ChainId.zkSync]: {
+      tokenName: TokenName.WETH,
+      tableName: `zksync_${TokenName.WETH}`,
+      address: '0x5AEa5775959fBC2557Cc8789bC1bf90A239D9a91',
+      decimals: 18,
+      displayName: 'wETH',
+      symbol: 'wETH',
+      fullName: 'Wrapped Ether',
+      isOneToken: false,
+      atCoingecko: true
+    },
   },
   [TokenName.WMATIC]: {
     [ChainId.Mainnet]: {

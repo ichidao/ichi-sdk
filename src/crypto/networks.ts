@@ -11,6 +11,8 @@ export enum ChainId {
   Mumbai = 80001,
   Bsc = 56,
   Eon = 7332,
+  zkSync = 324,
+  Hedera = 295,
 }
 
 export interface IAssetData {
@@ -172,7 +174,7 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
     color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
     icon: generateIconUrl(ChainId.Eon, 'svg'),
     env: 'mainnet',
-    scanLink: 'eon-explorer.horizenlabs.io',
+    scanLink: 'https://eon-explorer.horizenlabs.io',
     scanName: 'ZenSystem',
     coingecko: '',
     rpc: {
@@ -180,6 +182,40 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
       nativeCurrency: {
         symbol: 'ZEN',
         name: 'ZEN'
+      }
+    }
+  },
+  [ChainId.Hedera]: {
+    chainId: ChainId.Hedera,
+    name: 'Hedera',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Hedera, 'svg'),
+    env: 'mainnet',
+    scanLink: 'https://hashscan.io/mainnet/dashboard',
+    scanName: 'HashScan',
+    coingecko: '',
+    rpc: {
+      rpcUrl: 'https://mainnet.hashio.io/api',
+      nativeCurrency: {
+        symbol: 'HBAR',
+        name: 'HBAR'
+      }
+    }
+  },
+  [ChainId.zkSync]: {
+    chainId: ChainId.zkSync,
+    name: 'Era',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.zkSync, 'svg'),
+    env: 'mainnet',
+    scanLink: 'https://explorer.zksync.io/',
+    scanName: 'ZkSynk',
+    coingecko: '',
+    rpc: {
+      rpcUrl: 'https://1rpc.io/zksync2-era',
+      nativeCurrency: {
+        symbol: 'ETH',
+        name: 'ETH'
       }
     }
   },

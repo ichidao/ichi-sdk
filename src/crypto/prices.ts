@@ -2,7 +2,7 @@ import { TokenName } from '../enums/tokenName';
 import { getToken, getUniswapToken } from '../constants/tokens';
 import { ChainId } from './networks';
 import { getTokenPrice, lookUpTokenPrices } from '../external/coinGecko';
-import { JsonRpcProvider } from '@ethersproject/providers';
+import { StaticJsonRpcProvider } from '@ethersproject/providers';
 import { CoinGeckoPrice, CoinGeckoPriceResponse } from '../models/coinGecko';
 import { WETH, Fetcher, Route } from '@uniswap/sdk';
 import { CommonOracle__factory, OneTokenV1__factory, OneEth__factory, OneLink__factory } from '../generated';
@@ -15,7 +15,7 @@ import { getPrice } from '../utils/vault';
 export async function getXICHIPrice(
   chainId: ChainId,
   cg_key: string,
-  opts?: { tokenPrices?: CoinGeckoPriceResponse; provider?: JsonRpcProvider }
+  opts?: { tokenPrices?: CoinGeckoPriceResponse; provider?: StaticJsonRpcProvider }
 ) {
   const provider = opts?.provider ?? (await getProvider(chainId));
 
@@ -66,7 +66,7 @@ export async function getVBTCPrice(
 export async function getMemberTokenPrice(
   oneTokenName: TokenName,
   memberTokenName: TokenName,
-  opts?: { chainId?: ChainId; provider?: JsonRpcProvider; decimals?: number }
+  opts?: { chainId?: ChainId; provider?: StaticJsonRpcProvider; decimals?: number }
 ) {
   const provider = opts?.provider ?? (await getProvider(opts?.chainId ?? ChainId.Mainnet));
   const chainId = provider!.network.chainId;
@@ -94,7 +94,7 @@ export async function getMemberTokenPrice(
 
 export async function getStimulusUSDPrice(
   tokenName: TokenName,
-  opts?: { chainId?: ChainId; provider?: JsonRpcProvider; decimals?: number }
+  opts?: { chainId?: ChainId; provider?: StaticJsonRpcProvider; decimals?: number }
 ) {
   const provider = opts?.provider ?? (await getProvider(opts?.chainId ?? ChainId.Mainnet));
   const chainId = provider!.network.chainId;
@@ -112,7 +112,7 @@ export async function getStimulusUSDPrice(
 
 export async function getStimulusOraclePrice(
   tokenName: TokenName,
-  opts?: { chainId?: ChainId; provider?: JsonRpcProvider; decimals?: number }
+  opts?: { chainId?: ChainId; provider?: StaticJsonRpcProvider; decimals?: number }
 ) {
   const provider = opts?.provider ?? (await getProvider(opts?.chainId ?? ChainId.Mainnet));
   const chainId = provider!.network.chainId;
@@ -131,7 +131,7 @@ export async function getStimulusOraclePrice(
 export async function getOneTokenPriceFromVault(
   name: TokenName,
   ichiPrice: number,
-  provider: JsonRpcProvider,
+  provider: StaticJsonRpcProvider,
   chainId: ChainId
 ): Promise<number> {
   try {
@@ -171,7 +171,7 @@ export async function getOneTokenPriceFromVault(
 
 export async function getPriceFromUSDCVault(
   vault: VaultName,
-  provider: JsonRpcProvider,
+  provider: StaticJsonRpcProvider,
   chainId: ChainId
 ): Promise<number> {
   let vaultObj = VAULTS[vault][chainId];
@@ -207,7 +207,7 @@ export async function getPriceFromUSDCVault(
 
 export async function getPriceFromWethVault(
   vault: VaultName,
-  provider: JsonRpcProvider,
+  provider: StaticJsonRpcProvider,
   chainId: ChainId,
   wethPrice: number
 ): Promise<number> {
@@ -246,7 +246,7 @@ export async function getPriceFromWethVault(
 
 export async function getPriceFromRetroVault(
   vault: VaultName,
-  provider: JsonRpcProvider,
+  provider: StaticJsonRpcProvider,
   chainId: ChainId,
   retroPrice: number
 ): Promise<number> {
@@ -285,7 +285,7 @@ export async function getPriceFromRetroVault(
 
 export async function getTokenPriceFromVault(
   vault: VaultName,
-  provider: JsonRpcProvider,
+  provider: StaticJsonRpcProvider,
   chainId: ChainId,
   tokenName: TokenName,
   otherTokenPrice: number

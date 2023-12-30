@@ -1,4 +1,4 @@
-import { JsonRpcProvider } from '@ethersproject/providers';
+import { StaticJsonRpcProvider } from '@ethersproject/providers';
 import { EnvUtils } from '../utils/env';
 import { ChainId, SUPPORTED_NETWORKS } from './networks';
 import { Optional } from '../types/optional';
@@ -84,7 +84,7 @@ export const resetProviderCache = () => {
   };
 };
 
-const setCachedProvider = (chainId: ChainId, provider?: JsonRpcProvider) => {
+const setCachedProvider = (chainId: ChainId, provider?: StaticJsonRpcProvider) => {
   providerCache[chainId] = {
     provider,
     lastUdated: Date.now(),
@@ -93,7 +93,7 @@ const setCachedProvider = (chainId: ChainId, provider?: JsonRpcProvider) => {
   };
 };
 
-const getCachedProvider = (chainId: ChainId): Optional<JsonRpcProvider> => {
+const getCachedProvider = (chainId: ChainId): Optional<StaticJsonRpcProvider> => {
   if (providerCache[chainId]?.provider) {
     providerCache[chainId].cacheHit++;
   } else {
@@ -120,13 +120,13 @@ export const connectToProvider = async (
   chainId: ChainId,
   rpcHosts?: string[],
   providerId?: string
-): Promise<Optional<JsonRpcProvider>> => {
+): Promise<Optional<StaticJsonRpcProvider>> => {
   if (rpcHosts) {
     for (let i = 0; i < rpcHosts.length; i++) {
       const url = rpcHosts[i];
       console.debug(`Attempting to connect to rpc host from env vars: ${url}`);
       try {
-        // First attempt to resolve the url, if we don't do this attempting to JsonRpcProvider to an unreachable host will just hang
+        // First attempt to resolve the url, if we don't do this attempting to StaticJsonRpcProvider to an unreachable host will just hang
         const { hostname } = new URL(url);
         try {
           console.debug(`Resolve hostname ${hostname}...`);
@@ -135,7 +135,7 @@ export const connectToProvider = async (
 
           // For now let's assume that a DNS resolution on the RPC host is sufficient, I've seen where getBlockNumber fails
           // Here even though the RPC endpoint is accessible
-          const provider = new JsonRpcProvider({ url });
+          const provider = new StaticJsonRpcProvider({ url });
           console.debug(`Successfully connected to: ${url}`);
           return provider;
         } catch (subError) {
@@ -156,7 +156,7 @@ export const connectToProvider = async (
   // If the RPC_HOSTS fail or there are none, let's try to construct the rpc url if the providerId exists
   const url = `${SUPPORTED_NETWORKS[chainId]?.rpc.rpcUrl}${providerId}`;
   console.debug(`Attempting to connect to: ${url}`);
-  const provider = new JsonRpcProvider({ url });
+  const provider = new StaticJsonRpcProvider({ url });
 
   try {
     const { hostname } = new URL(url);
@@ -196,7 +196,7 @@ const getRpcEnvName = (chainId: ChainId): EnvUtils.EnvName => {
   }
 };
 
-export const getProvider = async (chainId: ChainId, depth: number = 0): Promise<Optional<JsonRpcProvider>> => {
+export const getProvider = async (chainId: ChainId, depth: number = 0): Promise<Optional<StaticJsonRpcProvider>> => {
   if (depth > 2) {
     throw new Error(`Could not connect to primary or backup providers, please check network`);
   }

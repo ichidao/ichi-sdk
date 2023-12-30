@@ -1,7 +1,7 @@
-import { JsonRpcProvider } from '@ethersproject/providers';
+import { StaticJsonRpcProvider } from '@ethersproject/providers';
 
 export type ProviderCache = {
-  provider?: JsonRpcProvider;
+  provider?: StaticJsonRpcProvider;
   lastUdated: number;
   cacheHit: number;
   cacheMiss: number;

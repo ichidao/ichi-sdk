@@ -1,4 +1,4 @@
-import { JsonRpcProvider } from '@ethersproject/providers';
+import { StaticJsonRpcProvider } from '@ethersproject/providers';
 import { Optional } from '../types/optional';
 import { getToken } from '../constants/tokens';
 import { ChainId } from '../crypto/networks';
@@ -105,7 +105,7 @@ export type Contracts =
 
 export type FarmingContracts = FarmingV1 | FarmingV2 | GenericFarmingV2;
 
-export function getBalancerPoolContract(address: string, provider: JsonRpcProvider): BalancerPool {
+export function getBalancerPoolContract(address: string, provider: StaticJsonRpcProvider): BalancerPool {
   try {
     return BalancerPool__factory.connect(address, provider);
   } catch (e) {
@@ -113,7 +113,7 @@ export function getBalancerPoolContract(address: string, provider: JsonRpcProvid
     throw e;
   }
 }
-export function getBalancerSmartLpContract(address: string, provider: JsonRpcProvider): BalancerSmartLp {
+export function getBalancerSmartLpContract(address: string, provider: StaticJsonRpcProvider): BalancerSmartLp {
   try {
     return BalancerSmartLp__factory.connect(address, provider);
   } catch (e) {
@@ -122,7 +122,7 @@ export function getBalancerSmartLpContract(address: string, provider: JsonRpcPro
   }
 }
 
-export function getIchiVaultContract(address: string, provider: JsonRpcProvider): IchiVault {
+export function getIchiVaultContract(address: string, provider: StaticJsonRpcProvider): IchiVault {
   try {
     return IchiVault__factory.connect(address, provider);
   } catch (e) {
@@ -131,7 +131,7 @@ export function getIchiVaultContract(address: string, provider: JsonRpcProvider)
   }
 }
 
-export function getIchiBntContract(address: string, provider: JsonRpcProvider): IchiBnt {
+export function getIchiBntContract(address: string, provider: StaticJsonRpcProvider): IchiBnt {
   try {
     return IchiBnt__factory.connect(address, provider);
   } catch (e) {
@@ -139,7 +139,7 @@ export function getIchiBntContract(address: string, provider: JsonRpcProvider): 
     throw e;
   }
 }
-export function getIchiContract(address: string, provider: JsonRpcProvider): Ichi {
+export function getIchiContract(address: string, provider: StaticJsonRpcProvider): Ichi {
   try {
     return Ichi__factory.connect(address, provider);
   } catch (e) {
@@ -147,7 +147,7 @@ export function getIchiContract(address: string, provider: JsonRpcProvider): Ich
     throw e;
   }
 }
-export function getXIchiContract(address: string, provider: JsonRpcProvider): XIchi {
+export function getXIchiContract(address: string, provider: StaticJsonRpcProvider): XIchi {
   try {
     return XIchi__factory.connect(address, provider);
   } catch (e) {
@@ -155,7 +155,7 @@ export function getXIchiContract(address: string, provider: JsonRpcProvider): XI
     throw e;
   }
 }
-export function getAllyContract(address: string, provider: JsonRpcProvider): Ally {
+export function getAllyContract(address: string, provider: StaticJsonRpcProvider): Ally {
   try {
     return Ally__factory.connect(address, provider);
   } catch (e) {
@@ -164,7 +164,7 @@ export function getAllyContract(address: string, provider: JsonRpcProvider): All
   }
 }
 
-export function getGenericPoolContract(address: string, provider: JsonRpcProvider): GenericPool {
+export function getGenericPoolContract(address: string, provider: StaticJsonRpcProvider): GenericPool {
   try {
     return GenericPool__factory.connect(address, provider);
   } catch (e) {
@@ -173,7 +173,7 @@ export function getGenericPoolContract(address: string, provider: JsonRpcProvide
   }
 }
 
-export function getErc20Contract(address: string, provider: JsonRpcProvider): Erc20 {
+export function getErc20Contract(address: string, provider: StaticJsonRpcProvider): Erc20 {
   try {
     return Erc20__factory.connect(address, provider);
   } catch (e) {
@@ -182,7 +182,7 @@ export function getErc20Contract(address: string, provider: JsonRpcProvider): Er
   }
 }
 
-export function getOneTokenV1Contract(address: string, provider: JsonRpcProvider): OneTokenV1 {
+export function getOneTokenV1Contract(address: string, provider: StaticJsonRpcProvider): OneTokenV1 {
   try {
     return OneTokenV1__factory.connect(address, provider);
   } catch (e) {
@@ -192,7 +192,7 @@ export function getOneTokenV1Contract(address: string, provider: JsonRpcProvider
 }
 
 // Farming
-export function getFarmingV1Contract(address: string, provider: JsonRpcProvider): FarmingV1 {
+export function getFarmingV1Contract(address: string, provider: StaticJsonRpcProvider): FarmingV1 {
   try {
     return FarmingV1__factory.connect(address, provider);
   } catch (e) {
@@ -200,7 +200,7 @@ export function getFarmingV1Contract(address: string, provider: JsonRpcProvider)
     throw e;
   }
 }
-export function getFarmingV2Contract(address: string, provider: JsonRpcProvider): FarmingV2 {
+export function getFarmingV2Contract(address: string, provider: StaticJsonRpcProvider): FarmingV2 {
   try {
     return FarmingV2__factory.connect(address, provider);
   } catch (e) {
@@ -208,7 +208,7 @@ export function getFarmingV2Contract(address: string, provider: JsonRpcProvider)
     throw e;
   }
 }
-export function getGenericFarmingV2Contract(address: string, provider: JsonRpcProvider): GenericFarmingV2 {
+export function getGenericFarmingV2Contract(address: string, provider: StaticJsonRpcProvider): GenericFarmingV2 {
   try {
     return GenericFarmingV2__factory.connect(address, provider);
   } catch (e) {
@@ -218,7 +218,7 @@ export function getGenericFarmingV2Contract(address: string, provider: JsonRpcPr
 }
 
 // Uniswap Positions
-export function getUniswapV3PositionsContract(address: string, provider: JsonRpcProvider): UniswapV3Positions {
+export function getUniswapV3PositionsContract(address: string, provider: StaticJsonRpcProvider): UniswapV3Positions {
   try {
     return UniswapV3Positions__factory.connect(address, provider);
   } catch (e) {
@@ -226,7 +226,7 @@ export function getUniswapV3PositionsContract(address: string, provider: JsonRpc
     throw e;
   }
 }
-export function getUniswapV3PoolContract(address: string, provider: JsonRpcProvider): UniswapV3Pool {
+export function getUniswapV3PoolContract(address: string, provider: StaticJsonRpcProvider): UniswapV3Pool {
   try {
     return UniswapV3Pool__factory.connect(address, provider);
   } catch (e) {
@@ -234,7 +234,7 @@ export function getUniswapV3PoolContract(address: string, provider: JsonRpcProvi
     throw e;
   }
 }
-export function getAlgebraPoolContract(address: string, provider: JsonRpcProvider): AlgebraPool {
+export function getAlgebraPoolContract(address: string, provider: StaticJsonRpcProvider): AlgebraPool {
   try {
     return AlgebraPool__factory.connect(address, provider);
   } catch (e) {
@@ -242,7 +242,7 @@ export function getAlgebraPoolContract(address: string, provider: JsonRpcProvide
     throw e;
   }
 }
-export function getUniswapV3FactoryContract(address: string, provider: JsonRpcProvider): UniswapV3Factory {
+export function getUniswapV3FactoryContract(address: string, provider: StaticJsonRpcProvider): UniswapV3Factory {
   try {
     return UniswapV3Factory__factory.connect(address, provider);
   } catch (e) {
@@ -250,7 +250,7 @@ export function getUniswapV3FactoryContract(address: string, provider: JsonRpcPr
     throw e;
   }
 }
-export function getIchiBntV3Contract(address: string, provider: JsonRpcProvider): IchiBntV3 {
+export function getIchiBntV3Contract(address: string, provider: StaticJsonRpcProvider): IchiBntV3 {
   try {
     return IchiBntV3__factory.connect(address, provider);
   } catch (e) {
@@ -261,7 +261,7 @@ export function getIchiBntV3Contract(address: string, provider: JsonRpcProvider)
 
 // DODO
 // DLP
-export function getDodoLiquidityPoolContract(address: string, provider: JsonRpcProvider): DodoLiquidityPool {
+export function getDodoLiquidityPoolContract(address: string, provider: StaticJsonRpcProvider): DodoLiquidityPool {
   try {
     return DodoLiquidityPool__factory.connect(address, provider);
   } catch (e) {
@@ -269,7 +269,7 @@ export function getDodoLiquidityPoolContract(address: string, provider: JsonRpcP
     throw e;
   }
 }
-export function getDodoFarmContract(address: string, provider: JsonRpcProvider): DodoFarm {
+export function getDodoFarmContract(address: string, provider: StaticJsonRpcProvider): DodoFarm {
   try {
     return DodoFarm__factory.connect(address, provider);
   } catch (e) {
@@ -279,7 +279,7 @@ export function getDodoFarmContract(address: string, provider: JsonRpcProvider):
 }
 
 // RARI
-export function getRariPoolContract(address: string, provider: JsonRpcProvider): RariPool {
+export function getRariPoolContract(address: string, provider: StaticJsonRpcProvider): RariPool {
   try {
     return RariPool__factory.connect(address, provider);
   } catch (e) {
@@ -287,7 +287,7 @@ export function getRariPoolContract(address: string, provider: JsonRpcProvider):
     throw e;
   }
 }
-export function getRariPoolLensContract(address: string, provider: JsonRpcProvider): RariPoolLens {
+export function getRariPoolLensContract(address: string, provider: StaticJsonRpcProvider): RariPoolLens {
   try {
     return RariPoolLens__factory.connect(address, provider);
   } catch (e) {
@@ -295,7 +295,7 @@ export function getRariPoolLensContract(address: string, provider: JsonRpcProvid
     throw e;
   }
 }
-export function getRariPoolLensSecondaryContract(address: string, provider: JsonRpcProvider): RariPoolLensSecondary {
+export function getRariPoolLensSecondaryContract(address: string, provider: StaticJsonRpcProvider): RariPoolLensSecondary {
   try {
     return RariPoolLensSecondary__factory.connect(address, provider);
   } catch (e) {
@@ -304,7 +304,7 @@ export function getRariPoolLensSecondaryContract(address: string, provider: Json
   }
 }
 
-export function getBmiStakingContract(address: string, provider: JsonRpcProvider): BmiStaking {
+export function getBmiStakingContract(address: string, provider: StaticJsonRpcProvider): BmiStaking {
   try {
     return BmiStaking__factory.connect(address, provider);
   } catch (e) {
@@ -313,7 +313,7 @@ export function getBmiStakingContract(address: string, provider: JsonRpcProvider
   }
 }
 
-export function get1InchStakingContract(address: string, provider: JsonRpcProvider): OneInchStaking {
+export function get1InchStakingContract(address: string, provider: StaticJsonRpcProvider): OneInchStaking {
   try {
     return OneInchStaking__factory.connect(address, provider);
   } catch (e) {
@@ -322,7 +322,7 @@ export function get1InchStakingContract(address: string, provider: JsonRpcProvid
   }
 }
 
-export function getOneTokenFactoryContract(address: string, provider: JsonRpcProvider): OneTokenFactory {
+export function getOneTokenFactoryContract(address: string, provider: StaticJsonRpcProvider): OneTokenFactory {
   try {
     return OneTokenFactory__factory.connect(address, provider);
   } catch (e) {
@@ -331,7 +331,7 @@ export function getOneTokenFactoryContract(address: string, provider: JsonRpcPro
   }
 }
 
-export function getIchiOracleAggregatorContract(address: string, provider: JsonRpcProvider): IchiOracleAggregator {
+export function getIchiOracleAggregatorContract(address: string, provider: StaticJsonRpcProvider): IchiOracleAggregator {
   try {
     return IchiOracleAggregator__factory.connect(address, provider);
   } catch (e) {
@@ -340,7 +340,7 @@ export function getIchiOracleAggregatorContract(address: string, provider: JsonR
   }
 }
 
-export function getCommonOracleContract(address: string, provider: JsonRpcProvider): CommonOracle {
+export function getCommonOracleContract(address: string, provider: StaticJsonRpcProvider): CommonOracle {
   try {
     return CommonOracle__factory.connect(address, provider);
   } catch (e) {
@@ -349,7 +349,7 @@ export function getCommonOracleContract(address: string, provider: JsonRpcProvid
   }
 }
 
-export function getRebalancingStrategyRegularV1Contract(address: string, provider: JsonRpcProvider): Rebalancing_regular_v1 {
+export function getRebalancingStrategyRegularV1Contract(address: string, provider: StaticJsonRpcProvider): Rebalancing_regular_v1 {
   try {
     return Rebalancing_regular_v1__factory.connect(address, provider);
   } catch (e) {
@@ -358,7 +358,7 @@ export function getRebalancingStrategyRegularV1Contract(address: string, provide
   }
 }
 
-export function getRebalancingStrategyStable500V1Contract(address: string, provider: JsonRpcProvider): Rebalancing_stable_500_v1 {
+export function getRebalancingStrategyStable500V1Contract(address: string, provider: StaticJsonRpcProvider): Rebalancing_stable_500_v1 {
   try {
     return Rebalancing_stable_500_v1__factory.connect(address, provider);
   } catch (e) {
@@ -367,7 +367,7 @@ export function getRebalancingStrategyStable500V1Contract(address: string, provi
   }
 }
 
-export function getRebalancingStrategyIndexV2Contract(address: string, provider: JsonRpcProvider): Rebalancing_index_v2 {
+export function getRebalancingStrategyIndexV2Contract(address: string, provider: StaticJsonRpcProvider): Rebalancing_index_v2 {
   try {
     return Rebalancing_index_v2__factory.connect(address, provider);
   } catch (e) {
@@ -376,7 +376,7 @@ export function getRebalancingStrategyIndexV2Contract(address: string, provider:
   }
 }
 
-export function getRebalancingStrategyIndexV3Contract(address: string, provider: JsonRpcProvider): Rebalancing_index_v3 {
+export function getRebalancingStrategyIndexV3Contract(address: string, provider: StaticJsonRpcProvider): Rebalancing_index_v3 {
   try {
     return Rebalancing_index_v3__factory.connect(address, provider);
   } catch (e) {
@@ -385,7 +385,7 @@ export function getRebalancingStrategyIndexV3Contract(address: string, provider:
   }
 }
 
-export function getRebalancingStrategyFollowPriceV1Contract(address: string, provider: JsonRpcProvider): Follow_price_v1 {
+export function getRebalancingStrategyFollowPriceV1Contract(address: string, provider: StaticJsonRpcProvider): Follow_price_v1 {
   try {
     return Follow_price_v1__factory.connect(address, provider);
   } catch (e) {
@@ -394,7 +394,7 @@ export function getRebalancingStrategyFollowPriceV1Contract(address: string, pro
   }
 }
 
-export function getKeeperRegistryContract(address: string, provider: JsonRpcProvider): KeeperRegistry {
+export function getKeeperRegistryContract(address: string, provider: StaticJsonRpcProvider): KeeperRegistry {
   try {
     return KeeperRegistry__factory.connect(address, provider);
   } catch (e) {
@@ -405,7 +405,7 @@ export function getKeeperRegistryContract(address: string, provider: JsonRpcProv
 
 export function getContract(
   tokenName: TokenName,
-  provider: JsonRpcProvider,
+  provider: StaticJsonRpcProvider,
   opts: { forceErc20?: boolean } = { forceErc20: false }
 ): Optional<Contracts> {
   const chainId: ChainId = provider.network.chainId;
@@ -419,7 +419,7 @@ export function getContract(
 
 export function getContractByAddress(
   address: string,
-  provider: JsonRpcProvider,
+  provider: StaticJsonRpcProvider,
   opts: { forceErc20?: boolean } = { forceErc20: false }
 ): Optional<Contracts> {
   if (opts?.forceErc20 === true) {

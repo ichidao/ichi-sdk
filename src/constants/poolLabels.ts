@@ -1536,6 +1536,38 @@ export const PoolLabels: TPoolLabels = {
     },
     
     // PancakeSwap
+    [MainnetPoolNumbers.PANCAKESWAP_SWETH_WETH_VAULT]: {
+      name: 'swETH-WETH Vault',
+      poolNumber: MainnetPoolNumbers.PANCAKESWAP_SWETH_WETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      farmAddress: '',
+      farmId: 0,
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.PANCAKESWAP_SWETH_WETH, ChainId.Mainnet),
+      isHodl: true,
+      vaultName: VaultName.PANCAKESWAP_SWETH_WETH,
+      vaultAddress: getVaultAddress(VaultName.PANCAKESWAP_SWETH_WETH, ChainId.Mainnet),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [MainnetPoolNumbers.PANCAKESWAP_WETH_SWETH_VAULT]: {
+      name: 'WETH-swETH Vault',
+      poolNumber: MainnetPoolNumbers.PANCAKESWAP_WETH_SWETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      farmAddress: '',
+      farmId: 0,
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.PANCAKESWAP_WETH_SWETH, ChainId.Mainnet),
+      isHodl: true,
+      vaultName: VaultName.PANCAKESWAP_WETH_SWETH,
+      vaultAddress: getVaultAddress(VaultName.PANCAKESWAP_WETH_SWETH, ChainId.Mainnet),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
     [MainnetPoolNumbers.PANCAKESWAP_WETH_USDT_VAULT]: {
       name: 'WETH-USDT Vault',
       poolNumber: MainnetPoolNumbers.PANCAKESWAP_WETH_USDT_VAULT,

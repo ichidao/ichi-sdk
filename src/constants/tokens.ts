@@ -1398,6 +1398,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.SWETH]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.SWETH,
+      tableName: TokenName.SWETH,
+      address: '0xf951E335afb289353dc249e82926178EaC7DEd78',
+      decimals: 18,
+      displayName: 'swETH',
+      symbol: 'SWETH',
+      fullName: 'Swell Ethereum',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.SWISE]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.SWISE,

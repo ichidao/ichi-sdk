@@ -71,6 +71,8 @@ export enum VaultName {
   ICHI_USDC = 'ichi_usdc',
 
   // Mainnet PancakeSwap
+  PANCAKESWAP_SWETH_WETH = 'pancakeswap_sweth_weth',
+  PANCAKESWAP_WETH_SWETH = 'pancakeswap_weth_sweth',
   PANCAKESWAP_WETH_USDT = 'pancakeswap_weth_usdt',
 
   // Mumbai
@@ -305,6 +307,8 @@ export enum VaultTableName {
   ICHI_WBTC = 'ichi_wbtc',
   ICHI_USDC = 'ichi_usdc',
   // Mainnet PancakeSwap
+  PANCAKESWAP_SWETH_WETH = 'pancakeswap_sweth_weth',
+  PANCAKESWAP_WETH_SWETH = 'pancakeswap_weth_sweth',
   PANCAKESWAP_WETH_USDT = 'pancakeswap_weth_usdt',
   // Mumbai
   MUMBAI_ONEBTC_ICHI = 'mumbai_onebtc_ichi',

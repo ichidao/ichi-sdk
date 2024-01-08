@@ -1914,6 +1914,58 @@ export const VAULTS: VaultMapping = {
     }
   },
   // Mainnet PancakeSwap
+  [VaultName.PANCAKESWAP_SWETH_WETH]: {
+    [ChainId.Mainnet]: {
+      vaultName: VaultName.PANCAKESWAP_SWETH_WETH,
+      tableName: VaultTableName.PANCAKESWAP_SWETH_WETH,
+      displayName: 'swETH-WETH',
+      address: '0x80A86e30072e03C135EAb394dAAFc14be43F388b',
+      deployer: '0xfF7B5E167c9877f2b9f65D19d9c8c9aa651Fe19F',
+      farm: 0,
+      externalFarm: '',
+      scarceToken: 'token0',
+      scarceTokenName: TokenName.WETH,
+      scarceTokenDecimals: tokenDecimals(TokenName.WETH, ChainId.Mainnet),
+      scarceTokenCoingeckoId: '',
+      baseTokenName: TokenName.SWETH,
+      baseTokenDecimals: tokenDecimals(TokenName.SWETH, ChainId.Mainnet),
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: true,
+      isHodlVault: true,
+      isLegacy: isLegacy(MainnetPoolNumbers.PANCAKESWAP_SWETH_WETH_VAULT, ChainId.Mainnet),
+      irrStartTxAmount: 0,
+      depositStatus: true,
+      strategyBy: 'Bril Finance',
+    }
+  },
+  [VaultName.PANCAKESWAP_WETH_SWETH]: {
+    [ChainId.Mainnet]: {
+      vaultName: VaultName.PANCAKESWAP_WETH_SWETH,
+      tableName: VaultTableName.PANCAKESWAP_WETH_SWETH,
+      displayName: 'WETH-swETH',
+      address: '0xD0dCEf57Dd0F196dD549a3C56332166C2f2ded4b',
+      deployer: '0xfF7B5E167c9877f2b9f65D19d9c8c9aa651Fe19F',
+      farm: 0,
+      externalFarm: '',
+      scarceToken: 'token1',
+      scarceTokenName: TokenName.SWETH,
+      scarceTokenDecimals: tokenDecimals(TokenName.SWETH, ChainId.Mainnet),
+      scarceTokenCoingeckoId: '',
+      baseTokenName: TokenName.WETH,
+      baseTokenDecimals: tokenDecimals(TokenName.WETH, ChainId.Mainnet),
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: false,
+      isHodlVault: true,
+      isLegacy: isLegacy(MainnetPoolNumbers.PANCAKESWAP_WETH_SWETH_VAULT, ChainId.Mainnet),
+      irrStartTxAmount: 0,
+      depositStatus: true,
+      strategyBy: 'Bril Finance',
+    }
+  },
   [VaultName.PANCAKESWAP_WETH_USDT]: {
     [ChainId.Mainnet]: {
       vaultName: VaultName.PANCAKESWAP_WETH_USDT,

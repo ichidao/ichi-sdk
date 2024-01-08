@@ -80,6 +80,7 @@ export enum TokenName {
   SHIB = 'shib',
   STMATIC = 'stmatic',
   SUSHI = 'sushi',
+  SWETH = 'sweth',
   SWISE = 'swise',
   TBTC = 'tbtc',
   THE = 'the',

@@ -286,6 +286,8 @@ export const Pools: TPools = {
       MainnetPoolNumbers.YFI_VAULT,
       MainnetPoolNumbers.ZRX_VAULT,
       // PancakeSwap
+      MainnetPoolNumbers.PANCAKESWAP_SWETH_WETH_VAULT,
+      MainnetPoolNumbers.PANCAKESWAP_WETH_SWETH_VAULT,
       MainnetPoolNumbers.PANCAKESWAP_WETH_USDT_VAULT,
     ],
     [ChainId.Polygon]: [
@@ -782,6 +784,7 @@ export const Pools: TPools = {
   [PoolGroupName.HIDDEN_VAULTS]: {
     [ChainId.Mainnet]: [
       MainnetPoolNumbers.PANCAKESWAP_WETH_USDT_VAULT,
+      MainnetPoolNumbers.PANCAKESWAP_WETH_SWETH_VAULT,
     ], 
     [ChainId.Polygon]: [
       // QuickSwap

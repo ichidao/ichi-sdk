@@ -260,6 +260,18 @@ export enum EonPoolNumbers {
   ASCENT_WETH_WZEN_VAULT = 8106,
 }
 
+export enum ZkEvmPoolNumbers {
+  ZERO_MATIC_ZERO_VAULT = 8500,
+  ZERO_USDC_WETH_VAULT = 8501,
+  ZERO_USDC_ZERO_VAULT = 8502,
+  ZERO_USDT_ZERO_VAULT = 8503,
+  ZERO_WBTC_WETH_VAULT = 8504,
+  ZERO_WBTC_ZERO_VAULT = 8505,
+  ZERO_WETH_USDC_VAULT = 8506,
+  ZERO_WETH_WBTC_VAULT = 8507,
+  ZERO_WETH_ZERO_VAULT = 8508,
+}
+
 export enum ZkSyncPoolNumbers {
   PANCAKESWAP_USDT_WETH_VAULT = 8300,
   PANCAKESWAP_WETH_USDC_VAULT = 8301,
@@ -272,6 +284,7 @@ export type ArbitrumPoolNumberValues = typeof ArbitrumPoolNumbers[keyof typeof A
 export type AvalanchePoolNumberValues = typeof AvalanchePoolNumbers[keyof typeof AvalanchePoolNumbers];
 export type BscPoolNumberValues = typeof BscPoolNumbers[keyof typeof BscPoolNumbers];
 export type EonPoolNumberValues = typeof EonPoolNumbers[keyof typeof EonPoolNumbers];
+export type ZkEvmPoolNumberValues = typeof ZkEvmPoolNumbers[keyof typeof ZkEvmPoolNumbers];
 export type ZkSyncPoolNumberValues = typeof ZkSyncPoolNumbers[keyof typeof ZkSyncPoolNumbers];
 
 export type PoolNumberValues =
@@ -281,5 +294,6 @@ export type PoolNumberValues =
   | AvalanchePoolNumberValues
   | BscPoolNumberValues
   | EonPoolNumberValues
+  | ZkEvmPoolNumberValues
   | ZkSyncPoolNumberValues
   | MumbaiPoolNumberValues;

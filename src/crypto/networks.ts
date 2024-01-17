@@ -13,6 +13,9 @@ export enum ChainId {
   Eon = 7332,
   zkSync = 324,
   Hedera = 295,
+  Mantle = 5000,
+  Linea = 59144,
+  zkEVM = 1101,
 }
 
 export interface IAssetData {
@@ -193,7 +196,7 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
     env: 'mainnet',
     scanLink: 'https://hashscan.io/mainnet/dashboard',
     scanName: 'HashScan',
-    coingecko: '',
+    coingecko: 'hedera-hashgraph',
     rpc: {
       rpcUrl: 'https://mainnet.hashio.io/api',
       nativeCurrency: {
@@ -210,9 +213,60 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
     env: 'mainnet',
     scanLink: 'https://explorer.zksync.io/',
     scanName: 'ZkSynk',
-    coingecko: '',
+    coingecko: 'zksync',
     rpc: {
       rpcUrl: 'https://1rpc.io/zksync2-era',
+      nativeCurrency: {
+        symbol: 'ETH',
+        name: 'ETH'
+      }
+    }
+  },
+  [ChainId.Mantle]: {
+    chainId: ChainId.Mantle,
+    name: 'Mantle',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Mantle, 'svg'),
+    env: 'mainnet',
+    scanLink: 'https://explorer.mantle.xyz/',
+    scanName: 'Mantle',
+    coingecko: 'mantle',
+    rpc: {
+      rpcUrl: 'https://rpc.mantle.xyz',
+      nativeCurrency: {
+        symbol: 'MNT',
+        name: 'MNT'
+      }
+    }
+  },
+  [ChainId.Linea]: {
+    chainId: ChainId.Linea,
+    name: 'Linea',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Linea, 'svg'),
+    env: 'mainnet',
+    scanLink: 'https://lineascan.build/',
+    scanName: 'Lineascan',
+    coingecko: 'linea',
+    rpc: {
+      rpcUrl: 'https://rpc.linea.build',
+      nativeCurrency: {
+        symbol: 'ETH',
+        name: 'ETH'
+      }
+    }
+  },
+  [ChainId.zkEVM]: {
+    chainId: ChainId.zkEVM,
+    name: 'Polygon_zkEVM',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.zkEVM, 'svg'),
+    env: 'mainnet',
+    scanLink: 'https://zkevm.polygonscan.com/',
+    scanName: 'Polygonscan',
+    coingecko: 'polygon-zkevm',
+    rpc: {
+      rpcUrl: 'https://zkevm-rpc.com',
       nativeCurrency: {
         symbol: 'ETH',
         name: 'ETH'

@@ -12,16 +12,22 @@ export const tokenNameWithChainPrefix = (tokenName: TokenName | string, chainId:
       return `arbitrum_${tokenName}` as TokenTableName
     case ChainId.Avalanche:
       return `avalanche_${tokenName}` as TokenTableName
-    case ChainId.Polygon:
-      return `pol_${tokenName}` as TokenTableName
-    case ChainId.Mumbai:
-      return `mum_${tokenName}` as TokenTableName
     case ChainId.Bsc:
       return `bsc_${tokenName}` as TokenTableName
     case ChainId.Eon:
       return `eon_${tokenName}` as TokenTableName
     case ChainId.Hedera:
       return `hedera_${tokenName}` as TokenTableName
+    case ChainId.Linea:
+      return `linea_${tokenName}` as TokenTableName
+    case ChainId.Mantle:
+      return `mantle_${tokenName}` as TokenTableName
+    case ChainId.Mumbai:
+      return `mum_${tokenName}` as TokenTableName
+    case ChainId.Polygon:
+      return `pol_${tokenName}` as TokenTableName
+    case ChainId.zkEVM:
+      return `zkevm_${tokenName}` as TokenTableName
     case ChainId.zkSync:
       return `zksync_${tokenName}` as TokenTableName
     default:
@@ -991,6 +997,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.MATIC]: {
+    [ChainId.zkEVM]: {
+      tokenName: TokenName.MATIC,
+      tableName: tokenNameWithChainPrefix(TokenName.MATIC, ChainId.zkEVM),
+      address: '0xa2036f0538221a77A3937F1379699f44945018d0',
+      decimals: 18,
+      displayName: 'MATIC',
+      symbol: 'MATIC',
+      fullName: 'Matic Token',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.MATICX]: {
     [ChainId.Polygon]: {
       tokenName: TokenName.MATICX,
@@ -1556,6 +1575,17 @@ export const TOKENS: TokenMapping = {
       atCoingecko: false,
       isOneToken: false
     },
+    [ChainId.zkEVM]: {
+      tokenName: TokenName.USDC,
+      tableName: tokenNameWithChainPrefix(TokenName.USDC, ChainId.zkEVM),
+      address: '0xA8CE8aee21bC2A48a5EF670afCc9274C7bbbC035',
+      decimals: 6,
+      displayName: 'USDC',
+      symbol: 'USDC',
+      fullName: 'USD Coin',
+      atCoingecko: true,
+      isOneToken: false
+    },
     [ChainId.zkSync]: {
       tokenName: TokenName.USDC,
       tableName: `zksync_${TokenName.USDC}`,
@@ -1647,6 +1677,17 @@ export const TOKENS: TokenMapping = {
       fullName: 'Tether USD',
       isOneToken: false,
       atCoingecko: true
+    },
+    [ChainId.zkEVM]: {
+      tokenName: TokenName.USDT,
+      tableName: tokenNameWithChainPrefix(TokenName.USDT, ChainId.zkEVM),
+      address: '0x1E4a5963aBFD975d8c9021ce480b42188849D41d',
+      decimals: 6,
+      displayName: 'USDT',
+      symbol: 'USDT',
+      fullName: 'Tether USD',
+      isOneToken: false,
+      atCoingecko: true,
     },
     [ChainId.zkSync]: {
       tokenName: TokenName.USDT,
@@ -1755,6 +1796,17 @@ export const TOKENS: TokenMapping = {
       atCoingecko: false,
       isOneToken: false
     },
+    [ChainId.zkEVM]: {
+      tokenName: TokenName.WBTC,
+      tableName: tokenNameWithChainPrefix(TokenName.WBTC, ChainId.zkEVM),
+      address: '0xEA034fb02eB1808C2cc3adbC15f447B93CbE08e1',
+      decimals: 8,
+      displayName: 'WBTC',
+      symbol: 'WBTC',
+      fullName: 'Wrapped BTC',
+      isOneToken: false,
+      atCoingecko: true,
+    },
   },
   [TokenName.WEN]: {
     [ChainId.Mainnet]: {
@@ -1818,6 +1870,17 @@ export const TOKENS: TokenMapping = {
       tokenName: TokenName.WETH,
       tableName: `pol_${TokenName.WETH}`,
       address: '0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619',
+      decimals: 18,
+      displayName: 'wETH',
+      symbol: 'wETH',
+      fullName: 'Wrapped Ether',
+      isOneToken: false,
+      atCoingecko: true
+    },
+    [ChainId.zkEVM]: {
+      tokenName: TokenName.WETH,
+      tableName: tokenNameWithChainPrefix(TokenName.WETH, ChainId.zkEVM),
+      address: '0x4F9A0e7FD2Bf6067db6994CF12E4495Df938E6e9',
       decimals: 18,
       displayName: 'wETH',
       symbol: 'wETH',
@@ -1946,6 +2009,19 @@ export const TOKENS: TokenMapping = {
       fullName: 'yearn.finance',
       isOneToken: false,
       atCoingecko: true
+    }
+  },
+  [TokenName.ZERO]: {
+    [ChainId.zkEVM]: {
+      tokenName: TokenName.ZERO,
+      tableName: tokenNameWithChainPrefix(TokenName.ZERO, ChainId.zkEVM),
+      address: '0xB409FeA6c79dA7015Ce92748f38D7c008BB43EBE',
+      decimals: 18,
+      displayName: 'ZERO',
+      symbol: 'ZERO',
+      fullName: 'ZERO',
+      isOneToken: false,
+      atCoingecko: true,
     }
   },
   [TokenName.ZRX]: {

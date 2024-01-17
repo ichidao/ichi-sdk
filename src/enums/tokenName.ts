@@ -55,6 +55,7 @@ export enum TokenName {
   LINK = 'link',
   LIVERETRO = 'liveretro',
   LMR = 'lmr',
+  MATIC = 'matic',
   MATICX = 'maticx',
   MET = 'met',
   METIS = 'metis',
@@ -103,6 +104,7 @@ export enum TokenName {
   XCAD = 'xcad',
   YFI = 'yfi',
   ZRX = 'zrx',
+  ZERO = 'zero',
   // one tokens
   ONE_ETH = 'oneeth',
   ONE_VBTC = 'onevbtc',

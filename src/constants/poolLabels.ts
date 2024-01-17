@@ -20,6 +20,8 @@ import {
   BscPoolNumberValues,
   EonPoolNumbers,
   EonPoolNumberValues,
+  ZkEvmPoolNumbers,
+  ZkEvmPoolNumberValues,
   ZkSyncPoolNumbers,
   ZkSyncPoolNumberValues,
 } from '../enums/poolNumber';
@@ -45,6 +47,7 @@ type TPoolLabels = {
   [ChainId.Avalanche]: PartialRecord<AvalanchePoolNumberValues, PoolLabel>;
   [ChainId.Bsc]: PartialRecord<BscPoolNumberValues, PoolLabel>;
   [ChainId.Eon]: PartialRecord<EonPoolNumberValues, PoolLabel>;
+  [ChainId.zkEVM]: PartialRecord<ZkEvmPoolNumberValues, PoolLabel>;
   [ChainId.zkSync]: PartialRecord<ZkSyncPoolNumberValues, PoolLabel>;
   [ChainId.Mumbai]: PartialRecord<MumbaiPoolNumberValues, PoolLabel>;
 };
@@ -3595,6 +3598,136 @@ export const PoolLabels: TPoolLabels = {
       irrStartTxAmount: 0
     },
   },
+  // zkEVM
+  [ChainId.zkEVM]: {
+    [ZkEvmPoolNumbers.ZERO_MATIC_ZERO_VAULT]: {
+      name: 'MATIC-ZERO Vault',
+      poolNumber: ZkEvmPoolNumbers.ZERO_MATIC_ZERO_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.ZKEVM_ZERO_MATIC_ZERO, ChainId.zkEVM),
+      isHodl: true,
+      vaultName: VaultName.ZKEVM_ZERO_MATIC_ZERO, 
+      vaultAddress: getVaultAddress(VaultName.ZKEVM_ZERO_MATIC_ZERO, ChainId.zkEVM),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [ZkEvmPoolNumbers.ZERO_USDC_WETH_VAULT]: {
+      name: 'USDC-WETH Vault',
+      poolNumber: ZkEvmPoolNumbers.ZERO_USDC_WETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.ZKEVM_ZERO_USDC_WETH, ChainId.zkEVM),
+      isHodl: true,
+      vaultName: VaultName.ZKEVM_ZERO_USDC_WETH, 
+      vaultAddress: getVaultAddress(VaultName.ZKEVM_ZERO_USDC_WETH, ChainId.zkEVM),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [ZkEvmPoolNumbers.ZERO_USDC_ZERO_VAULT]: {
+      name: 'USDC-ZERO Vault',
+      poolNumber: ZkEvmPoolNumbers.ZERO_USDC_ZERO_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.ZKEVM_ZERO_USDC_ZERO, ChainId.zkEVM),
+      isHodl: true,
+      vaultName: VaultName.ZKEVM_ZERO_USDC_ZERO, 
+      vaultAddress: getVaultAddress(VaultName.ZKEVM_ZERO_USDC_ZERO, ChainId.zkEVM),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [ZkEvmPoolNumbers.ZERO_USDT_ZERO_VAULT]: {
+      name: 'USDT-ZERO Vault',
+      poolNumber: ZkEvmPoolNumbers.ZERO_USDT_ZERO_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.ZKEVM_ZERO_USDT_ZERO, ChainId.zkEVM),
+      isHodl: true,
+      vaultName: VaultName.ZKEVM_ZERO_USDT_ZERO, 
+      vaultAddress: getVaultAddress(VaultName.ZKEVM_ZERO_USDT_ZERO, ChainId.zkEVM),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [ZkEvmPoolNumbers.ZERO_WBTC_WETH_VAULT]: {
+      name: 'WBTC-WETH Vault',
+      poolNumber: ZkEvmPoolNumbers.ZERO_WBTC_WETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.ZKEVM_ZERO_WBTC_WETH, ChainId.zkEVM),
+      isHodl: true,
+      vaultName: VaultName.ZKEVM_ZERO_WBTC_WETH, 
+      vaultAddress: getVaultAddress(VaultName.ZKEVM_ZERO_WBTC_WETH, ChainId.zkEVM),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [ZkEvmPoolNumbers.ZERO_WBTC_ZERO_VAULT]: {
+      name: 'WBTC-ZERO Vault',
+      poolNumber: ZkEvmPoolNumbers.ZERO_WBTC_ZERO_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.ZKEVM_ZERO_WBTC_ZERO, ChainId.zkEVM),
+      isHodl: true,
+      vaultName: VaultName.ZKEVM_ZERO_WBTC_ZERO, 
+      vaultAddress: getVaultAddress(VaultName.ZKEVM_ZERO_WBTC_ZERO, ChainId.zkEVM),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [ZkEvmPoolNumbers.ZERO_WETH_USDC_VAULT]: {
+      name: 'WETH-USDC Vault',
+      poolNumber: ZkEvmPoolNumbers.ZERO_WETH_USDC_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.ZKEVM_ZERO_WETH_USDC, ChainId.zkEVM),
+      isHodl: true,
+      vaultName: VaultName.ZKEVM_ZERO_WETH_USDC, 
+      vaultAddress: getVaultAddress(VaultName.ZKEVM_ZERO_WETH_USDC, ChainId.zkEVM),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [ZkEvmPoolNumbers.ZERO_WETH_WBTC_VAULT]: {
+      name: 'WETH-WBTC Vault',
+      poolNumber: ZkEvmPoolNumbers.ZERO_WETH_WBTC_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.ZKEVM_ZERO_WETH_WBTC, ChainId.zkEVM),
+      isHodl: true,
+      vaultName: VaultName.ZKEVM_ZERO_WETH_WBTC, 
+      vaultAddress: getVaultAddress(VaultName.ZKEVM_ZERO_WETH_WBTC, ChainId.zkEVM),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [ZkEvmPoolNumbers.ZERO_WETH_ZERO_VAULT]: {
+      name: 'WETH-ZERO Vault',
+      poolNumber: ZkEvmPoolNumbers.ZERO_WETH_ZERO_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.ZKEVM_ZERO_WETH_ZERO, ChainId.zkEVM),
+      isHodl: true,
+      vaultName: VaultName.ZKEVM_ZERO_WETH_ZERO, 
+      vaultAddress: getVaultAddress(VaultName.ZKEVM_ZERO_WETH_ZERO, ChainId.zkEVM),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+  },
+  // zkSynk
   [ChainId.zkSync]: {
     [ZkSyncPoolNumbers.PANCAKESWAP_USDT_WETH_VAULT]: {
       name: 'USDT-WETH Vault',

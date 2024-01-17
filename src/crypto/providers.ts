@@ -47,7 +47,22 @@ export const providerCacheReference: Record<ChainId, ProviderCache> = {
     cacheHit: 0,
     cacheMiss: 0
   },
+  [ChainId.Linea]: {
+    lastUdated: 0,
+    cacheHit: 0,
+    cacheMiss: 0
+  },
+  [ChainId.Mantle]: {
+    lastUdated: 0,
+    cacheHit: 0,
+    cacheMiss: 0
+  },
   [ChainId.Polygon]: {
+    lastUdated: 0,
+    cacheHit: 0,
+    cacheMiss: 0
+  },
+  [ChainId.zkEVM]: {
     lastUdated: 0,
     cacheHit: 0,
     cacheMiss: 0
@@ -181,8 +196,14 @@ const getRpcEnvName = (chainId: ChainId): EnvUtils.EnvName => {
       return EnvUtils.EnvName.EON_RPC_HOSTS;
     case ChainId.Hedera:
       return EnvUtils.EnvName.HEDERA_RPC_HOSTS;
+    case ChainId.Linea:
+      return EnvUtils.EnvName.LINEA_RPC_HOSTS;
+    case ChainId.Mantle:
+      return EnvUtils.EnvName.MANTLE_RPC_HOSTS;
     case ChainId.Polygon:
       return EnvUtils.EnvName.POLYGON_RPC_HOSTS;
+    case ChainId.zkEVM:
+      return EnvUtils.EnvName.ZKEVM_RPC_HOSTS;
     case ChainId.zkSync:
       return EnvUtils.EnvName.ZKSYNC_RPC_HOSTS;
     case ChainId.Arbitrum:

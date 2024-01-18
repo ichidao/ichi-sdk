@@ -107,17 +107,24 @@ export enum VaultName {
   ARBITRUM_RAMSES_WETH_ARB = 'arbitrum_ramses_weth_arb',
   ARBITRUM_RAMSES_WETH_ICHI = 'arbitrum_ramses_weth_ichi',
   ARBITRUM_RAMSES_WETH_RAM = 'arbitrum_ramses_weth_ram',
+  ARBITRUM_RAMSES_WETH_RAM_05 = 'arbitrum_ramses_weth_ram_05',
   ARBITRUM_RAMSES_WETH_USDC = 'arbitrum_ramses_weth_usdc',
+  // Arbitrum-SushiSwap
+  ARBITRUM_SUSHISWAP_WBTC_ICHI = 'arbitrum_sushiswap_wbtc_ichi',
   // Avalanche
-  // Bsc
+  // Bsc-PancakeSwap
+  BSC_AIOZ_USDT = 'bsc_aioz_usdt',
+  BSC_AIOZ_WBNB = 'bsc_aioz_wbnb',
   BSC_BTCB_CAKE = 'bsc_btcb_cake',
   BSC_BTCB_USDT = 'bsc_btcb_usdt',
   BSC_CAKE_USDT = 'bsc_cake_usdt',
   BSC_CAKE_WBNB = 'bsc_cake_wbnb',
   BSC_ETH_CAKE = 'bsc_eth_cake',
   BSC_USDC_ETH = 'bsc_usdc_eth',
+  BSC_USDT_AIOZ = 'bsc_usdt_aioz',
   BSC_USDT_CAKE = 'bsc_usdt_cake',
   BSC_USDT_WBNB = 'bsc_usdt_wbnb',
+  BSC_WBNB_AIOZ = 'bsc_wbnb_aioz',
   BSC_WBNB_CAKE = 'bsc_wbnb_cake',
   // Bsc-Thena
   BSC_THENA_BTCB_THE = 'bsc_thena_btcb_the',
@@ -140,6 +147,13 @@ export enum VaultName {
   EON_ASCENT_WETH_USDC = 'eon_ascent_weth_usdc',
   EON_ASCENT_WETH_WBTC = 'eon_ascent_weth_wbtc',
   EON_ASCENT_WETH_WZEN = 'eon_ascent_weth_wzen',
+  // Linea Lynex
+  LINEA_LYNEX_USDC_WETH = 'linea_lynex_usdc_weth',
+  LINEA_LYNEX_WBTC_WETH = 'linea_lynex_wbtc_weth',
+  LINEA_LYNEX_WETH_USDC = 'linea_lynex_weth_usdc',
+  LINEA_LYNEX_WETH_WBTC = 'linea_lynex_weth_wbtc',
+  // Mantle Cleo
+  MANTLE_CLEO_WMNT_CLEO = 'mantle_cleo_wmnt_cleo',
   // Polygon
   POLYGON_A3A_EURO3 = 'pol_a3a_euro3',
   POLYGON_BAL_WETH = 'pol_bal_weth',
@@ -177,10 +191,12 @@ export enum VaultName {
   POLYGON_QUICKSWAP_USDC_QUICK = 'pol_quickswap_usdc_quick',
   POLYGON_QUICKSWAP_WBTC_USDC = 'pol_quickswap_wbtc_usdc',
   POLYGON_QUICKSWAP_WBTC_WETH = 'pol_quickswap_wbtc_weth',
+  POLYGON_QUICKSWAP_WETH_FUSE = 'pol_quickswap_weth_fuse',
   POLYGON_QUICKSWAP_WETH_ICHI = 'pol_quickswap_weth_ichi',
   POLYGON_QUICKSWAP_WETH_QUICK = 'pol_quickswap_weth_quick',
   POLYGON_QUICKSWAP_WETH_USDT = 'pol_quickswap_weth_usdt',
   POLYGON_QUICKSWAP_WMATIC_ABOND = 'pol_quickswap_wmatic_abond',
+  POLYGON_QUICKSWAP_WMATIC_ICHI = 'pol_quickswap_wmatic_ichi',
   POLYGON_QUICKSWAP_WMATIC_QUICK = 'pol_quickswap_wmatic_quick',
   POLYGON_QUICKSWAP_WMATIC_USDT = 'pol_quickswap_wmatic_usdt',
   POLYGON_QUICKSWAP_WMATIC_WETH = 'pol_quickswap_wmatic_weth',
@@ -351,17 +367,24 @@ export enum VaultTableName {
   ARBITRUM_RAMSES_WETH_ARB = 'arbitrum_ramses_weth_arb',
   ARBITRUM_RAMSES_WETH_ICHI = 'arbitrum_ramses_weth_ichi',
   ARBITRUM_RAMSES_WETH_RAM = 'arbitrum_ramses_weth_ram',
+  ARBITRUM_RAMSES_WETH_RAM_05 = 'arbitrum_ramses_weth_ram_05',
   ARBITRUM_RAMSES_WETH_USDC = 'arbitrum_ramses_weth_usdc',
+  // Arbitrum-SushiSwap
+ ARBITRUM_SUSHISWAP_WBTC_ICHI = 'arbitrum_sushiswap_wbtc_ichi',
   // Avalanche
-  // Bsc
+  // Bsc-PancakeSwap
+  BSC_AIOZ_USDT = 'bsc_aioz_usdt',
+  BSC_AIOZ_WBNB = 'bsc_aioz_wbnb',
   BSC_BTCB_CAKE = 'bsc_btcb_cake',
   BSC_BTCB_USDT = 'bsc_btcb_usdt',
   BSC_CAKE_USDT = 'bsc_cake_usdt',
   BSC_CAKE_WBNB = 'bsc_cake_wbnb',
   BSC_ETH_CAKE = 'bsc_eth_cake',
   BSC_USDC_ETH = 'bsc_usdc_eth',
+  BSC_USDT_AIOZ = 'bsc_usdt_aioz',
   BSC_USDT_CAKE = 'bsc_usdt_cake',
   BSC_USDT_WBNB = 'bsc_usdt_wbnb',
+  BSC_WBNB_AIOZ = 'bsc_wbnb_aioz',
   BSC_WBNB_CAKE = 'bsc_wbnb_cake',
   // Bsc-Thena
   BSC_THENA_BTCB_THE = 'bsc_thena_btcb_the',
@@ -384,6 +407,13 @@ export enum VaultTableName {
   EON_ASCENT_WETH_USDC = 'eon_ascent_weth_usdc',
   EON_ASCENT_WETH_WBTC = 'eon_ascent_weth_wbtc',
   EON_ASCENT_WETH_WZEN = 'eon_ascent_weth_wzen',
+  // Linea Lynex
+  LINEA_LYNEX_USDC_WETH = 'linea_lynex_usdc_weth',
+  LINEA_LYNEX_WBTC_WETH = 'linea_lynex_wbtc_weth',
+  LINEA_LYNEX_WETH_USDC = 'linea_lynex_weth_usdc',
+  LINEA_LYNEX_WETH_WBTC = 'linea_lynex_weth_wbtc',
+  // Mantle Cleo
+  MANTLE_CLEO_WMNT_CLEO = 'mantle_cleo_wmnt_cleo',
   // Polygon
   POLYGON_A3A_EURO3 = 'pol_a3a_euro3',
   POLYGON_BAL_WETH = 'pol_bal_weth',
@@ -421,10 +451,12 @@ export enum VaultTableName {
   POLYGON_QUICKSWAP_USDC_QUICK = 'pol_quickswap_usdc_quick',
   POLYGON_QUICKSWAP_WBTC_USDC = 'pol_quickswap_wbtc_usdc',
   POLYGON_QUICKSWAP_WBTC_WETH = 'pol_quickswap_wbtc_weth',
+  POLYGON_QUICKSWAP_WETH_FUSE = 'pol_quickswap_weth_fuse',
   POLYGON_QUICKSWAP_WETH_ICHI = 'pol_quickswap_weth_ichi',
   POLYGON_QUICKSWAP_WETH_QUICK = 'pol_quickswap_weth_quick',
   POLYGON_QUICKSWAP_WETH_USDT = 'pol_quickswap_weth_usdt',
   POLYGON_QUICKSWAP_WMATIC_ABOND = 'pol_quickswap_wmatic_abond',
+  POLYGON_QUICKSWAP_WMATIC_ICHI = 'pol_quickswap_wmatic_ichi',
   POLYGON_QUICKSWAP_WMATIC_QUICK = 'pol_quickswap_wmatic_quick',
   POLYGON_QUICKSWAP_WMATIC_USDT = 'pol_quickswap_wmatic_usdt',
   POLYGON_QUICKSWAP_WMATIC_WETH = 'pol_quickswap_wmatic_weth',

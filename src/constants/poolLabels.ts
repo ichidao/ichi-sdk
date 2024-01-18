@@ -24,6 +24,10 @@ import {
   ZkEvmPoolNumberValues,
   ZkSyncPoolNumbers,
   ZkSyncPoolNumberValues,
+  LineaPoolNumberValues,
+  MantlePoolNumberValues,
+  LineaPoolNumbers,
+  MantlePoolNumbers,
 } from '../enums/poolNumber';
 import { ChainId } from '../crypto/networks';
 import { PartialRecord } from '../types/common';
@@ -47,6 +51,8 @@ type TPoolLabels = {
   [ChainId.Avalanche]: PartialRecord<AvalanchePoolNumberValues, PoolLabel>;
   [ChainId.Bsc]: PartialRecord<BscPoolNumberValues, PoolLabel>;
   [ChainId.Eon]: PartialRecord<EonPoolNumberValues, PoolLabel>;
+  [ChainId.Linea]: PartialRecord<LineaPoolNumberValues, PoolLabel>;
+  [ChainId.Mantle]: PartialRecord<MantlePoolNumberValues, PoolLabel>;
   [ChainId.zkEVM]: PartialRecord<ZkEvmPoolNumberValues, PoolLabel>;
   [ChainId.zkSync]: PartialRecord<ZkSyncPoolNumberValues, PoolLabel>;
   [ChainId.Mumbai]: PartialRecord<MumbaiPoolNumberValues, PoolLabel>;
@@ -2635,6 +2641,7 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+    // Polygon QuickSwap
     [PolygonPoolNumbers.QUICKSWAP_AAVE_WETH_VAULT]: {
       name: 'AAVE-WETH Vault',
       poolNumber: PolygonPoolNumbers.QUICKSWAP_AAVE_WETH_VAULT,
@@ -2719,6 +2726,20 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+    [PolygonPoolNumbers.QUICKSWAP_WETH_FUSE_VAULT]: {
+      name: 'WETH-FUSE Vault',
+      poolNumber: PolygonPoolNumbers.QUICKSWAP_WETH_FUSE_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.POLYGON_QUICKSWAP_WETH_FUSE, ChainId.Polygon),
+      isHodl: true,
+      vaultName: VaultName.POLYGON_QUICKSWAP_WETH_FUSE, 
+      vaultAddress: getVaultAddress(VaultName.POLYGON_QUICKSWAP_WETH_FUSE, ChainId.Polygon),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
     [PolygonPoolNumbers.QUICKSWAP_WETH_ICHI_VAULT]: {
       name: 'WETH-ICHI Vault',
       poolNumber: PolygonPoolNumbers.QUICKSWAP_WETH_ICHI_VAULT,
@@ -2772,6 +2793,20 @@ export const PoolLabels: TPoolLabels = {
       isHodl: true,
       vaultName: VaultName.POLYGON_QUICKSWAP_WMATIC_ABOND, 
       vaultAddress: getVaultAddress(VaultName.POLYGON_QUICKSWAP_WMATIC_ABOND, ChainId.Polygon),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [PolygonPoolNumbers.QUICKSWAP_WMATIC_ICHI_VAULT]: {
+      name: 'WMATIC-ICHI Vault',
+      poolNumber: PolygonPoolNumbers.QUICKSWAP_WMATIC_ICHI_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.POLYGON_QUICKSWAP_WMATIC_ICHI, ChainId.Polygon),
+      isHodl: true,
+      vaultName: VaultName.POLYGON_QUICKSWAP_WMATIC_ICHI, 
+      vaultAddress: getVaultAddress(VaultName.POLYGON_QUICKSWAP_WMATIC_ICHI, ChainId.Polygon),
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
@@ -3142,6 +3177,20 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+    [ArbitrumPoolNumbers.RAMSES_WETH_RAM_05_VAULT]: {
+      name: 'WETH-RAM 0.05% Vault',
+      poolNumber: ArbitrumPoolNumbers.RAMSES_WETH_RAM_05_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.ARBITRUM_RAMSES_WETH_RAM_05, ChainId.Arbitrum),
+      isHodl: true,
+      vaultName: VaultName.ARBITRUM_RAMSES_WETH_RAM_05, 
+      vaultAddress: getVaultAddress(VaultName.ARBITRUM_RAMSES_WETH_RAM_05, ChainId.Arbitrum),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
     [ArbitrumPoolNumbers.RAMSES_WETH_RAM_VAULT]: {
       name: 'WETH-RAM Vault',
       poolNumber: ArbitrumPoolNumbers.RAMSES_WETH_RAM_VAULT,
@@ -3170,6 +3219,22 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+    // Sushi
+    [ArbitrumPoolNumbers.SUSHISWAP_WBTC_ICHI_VAULT]: {
+      name: 'WBTC-ICHI Vault',
+      poolNumber: ArbitrumPoolNumbers.SUSHISWAP_WBTC_ICHI_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.ARBITRUM_SUSHISWAP_WBTC_ICHI, ChainId.Arbitrum),
+      isHodl: true,
+      vaultName: VaultName.ARBITRUM_SUSHISWAP_WBTC_ICHI, 
+      vaultAddress: getVaultAddress(VaultName.ARBITRUM_SUSHISWAP_WBTC_ICHI, ChainId.Arbitrum),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    //
     [ArbitrumPoolNumbers.LMR_WBTC_VAULT]: {
       name: 'LMR-WBTC Vault',
       poolNumber: ArbitrumPoolNumbers.LMR_WBTC_VAULT,
@@ -3215,6 +3280,34 @@ export const PoolLabels: TPoolLabels = {
   },
   // Bsc
   [ChainId.Bsc]: {
+    [BscPoolNumbers.AIOZ_USDT_VAULT]: {
+      name: 'AIOZ-USDT Vault',
+      poolNumber: BscPoolNumbers.AIOZ_USDT_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.BSC_AIOZ_USDT, ChainId.Bsc),
+      isHodl: true,
+      vaultName: VaultName.BSC_AIOZ_USDT, 
+      vaultAddress: getVaultAddress(VaultName.BSC_AIOZ_USDT, ChainId.Bsc),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [BscPoolNumbers.AIOZ_WBNB_VAULT]: {
+      name: 'AIOZ-WBNB Vault',
+      poolNumber: BscPoolNumbers.AIOZ_WBNB_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.BSC_AIOZ_WBNB, ChainId.Bsc),
+      isHodl: true,
+      vaultName: VaultName.BSC_AIOZ_WBNB, 
+      vaultAddress: getVaultAddress(VaultName.BSC_AIOZ_WBNB, ChainId.Bsc),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
     [BscPoolNumbers.BTCB_CAKE_VAULT]: {
       name: 'BTCB-CAKE Vault',
       poolNumber: BscPoolNumbers.BTCB_CAKE_VAULT,
@@ -3285,6 +3378,20 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+    [BscPoolNumbers.USDT_AIOZ_VAULT]: {
+      name: 'USDT-AIOZ Vault',
+      poolNumber: BscPoolNumbers.USDT_AIOZ_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.BSC_USDT_AIOZ, ChainId.Bsc),
+      isHodl: true,
+      vaultName: VaultName.BSC_USDT_AIOZ, 
+      vaultAddress: getVaultAddress(VaultName.BSC_USDT_AIOZ, ChainId.Bsc),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
     [BscPoolNumbers.USDT_CAKE_VAULT]: {
       name: 'USDT-CAKE Vault',
       poolNumber: BscPoolNumbers.USDT_CAKE_VAULT,
@@ -3310,6 +3417,20 @@ export const PoolLabels: TPoolLabels = {
       isHodl: true,
       vaultName: VaultName.BSC_USDT_WBNB, 
       vaultAddress: '0x553A31Bb23218a10FF1fFE6492f0D3C71fb88D24',
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [BscPoolNumbers.WBNB_AIOZ_VAULT]: {
+      name: 'WBNB-AIOZ Vault',
+      poolNumber: BscPoolNumbers.WBNB_AIOZ_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.BSC_WBNB_AIOZ, ChainId.Bsc),
+      isHodl: true,
+      vaultName: VaultName.BSC_WBNB_AIOZ, 
+      vaultAddress: getVaultAddress(VaultName.BSC_WBNB_AIOZ, ChainId.Bsc),
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
@@ -3598,6 +3719,85 @@ export const PoolLabels: TPoolLabels = {
       irrStartTxAmount: 0
     },
   },
+
+  // Linea
+  [ChainId.Linea]: {
+    [LineaPoolNumbers.LYNEX_USDC_WETH_VAULT]: {
+      name: 'USDC-WETH Vault',
+      poolNumber: LineaPoolNumbers.LYNEX_USDC_WETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.LINEA_LYNEX_USDC_WETH, ChainId.Linea),
+      isHodl: true,
+      vaultName: VaultName.LINEA_LYNEX_USDC_WETH, 
+      vaultAddress: getVaultAddress(VaultName.LINEA_LYNEX_USDC_WETH, ChainId.Linea),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [LineaPoolNumbers.LYNEX_WBTC_WETH_VAULT]: {
+      name: 'WBTC-WETH Vault',
+      poolNumber: LineaPoolNumbers.LYNEX_WBTC_WETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.LINEA_LYNEX_WBTC_WETH, ChainId.Linea),
+      isHodl: true,
+      vaultName: VaultName.LINEA_LYNEX_WBTC_WETH, 
+      vaultAddress: getVaultAddress(VaultName.LINEA_LYNEX_WBTC_WETH, ChainId.Linea),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [LineaPoolNumbers.LYNEX_WETH_USDC_VAULT]: {
+      name: 'WETH-USDC Vault',
+      poolNumber: LineaPoolNumbers.LYNEX_WETH_USDC_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.LINEA_LYNEX_WETH_USDC, ChainId.Linea),
+      isHodl: true,
+      vaultName: VaultName.LINEA_LYNEX_WETH_USDC, 
+      vaultAddress: getVaultAddress(VaultName.LINEA_LYNEX_WETH_USDC, ChainId.Linea),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [LineaPoolNumbers.LYNEX_WETH_WBTC_VAULT]: {
+      name: 'WETH-WBTC Vault',
+      poolNumber: LineaPoolNumbers.LYNEX_WETH_WBTC_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.LINEA_LYNEX_WETH_WBTC, ChainId.Linea),
+      isHodl: true,
+      vaultName: VaultName.LINEA_LYNEX_WETH_WBTC, 
+      vaultAddress: getVaultAddress(VaultName.LINEA_LYNEX_WETH_WBTC, ChainId.Linea),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+  },
+
+  // Mantle
+  [ChainId.Mantle]: {
+    [MantlePoolNumbers.CLEO_WMNT_CLEO_VAULT]: {
+      name: 'WMNT-CLEO Vault',
+      poolNumber: MantlePoolNumbers.CLEO_WMNT_CLEO_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.MANTLE_CLEO_WMNT_CLEO, ChainId.Mantle),
+      isHodl: true,
+      vaultName: VaultName.MANTLE_CLEO_WMNT_CLEO, 
+      vaultAddress: getVaultAddress(VaultName.MANTLE_CLEO_WMNT_CLEO, ChainId.Mantle),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+  },
+  
   // zkEVM
   [ChainId.zkEVM]: {
     [ZkEvmPoolNumbers.ZERO_MATIC_ZERO_VAULT]: {

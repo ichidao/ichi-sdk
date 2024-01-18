@@ -275,8 +275,23 @@ export async function getTokenMetrics(
             throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
           }
           break;
+        case TokenName.CLEO:
+          const wmntAddress = TOKENS[TokenName.WMNT]![ChainId.Mantle]?.address?.toLowerCase();
+          let priceWmnt: number; 
+          if (opts.tokenPrices && wmntAddress && wmntAddress in opts.tokenPrices) {
+            priceWmnt = opts.tokenPrices[wmntAddress].usd;
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
+          }
+          price = await getTokenPriceFromVault( 
+            VaultName.MANTLE_CLEO_WMNT_CLEO,
+            provider,
+            ChainId.Mantle, 
+            TokenName.CLEO, 
+            priceWmnt)
+          break;
         case TokenName.WBTC:
-          const wbtcAddress = chainId !== ChainId.Eon 
+          const wbtcAddress = (chainId !== ChainId.Eon && chainId !== ChainId.Linea) 
             ? token.address.toLowerCase()
             : TOKENS[TokenName.WBTC]![ChainId.Mainnet]?.address?.toLowerCase();
           if (opts.tokenPrices && wbtcAddress && wbtcAddress in opts.tokenPrices) {

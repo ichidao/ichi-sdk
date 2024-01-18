@@ -187,6 +187,8 @@ export enum PolygonPoolNumbers {
   QUICKSWAP_WMATIC_ABOND_VAULT = 7577,
   RETRO_OATH_WETH_VAULT = 7578,
   RETRO_USDC_MIMATIC_VAULT = 7579,
+  QUICKSWAP_WETH_FUSE_VAULT = 7580,
+  QUICKSWAP_WMATIC_ICHI_VAULT = 7581,
 }
 
 export enum MumbaiPoolNumbers {
@@ -221,6 +223,8 @@ export enum ArbitrumPoolNumbers {
   RAMSES_WETH_ARB_VAULT = 7724,
   RAMSES_WETH_ICHI_VAULT = 7725,
   RAMSES_WETH_USDC_VAULT = 7726,
+  RAMSES_WETH_RAM_05_VAULT = 7727,
+  SUSHISWAP_WBTC_ICHI_VAULT = 7728,
 }
 
 export enum AvalanchePoolNumbers {
@@ -248,6 +252,10 @@ export enum BscPoolNumbers {
   THENA_OATH_WBNB_VAULT = 7917,
   THENA_WBNB_ICHI_VAULT = 7918,
   UNIV3_ICHI_WBNB_VAULT = 7919,
+  AIOZ_USDT_VAULT = 7920,
+  AIOZ_WBNB_VAULT = 7921,
+  USDT_AIOZ_VAULT = 7922,
+  WBNB_AIOZ_VAULT = 7923,
 }
 
 export enum EonPoolNumbers {
@@ -258,6 +266,17 @@ export enum EonPoolNumbers {
   ASCENT_WETH_USDC_VAULT = 8104,
   ASCENT_WETH_WBTC_VAULT = 8105,
   ASCENT_WETH_WZEN_VAULT = 8106,
+}
+
+export enum LineaPoolNumbers {
+  LYNEX_USDC_WETH_VAULT = 8700,
+  LYNEX_WBTC_WETH_VAULT = 8701,
+  LYNEX_WETH_USDC_VAULT = 8702,
+  LYNEX_WETH_WBTC_VAULT = 8703,
+}
+
+export enum MantlePoolNumbers {
+  CLEO_WMNT_CLEO_VAULT = 8900,
 }
 
 export enum ZkEvmPoolNumbers {
@@ -284,6 +303,8 @@ export type ArbitrumPoolNumberValues = typeof ArbitrumPoolNumbers[keyof typeof A
 export type AvalanchePoolNumberValues = typeof AvalanchePoolNumbers[keyof typeof AvalanchePoolNumbers];
 export type BscPoolNumberValues = typeof BscPoolNumbers[keyof typeof BscPoolNumbers];
 export type EonPoolNumberValues = typeof EonPoolNumbers[keyof typeof EonPoolNumbers];
+export type LineaPoolNumberValues = typeof LineaPoolNumbers[keyof typeof LineaPoolNumbers];
+export type MantlePoolNumberValues = typeof MantlePoolNumbers[keyof typeof MantlePoolNumbers];
 export type ZkEvmPoolNumberValues = typeof ZkEvmPoolNumbers[keyof typeof ZkEvmPoolNumbers];
 export type ZkSyncPoolNumberValues = typeof ZkSyncPoolNumbers[keyof typeof ZkSyncPoolNumbers];
 
@@ -294,6 +315,8 @@ export type PoolNumberValues =
   | AvalanchePoolNumberValues
   | BscPoolNumberValues
   | EonPoolNumberValues
+  | LineaPoolNumberValues
+  | MantlePoolNumberValues
   | ZkEvmPoolNumberValues
   | ZkSyncPoolNumberValues
   | MumbaiPoolNumberValues;

@@ -154,6 +154,14 @@ export enum VaultName {
   LINEA_LYNEX_WETH_WBTC = 'linea_lynex_weth_wbtc',
   // Mantle Cleo
   MANTLE_CLEO_WMNT_CLEO = 'mantle_cleo_wmnt_cleo',
+  // opBNB Thena
+  OPBNB_THENA_WBNB_ETH = 'opbnb_thena_wbnb_eth',
+  OPBNB_THENA_BTCB_ETH = 'opbnb_thena_btcb_eth',
+  OPBNB_THENA_BTCB_USDT = 'opbnb_thena_btcb_usdt',
+  OPBNB_THENA_ETH_USDT = 'opbnb_thena_eth_usdt',
+  OPBNB_THENA_USDT_WBNB = 'opbnb_thena_usdt_wbnb',
+  OPBNB_THENA_USDT_BTCB = 'opbnb_thena_usdt_btcb',
+  OPBNB_THENA_USDT_ETH = 'opbnb_thena_usdt_eth',
   // Polygon
   POLYGON_A3A_EURO3 = 'pol_a3a_euro3',
   POLYGON_BAL_WETH = 'pol_bal_weth',
@@ -414,6 +422,14 @@ export enum VaultTableName {
   LINEA_LYNEX_WETH_WBTC = 'linea_lynex_weth_wbtc',
   // Mantle Cleo
   MANTLE_CLEO_WMNT_CLEO = 'mantle_cleo_wmnt_cleo',
+  // opBNB Thena
+  OPBNB_THENA_WBNB_ETH = 'opbnb_thena_wbnb_eth',
+  OPBNB_THENA_BTCB_ETH = 'opbnb_thena_btcb_eth',
+  OPBNB_THENA_BTCB_USDT = 'opbnb_thena_btcb_usdt',
+  OPBNB_THENA_ETH_USDT = 'opbnb_thena_eth_usdt',
+  OPBNB_THENA_USDT_WBNB = 'opbnb_thena_usdt_wbnb',
+  OPBNB_THENA_USDT_BTCB = 'opbnb_thena_usdt_btcb',
+  OPBNB_THENA_USDT_ETH = 'opbnb_thena_usdt_eth',
   // Polygon
   POLYGON_A3A_EURO3 = 'pol_a3a_euro3',
   POLYGON_BAL_WETH = 'pol_bal_weth',

@@ -275,6 +275,17 @@ export async function getTokenMetrics(
             throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
           }
           break;
+        case TokenName.BTCB:
+          const btcbAddress = chainId === ChainId.opBNB 
+            ? TOKENS[TokenName.BTCB]![ChainId.Bsc]?.address?.toLowerCase()
+            : token.address.toLowerCase();
+          if (opts.tokenPrices && btcbAddress && btcbAddress in opts.tokenPrices) {
+            price = opts.tokenPrices[btcbAddress].usd;
+            priceChange = opts.tokenPrices[btcbAddress].usd_24h_change;
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
+          }
+          break;
         case TokenName.CLEO:
           const wmntAddress = TOKENS[TokenName.WMNT]![ChainId.Mantle]?.address?.toLowerCase();
           let priceWmnt: number; 

@@ -279,6 +279,16 @@ export enum MantlePoolNumbers {
   CLEO_WMNT_CLEO_VAULT = 8900,
 }
 
+export enum OpBnbPoolNumbers {
+  THENA_WBNB_ETH_VAULT = 9100,
+  THENA_BTCB_ETH_VAULT = 9101,
+  THENA_BTCB_USDT_VAULT = 9102,
+  THENA_ETH_USDT_VAULT = 9103,
+  THENA_USDT_WBNB_VAULT = 9104,
+  THENA_USDT_BTCB_VAULT = 9105,
+  THENA_USDT_ETH_VAULT = 9106,
+}
+
 export enum ZkEvmPoolNumbers {
   ZERO_MATIC_ZERO_VAULT = 8500,
   ZERO_USDC_WETH_VAULT = 8501,
@@ -305,6 +315,7 @@ export type BscPoolNumberValues = typeof BscPoolNumbers[keyof typeof BscPoolNumb
 export type EonPoolNumberValues = typeof EonPoolNumbers[keyof typeof EonPoolNumbers];
 export type LineaPoolNumberValues = typeof LineaPoolNumbers[keyof typeof LineaPoolNumbers];
 export type MantlePoolNumberValues = typeof MantlePoolNumbers[keyof typeof MantlePoolNumbers];
+export type OpBnbPoolNumberValues = typeof OpBnbPoolNumbers[keyof typeof OpBnbPoolNumbers];
 export type ZkEvmPoolNumberValues = typeof ZkEvmPoolNumbers[keyof typeof ZkEvmPoolNumbers];
 export type ZkSyncPoolNumberValues = typeof ZkSyncPoolNumbers[keyof typeof ZkSyncPoolNumbers];
 
@@ -317,6 +328,7 @@ export type PoolNumberValues =
   | EonPoolNumberValues
   | LineaPoolNumberValues
   | MantlePoolNumberValues
+  | OpBnbPoolNumberValues
   | ZkEvmPoolNumberValues
   | ZkSyncPoolNumberValues
   | MumbaiPoolNumberValues;

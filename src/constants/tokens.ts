@@ -26,6 +26,8 @@ export const tokenNameWithChainPrefix = (tokenName: TokenName | string, chainId:
       return `mum_${tokenName}` as TokenTableName
     case ChainId.Polygon:
       return `pol_${tokenName}` as TokenTableName
+    case ChainId.opBNB:
+      return `opbnb_${tokenName}` as TokenTableName
     case ChainId.zkEVM:
       return `zkevm_${tokenName}` as TokenTableName
     case ChainId.zkSync:
@@ -461,7 +463,18 @@ export const TOKENS: TokenMapping = {
       fullName: 'Binance-Peg BTCB Token',
       isOneToken: false,
       atCoingecko: true
-    }
+    },
+    [ChainId.opBNB]: {
+      tokenName: TokenName.BTCB,
+      tableName: tokenNameWithChainPrefix(TokenName.BTCB, ChainId.opBNB),
+      address: '0x7c6b91D9Be155A6Db01f749217d76fF02A7227F2',
+      decimals: 18,
+      displayName: 'BTCB',
+      symbol: 'BTCB',
+      fullName: 'BTCB Token',
+      isOneToken: false,
+      atCoingecko: false
+    },
   },
   [TokenName.CAKE]: {
     [ChainId.Bsc]: {
@@ -653,7 +666,18 @@ export const TOKENS: TokenMapping = {
       fullName: 'Binance-Peg Ethereum Token',
       isOneToken: false,
       atCoingecko: false
-    }
+    },
+    [ChainId.opBNB]: {
+      tokenName: TokenName.ETH,
+      tableName: tokenNameWithChainPrefix(TokenName.ETH, ChainId.opBNB),
+      address: '0xE7798f023fC62146e8Aa1b36Da45fb70855a77Ea',
+      decimals: 18,
+      displayName: 'ETH',
+      symbol: 'ETH',
+      fullName: 'Ethereum Token',
+      isOneToken: false,
+      atCoingecko: true,
+    },
   },
   [TokenName.EURO3]: {
     [ChainId.Polygon]: {
@@ -1726,6 +1750,17 @@ export const TOKENS: TokenMapping = {
       isOneToken: false,
       atCoingecko: true
     },
+    [ChainId.opBNB]: {
+      tokenName: TokenName.USDT,
+      tableName: tokenNameWithChainPrefix(TokenName.USDT, ChainId.opBNB),
+      address: '0x9e5AAC1Ba1a2e6aEd6b32689DFcF62A509Ca96f3',
+      decimals: 18,
+      displayName: 'USDT',
+      symbol: 'USDT',
+      fullName: 'Tether USD',
+      isOneToken: false,
+      atCoingecko: true
+    },
     [ChainId.zkEVM]: {
       tokenName: TokenName.USDT,
       tableName: tokenNameWithChainPrefix(TokenName.USDT, ChainId.zkEVM),
@@ -1797,7 +1832,18 @@ export const TOKENS: TokenMapping = {
       fullName: 'WBNB Token',
       isOneToken: false,
       atCoingecko: true
-    }
+    },
+    [ChainId.opBNB]: {
+      tokenName: TokenName.WBNB,
+      tableName: tokenNameWithChainPrefix(TokenName.WBNB, ChainId.opBNB),
+      address: '0x4200000000000000000000000000000000000006',
+      decimals: 18,
+      displayName: 'WBNB',
+      symbol: 'WBNB',
+      fullName: 'Wrapped BNB',
+      isOneToken: false,
+      atCoingecko: true
+    },
   },
   [TokenName.WBTC]: {
     [ChainId.Mainnet]: {

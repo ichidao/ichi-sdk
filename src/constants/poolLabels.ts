@@ -28,6 +28,8 @@ import {
   MantlePoolNumberValues,
   LineaPoolNumbers,
   MantlePoolNumbers,
+  OpBnbPoolNumbers,
+  OpBnbPoolNumberValues,
 } from '../enums/poolNumber';
 import { ChainId } from '../crypto/networks';
 import { PartialRecord } from '../types/common';
@@ -53,6 +55,7 @@ type TPoolLabels = {
   [ChainId.Eon]: PartialRecord<EonPoolNumberValues, PoolLabel>;
   [ChainId.Linea]: PartialRecord<LineaPoolNumberValues, PoolLabel>;
   [ChainId.Mantle]: PartialRecord<MantlePoolNumberValues, PoolLabel>;
+  [ChainId.opBNB]: PartialRecord<OpBnbPoolNumberValues, PoolLabel>;
   [ChainId.zkEVM]: PartialRecord<ZkEvmPoolNumberValues, PoolLabel>;
   [ChainId.zkSync]: PartialRecord<ZkSyncPoolNumberValues, PoolLabel>;
   [ChainId.Mumbai]: PartialRecord<MumbaiPoolNumberValues, PoolLabel>;
@@ -3793,6 +3796,108 @@ export const PoolLabels: TPoolLabels = {
       isHodl: true,
       vaultName: VaultName.MANTLE_CLEO_WMNT_CLEO, 
       vaultAddress: getVaultAddress(VaultName.MANTLE_CLEO_WMNT_CLEO, ChainId.Mantle),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+  },
+  
+  // opBNB Thena
+  [ChainId.opBNB]: {
+    [OpBnbPoolNumbers.THENA_BTCB_ETH_VAULT]: {
+      name: 'BTCB-ETH Vault',
+      poolNumber: OpBnbPoolNumbers.THENA_BTCB_ETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.OPBNB_THENA_BTCB_ETH, ChainId.opBNB),
+      isHodl: true,
+      vaultName: VaultName.OPBNB_THENA_BTCB_ETH, 
+      vaultAddress: getVaultAddress(VaultName.OPBNB_THENA_BTCB_ETH, ChainId.opBNB),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [OpBnbPoolNumbers.THENA_BTCB_USDT_VAULT]: {
+      name: 'BTCB-USDT Vault',
+      poolNumber: OpBnbPoolNumbers.THENA_BTCB_USDT_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.OPBNB_THENA_BTCB_USDT, ChainId.opBNB),
+      isHodl: true,
+      vaultName: VaultName.OPBNB_THENA_BTCB_USDT, 
+      vaultAddress: getVaultAddress(VaultName.OPBNB_THENA_BTCB_USDT, ChainId.opBNB),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [OpBnbPoolNumbers.THENA_ETH_USDT_VAULT]: {
+      name: 'ETH-USDT Vault',
+      poolNumber: OpBnbPoolNumbers.THENA_ETH_USDT_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.OPBNB_THENA_ETH_USDT, ChainId.opBNB),
+      isHodl: true,
+      vaultName: VaultName.OPBNB_THENA_ETH_USDT, 
+      vaultAddress: getVaultAddress(VaultName.OPBNB_THENA_ETH_USDT, ChainId.opBNB),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [OpBnbPoolNumbers.THENA_USDT_BTCB_VAULT]: {
+      name: 'USDT-BTCB Vault',
+      poolNumber: OpBnbPoolNumbers.THENA_USDT_BTCB_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.OPBNB_THENA_USDT_BTCB, ChainId.opBNB),
+      isHodl: true,
+      vaultName: VaultName.OPBNB_THENA_USDT_BTCB, 
+      vaultAddress: getVaultAddress(VaultName.OPBNB_THENA_USDT_BTCB, ChainId.opBNB),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [OpBnbPoolNumbers.THENA_USDT_ETH_VAULT]: {
+      name: 'USDT-ETH Vault',
+      poolNumber: OpBnbPoolNumbers.THENA_USDT_ETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.OPBNB_THENA_USDT_ETH, ChainId.opBNB),
+      isHodl: true,
+      vaultName: VaultName.OPBNB_THENA_USDT_ETH, 
+      vaultAddress: getVaultAddress(VaultName.OPBNB_THENA_USDT_ETH, ChainId.opBNB),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [OpBnbPoolNumbers.THENA_USDT_WBNB_VAULT]: {
+      name: 'USDT-WBNB Vault',
+      poolNumber: OpBnbPoolNumbers.THENA_USDT_WBNB_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.OPBNB_THENA_USDT_WBNB, ChainId.opBNB),
+      isHodl: true,
+      vaultName: VaultName.OPBNB_THENA_USDT_WBNB, 
+      vaultAddress: getVaultAddress(VaultName.OPBNB_THENA_USDT_WBNB, ChainId.opBNB),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [OpBnbPoolNumbers.THENA_WBNB_ETH_VAULT]: {
+      name: 'WBNB-ETH Vault',
+      poolNumber: OpBnbPoolNumbers.THENA_WBNB_ETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.OPBNB_THENA_WBNB_ETH, ChainId.opBNB),
+      isHodl: true,
+      vaultName: VaultName.OPBNB_THENA_WBNB_ETH, 
+      vaultAddress: getVaultAddress(VaultName.OPBNB_THENA_WBNB_ETH, ChainId.opBNB),
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },

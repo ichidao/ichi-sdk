@@ -15,6 +15,7 @@ export enum ChainId {
   Hedera = 295,
   Mantle = 5000,
   Linea = 59144,
+  opBNB = 204,
   zkEVM = 1101,
 }
 
@@ -205,17 +206,17 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
       }
     }
   },
-  [ChainId.zkSync]: {
-    chainId: ChainId.zkSync,
-    name: 'Era',
+  [ChainId.Linea]: {
+    chainId: ChainId.Linea,
+    name: 'Linea',
     color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
-    icon: generateIconUrl(ChainId.zkSync, 'svg'),
+    icon: generateIconUrl(ChainId.Linea, 'svg'),
     env: 'mainnet',
-    scanLink: 'https://explorer.zksync.io/',
-    scanName: 'ZkSynk',
-    coingecko: 'zksync',
+    scanLink: 'https://lineascan.build/',
+    scanName: 'Lineascan',
+    coingecko: 'linea',
     rpc: {
-      rpcUrl: 'https://1rpc.io/zksync2-era',
+      rpcUrl: 'https://rpc.linea.build',
       nativeCurrency: {
         symbol: 'ETH',
         name: 'ETH'
@@ -239,20 +240,20 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
       }
     }
   },
-  [ChainId.Linea]: {
-    chainId: ChainId.Linea,
-    name: 'Linea',
+  [ChainId.opBNB]: {
+    chainId: ChainId.opBNB,
+    name: 'op_BNB',
     color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
-    icon: generateIconUrl(ChainId.Linea, 'svg'),
+    icon: generateIconUrl(ChainId.opBNB, 'svg'),
     env: 'mainnet',
-    scanLink: 'https://lineascan.build/',
-    scanName: 'Lineascan',
-    coingecko: 'linea',
+    scanLink: 'https://opbnb.bscscan.com/',
+    scanName: 'opBNB',
+    coingecko: 'opbnb',
     rpc: {
-      rpcUrl: 'https://rpc.linea.build',
+      rpcUrl: 'https://opbnb-mainnet-rpc.bnbchain.org',
       nativeCurrency: {
-        symbol: 'ETH',
-        name: 'ETH'
+        symbol: 'BNB',
+        name: 'BNB'
       }
     }
   },
@@ -267,6 +268,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
     coingecko: 'polygon-zkevm',
     rpc: {
       rpcUrl: 'https://zkevm-rpc.com',
+      nativeCurrency: {
+        symbol: 'ETH',
+        name: 'ETH'
+      }
+    }
+  },
+  [ChainId.zkSync]: {
+    chainId: ChainId.zkSync,
+    name: 'Era',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.zkSync, 'svg'),
+    env: 'mainnet',
+    scanLink: 'https://explorer.zksync.io/',
+    scanName: 'ZkSynk',
+    coingecko: 'zksync',
+    rpc: {
+      rpcUrl: 'https://1rpc.io/zksync2-era',
       nativeCurrency: {
         symbol: 'ETH',
         name: 'ETH'

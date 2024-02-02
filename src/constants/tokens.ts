@@ -655,6 +655,30 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.ERN]: {
+    [ChainId.Polygon]: {
+      tokenName: TokenName.ERN,
+      tableName: tokenNameWithChainPrefix(TokenName.ERN, ChainId.Polygon),
+      address: '0x85955046DF4668e1DD369D2DE9f3AEB98DD2A369',
+      decimals: 18,
+      displayName: 'ERN',
+      symbol: 'ERN',
+      fullName: 'Ethos Reserve Note',
+      isOneToken: false,
+      atCoingecko: true
+    },
+    [ChainId.Arbitrum]: {
+      tokenName: TokenName.ERN,
+      tableName: tokenNameWithChainPrefix(TokenName.ERN, ChainId.Arbitrum),
+      address: '0xa334884bF6b0A066d553D19e507315E839409e62',
+      decimals: 18,
+      displayName: 'ERN',
+      symbol: 'ERN',
+      fullName: 'Ethos Reserve Note',
+      isOneToken: false,
+      atCoingecko: true
+    },
+  },
   [TokenName.ETH]: {
     [ChainId.Bsc]: {
       tokenName: TokenName.ETH,
@@ -754,7 +778,29 @@ export const TOKENS: TokenMapping = {
       fullName: 'Frax',
       isOneToken: false,
       atCoingecko: true
-    }
+    },
+    [ChainId.Arbitrum]: {
+      tokenName: TokenName.FRAX,
+      tableName: tokenNameWithChainPrefix(TokenName.FRAX, ChainId.Arbitrum),
+      address: '0x17FC002b466eEc40DaE837Fc4bE5c67993ddBd6F',
+      decimals: 18,
+      displayName: 'FRAX',
+      symbol: 'FRAX',
+      fullName: 'Frax',
+      isOneToken: false,
+      atCoingecko: true,
+    },
+    [ChainId.Bsc]: {
+      tokenName: TokenName.FRAX,
+      tableName: tokenNameWithChainPrefix(TokenName.FRAX, ChainId.Bsc),
+      address: '0x90C97F71E18723b0Cf0dfa30ee176Ab653E89F40',
+      decimals: 18,
+      displayName: 'FRAX',
+      symbol: 'FRAX',
+      fullName: 'Frax',
+      isOneToken: false,
+      atCoingecko: true,
+    },
   },
   [TokenName.FRXETH]: {
     [ChainId.Mainnet]: {
@@ -778,7 +824,29 @@ export const TOKENS: TokenMapping = {
       fullName: 'Frax Ether',
       isOneToken: false,
       atCoingecko: true
-    }
+    },
+    [ChainId.Arbitrum]: {
+      tokenName: TokenName.FRXETH,
+      tableName: tokenNameWithChainPrefix(TokenName.FRXETH, ChainId.Arbitrum),
+      address: '0x178412e79c25968a32e89b11f63B33F733770c2A',
+      decimals: 18,
+      displayName: 'frxETH',
+      symbol: 'frxETH',
+      fullName: 'Frax Ether',
+      isOneToken: false,
+      atCoingecko: true,
+    },
+    [ChainId.Bsc]: {
+      tokenName: TokenName.FRXETH,
+      tableName: tokenNameWithChainPrefix(TokenName.FRXETH, ChainId.Bsc),
+      address: '0x64048A7eEcF3a2F1BA9e144aAc3D7dB6e58F555e',
+      decimals: 18,
+      displayName: 'frxETH',
+      symbol: 'frxETH',
+      fullName: 'Frax Ether',
+      isOneToken: false,
+      atCoingecko: true,
+    },
   },
   [TokenName.FUSE]: {
     [ChainId.Mainnet]: {
@@ -920,6 +988,19 @@ export const TOKENS: TokenMapping = {
       isOneToken: false,
       atCoingecko: false
     }
+  },
+  [TokenName.HBR]: {
+    [ChainId.Bsc]: {
+      tokenName: TokenName.HBR,
+      tableName: tokenNameWithChainPrefix(TokenName.HBR, ChainId.Bsc),
+      address: '0x42c95788F791a2be3584446854c8d9BB01BE88A9',
+      decimals: 18,
+      displayName: 'HBR',
+      symbol: 'HBR',
+      fullName: 'Harbor Token',
+      isOneToken: false,
+      atCoingecko: false
+    },
   },
   [TokenName.GRAI]: {
     [ChainId.Arbitrum]: {
@@ -1163,6 +1244,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.MUBI]: {
+    [ChainId.Bsc]: {
+      tokenName: TokenName.MUBI,
+      tableName: tokenNameWithChainPrefix(TokenName.MUBI, ChainId.Bsc),
+      address: '0x38e382F74dfb84608F3C1F10187f6bEf5951DE93',
+      decimals: 18,
+      displayName: 'MUBI',
+      symbol: 'MUBI',
+      fullName: 'MUBI',
+      isOneToken: false,
+      atCoingecko: true,
+    },
+  },
   [TokenName.OATH]: {
     [ChainId.Polygon]: {
       tokenName: TokenName.OATH,
@@ -1223,6 +1317,19 @@ export const TOKENS: TokenMapping = {
       isOneToken: false,
       atCoingecko: true
     }
+  },
+  [TokenName.ORDI]: {
+    [ChainId.Bsc]: {
+      tokenName: TokenName.ORDI,
+      tableName: tokenNameWithChainPrefix(TokenName.ORDI, ChainId.Bsc),
+      address: '0xe2aE1a99bBd2eFab0a5C38f2146B7aCE61aBC5cE',
+      decimals: 18,
+      displayName: 'ordi',
+      symbol: 'ORDI',
+      fullName: 'ordi',
+      isOneToken: false,
+      atCoingecko: false
+    },
   },
   [TokenName.ORETRO]: {
     [ChainId.Polygon]: {
@@ -1403,6 +1510,32 @@ export const TOKENS: TokenMapping = {
       isOneToken: false,
       atCoingecko: true
     }
+  },
+  [TokenName.SATS]: {
+    [ChainId.Bsc]: {
+      tokenName: TokenName.SATS,
+      tableName: tokenNameWithChainPrefix(TokenName.SATS, ChainId.Bsc),
+      address: '0x143D7A700a533B4baF6D693449b278A8A2F5927d',
+      decimals: 18,
+      displayName: 'sats',
+      symbol: 'SATS',
+      fullName: 'sats',
+      isOneToken: false,
+      atCoingecko: false,
+    },
+  },
+  [TokenName.SFRAX]: {
+    [ChainId.Arbitrum]: {
+      tokenName: TokenName.SFRAX,
+      tableName: tokenNameWithChainPrefix(TokenName.SFRAX, ChainId.Arbitrum),
+      address: '0xe3b3FE7bcA19cA77Ad877A5Bebab186bEcfAD906',
+      decimals: 18,
+      displayName: 'sFRAX',
+      symbol: 'SFRAX',
+      fullName: 'Staked FRAX',
+      isOneToken: false,
+      atCoingecko: false,
+    },
   },
   [TokenName.SFRXETH]: {
     [ChainId.Mainnet]: {
@@ -1909,6 +2042,19 @@ export const TOKENS: TokenMapping = {
       displayName: 'WBTC',
       symbol: 'WBTC',
       fullName: 'Wrapped BTC',
+      isOneToken: false,
+      atCoingecko: true,
+    },
+  },
+  [TokenName.WEFI]: {
+    [ChainId.Polygon]: {
+      tokenName: TokenName.WEFI,
+      tableName: `pol_${TokenName.WEFI}`,
+      address: '0xfFA188493C15DfAf2C206c97D8633377847b6a52',
+      decimals: 18,
+      displayName: 'WEFI',
+      symbol: 'WEFI',
+      fullName: 'WeFi',
       isOneToken: false,
       atCoingecko: true,
     },

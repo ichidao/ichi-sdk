@@ -7,7 +7,7 @@ import { CoinGeckoPrice, CoinGeckoPriceResponse } from '../models/coinGecko';
 import { WETH, Fetcher, Route } from '@uniswap/sdk';
 import { CommonOracle__factory, OneTokenV1__factory, OneEth__factory, OneLink__factory } from '../generated';
 import { getProvider } from './providers';
-import { getErc20Contract, getIchiVaultContract, getUniswapV3PoolContract } from '../utils/contracts';
+import { getAlgebraPoolContract, getErc20Contract, getIchiVaultContract, getUniswapV3PoolContract } from '../utils/contracts';
 import { VaultName } from '../enums/vaultName';
 import { getVault, VAULTS } from '../constants/vaults';
 import { getPrice } from '../utils/vault';
@@ -323,3 +323,42 @@ export async function getTokenPriceFromVault(
   }
 }
 
+export async function getPriceFromAlgebraVault(
+  vault: VaultName,
+  provider: StaticJsonRpcProvider,
+  chainId: ChainId,
+  tokenName: TokenName,
+  otherTokenPrice: number
+): Promise<number> {
+  let vaultObj = VAULTS[vault][chainId];
+  if (vaultObj){
+    try {
+
+      const vaultContract = getIchiVaultContract(vaultObj.address, provider);
+      const poolAddress: string = await vaultContract.pool();
+
+      const poolContract = getAlgebraPoolContract(poolAddress, provider);
+      const globalState = await poolContract.globalState();
+
+      const sqrtPrice = globalState.price;
+      let price = 1;
+      if (vaultObj.scarceTokenName === tokenName) {
+        price = getPrice(
+          vaultObj.isInverted, sqrtPrice, vaultObj.baseTokenDecimals, vaultObj.scarceTokenDecimals, 15);
+      } else {
+        price = getPrice(
+          !vaultObj.isInverted, sqrtPrice, vaultObj.scarceTokenDecimals, vaultObj.baseTokenDecimals, 15);
+      }
+
+      price = price * otherTokenPrice;
+
+      return price;
+    } catch (e) {
+      console.error(`Could not get price from ${vaultObj.displayName} vault`);
+      throw e;
+    }
+  } else {
+    console.error(`Could not find ${vault} vault on chain ${chainId}`);
+    return 0;
+  }
+}

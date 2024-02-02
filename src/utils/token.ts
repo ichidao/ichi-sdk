@@ -4,6 +4,7 @@ import { getToken, TOKENS } from '../constants/tokens';
 import {
   getMemberTokenPrice,
   getOneTokenPriceFromVault,
+  getPriceFromAlgebraVault,
   getPriceFromRetroVault,
   getPriceFromUSDCVault,
   getPriceFromWethVault,
@@ -228,6 +229,9 @@ export async function getTokenMetrics(
       let retroPrice: number;
       const retroAddress = TOKENS[TokenName.RETRO]![ChainId.Polygon]?.address?.toLowerCase();
 
+      let priceWbnb: number;
+      const wbnbAddress = TOKENS[TokenName.WBNB]![ChainId.Bsc]?.address?.toLowerCase();
+
       switch (tokenName) {
         case TokenName.USDT:
         case TokenName.USDC:
@@ -300,6 +304,47 @@ export async function getTokenMetrics(
             ChainId.Mantle, 
             TokenName.CLEO, 
             priceWmnt)
+          break;
+        case TokenName.SFRAX:
+          const fraxAddress = TOKENS[TokenName.FRAX]![ChainId.Arbitrum]?.address?.toLowerCase();
+          let priceFrax: number; 
+          if (opts.tokenPrices && fraxAddress && fraxAddress in opts.tokenPrices) {
+            priceFrax = opts.tokenPrices[fraxAddress].usd;
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
+          }
+          price = await getTokenPriceFromVault( 
+            VaultName.ARBITRUM_RAMSES_SFRAX_FRAX,
+            provider,
+            ChainId.Arbitrum, 
+            TokenName.SFRAX, 
+            priceFrax)
+          break;
+        case TokenName.ORDI:
+          if (opts.tokenPrices && wbnbAddress && wbnbAddress in opts.tokenPrices) {
+            priceWbnb = opts.tokenPrices[wbnbAddress].usd;
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
+          }
+          price = await getTokenPriceFromVault( 
+            VaultName.BSC_ORDI_WBNB,
+            provider,
+            ChainId.Bsc, 
+            TokenName.ORDI, 
+            priceWbnb)
+          break;
+        case TokenName.SATS:
+          if (opts.tokenPrices && wbnbAddress && wbnbAddress in opts.tokenPrices) {
+            priceWbnb = opts.tokenPrices[wbnbAddress].usd;
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
+          }
+          price = await getTokenPriceFromVault( 
+            VaultName.BSC_SATS_WBNB,
+            provider,
+            ChainId.Bsc, 
+            TokenName.SATS, 
+            priceWbnb)
           break;
         case TokenName.WBTC:
           const wbtcAddress = (chainId !== ChainId.Eon && chainId !== ChainId.Linea) 
@@ -449,6 +494,19 @@ export async function getTokenMetrics(
             ChainId.Polygon,
             TokenName.AXLLQDR,
             1 // CASH price = 1
+            )
+          break;
+        case TokenName.HBR:
+          const bscProvider = await getProvider(ChainId.Bsc);
+          if (!bscProvider) {
+            throw new Error('Could not establish Bsc provider');
+          }
+          price = await getPriceFromAlgebraVault( 
+            VaultName.BSC_THENA_USDT_HBR,
+            bscProvider,
+            ChainId.Bsc,
+            TokenName.HBR,
+            1 // USDT price = 1
             )
           break;
         case TokenName.ORETRO:

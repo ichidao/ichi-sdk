@@ -9,7 +9,12 @@ export type TokenTableName = `${TokenName}` |
   `zksync_${TokenName}` |
   `arbitrum_${TokenName}` |
   `avalanche_${TokenName}`|
-  `eon_${TokenName}`;
+  `eon_${TokenName}` |
+  `fantom_${TokenName}` |
+  `linea_${TokenName}` |
+  `mantle_${TokenName}` |
+  `opbnb_${TokenName}` |
+  `zkevm_${TokenName}`;
 
 export type Token = {
   tokenName: TokenName;

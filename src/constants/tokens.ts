@@ -16,6 +16,8 @@ export const tokenNameWithChainPrefix = (tokenName: TokenName | string, chainId:
       return `bsc_${tokenName}` as TokenTableName
     case ChainId.Eon:
       return `eon_${tokenName}` as TokenTableName
+    case ChainId.Fantom:
+      return `fantom_${tokenName}` as TokenTableName
     case ChainId.Hedera:
       return `hedera_${tokenName}` as TokenTableName
     case ChainId.Linea:
@@ -347,6 +349,19 @@ export const TOKENS: TokenMapping = {
       fullName: 'Axelar Wrapped Lqdr',
       isOneToken: false,
       atCoingecko: false
+    }
+  },
+  [TokenName.AXLUSDC]: {
+    [ChainId.Fantom]: {
+      tokenName: TokenName.AXLUSDC,
+      tableName: tokenNameWithChainPrefix(TokenName.AXLUSDC, ChainId.Fantom),
+      address: '0x1B6382DBDEa11d97f24495C9A90b7c88469134a4',
+      decimals: 6,
+      displayName: 'axlUSDC',
+      symbol: 'axlUSDC',
+      fullName: 'Axelar Wrapped USDC',
+      isOneToken: false,
+      atCoingecko: true
     }
   },
   [TokenName.BAL]: {
@@ -1769,6 +1784,17 @@ export const TOKENS: TokenMapping = {
       atCoingecko: false,
       isOneToken: false
     },
+    [ChainId.Fantom]: {
+      tokenName: TokenName.USDC,
+      tableName: tokenNameWithChainPrefix(TokenName.USDC, ChainId.Fantom),
+      address: '0x28a92dde19D9989F39A49905d7C9C2FAc7799bDf',
+      decimals: 6,
+      displayName: 'USDC',
+      symbol: 'USDC',
+      fullName: 'USD Coin',
+      atCoingecko: true,
+      isOneToken: false
+    },
     [ChainId.Linea]: {
       tokenName: TokenName.USDC,
       tableName: tokenNameWithChainPrefix(TokenName.USDC, ChainId.Linea),
@@ -2160,6 +2186,19 @@ export const TOKENS: TokenMapping = {
       fullName: 'Wrapped Ether',
       isOneToken: false,
       atCoingecko: true
+    },
+  },
+  [TokenName.WFTM]: {
+    [ChainId.Fantom]: {
+      tokenName: TokenName.WFTM,
+      tableName: tokenNameWithChainPrefix(TokenName.WFTM, ChainId.Fantom),
+      address: '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83',
+      decimals: 18,
+      displayName: 'WFTM',
+      symbol: 'WFTM',
+      fullName: 'Wrapped Fantom',
+      isOneToken: false,
+      atCoingecko: true,
     },
   },
   [TokenName.WMNT]: {

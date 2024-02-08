@@ -20,6 +20,8 @@ import {
   BscPoolNumberValues,
   EonPoolNumbers,
   EonPoolNumberValues,
+  FantomPoolNumbers,
+  FantomPoolNumberValues,
   ZkEvmPoolNumbers,
   ZkEvmPoolNumberValues,
   ZkSyncPoolNumbers,
@@ -53,6 +55,7 @@ type TPoolLabels = {
   [ChainId.Avalanche]: PartialRecord<AvalanchePoolNumberValues, PoolLabel>;
   [ChainId.Bsc]: PartialRecord<BscPoolNumberValues, PoolLabel>;
   [ChainId.Eon]: PartialRecord<EonPoolNumberValues, PoolLabel>;
+  [ChainId.Fantom]: PartialRecord<FantomPoolNumberValues, PoolLabel>;
   [ChainId.Linea]: PartialRecord<LineaPoolNumberValues, PoolLabel>;
   [ChainId.Mantle]: PartialRecord<MantlePoolNumberValues, PoolLabel>;
   [ChainId.opBNB]: PartialRecord<OpBnbPoolNumberValues, PoolLabel>;
@@ -2673,6 +2676,20 @@ export const PoolLabels: TPoolLabels = {
       irrStartTxAmount: 0
     },
     // Polygon QuickSwap
+    [PolygonPoolNumbers.QUICKSWAP_A3A_USDC_VAULT]: {
+      name: 'A3A-USDC Vault',
+      poolNumber: PolygonPoolNumbers.QUICKSWAP_A3A_USDC_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.POLYGON_QUICKSWAP_A3A_USDC, ChainId.Polygon),
+      isHodl: true,
+      vaultName: VaultName.POLYGON_QUICKSWAP_A3A_USDC, 
+      vaultAddress: getVaultAddress(VaultName.POLYGON_QUICKSWAP_A3A_USDC, ChainId.Polygon),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
     [PolygonPoolNumbers.QUICKSWAP_AAVE_WETH_VAULT]: {
       name: 'AAVE-WETH Vault',
       poolNumber: PolygonPoolNumbers.QUICKSWAP_AAVE_WETH_VAULT,
@@ -2754,6 +2771,34 @@ export const PoolLabels: TPoolLabels = {
       isHodl: true,
       vaultName: VaultName.POLYGON_QUICKSWAP_WBTC_WETH, 
       vaultAddress: getVaultAddress(VaultName.POLYGON_QUICKSWAP_WBTC_WETH, ChainId.Polygon),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [PolygonPoolNumbers.QUICKSWAP_WEFI_USDC_VAULT]: {
+      name: 'WEFI-USDC Vault',
+      poolNumber: PolygonPoolNumbers.QUICKSWAP_WEFI_USDC_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.POLYGON_QUICKSWAP_WEFI_USDC, ChainId.Polygon),
+      isHodl: true,
+      vaultName: VaultName.POLYGON_QUICKSWAP_WEFI_USDC, 
+      vaultAddress: getVaultAddress(VaultName.POLYGON_QUICKSWAP_WEFI_USDC, ChainId.Polygon),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [PolygonPoolNumbers.QUICKSWAP_WEFI_WETH_VAULT]: {
+      name: 'WEFI-WETH Vault',
+      poolNumber: PolygonPoolNumbers.QUICKSWAP_WEFI_WETH_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.POLYGON_QUICKSWAP_WEFI_WETH, ChainId.Polygon),
+      isHodl: true,
+      vaultName: VaultName.POLYGON_QUICKSWAP_WEFI_WETH, 
+      vaultAddress: getVaultAddress(VaultName.POLYGON_QUICKSWAP_WEFI_WETH, ChainId.Polygon),
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
@@ -3984,6 +4029,66 @@ export const PoolLabels: TPoolLabels = {
       isHodl: true,
       vaultName: VaultName.EON_ASCENT_WETH_WZEN, 
       vaultAddress: getVaultAddress(VaultName.EON_ASCENT_WETH_WZEN, ChainId.Eon),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+  },
+
+  // Fantom
+  [ChainId.Fantom]: {
+    [FantomPoolNumbers.EQUALIZER_AXLUSDC_WFTM_VAULT]: {
+      name: 'axlUSDC-wFTM Vault',
+      poolNumber: FantomPoolNumbers.EQUALIZER_AXLUSDC_WFTM_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.FANTOM_EQUALIZER_AXLUSDC_WFTM, ChainId.Fantom),
+      isHodl: true,
+      vaultName: VaultName.FANTOM_EQUALIZER_AXLUSDC_WFTM, 
+      vaultAddress: getVaultAddress(VaultName.FANTOM_EQUALIZER_AXLUSDC_WFTM, ChainId.Fantom),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [FantomPoolNumbers.EQUALIZER_USDC_WFTM_VAULT]: {
+      name: 'USDC-wFTM Vault',
+      poolNumber: FantomPoolNumbers.EQUALIZER_USDC_WFTM_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.FANTOM_EQUALIZER_USDC_WFTM, ChainId.Fantom),
+      isHodl: true,
+      vaultName: VaultName.FANTOM_EQUALIZER_USDC_WFTM, 
+      vaultAddress: getVaultAddress(VaultName.FANTOM_EQUALIZER_USDC_WFTM, ChainId.Fantom),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [FantomPoolNumbers.EQUALIZER_WFTM_AXLUSDC_VAULT]: {
+      name: 'wFTM-axlUSDC Vault',
+      poolNumber: FantomPoolNumbers.EQUALIZER_WFTM_AXLUSDC_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.FANTOM_EQUALIZER_WFTM_AXLUSDC, ChainId.Fantom),
+      isHodl: true,
+      vaultName: VaultName.FANTOM_EQUALIZER_WFTM_AXLUSDC, 
+      vaultAddress: getVaultAddress(VaultName.FANTOM_EQUALIZER_WFTM_AXLUSDC, ChainId.Fantom),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [FantomPoolNumbers.EQUALIZER_WFTM_USDC_VAULT]: {
+      name: 'wFTM-USDC Vault',
+      poolNumber: FantomPoolNumbers.EQUALIZER_WFTM_USDC_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.FANTOM_EQUALIZER_WFTM_USDC, ChainId.Fantom),
+      isHodl: true,
+      vaultName: VaultName.FANTOM_EQUALIZER_WFTM_USDC, 
+      vaultAddress: getVaultAddress(VaultName.FANTOM_EQUALIZER_WFTM_USDC, ChainId.Fantom),
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },

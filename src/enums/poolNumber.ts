@@ -195,6 +195,9 @@ export enum PolygonPoolNumbers {
   QUICKSWAP_WETH_WEFI_VAULT = 7585,
   RETRO_WETH_ERN_VAULT = 7586,
   RETRO_WETH_OATH_VAULT = 7587,
+  QUICKSWAP_A3A_USDC_VAULT = 7588,
+  QUICKSWAP_WEFI_USDC_VAULT = 7589,
+  QUICKSWAP_WEFI_WETH_VAULT = 7590,
 }
 
 export enum MumbaiPoolNumbers {
@@ -287,6 +290,13 @@ export enum EonPoolNumbers {
   ASCENT_WETH_WZEN_VAULT = 8106,
 }
 
+export enum FantomPoolNumbers {
+  EQUALIZER_AXLUSDC_WFTM_VAULT = 9300,
+  EQUALIZER_USDC_WFTM_VAULT = 9301,
+  EQUALIZER_WFTM_AXLUSDC_VAULT = 9302,
+  EQUALIZER_WFTM_USDC_VAULT = 9303,
+}
+
 export enum LineaPoolNumbers {
   LYNEX_USDC_WETH_VAULT = 8700,
   LYNEX_WBTC_WETH_VAULT = 8701,
@@ -333,6 +343,7 @@ export type ArbitrumPoolNumberValues = typeof ArbitrumPoolNumbers[keyof typeof A
 export type AvalanchePoolNumberValues = typeof AvalanchePoolNumbers[keyof typeof AvalanchePoolNumbers];
 export type BscPoolNumberValues = typeof BscPoolNumbers[keyof typeof BscPoolNumbers];
 export type EonPoolNumberValues = typeof EonPoolNumbers[keyof typeof EonPoolNumbers];
+export type FantomPoolNumberValues = typeof FantomPoolNumbers[keyof typeof FantomPoolNumbers];
 export type LineaPoolNumberValues = typeof LineaPoolNumbers[keyof typeof LineaPoolNumbers];
 export type MantlePoolNumberValues = typeof MantlePoolNumbers[keyof typeof MantlePoolNumbers];
 export type OpBnbPoolNumberValues = typeof OpBnbPoolNumbers[keyof typeof OpBnbPoolNumbers];
@@ -346,6 +357,7 @@ export type PoolNumberValues =
   | AvalanchePoolNumberValues
   | BscPoolNumberValues
   | EonPoolNumberValues
+  | FantomPoolNumberValues
   | LineaPoolNumberValues
   | MantlePoolNumberValues
   | OpBnbPoolNumberValues

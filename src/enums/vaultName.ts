@@ -160,6 +160,11 @@ export enum VaultName {
   EON_ASCENT_WETH_USDC = 'eon_ascent_weth_usdc',
   EON_ASCENT_WETH_WBTC = 'eon_ascent_weth_wbtc',
   EON_ASCENT_WETH_WZEN = 'eon_ascent_weth_wzen',
+  // Fantom
+  FANTOM_EQUALIZER_AXLUSDC_WFTM = 'fantom_equalizer_axlusdc_wftm',
+  FANTOM_EQUALIZER_USDC_WFTM = 'fantom_equalizer_usdc_wftm',
+  FANTOM_EQUALIZER_WFTM_AXLUSDC = 'fantom_equalizer_wftm_axlusdc',
+  FANTOM_EQUALIZER_WFTM_USDC = 'fantom_equalizer_wftm_usdc',
   // Linea Lynex
   LINEA_LYNEX_USDC_WETH = 'linea_lynex_usdc_weth',
   LINEA_LYNEX_WBTC_WETH = 'linea_lynex_wbtc_weth',
@@ -207,6 +212,7 @@ export enum VaultName {
   POLYGON_WSTETH_FBX = 'pol_wsteth_fbx',
   POLYGON_WSTETH_WETH = 'pol_wsteth_weth',
   // Polygon-QuickSwap
+  POLYGON_QUICKSWAP_A3A_USDC = 'pol_quickswap_a3a_usdc',
   POLYGON_QUICKSWAP_AAVE_WETH = 'pol_quickswap_aave_weth',
   POLYGON_QUICKSWAP_LINK_WETH = 'pol_quickswap_link_weth',
   POLYGON_QUICKSWAP_MATICX_WMATIC = 'pol_quickswap_maticx_wmatic',
@@ -216,6 +222,8 @@ export enum VaultName {
   POLYGON_QUICKSWAP_USDC_WEFI = 'pol_quickswap_usdc_wefi',
   POLYGON_QUICKSWAP_WBTC_USDC = 'pol_quickswap_wbtc_usdc',
   POLYGON_QUICKSWAP_WBTC_WETH = 'pol_quickswap_wbtc_weth',
+  POLYGON_QUICKSWAP_WEFI_USDC = 'pol_quickswap_wefi_usdc',
+  POLYGON_QUICKSWAP_WEFI_WETH = 'pol_quickswap_wefi_weth',
   POLYGON_QUICKSWAP_WETH_FUSE = 'pol_quickswap_weth_fuse',
   POLYGON_QUICKSWAP_WETH_ICHI = 'pol_quickswap_weth_ichi',
   POLYGON_QUICKSWAP_WETH_QUICK = 'pol_quickswap_weth_quick',
@@ -448,6 +456,11 @@ export enum VaultTableName {
   EON_ASCENT_WETH_USDC = 'eon_ascent_weth_usdc',
   EON_ASCENT_WETH_WBTC = 'eon_ascent_weth_wbtc',
   EON_ASCENT_WETH_WZEN = 'eon_ascent_weth_wzen',
+  // Fantom
+  FANTOM_EQUALIZER_AXLUSDC_WFTM = 'fantom_equalizer_axlusdc_wftm',
+  FANTOM_EQUALIZER_USDC_WFTM = 'fantom_equalizer_usdc_wftm',
+  FANTOM_EQUALIZER_WFTM_AXLUSDC = 'fantom_equalizer_wftm_axlusdc',
+  FANTOM_EQUALIZER_WFTM_USDC = 'fantom_equalizer_wftm_usdc',
   // Linea Lynex
   LINEA_LYNEX_USDC_WETH = 'linea_lynex_usdc_weth',
   LINEA_LYNEX_WBTC_WETH = 'linea_lynex_wbtc_weth',
@@ -495,6 +508,7 @@ export enum VaultTableName {
   POLYGON_WSTETH_FBX = 'pol_wsteth_fbx',
   POLYGON_WSTETH_WETH = 'pol_wsteth_weth',
   // Polygon-QuickSwap
+  POLYGON_QUICKSWAP_A3A_USDC = 'pol_quickswap_a3a_usdc',
   POLYGON_QUICKSWAP_AAVE_WETH = 'pol_quickswap_aave_weth',
   POLYGON_QUICKSWAP_LINK_WETH = 'pol_quickswap_link_weth',
   POLYGON_QUICKSWAP_MATICX_WMATIC = 'pol_quickswap_maticx_wmatic',
@@ -504,6 +518,8 @@ export enum VaultTableName {
   POLYGON_QUICKSWAP_USDC_WEFI = 'pol_quickswap_usdc_wefi',
   POLYGON_QUICKSWAP_WBTC_USDC = 'pol_quickswap_wbtc_usdc',
   POLYGON_QUICKSWAP_WBTC_WETH = 'pol_quickswap_wbtc_weth',
+  POLYGON_QUICKSWAP_WEFI_USDC = 'pol_quickswap_wefi_usdc',
+  POLYGON_QUICKSWAP_WEFI_WETH = 'pol_quickswap_wefi_weth',
   POLYGON_QUICKSWAP_WETH_FUSE = 'pol_quickswap_weth_fuse',
   POLYGON_QUICKSWAP_WETH_ICHI = 'pol_quickswap_weth_ichi',
   POLYGON_QUICKSWAP_WETH_QUICK = 'pol_quickswap_weth_quick',

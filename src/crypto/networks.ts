@@ -11,6 +11,7 @@ export enum ChainId {
   Mumbai = 80001,
   Bsc = 56,
   Eon = 7332,
+  Fantom = 250,
   zkSync = 324,
   Hedera = 295,
   Mantle = 5000,
@@ -186,6 +187,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
       nativeCurrency: {
         symbol: 'ZEN',
         name: 'ZEN'
+      }
+    }
+  },
+  [ChainId.Fantom]: {
+    chainId: ChainId.Fantom,
+    name: 'Fantom',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Fantom, 'svg'),
+    env: 'mainnet',
+    scanLink: 'https://ftmscan.com',
+    scanName: 'ftmscan',
+    coingecko: 'fantom',
+    rpc: {
+      rpcUrl: 'https://rpc3.fantom.network',
+      nativeCurrency: {
+        symbol: 'FTM',
+        name: 'FTM'
       }
     }
   },

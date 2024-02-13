@@ -427,6 +427,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.BLUE]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.BLUE,
+      tableName: TokenName.BLUE,
+      address: '0x95D8Bf2F57cf973251972b496dC6B1d9C6b5bCe3',
+      decimals: 18,
+      displayName: 'BLUE',
+      symbol: 'BLUE',
+      fullName: 'BLUE',
+      isOneToken: false,
+      atCoingecko: false,
+    }
+  },
   [TokenName.BNT]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.BNT,

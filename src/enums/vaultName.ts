@@ -75,6 +75,10 @@ export enum VaultName {
   PANCAKESWAP_WETH_SWETH = 'pancakeswap_weth_sweth',
   PANCAKESWAP_WETH_USDT = 'pancakeswap_weth_usdt',
 
+  // Mainnet Blueprint
+  ETHEREUM_BLUEPRINT_USDC_BLUE = 'ethereum_blueprint_usdc_blue',
+  ETHEREUM_BLUEPRINT_WETH_BLUE = 'ethereum_blueprint_weth_blue',
+
   // Mumbai
   MUMBAI_ONEBTC_ICHI = 'mumbai_onebtc_ichi',
 
@@ -372,6 +376,9 @@ export enum VaultTableName {
   PANCAKESWAP_SWETH_WETH = 'pancakeswap_sweth_weth',
   PANCAKESWAP_WETH_SWETH = 'pancakeswap_weth_sweth',
   PANCAKESWAP_WETH_USDT = 'pancakeswap_weth_usdt',
+  // Mainnet Blueprint
+  ETHEREUM_BLUEPRINT_USDC_BLUE = 'ethereum_blueprint_usdc_blue',
+  ETHEREUM_BLUEPRINT_WETH_BLUE = 'ethereum_blueprint_weth_blue',
   // Mumbai
   MUMBAI_ONEBTC_ICHI = 'mumbai_onebtc_ichi',
   // Arbitrum

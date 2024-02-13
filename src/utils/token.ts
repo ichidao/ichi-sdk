@@ -436,6 +436,24 @@ export async function getTokenMetrics(
             throw new Error(`Could not lookup token prices for ${token.symbol}`);
           }
           break;
+        case TokenName.BLUE:
+          mainnetProvider = await getProvider(ChainId.Mainnet);
+          if (!mainnetProvider) {
+            throw new Error('Could not establish Mainnet provider');
+          }
+
+          if (opts.tokenPrices && wethAddress && wethAddress in opts.tokenPrices) {
+            wethPrice = opts.tokenPrices[wethAddress].usd;
+            price = await getPriceFromWethVault( 
+              VaultName.ETHEREUM_BLUEPRINT_WETH_BLUE,
+              mainnetProvider,
+              ChainId.Mainnet,
+              wethPrice
+              )
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}`);
+          }
+          break;
         case TokenName.GARBAGE:
           mainnetProvider = await getProvider(ChainId.Mainnet);
           if (!mainnetProvider) {

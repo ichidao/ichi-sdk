@@ -314,6 +314,9 @@ export const Pools: TPools = {
       MainnetPoolNumbers.PANCAKESWAP_SWETH_WETH_VAULT,
       MainnetPoolNumbers.PANCAKESWAP_WETH_SWETH_VAULT,
       MainnetPoolNumbers.PANCAKESWAP_WETH_USDT_VAULT,
+      // Blueprint
+      MainnetPoolNumbers.BLUEPRINT_USDC_BLUE_VAULT,
+      MainnetPoolNumbers.BLUEPRINT_WETH_BLUE_VAULT,
     ],
     [ChainId.Polygon]: [
       PolygonPoolNumbers.A3A_EURO3_VAULT, 
@@ -893,11 +896,16 @@ export const Pools: TPools = {
       MainnetPoolNumbers.TBTC_WETH_VAULT,
       MainnetPoolNumbers.UNI_VAULT,
       MainnetPoolNumbers.WBTC_VAULT_LEGACY,
+      MainnetPoolNumbers.WETH_GARBAGE_VAULT,
       MainnetPoolNumbers.WNXM_VAULT_LEGACY,
       MainnetPoolNumbers.ZRX_VAULT,
     ],
     [ChainId.Polygon]: [
+      PolygonPoolNumbers.A3A_EURO3_VAULT, 
+      PolygonPoolNumbers.EURO3_A3A_VAULT, 
+      PolygonPoolNumbers.GOVI_VAULT, 
       PolygonPoolNumbers.TRADE_USDT_VAULT,
+      PolygonPoolNumbers.USDC_EURO3_VAULT, 
       PolygonPoolNumbers.WETH_FBX_VAULT, 
     ],
     [ChainId.Arbitrum]: [],
@@ -948,6 +956,9 @@ export const Pools: TPools = {
     [ChainId.Mainnet]: [
       MainnetPoolNumbers.PANCAKESWAP_WETH_USDT_VAULT,
       MainnetPoolNumbers.PANCAKESWAP_WETH_SWETH_VAULT,
+      // Blueprint
+      MainnetPoolNumbers.BLUEPRINT_USDC_BLUE_VAULT,
+      MainnetPoolNumbers.BLUEPRINT_WETH_BLUE_VAULT,
     ], 
     [ChainId.Polygon]: [
       // QuickSwap

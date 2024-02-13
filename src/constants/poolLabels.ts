@@ -1599,6 +1599,40 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+
+    // Blueprint
+    [MainnetPoolNumbers.BLUEPRINT_USDC_BLUE_VAULT]: {
+      name: 'USDC-BLUE Vault',
+      poolNumber: MainnetPoolNumbers.BLUEPRINT_USDC_BLUE_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      farmAddress: '',
+      farmId: 0,
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.ETHEREUM_BLUEPRINT_USDC_BLUE, ChainId.Mainnet),
+      isHodl: true,
+      vaultName: VaultName.ETHEREUM_BLUEPRINT_USDC_BLUE,
+      vaultAddress: getVaultAddress(VaultName.ETHEREUM_BLUEPRINT_USDC_BLUE, ChainId.Mainnet),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [MainnetPoolNumbers.BLUEPRINT_WETH_BLUE_VAULT]: {
+      name: 'WETH-BLUE Vault',
+      poolNumber: MainnetPoolNumbers.BLUEPRINT_WETH_BLUE_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      farmAddress: '',
+      farmId: 0,
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.ETHEREUM_BLUEPRINT_WETH_BLUE, ChainId.Mainnet),
+      isHodl: true,
+      vaultName: VaultName.ETHEREUM_BLUEPRINT_WETH_BLUE,
+      vaultAddress: getVaultAddress(VaultName.ETHEREUM_BLUEPRINT_WETH_BLUE, ChainId.Mainnet),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
   },
   [ChainId.Polygon]: {
     [PolygonPoolNumbers.ONE_BTC_VAULT]: {

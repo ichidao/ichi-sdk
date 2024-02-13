@@ -1998,6 +1998,59 @@ export const VAULTS: VaultMapping = {
       strategyBy: 'Bril Finance',
     }
   },
+  // Mainnet Blueprint
+  [VaultName.ETHEREUM_BLUEPRINT_USDC_BLUE]: {
+    [ChainId.Mainnet]: {
+      vaultName: VaultName.ETHEREUM_BLUEPRINT_USDC_BLUE,
+      tableName: VaultTableName.ETHEREUM_BLUEPRINT_USDC_BLUE,
+      displayName: 'USDC-BLUE (blueprint)',
+      address: '0xFA8A710e28471155c55D2Ca1A37E89ac3F924965',
+      deployer: '0xfF7B5E167c9877f2b9f65D19d9c8c9aa651Fe19F',
+      farm: 0,
+      externalFarm: '',
+      scarceToken: 'token0',
+      scarceTokenName: TokenName.BLUE,
+      scarceTokenDecimals: tokenDecimals(TokenName.BLUE, ChainId.Mainnet),
+      scarceTokenCoingeckoId: '',
+      baseTokenName: TokenName.USDC,
+      baseTokenDecimals: tokenDecimals(TokenName.USDC, ChainId.Mainnet),
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: true,
+      isHodlVault: true,
+      isLegacy: isLegacy(MainnetPoolNumbers.BLUEPRINT_USDC_BLUE_VAULT, ChainId.Mainnet),
+      irrStartTxAmount: 0,
+      depositStatus: true,
+      strategyBy: 'Bril Finance',
+    }
+  },
+  [VaultName.ETHEREUM_BLUEPRINT_WETH_BLUE]: {
+    [ChainId.Mainnet]: {
+      vaultName: VaultName.ETHEREUM_BLUEPRINT_WETH_BLUE,
+      tableName: VaultTableName.ETHEREUM_BLUEPRINT_WETH_BLUE,
+      displayName: 'WETH-BLUE (blueprint)',
+      address: '0x6E9B0B7ED4a94874C4223a41d51Aa510e61da50e',
+      deployer: '0xfF7B5E167c9877f2b9f65D19d9c8c9aa651Fe19F',
+      farm: 0,
+      externalFarm: '',
+      scarceToken: 'token0',
+      scarceTokenName: TokenName.BLUE,
+      scarceTokenDecimals: tokenDecimals(TokenName.BLUE, ChainId.Mainnet),
+      scarceTokenCoingeckoId: '',
+      baseTokenName: TokenName.WETH,
+      baseTokenDecimals: tokenDecimals(TokenName.WETH, ChainId.Mainnet),
+      enableNotifications: true,
+      subgraphEndpoint: '',
+      irrStartDate: new Date(0),
+      isInverted: true,
+      isHodlVault: true,
+      isLegacy: isLegacy(MainnetPoolNumbers.BLUEPRINT_WETH_BLUE_VAULT, ChainId.Mainnet),
+      irrStartTxAmount: 0,
+      depositStatus: true,
+      strategyBy: 'Bril Finance',
+    }
+  },
   // Arbitrum - Uni v3
   [VaultName.ARBITRUM_ARB_ICHI]: {
     [ChainId.Arbitrum]: {

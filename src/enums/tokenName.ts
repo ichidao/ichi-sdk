@@ -19,6 +19,7 @@ export enum TokenName {
   BANK = 'bank',
   BAT = 'bat',
   BIT = 'bit',
+  BLUE = 'blue',
   BNT = 'bnt',
   BOBA = 'boba',
   BOOT = 'boot',

@@ -11,6 +11,7 @@ export enum ChainId {
   Mumbai = 80001,
   Bsc = 56,
   Eon = 7332,
+  Evmos = 9001,
   Fantom = 250,
   zkSync = 324,
   Hedera = 295,
@@ -187,6 +188,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
       nativeCurrency: {
         symbol: 'ZEN',
         name: 'ZEN'
+      }
+    }
+  },
+  [ChainId.Evmos]: {
+    chainId: ChainId.Evmos,
+    name: 'Evmos',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Evmos, 'svg'),
+    env: 'mainnet',
+    scanLink: 'https://escan.live/',
+    scanName: 'Escan',
+    coingecko: '',
+    rpc: {
+      rpcUrl: 'https://evmos-evm.publicnode.com',
+      nativeCurrency: {
+        symbol: 'EVMOS',
+        name: 'EVMOS'
       }
     }
   },

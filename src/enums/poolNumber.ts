@@ -363,6 +363,7 @@ export type PoolNumberValues =
   | AvalanchePoolNumberValues
   | BscPoolNumberValues
   | EonPoolNumberValues
+  | EvmosPoolNumberValues
   | FantomPoolNumberValues
   | LineaPoolNumberValues
   | MantlePoolNumberValues

@@ -292,6 +292,9 @@ export enum EonPoolNumbers {
   ASCENT_WETH_WZEN_VAULT = 8106,
 }
 
+export enum EvmosPoolNumbers {
+}
+
 export enum FantomPoolNumbers {
   EQUALIZER_AXLUSDC_WFTM_VAULT = 9300,
   EQUALIZER_USDC_WFTM_VAULT = 9301,
@@ -345,6 +348,7 @@ export type ArbitrumPoolNumberValues = typeof ArbitrumPoolNumbers[keyof typeof A
 export type AvalanchePoolNumberValues = typeof AvalanchePoolNumbers[keyof typeof AvalanchePoolNumbers];
 export type BscPoolNumberValues = typeof BscPoolNumbers[keyof typeof BscPoolNumbers];
 export type EonPoolNumberValues = typeof EonPoolNumbers[keyof typeof EonPoolNumbers];
+export type EvmosPoolNumberValues = typeof EvmosPoolNumbers[keyof typeof EvmosPoolNumbers];
 export type FantomPoolNumberValues = typeof FantomPoolNumbers[keyof typeof FantomPoolNumbers];
 export type LineaPoolNumberValues = typeof LineaPoolNumbers[keyof typeof LineaPoolNumbers];
 export type MantlePoolNumberValues = typeof MantlePoolNumbers[keyof typeof MantlePoolNumbers];
@@ -359,6 +363,7 @@ export type PoolNumberValues =
   | AvalanchePoolNumberValues
   | BscPoolNumberValues
   | EonPoolNumberValues
+  | EvmosPoolNumberValues
   | FantomPoolNumberValues
   | LineaPoolNumberValues
   | MantlePoolNumberValues

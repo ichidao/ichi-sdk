@@ -13,7 +13,6 @@ import {
   EonPoolNumbers,
   EonPoolNumberValues,
   EvmosPoolNumbers,
-  EvmosPoolNumberValues,
   FantomPoolNumbers,
   FantomPoolNumberValues,
   LineaPoolNumbers,
@@ -170,7 +169,6 @@ type TPools = {
     [ChainId.Avalanche]: AvalanchePoolNumberValues[];
     [ChainId.Bsc]: BscPoolNumberValues[];
     [ChainId.Eon]: EonPoolNumberValues[];
-    [ChainId.Evmos]: EvmosPoolNumberValues[];
     [ChainId.Fantom]: FantomPoolNumberValues[];
     [ChainId.Linea]: LineaPoolNumberValues[];
     [ChainId.Mantle]: MantlePoolNumberValues[];
@@ -510,7 +508,6 @@ export const Pools: TPools = {
       EonPoolNumbers.ASCENT_WETH_WBTC_VAULT,
       EonPoolNumbers.ASCENT_WETH_WZEN_VAULT,
     ],
-    [ChainId.Evmos]: [],
     [ChainId.Fantom]: [
       FantomPoolNumbers.EQUALIZER_AXLUSDC_WFTM_VAULT,
       FantomPoolNumbers.EQUALIZER_USDC_WFTM_VAULT,
@@ -1205,7 +1202,6 @@ export const Pools: TPools = {
       BscPoolNumbers.THENA_WBNB_THE_VAULT,
     ],
     [ChainId.Eon]: [],
-    [ChainId.Evmos]: [],
     [ChainId.Fantom]: [],
     [ChainId.Linea]: [
       LineaPoolNumbers.LYNEX_USDC_WETH_VAULT,

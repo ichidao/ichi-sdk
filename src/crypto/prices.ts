@@ -323,6 +323,94 @@ export async function getTokenPriceFromVault(
   }
 }
 
+export async function getDollarTokenPriceFromUniV3Vault(
+  vaultAddress: string,
+  provider: StaticJsonRpcProvider,
+  tokenAddress: string,
+  otherTokenPrice: number
+): Promise<number> {
+  try {
+
+    const vaultContract = getIchiVaultContract(vaultAddress, provider);
+    const isInverted: boolean = await vaultContract.allowToken1();
+    const token0: string = await vaultContract.token0();
+    const token0contact = getErc20Contract(token0, provider);
+    const decimals0 = await token0contact.decimals();
+    const token1: string = await vaultContract.token1();
+    const token1contact = getErc20Contract(token1, provider);
+    const decimals1 = await token1contact.decimals();
+    const baseTokenDecimals = !isInverted ? decimals0 : decimals1;
+    const scarceTokenDecimals = isInverted ? decimals0 : decimals1;
+    const scarceToken = isInverted ? token0 : token1;
+
+    const poolAddress: string = await vaultContract.pool();
+
+    const poolContract = getUniswapV3PoolContract(poolAddress, provider);
+    const slot0 = await poolContract.slot0();
+
+    const sqrtPrice = slot0[0];
+    let price = 1;
+    if (scarceToken.toLocaleLowerCase() === tokenAddress.toLocaleLowerCase()) {
+      price = getPrice(
+        isInverted, sqrtPrice, baseTokenDecimals, scarceTokenDecimals, 15);
+    } else {
+      price = getPrice(
+        !isInverted, sqrtPrice, scarceTokenDecimals, baseTokenDecimals, 15);
+    }
+
+    price = price * otherTokenPrice;
+
+    return price;
+  } catch (e) {
+    console.error(`Could not get price from ${vaultAddress} vault`);
+    throw e;
+  }
+}
+
+export async function getDollarTokenPriceFromAlgebraVault(
+  vaultAddress: string,
+  provider: StaticJsonRpcProvider,
+  tokenAddress: string,
+  otherTokenPrice: number
+): Promise<number> {
+  try {
+
+    const vaultContract = getIchiVaultContract(vaultAddress, provider);
+    const isInverted: boolean = await vaultContract.allowToken1();
+    const token0: string = await vaultContract.token0();
+    const token0contact = getErc20Contract(token0, provider);
+    const decimals0 = await token0contact.decimals();
+    const token1: string = await vaultContract.token1();
+    const token1contact = getErc20Contract(token1, provider);
+    const decimals1 = await token1contact.decimals();
+    const baseTokenDecimals = !isInverted ? decimals0 : decimals1;
+    const scarceTokenDecimals = isInverted ? decimals0 : decimals1;
+    const scarceToken = isInverted ? token0 : token1;
+
+    const poolAddress: string = await vaultContract.pool();
+
+    const poolContract = getAlgebraPoolContract(poolAddress, provider);
+    const globalState = await poolContract.globalState();
+
+    const sqrtPrice = globalState.price;
+    let price = 1;
+    if (scarceToken.toLocaleLowerCase() === tokenAddress.toLocaleLowerCase()) {
+      price = getPrice(
+        isInverted, sqrtPrice, baseTokenDecimals, scarceTokenDecimals, 15);
+    } else {
+      price = getPrice(
+        !isInverted, sqrtPrice, scarceTokenDecimals, baseTokenDecimals, 15);
+    }
+
+    price = price * otherTokenPrice;
+
+    return price;
+  } catch (e) {
+    console.error(`Could not get price from ${vaultAddress} vault`);
+    throw e;
+  }
+}
+
 export async function getPriceFromAlgebraVault(
   vault: VaultName,
   provider: StaticJsonRpcProvider,

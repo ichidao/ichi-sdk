@@ -12,10 +12,14 @@ export const tokenNameWithChainPrefix = (tokenName: TokenName | string, chainId:
       return `arbitrum_${tokenName}` as TokenTableName
     case ChainId.Avalanche:
       return `avalanche_${tokenName}` as TokenTableName
+    case ChainId.Base:
+      return `base_${tokenName}` as TokenTableName
     case ChainId.Bsc:
       return `bsc_${tokenName}` as TokenTableName
     case ChainId.Eon:
       return `eon_${tokenName}` as TokenTableName
+    case ChainId.Evmos:
+      return `evmos_${tokenName}` as TokenTableName
     case ChainId.Fantom:
       return `fantom_${tokenName}` as TokenTableName
     case ChainId.Hedera:
@@ -645,6 +649,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: false
     }
   },
+  [TokenName.DEUS]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.DEUS,
+      tableName: TokenName.DEUS,
+      address: '0xDE5ed76E7c05eC5e4572CfC88d1ACEA165109E44',
+      decimals: 18,
+      displayName: 'DEUS',
+      symbol: 'DEUS',
+      fullName: 'DEUS',
+      isOneToken: false,
+      atCoingecko: true,
+    }
+  },
   [TokenName.DODO]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.DODO,
@@ -731,6 +748,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true,
     },
   },
+  [TokenName.ETHENA]: {
+    [ChainId.Bsc]: {
+      tokenName: TokenName.ETHENA,
+      tableName: tokenNameWithChainPrefix(TokenName.ETHENA, ChainId.Bsc),
+      address: '0xafbe3b8b0939a5538DE32f7752A78e08C8492295',
+      decimals: 18,
+      displayName: 'eTHENA',
+      symbol: 'eTHENA',
+      fullName: 'eTHENA',
+      isOneToken: false,
+      atCoingecko: false
+    },
+  },
   [TokenName.EURO3]: {
     [ChainId.Polygon]: {
       tokenName: TokenName.EURO3,
@@ -768,6 +798,19 @@ export const TOKENS: TokenMapping = {
       fullName: 'Fidu',
       isOneToken: false,
       atCoingecko: true
+    }
+  },
+  [TokenName.FIL]: {
+    [ChainId.Bsc]: {
+      tokenName: TokenName.FIL,
+      tableName: tokenNameWithChainPrefix(TokenName.FIL, ChainId.Bsc),
+      address: '0x0D8Ce2A99Bb6e3B7Db580eD848240e4a0F9aE153',
+      decimals: 18,
+      displayName: 'FIL',
+      symbol: 'FIL',
+      fullName: 'Filecoin',
+      isOneToken: false,
+      atCoingecko: true,
     }
   },
   [TokenName.FOX]: {
@@ -1042,6 +1085,17 @@ export const TOKENS: TokenMapping = {
       isOneToken: false,
       atCoingecko: true
     },
+    [ChainId.Mantle]: {
+      tokenName: TokenName.GRAI,
+      tableName: tokenNameWithChainPrefix(TokenName.GRAI, ChainId.Mantle),
+      address: '0x894134a25a5faC1c2C26F1d8fBf05111a3CB9487',
+      decimals: 18,
+      displayName: 'GRAI',
+      symbol: 'GRAI',
+      fullName: 'Gravita Debt Token',
+      isOneToken: false,
+      atCoingecko: false,
+    },
   },
   [TokenName.IMX]: {
     [ChainId.Mainnet]: {
@@ -1130,6 +1184,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.LISUSD]: {
+    [ChainId.Bsc]: {
+      tokenName: TokenName.LISUSD,
+      tableName: tokenNameWithChainPrefix(TokenName.LISUSD, ChainId.Bsc),
+      address: '0x0782b6d8c4551B9760e74c0545a9bCD90bdc41E5',
+      decimals: 18,
+      displayName: 'lisUSD',
+      symbol: 'lisUSD',
+      fullName: 'Lista USD',
+      isOneToken: false,
+      atCoingecko: true,
+    }
+  },
   [TokenName.LIVERETRO]: {
     [ChainId.Polygon]: {
       tokenName: TokenName.LIVERETRO,
@@ -1204,6 +1271,19 @@ export const TOKENS: TokenMapping = {
       fullName: 'Metronome2',
       isOneToken: false,
       atCoingecko: true
+    }
+  },
+  [TokenName.METH]: {
+    [ChainId.Mantle]: {
+      tokenName: TokenName.METH,
+      tableName: tokenNameWithChainPrefix(TokenName.METH, ChainId.Mantle),
+      address: '0xcDA86A272531e8640cD7F1a92c01839911B90bb0',
+      decimals: 18,
+      displayName: 'mETH',
+      symbol: 'mETH',
+      fullName: 'mETH',
+      isOneToken: false,
+      atCoingecko: false,
     }
   },
   [TokenName.METIS]: {
@@ -1665,6 +1745,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.TASHI]: {
+    [ChainId.Evmos]: {
+      tokenName: TokenName.TASHI,
+      tableName: tokenNameWithChainPrefix(TokenName.TASHI, ChainId.Evmos),
+      address: '0x98fAFD9F714CE0B4bB2870527076F2F314aAed82',
+      decimals: 18,
+      displayName: 'TASHI',
+      symbol: 'TASHI',
+      fullName: 'Tashi',
+      isOneToken: false,
+      atCoingecko: false,
+    }
+  },
   [TokenName.TBTC]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.TBTC,
@@ -1689,6 +1782,19 @@ export const TOKENS: TokenMapping = {
       fullName: 'Thena',
       isOneToken: false,
       atCoingecko: true
+    }
+  },
+  [TokenName.TONCOIN]: {
+    [ChainId.Bsc]: {
+      tokenName: TokenName.TONCOIN,
+      tableName: tokenNameWithChainPrefix(TokenName.TONCOIN, ChainId.Bsc),
+      address: '0x76A797A59Ba2C17726896976B7B3747BfD1d220f',
+      decimals: 9,
+      displayName: 'TONCOIN',
+      symbol: 'TONCOIN',
+      fullName: 'Wrapped TON Coin',
+      isOneToken: false,
+      atCoingecko: true,
     }
   },
   [TokenName.TRADE]: {
@@ -1739,6 +1845,19 @@ export const TOKENS: TokenMapping = {
       fullName: 'Uniswap',
       isOneToken: false,
       atCoingecko: true
+    }
+  },
+  [TokenName.USDBC]: {
+    [ChainId.Base]: {
+      tokenName: TokenName.USDBC,
+      tableName: tokenNameWithChainPrefix(TokenName.USDBC, ChainId.Base),
+      address: '0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA',
+      decimals: 6,
+      displayName: 'USDbC',
+      symbol: 'USDbC',
+      fullName: 'USD Base Coin',
+      isOneToken: false,
+      atCoingecko: true,
     }
   },
   [TokenName.USDC]: {
@@ -1922,6 +2041,17 @@ export const TOKENS: TokenMapping = {
       isOneToken: false,
       atCoingecko: true
     },
+    [ChainId.Evmos]: {
+      tokenName: TokenName.USDT,
+      tableName: tokenNameWithChainPrefix(TokenName.USDT, ChainId.Evmos),
+      address: '0xA167bcAb6791304EDa9B636C8beEC75b3D2829E6',
+      decimals: 6,
+      displayName: 'USDT',
+      symbol: 'USDT',
+      fullName: 'USDT on Kava',
+      isOneToken: false,
+      atCoingecko: false,
+    },
     [ChainId.opBNB]: {
       tokenName: TokenName.USDT,
       tableName: tokenNameWithChainPrefix(TokenName.USDT, ChainId.opBNB),
@@ -2062,6 +2192,17 @@ export const TOKENS: TokenMapping = {
       atCoingecko: false,
       isOneToken: false
     },
+    [ChainId.Evmos]: {
+      tokenName: TokenName.WBTC,
+      tableName: tokenNameWithChainPrefix(TokenName.WBTC, ChainId.Evmos),
+      address: '0x1d7fb99AED3C365B4DEf061B7978CE5055Dfc1e7',
+      decimals: 8,
+      displayName: 'wBTC',
+      symbol: 'wBTC',
+      fullName: 'Wormhole Bitcoin',
+      atCoingecko: false,
+      isOneToken: false,
+    },
     [ChainId.Linea]: {
       tokenName: TokenName.WBTC,
       tableName: tokenNameWithChainPrefix(TokenName.WBTC, ChainId.Linea),
@@ -2145,6 +2286,17 @@ export const TOKENS: TokenMapping = {
       isOneToken: false,
       atCoingecko: true
     },
+    [ChainId.Base]: {
+      tokenName: TokenName.WETH,
+      tableName: tokenNameWithChainPrefix(TokenName.WETH, ChainId.Base),
+      address: '0x4200000000000000000000000000000000000006',
+      decimals: 18,
+      displayName: 'wETH',
+      symbol: 'wETH',
+      fullName: 'Wrapped Ether',
+      isOneToken: false,
+      atCoingecko: true,
+    },
     [ChainId.Eon]: {
       tokenName: TokenName.WETH,
       tableName: `eon_${TokenName.WETH}`,
@@ -2156,6 +2308,17 @@ export const TOKENS: TokenMapping = {
       isOneToken: false,
       atCoingecko: true
     },
+    [ChainId.Evmos]: {
+      tokenName: TokenName.WETH,
+      tableName: tokenNameWithChainPrefix(TokenName.WETH, ChainId.Evmos),
+      address: '0x4D036A97e9ad9e805f0E7B163Ea681B3dE83B7BF',
+      decimals: 8,
+      displayName: 'wETH',
+      symbol: 'wETH',
+      fullName: 'Wormhole ETH',
+      isOneToken: false,
+      atCoingecko: false,
+    },
     [ChainId.Linea]: {
       tokenName: TokenName.WETH,
       tableName: tokenNameWithChainPrefix(TokenName.WETH, ChainId.Linea),
@@ -2166,6 +2329,17 @@ export const TOKENS: TokenMapping = {
       fullName: 'Wrapped Ether',
       isOneToken: false,
       atCoingecko: true
+    },
+    [ChainId.Mantle]: {
+      tokenName: TokenName.WETH,
+      tableName: tokenNameWithChainPrefix(TokenName.WETH, ChainId.Mantle),
+      address: '0xdEAddEaDdeadDEadDEADDEAddEADDEAddead1111',
+      decimals: 18,
+      displayName: 'wETH',
+      symbol: 'wETH',
+      fullName: 'Wrapped Ether',
+      isOneToken: false,
+      atCoingecko: true,
     },
     [ChainId.Polygon]: {
       tokenName: TokenName.WETH,
@@ -2199,6 +2373,19 @@ export const TOKENS: TokenMapping = {
       fullName: 'Wrapped Ether',
       isOneToken: false,
       atCoingecko: true
+    },
+  },
+  [TokenName.WEVMOS]: {
+    [ChainId.Evmos]: {
+      tokenName: TokenName.WEVMOS,
+      tableName: tokenNameWithChainPrefix(TokenName.WEVMOS, ChainId.Evmos),
+      address: '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83',
+      decimals: 18,
+      displayName: 'WEVMOS',
+      symbol: 'WEVMOS',
+      fullName: 'Wrapped Evmos',
+      isOneToken: false,
+      atCoingecko: false,
     },
   },
   [TokenName.WFTM]: {

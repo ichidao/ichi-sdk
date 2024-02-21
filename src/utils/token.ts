@@ -2,6 +2,8 @@ import { ChainId } from '../crypto/networks';
 import { TokenName } from '../enums/tokenName';
 import { getToken, TOKENS } from '../constants/tokens';
 import {
+  getDollarTokenPriceFromAlgebraVault,
+  getDollarTokenPriceFromUniV3Vault,
   getMemberTokenPrice,
   getOneTokenPriceFromVault,
   getPriceFromAlgebraVault,
@@ -305,6 +307,77 @@ export async function getTokenMetrics(
             TokenName.CLEO, 
             priceWmnt)
           break;
+        case TokenName.GRAI:
+          const graiAddress = chainId === ChainId.Mantle
+            ? TOKENS[TokenName.GRAI]![ChainId.Arbitrum]?.address?.toLowerCase()
+            : token.address.toLowerCase();
+          if (opts.tokenPrices && graiAddress && graiAddress in opts.tokenPrices) {
+            price = opts.tokenPrices[graiAddress].usd;
+            priceChange = opts.tokenPrices[graiAddress].usd_24h_change;
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
+          }
+          break;
+        case TokenName.METH:
+          if (opts.tokenPrices && wethAddress && wethAddress in opts.tokenPrices) {
+            wethPrice = opts.tokenPrices[wethAddress].usd;
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
+          }
+          price = await getDollarTokenPriceFromUniV3Vault( 
+            '0x66C0E5020fD8eD867907810Acb58BF910EA80e28',
+            provider,
+            '0xcDA86A272531e8640cD7F1a92c01839911B90bb0', 
+            wethPrice)
+          break;
+        case TokenName.ETHENA:
+          if (opts.tokenPrices && wbnbAddress && wbnbAddress in opts.tokenPrices) {
+            priceWbnb = opts.tokenPrices[wbnbAddress].usd;
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
+          }
+          price = await getDollarTokenPriceFromAlgebraVault( 
+            '0xCE71693a998D7cE11714A6B80f8De90C994ad198',
+            provider,
+            '0xafbe3b8b0939a5538DE32f7752A78e08C8492295', 
+            priceWbnb)
+          break;
+        case TokenName.DEUS:
+          if (opts.tokenPrices && wethAddress && wethAddress in opts.tokenPrices) {
+            wethPrice = opts.tokenPrices[wethAddress].usd;
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
+          }
+          price = await getDollarTokenPriceFromUniV3Vault( 
+            '0x1805C5BE28Ad205cd6Ea853a925c02Ecca987E08',
+            provider,
+            '0xDE5ed76E7c05eC5e4572CfC88d1ACEA165109E44', 
+            wethPrice)
+          break;
+        case TokenName.WEVMOS:
+          const evmosCoingeckoId = 'evmos';
+          const evmosPrice = await getTokenPriceById(evmosCoingeckoId, cg_key);
+          if (evmosPrice) {
+            price = evmosPrice[evmosCoingeckoId].usd;
+            priceChange = evmosPrice[evmosCoingeckoId].usd_24h_change;
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
+          }
+          break;
+        case TokenName.TASHI:
+          const evmosForTashiCoingeckoId = 'evmos';
+          const evmosForTashiPrice = await getTokenPriceById(evmosForTashiCoingeckoId, cg_key);
+          if (evmosForTashiPrice) {
+            const evmosTokenPrice = evmosForTashiPrice[evmosForTashiCoingeckoId].usd;
+            price = await getDollarTokenPriceFromUniV3Vault( 
+              '0x4305325b20518fF42C50CB7288B6A5D26dff19b0',
+              provider,
+              '0x98fAFD9F714CE0B4bB2870527076F2F314aAed82', 
+              evmosTokenPrice)
+            } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
+          }
+          break;
         case TokenName.SFRAX:
           const fraxAddress = TOKENS[TokenName.FRAX]![ChainId.Arbitrum]?.address?.toLowerCase();
           let priceFrax: number; 
@@ -347,7 +420,7 @@ export async function getTokenMetrics(
             priceWbnb)
           break;
         case TokenName.WBTC:
-          const wbtcAddress = (chainId !== ChainId.Eon && chainId !== ChainId.Linea) 
+          const wbtcAddress = (chainId !== ChainId.Eon && chainId !== ChainId.Linea && chainId !== ChainId.Evmos) 
             ? token.address.toLowerCase()
             : TOKENS[TokenName.WBTC]![ChainId.Mainnet]?.address?.toLowerCase();
           if (opts.tokenPrices && wbtcAddress && wbtcAddress in opts.tokenPrices) {
@@ -369,7 +442,7 @@ export async function getTokenMetrics(
           }
           break;
         case TokenName.WETH:
-          const tAddress = (chainId !== ChainId.Eon && chainId !== ChainId.zkSync) 
+          const tAddress = (chainId !== ChainId.Eon && chainId !== ChainId.zkSync && chainId !== ChainId.Evmos) 
             ? token.address.toLowerCase()
             : wethAddress;
           if (opts.tokenPrices && tAddress && tAddress in opts.tokenPrices) {

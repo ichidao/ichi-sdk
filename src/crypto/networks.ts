@@ -9,6 +9,7 @@ export enum ChainId {
   Arbitrum = 42161,
   Avalanche = 43114,
   Mumbai = 80001,
+  Base = 8453,
   Bsc = 56,
   Eon = 7332,
   Evmos = 9001,
@@ -153,6 +154,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
       nativeCurrency: {
         symbol: 'MATIC',
         name: 'Matic'
+      }
+    }
+  },
+  [ChainId.Base]: {
+    chainId: ChainId.Base,
+    name: 'Base',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Base, 'svg'),
+    env: 'mainnet',
+    scanLink: 'basescan.org',
+    scanName: 'BaseScan',
+    coingecko: 'base',
+    rpc: {
+      rpcUrl: 'https://base.llamarpc.com',
+      nativeCurrency: {
+        symbol: 'ETH',
+        name: 'ETH'
       }
     }
   },

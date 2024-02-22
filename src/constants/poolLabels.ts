@@ -32,7 +32,6 @@ import {
   MantlePoolNumbers,
   OpBnbPoolNumbers,
   OpBnbPoolNumberValues,
-  EvmosPoolNumberValues,
 } from '../enums/poolNumber';
 import { ChainId } from '../crypto/networks';
 import { PartialRecord } from '../types/common';
@@ -56,7 +55,6 @@ type TPoolLabels = {
   [ChainId.Avalanche]: PartialRecord<AvalanchePoolNumberValues, PoolLabel>;
   [ChainId.Bsc]: PartialRecord<BscPoolNumberValues, PoolLabel>;
   [ChainId.Eon]: PartialRecord<EonPoolNumberValues, PoolLabel>;
-  [ChainId.Evmos]: PartialRecord<EvmosPoolNumberValues, PoolLabel>;
   [ChainId.Fantom]: PartialRecord<FantomPoolNumberValues, PoolLabel>;
   [ChainId.Linea]: PartialRecord<LineaPoolNumberValues, PoolLabel>;
   [ChainId.Mantle]: PartialRecord<MantlePoolNumberValues, PoolLabel>;
@@ -4068,10 +4066,6 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
-  },
-
-  // Evmos
-  [ChainId.Evmos]: {
   },
 
   // Fantom

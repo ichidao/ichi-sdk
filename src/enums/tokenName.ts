@@ -65,6 +65,7 @@ export enum TokenName {
   LISUSD = 'lisusd',
   LIVERETRO = 'liveretro',
   LMR = 'lmr',
+  LYNX = 'lynx',
   MATIC = 'matic',
   MATICX = 'maticx',
   MET = 'met',

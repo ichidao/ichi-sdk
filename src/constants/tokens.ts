@@ -1234,6 +1234,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.LYNX]: {
+    [ChainId.Linea]: {
+      tokenName: TokenName.LYNX,
+      tableName: tokenNameWithChainPrefix(TokenName.LYNX, ChainId.Linea),
+      address: '0x1a51b19CE03dbE0Cb44C1528E34a7EDD7771E9Af',
+      decimals: 18,
+      displayName: 'LYNX',
+      symbol: 'LYNX',
+      fullName: 'Lynex',
+      isOneToken: false,
+      atCoingecko: false,
+    }
+  },
   [TokenName.MATIC]: {
     [ChainId.zkEVM]: {
       tokenName: TokenName.MATIC,

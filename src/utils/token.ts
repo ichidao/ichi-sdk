@@ -657,6 +657,20 @@ export async function getTokenMetrics(
             throw new Error(`Could not lookup token prices for SFRXETH`);
           }
           break;
+        case TokenName.LYNX:
+          const wethOnLineaAddress = TOKENS[TokenName.WETH]![ChainId.Linea]?.address?.toLowerCase();
+          let wethOnLineaPrice: number; 
+          if (opts.tokenPrices && wethOnLineaAddress && wethOnLineaAddress in opts.tokenPrices) {
+            wethOnLineaPrice = opts.tokenPrices[wethOnLineaAddress].usd;
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
+          }
+          price = await getDollarTokenPriceFromAlgebraVault( 
+            '0x511481ef0DEB10eB5c1E36B72140718c58921265', // wETH-LYNX vault
+            provider,
+            token.address, 
+            wethOnLineaPrice)
+          break;
         case TokenName.ICHI:
           const ichiV2Token = getToken(TokenName.ICHI_V2, chainId);
 

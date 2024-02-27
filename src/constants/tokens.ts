@@ -614,6 +614,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.CONE]: {
+    [ChainId.Polygon]: {
+      tokenName: TokenName.CONE,
+      tableName: tokenNameWithChainPrefix(TokenName.CONE, ChainId.Polygon),
+      address: '0xbA777aE3a3C91fCD83EF85bfe65410592Bdd0f7c',
+      decimals: 18,
+      displayName: 'CONE',
+      symbol: 'CONE',
+      fullName: 'BitCone',
+      isOneToken: false,
+      atCoingecko: true,
+    }
+  },
   [TokenName.COW]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.COW,
@@ -1631,6 +1644,19 @@ export const TOKENS: TokenMapping = {
       parentOneToken: TokenName.RAM,
       isOneToken: false,
       atCoingecko: true
+    }
+  },
+  [TokenName.RBNB]: {
+    [ChainId.Bsc]: {
+      tokenName: TokenName.RBNB,
+      tableName: tokenNameWithChainPrefix(TokenName.RBNB, ChainId.Bsc),
+      address: '0xF027E525D491ef6ffCC478555FBb3CFabB3406a6',
+      decimals: 18,
+      displayName: 'rBNB',
+      symbol: 'rBNB',
+      fullName: 'StaFi rBNB',
+      isOneToken: false,
+      atCoingecko: true,
     }
   },
   [TokenName.RENFIL]: {

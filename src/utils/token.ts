@@ -241,6 +241,7 @@ export async function getTokenMetrics(
         case TokenName.DAI:
         case TokenName.CASH:
         case TokenName.HOME:
+        case TokenName.CUSD:
           price = 1;
           break;
         case TokenName.XICHI:
@@ -360,6 +361,16 @@ export async function getTokenMetrics(
           if (evmosPrice) {
             price = evmosPrice[evmosCoingeckoId].usd;
             priceChange = evmosPrice[evmosCoingeckoId].usd_24h_change;
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
+          }
+          break;
+        case TokenName.CELO:
+          const celoCoingeckoId = 'celo';
+          const celoPrice = await getTokenPriceById(celoCoingeckoId, cg_key);
+          if (celoPrice) {
+            price = celoPrice[celoCoingeckoId].usd;
+            priceChange = celoPrice[celoCoingeckoId].usd_24h_change;
           } else {
             throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
           }

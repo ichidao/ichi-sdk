@@ -11,6 +11,7 @@ export enum ChainId {
   Mumbai = 80001,
   Base = 8453,
   Bsc = 56,
+  Celo = 42220,
   Eon = 7332,
   Evmos = 9001,
   Fantom = 250,
@@ -189,6 +190,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
       nativeCurrency: {
         symbol: 'BNB',
         name: 'BNB'
+      }
+    }
+  },
+  [ChainId.Celo]: {
+    chainId: ChainId.Celo,
+    name: 'Celo',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Celo, 'svg'),
+    env: 'mainnet',
+    scanLink: 'celoscan.io',
+    scanName: 'CeloScan',
+    coingecko: '',
+    rpc: {
+      rpcUrl: 'https://1rpc.io/celo',
+      nativeCurrency: {
+        symbol: 'CELO',
+        name: 'CELO'
       }
     }
   },

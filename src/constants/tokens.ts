@@ -16,6 +16,8 @@ export const tokenNameWithChainPrefix = (tokenName: TokenName | string, chainId:
       return `base_${tokenName}` as TokenTableName
     case ChainId.Bsc:
       return `bsc_${tokenName}` as TokenTableName
+    case ChainId.Celo:
+      return `celo_${tokenName}` as TokenTableName
     case ChainId.Eon:
       return `eon_${tokenName}` as TokenTableName
     case ChainId.Evmos:
@@ -547,6 +549,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.CELO]: {
+    [ChainId.Celo]: {
+      tokenName: TokenName.CELO,
+      tableName: tokenNameWithChainPrefix(TokenName.CELO, ChainId.Celo),
+      address: '0x471EcE3750Da237f93B8E339c536989b8978a438',
+      decimals: 18,
+      displayName: 'CELO',
+      symbol: 'CELO',
+      fullName: 'Celo native asset',
+      isOneToken: false,
+      atCoingecko: false,
+    }
+  },
   [TokenName.CHO]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.CHO,
@@ -634,6 +649,19 @@ export const TOKENS: TokenMapping = {
       fullName: 'Curve DAO',
       isOneToken: false,
       atCoingecko: true
+    }
+  },
+  [TokenName.CUSD]: {
+    [ChainId.Celo]: {
+      tokenName: TokenName.CUSD,
+      tableName: tokenNameWithChainPrefix(TokenName.CUSD, ChainId.Celo),
+      address: '0x765DE816845861e75A25fCA122bb6898B8B1282a',
+      decimals: 18,
+      displayName: 'cUSD',
+      symbol: 'cUSD',
+      fullName: 'Celo Dollar',
+      isOneToken: false,
+      atCoingecko: false,
     }
   },
   [TokenName.DAI]: {

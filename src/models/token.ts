@@ -4,7 +4,9 @@ import { TokenName } from '../enums/tokenName';
 export type TokenTableName = `${TokenName}` |
   `pol_${TokenName}` |
   `mum_${TokenName}` |
+  `base_${TokenName}` |
   `bsc_${TokenName}` |
+  `celo_${TokenName}` |
   `hedera_${TokenName}` |
   `zksync_${TokenName}` |
   `arbitrum_${TokenName}` |

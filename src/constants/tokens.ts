@@ -2293,6 +2293,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true,
     },
   },
+  [TokenName.WEETH]: {
+    [ChainId.Arbitrum]: {
+      tokenName: TokenName.WEETH,
+      tableName: tokenNameWithChainPrefix(TokenName.WEETH, ChainId.Arbitrum),
+      address: '0xfFA188493C15DfAf2C206c97D8633377847b6a52',
+      decimals: 18,
+      displayName: 'weETH',
+      symbol: 'weETH',
+      fullName: 'Wrapped eETH',
+      isOneToken: false,
+      atCoingecko: true,
+    },
+  },
   [TokenName.WEFI]: {
     [ChainId.Polygon]: {
       tokenName: TokenName.WEFI,

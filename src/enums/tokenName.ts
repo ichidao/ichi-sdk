@@ -118,6 +118,7 @@ export enum TokenName {
   WAVAX = 'wavax',
   WBNB = 'wbnb',
   WBTC = 'wbtc',
+  WEETH = 'weeth',
   WEFI = 'wefi',
   WEN = 'wen',
   WETH = 'weth',

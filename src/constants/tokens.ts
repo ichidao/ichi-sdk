@@ -588,6 +588,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: false,
     },
   },
+  [TokenName.CLXY]: {
+    [ChainId.Hedera]: {
+      tokenName: TokenName.CLXY,
+      tableName: tokenNameWithChainPrefix(TokenName.CLXY, ChainId.Hedera),
+      address: '0x00000000000000000000000000000000000d1ea6',
+      decimals: 6,
+      displayName: 'CLXY',
+      symbol: 'CLXY',
+      fullName: 'Calaxy Tokens',
+      isOneToken: false,
+      atCoingecko: true,
+    },
+  },
   [TokenName.COC]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.COC,
@@ -688,6 +701,19 @@ export const TOKENS: TokenMapping = {
       fullName: 'Dai Stablecoin',
       isOneToken: false,
       atCoingecko: false
+    }
+  },
+  [TokenName.DAIHTS]: {
+    [ChainId.Hedera]: {
+      tokenName: TokenName.DAIHTS,
+      tableName: tokenNameWithChainPrefix(TokenName.DAIHTS, ChainId.Hedera),
+      address: '0x0000000000000000000000000000000000101af5',
+      decimals: 8,
+      displayName: 'DAI[hts]',
+      symbol: 'DAI[hts]',
+      fullName: 'Dai Stablecoin',
+      isOneToken: false,
+      atCoingecko: true,
     }
   },
   [TokenName.DEUS]: {
@@ -1101,6 +1127,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: false
     }
   },
+  [TokenName.HBARX]: {
+    [ChainId.Hedera]: {
+      tokenName: TokenName.HBARX,
+      tableName: tokenNameWithChainPrefix(TokenName.HBARX, ChainId.Hedera),
+      address: '0x00000000000000000000000000000000000cba44',
+      decimals: 8,
+      displayName: 'HBARX',
+      symbol: 'HBARX',
+      fullName: 'HBARX',
+      isOneToken: false,
+      atCoingecko: true,
+    },
+  },
   [TokenName.HBR]: {
     [ChainId.Bsc]: {
       tokenName: TokenName.HBR,
@@ -1112,6 +1151,19 @@ export const TOKENS: TokenMapping = {
       fullName: 'Harbor Token',
       isOneToken: false,
       atCoingecko: false
+    },
+  },
+  [TokenName.HST]: {
+    [ChainId.Hedera]: {
+      tokenName: TokenName.HST,
+      tableName: tokenNameWithChainPrefix(TokenName.HST, ChainId.Hedera),
+      address: '0x00000000000000000000000000000000000ec585',
+      decimals: 8,
+      displayName: 'HST',
+      symbol: 'HST',
+      fullName: 'HeadStarter',
+      isOneToken: false,
+      atCoingecko: false,
     },
   },
   [TokenName.GRAI]: {
@@ -1223,6 +1275,19 @@ export const TOKENS: TokenMapping = {
       fullName: 'ChainLink Token',
       isOneToken: false,
       atCoingecko: true
+    }
+  },
+  [TokenName.LINKHTS]: {
+    [ChainId.Hedera]: {
+      tokenName: TokenName.LINKHTS,
+      tableName: tokenNameWithChainPrefix(TokenName.LINKHTS, ChainId.Hedera),
+      address: '0x0000000000000000000000000000000000101b07',
+      decimals: 8,
+      displayName: 'LINK[hts]',
+      symbol: 'LINK[hts]',
+      fullName: 'ChainLink Token',
+      isOneToken: false,
+      atCoingecko: false,
     }
   },
   [TokenName.LISUSD]: {
@@ -1594,6 +1659,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: false
     }
   },
+  [TokenName.QNTHTS]: {
+    [ChainId.Hedera]: {
+      tokenName: TokenName.QNTHTS,
+      tableName: tokenNameWithChainPrefix(TokenName.QNTHTS, ChainId.Hedera),
+      address: '0x000000000000000000000000000000000013e8b5',
+      decimals: 8,
+      displayName: 'QNT[hts]',
+      symbol: 'QNT[hts]',
+      fullName: 'Quant',
+      isOneToken: false,
+      atCoingecko: true,
+    }
+  },
   [TokenName.QRDO]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.QRDO,
@@ -1697,6 +1775,19 @@ export const TOKENS: TokenMapping = {
       fullName: 'sats',
       isOneToken: false,
       atCoingecko: false,
+    },
+  },
+  [TokenName.SAUCE]: {
+    [ChainId.Hedera]: {
+      tokenName: TokenName.SAUCE,
+      tableName: tokenNameWithChainPrefix(TokenName.SAUCE, ChainId.Hedera),
+      address: '0x00000000000000000000000000000000000b2ad5',
+      decimals: 6,
+      displayName: 'SAUCE',
+      symbol: 'SAUCE',
+      fullName: 'SAUCE',
+      isOneToken: false,
+      atCoingecko: true,
     },
   },
   [TokenName.SFRAX]: {
@@ -1994,6 +2085,17 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true,
       isOneToken: false
     },
+    [ChainId.Hedera]: {
+      tokenName: TokenName.USDC,
+      tableName: tokenNameWithChainPrefix(TokenName.USDC, ChainId.Hedera),
+      address: '0x000000000000000000000000000000000006f89a',
+      decimals: 6,
+      displayName: 'USDC',
+      symbol: 'USDC',
+      fullName: 'USD Coin',
+      atCoingecko: true,
+      isOneToken: true,
+    },
     [ChainId.Linea]: {
       tokenName: TokenName.USDC,
       tableName: tokenNameWithChainPrefix(TokenName.USDC, ChainId.Linea),
@@ -2050,6 +2152,19 @@ export const TOKENS: TokenMapping = {
       fullName: 'USD Coin',
       atCoingecko: false,
       isOneToken: false
+    },
+  },
+  [TokenName.USDCHTS]: {
+    [ChainId.Hedera]: {
+      tokenName: TokenName.USDCHTS,
+      tableName: tokenNameWithChainPrefix(TokenName.USDCHTS, ChainId.Hedera),
+      address: '0x0000000000000000000000000000000000101ae3',
+      decimals: 6,
+      displayName: 'USDC[hts]',
+      symbol: 'USDC[hts]',
+      fullName: 'USD Coin',
+      atCoingecko: false,
+      isOneToken: true,
     },
   },
   [TokenName.USDT]: {
@@ -2153,6 +2268,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     },
   },
+  [TokenName.USDTHTS]: {
+    [ChainId.Hedera]: {
+      tokenName: TokenName.USDTHTS,
+      tableName: tokenNameWithChainPrefix(TokenName.USDTHTS, ChainId.Hedera),
+      address: '0x0000000000000000000000000000000000101af0',
+      decimals: 6,
+      displayName: 'USDT[hts]',
+      symbol: 'USDT[hts]',
+      fullName: 'Tether USD',
+      isOneToken: false,
+      atCoingecko: true,
+    },
+  },
   [TokenName.VBTC]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.VBTC,
@@ -2188,6 +2316,19 @@ export const TOKENS: TokenMapping = {
       fullName: 'Wrapped AVAX',
       isOneToken: false,
       atCoingecko: false
+    },
+  },
+  [TokenName.WAVAXHTS]: {
+    [ChainId.Hedera]: {
+      tokenName: TokenName.WAVAXHTS,
+      tableName: tokenNameWithChainPrefix(TokenName.WAVAXHTS, ChainId.Hedera),
+      address: '0x000000000000000000000000000000000011a79c',
+      decimals: 8,
+      displayName: 'WAVAX[hts]',
+      symbol: 'WAVAX[hts]',
+      fullName: 'Wrapped AVAX[hts]',
+      isOneToken: false,
+      atCoingecko: true,
     },
   },
   [TokenName.WBNB]: {
@@ -2288,6 +2429,19 @@ export const TOKENS: TokenMapping = {
       decimals: 8,
       displayName: 'WBTC',
       symbol: 'WBTC',
+      fullName: 'Wrapped BTC',
+      isOneToken: false,
+      atCoingecko: true,
+    },
+  },
+  [TokenName.WBTCHTS]: {
+    [ChainId.Hedera]: {
+      tokenName: TokenName.WBTCHTS,
+      tableName: tokenNameWithChainPrefix(TokenName.WBTCHTS, ChainId.Hedera),
+      address: '0x0000000000000000000000000000000000101afb',
+      decimals: 8,
+      displayName: 'WBTC[hts]',
+      symbol: 'WBTC[hts]',
       fullName: 'Wrapped BTC',
       isOneToken: false,
       atCoingecko: true,
@@ -2455,6 +2609,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     },
   },
+  [TokenName.WETHHTS]: {
+    [ChainId.Hedera]: {
+      tokenName: TokenName.WETHHTS,
+      tableName: tokenNameWithChainPrefix(TokenName.WETHHTS, ChainId.Hedera),
+      address: '0x000000000000000000000000000000000008437c',
+      decimals: 8,
+      displayName: 'WETH[hts]',
+      symbol: 'WETH[hts]',
+      fullName: 'Wrapped Ether[hts]',
+      isOneToken: false,
+      atCoingecko: true,
+    },
+  },
   [TokenName.WEVMOS]: {
     [ChainId.Evmos]: {
       tokenName: TokenName.WEVMOS,
@@ -2477,6 +2644,19 @@ export const TOKENS: TokenMapping = {
       displayName: 'WFTM',
       symbol: 'WFTM',
       fullName: 'Wrapped Fantom',
+      isOneToken: false,
+      atCoingecko: true,
+    },
+  },
+  [TokenName.WHBAR]: {
+    [ChainId.Hedera]: {
+      tokenName: TokenName.WHBAR,
+      tableName: tokenNameWithChainPrefix(TokenName.WHBAR, ChainId.Hedera),
+      address: '0x0000000000000000000000000000000000163b5a',
+      decimals: 8,
+      displayName: 'WHBAR',
+      symbol: 'WHBAR',
+      fullName: 'Wrapped Hbar',
       isOneToken: false,
       atCoingecko: true,
     },
@@ -2590,6 +2770,19 @@ export const TOKENS: TokenMapping = {
       fullName: 'XCAD Token',
       isOneToken: false,
       atCoingecko: true
+    },
+  },
+  [TokenName.XSAUCE]: {
+    [ChainId.Hedera]: {
+      tokenName: TokenName.XSAUCE,
+      tableName: tokenNameWithChainPrefix(TokenName.XSAUCE, ChainId.Hedera),
+      address: '0x00000000000000000000000000000000001647e8',
+      decimals: 6,
+      displayName: 'XSAUCE',
+      symbol: 'XSAUCE',
+      fullName: 'xSAUCE',
+      isOneToken: false,
+      atCoingecko: true,
     },
   },
   [TokenName.YFI]: {

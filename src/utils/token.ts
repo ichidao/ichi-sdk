@@ -231,6 +231,9 @@ export async function getTokenMetrics(
       let retroPrice: number;
       const retroAddress = TOKENS[TokenName.RETRO]![ChainId.Polygon]?.address?.toLowerCase();
 
+      let whbarPrice: number;
+      const whbarAddress = TOKENS[TokenName.WHBAR]![ChainId.Hedera]?.address?.toLowerCase();
+
       let priceWbnb: number;
       const wbnbAddress = TOKENS[TokenName.WBNB]![ChainId.Bsc]?.address?.toLowerCase();
 
@@ -318,6 +321,30 @@ export async function getTokenMetrics(
           } else {
             throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
           }
+          break;
+        case TokenName.LINKHTS:
+          if (opts.tokenPrices && whbarAddress && whbarAddress in opts.tokenPrices) {
+            whbarPrice = opts.tokenPrices[whbarAddress].usd;
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
+          }
+          price = await getDollarTokenPriceFromUniV3Vault( 
+            '0x409b8cf38276c6052851773d3e88bbe3445fde3d',
+            provider,
+            '0x0000000000000000000000000000000000101b07', 
+            whbarPrice)
+          break;
+        case TokenName.HST:
+          if (opts.tokenPrices && whbarAddress && whbarAddress in opts.tokenPrices) {
+            whbarPrice = opts.tokenPrices[whbarAddress].usd;
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
+          }
+          price = await getDollarTokenPriceFromUniV3Vault( 
+            '0xeea759212ee893acef75b5ee6e652cc83f3fb58c',
+            provider,
+            '0x00000000000000000000000000000000000ec585', 
+            whbarPrice)
           break;
         case TokenName.METH:
           if (opts.tokenPrices && wethAddress && wethAddress in opts.tokenPrices) {

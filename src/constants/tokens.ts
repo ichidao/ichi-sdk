@@ -2063,6 +2063,17 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true,
       isOneToken: false
     },
+    [ChainId.Celo]: {
+      tokenName: TokenName.USDC,
+      tableName: tokenNameWithChainPrefix(TokenName.USDC, ChainId.Celo),
+      address: '0xcebA9300f2b948710d2653dD7B07f33A8B32118C',
+      decimals: 6,
+      displayName: 'USDC',
+      symbol: 'USDC',
+      fullName: 'USDC',
+      atCoingecko: false,
+      isOneToken: false,
+    },
     [ChainId.Eon]: {
       tokenName: TokenName.USDC,
       tableName: `eon_${TokenName.USDC}`,

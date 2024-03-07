@@ -35,6 +35,7 @@ export enum TokenName {
   COMP = 'comp',
   CONE = 'cone',
   COW = 'cow',
+  CRS = 'crs',
   CRV = 'crv',
   CUSD = 'cusd',
   DAI = 'dai',

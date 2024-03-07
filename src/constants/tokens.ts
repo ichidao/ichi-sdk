@@ -653,6 +653,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.CRS]: {
+    [ChainId.Polygon]: {
+      tokenName: TokenName.CRS,
+      tableName: tokenNameWithChainPrefix(TokenName.CRS, ChainId.Polygon),
+      address: '0x731C79f054DF3A567584Ee21A95399d343103143',
+      decimals: 18,
+      displayName: 'CRS',
+      symbol: 'CRS',
+      fullName: 'Corgi Studio',
+      isOneToken: false,
+      atCoingecko: true
+    }
+  },
   [TokenName.CRV]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.CRV,

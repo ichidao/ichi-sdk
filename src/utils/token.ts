@@ -358,6 +358,20 @@ export async function getTokenMetrics(
             '0xcDA86A272531e8640cD7F1a92c01839911B90bb0', 
             wethPrice)
           break;
+        case TokenName.CRS:
+          const usdcAddress = TOKENS[TokenName.USDC]![ChainId.Polygon]?.address?.toLowerCase();
+          let usdcPrice = 1;
+          if (opts.tokenPrices && usdcAddress && usdcAddress in opts.tokenPrices) {
+            usdcPrice = opts.tokenPrices[usdcAddress].usd;
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
+          }
+          price = await getDollarTokenPriceFromAlgebraVault( 
+            '0xdc58504630972421445CBa4f856ABbA3Ce1BCB8a',
+            provider,
+            '0x731C79f054DF3A567584Ee21A95399d343103143', 
+            usdcPrice)
+          break;
         case TokenName.ETHENA:
           if (opts.tokenPrices && wbnbAddress && wbnbAddress in opts.tokenPrices) {
             priceWbnb = opts.tokenPrices[wbnbAddress].usd;

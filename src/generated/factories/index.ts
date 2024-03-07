@@ -33,6 +33,7 @@ export { OneTokenV1__factory } from "./OneTokenV1__factory";
 export { RariPool__factory } from "./RariPool__factory";
 export { RariPoolLens__factory } from "./RariPoolLens__factory";
 export { RariPoolLensSecondary__factory } from "./RariPoolLensSecondary__factory";
+export { Rebalancing_flip_v1__factory } from "./Rebalancing_flip_v1__factory";
 export { Rebalancing_index_v2__factory } from "./Rebalancing_index_v2__factory";
 export { Rebalancing_index_v3__factory } from "./Rebalancing_index_v3__factory";
 export { Rebalancing_regular_v1__factory } from "./Rebalancing_regular_v1__factory";

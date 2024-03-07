@@ -52,6 +52,8 @@ import {
   Rebalancing_stable_500_v1,
   AlgebraPool,
   AlgebraPool__factory,
+  Rebalancing_flip_v1,
+  Rebalancing_flip_v1__factory,
 } from '../generated';
 import { TokenName } from '../enums/tokenName';
 import { AddressName } from '../enums/addressName';
@@ -390,6 +392,15 @@ export function getRebalancingStrategyFollowPriceV1Contract(address: string, pro
     return Follow_price_v1__factory.connect(address, provider);
   } catch (e) {
     console.error(`Couldn't create Follow_price_v1 contract with address: ${address}`);
+    throw e;
+  }
+}
+
+export function getRebalancingStrategyFlipV1Contract(address: string, provider: StaticJsonRpcProvider): Rebalancing_flip_v1 {
+  try {
+    return Rebalancing_flip_v1__factory.connect(address, provider);
+  } catch (e) {
+    console.error(`Couldn't create Rebalancing_flip_v1 contract with address: ${address}`);
     throw e;
   }
 }

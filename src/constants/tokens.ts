@@ -2835,6 +2835,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true,
     }
   },
+  [TokenName.ZUSD]: {
+    [ChainId.Eon]: {
+      tokenName: TokenName.ZUSD,
+      tableName: tokenNameWithChainPrefix(TokenName.ZUSD, ChainId.Eon),
+      address: '0xCEad8ee30e03aE87E5E709617f7FdF180Eef9973',
+      decimals: 6,
+      displayName: 'ZUSD',
+      symbol: 'ZUSD',
+      fullName: 'ZEN USD',
+      isOneToken: false,
+      atCoingecko: true,
+    }
+  },
   [TokenName.ZRX]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.ZRX,

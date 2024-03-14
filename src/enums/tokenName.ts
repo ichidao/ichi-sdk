@@ -148,6 +148,7 @@ export enum TokenName {
   YFI = 'yfi',
   ZRX = 'zrx',
   ZERO = 'zero',
+  ZUSD = 'zusd',
   // one tokens
   ONE_ETH = 'oneeth',
   ONE_VBTC = 'onevbtc',

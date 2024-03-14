@@ -396,6 +396,21 @@ export async function getTokenMetrics(
             '0xDE5ed76E7c05eC5e4572CfC88d1ACEA165109E44', 
             wethPrice)
           break;
+        case TokenName.ZUSD:
+          const wzenCoingeckoId = 'zencash';
+          const wzenPrice = await getTokenPriceById(wzenCoingeckoId, cg_key);
+          let price1 = 1;
+          if (wzenPrice) {
+            price1 = wzenPrice[wzenCoingeckoId].usd;
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
+          }
+          price = await getDollarTokenPriceFromUniV3Vault( 
+            '0x1c01d36c3c2d516068f5a97a9Fe0b972d2F1B07d', // ZUSD-WZEN
+            provider,
+            '0xCEad8ee30e03aE87E5E709617f7FdF180Eef9973', 
+            price1 ) 
+          break;
         case TokenName.WEVMOS:
           const evmosCoingeckoId = 'evmos';
           const evmosPrice = await getTokenPriceById(evmosCoingeckoId, cg_key);

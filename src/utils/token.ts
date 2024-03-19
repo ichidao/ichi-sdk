@@ -312,7 +312,7 @@ export async function getTokenMetrics(
             priceWmnt)
           break;
         case TokenName.GRAI:
-          const graiAddress = chainId === ChainId.Mantle
+          const graiAddress = (chainId === ChainId.Mantle || chainId === ChainId.zkEVM)
             ? TOKENS[TokenName.GRAI]![ChainId.Arbitrum]?.address?.toLowerCase()
             : token.address.toLowerCase();
           if (opts.tokenPrices && graiAddress && graiAddress in opts.tokenPrices) {

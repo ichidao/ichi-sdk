@@ -1202,6 +1202,17 @@ export const TOKENS: TokenMapping = {
       isOneToken: false,
       atCoingecko: false,
     },
+    [ChainId.zkEVM]: {
+      tokenName: TokenName.GRAI,
+      tableName: tokenNameWithChainPrefix(TokenName.GRAI, ChainId.zkEVM),
+      address: '0xCA68ad4EE5c96871EC6C6dac2F714a8437A3Fe66',
+      decimals: 18,
+      displayName: 'GRAI',
+      symbol: 'GRAI',
+      fullName: 'Gravita Debt Token',
+      isOneToken: false,
+      atCoingecko: false,
+    },
   },
   [TokenName.IMX]: {
     [ChainId.Mainnet]: {

@@ -1127,6 +1127,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: false
     }
   },
+  [TokenName.GRELF]: {
+    [ChainId.Hedera]: {
+      tokenName: TokenName.GRELF,
+      tableName: tokenNameWithChainPrefix(TokenName.GRELF, ChainId.Hedera),
+      address: '0x000000000000000000000000000000000011afa2',
+      decimals: 8,
+      displayName: 'GRELF',
+      symbol: 'GRELF',
+      fullName: 'GRELF',
+      isOneToken: false,
+      atCoingecko: true,
+    },
+  },
   [TokenName.HOME]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.HOME,
@@ -1226,6 +1239,19 @@ export const TOKENS: TokenMapping = {
       isOneToken: false,
       atCoingecko: true
     }
+  },
+  [TokenName.JAM]: {
+    [ChainId.Hedera]: {
+      tokenName: TokenName.JAM,
+      tableName: tokenNameWithChainPrefix(TokenName.JAM, ChainId.Hedera),
+      address: '0x000000000000000000000000000000000001f385',
+      decimals: 8,
+      displayName: 'JAM',
+      symbol: 'JAM',
+      fullName: 'Tune.FM',
+      isOneToken: false,
+      atCoingecko: true
+    },
   },
   [TokenName.JRT]: {
     [ChainId.Mainnet]: {

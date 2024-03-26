@@ -2098,7 +2098,7 @@ export const TOKENS: TokenMapping = {
       tableName: `pol_${TokenName.USDC}`,
       address: '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174',
       decimals: 6,
-      displayName: 'USDC',
+      displayName: 'USDC.e',
       symbol: 'USDC',
       fullName: 'USD Coin (PoS)',
       atCoingecko: true,

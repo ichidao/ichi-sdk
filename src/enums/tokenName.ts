@@ -28,6 +28,7 @@ export enum TokenName {
   CASH = 'cash',
   CEL = 'cel',
   CELO = 'celo',
+  CEUR = 'ceur',
   CHO = 'cho',
   CLEO = 'cleo',
   CLXY = 'clxy',

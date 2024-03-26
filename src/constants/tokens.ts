@@ -562,6 +562,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: false,
     }
   },
+  [TokenName.CEUR]: {
+    [ChainId.Celo]: {
+      tokenName: TokenName.CEUR,
+      tableName: tokenNameWithChainPrefix(TokenName.CEUR, ChainId.Celo),
+      address: '0xD8763CBa276a3738E6DE85b4b3bF5FDed6D6cA73',
+      decimals: 18,
+      displayName: 'cEUR',
+      symbol: 'cEUR',
+      fullName: 'Celo Euro',
+      isOneToken: false,
+      atCoingecko: true,
+    }
+  },
   [TokenName.CHO]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.CHO,

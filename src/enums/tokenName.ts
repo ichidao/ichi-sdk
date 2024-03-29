@@ -114,6 +114,7 @@ export enum TokenName {
   SUSHI = 'sushi',
   SWETH = 'sweth',
   SWISE = 'swise',
+  TAOUSD = 'taousd',
   TASHI = 'tashi',
   TBTC = 'tbtc',
   THE = 'the',

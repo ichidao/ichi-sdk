@@ -1966,6 +1966,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.TAOUSD]: {
+    [ChainId.Arbitrum]: {
+      tokenName: TokenName.TAOUSD,
+      tableName: tokenNameWithChainPrefix(TokenName.TAOUSD, ChainId.Arbitrum),
+      address: '0x966570A84709D693463CDD69dCadb0121b2C9d26',
+      decimals: 18,
+      displayName: 'taoUSD',
+      symbol: 'taoUSD',
+      fullName: 'taoUSD',
+      isOneToken: false,
+      atCoingecko: false,
+    }
+  },
   [TokenName.TASHI]: {
     [ChainId.Evmos]: {
       tokenName: TokenName.TASHI,
@@ -2222,6 +2235,17 @@ export const TOKENS: TokenMapping = {
       address: '0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359',
       decimals: 6,
       displayName: 'USDC',
+      symbol: 'USDC',
+      fullName: 'USD Coin',
+      atCoingecko: false,
+      isOneToken: false
+    },
+    [ChainId.zkEVM]: {
+      tokenName: TokenName.USDC2,
+      tableName: tokenNameWithChainPrefix(TokenName.USDC2, ChainId.zkEVM),
+      address: '0x37eAA0eF3549a5Bb7D431be78a3D99BD360d19e5',
+      decimals: 6,
+      displayName: 'USDC.e',
       symbol: 'USDC',
       fullName: 'USD Coin',
       atCoingecko: false,

@@ -411,6 +411,13 @@ export async function getTokenMetrics(
             '0xCEad8ee30e03aE87E5E709617f7FdF180Eef9973', 
             price1 ) 
           break;
+        case TokenName.TAOUSD:
+          price = await getDollarTokenPriceFromUniV3Vault( 
+            '0x2347E1daecC7CF0CEFa3704b013855d9A19655B8', // taoUSD-USDC
+            provider,
+            '0x966570A84709D693463CDD69dCadb0121b2C9d26', // taoUSD
+            1)
+          break;
         case TokenName.WEVMOS:
           const evmosCoingeckoId = 'evmos';
           const evmosPrice = await getTokenPriceById(evmosCoingeckoId, cg_key);

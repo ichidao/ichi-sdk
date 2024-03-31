@@ -536,6 +536,41 @@ export async function getTokenMetrics(
             throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
           }
           break;
+        case TokenName.WSTETH:
+          const wstEthAddress = (chainId !== ChainId.zkEVM) 
+            ? token.address.toLowerCase()
+            : TOKENS[TokenName.WSTETH]![ChainId.Polygon]?.address?.toLowerCase();
+          if (opts.tokenPrices && wstEthAddress && wstEthAddress in opts.tokenPrices) {
+            price = opts.tokenPrices[wstEthAddress].usd;
+            priceChange = opts.tokenPrices[wstEthAddress].usd_24h_change;
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
+          }
+          break;
+        case TokenName.RETH:
+          if (opts.tokenPrices && wethAddress && wethAddress in opts.tokenPrices) {
+            wethPrice = opts.tokenPrices[wethAddress].usd;
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
+          }
+          price = await getDollarTokenPriceFromUniV3Vault( 
+            '0x02F3893D0A1725155357dA6125d0f3Ca67d86FbB', // wETH-rETH
+            provider,
+            '0xb23C20EFcE6e24Acca0Cef9B7B7aA196b84EC942', // rETH
+            wethPrice)
+          break;
+        case TokenName.RSETH:
+          if (opts.tokenPrices && wethAddress && wethAddress in opts.tokenPrices) {
+            wethPrice = opts.tokenPrices[wethAddress].usd;
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
+          }
+          price = await getDollarTokenPriceFromUniV3Vault( 
+            '0x36ED8160b40eA5A5c267Ca1362e329805B7eb9E4', // wETH-rsETH
+            provider,
+            '0x8C7D118B5c47a5BCBD47cc51789558B98dAD17c5', // rsETH
+            wethPrice)
+          break;
         case TokenName.WZEN:
           const zenCoingeckoId = 'zencash';
           const zenPrice = await getTokenPriceById(zenCoingeckoId, cg_key);

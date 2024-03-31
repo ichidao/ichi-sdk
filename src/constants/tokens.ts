@@ -1814,6 +1814,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.RETH]: {
+    [ChainId.zkEVM]: {
+      tokenName: TokenName.RETH,
+      tableName: tokenNameWithChainPrefix(TokenName.RETH, ChainId.zkEVM),
+      address: '0xb23C20EFcE6e24Acca0Cef9B7B7aA196b84EC942',
+      decimals: 18,
+      displayName: 'rETH',
+      symbol: 'rETH',
+      fullName: 'Rocket Pool ETH',
+      isOneToken: false,
+      atCoingecko: false,
+    }
+  },
   [TokenName.RETRO]: {
     [ChainId.Polygon]: {
       tokenName: TokenName.RETRO,
@@ -1825,6 +1838,19 @@ export const TOKENS: TokenMapping = {
       fullName: 'RETRO',
       isOneToken: false,
       atCoingecko: true
+    }
+  },
+  [TokenName.RSETH]: {
+    [ChainId.zkEVM]: {
+      tokenName: TokenName.RSETH,
+      tableName: tokenNameWithChainPrefix(TokenName.RSETH, ChainId.zkEVM),
+      address: '0x8C7D118B5c47a5BCBD47cc51789558B98dAD17c5',
+      decimals: 18,
+      displayName: 'rsETH',
+      symbol: 'rsETH',
+      fullName: 'rsETH',
+      isOneToken: false,
+      atCoingecko: false,
     }
   },
   [TokenName.SATS]: {
@@ -2310,6 +2336,17 @@ export const TOKENS: TokenMapping = {
       isOneToken: false,
       atCoingecko: true
     },
+    [ChainId.Celo]: {
+      tokenName: TokenName.USDT,
+      tableName: tokenNameWithChainPrefix(TokenName.USDT, ChainId.Celo),
+      address: '0x48065fbBE25f71C9282ddf5e1cD6D6A887483D5e',
+      decimals: 6,
+      displayName: 'USDT',
+      symbol: 'USDT',
+      fullName: 'Tether USD',
+      isOneToken: false,
+      atCoingecko: false,
+    },
     [ChainId.Eon]: {
       tokenName: TokenName.USDT,
       tableName: `eon_${TokenName.USDT}`,
@@ -2324,7 +2361,7 @@ export const TOKENS: TokenMapping = {
     [ChainId.Evmos]: {
       tokenName: TokenName.USDT,
       tableName: tokenNameWithChainPrefix(TokenName.USDT, ChainId.Evmos),
-      address: '0xA167bcAb6791304EDa9B636C8beEC75b3D2829E6',
+      address: '0xb8f812b5943ab3bf941d5d4f1de90a4b326c5d8f ',
       decimals: 6,
       displayName: 'USDT',
       symbol: 'USDT',
@@ -2831,7 +2868,18 @@ export const TOKENS: TokenMapping = {
       fullName: 'Wrapped liquid staked Ether',
       isOneToken: false,
       atCoingecko: true
-    }
+    },
+    [ChainId.zkEVM]: {
+      tokenName: TokenName.WSTETH,
+      tableName: tokenNameWithChainPrefix(TokenName.WSTETH, ChainId.zkEVM),
+      address: '0x5D8cfF95D7A57c0BF50B30b43c7CC0D52825D4a9',
+      decimals: 18,
+      displayName: 'wstETH',
+      symbol: 'wstETH',
+      fullName: 'Wrapped liquid staked Ether',
+      isOneToken: false,
+      atCoingecko: false,
+    },
   },
   [TokenName.WZEN]: {
     [ChainId.Eon]: {

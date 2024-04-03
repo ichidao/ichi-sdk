@@ -10,6 +10,7 @@ export enum ChainId {
   Avalanche = 43114,
   Mumbai = 80001,
   Base = 8453,
+  Blast = 81457,
   Bsc = 56,
   Celo = 42220,
   Eon = 7332,
@@ -169,6 +170,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
     coingecko: 'base',
     rpc: {
       rpcUrl: 'https://base.llamarpc.com',
+      nativeCurrency: {
+        symbol: 'ETH',
+        name: 'ETH'
+      }
+    }
+  },
+  [ChainId.Blast]: {
+    chainId: ChainId.Blast,
+    name: 'Blast',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Blast, 'svg'),
+    env: 'mainnet',
+    scanLink: 'blastscan.io',
+    scanName: 'BlastScan',
+    coingecko: 'blast',
+    rpc: {
+      rpcUrl: 'https://rpc.blast.io',
       nativeCurrency: {
         symbol: 'ETH',
         name: 'ETH'

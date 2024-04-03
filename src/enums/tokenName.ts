@@ -124,6 +124,7 @@ export enum TokenName {
   TRADE = 'trade',
   UMA = 'uma',
   UNI = 'uni',
+  USDB = 'usdb',
   USDBC = 'usdbc',
   USDC = 'usdc',
   USDC2 = 'usdc2',

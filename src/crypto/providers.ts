@@ -37,6 +37,11 @@ export const providerCacheReference: Record<ChainId, ProviderCache> = {
     cacheHit: 0,
     cacheMiss: 0
   },
+  [ChainId.Blast]: {
+    lastUdated: 0,
+    cacheHit: 0,
+    cacheMiss: 0
+  },
   [ChainId.Bsc]: {
     lastUdated: 0,
     cacheHit: 0,
@@ -217,6 +222,8 @@ const getRpcEnvName = (chainId: ChainId): EnvUtils.EnvName => {
       return EnvUtils.EnvName.GOERLI_RPC_HOSTS;
     case ChainId.Base:
       return EnvUtils.EnvName.BASE_RPC_HOSTS;
+    case ChainId.Blast:
+      return EnvUtils.EnvName.BLAST_RPC_HOSTS;
     case ChainId.Bsc:
       return EnvUtils.EnvName.BSC_RPC_HOSTS;
     case ChainId.Celo:

@@ -14,6 +14,8 @@ export const tokenNameWithChainPrefix = (tokenName: TokenName | string, chainId:
       return `avalanche_${tokenName}` as TokenTableName
     case ChainId.Base:
       return `base_${tokenName}` as TokenTableName
+    case ChainId.Blast:
+      return `blast_${tokenName}` as TokenTableName
     case ChainId.Bsc:
       return `bsc_${tokenName}` as TokenTableName
     case ChainId.Celo:
@@ -2107,6 +2109,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.USDB]: {
+    [ChainId.Blast]: {
+      tokenName: TokenName.USDB,
+      tableName: tokenNameWithChainPrefix(TokenName.USDB, ChainId.Blast),
+      address: '0x4300000000000000000000000000000000000003',
+      decimals: 18,
+      displayName: 'USDB',
+      symbol: 'USDB',
+      fullName: 'USDB',
+      isOneToken: false,
+      atCoingecko: true,
+    }
+  },
   [TokenName.USDBC]: {
     [ChainId.Base]: {
       tokenName: TokenName.USDBC,
@@ -2662,6 +2677,17 @@ export const TOKENS: TokenMapping = {
       decimals: 18,
       displayName: 'wETH',
       symbol: 'wETH',
+      fullName: 'Wrapped Ether',
+      isOneToken: false,
+      atCoingecko: true,
+    },
+    [ChainId.Blast]: {
+      tokenName: TokenName.WETH,
+      tableName: tokenNameWithChainPrefix(TokenName.WETH, ChainId.Blast),
+      address: '0x4300000000000000000000000000000000000004',
+      decimals: 18,
+      displayName: 'WETH',
+      symbol: 'WETH',
       fullName: 'Wrapped Ether',
       isOneToken: false,
       atCoingecko: true,

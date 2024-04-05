@@ -22,6 +22,7 @@ export enum ChainId {
   Linea = 59144,
   opBNB = 204,
   zkEVM = 1101,
+  Kava = 2222,
 }
 
 export interface IAssetData {
@@ -293,6 +294,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
       nativeCurrency: {
         symbol: 'HBAR',
         name: 'HBAR'
+      }
+    }
+  },
+  [ChainId.Kava]: {
+    chainId: ChainId.Kava,
+    name: 'Kava',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Kava, 'svg'),
+    env: 'mainnet',
+    scanLink: 'https://kavascan.com/',
+    scanName: 'KavaScan',
+    coingecko: 'kava',
+    rpc: {
+      rpcUrl: 'https://evm.kava.io',
+      nativeCurrency: {
+        symbol: 'KAVA',
+        name: 'KAVA'
       }
     }
   },

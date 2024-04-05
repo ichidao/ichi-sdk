@@ -72,6 +72,11 @@ export const providerCacheReference: Record<ChainId, ProviderCache> = {
     cacheHit: 0,
     cacheMiss: 0
   },
+  [ChainId.Kava]: {
+    lastUdated: 0,
+    cacheHit: 0,
+    cacheMiss: 0
+  },
   [ChainId.Linea]: {
     lastUdated: 0,
     cacheHit: 0,
@@ -236,6 +241,8 @@ const getRpcEnvName = (chainId: ChainId): EnvUtils.EnvName => {
       return EnvUtils.EnvName.FANTOM_RPC_HOSTS;
     case ChainId.Hedera:
       return EnvUtils.EnvName.HEDERA_RPC_HOSTS;
+    case ChainId.Kava:
+      return EnvUtils.EnvName.KAVA_RPC_HOSTS;
     case ChainId.Linea:
       return EnvUtils.EnvName.LINEA_RPC_HOSTS;
     case ChainId.Mantle:

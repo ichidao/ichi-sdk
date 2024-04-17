@@ -374,7 +374,7 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
     env: 'mainnet',
     scanLink: 'https://scrollscan.com/',
     scanName: 'ScrollScan',
-    coingecko: 'Scroll',
+    coingecko: 'scroll',
     rpc: {
       rpcUrl: 'https://1rpc.io/scroll',
       nativeCurrency: {

@@ -97,6 +97,11 @@ export const providerCacheReference: Record<ChainId, ProviderCache> = {
     cacheHit: 0,
     cacheMiss: 0
   },
+  [ChainId.Scroll]: {
+    lastUdated: 0,
+    cacheHit: 0,
+    cacheMiss: 0
+  },
   [ChainId.zkEVM]: {
     lastUdated: 0,
     cacheHit: 0,
@@ -251,6 +256,8 @@ const getRpcEnvName = (chainId: ChainId): EnvUtils.EnvName => {
       return EnvUtils.EnvName.OPBNB_RPC_HOSTS;
     case ChainId.Polygon:
       return EnvUtils.EnvName.POLYGON_RPC_HOSTS;
+    case ChainId.Scroll:
+      return EnvUtils.EnvName.SCROLL_RPC_HOSTS;
     case ChainId.zkEVM:
       return EnvUtils.EnvName.ZKEVM_RPC_HOSTS;
     case ChainId.zkSync:

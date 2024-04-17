@@ -6,9 +6,9 @@ export enum ChainId {
   Rinkeby = 4,
   Goerli = 5,
   Polygon = 137,
+  Mumbai = 80001,
   Arbitrum = 42161,
   Avalanche = 43114,
-  Mumbai = 80001,
   Base = 8453,
   Blast = 81457,
   Bsc = 56,
@@ -16,13 +16,14 @@ export enum ChainId {
   Eon = 7332,
   Evmos = 9001,
   Fantom = 250,
-  zkSync = 324,
   Hedera = 295,
-  Mantle = 5000,
-  Linea = 59144,
-  opBNB = 204,
-  zkEVM = 1101,
   Kava = 2222,
+  Linea = 59144,
+  Mantle = 5000,
+  opBNB = 204,
+  Scroll = 534352,
+  zkEVM = 1101,
+  zkSync = 324,
 }
 
 export interface IAssetData {
@@ -362,6 +363,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
       nativeCurrency: {
         symbol: 'BNB',
         name: 'BNB'
+      }
+    }
+  },
+  [ChainId.Scroll]: {
+    chainId: ChainId.Scroll,
+    name: 'Scroll',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Scroll, 'svg'),
+    env: 'mainnet',
+    scanLink: 'https://scrollscan.com/',
+    scanName: 'ScrollScan',
+    coingecko: 'Scroll',
+    rpc: {
+      rpcUrl: 'https://1rpc.io/scroll',
+      nativeCurrency: {
+        symbol: 'ETH',
+        name: 'ETH'
       }
     }
   },

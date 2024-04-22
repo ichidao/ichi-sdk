@@ -242,7 +242,6 @@ export async function getTokenMetrics(
         case TokenName.USDC:
         case TokenName.USDC2:
         case TokenName.DAI:
-        case TokenName.CASH:
         case TokenName.HOME:
         case TokenName.CUSD:
           price = 1;
@@ -691,20 +690,6 @@ export async function getTokenMetrics(
           } else {
             throw new Error(`Could not lookup token prices for ${token.symbol}`);
           }
-          break;
-        case TokenName.AXLLQDR:
-          polygonProvider = await getProvider(ChainId.Polygon);
-          if (!polygonProvider) {
-            throw new Error('Could not establish Polygon provider');
-          }
-
-          price = await getTokenPriceFromVault( 
-            VaultName.RETRO_CASH_AXLLQDR,
-            polygonProvider,
-            ChainId.Polygon,
-            TokenName.AXLLQDR,
-            1 // CASH price = 1
-            )
           break;
         case TokenName.HBR:
           const bscProvider = await getProvider(ChainId.Bsc);

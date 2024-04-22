@@ -353,14 +353,14 @@ export const TOKENS: TokenMapping = {
   [TokenName.AXLLQDR]: {
     [ChainId.Polygon]: {
       tokenName: TokenName.AXLLQDR,
-      tableName: TokenName.AXLLQDR,
+      tableName: tokenNameWithChainPrefix(TokenName.AXLLQDR, ChainId.Polygon),
       address: '0x0294D8eB7857D43FEb1210Db72456d41481f9Ede',
       decimals: 18,
       displayName: 'axlLQDR',
       symbol: 'axlLQDR',
       fullName: 'Axelar Wrapped Lqdr',
       isOneToken: false,
-      atCoingecko: false
+      atCoingecko: true,
     }
   },
   [TokenName.AXLUSDC]: {
@@ -539,7 +539,7 @@ export const TOKENS: TokenMapping = {
       symbol: 'CASH',
       fullName: 'CASH',
       isOneToken: false,
-      atCoingecko: false
+      atCoingecko: true,
     }
   },
   [TokenName.CEL]: {

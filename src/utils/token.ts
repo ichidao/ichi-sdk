@@ -648,6 +648,19 @@ export async function getTokenMetrics(
             throw new Error(`Could not lookup token prices for ${token.symbol}`);
           }
           break;
+        case TokenName.MPDAO:
+          if (opts.tokenPrices && wethAddress && wethAddress in opts.tokenPrices) {
+            wethPrice = opts.tokenPrices[wethAddress].usd;
+            price = await getPriceFromWethVault( 
+              VaultName.WETH_MPDAO,
+              provider,
+              ChainId.Mainnet,
+              wethPrice
+              )
+          } else {
+            throw new Error(`Could not lookup token prices for ${token.symbol}`);
+          }
+          break;
         case TokenName.GARBAGE:
           mainnetProvider = await getProvider(ChainId.Mainnet);
           if (!mainnetProvider) {

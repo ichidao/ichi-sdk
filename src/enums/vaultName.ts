@@ -69,6 +69,8 @@ export enum VaultName {
   ICHI_ETH = 'ichi_eth',
   ICHI_WBTC = 'ichi_wbtc',
   ICHI_USDC = 'ichi_usdc',
+  USDT_MPDAO = 'usdt_mpdao',
+  WETH_MPDAO = 'weth_mpdao',
 
   // Mainnet PancakeSwap
   PANCAKESWAP_SWETH_WETH = 'pancakeswap_sweth_weth',
@@ -372,6 +374,9 @@ export enum VaultTableName {
   ICHI_ETH = 'ichi_eth',
   ICHI_WBTC = 'ichi_wbtc',
   ICHI_USDC = 'ichi_usdc',
+  USDT_MPDAO = 'usdt_mpdao',
+  WETH_MPDAO = 'weth_mpdao',
+
   // Mainnet PancakeSwap
   PANCAKESWAP_SWETH_WETH = 'pancakeswap_sweth_weth',
   PANCAKESWAP_WETH_SWETH = 'pancakeswap_weth_sweth',

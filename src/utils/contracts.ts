@@ -54,6 +54,8 @@ import {
   AlgebraPool__factory,
   Rebalancing_flip_v1,
   Rebalancing_flip_v1__factory,
+  AlgebraIntegralPool,
+  AlgebraIntegralPool__factory,
 } from '../generated';
 import { TokenName } from '../enums/tokenName';
 import { AddressName } from '../enums/addressName';
@@ -241,6 +243,14 @@ export function getAlgebraPoolContract(address: string, provider: StaticJsonRpcP
     return AlgebraPool__factory.connect(address, provider);
   } catch (e) {
     console.error(`Couldn't create AlgebraPool contract with address: ${address}`);
+    throw e;
+  }
+}
+export function getAlgebraIntegralPoolContract(address: string, provider: StaticJsonRpcProvider): AlgebraIntegralPool {
+  try {
+    return AlgebraIntegralPool__factory.connect(address, provider);
+  } catch (e) {
+    console.error(`Couldn't create AlgebraIntegralPool contract with address: ${address}`);
     throw e;
   }
 }

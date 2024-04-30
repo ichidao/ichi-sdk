@@ -503,7 +503,10 @@ export async function getTokenMetrics(
             priceWbnb)
           break;
         case TokenName.WBTC:
-          const wbtcAddress = (chainId !== ChainId.Eon && chainId !== ChainId.Linea && chainId !== ChainId.Evmos) 
+          const wbtcAddress = (chainId !== ChainId.Eon 
+            && chainId !== ChainId.Linea 
+            && chainId !== ChainId.Evmos 
+            && chainId !== ChainId.Blast) 
             ? token.address.toLowerCase()
             : TOKENS[TokenName.WBTC]![ChainId.Mainnet]?.address?.toLowerCase();
           if (opts.tokenPrices && wbtcAddress && wbtcAddress in opts.tokenPrices) {

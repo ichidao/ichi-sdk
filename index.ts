@@ -65,6 +65,7 @@ export {
   getUniswapV3PositionsContract,
   getUniswapV3PoolContract,
   getAlgebraPoolContract,
+  getAlgebraIntegralPoolContract,
   getUniswapV3FactoryContract,
   getIchiBntV3Contract,
   getDodoLiquidityPoolContract,

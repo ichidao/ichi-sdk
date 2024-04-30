@@ -2543,6 +2543,17 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true,
       isOneToken: false
     },
+    [ChainId.Blast]: {
+      tokenName: TokenName.WBTC,
+      tableName: tokenNameWithChainPrefix(TokenName.WBTC, ChainId.Blast),
+      address: '0xF7bc58b8D8f97ADC129cfC4c9f45Ce3C0E1D2692',
+      decimals: 8,
+      displayName: 'wBTC',
+      symbol: 'wBTC',
+      fullName: 'Wrapped BTC',
+      atCoingecko: false,
+      isOneToken: false,
+    },
     [ChainId.Eon]: {
       tokenName: TokenName.WBTC,
       tableName: `eon_${TokenName.WBTC}`,

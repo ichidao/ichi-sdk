@@ -86,6 +86,7 @@ export enum TokenName {
   MIDAS = 'midas',
   MIMATIC = 'mimatic',
   MKR = 'mkr',
+  MPDAO = 'mpdao',
   MPH = 'mph',
   MUBI = 'mubi',
   OATH = 'oath',

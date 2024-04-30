@@ -1526,6 +1526,19 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
+  [TokenName.MPDAO]: {
+    [ChainId.Mainnet]: {
+      tokenName: TokenName.MPDAO,
+      tableName: TokenName.MPDAO,
+      address: '0x798bcB35D2d48C8cE7eF8171860B8d53A98b361d',
+      decimals: 6,
+      displayName: 'mpDAO',
+      symbol: 'mpDAO',
+      fullName: 'Meta Pool DAO Token',
+      isOneToken: false,
+      atCoingecko: false,
+    }
+  },
   [TokenName.MPH]: {
     [ChainId.Mainnet]: {
       tokenName: TokenName.MPH,

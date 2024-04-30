@@ -100,6 +100,8 @@ export enum MainnetPoolNumbers {
   PANCAKESWAP_WETH_SWETH_VAULT = 7013,
   BLUEPRINT_USDC_BLUE_VAULT = 7014,
   BLUEPRINT_WETH_BLUE_VAULT = 7015,
+  USDT_MPDAO_VAULT = 7025,
+  WETH_MPDAO_VAULT = 7026,
 }
 
 export enum PolygonPoolNumbers {

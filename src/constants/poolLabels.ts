@@ -1633,6 +1633,38 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
+    [MainnetPoolNumbers.USDT_MPDAO_VAULT]: {
+      name: 'USDT-mpDAO Vault',
+      poolNumber: MainnetPoolNumbers.USDT_MPDAO_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      farmAddress: '',
+      farmId: 0,
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.USDT_MPDAO, ChainId.Mainnet),
+      isHodl: true,
+      vaultName: VaultName.USDT_MPDAO,
+      vaultAddress: getVaultAddress(VaultName.USDT_MPDAO, ChainId.Mainnet),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
+    [MainnetPoolNumbers.WETH_MPDAO_VAULT]: {
+      name: 'WETH-mpDAO Vault',
+      poolNumber: MainnetPoolNumbers.WETH_MPDAO_VAULT,
+      lpName: 'ICHI_VAULT_LP',
+      shortLpName: 'VAULT_LP',
+      farmAddress: '',
+      farmId: 0,
+      tradeUrl: '',
+      subgraphEndpoint: '',
+      isInverted: isVaultInverted(VaultName.WETH_MPDAO, ChainId.Mainnet),
+      isHodl: true,
+      vaultName: VaultName.WETH_MPDAO,
+      vaultAddress: getVaultAddress(VaultName.WETH_MPDAO, ChainId.Mainnet),
+      irrStartDate: new Date(0),
+      irrStartTxAmount: 0
+    },
   },
   [ChainId.Polygon]: {
     [PolygonPoolNumbers.ONE_BTC_VAULT]: {

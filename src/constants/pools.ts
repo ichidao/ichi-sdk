@@ -331,7 +331,6 @@ export const Pools: TPools = {
       PolygonPoolNumbers.GOVI_VAULT, 
       PolygonPoolNumbers.ICHI_USDC_VAULT, 
       PolygonPoolNumbers.ICHI_WBTC_VAULT, 
-      PolygonPoolNumbers.ICHI_WETH_VAULT, 
       PolygonPoolNumbers.ICHI_WMATIC_VAULT, 
       PolygonPoolNumbers.LINK_WETH_VAULT, 
       PolygonPoolNumbers.ONE_BTC_VAULT, 
@@ -370,7 +369,6 @@ export const Pools: TPools = {
       PolygonPoolNumbers.QUICKSWAP_WETH_WEFI_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WMATIC_ABOND_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WMATIC_ICHI_VAULT,
-      PolygonPoolNumbers.QUICKSWAP_WMATIC_QUICK_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WMATIC_USDT_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WMATIC_WETH_VAULT,
       // Retro 
@@ -983,7 +981,6 @@ export const Pools: TPools = {
       PolygonPoolNumbers.QUICKSWAP_WETH_WEFI_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WMATIC_ABOND_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WMATIC_ICHI_VAULT,
-      PolygonPoolNumbers.QUICKSWAP_WMATIC_QUICK_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WMATIC_USDT_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WMATIC_WETH_VAULT,
       // Retro
@@ -1162,7 +1159,6 @@ export const Pools: TPools = {
       PolygonPoolNumbers.QUICKSWAP_WETH_WEFI_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WMATIC_ABOND_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WMATIC_ICHI_VAULT,
-      PolygonPoolNumbers.QUICKSWAP_WMATIC_QUICK_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WMATIC_USDT_VAULT,
       PolygonPoolNumbers.QUICKSWAP_WMATIC_WETH_VAULT,
     ],

@@ -1790,21 +1790,6 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
-    [PolygonPoolNumbers.ICHI_WETH_VAULT]: {
-      name: 'ICHI-WETH Vault',
-      poolNumber: PolygonPoolNumbers.ICHI_WETH_VAULT,
-      lpName: 'ICHI_VAULT_LP',
-      shortLpName: 'VAULT_LP',
-      tradeUrl:
-        'https://app.uniswap.org/#/swap?inputCurrency=0x7ceb23fd6bc0add59e62ac25578270cff1b9f619&outputCurrency=0x111111517e4929D3dcbdfa7CCe55d30d4B6BC4d6&chain=polygon',
-      subgraphEndpoint: '',
-      isInverted: false,
-      isHodl: true,
-      vaultName: VaultName.POLYGON_ICHI_WETH, 
-      vaultAddress: '0x5a0834EBaFdF97DB54f45a43290b6B09D4226ec6',
-      irrStartDate: new Date(0),
-      irrStartTxAmount: 0
-    },
     [PolygonPoolNumbers.ICHI_WMATIC_VAULT]: {
       name: 'ICHI-WMATIC Vault',
       poolNumber: PolygonPoolNumbers.ICHI_WMATIC_VAULT,
@@ -2949,20 +2934,6 @@ export const PoolLabels: TPoolLabels = {
       isHodl: true,
       vaultName: VaultName.POLYGON_QUICKSWAP_WMATIC_ICHI, 
       vaultAddress: getVaultAddress(VaultName.POLYGON_QUICKSWAP_WMATIC_ICHI, ChainId.Polygon),
-      irrStartDate: new Date(0),
-      irrStartTxAmount: 0
-    },
-    [PolygonPoolNumbers.QUICKSWAP_WMATIC_QUICK_VAULT]: {
-      name: 'WMATIC-QUICK Vault',
-      poolNumber: PolygonPoolNumbers.QUICKSWAP_WMATIC_QUICK_VAULT,
-      lpName: 'ICHI_VAULT_LP',
-      shortLpName: 'VAULT_LP',
-      tradeUrl: '',
-      subgraphEndpoint: '',
-      isInverted: isVaultInverted(VaultName.POLYGON_QUICKSWAP_WMATIC_QUICK, ChainId.Polygon),
-      isHodl: true,
-      vaultName: VaultName.POLYGON_QUICKSWAP_WMATIC_QUICK, 
-      vaultAddress: getVaultAddress(VaultName.POLYGON_QUICKSWAP_WMATIC_QUICK, ChainId.Polygon),
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },

@@ -198,7 +198,6 @@ export enum VaultName {
   POLYGON_GOVI = 'pol_govi',
   POLYGON_ICHI_USDC = 'pol_ichi_usdc',
   POLYGON_ICHI_WBTC = 'pol_ichi_wbtc',
-  POLYGON_ICHI_WETH = 'pol_ichi_weth',
   POLYGON_ICHI_WMATIC = 'pol_ichi_wmatic',
   POLYGON_LINK_WETH = 'pol_link_weth',
   POLYGON_ONEBTC = 'pol_onebtc',
@@ -237,7 +236,6 @@ export enum VaultName {
   POLYGON_QUICKSWAP_WETH_WEFI = 'pol_quickswap_weth_wefi',
   POLYGON_QUICKSWAP_WMATIC_ABOND = 'pol_quickswap_wmatic_abond',
   POLYGON_QUICKSWAP_WMATIC_ICHI = 'pol_quickswap_wmatic_ichi',
-  POLYGON_QUICKSWAP_WMATIC_QUICK = 'pol_quickswap_wmatic_quick',
   POLYGON_QUICKSWAP_WMATIC_USDT = 'pol_quickswap_wmatic_usdt',
   POLYGON_QUICKSWAP_WMATIC_WETH = 'pol_quickswap_wmatic_weth',
   // Polygon-Retro
@@ -500,7 +498,6 @@ export enum VaultTableName {
   POLYGON_GOVI_ICHI = 'pol_govi_ichi',
   POLYGON_ICHI_USDC = 'pol_ichi_usdc',
   POLYGON_ICHI_WBTC = 'pol_ichi_wbtc',
-  POLYGON_ICHI_WETH = 'pol_ichi_weth',
   POLYGON_ICHI_WMATIC = 'pol_ichi_wmatic',
   POLYGON_LINK_WETH = 'pol_link_weth',
   POLYGON_ONEBTC_ICHI = 'pol_onebtc_ichi',
@@ -539,7 +536,6 @@ export enum VaultTableName {
   POLYGON_QUICKSWAP_WETH_WEFI = 'pol_quickswap_weth_wefi',
   POLYGON_QUICKSWAP_WMATIC_ABOND = 'pol_quickswap_wmatic_abond',
   POLYGON_QUICKSWAP_WMATIC_ICHI = 'pol_quickswap_wmatic_ichi',
-  POLYGON_QUICKSWAP_WMATIC_QUICK = 'pol_quickswap_wmatic_quick',
   POLYGON_QUICKSWAP_WMATIC_USDT = 'pol_quickswap_wmatic_usdt',
   POLYGON_QUICKSWAP_WMATIC_WETH = 'pol_quickswap_wmatic_weth',
   // Polygon-Retro

@@ -803,7 +803,7 @@ export const TOKENS: TokenMapping = {
     [ChainId.Polygon]: {
       tokenName: TokenName.ERN,
       tableName: tokenNameWithChainPrefix(TokenName.ERN, ChainId.Polygon),
-      address: '0x85955046DF4668e1DD369D2DE9f3AEB98DD2A369',
+      address: '0xC3a9a54c043f348027fffAac0F2F996123A19bF4',
       decimals: 18,
       displayName: 'ERN',
       symbol: 'ERN',

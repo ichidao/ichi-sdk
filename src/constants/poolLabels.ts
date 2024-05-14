@@ -3519,20 +3519,6 @@ export const PoolLabels: TPoolLabels = {
   },
   // Bsc
   [ChainId.Bsc]: {
-    [BscPoolNumbers.AIOZ_USDT_VAULT]: {
-      name: 'AIOZ-USDT Vault',
-      poolNumber: BscPoolNumbers.AIOZ_USDT_VAULT,
-      lpName: 'ICHI_VAULT_LP',
-      shortLpName: 'VAULT_LP',
-      tradeUrl: '',
-      subgraphEndpoint: '',
-      isInverted: isVaultInverted(VaultName.BSC_AIOZ_USDT, ChainId.Bsc),
-      isHodl: true,
-      vaultName: VaultName.BSC_AIOZ_USDT, 
-      vaultAddress: getVaultAddress(VaultName.BSC_AIOZ_USDT, ChainId.Bsc),
-      irrStartDate: new Date(0),
-      irrStartTxAmount: 0
-    },
     [BscPoolNumbers.AIOZ_WBNB_VAULT]: {
       name: 'AIOZ-WBNB Vault',
       poolNumber: BscPoolNumbers.AIOZ_WBNB_VAULT,
@@ -3617,20 +3603,6 @@ export const PoolLabels: TPoolLabels = {
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },
-    [BscPoolNumbers.USDT_AIOZ_VAULT]: {
-      name: 'USDT-AIOZ Vault',
-      poolNumber: BscPoolNumbers.USDT_AIOZ_VAULT,
-      lpName: 'ICHI_VAULT_LP',
-      shortLpName: 'VAULT_LP',
-      tradeUrl: '',
-      subgraphEndpoint: '',
-      isInverted: isVaultInverted(VaultName.BSC_USDT_AIOZ, ChainId.Bsc),
-      isHodl: true,
-      vaultName: VaultName.BSC_USDT_AIOZ, 
-      vaultAddress: getVaultAddress(VaultName.BSC_USDT_AIOZ, ChainId.Bsc),
-      irrStartDate: new Date(0),
-      irrStartTxAmount: 0
-    },
     [BscPoolNumbers.USDT_CAKE_VAULT]: {
       name: 'USDT-CAKE Vault',
       poolNumber: BscPoolNumbers.USDT_CAKE_VAULT,
@@ -3656,20 +3628,6 @@ export const PoolLabels: TPoolLabels = {
       isHodl: true,
       vaultName: VaultName.BSC_USDT_WBNB, 
       vaultAddress: '0x553A31Bb23218a10FF1fFE6492f0D3C71fb88D24',
-      irrStartDate: new Date(0),
-      irrStartTxAmount: 0
-    },
-    [BscPoolNumbers.WBNB_AIOZ_VAULT]: {
-      name: 'WBNB-AIOZ Vault',
-      poolNumber: BscPoolNumbers.WBNB_AIOZ_VAULT,
-      lpName: 'ICHI_VAULT_LP',
-      shortLpName: 'VAULT_LP',
-      tradeUrl: '',
-      subgraphEndpoint: '',
-      isInverted: isVaultInverted(VaultName.BSC_WBNB_AIOZ, ChainId.Bsc),
-      isHodl: true,
-      vaultName: VaultName.BSC_WBNB_AIOZ, 
-      vaultAddress: getVaultAddress(VaultName.BSC_WBNB_AIOZ, ChainId.Bsc),
       irrStartDate: new Date(0),
       irrStartTxAmount: 0
     },

@@ -461,7 +461,6 @@ export const Pools: TPools = {
     [ChainId.Avalanche]: [],
     [ChainId.Bsc]: [
       // Pancake
-      BscPoolNumbers.AIOZ_USDT_VAULT,
       BscPoolNumbers.AIOZ_WBNB_VAULT,
       BscPoolNumbers.BTCB_CAKE_VAULT,
       BscPoolNumbers.BTCB_USDT_VAULT,
@@ -472,10 +471,8 @@ export const Pools: TPools = {
       BscPoolNumbers.ORDI_WBNB_VAULT,
       BscPoolNumbers.SATS_WBNB_VAULT,
       BscPoolNumbers.USDC_ETH_VAULT,
-      BscPoolNumbers.USDT_AIOZ_VAULT,
       BscPoolNumbers.USDT_CAKE_VAULT,
       BscPoolNumbers.USDT_WBNB_VAULT,
-      BscPoolNumbers.WBNB_AIOZ_VAULT,
       BscPoolNumbers.WBNB_CAKE_VAULT,
       // Thena
       BscPoolNumbers.THENA_BTCB_THE_VAULT,
@@ -954,8 +951,9 @@ export const Pools: TPools = {
   // They are available by direct link
   [PoolGroupName.HIDDEN_VAULTS]: {
     [ChainId.Mainnet]: [
-      MainnetPoolNumbers.PANCAKESWAP_WETH_USDT_VAULT,
+      MainnetPoolNumbers.PANCAKESWAP_SWETH_WETH_VAULT,
       MainnetPoolNumbers.PANCAKESWAP_WETH_SWETH_VAULT,
+      MainnetPoolNumbers.PANCAKESWAP_WETH_USDT_VAULT,
       // Blueprint
       MainnetPoolNumbers.BLUEPRINT_USDC_BLUE_VAULT,
       MainnetPoolNumbers.BLUEPRINT_WETH_BLUE_VAULT,
@@ -1062,11 +1060,19 @@ export const Pools: TPools = {
     ],
     [ChainId.Avalanche]: [],
     [ChainId.Bsc]: [
-      BscPoolNumbers.CAKE_USDT_VAULT, 
-      BscPoolNumbers.CAKE_WBNB_VAULT, 
-      // BscPoolNumbers.USDT_CAKE_VAULT, 
-      // BscPoolNumbers.USDT_WBNB_VAULT, 
-      // BscPoolNumbers.WBNB_CAKE_VAULT, 
+      BscPoolNumbers.AIOZ_WBNB_VAULT,
+      BscPoolNumbers.BTCB_CAKE_VAULT,
+      BscPoolNumbers.BTCB_USDT_VAULT,
+      BscPoolNumbers.CAKE_USDT_VAULT,
+      BscPoolNumbers.CAKE_WBNB_VAULT,
+      BscPoolNumbers.ETH_CAKE_VAULT,
+      BscPoolNumbers.MUBI_WBNB_VAULT,
+      BscPoolNumbers.ORDI_WBNB_VAULT,
+      BscPoolNumbers.SATS_WBNB_VAULT,
+      BscPoolNumbers.USDC_ETH_VAULT,
+      BscPoolNumbers.USDT_CAKE_VAULT,
+      BscPoolNumbers.USDT_WBNB_VAULT,
+      BscPoolNumbers.WBNB_CAKE_VAULT,
       // Thena
       BscPoolNumbers.THENA_BTCB_THE_VAULT,
       BscPoolNumbers.THENA_ETH_THE_VAULT,

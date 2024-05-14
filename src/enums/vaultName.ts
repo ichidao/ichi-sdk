@@ -124,7 +124,6 @@ export enum VaultName {
   ARBITRUM_SUSHISWAP_WBTC_ICHI = 'arbitrum_sushiswap_wbtc_ichi',
   // Avalanche
   // Bsc-PancakeSwap
-  BSC_AIOZ_USDT = 'bsc_aioz_usdt',
   BSC_AIOZ_WBNB = 'bsc_aioz_wbnb',
   BSC_BTCB_CAKE = 'bsc_btcb_cake',
   BSC_BTCB_USDT = 'bsc_btcb_usdt',
@@ -135,10 +134,8 @@ export enum VaultName {
   BSC_ORDI_WBNB = 'bsc_ordi_wbnb',
   BSC_SATS_WBNB = 'bsc_sats_wbnb',
   BSC_USDC_ETH = 'bsc_usdc_eth',
-  BSC_USDT_AIOZ = 'bsc_usdt_aioz',
   BSC_USDT_CAKE = 'bsc_usdt_cake',
   BSC_USDT_WBNB = 'bsc_usdt_wbnb',
-  BSC_WBNB_AIOZ = 'bsc_wbnb_aioz',
   BSC_WBNB_CAKE = 'bsc_wbnb_cake',
   // Bsc-Thena
   BSC_THENA_BTCB_THE = 'bsc_thena_btcb_the',
@@ -424,7 +421,6 @@ export enum VaultTableName {
  ARBITRUM_SUSHISWAP_WBTC_ICHI = 'arbitrum_sushiswap_wbtc_ichi',
   // Avalanche
   // Bsc-PancakeSwap
-  BSC_AIOZ_USDT = 'bsc_aioz_usdt',
   BSC_AIOZ_WBNB = 'bsc_aioz_wbnb',
   BSC_BTCB_CAKE = 'bsc_btcb_cake',
   BSC_BTCB_USDT = 'bsc_btcb_usdt',
@@ -435,10 +431,8 @@ export enum VaultTableName {
   BSC_ORDI_WBNB = 'bsc_ordi_wbnb',
   BSC_SATS_WBNB = 'bsc_sats_wbnb',
   BSC_USDC_ETH = 'bsc_usdc_eth',
-  BSC_USDT_AIOZ = 'bsc_usdt_aioz',
   BSC_USDT_CAKE = 'bsc_usdt_cake',
   BSC_USDT_WBNB = 'bsc_usdt_wbnb',
-  BSC_WBNB_AIOZ = 'bsc_wbnb_aioz',
   BSC_WBNB_CAKE = 'bsc_wbnb_cake',
   // Bsc-Thena
   BSC_THENA_BTCB_THE = 'bsc_thena_btcb_the',

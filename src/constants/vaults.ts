@@ -2992,32 +2992,6 @@ export const VAULTS: VaultMapping = {
     }
   },
   // Bsc
-  [VaultName.BSC_AIOZ_USDT]: {
-    [ChainId.Bsc]: {
-      vaultName: VaultName.BSC_AIOZ_USDT,
-      tableName: VaultTableName.BSC_AIOZ_USDT,
-      displayName: 'AIOZ-USDT (bsc-pancakeswap)',
-      address: '0x10e4bbeD1064C0ceE9667f91085D07353Cc58D30',
-      deployer: '0x05cC3CA6E768a68A7f86b09e3ceE754437bd5f12',
-      farm: 0,
-      externalFarm: '',
-      scarceToken: 'token1',
-      scarceTokenName: TokenName.USDT,
-      scarceTokenDecimals: tokenDecimals(TokenName.USDT, ChainId.Bsc),
-      scarceTokenCoingeckoId: '',
-      baseTokenName: TokenName.AIOZ,
-      baseTokenDecimals: tokenDecimals(TokenName.AIOZ, ChainId.Bsc),
-      enableNotifications: true,
-      subgraphEndpoint: '',
-      irrStartDate: new Date(0),
-      isInverted: false,
-      isHodlVault: true,
-      isLegacy: isLegacy(BscPoolNumbers.AIOZ_USDT_VAULT, ChainId.Bsc),
-      irrStartTxAmount: 0,
-      depositStatus: true,
-      strategyBy: 'Bril Finance',
-    }
-  },
   [VaultName.BSC_AIOZ_WBNB]: {
     [ChainId.Bsc]: {
       vaultName: VaultName.BSC_AIOZ_WBNB,
@@ -3278,32 +3252,6 @@ export const VAULTS: VaultMapping = {
       strategyBy: 'Bril Finance',
     }
   },
-  [VaultName.BSC_USDT_AIOZ]: {
-    [ChainId.Bsc]: {
-      vaultName: VaultName.BSC_USDT_AIOZ,
-      tableName: VaultTableName.BSC_USDT_AIOZ,
-      displayName: 'USDT-AIOZ (bsc-pancakeswap)',
-      address: '0x48C074Cb02Eb62EC04EB110B4D710CB5665b60e0',
-      deployer: '0x05cC3CA6E768a68A7f86b09e3ceE754437bd5f12',
-      farm: 0,
-      externalFarm: '',
-      scarceToken: 'token0',
-      scarceTokenName: TokenName.AIOZ,
-      scarceTokenDecimals: tokenDecimals(TokenName.AIOZ, ChainId.Bsc),
-      scarceTokenCoingeckoId: '',
-      baseTokenName: TokenName.USDT,
-      baseTokenDecimals: tokenDecimals(TokenName.USDT, ChainId.Bsc),
-      enableNotifications: true,
-      subgraphEndpoint: '',
-      irrStartDate: new Date(0),
-      isInverted: true,
-      isHodlVault: true,
-      isLegacy: isLegacy(BscPoolNumbers.USDT_AIOZ_VAULT, ChainId.Bsc),
-      irrStartTxAmount: 0,
-      depositStatus: true,
-      strategyBy: 'Bril Finance',
-    }
-  },
   [VaultName.BSC_USDT_CAKE]: {
     [ChainId.Bsc]: {
       vaultName: VaultName.BSC_USDT_CAKE,
@@ -3351,32 +3299,6 @@ export const VAULTS: VaultMapping = {
       isInverted: false,
       isHodlVault: true,
       isLegacy: isLegacy(BscPoolNumbers.USDT_WBNB_VAULT, ChainId.Bsc),
-      irrStartTxAmount: 0,
-      depositStatus: true,
-      strategyBy: 'Bril Finance',
-    }
-  },
-  [VaultName.BSC_WBNB_AIOZ]: {
-    [ChainId.Bsc]: {
-      vaultName: VaultName.BSC_WBNB_AIOZ,
-      tableName: VaultTableName.BSC_WBNB_AIOZ,
-      displayName: 'WBNB-AIOZ (bsc-pancakeswap)',
-      address: '0xe8Bec06ae06968bb8A73CA46f2f83b2A00777aB9',
-      deployer: '0x05cC3CA6E768a68A7f86b09e3ceE754437bd5f12',
-      farm: 0,
-      externalFarm: '',
-      scarceToken: 'token0',
-      scarceTokenName: TokenName.AIOZ,
-      scarceTokenDecimals: tokenDecimals(TokenName.AIOZ, ChainId.Bsc),
-      scarceTokenCoingeckoId: '',
-      baseTokenName: TokenName.WBNB,
-      baseTokenDecimals: tokenDecimals(TokenName.WBNB, ChainId.Bsc),
-      enableNotifications: true,
-      subgraphEndpoint: '',
-      irrStartDate: new Date(0),
-      isInverted: true,
-      isHodlVault: true,
-      isLegacy: isLegacy(BscPoolNumbers.WBNB_AIOZ_VAULT, ChainId.Bsc),
       irrStartTxAmount: 0,
       depositStatus: true,
       strategyBy: 'Bril Finance',

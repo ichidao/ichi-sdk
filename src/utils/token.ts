@@ -427,16 +427,6 @@ export async function getTokenMetrics(
             throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
           }
           break;
-        case TokenName.CELO:
-          const celoCoingeckoId = 'celo';
-          const celoPrice = await getTokenPriceById(celoCoingeckoId, cg_key);
-          if (celoPrice) {
-            price = celoPrice[celoCoingeckoId].usd;
-            priceChange = celoPrice[celoCoingeckoId].usd_24h_change;
-          } else {
-            throw new Error(`Could not lookup token prices for ${token.symbol}, possibly flooding CoinGecko`);
-          }
-          break;
         case TokenName.CEUR:
           const ceurCoingeckoId = 'celo-euro';
           const ceurPrice = await getTokenPriceById(ceurCoingeckoId, cg_key);

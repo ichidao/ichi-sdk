@@ -221,7 +221,7 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
     env: 'mainnet',
     scanLink: 'celoscan.io',
     scanName: 'CeloScan',
-    coingecko: '',
+    coingecko: 'celo',
     rpc: {
       rpcUrl: 'https://1rpc.io/celo',
       nativeCurrency: {

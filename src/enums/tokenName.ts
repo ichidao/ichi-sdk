@@ -27,7 +27,6 @@ export enum TokenName {
   CAKE = 'cake',
   CASH = 'cash',
   CEL = 'cel',
-  CELO = 'celo',
   CEUR = 'ceur',
   CHO = 'cho',
   CLEO = 'cleo',

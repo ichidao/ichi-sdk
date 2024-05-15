@@ -555,19 +555,6 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
-  [TokenName.CELO]: {
-    [ChainId.Celo]: {
-      tokenName: TokenName.CELO,
-      tableName: tokenNameWithChainPrefix(TokenName.CELO, ChainId.Celo),
-      address: '0x471EcE3750Da237f93B8E339c536989b8978a438',
-      decimals: 18,
-      displayName: 'CELO',
-      symbol: 'CELO',
-      fullName: 'Celo native asset',
-      isOneToken: false,
-      atCoingecko: false,
-    }
-  },
   [TokenName.CEUR]: {
     [ChainId.Celo]: {
       tokenName: TokenName.CEUR,

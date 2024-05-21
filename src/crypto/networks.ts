@@ -8,6 +8,7 @@ export enum ChainId {
   Polygon = 137,
   Mumbai = 80001,
   Arbitrum = 42161,
+  Arthera = 10242,
   Avalanche = 43114,
   Base = 8453,
   Blast = 81457,
@@ -114,7 +115,7 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
     chainId: ChainId.Arbitrum,
     name: 'Arbitrum',
     color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
-    icon: generateIconUrl(ChainId.Polygon, 'svg'),
+    icon: generateIconUrl(ChainId.Arbitrum, 'svg'),
     env: 'mainnet',
     scanLink: 'arbiscan.io',
     scanName: 'Arbiscan',
@@ -127,11 +128,28 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
       }
     }
   },
+  [ChainId.Arthera]: {
+    chainId: ChainId.Arthera,
+    name: 'Arthera',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Arthera, 'svg'),
+    env: 'mainnet',
+    scanLink: 'explorer.arthera.net',
+    scanName: 'Arthera explorer',
+    coingecko: '',
+    rpc: {
+      rpcUrl: `https://rpc.arthera.net`,
+      nativeCurrency: {
+        symbol: 'AA',
+        name: 'AA'
+      }
+    }
+  },
   [ChainId.Avalanche]: {
     chainId: ChainId.Avalanche,
     name: 'Avalanche',
     color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
-    icon: generateIconUrl(ChainId.Polygon, 'svg'),
+    icon: generateIconUrl(ChainId.Avalanche, 'svg'),
     env: 'mainnet',
     scanLink: 'snowtrace.io',
     scanName: 'Snowtrace',

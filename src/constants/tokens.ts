@@ -2985,19 +2985,6 @@ export const TOKENS: TokenMapping = {
       atCoingecko: true
     }
   },
-  [TokenName.ZERO]: {
-    [ChainId.zkEVM]: {
-      tokenName: TokenName.ZERO,
-      tableName: tokenNameWithChainPrefix(TokenName.ZERO, ChainId.zkEVM),
-      address: '0xB409FeA6c79dA7015Ce92748f38D7c008BB43EBE',
-      decimals: 18,
-      displayName: 'ZERO',
-      symbol: 'ZERO',
-      fullName: 'ZERO',
-      isOneToken: false,
-      atCoingecko: true,
-    }
-  },
   [TokenName.ZUSD]: {
     [ChainId.Eon]: {
       tokenName: TokenName.ZUSD,

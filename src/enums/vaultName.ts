@@ -95,9 +95,6 @@ export enum VaultName {
   ARBITRUM_WBTC_ICHI = 'arbitrum_wbtc_ichi',
   ARBITRUM_WETH_ICHI = 'arbitrum_weth_ichi',
   ARBITRUM_WETH_LMR = 'arbitrum_weth_lmr',
-  // Horiza
-  ARBITRUM_HORIZA_USDC_ICHI = 'arbitrum_horiza_usdc_ichi',
-  ARBITRUM_HORIZA_WETH_ICHI = 'arbitrum_horiza_weth_ichi',
   // Arbitrum-Ramses
   ARBITRUM_RAMSES_ARB_RAM = 'arbitrum_ramses_arb_ram',
   ARBITRUM_RAMSES_ARB_USDC = 'arbitrum_ramses_arb_usdc',
@@ -282,16 +279,6 @@ export enum VaultName {
   RETRO_WMATIC_USDC = 'pol_retro_wmatic_usdc',
   RETRO_WMATIC_USDC_05 = 'pol_retro_wmatic_usdc_05',
   RETRO_WMATIC_WETH = 'pol_retro_wmatic_weth',
-  // zkEVM ZERO
-  ZKEVM_ZERO_MATIC_ZERO = 'zkevm_zero_matic_zero',
-  ZKEVM_ZERO_USDC_WETH = 'zkevm_zero_usdc_weth',
-  ZKEVM_ZERO_USDC_ZERO = 'zkevm_zero_usdc_zero',
-  ZKEVM_ZERO_USDT_ZERO = 'zkevm_zero_usdt_zero',
-  ZKEVM_ZERO_WBTC_WETH = 'zkevm_zero_wbtc_weth',
-  ZKEVM_ZERO_WBTC_ZERO = 'zkevm_zero_wbtc_zero',
-  ZKEVM_ZERO_WETH_USDC = 'zkevm_zero_weth_usdc',
-  ZKEVM_ZERO_WETH_WBTC = 'zkevm_zero_weth_wbtc',
-  ZKEVM_ZERO_WETH_ZERO = 'zkevm_zero_weth_zero',
   // zkSync PancakeSwap
   ZKSYNC_PANCAKESWAP_USDT_WETH = 'zksync_pancakeswap_usdt_weth',
   ZKSYNC_PANCAKESWAP_WETH_USDC = 'zksync_pancakeswap_weth_usdc',
@@ -392,9 +379,6 @@ export enum VaultTableName {
   ARBITRUM_WBTC_ICHI = 'arbitrum_wbtc_ichi',
   ARBITRUM_WETH_ICHI = 'arbitrum_weth_ichi',
   ARBITRUM_WETH_LMR = 'arbitrum_weth_lmr',
-  // Horiza
-  ARBITRUM_HORIZA_USDC_ICHI = 'arbitrum_horiza_usdc_ichi',
-  ARBITRUM_HORIZA_WETH_ICHI = 'arbitrum_horiza_weth_ichi',
   // Arbitrum-Ramses
   ARBITRUM_RAMSES_ARB_RAM = 'arbitrum_ramses_arb_ram',
   ARBITRUM_RAMSES_ARB_USDC = 'arbitrum_ramses_arb_usdc',
@@ -579,16 +563,6 @@ export enum VaultTableName {
   RETRO_WMATIC_USDC = 'pol_retro_wmatic_usdc',
   RETRO_WMATIC_USDC_05 = 'pol_retro_wmatic_usdc_05',
   RETRO_WMATIC_WETH = 'pol_retro_wmatic_weth',
-  // zkEVM ZERO
-  ZKEVM_ZERO_MATIC_ZERO = 'zkevm_zero_matic_zero',
-  ZKEVM_ZERO_USDC_WETH = 'zkevm_zero_usdc_weth',
-  ZKEVM_ZERO_USDC_ZERO = 'zkevm_zero_usdc_zero',
-  ZKEVM_ZERO_USDT_ZERO = 'zkevm_zero_usdt_zero',
-  ZKEVM_ZERO_WBTC_WETH = 'zkevm_zero_wbtc_weth',
-  ZKEVM_ZERO_WBTC_ZERO = 'zkevm_zero_wbtc_zero',
-  ZKEVM_ZERO_WETH_USDC = 'zkevm_zero_weth_usdc',
-  ZKEVM_ZERO_WETH_WBTC = 'zkevm_zero_weth_wbtc',
-  ZKEVM_ZERO_WETH_ZERO = 'zkevm_zero_weth_zero',
   // zkSync PancakeSwap
   ZKSYNC_PANCAKESWAP_USDT_WETH = 'zksync_pancakeswap_usdt_weth',
   ZKSYNC_PANCAKESWAP_WETH_USDC = 'zksync_pancakeswap_weth_usdc',

@@ -154,7 +154,6 @@ export enum TokenName {
   XSAUCE = 'xsauce',
   YFI = 'yfi',
   ZRX = 'zrx',
-  ZERO = 'zero',
   ZUSD = 'zusd',
   // one tokens
   ONE_ETH = 'oneeth',

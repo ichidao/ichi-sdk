@@ -26,8 +26,6 @@ import {
   OpBnbPoolNumberValues, 
   PolygonPoolNumbers, 
   PolygonPoolNumberValues,
-  ZkEvmPoolNumbers,
-  ZkEvmPoolNumberValues,
   ZkSyncPoolNumbers,
   ZkSyncPoolNumberValues, 
 } from '../enums/poolNumber';
@@ -173,7 +171,6 @@ type TPools = {
     [ChainId.Mantle]: MantlePoolNumberValues[];
     [ChainId.opBNB]: OpBnbPoolNumberValues[];
     [ChainId.Polygon]: PolygonPoolNumberValues[];
-    [ChainId.zkEVM]: ZkEvmPoolNumberValues[];
     [ChainId.zkSync]: ZkSyncPoolNumberValues[];
     [ChainId.Mumbai]: MumbaiPoolNumberValues[];
   };
@@ -207,7 +204,6 @@ export const Pools: TPools = {
     [ChainId.Linea]: [],
     [ChainId.Mantle]: [],
     [ChainId.opBNB]: [],
-    [ChainId.zkEVM]: [],
     [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [],
   },
@@ -232,7 +228,6 @@ export const Pools: TPools = {
     [ChainId.Linea]: [],
     [ChainId.Mantle]: [],
     [ChainId.opBNB]: [],
-    [ChainId.zkEVM]: [],
     [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [],
   },
@@ -430,9 +425,6 @@ export const Pools: TPools = {
       ArbitrumPoolNumbers.WBTC_ICHI_VAULT,
       ArbitrumPoolNumbers.WETH_ICHI_VAULT,
       ArbitrumPoolNumbers.WETH_LMR_VAULT,
-      // Horiza
-      ArbitrumPoolNumbers.HORIZA_USDC_ICHI_VAULT,
-      ArbitrumPoolNumbers.HORIZA_WETH_ICHI_VAULT,
       // Ramses
       ArbitrumPoolNumbers.RAMSES_ARB_RAM_VAULT,
       ArbitrumPoolNumbers.RAMSES_ARB_USDC_VAULT,
@@ -527,17 +519,6 @@ export const Pools: TPools = {
       OpBnbPoolNumbers.THENA_USDT_WBNB_VAULT,
       OpBnbPoolNumbers.THENA_WBNB_ETH_VAULT,
     ],
-    [ChainId.zkEVM]: [
-      ZkEvmPoolNumbers.ZERO_MATIC_ZERO_VAULT,
-      ZkEvmPoolNumbers.ZERO_USDC_WETH_VAULT,
-      ZkEvmPoolNumbers.ZERO_USDC_ZERO_VAULT,
-      ZkEvmPoolNumbers.ZERO_USDT_ZERO_VAULT,
-      ZkEvmPoolNumbers.ZERO_WBTC_WETH_VAULT,
-      ZkEvmPoolNumbers.ZERO_WBTC_ZERO_VAULT,
-      ZkEvmPoolNumbers.ZERO_WETH_USDC_VAULT,
-      ZkEvmPoolNumbers.ZERO_WETH_WBTC_VAULT,
-      ZkEvmPoolNumbers.ZERO_WETH_ZERO_VAULT,
-    ],
     [ChainId.zkSync]: [
       ZkSyncPoolNumbers.PANCAKESWAP_USDT_WETH_VAULT,
       ZkSyncPoolNumbers.PANCAKESWAP_WETH_USDC_VAULT,
@@ -559,7 +540,6 @@ export const Pools: TPools = {
     [ChainId.Linea]: [],
     [ChainId.Mantle]: [],
     [ChainId.opBNB]: [],
-    [ChainId.zkEVM]: [],
     [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [],
   },
@@ -574,7 +554,6 @@ export const Pools: TPools = {
     [ChainId.Linea]: [],
     [ChainId.Mantle]: [],
     [ChainId.opBNB]: [],
-    [ChainId.zkEVM]: [],
     [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [],
   },
@@ -589,7 +568,6 @@ export const Pools: TPools = {
     [ChainId.Linea]: [],
     [ChainId.Mantle]: [],
     [ChainId.opBNB]: [],
-    [ChainId.zkEVM]: [],
     [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [],
   },
@@ -604,7 +582,6 @@ export const Pools: TPools = {
     [ChainId.Linea]: [],
     [ChainId.Mantle]: [],
     [ChainId.opBNB]: [],
-    [ChainId.zkEVM]: [],
     [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [],
   },
@@ -702,7 +679,6 @@ export const Pools: TPools = {
     [ChainId.Linea]: [],
     [ChainId.Mantle]: [],
     [ChainId.opBNB]: [],
-    [ChainId.zkEVM]: [],
     [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [
       MumbaiPoolNumbers.ONE_BTC_ICHI_VAULT
@@ -721,7 +697,6 @@ export const Pools: TPools = {
     [ChainId.Linea]: [],
     [ChainId.Mantle]: [],
     [ChainId.opBNB]: [],
-    [ChainId.zkEVM]: [],
     [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [],
   },
@@ -738,7 +713,6 @@ export const Pools: TPools = {
     [ChainId.Linea]: [],
     [ChainId.Mantle]: [],
     [ChainId.opBNB]: [],
-    [ChainId.zkEVM]: [],
     [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [],
   },
@@ -756,7 +730,6 @@ export const Pools: TPools = {
     [ChainId.Linea]: [],
     [ChainId.Mantle]: [],
     [ChainId.opBNB]: [],
-    [ChainId.zkEVM]: [],
     [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [],
   },
@@ -773,7 +746,6 @@ export const Pools: TPools = {
     [ChainId.Linea]: [],
     [ChainId.Mantle]: [],
     [ChainId.opBNB]: [],
-    [ChainId.zkEVM]: [],
     [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [],
   },
@@ -790,7 +762,6 @@ export const Pools: TPools = {
     [ChainId.Linea]: [],
     [ChainId.Mantle]: [],
     [ChainId.opBNB]: [],
-    [ChainId.zkEVM]: [],
     [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [],
   },
@@ -808,7 +779,6 @@ export const Pools: TPools = {
     [ChainId.Linea]: [],
     [ChainId.Mantle]: [],
     [ChainId.opBNB]: [],
-    [ChainId.zkEVM]: [],
     [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [],
   },
@@ -828,7 +798,6 @@ export const Pools: TPools = {
     [ChainId.Linea]: [],
     [ChainId.Mantle]: [],
     [ChainId.opBNB]: [],
-    [ChainId.zkEVM]: [],
     [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [],
   },
@@ -913,7 +882,6 @@ export const Pools: TPools = {
     [ChainId.Linea]: [],
     [ChainId.Mantle]: [],
     [ChainId.opBNB]: [],
-    [ChainId.zkEVM]: [],
     [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [],
   },
@@ -943,7 +911,6 @@ export const Pools: TPools = {
     [ChainId.Linea]: [],
     [ChainId.Mantle]: [],
     [ChainId.opBNB]: [],
-    [ChainId.zkEVM]: [],
     [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [],
   },
@@ -1030,9 +997,6 @@ export const Pools: TPools = {
       PolygonPoolNumbers.RETRO_WMATIC_WETH_VAULT, 
     ],
     [ChainId.Arbitrum]: [
-      // Horiza
-      ArbitrumPoolNumbers.HORIZA_USDC_ICHI_VAULT,
-      ArbitrumPoolNumbers.HORIZA_WETH_ICHI_VAULT,
       // Ramses
       ArbitrumPoolNumbers.RAMSES_ARB_RAM_VAULT,
       ArbitrumPoolNumbers.RAMSES_ARB_USDC_VAULT,
@@ -1124,17 +1088,6 @@ export const Pools: TPools = {
       OpBnbPoolNumbers.THENA_USDT_WBNB_VAULT,
       OpBnbPoolNumbers.THENA_WBNB_ETH_VAULT,
     ],
-    [ChainId.zkEVM]: [
-      ZkEvmPoolNumbers.ZERO_MATIC_ZERO_VAULT,
-      ZkEvmPoolNumbers.ZERO_USDC_WETH_VAULT,
-      ZkEvmPoolNumbers.ZERO_USDC_ZERO_VAULT,
-      ZkEvmPoolNumbers.ZERO_USDT_ZERO_VAULT,
-      ZkEvmPoolNumbers.ZERO_WBTC_WETH_VAULT,
-      ZkEvmPoolNumbers.ZERO_WBTC_ZERO_VAULT,
-      ZkEvmPoolNumbers.ZERO_WETH_USDC_VAULT,
-      ZkEvmPoolNumbers.ZERO_WETH_WBTC_VAULT,
-      ZkEvmPoolNumbers.ZERO_WETH_ZERO_VAULT,
-    ],
     [ChainId.zkSync]: [
       ZkSyncPoolNumbers.PANCAKESWAP_USDT_WETH_VAULT,
       ZkSyncPoolNumbers.PANCAKESWAP_WETH_USDC_VAULT,
@@ -1206,7 +1159,6 @@ export const Pools: TPools = {
       OpBnbPoolNumbers.THENA_USDT_WBNB_VAULT,
       OpBnbPoolNumbers.THENA_WBNB_ETH_VAULT,
     ],
-    [ChainId.zkEVM]: [],
     [ChainId.zkSync]: [],
     [ChainId.Mumbai]: [],
   },

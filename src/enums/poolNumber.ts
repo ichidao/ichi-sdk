@@ -222,8 +222,6 @@ export enum ArbitrumPoolNumbers {
   RAMSES_WETH_RAM_VAULT = 7712,
   LMR_WBTC_VAULT = 7713,
   WETH_LMR_VAULT = 7714,
-  HORIZA_USDC_ICHI_VAULT = 7715,
-  HORIZA_WETH_ICHI_VAULT = 7716,
   RAMSES_ARB_USDC_VAULT = 7717,
   RAMSES_ARB_WETH_VAULT = 7718,
   RAMSES_GRAI_RAM_VAULT = 7719,
@@ -318,18 +316,6 @@ export enum OpBnbPoolNumbers {
   THENA_ETH_BTCB_VAULT = 9107,
 }
 
-export enum ZkEvmPoolNumbers {
-  ZERO_MATIC_ZERO_VAULT = 8500,
-  ZERO_USDC_WETH_VAULT = 8501,
-  ZERO_USDC_ZERO_VAULT = 8502,
-  ZERO_USDT_ZERO_VAULT = 8503,
-  ZERO_WBTC_WETH_VAULT = 8504,
-  ZERO_WBTC_ZERO_VAULT = 8505,
-  ZERO_WETH_USDC_VAULT = 8506,
-  ZERO_WETH_WBTC_VAULT = 8507,
-  ZERO_WETH_ZERO_VAULT = 8508,
-}
-
 export enum ZkSyncPoolNumbers {
   PANCAKESWAP_USDT_WETH_VAULT = 8300,
   PANCAKESWAP_WETH_USDC_VAULT = 8301,
@@ -346,7 +332,6 @@ export type FantomPoolNumberValues = typeof FantomPoolNumbers[keyof typeof Fanto
 export type LineaPoolNumberValues = typeof LineaPoolNumbers[keyof typeof LineaPoolNumbers];
 export type MantlePoolNumberValues = typeof MantlePoolNumbers[keyof typeof MantlePoolNumbers];
 export type OpBnbPoolNumberValues = typeof OpBnbPoolNumbers[keyof typeof OpBnbPoolNumbers];
-export type ZkEvmPoolNumberValues = typeof ZkEvmPoolNumbers[keyof typeof ZkEvmPoolNumbers];
 export type ZkSyncPoolNumberValues = typeof ZkSyncPoolNumbers[keyof typeof ZkSyncPoolNumbers];
 
 export type PoolNumberValues =
@@ -360,6 +345,5 @@ export type PoolNumberValues =
   | LineaPoolNumberValues
   | MantlePoolNumberValues
   | OpBnbPoolNumberValues
-  | ZkEvmPoolNumberValues
   | ZkSyncPoolNumberValues
   | MumbaiPoolNumberValues;

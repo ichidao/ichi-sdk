@@ -669,26 +669,6 @@ export async function getTokenMetrics(
             throw new Error(`Could not lookup token prices for ${token.symbol}`);
           }
           break;
-        case TokenName.ZERO:
-          const zkEvmProvider = await getProvider(ChainId.zkEVM);
-          if (!zkEvmProvider) {
-            throw new Error('Could not establish zkEVM provider');
-          }
-          const zkevm_wethAddress = TOKENS[TokenName.WETH]![ChainId.zkEVM]?.address?.toLowerCase();
-
-
-          if (opts.tokenPrices && zkevm_wethAddress && zkevm_wethAddress in opts.tokenPrices) {
-            const zkevm_wethPrice = opts.tokenPrices[zkevm_wethAddress].usd;
-            price = await getPriceFromWethVault( 
-              VaultName.ZKEVM_ZERO_WETH_ZERO,
-              zkEvmProvider,
-              ChainId.zkEVM,
-              zkevm_wethPrice
-              )
-          } else {
-            throw new Error(`Could not lookup token prices for ${token.symbol}`);
-          }
-          break;
         case TokenName.ETH:
           if (opts.tokenPrices && wethAddress && wethAddress in opts.tokenPrices) {
             wethPrice = opts.tokenPrices[wethAddress].usd;

@@ -10,6 +10,8 @@ export const tokenNameWithChainPrefix = (tokenName: TokenName | string, chainId:
   switch (chainId) {
     case ChainId.Arbitrum:
       return `arbitrum_${tokenName}` as TokenTableName
+    case ChainId.Arthera:
+      return `arthera_${tokenName}` as TokenTableName
     case ChainId.Avalanche:
       return `avalanche_${tokenName}` as TokenTableName
     case ChainId.Base:

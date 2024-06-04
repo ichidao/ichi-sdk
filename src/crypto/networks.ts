@@ -23,6 +23,7 @@ export enum ChainId {
   Mantle = 5000,
   opBNB = 204,
   Scroll = 534352,
+  Taiko = 167000,
   zkEVM = 1101,
   zkSync = 324,
 }
@@ -395,6 +396,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
     coingecko: 'scroll',
     rpc: {
       rpcUrl: 'https://1rpc.io/scroll',
+      nativeCurrency: {
+        symbol: 'ETH',
+        name: 'ETH'
+      }
+    }
+  },
+  [ChainId.Taiko]: {
+    chainId: ChainId.Taiko,
+    name: 'Taiko',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Taiko, 'svg'),
+    env: 'mainnet',
+    scanLink: 'https://taikoscan.io/',
+    scanName: 'taikoscan',
+    coingecko: 'taiko',
+    rpc: {
+      rpcUrl: 'https://rpc.mainnet.taiko.xyz',
       nativeCurrency: {
         symbol: 'ETH',
         name: 'ETH'

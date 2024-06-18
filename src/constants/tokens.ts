@@ -44,6 +44,8 @@ export const tokenNameWithChainPrefix = (tokenName: TokenName | string, chainId:
       return `opbnb_${tokenName}` as TokenTableName
     case ChainId.Scroll:
       return `scroll_${tokenName}` as TokenTableName
+    case ChainId.Skale_Europa:
+      return `skale_europa_${tokenName}` as TokenTableName
     case ChainId.Taiko:
       return `taiko_${tokenName}` as TokenTableName
     case ChainId.zkEVM:
@@ -824,7 +826,7 @@ export const TOKENS: TokenMapping = {
       symbol: 'ETH',
       fullName: 'Binance-Peg Ethereum Token',
       isOneToken: false,
-      atCoingecko: false
+      atCoingecko: true,
     },
     [ChainId.opBNB]: {
       tokenName: TokenName.ETH,

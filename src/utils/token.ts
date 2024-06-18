@@ -669,14 +669,6 @@ export async function getTokenMetrics(
             throw new Error(`Could not lookup token prices for ${token.symbol}`);
           }
           break;
-        case TokenName.ETH:
-          if (opts.tokenPrices && wethAddress && wethAddress in opts.tokenPrices) {
-            wethPrice = opts.tokenPrices[wethAddress].usd;
-            price = wethPrice
-          } else {
-            throw new Error(`Could not lookup token prices for ${token.symbol}`);
-          }
-          break;
         case TokenName.HBR:
           const bscProvider = await getProvider(ChainId.Bsc);
           if (!bscProvider) {

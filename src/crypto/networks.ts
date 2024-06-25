@@ -17,6 +17,7 @@ export enum ChainId {
   Eon = 7332,
   Evmos = 9001,
   Fantom = 250,
+  Fuse = 122,
   Hedera = 295,
   Kava = 2222,
   Linea = 59144,
@@ -298,6 +299,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
       nativeCurrency: {
         symbol: 'FTM',
         name: 'FTM'
+      }
+    }
+  },
+  [ChainId.Fuse]: {
+    chainId: ChainId.Fuse,
+    name: 'Fuse',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Fuse, 'svg'),
+    env: 'mainnet',
+    scanLink: 'https://explorer.fuse.io/',
+    scanName: 'Fuse Explorer',
+    coingecko: 'fuse',
+    rpc: {
+      rpcUrl: 'https://fuse-pokt.nodies.app',
+      nativeCurrency: {
+        symbol: 'FUSE',
+        name: 'FUSE'
       }
     }
   },

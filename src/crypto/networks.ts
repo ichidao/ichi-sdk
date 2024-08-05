@@ -17,6 +17,7 @@ export enum ChainId {
   Eon = 7332,
   Evmos = 9001,
   Fantom = 250,
+  Flare = 14,
   Fuse = 122,
   Hedera = 295,
   Kava = 2222,
@@ -299,6 +300,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
       nativeCurrency: {
         symbol: 'FTM',
         name: 'FTM'
+      }
+    }
+  },
+  [ChainId.Flare]: {
+    chainId: ChainId.Flare,
+    name: 'Flare',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Flare, 'svg'),
+    env: 'mainnet',
+    scanLink: 'https://flarescan.com',
+    scanName: 'flarescan',
+    coingecko: 'flare-network',
+    rpc: {
+      rpcUrl: 'https://rpc.ftso.au/flare',
+      nativeCurrency: {
+        symbol: 'FLR',
+        name: 'FLR'
       }
     }
   },

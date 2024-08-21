@@ -2626,7 +2626,7 @@ export const TOKENS: TokenMapping = {
     [ChainId.Arbitrum]: {
       tokenName: TokenName.WEETH,
       tableName: tokenNameWithChainPrefix(TokenName.WEETH, ChainId.Arbitrum),
-      address: '0xfFA188493C15DfAf2C206c97D8633377847b6a52',
+      address: '0x35751007a407ca6FEFfE80b3cB397736D2cf4dbe',
       decimals: 18,
       displayName: 'weETH',
       symbol: 'weETH',

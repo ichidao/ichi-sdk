@@ -24,6 +24,7 @@ export enum ChainId {
   Linea = 59144,
   Mantle = 5000,
   opBNB = 204,
+  Real = 111188,
   Scroll = 534352,
   Skale_Europa = 2046399126,
   Taiko = 167000,
@@ -419,6 +420,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
       nativeCurrency: {
         symbol: 'BNB',
         name: 'BNB'
+      }
+    }
+  },
+  [ChainId.Real]: {
+    chainId: ChainId.Real,
+    name: 're.al',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Real, 'svg'),
+    env: 'mainnet',
+    scanLink: 'https://explorer.re.al/',
+    scanName: 're.al explorer',
+    coingecko: 're-al',
+    rpc: {
+      rpcUrl: 'https://real.drpc.org',
+      nativeCurrency: {
+        symbol: 'reETH',
+        name: 'reETH'
       }
     }
   },

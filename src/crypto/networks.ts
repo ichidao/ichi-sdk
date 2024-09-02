@@ -11,6 +11,7 @@ export enum ChainId {
   Arthera = 10242,
   Avalanche = 43114,
   Base = 8453,
+  Berachain_bArtio = 80084,
   Blast = 81457,
   Bsc = 56,
   Celo = 42220,
@@ -198,6 +199,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
       nativeCurrency: {
         symbol: 'ETH',
         name: 'ETH'
+      }
+    }
+  },
+  [ChainId.Berachain_bArtio]: {
+    chainId: ChainId.Berachain_bArtio,
+    name: 'Berachain bArtio',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Berachain_bArtio, 'svg'),
+    env: 'mainnet',
+    scanLink: 'https://bartio.beratrail.io',
+    scanName: 'Bartio Testnet Explorer',
+    coingecko: '',
+    rpc: {
+      rpcUrl: 'https://bartio.rpc.berachain.com',
+      nativeCurrency: {
+        symbol: 'BERA',
+        name: 'BERA'
       }
     }
   },

@@ -42,6 +42,8 @@ export const tokenNameWithChainPrefix = (tokenName: TokenName | string, chainId:
       return `linea_${tokenName}` as TokenTableName
     case ChainId.Mantle:
       return `mantle_${tokenName}` as TokenTableName
+    case ChainId.Mode:
+      return `mode_${tokenName}` as TokenTableName
     case ChainId.Mumbai:
       return `mum_${tokenName}` as TokenTableName
     case ChainId.Polygon:

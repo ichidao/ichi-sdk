@@ -24,6 +24,7 @@ export enum ChainId {
   Kava = 2222,
   Linea = 59144,
   Mantle = 5000,
+  Mode = 34443,
   opBNB = 204,
   Real = 111188,
   Scroll = 534352,
@@ -421,6 +422,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
       nativeCurrency: {
         symbol: 'MNT',
         name: 'MNT'
+      }
+    }
+  },
+  [ChainId.Mode]: {
+    chainId: ChainId.Mode,
+    name: 'Mode',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Mode, 'svg'),
+    env: 'mainnet',
+    scanLink: 'https://modescan.io/',
+    scanName: 'Modescan',
+    coingecko: 'mode',
+    rpc: {
+      rpcUrl: 'https://mode.drpc.org',
+      nativeCurrency: {
+        symbol: 'ETH',
+        name: 'ETH'
       }
     }
   },

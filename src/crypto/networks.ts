@@ -27,6 +27,7 @@ export enum ChainId {
   Mode = 34443,
   opBNB = 204,
   Real = 111188,
+  Rootstock = 30,
   Scroll = 534352,
   Skale_Europa = 2046399126,
   Taiko = 167000,
@@ -473,6 +474,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
       nativeCurrency: {
         symbol: 'reETH',
         name: 'reETH'
+      }
+    }
+  },
+  [ChainId.Rootstock]: {
+    chainId: ChainId.Rootstock,
+    name: 'Rootstock',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Rootstock, 'svg'),
+    env: 'mainnet',
+    scanLink: 'https://rootstock.blockscout.com/',
+    scanName: 'Rootstock explorer',
+    coingecko: 'rootstock',
+    rpc: {
+      rpcUrl: 'https://mycrypto.rsk.co',
+      nativeCurrency: {
+        symbol: 'RBTC',
+        name: 'RBTC'
       }
     }
   },

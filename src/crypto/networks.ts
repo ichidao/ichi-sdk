@@ -31,6 +31,7 @@ export enum ChainId {
   Scroll = 534352,
   Skale_Europa = 2046399126,
   Taiko = 167000,
+  Zircuit = 48900,
   zkEVM = 1101,
   zkSync = 324,
 }
@@ -539,6 +540,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
     coingecko: 'taiko',
     rpc: {
       rpcUrl: 'https://rpc.mainnet.taiko.xyz',
+      nativeCurrency: {
+        symbol: 'ETH',
+        name: 'ETH'
+      }
+    }
+  },
+  [ChainId.Zircuit]: {
+    chainId: ChainId.Zircuit,
+    name: 'Zircuit',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Zircuit, 'svg'),
+    env: 'mainnet',
+    scanLink: 'https://explorer.zircuit.com/',
+    scanName: 'Zircuit Explorer',
+    coingecko: 'zircuit',
+    rpc: {
+      rpcUrl: 'https://zircuit-mainnet.drpc.org',
       nativeCurrency: {
         symbol: 'ETH',
         name: 'ETH'

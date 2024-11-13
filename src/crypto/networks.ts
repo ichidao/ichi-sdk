@@ -520,7 +520,7 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
     env: 'mainnet',
     scanLink: 'https://elated-tan-skat.explorer.mainnet.skalenodes.com/',
     scanName: 'EuropaLiquidityHubExplorer',
-    coingecko: '',
+    coingecko: 'skale',
     rpc: {
       rpcUrl: 'https://mainnet.skalenodes.com/v1/elated-tan-skat',
       nativeCurrency: {

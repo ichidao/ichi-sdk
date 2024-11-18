@@ -494,7 +494,6 @@ export async function getTokenMetrics(
           break;
         case TokenName.WBTC:
           const wbtcAddress = (chainId !== ChainId.Eon 
-            && chainId !== ChainId.Linea 
             && chainId !== ChainId.Evmos 
             && chainId !== ChainId.Blast) 
             ? token.address.toLowerCase()

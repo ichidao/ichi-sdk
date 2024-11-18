@@ -1426,7 +1426,7 @@ export const TOKENS: TokenMapping = {
       symbol: 'LYNX',
       fullName: 'Lynex',
       isOneToken: false,
-      atCoingecko: false,
+      atCoingecko: true,
     }
   },
   [TokenName.MATIC]: {
@@ -2604,7 +2604,7 @@ export const TOKENS: TokenMapping = {
       displayName: 'wBTC',
       symbol: 'wBTC',
       fullName: 'Wrapped BTC',
-      atCoingecko: false,
+      atCoingecko: true,
       isOneToken: false
     },
     [ChainId.zkEVM]: {

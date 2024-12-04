@@ -21,6 +21,7 @@ export enum ChainId {
   Flare = 14,
   Fuse = 122,
   Hedera = 295,
+  Ink_Sepolia = 763373,
   Kava = 2222,
   Linea = 59144,
   Mantle = 5000,
@@ -373,6 +374,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
       nativeCurrency: {
         symbol: 'HBAR',
         name: 'HBAR'
+      }
+    }
+  },
+  [ChainId.Ink_Sepolia]: {
+    chainId: ChainId.Ink_Sepolia,
+    name: 'Ink Sepolia',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Ink_Sepolia, 'svg'),
+    env: 'testnet',
+    scanLink: 'https://explorer-sepolia.inkonchain.com/',
+    scanName: 'Ink Sepolia explorer',
+    coingecko: '',
+    rpc: {
+      rpcUrl: 'https://rpc-gel-sepolia.inkonchain.com',
+      nativeCurrency: {
+        symbol: 'ETH',
+        name: 'ETH'
       }
     }
   },

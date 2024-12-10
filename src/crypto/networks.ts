@@ -24,6 +24,7 @@ export enum ChainId {
   Ink_Sepolia = 763373,
   Kava = 2222,
   Linea = 59144,
+  Manta_Pacific = 169,
   Mantle = 5000,
   Mode = 34443,
   opBNB = 204,
@@ -422,6 +423,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
     coingecko: 'linea',
     rpc: {
       rpcUrl: 'https://rpc.linea.build',
+      nativeCurrency: {
+        symbol: 'ETH',
+        name: 'ETH'
+      }
+    }
+  },
+  [ChainId.Manta_Pacific]: {
+    chainId: ChainId.Manta_Pacific,
+    name: 'Manta Pacific',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Manta_Pacific, 'svg'),
+    env: 'mainnet',
+    scanLink: 'https://pacific-explorer.manta.network/',
+    scanName: 'Manta Pacific explorer',
+    coingecko: 'manta-pacific',
+    rpc: {
+      rpcUrl: 'https://1rpc.io/manta',
       nativeCurrency: {
         symbol: 'ETH',
         name: 'ETH'

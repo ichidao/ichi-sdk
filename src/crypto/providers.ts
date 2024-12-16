@@ -92,6 +92,11 @@ export const providerCacheReference: Record<ChainId, ProviderCache> = {
     cacheHit: 0,
     cacheMiss: 0
   },
+  [ChainId.Ink]: {
+    lastUdated: 0,
+    cacheHit: 0,
+    cacheMiss: 0
+  },
   [ChainId.Ink_Sepolia]: {
     lastUdated: 0,
     cacheHit: 0,
@@ -314,6 +319,8 @@ const getRpcEnvName = (chainId: ChainId): EnvUtils.EnvName => {
       return EnvUtils.EnvName.FUSE_RPC_HOSTS;
     case ChainId.Hedera:
       return EnvUtils.EnvName.HEDERA_RPC_HOSTS;
+    case ChainId.Ink:
+      return EnvUtils.EnvName.INK_RPC_HOSTS;
     case ChainId.Ink_Sepolia:
       return EnvUtils.EnvName.INK_SEPOLIA_RPC_HOSTS;
     case ChainId.Kava:

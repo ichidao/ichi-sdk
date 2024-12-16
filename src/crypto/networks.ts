@@ -21,6 +21,7 @@ export enum ChainId {
   Flare = 14,
   Fuse = 122,
   Hedera = 295,
+  Ink = 57073,
   Ink_Sepolia = 763373,
   Kava = 2222,
   Linea = 59144,
@@ -375,6 +376,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
       nativeCurrency: {
         symbol: 'HBAR',
         name: 'HBAR'
+      }
+    }
+  },
+  [ChainId.Ink]: {
+    chainId: ChainId.Ink,
+    name: 'Ink',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Ink, 'svg'),
+    env: 'mainnet',
+    scanLink: '',
+    scanName: 'Ink explorer',
+    coingecko: '',
+    rpc: {
+      rpcUrl: '',
+      nativeCurrency: {
+        symbol: 'ETH',
+        name: 'ETH'
       }
     }
   },

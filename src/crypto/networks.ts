@@ -385,11 +385,11 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
     color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
     icon: generateIconUrl(ChainId.Ink, 'svg'),
     env: 'mainnet',
-    scanLink: '',
+    scanLink: 'https://inkchain-temp.cloud.blockscout.com/',
     scanName: 'Ink explorer',
-    coingecko: '',
+    coingecko: 'ink',
     rpc: {
-      rpcUrl: '',
+      rpcUrl: 'https://rpc-qnd.inkonchain.com',
       nativeCurrency: {
         symbol: 'ETH',
         name: 'ETH'

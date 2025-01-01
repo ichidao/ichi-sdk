@@ -33,6 +33,7 @@ export enum ChainId {
   Rootstock = 30,
   Scroll = 534352,
   Skale_Europa = 2046399126,
+  Sonic = 146,
   Taiko = 167000,
   Zircuit = 48900,
   zkEVM = 1101,
@@ -580,6 +581,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
       nativeCurrency: {
         symbol: 'sFUEL',
         name: 'sFUEL'
+      }
+    }
+  },
+  [ChainId.Sonic]: {
+    chainId: ChainId.Sonic,
+    name: 'Sonic',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Sonic, 'svg'),
+    env: 'mainnet',
+    scanLink: 'https://sonicscan.org/',
+    scanName: 'Sonic Explorer',
+    coingecko: 'sonic',
+    rpc: {
+      rpcUrl: 'https://rpc.soniclabs.com',
+      nativeCurrency: {
+        symbol: 'S',
+        name: 'S'
       }
     }
   },

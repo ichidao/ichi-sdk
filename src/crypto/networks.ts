@@ -218,7 +218,7 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
     env: 'mainnet',
     scanLink: 'https://beratrail.io',
     scanName: 'Berachain Explorer',
-    coingecko: '',
+    coingecko: 'berachain',
     rpc: {
       rpcUrl: 'https://rpc.berachain.com',
       nativeCurrency: {

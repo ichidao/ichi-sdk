@@ -7,7 +7,9 @@ export type TokenTableName = `${TokenName}` |
   `base_${TokenName}` |
   `bsc_${TokenName}` |
   `celo_${TokenName}` |
+  `haven1_${TokenName}` |
   `hedera_${TokenName}` |
+  `hemi_${TokenName}` |
   `zksync_${TokenName}` |
   `arbitrum_${TokenName}` |
   `avalanche_${TokenName}`|

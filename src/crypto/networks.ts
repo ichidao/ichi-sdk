@@ -21,7 +21,9 @@ export enum ChainId {
   Fantom = 250,
   Flare = 14,
   Fuse = 122,
+  Haven1 = 8811,
   Hedera = 295,
+  Hemi = 43111,
   Ink = 57073,
   Ink_Sepolia = 763373,
   Kava = 2222,
@@ -381,6 +383,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
       }
     }
   },
+  [ChainId.Haven1]: {
+    chainId: ChainId.Haven1,
+    name: 'Haven1',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Haven1, 'svg'),
+    env: 'mainnet',
+    scanLink: 'https://explorer.haven1.org/',
+    scanName: 'Haven1 explorer',
+    coingecko: '',
+    rpc: {
+      rpcUrl: 'https://rpc.haven1.org',
+      nativeCurrency: {
+        symbol: 'H1',
+        name: 'H1'
+      }
+    }
+  },
   [ChainId.Hedera]: {
     chainId: ChainId.Hedera,
     name: 'Hedera',
@@ -395,6 +414,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
       nativeCurrency: {
         symbol: 'HBAR',
         name: 'HBAR'
+      }
+    }
+  },
+  [ChainId.Hemi]: {
+    chainId: ChainId.Hemi,
+    name: 'Hemi',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Hemi, 'svg'),
+    env: 'mainnet',
+    scanLink: 'https://explorer.hemi.xyz/',
+    scanName: 'Hemi explorer',
+    coingecko: '',
+    rpc: {
+      rpcUrl: 'https://rpc.hemi.network/rpc',
+      nativeCurrency: {
+        symbol: 'ETH',
+        name: 'ETH'
       }
     }
   },

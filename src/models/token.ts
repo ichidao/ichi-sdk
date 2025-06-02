@@ -10,6 +10,7 @@ export type TokenTableName = `${TokenName}` |
   `haven1_${TokenName}` |
   `hedera_${TokenName}` |
   `hemi_${TokenName}` |
+  `hyperevm_${TokenName}` |
   `zksync_${TokenName}` |
   `arbitrum_${TokenName}` |
   `avalanche_${TokenName}`|

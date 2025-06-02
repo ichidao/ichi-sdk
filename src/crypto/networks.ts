@@ -24,6 +24,7 @@ export enum ChainId {
   Haven1 = 8811,
   Hedera = 295,
   Hemi = 43111,
+  HyperEVM = 999,
   Ink = 57073,
   Ink_Sepolia = 763373,
   Kava = 2222,
@@ -431,6 +432,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
       nativeCurrency: {
         symbol: 'ETH',
         name: 'ETH'
+      }
+    }
+  },
+  [ChainId.HyperEVM]: {
+    chainId: ChainId.HyperEVM,
+    name: 'HyperEVM',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.HyperEVM, 'svg'),
+    env: 'mainnet',
+    scanLink: 'https://www.hyperscan.com/',
+    scanName: 'HyperEVM explorer',
+    coingecko: 'hyperevm',
+    rpc: {
+      rpcUrl: 'https://rpc.hypurrscan.io',
+      nativeCurrency: {
+        symbol: 'HYPE',
+        name: 'HYPE'
       }
     }
   },

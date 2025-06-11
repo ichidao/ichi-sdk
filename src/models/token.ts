@@ -18,7 +18,9 @@ export type TokenTableName = `${TokenName}` |
   `fantom_${TokenName}` |
   `linea_${TokenName}` |
   `mantle_${TokenName}` |
+  `nibiru_${TokenName}` |
   `opbnb_${TokenName}` |
+  `unichain_${TokenName}` |
   `zkevm_${TokenName}`;
 
 export type Token = {

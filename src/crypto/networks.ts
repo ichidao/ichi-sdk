@@ -32,6 +32,7 @@ export enum ChainId {
   Manta_Pacific = 169,
   Mantle = 5000,
   Mode = 34443,
+  Nibiru = 6900,
   opBNB = 204,
   Real = 111188,
   Rootstock = 30,
@@ -39,6 +40,7 @@ export enum ChainId {
   Skale_Europa = 2046399126,
   Sonic = 146,
   Taiko = 167000,
+  Unichain = 130,
   Zircuit = 48900,
   zkEVM = 1101,
   zkSync = 324,
@@ -571,6 +573,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
       }
     }
   },
+  [ChainId.Nibiru]: {
+    chainId: ChainId.Nibiru,
+    name: 'Nibiru',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Nibiru, 'svg'),
+    env: 'mainnet',
+    scanLink: 'https://nibiscan.io/',
+    scanName: 'Nibiru Explorer',
+    coingecko: 'nibiru',
+    rpc: {
+      rpcUrl: 'https://evm-rpc.nibiru.fi',
+      nativeCurrency: {
+        symbol: 'NIBI',
+        name: 'NIBI'
+      }
+    }
+  },
   [ChainId.opBNB]: {
     chainId: ChainId.opBNB,
     name: 'op_BNB',
@@ -684,6 +703,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
     coingecko: 'taiko',
     rpc: {
       rpcUrl: 'https://rpc.mainnet.taiko.xyz',
+      nativeCurrency: {
+        symbol: 'ETH',
+        name: 'ETH'
+      }
+    }
+  },
+  [ChainId.Unichain]: {
+    chainId: ChainId.Unichain,
+    name: 'Unichain',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Unichain, 'svg'),
+    env: 'mainnet',
+    scanLink: 'https://unichain.blockscout.com/',
+    scanName: 'Unichain explorer',
+    coingecko: 'unichain',
+    rpc: {
+      rpcUrl: 'https://unichain-rpc.publicnode.com',
       nativeCurrency: {
         symbol: 'ETH',
         name: 'ETH'

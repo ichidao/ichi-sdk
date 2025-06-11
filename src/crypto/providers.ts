@@ -147,6 +147,11 @@ export const providerCacheReference: Record<ChainId, ProviderCache> = {
     cacheHit: 0,
     cacheMiss: 0
   },
+  [ChainId.Nibiru]: {
+    lastUdated: 0,
+    cacheHit: 0,
+    cacheMiss: 0
+  },
   [ChainId.opBNB]: {
     lastUdated: 0,
     cacheHit: 0,
@@ -183,6 +188,11 @@ export const providerCacheReference: Record<ChainId, ProviderCache> = {
     cacheMiss: 0
   },
   [ChainId.Sonic]: {
+    lastUdated: 0,
+    cacheHit: 0,
+    cacheMiss: 0
+  },
+  [ChainId.Unichain]: {
     lastUdated: 0,
     cacheHit: 0,
     cacheMiss: 0
@@ -366,6 +376,8 @@ const getRpcEnvName = (chainId: ChainId): EnvUtils.EnvName => {
       return EnvUtils.EnvName.MANTLE_RPC_HOSTS;
     case ChainId.Mode:
       return EnvUtils.EnvName.MODE_RPC_HOSTS;
+    case ChainId.Nibiru:
+      return EnvUtils.EnvName.NIBIRU_RPC_HOSTS;
     case ChainId.opBNB:
       return EnvUtils.EnvName.OPBNB_RPC_HOSTS;
     case ChainId.Polygon:
@@ -382,6 +394,8 @@ const getRpcEnvName = (chainId: ChainId): EnvUtils.EnvName => {
       return EnvUtils.EnvName.SONIC_RPC_HOSTS;
     case ChainId.Taiko:
       return EnvUtils.EnvName.TAIKO_RPC_HOSTS;
+    case ChainId.Unichain:
+      return EnvUtils.EnvName.UNICHAIN_RPC_HOSTS;
     case ChainId.Zircuit:
       return EnvUtils.EnvName.ZIRCUIT_RPC_HOSTS;
     case ChainId.zkEVM:

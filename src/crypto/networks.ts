@@ -32,6 +32,7 @@ export enum ChainId {
   Manta_Pacific = 169,
   Mantle = 5000,
   Mode = 34443,
+  Monad_Testnet = 10143,
   Nibiru = 6900,
   opBNB = 204,
   Real = 111188,
@@ -570,6 +571,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
       nativeCurrency: {
         symbol: 'ETH',
         name: 'ETH'
+      }
+    }
+  },
+  [ChainId.Monad_Testnet]: {
+    chainId: ChainId.Monad_Testnet,
+    name: 'Monad Testnet',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Monad_Testnet, 'svg'),
+    env: 'testnet',
+    scanLink: 'https://testnet.monadexplorer.com/',
+    scanName: 'Monad explorer',
+    coingecko: '',
+    rpc: {
+      rpcUrl: 'https://testnet-rpc.monad.xyz',
+      nativeCurrency: {
+        symbol: 'MON',
+        name: 'MON'
       }
     }
   },

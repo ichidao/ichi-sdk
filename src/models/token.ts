@@ -18,6 +18,7 @@ export type TokenTableName = `${TokenName}` |
   `fantom_${TokenName}` |
   `linea_${TokenName}` |
   `mantle_${TokenName}` |
+  `monad_testnet_${TokenName}` |
   `nibiru_${TokenName}` |
   `opbnb_${TokenName}` |
   `unichain_${TokenName}` |

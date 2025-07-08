@@ -27,6 +27,7 @@ export enum ChainId {
   HyperEVM = 999,
   Ink = 57073,
   Ink_Sepolia = 763373,
+  Katana = 747474,
   Kava = 2222,
   Linea = 59144,
   Manta_Pacific = 169,
@@ -483,6 +484,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
     coingecko: '',
     rpc: {
       rpcUrl: 'https://rpc-gel-sepolia.inkonchain.com',
+      nativeCurrency: {
+        symbol: 'ETH',
+        name: 'ETH'
+      }
+    }
+  },
+  [ChainId.Katana]: {
+    chainId: ChainId.Katana,
+    name: 'Katana',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Katana, 'svg'),
+    env: 'mainnet',
+    scanLink: 'explorer.katanarpc.com',
+    scanName: 'Katana Explorer',
+    coingecko: 'katana',
+    rpc: {
+      rpcUrl: 'https://rpc.katana.network',
       nativeCurrency: {
         symbol: 'ETH',
         name: 'ETH'

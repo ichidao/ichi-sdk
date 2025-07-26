@@ -34,6 +34,7 @@ export enum ChainId {
   Mantle = 5000,
   Mode = 34443,
   Monad_Testnet = 10143,
+  Moonbeam = 1284,
   Nibiru = 6900,
   opBNB = 204,
   Real = 111188,
@@ -597,7 +598,7 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
     name: 'Monad Testnet',
     color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
     icon: generateIconUrl(ChainId.Monad_Testnet, 'svg'),
-    env: 'testnet',
+    env: 'mainnet',
     scanLink: 'https://testnet.monadexplorer.com/',
     scanName: 'Monad explorer',
     coingecko: '',
@@ -606,6 +607,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
       nativeCurrency: {
         symbol: 'MON',
         name: 'MON'
+      }
+    }
+  },
+  [ChainId.Moonbeam]: {
+    chainId: ChainId.Moonbeam,
+    name: 'Moonbeam',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Moonbeam, 'svg'),
+    env: 'mainnet',
+    scanLink: 'https://moonscan.io/',
+    scanName: 'Moonbeam Explorer',
+    coingecko: 'moonbeam',
+    rpc: {
+      rpcUrl: 'https://moonbeam.api.onfinality.io/public',
+      nativeCurrency: {
+        symbol: 'GLMR',
+        name: 'GLMR'
       }
     }
   },

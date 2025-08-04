@@ -431,7 +431,7 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
     env: 'mainnet',
     scanLink: 'https://explorer.hemi.xyz/',
     scanName: 'Hemi explorer',
-    coingecko: '',
+    coingecko: 'hemi',
     rpc: {
       rpcUrl: 'https://rpc.hemi.network/rpc',
       nativeCurrency: {

@@ -87,6 +87,11 @@ export const providerCacheReference: Record<ChainId, ProviderCache> = {
     cacheHit: 0,
     cacheMiss: 0
   },
+  [ChainId.Flow]: {
+    lastUdated: 0,
+    cacheHit: 0,
+    cacheMiss: 0
+  },
   [ChainId.Fuse]: {
     lastUdated: 0,
     cacheHit: 0,
@@ -203,6 +208,11 @@ export const providerCacheReference: Record<ChainId, ProviderCache> = {
     cacheMiss: 0
   },
   [ChainId.Sonic]: {
+    lastUdated: 0,
+    cacheHit: 0,
+    cacheMiss: 0
+  },
+  [ChainId.TAC]: {
     lastUdated: 0,
     cacheHit: 0,
     cacheMiss: 0
@@ -367,6 +377,8 @@ const getRpcEnvName = (chainId: ChainId): EnvUtils.EnvName => {
       return EnvUtils.EnvName.FANTOM_RPC_HOSTS;
     case ChainId.Flare:
       return EnvUtils.EnvName.FLARE_RPC_HOSTS;
+    case ChainId.Flow:
+      return EnvUtils.EnvName.FLOW_RPC_HOSTS;
     case ChainId.Fuse:
       return EnvUtils.EnvName.FUSE_RPC_HOSTS;
     case ChainId.Haven1:
@@ -413,6 +425,8 @@ const getRpcEnvName = (chainId: ChainId): EnvUtils.EnvName => {
       return EnvUtils.EnvName.SKALE_EUROPA_RPC_HOSTS;
     case ChainId.Sonic:
       return EnvUtils.EnvName.SONIC_RPC_HOSTS;
+    case ChainId.TAC:
+      return EnvUtils.EnvName.TAC_RPC_HOSTS;
     case ChainId.Taiko:
       return EnvUtils.EnvName.TAIKO_RPC_HOSTS;
     case ChainId.Unichain:

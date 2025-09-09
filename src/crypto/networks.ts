@@ -20,6 +20,7 @@ export enum ChainId {
   Evmos = 9001,
   Fantom = 250,
   Flare = 14,
+  Flow = 747,
   Fuse = 122,
   Haven1 = 8811,
   Hedera = 295,
@@ -42,6 +43,7 @@ export enum ChainId {
   Scroll = 534352,
   Skale_Europa = 2046399126,
   Sonic = 146,
+  TAC = 239,
   Taiko = 167000,
   Unichain = 130,
   Zircuit = 48900,
@@ -369,6 +371,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
       nativeCurrency: {
         symbol: 'FLR',
         name: 'FLR'
+      }
+    }
+  },
+  [ChainId.Flow]: {
+    chainId: ChainId.Flow,
+    name: 'Flow',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Flow, 'svg'),
+    env: 'mainnet',
+    scanLink: 'https://evm.flowscan.io/',
+    scanName: 'flowscan',
+    coingecko: 'flow',
+    rpc: {
+      rpcUrl: 'https://mainnet.evm.nodes.onflow.org',
+      nativeCurrency: {
+        symbol: 'FLOW',
+        name: 'FLOW'
       }
     }
   },
@@ -743,6 +762,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
       nativeCurrency: {
         symbol: 'S',
         name: 'S'
+      }
+    }
+  },
+  [ChainId.TAC]: {
+    chainId: ChainId.TAC,
+    name: 'TAC',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.TAC, 'svg'),
+    env: 'mainnet',
+    scanLink: 'https://explorer.tac.build/',
+    scanName: 'TAC explorer',
+    coingecko: 'tac',
+    rpc: {
+      rpcUrl: 'https://rpc.ankr.com/tac',
+      nativeCurrency: {
+        symbol: 'TAC',
+        name: 'TAC'
       }
     }
   },

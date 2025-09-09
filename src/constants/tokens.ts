@@ -34,6 +34,8 @@ export const tokenNameWithChainPrefix = (tokenName: TokenName | string, chainId:
       return `fantom_${tokenName}` as TokenTableName
     case ChainId.Flare:
       return `flare_${tokenName}` as TokenTableName
+    case ChainId.Flow:
+      return `flow_${tokenName}` as TokenTableName
     case ChainId.Fuse:
       return `fuse_${tokenName}` as TokenTableName
     case ChainId.Haven1:
@@ -82,6 +84,8 @@ export const tokenNameWithChainPrefix = (tokenName: TokenName | string, chainId:
       return `skale_europa_${tokenName}` as TokenTableName
     case ChainId.Sonic:
       return `sonic_${tokenName}` as TokenTableName
+    case ChainId.TAC:
+      return `tac_${tokenName}` as TokenTableName
     case ChainId.Taiko:
       return `taiko_${tokenName}` as TokenTableName
     case ChainId.Unichain:

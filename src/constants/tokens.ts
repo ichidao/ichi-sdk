@@ -36,6 +36,8 @@ export const tokenNameWithChainPrefix = (tokenName: TokenName | string, chainId:
       return `flare_${tokenName}` as TokenTableName
     case ChainId.Flow:
       return `flow_${tokenName}` as TokenTableName
+    case ChainId.Flow_Testnet:
+      return `flow_testnet_${tokenName}` as TokenTableName
     case ChainId.Fuse:
       return `fuse_${tokenName}` as TokenTableName
     case ChainId.Haven1:

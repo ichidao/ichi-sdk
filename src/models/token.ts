@@ -16,6 +16,8 @@ export type TokenTableName = `${TokenName}` |
   `avalanche_${TokenName}`|
   `eon_${TokenName}` |
   `fantom_${TokenName}` |
+  `flow_${TokenName}` |
+  `flow_testnet_${TokenName}` |
   `linea_${TokenName}` |
   `mantle_${TokenName}` |
   `monad_testnet_${TokenName}` |

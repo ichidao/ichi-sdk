@@ -21,6 +21,7 @@ export enum ChainId {
   Fantom = 250,
   Flare = 14,
   Flow = 747,
+  Flow_Testnet = 545,
   Fuse = 122,
   Haven1 = 8811,
   Hedera = 295,
@@ -385,6 +386,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
     coingecko: 'flow',
     rpc: {
       rpcUrl: 'https://mainnet.evm.nodes.onflow.org',
+      nativeCurrency: {
+        symbol: 'FLOW',
+        name: 'FLOW'
+      }
+    }
+  },
+  [ChainId.Flow_Testnet]: {
+    chainId: ChainId.Flow_Testnet,
+    name: 'Flow Testnet',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Flow_Testnet, 'svg'),
+    env: 'mainnet',
+    scanLink: 'https://evm-testnet.flowscan.io/',
+    scanName: 'Flow (testnet) Explorer',
+    coingecko: '',
+    rpc: {
+      rpcUrl: 'https://testnet.evm.nodes.onflow.org',
       nativeCurrency: {
         symbol: 'FLOW',
         name: 'FLOW'

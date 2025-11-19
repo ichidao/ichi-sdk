@@ -14,8 +14,10 @@ export enum ChainId {
   Berachain = 80094,
   Berachain_bArtio = 80084,
   Blast = 81457,
+  Botanix = 3637,
   Bsc = 56,
   Celo = 42220,
+  Cronos = 25,
   Eon = 7332,
   Evmos = 9001,
   Fantom = 250,
@@ -272,6 +274,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
       }
     }
   },
+  [ChainId.Botanix]: {
+    chainId: ChainId.Botanix,
+    name: 'Botanix',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Botanix, 'svg'),
+    env: 'mainnet',
+    scanLink: 'botanixscan.io',
+    scanName: 'Botanix Explorer',
+    coingecko: 'botanix',
+    rpc: {
+      rpcUrl: 'https://rpc.ankr.com/botanix_mainnet',
+      nativeCurrency: {
+        symbol: 'BTC',
+        name: 'BTC'
+      }
+    }
+  },
   [ChainId.Bsc]: {
     chainId: ChainId.Bsc,
     name: 'BSC',
@@ -304,6 +323,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
       nativeCurrency: {
         symbol: 'CELO',
         name: 'CELO'
+      }
+    }
+  },
+  [ChainId.Cronos]: {
+    chainId: ChainId.Cronos,
+    name: 'Cronos',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Cronos, 'svg'),
+    env: 'mainnet',
+    scanLink: 'explorer.cronos.org',
+    scanName: 'Cronos Explorer',
+    coingecko: 'cronos',
+    rpc: {
+      rpcUrl: 'https://1rpc.io/cro',
+      nativeCurrency: {
+        symbol: 'CRO',
+        name: 'CRO'
       }
     }
   },

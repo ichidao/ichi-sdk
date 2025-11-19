@@ -22,10 +22,14 @@ export const tokenNameWithChainPrefix = (tokenName: TokenName | string, chainId:
       return `berachain_bartio_${tokenName}` as TokenTableName
     case ChainId.Blast:
       return `blast_${tokenName}` as TokenTableName
+    case ChainId.Botanix:
+      return `botanix_${tokenName}` as TokenTableName
     case ChainId.Bsc:
       return `bsc_${tokenName}` as TokenTableName
     case ChainId.Celo:
       return `celo_${tokenName}` as TokenTableName
+    case ChainId.Cronos:
+      return `cronos_${tokenName}` as TokenTableName
     case ChainId.Eon:
       return `eon_${tokenName}` as TokenTableName
     case ChainId.Evmos:

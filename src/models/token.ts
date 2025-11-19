@@ -6,7 +6,9 @@ export type TokenTableName = `${TokenName}` |
   `mum_${TokenName}` |
   `base_${TokenName}` |
   `bsc_${TokenName}` |
+  `botanix_${TokenName}` |
   `celo_${TokenName}` |
+  `cronos_${TokenName}` |
   `haven1_${TokenName}` |
   `hedera_${TokenName}` |
   `hemi_${TokenName}` |

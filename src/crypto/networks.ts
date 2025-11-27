@@ -37,6 +37,7 @@ export enum ChainId {
   Manta_Pacific = 169,
   Mantle = 5000,
   Mode = 34443,
+  Monad = 143,
   Monad_Testnet = 10143,
   Moonbeam = 1284,
   Nibiru = 6900,
@@ -663,6 +664,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
       nativeCurrency: {
         symbol: 'ETH',
         name: 'ETH'
+      }
+    }
+  },
+  [ChainId.Monad]: {
+    chainId: ChainId.Monad,
+    name: 'Monad Testnet',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Monad, 'svg'),
+    env: 'mainnet',
+    scanLink: 'https://monadscan.com/',
+    scanName: 'Monad explorer',
+    coingecko: 'monad',
+    rpc: {
+      rpcUrl: 'https://rpc3.monad.xyz',
+      nativeCurrency: {
+        symbol: 'MON',
+        name: 'MON'
       }
     }
   },

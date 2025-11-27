@@ -22,6 +22,7 @@ export type TokenTableName = `${TokenName}` |
   `flow_testnet_${TokenName}` |
   `linea_${TokenName}` |
   `mantle_${TokenName}` |
+  `monad_${TokenName}` |
   `monad_testnet_${TokenName}` |
   `moonbeam_${TokenName}` |
   `nibiru_${TokenName}` |

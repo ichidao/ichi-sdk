@@ -172,6 +172,11 @@ export const providerCacheReference: Record<ChainId, ProviderCache> = {
     cacheHit: 0,
     cacheMiss: 0
   },
+  [ChainId.Monad]: {
+    lastUdated: 0,
+    cacheHit: 0,
+    cacheMiss: 0
+  },
   [ChainId.Monad_Testnet]: {
     lastUdated: 0,
     cacheHit: 0,
@@ -426,6 +431,8 @@ const getRpcEnvName = (chainId: ChainId): EnvUtils.EnvName => {
       return EnvUtils.EnvName.MANTLE_RPC_HOSTS;
     case ChainId.Mode:
       return EnvUtils.EnvName.MODE_RPC_HOSTS;
+    case ChainId.Monad:
+      return EnvUtils.EnvName.MONAD_RPC_HOSTS;
     case ChainId.Monad_Testnet:
       return EnvUtils.EnvName.MONAD_TESTNET_RPC_HOSTS;
     case ChainId.Moonbeam:

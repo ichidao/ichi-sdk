@@ -669,7 +669,7 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
   },
   [ChainId.Monad]: {
     chainId: ChainId.Monad,
-    name: 'Monad Testnet',
+    name: 'Monad',
     color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
     icon: generateIconUrl(ChainId.Monad, 'svg'),
     env: 'mainnet',

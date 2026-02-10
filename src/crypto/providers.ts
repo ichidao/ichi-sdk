@@ -72,6 +72,11 @@ export const providerCacheReference: Record<ChainId, ProviderCache> = {
     cacheHit: 0,
     cacheMiss: 0
   },
+  [ChainId.Citrea]: {
+    lastUdated: 0,
+    cacheHit: 0,
+    cacheMiss: 0
+  },
   [ChainId.Cronos]: {
     lastUdated: 0,
     cacheHit: 0,
@@ -163,6 +168,11 @@ export const providerCacheReference: Record<ChainId, ProviderCache> = {
     cacheMiss: 0
   },
   [ChainId.Mantle]: {
+    lastUdated: 0,
+    cacheHit: 0,
+    cacheMiss: 0
+  },
+  [ChainId.MegaETH]: {
     lastUdated: 0,
     cacheHit: 0,
     cacheMiss: 0
@@ -391,6 +401,8 @@ const getRpcEnvName = (chainId: ChainId): EnvUtils.EnvName => {
       return EnvUtils.EnvName.BSC_RPC_HOSTS;
     case ChainId.Celo:
       return EnvUtils.EnvName.CELO_RPC_HOSTS;
+    case ChainId.Citrea:
+      return EnvUtils.EnvName.CITREA_RPC_HOSTS;
     case ChainId.Cronos:
       return EnvUtils.EnvName.CRONOS_RPC_HOSTS;
     case ChainId.Eon:
@@ -429,6 +441,8 @@ const getRpcEnvName = (chainId: ChainId): EnvUtils.EnvName => {
       return EnvUtils.EnvName.MANTA_PACIFIC_RPC_HOSTS;
     case ChainId.Mantle:
       return EnvUtils.EnvName.MANTLE_RPC_HOSTS;
+    case ChainId.MegaETH:
+      return EnvUtils.EnvName.MEGAETH_RPC_HOSTS;
     case ChainId.Mode:
       return EnvUtils.EnvName.MODE_RPC_HOSTS;
     case ChainId.Monad:

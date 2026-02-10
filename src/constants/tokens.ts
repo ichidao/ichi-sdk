@@ -28,6 +28,8 @@ export const tokenNameWithChainPrefix = (tokenName: TokenName | string, chainId:
       return `bsc_${tokenName}` as TokenTableName
     case ChainId.Celo:
       return `celo_${tokenName}` as TokenTableName
+    case ChainId.Citrea:
+      return `citrea_${tokenName}` as TokenTableName
     case ChainId.Cronos:
       return `cronos_${tokenName}` as TokenTableName
     case ChainId.Eon:
@@ -66,6 +68,8 @@ export const tokenNameWithChainPrefix = (tokenName: TokenName | string, chainId:
       return `manta_pacific_${tokenName}` as TokenTableName
     case ChainId.Mantle:
       return `mantle_${tokenName}` as TokenTableName
+    case ChainId.MegaETH:
+      return `megaeth_${tokenName}` as TokenTableName
     case ChainId.Mode:
       return `mode_${tokenName}` as TokenTableName
     case ChainId.Monad:

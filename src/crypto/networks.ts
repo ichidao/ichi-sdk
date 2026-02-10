@@ -17,6 +17,7 @@ export enum ChainId {
   Botanix = 3637,
   Bsc = 56,
   Celo = 42220,
+  Citrea = 4114,
   Cronos = 25,
   Eon = 7332,
   Evmos = 9001,
@@ -36,6 +37,7 @@ export enum ChainId {
   Linea = 59144,
   Manta_Pacific = 169,
   Mantle = 5000,
+  MegaETH = 4326,
   Mode = 34443,
   Monad = 143,
   Monad_Testnet = 10143,
@@ -324,6 +326,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
       nativeCurrency: {
         symbol: 'CELO',
         name: 'CELO'
+      }
+    }
+  },
+  [ChainId.Citrea]: {
+    chainId: ChainId.Citrea,
+    name: 'Citrea',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.Citrea, 'svg'),
+    env: 'mainnet',
+    scanLink: 'https://explorer.mainnet.citrea.xyz',
+    scanName: 'Citrea Explorer',
+    coingecko: 'citrea',
+    rpc: {
+      rpcUrl: 'https://rpc.mainnet.citrea.xyz',
+      nativeCurrency: {
+        symbol: 'cBTC',
+        name: 'cBTC'
       }
     }
   },
@@ -647,6 +666,23 @@ export const SUPPORTED_NETWORKS: SupportedNetworkList = {
       nativeCurrency: {
         symbol: 'MNT',
         name: 'MNT'
+      }
+    }
+  },
+  [ChainId.MegaETH]: {
+    chainId: ChainId.MegaETH,
+    name: 'MegaETH',
+    color: 'linear-gradient(90deg, rgba(161,128,217,1) 0%, rgba(130,71,229,1) 100%)',
+    icon: generateIconUrl(ChainId.MegaETH, 'svg'),
+    env: 'mainnet',
+    scanLink: 'https://megaeth.blockscout.com/',
+    scanName: 'MegaETH Explorer',
+    coingecko: 'megaeth',
+    rpc: {
+      rpcUrl: 'https://mainnet.megaeth.com/rpc',
+      nativeCurrency: {
+        symbol: 'ETH',
+        name: 'ETH'
       }
     }
   },

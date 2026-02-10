@@ -8,6 +8,7 @@ export type TokenTableName = `${TokenName}` |
   `bsc_${TokenName}` |
   `botanix_${TokenName}` |
   `celo_${TokenName}` |
+  `citrea_${TokenName}` |
   `cronos_${TokenName}` |
   `haven1_${TokenName}` |
   `hedera_${TokenName}` |
@@ -22,6 +23,7 @@ export type TokenTableName = `${TokenName}` |
   `flow_testnet_${TokenName}` |
   `linea_${TokenName}` |
   `mantle_${TokenName}` |
+  `megaeth_${TokenName}` |
   `monad_${TokenName}` |
   `monad_testnet_${TokenName}` |
   `moonbeam_${TokenName}` |
